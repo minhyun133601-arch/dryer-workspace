@@ -1,0 +1,66 @@
+{
+  "date": "2026-11-12",
+  "request": "스크린샷 261에 보면 탱크 하나 빠져있는데... 저기 좀 채워줘",
+  "userScreenshot": {
+    "file": "스크린샷(261).png",
+    "sha256": "7e7928d3c9b4e1f4eba810546c1d68c45c8fb634277fc87a6d2dd45bb362848b",
+    "originalModified": false,
+    "backRowScreenLeftToRight": ["파란 모터 열수 탱크", "모터 없는 오일 탱크", "검은 모터 호모 믹스-2", "빈 원형 개구부 = 호모 믹스-1 (f1-mix-a)", "파란 모터 카제인 탱크"]
+  },
+  "actualBrowserSave": {
+    "inspected": true,
+    "browser": "Microsoft Edge (Windows default browser), Default profile",
+    "origin": "http://127.0.0.1:4173",
+    "storageKey": "dryer-facility-layout-v1",
+    "scope": "Only this app's key was decoded from a copy of the profile's localStorage log; no other site data was read or kept.",
+    "writes": [
+      { "catalogRevision": "preparation-complete-20261111", "f1-mix-a": [-7.25, 0.3, -8] },
+      { "catalogRevision": "preparation-missing-tank-20261112", "f1-mix-a": [-7.25, 0.3, -8] }
+    ],
+    "gridSnappedDeck": {
+      "f1-prep-platform": [22, 0.3, 11.5], "f1-melting": [18.25, 0.3, 5.75], "f1-mix-b": [18.25, 0.3, 11],
+      "f1-oil-water": [18.25, 0.3, 13.5], "f1-s1": [23, 0.3, 16], "f1-prep-console": [24.25, 0.3, 14.5], "f1-prep-under-services": [22, 0.3, 11.5]
+    },
+    "whyEarlierRepairMissed": "The earlier exact repair accepted only [-7, 0.3, -8]. The browser held [-7.25, 0.3, -8], and the earlier release then re-saved it under its own revision."
+  },
+  "reproduction": {
+    "method": "Fresh headless Chromium profile seeded with the exact stored value, preparation view opened through '조제실 · 1층 내부'",
+    "before": ["tmp/tank-opening-before-row-20261112.png", "tmp/tank-opening-before-casein-20261112.png"],
+    "observations": [
+      "The same empty circular opening between MIX-2 and the casein tank as in screenshot 261",
+      "Grid snapping moved the deck (-0.1, +0.1) and the tank row (+0.05, -0.1..+0.05), so every tank sat 0.14-0.21 m off its opening centre and showed a crescent of the floor below; a restored MIX-1 would have been 0.25 m off"
+    ]
+  },
+  "release": "preparation-tank-openings-20261112",
+  "changes": {
+    "strandedHangingTanks": "Each hanging tank carries hangingDeck {minX 16.6, maxX 26.9, minZ 4.75, maxZ 18.25}. An automatic restore from any earlier or unstamped revision returns a tank whose centre lies outside that rectangle to its catalog pose once.",
+    "gridAlignedCatalog": {
+      "f1-prep-platform": { "from": [22.1, 0.3, 11.4], "to": [22, 0.3, 11.5] },
+      "f1-melting": { "from": [18.2, 0.3, 5.75], "to": [18.25, 0.3, 5.75] },
+      "f1-mix-a": { "from": [18.2, 0.3, 8.35], "to": [18.25, 0.3, 8.25] },
+      "f1-mix-b": { "from": [18.2, 0.3, 10.95], "to": [18.25, 0.3, 11] },
+      "f1-oil-water": { "from": [18.2, 0.3, 13.55], "to": [18.25, 0.3, 13.5] },
+      "f1-s1": { "from": [23, 0.3, 16], "to": [23, 0.3, 16] },
+      "f1-prep-console": { "from": [24.2, 0.3, 14.4], "to": [24.25, 0.3, 14.5] },
+      "f1-prep-under-services": { "from": [22.1, 0.3, 11.4], "to": [22, 0.3, 11.5], "runOffsetsFromTankRow": { "red-insulated-header": 0.75, "lower-sanitary-header": 1, "blue-pneumatic-line": 1.28, "aisle-sanitary-header": 1.8 } }
+    },
+    "deckOpenings": "Computed from the tank poses and vessel offsets, radius = vessel radius + 0.04 m",
+    "reason": "Saved layouts are snapped to the 0.25 placement grid, so grid-aligned catalog poses make fresh and saved browsers show the same seating. Shifts are at most 0.1 m and stay within the approximate positioning."
+  },
+  "preservation": [
+    "Six tank bodies and their equipment IDs are unchanged; no tank was added",
+    "Moves on the deck, saves made by this release and explicit file imports keep their poses",
+    "The reviewed LPG-side office and other areas are not migrated again for saves from preparation-missing-tank-20261112",
+    "Other first-floor dryer equipment in the user's save keeps its stored poses"
+  ],
+  "verification": {
+    "after": ["tmp/tank-opening-after-row-20261112.png", "tmp/tank-opening-after-casein-20261112.png", "tmp/tank-opening-after-mix1-20261112.png"],
+    "result": "With the exact stored value, MIX-1 hangs in the former empty opening. Saved and fresh profiles render the same close-ups, with no crescent gaps.",
+    "tests": "npm test: 307 passed (tmp/tank-opening-final-tests-20261112.log); npm run check passed; npm run export:share regenerated exports/건조기-통합-공유.html",
+    "newRegressionTests": [
+      "tests/preparation-layout.test.mjs: the 11/12 browser save that kept MIX-1 at [-7.25, -8] fills its opening once and keeps every other pose",
+      "tests/preparation-layout.test.mjs: every hanging tank, its deck and the services under it already sit on the placement grid with co-centred openings"
+    ]
+  },
+  "backup": ".backups/tank-opening-20261112/"
+}

@@ -1,0 +1,1176 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-11",
+  "purpose": "Current preparation-room route, room identities and first-half fixed-equipment evidence; no unsupported cross-team transfer.",
+  "reviewScope": {
+    "firstHalfSeconds": [
+      0,
+      261.257172
+    ],
+    "secondHalfReviewer": "/root/boiler_interior_evidence",
+    "splitSecond": 261.257172,
+    "contactSheetIntervalS": 6,
+    "contactSheetTimestampPrecision": "Approximate bin labels; use native ffmpeg seek timestamps for concrete observations."
+  },
+  "source": {
+    "video": "조제실/20261111_135935KST_GPS-VALID_LAT35.3630850_LON129.0299000_H251.7-TN_DIR-AVAILABLE_P-42.4_ACC2.5m_FV-5ecb553c-bce9-4cad-818d-092d9668c852.mp4",
+    "videoBytes": 783544428,
+    "videoSha256": "39fc16bfef83aaea08afbb35c90275e770b2b80296fa45e92d9cfb357bd93ced",
+    "sidecar": "조제실/20261111_135935KST_GPS-VALID_LAT35.3630850_LON129.0299000_H251.7-TN_DIR-AVAILABLE_P-42.4_ACC2.5m_FV-5ecb553c-bce9-4cad-818d-092d9668c852.txt",
+    "sidecarSha256": "4323ffd7145e4b0200e4a616a0504d8b3d3e1d302164b6b0b4dafcf786718fe3",
+    "durationSeconds": 522.514344,
+    "encodedWidth": 1920,
+    "encodedHeight": 1080,
+    "displayRotationDegrees": -90,
+    "uprightWidth": 1080,
+    "uprightHeight": 1920,
+    "audioPresent": false,
+    "observationsCount": 525
+  },
+  "registration": {
+    "campusOriginLatLon": [
+      35.36269436,
+      129.03104166
+    ],
+    "campusPositiveXTrueBearing": 325.4,
+    "campusPositiveZTrueBearing": 55.4,
+    "floor1Transform": {
+      "localX": "rawA013X - 8.6",
+      "localZ": "rawA013Z - 13.4",
+      "historicalOuterSizeM": [
+        43,
+        35
+      ]
+    },
+    "priority": [
+      "Current visually continuous walkthrough and readable labels",
+      "Printed room/lighting schematic filmed at 74-78s, whose revision date is unconfirmed",
+      "A013 architectural outer size and persistent structural lines",
+      "GPS/compass as corroboration only"
+    ],
+    "schematicOrientation": {
+      "printedTop": "A013 east / +X",
+      "printedRight": "A013 front / +Z",
+      "printedBottom": "A013 west / -X",
+      "printedLeft": "A013 rear / -Z",
+      "confidence": "high adjacency, approximate geometry",
+      "confirmation": "Printed upper-right Air shower, L-stair and exit correspond to second-half 483-521s air-shower/hygiene/under-stair-locker/front-exit sequence."
+    },
+    "notSameAsCampusExteriorMetricRegistration": "Campus low annex is a separately adjusted 48x45 approximation; do not blindly apply the A013 43x35 local transform as a campus world transform."
+  },
+  "gpsInterpretation": {
+    "placementAllowed": false,
+    "reason": "Initial visible boiler door is the previously anchored world [67,-59] landmark, while sidecar GPS transforms near [93.6,-61.4]. Indoor positions later jump tens of metres and cannot define tank poses or wall boundaries. End GPS near [69,-34.6] corroborates the front exit near [67,-33]. One constant GPS offset is not valid.",
+    "lastReceivedReferenceUsedAsCurrent": false,
+    "samples": [
+      {
+        "requestedSecond": 0,
+        "videoSecond": 0.428,
+        "status": "valid",
+        "headingDegrees": 253.38485163188898,
+        "pitchDegrees": -42.212028023458366,
+        "usedForObjectPlacement": false,
+        "latitude": 35.36307333333333,
+        "longitude": 129.0299,
+        "horizontalAccuracyM": 2.4000000953674316,
+        "ageMs": 221,
+        "campusXZ": [
+          93.578,
+          -61.356
+        ]
+      },
+      {
+        "requestedSecond": 12,
+        "videoSecond": 12.472,
+        "status": "valid",
+        "headingDegrees": 99.68573215319998,
+        "pitchDegrees": -10.15529285727636,
+        "usedForObjectPlacement": false,
+        "latitude": 35.363065,
+        "longitude": 129.02988,
+        "horizontalAccuracyM": 1.7999999523162842,
+        "ageMs": 470,
+        "campusXZ": [
+          93.846,
+          -63.377
+        ]
+      },
+      {
+        "requestedSecond": 24,
+        "videoSecond": 23.513,
+        "status": "valid",
+        "headingDegrees": 109.93267448147378,
+        "pitchDegrees": 9.949048899361795,
+        "usedForObjectPlacement": false,
+        "latitude": 35.363125,
+        "longitude": 129.02999499999999,
+        "horizontalAccuracyM": 1.7999999523162842,
+        "ageMs": 512,
+        "campusXZ": [
+          93.416,
+          -50.991
+        ]
+      },
+      {
+        "requestedSecond": 30,
+        "videoSecond": 29.541,
+        "status": "valid",
+        "headingDegrees": 231.57887730827838,
+        "pitchDegrees": 14.040279198381485,
+        "usedForObjectPlacement": false,
+        "latitude": 35.363103333333335,
+        "longitude": 129.02996166666665,
+        "horizontalAccuracyM": 1.7000000476837158,
+        "ageMs": 538,
+        "campusXZ": [
+          93.148,
+          -54.851
+        ]
+      },
+      {
+        "requestedSecond": 36,
+        "videoSecond": 35.567,
+        "status": "valid",
+        "headingDegrees": 225.8509265712894,
+        "pitchDegrees": -6.259756988007147,
+        "usedForObjectPlacement": false,
+        "latitude": 35.363115,
+        "longitude": 129.02993833333332,
+        "horizontalAccuracyM": 1.899999976158142,
+        "ageMs": 564,
+        "campusXZ": [
+          95.42,
+          -55.857
+        ]
+      },
+      {
+        "requestedSecond": 48,
+        "videoSecond": 47.61,
+        "status": "valid",
+        "headingDegrees": 183.0764073938543,
+        "pitchDegrees": -1.3659996807405002,
+        "usedForObjectPlacement": false,
+        "latitude": 35.36314166666667,
+        "longitude": 129.029965,
+        "horizontalAccuracyM": 2.299999952316284,
+        "ageMs": 605,
+        "campusXZ": [
+          96.489,
+          -52.179
+        ]
+      },
+      {
+        "requestedSecond": 60,
+        "videoSecond": 59.64,
+        "status": "valid",
+        "headingDegrees": 350.6708120054285,
+        "pitchDegrees": -32.90873173587962,
+        "usedForObjectPlacement": false,
+        "latitude": 35.36314166666667,
+        "longitude": 129.029965,
+        "horizontalAccuracyM": 2.700000047683716,
+        "ageMs": 639,
+        "campusXZ": [
+          96.489,
+          -52.179
+        ]
+      },
+      {
+        "requestedSecond": 90,
+        "videoSecond": 89.803,
+        "status": "stale",
+        "headingDegrees": 283.7323973557442,
+        "pitchDegrees": -17.076845946611275,
+        "usedForObjectPlacement": false,
+        "latitude": 35.36309000000001,
+        "longitude": 129.030015,
+        "horizontalAccuracyM": 37.79999923706055,
+        "ageMs": 17801,
+        "campusXZ": [
+          89.177,
+          -51.709
+        ]
+      },
+      {
+        "requestedSecond": 120,
+        "videoSecond": 119.935,
+        "status": "valid",
+        "headingDegrees": 90.44962399665121,
+        "pitchDegrees": 26.179208200447196,
+        "usedForObjectPlacement": false,
+        "latitude": 35.362695,
+        "longitude": 129.0305666666667,
+        "horizontalAccuracyM": 7.099999904632568,
+        "ageMs": 933,
+        "campusXZ": [
+          24.545,
+          -35.454
+        ]
+      },
+      {
+        "requestedSecond": 150,
+        "videoSecond": 150.048,
+        "status": "valid",
+        "headingDegrees": 144.67390949613718,
+        "pitchDegrees": 29.54043373325618,
+        "usedForObjectPlacement": false,
+        "latitude": 35.362705,
+        "longitude": 129.03064166666667,
+        "horizontalAccuracyM": 6.300000190734863,
+        "ageMs": 1048,
+        "campusXZ": [
+          21.595,
+          -29.217
+        ]
+      },
+      {
+        "requestedSecond": 180,
+        "videoSecond": 180.128,
+        "status": "valid",
+        "headingDegrees": 197.83464838734164,
+        "pitchDegrees": -42.42271263851443,
+        "usedForObjectPlacement": false,
+        "latitude": 35.362883333333336,
+        "longitude": 129.03031000000001,
+        "horizontalAccuracyM": 7.099999904632568,
+        "ageMs": 126,
+        "campusXZ": [
+          55.033,
+          -42.729
+        ]
+      },
+      {
+        "requestedSecond": 210,
+        "videoSecond": 210.263,
+        "status": "valid",
+        "headingDegrees": 100.66568760376174,
+        "pitchDegrees": 7.3924766676610325,
+        "usedForObjectPlacement": false,
+        "latitude": 35.36318833333333,
+        "longitude": 129.03028,
+        "horizontalAccuracyM": 7.5,
+        "ageMs": 263,
+        "campusXZ": [
+          84.527,
+          -25.691
+        ]
+      },
+      {
+        "requestedSecond": 240,
+        "videoSecond": 240.435,
+        "status": "valid",
+        "headingDegrees": 98.73710281583152,
+        "pitchDegrees": -43.143250969279116,
+        "usedForObjectPlacement": false,
+        "latitude": 35.363033333333334,
+        "longitude": 129.03049000000001,
+        "horizontalAccuracyM": 8.399999618530273,
+        "ageMs": 435,
+        "campusXZ": [
+          59.499,
+          -19.796
+        ]
+      },
+      {
+        "requestedSecond": 261,
+        "videoSecond": 260.503,
+        "status": "valid",
+        "headingDegrees": 268.33750553430673,
+        "pitchDegrees": 5.224932448188573,
+        "usedForObjectPlacement": false,
+        "latitude": 35.363171666666666,
+        "longitude": 129.03042,
+        "horizontalAccuracyM": 9.100000381469727,
+        "ageMs": 501,
+        "campusXZ": [
+          75.783,
+          -16.282
+        ]
+      },
+      {
+        "requestedSecond": 510,
+        "videoSecond": 509.533,
+        "status": "valid",
+        "headingDegrees": 344.19651516261365,
+        "pitchDegrees": -19.70860049303871,
+        "usedForObjectPlacement": false,
+        "latitude": 35.36290833333333,
+        "longitude": 129.03036,
+        "horizontalAccuracyM": 3,
+        "ageMs": 531,
+        "campusXZ": [
+          54.746,
+          -37.412
+        ]
+      },
+      {
+        "requestedSecond": 522,
+        "videoSecond": 521.569,
+        "status": "valid",
+        "headingDegrees": 137.79261200838823,
+        "pitchDegrees": -0.7782318016082159,
+        "usedForObjectPlacement": false,
+        "latitude": 35.36302833333333,
+        "longitude": 129.0302966666667,
+        "horizontalAccuracyM": 1.399999976158142,
+        "ageMs": 569,
+        "campusXZ": [
+          69.007,
+          -34.559
+        ]
+      }
+    ]
+  },
+  "visualAnchors": [
+    {
+      "seconds": [
+        0,
+        5
+      ],
+      "identity": "1팀2파트 보일러실 perforated door",
+      "campusWorldXZApprox": [
+        67,
+        -59
+      ],
+      "confidence": "known facade match"
+    },
+    {
+      "seconds": [
+        15,
+        30
+      ],
+      "identity": "원료출입구 orange exterior rapid door",
+      "campusWorldXZApprox": [
+        67,
+        -50
+      ],
+      "confidence": "readable plaque and continuity beside boiler; centre approximate"
+    },
+    {
+      "seconds": [
+        21,
+        24
+      ],
+      "identity": "지대가온실 closed paired door",
+      "confidence": "readable plaque"
+    },
+    {
+      "seconds": [
+        483,
+        521
+      ],
+      "identity": "1팀2파트 personnel front exit via air shower, hygiene lobby and under-stair lockers",
+      "campusWorldXZApprox": [
+        67,
+        -33
+      ],
+      "confidence": "second-half reviewer corroboration plus end GPS"
+    }
+  ],
+  "firstHalfRoute": [
+    {
+      "seconds": [
+        0,
+        29
+      ],
+      "sequence": "Starts beside boiler door, passes yellow gas riser and closed 지대가온실, operates orange exterior 원료출입구 controller.",
+      "evidence": [
+        15,
+        21
+      ]
+    },
+    {
+      "seconds": [
+        30,
+        48
+      ],
+      "sequence": "Enters a bounded high-ceiling raw-material storage/weighing area; turns to inspect pallet stacks and then towards a separate inner rapid door.",
+      "evidence": [
+        33,
+        39,
+        45,
+        47
+      ],
+      "fixedFeatures": [
+        "Cream high walls",
+        "Green traffic floor",
+        "Pallet keep-out outlines",
+        "Red scale working zone",
+        "Low rectangular floor scale with display stand",
+        "Overhead cable ladder and multiple utility pipes",
+        "Small high internal wall window",
+        "Green cabinet at entrance corner"
+      ],
+      "movableContents": [
+        "Bagged raw materials on colored pallets",
+        "IBC containers",
+        "Drums",
+        "Empty pallets",
+        "Portable fan and small trolley"
+      ]
+    },
+    {
+      "seconds": [
+        49,
+        58
+      ],
+      "sequence": "Passes separate orange inner rapid shutter into the process hall, beside parked forklift, small service-platform stair and dust-extraction cabinet.",
+      "evidence": [
+        49,
+        51,
+        53,
+        57
+      ],
+      "openingInterpretation": "Current schematic entry at raw z18/local z4.6 separates the storage/weighing zone from the hall. Approximate 90-degree route turn; not one open warehouse extending through the hall.",
+      "correctedEarlierReading": "This is an inner rapid shutter with orange lintel, stainless cover/rails and separate Stop controller; do not label it merely a PVC strip curtain."
+    },
+    {
+      "seconds": [
+        59,
+        81
+      ],
+      "sequence": "Inspects floor-level electrical cabinet bank, then lighting control panel carrying the current preparation-room diagram.",
+      "evidence": [
+        63,
+        69,
+        75.2,
+        76,
+        78
+      ]
+    },
+    {
+      "seconds": [
+        82,
+        110
+      ],
+      "sequence": "Passes glazed office, looks under tank service platform and at powder-bag dumping station.",
+      "evidence": [
+        87,
+        99,
+        105
+      ],
+      "avoidDoubleCounting": "Cream inverted triangular members at platform columns are structural haunches, not separate powder hoppers."
+    },
+    {
+      "seconds": [
+        111,
+        143
+      ],
+      "sequence": "Inspects adjacent small support/CIP area, yellow-glazed window, stainless sink and utility pipe/valve assemblies.",
+      "evidence": [
+        111,
+        135
+      ],
+      "uncertainty": "Utility vessel function/nameplate not confirmed; do not invent a second boiler room here."
+    },
+    {
+      "seconds": [
+        144,
+        172
+      ],
+      "sequence": "Enters support/hygiene room with chair and stainless rack cabinet, then passes stainless air shower with circular jets and overhead fan grilles.",
+      "evidence": [
+        153,
+        165
+      ]
+    },
+    {
+      "seconds": [
+        173,
+        186
+      ],
+      "sequence": "Returns to hall and ascends the narrow cream/steel stair to the tank service platform.",
+      "evidence": [
+        175
+      ]
+    },
+    {
+      "seconds": [
+        187,
+        261.257
+      ],
+      "sequence": "Walks the diamondplate platform around tank domes, clamps, auxiliary vertical vessel, mixer motors, insulation, pneumatic valves/blue hoses and central mimic/HMI console.",
+      "evidence": [
+        195,
+        215,
+        232,
+        255
+      ],
+      "avoidDoubleCounting": "Repeated views of tank lids do not add tanks to the six-vessel current schematic."
+    }
+  ],
+  "currentSchematic": {
+    "titleRead": "4/1F <조제실>",
+    "sourceSeconds": [
+      74.6,
+      75.2,
+      76,
+      78
+    ],
+    "revisionDateConfirmed": false,
+    "use": "Room adjacency and six vessel symbols corroborate the video. Do not assume every role name remains the present operating name.",
+    "imageArtifacts": [
+      "tmp/preparation-review-20261111/clip-001/plan-overview-rectified.png",
+      "tmp/preparation-review-20261111/clip-001/plan-left-labels.png",
+      "tmp/preparation-review-20261111/clip-001/plan-right-labels.png"
+    ],
+    "readableRoomLabels": [
+      "일일원료보관창고",
+      "원료계량창고",
+      "Air 샤워실",
+      "사무실",
+      "cip실",
+      "출입구"
+    ],
+    "readableFixedEquipmentLabels": [
+      "메인판넬",
+      "조작판넬",
+      "카제인 탱크",
+      "호모 믹스",
+      "호모 믹스",
+      "오일 탱크",
+      "열수T",
+      "S-1 탱크",
+      "균질기"
+    ],
+    "numberedYellowCircles": {
+      "meaning": "전등 250W 메탈 할라이드 램프",
+      "notTankNumbers": true,
+      "legendSourceSecond": 78
+    },
+    "tankCount": {
+      "mainRow": 5,
+      "return": 1,
+      "total": 6,
+      "rowFromPrintedLeftToRight": [
+        "카제인 탱크",
+        "호모 믹스 1",
+        "호모 믹스 2",
+        "오일 탱크",
+        "열수T"
+      ],
+      "returnTank": "S-1 탱크",
+      "roleConfidence": "Readable current schematic; video confirms vessel construction and arrangement, individual operational paper names may differ."
+    },
+    "layout": "U-shaped service deck/open central operating area, five vessels along the printed bottom (registered west edge), S-1 at the printed right return (registered front/south edge). Main panel at printed left return, mimic operating panel on the centre deck edge.",
+    "schematicIsSurvey": false
+  },
+  "recommendedCurrentRoomZones": [
+    {
+      "id": "daily-raw-storage",
+      "name": "일일원료보관창고",
+      "rawA013Bounds": {
+        "minX": 36.8,
+        "maxX": 43,
+        "minZ": 9.8,
+        "maxZ": 18
+      },
+      "local1FBounds": {
+        "minX": 28.2,
+        "maxX": 34.4,
+        "minZ": -3.6,
+        "maxZ": 4.6
+      },
+      "basis": "current label + A013 persistent bounds",
+      "sourceSeconds": [
+        33,
+        39,
+        75.2,
+        78
+      ],
+      "dimensionsMeasuredOnSite": false,
+      "note": "High bounded warehouse; preserve external orange entry and separate inner shutter."
+    },
+    {
+      "id": "raw-weighing-storage",
+      "name": "원료계량창고",
+      "rawA013Bounds": {
+        "minX": 27.8,
+        "maxX": 36.8,
+        "minZ": 9.8,
+        "maxZ": 18
+      },
+      "local1FBounds": {
+        "minX": 19.2,
+        "maxX": 28.2,
+        "minZ": -3.6,
+        "maxZ": 4.6
+      },
+      "basis": "current label + approximate A013 preparation-room registration",
+      "sourceSeconds": [
+        47,
+        75.2,
+        78
+      ],
+      "dimensionsMeasuredOnSite": false,
+      "note": "Floor scale and red work zone observed. Keep western x25..27.8 circulation strip outside this room."
+    },
+    {
+      "id": "dispensing",
+      "name": "조제실",
+      "rawA013Bounds": {
+        "minX": 25,
+        "maxX": 43,
+        "minZ": 18,
+        "maxZ": 28.2
+      },
+      "local1FBounds": {
+        "minX": 16.4,
+        "maxX": 34.4,
+        "minZ": 4.6,
+        "maxZ": 14.8
+      },
+      "basis": "Current wide uninterrupted hall visibility and schematic; historical central long wall superseded",
+      "sourceSeconds": [
+        51,
+        57,
+        75.2,
+        76,
+        99,
+        105,
+        175
+      ],
+      "dimensionsMeasuredOnSite": false,
+      "note": "Main northern rectangle local x16.4..34.4,z4.6..14.8 joins southern western return local x16.4..28.2,z14.8..18.4. This is an L-shaped current hall, not a narrow strip."
+    },
+    {
+      "id": "office",
+      "name": "사무실",
+      "rawA013Bounds": {
+        "minX": 33.6,
+        "maxX": 36.8,
+        "minZ": 31.8,
+        "maxZ": 35
+      },
+      "local1FBounds": {
+        "minX": 25.0,
+        "maxX": 28.2,
+        "minZ": 18.4,
+        "maxZ": 21.6
+      },
+      "basis": "filmed schematic and glazed office footage; approximate support room footprint adjusted in integration",
+      "sourceSeconds": [
+        76,
+        87
+      ],
+      "dimensionsMeasuredOnSite": false,
+      "note": ""
+    },
+    {
+      "id": "cip",
+      "name": "CIP·세척 설비실",
+      "rawA013Bounds": {
+        "minX": 30.2,
+        "maxX": 33.6,
+        "minZ": 31.8,
+        "maxZ": 35
+      },
+      "local1FBounds": {
+        "minX": 21.6,
+        "maxX": 25.0,
+        "minZ": 18.4,
+        "maxZ": 21.6
+      },
+      "basis": "filmed schematic reinterpretation of historical OP room; exact partition line approximate and adjusted in integration",
+      "sourceSeconds": [
+        76,
+        111,
+        135
+      ],
+      "dimensionsMeasuredOnSite": false,
+      "note": "The current name replaces the historical OP label. Do not claim every observed utility vessel identity."
+    },
+    {
+      "id": "personnel-hygiene-lobby",
+      "name": "에어샤워·위생전실",
+      "rawA013Bounds": {
+        "minX": 36.8,
+        "maxX": 43,
+        "minZ": 28,
+        "maxZ": 35
+      },
+      "local1FBounds": {
+        "minX": 28.2,
+        "maxX": 34.4,
+        "minZ": 14.6,
+        "maxZ": 21.6
+      },
+      "basis": "schematic + first/second-half continuous personnel exit route; approximate zone",
+      "sourceSeconds": [
+        76,
+        153,
+        165,
+        483,
+        486,
+        492
+      ],
+      "dimensionsMeasuredOnSite": false,
+      "note": "Subdivide visually into air shower, changing/handwash space and under-stair lockers; actual partitions and dimensions require proportional reconstruction."
+    },
+    {
+      "id": "toilet",
+      "name": "화장실",
+      "rawA013Bounds": {
+        "minX": 40.2,
+        "maxX": 43,
+        "minZ": 25.4,
+        "maxZ": 28.6
+      },
+      "local1FBounds": {
+        "minX": 31.6,
+        "maxX": 34.4,
+        "minZ": 12.0,
+        "maxZ": 15.2
+      },
+      "basis": "Second-half reviewer confirmed 502-505s tiled side room, two urinals, three dark-brown privacy dividers and slippers beside front lobby; provisional registration",
+      "sourceSeconds": [
+        502,
+        503,
+        505
+      ],
+      "dimensionsMeasuredOnSite": false,
+      "note": "Root integration local x31.6..34.4,z12..15.2, door on z15.2 and corridor z15.2..16.2. This is a provisional side-of-lobby reconstruction, not a surveyed A013 bathroom. Preserve actual route relationship and do not substitute the CIP utility room."
+    }
+  ],
+  "doorSequence": [
+    {
+      "id": "door-a-exterior-raw",
+      "seconds": [
+        15,
+        27,
+        30
+      ],
+      "kind": "orange exterior rapid shutter",
+      "connects": [
+        "exterior side lane beside boiler",
+        "daily raw storage/weighing entry region"
+      ],
+      "confirmed": true
+    },
+    {
+      "id": "door-b-inner-raw",
+      "seconds": [
+        45,
+        49,
+        51,
+        53
+      ],
+      "kind": "separate orange rapid shutter, stainless lintel and side rails, Stop controller",
+      "connects": [
+        "bounded raw storage/weighing region",
+        "main preparation hall"
+      ],
+      "registeredOpeningApprox": "raw z18 / local z4.6, near local x28",
+      "confirmed": true
+    },
+    {
+      "id": "door-c-glazed-office",
+      "seconds": [
+        85,
+        87,
+        89
+      ],
+      "kind": "white-frame glass office partition/door",
+      "contentsBeyond": [
+        "PC monitor",
+        "wood desktop",
+        "black office chair",
+        "files"
+      ],
+      "sameRoomAsDoorE": "Possible and preferred to inventing a duplicate room; exact inner partition not confirmed."
+    },
+    {
+      "id": "door-d-utility",
+      "seconds": [
+        106,
+        111,
+        114,
+        137,
+        139
+      ],
+      "kind": "open single personnel door",
+      "connects": [
+        "preparation hall",
+        "pipe/tank support room corresponding to CIP on filmed schematic"
+      ],
+      "contentsBeyond": [
+        "yellow window",
+        "fan",
+        "large stainless tank and cup vessels",
+        "insulated pipes",
+        "pump and portable cleaning unit"
+      ],
+      "toiletObserved": false
+    },
+    {
+      "id": "door-e-perforated-support",
+      "seconds": [
+        108,
+        110,
+        140,
+        145
+      ],
+      "kind": "cream square-perforated door beside door D",
+      "contentsBeyond": [
+        "desk and chair",
+        "green worktop",
+        "stainless rack sterilizing/drying cabinet",
+        "air conditioner",
+        "yellow window"
+      ],
+      "sameRoomAsDoorC": "Possible corner room with front glass and side perforated doors; no second named office should be invented without more evidence."
+    },
+    {
+      "id": "door-f-air-shower",
+      "seconds": [
+        159,
+        164,
+        165,
+        169
+      ],
+      "kind": "single personnel door followed by stainless circular-jet air-shower passage",
+      "connects": [
+        "office/work-support side",
+        "air shower",
+        "hall/personnel circulation"
+      ],
+      "confirmed": true
+    },
+    {
+      "id": "door-g-toilet",
+      "seconds": [
+        502,
+        503,
+        505
+      ],
+      "reviewer": "/root/boiler_interior_evidence",
+      "kind": "open left-side door off narrow green corridor by the front lobby",
+      "contentsBeyond": [
+        "tiled walls/floor",
+        "blue-lidded bin/dispenser",
+        "two urinals with white top covers",
+        "three dark-brown privacy dividers",
+        "brown slippers at threshold"
+      ],
+      "confirmed": true,
+      "verification": "Second-half initial 6s contact sampled 501 then507 and missed this room; 1s/native502/503/505 reinspection established the bathroom."
+    },
+    {
+      "id": "door-h-personnel-exit",
+      "seconds": [
+        501,
+        506,
+        510,
+        519,
+        521
+      ],
+      "reviewer": "/root/boiler_interior_evidence",
+      "kind": "internal glazed partition then large electronically locked glazed exterior door under canopy",
+      "connects": [
+        "front hygiene/locker/stair corridor",
+        "1팀2파트 exterior front entrance"
+      ],
+      "confirmed": true
+    }
+  ],
+  "recommendedEquipmentPlacement": {
+    "coordinateSpace": "local historical 1F XZ; proposed, not surveyed",
+    "deckHeightMApprox": 2.05,
+    "rowXApprox": 19.2,
+    "rowZApprox": [
+      5.5,
+      8.1,
+      10.7,
+      13.3,
+      15.9
+    ],
+    "rowRoles": [
+      "casein",
+      "homo-mix-1",
+      "homo-mix-2",
+      "oil",
+      "hot-water"
+    ],
+    "s1ReturnXZApprox": [
+      23,
+      16
+    ],
+    "stairPlacement": "Northern end of the service platform, approached from raw-material inner entry side; keep raw-storage/scale rooms separate.",
+    "reuseLegacyIds": [
+      "f1-melting -> single casein tank",
+      "f1-mix-a -> homo mix 1",
+      "f1-mix-b -> homo mix 2",
+      "f1-oil-water -> oil + hot-water pair",
+      "f1-s1 -> single S-1 return"
+    ],
+    "legacyCountWarning": "Old melting equipment drew two generic vessels; the observed casein replacement is a single vessel. Do not retain both and add a duplicate."
+  },
+  "mustCorrect": [
+    "Widen current 조제실 to the full western A013 x25..36.8 region and remove the obsolete x36.8 long wall through the northern hall, allowing the observed wide L-shaped hall.",
+    "Use filmed 일일원료보관창고 / 원료계량창고 labels for the initial entry region with revision-status caveat.",
+    "Keep internal fast-shutter partition between bounded storage/weighing area and process hall.",
+    "Reinterpret historical OP as the pipe/tank support room corresponding to CIP on the filmed schematic, without inventing vessel role labels.",
+    "Preserve air-shower/hygiene/stair-locker/front-exit sequence and the separate filmed toilet off the lobby corridor.",
+    "Do not duplicate the glazed office and perforated-door work-support room unless more evidence establishes a separating wall.",
+    "Remove historical internal 공무작업실/자재실 as current identities; the user-confirmed maintenance workshop/environment-team room is across the exterior road beside LPG.",
+    "Do not interpret lighting circles as tanks, structural haunches as hoppers, repeated lids as extra tanks, or indoor GPS as equipment placement."
+  ],
+  "uncertainties": [
+    "No laser/scale survey was supplied. Exact vessel dimensions, stairs and room partitions are visual/proportional reconstruction.",
+    "A013 historical outer dimensions and current lighting diagram are registered by persistent adjacency, not assumed dimensionally identical.",
+    "Bags, pallets, forklift, fan and trolley positions are observed staging, not permanent surveyed poses.",
+    "Current floorplan tank role names are stronger than indistinct moving equipment labels; cross-team inventory cards must not override this site evidence."
+  ],
+  "firstHalfPhotos": [
+    {
+      "path": "apps/site/photos/preparation-room/clip-001-015s.jpg",
+      "videoSecond": 15,
+      "caption": "원료출입구 외부 명판과 주황 셔터",
+      "sourceFrame": "tmp/preparation-review-20261111/clip-001/native/frame-15.jpg",
+      "sha256": "60b74be5523eb97518cc4dafe84c4f7ef60e522ca382656e0f2c181f85bb542c",
+      "width": 810,
+      "height": 1440,
+      "reviewed": true
+    },
+    {
+      "path": "apps/site/photos/preparation-room/clip-001-021s.jpg",
+      "videoSecond": 21,
+      "caption": "옆 지대가온실 문",
+      "sourceFrame": "tmp/preparation-review-20261111/clip-001/native/frame-21.jpg",
+      "sha256": "a41221fc6979bde5b3e3cfeba3d6947c49502e0cfd3abac58e62c3781d5aac76",
+      "width": 810,
+      "height": 1440,
+      "reviewed": true
+    },
+    {
+      "path": "apps/site/photos/preparation-room/clip-001-033s.jpg",
+      "videoSecond": 33,
+      "caption": "외부문 안쪽 소모품·빈 파렛트 보관 모서리",
+      "sourceFrame": "tmp/preparation-review-20261111/clip-001/native/frame-33.jpg",
+      "sha256": "a52f64dea9072edf2e016ce281e6d5a8e75a22c9831dc8b340817bb2cd8b8678",
+      "width": 810,
+      "height": 1440,
+      "reviewed": true
+    },
+    {
+      "path": "apps/site/photos/preparation-room/clip-001-039s.jpg",
+      "videoSecond": 39,
+      "caption": "일일원료 보관 포대·IBC·천장 배관과 트레이",
+      "sourceFrame": "tmp/preparation-review-20261111/clip-001/native/frame-39.jpg",
+      "sha256": "68e40c026d39e1a181bee12b2a9f3d8eb1ebe081bb3579884af0770a544f3040",
+      "width": 810,
+      "height": 1440,
+      "reviewed": true
+    },
+    {
+      "path": "apps/site/photos/preparation-room/clip-001-047s.jpg",
+      "videoSecond": 47,
+      "caption": "원료 계량 바닥저울·표시기·팬·붉은 바닥구획",
+      "sourceFrame": "tmp/preparation-review-20261111/clip-001/native/frame-47.jpg",
+      "sha256": "93b45655265a71b1ac6479ede600b33acae5c28b788988b85af4623ad5a87b26",
+      "width": 810,
+      "height": 1440,
+      "reviewed": true
+    },
+    {
+      "path": "apps/site/photos/preparation-room/clip-001-049s.jpg",
+      "videoSecond": 49,
+      "caption": "조제실로 이어지는 별도 내부 고속셔터",
+      "sourceFrame": "tmp/preparation-review-20261111/clip-001/native/frame-49.jpg",
+      "sha256": "261ada2cfbcde26e66e83ef736f815c3cf80769cf4c18bcdf4898f320658728d",
+      "width": 810,
+      "height": 1440,
+      "reviewed": true
+    },
+    {
+      "path": "apps/site/photos/preparation-room/clip-001-051s.jpg",
+      "videoSecond": 51,
+      "caption": "내부셔터 스테인리스 상부커버와 그 너머 조제실",
+      "sourceFrame": "tmp/preparation-review-20261111/clip-001/native/frame-51.jpg",
+      "sha256": "df65c41bcc5212e03efe5bda2308e51deb876e289fce834bb73c0e885de9660f",
+      "width": 810,
+      "height": 1440,
+      "reviewed": true
+    },
+    {
+      "path": "apps/site/photos/preparation-room/clip-001-053s.jpg",
+      "videoSecond": 53,
+      "caption": "내부 고속셔터 제어함 Stop 표시",
+      "sourceFrame": "tmp/preparation-review-20261111/clip-001/native/frame-53.jpg",
+      "sha256": "310948188807e04cb6cec2f6c91a54a90728b8e1f91a60d9fd400e829621b9a8",
+      "width": 810,
+      "height": 1440,
+      "reviewed": true
+    },
+    {
+      "path": "apps/site/photos/preparation-room/clip-001-057s.jpg",
+      "videoSecond": 57,
+      "caption": "조제실 안 계단·집진설비·기둥·원료파렛트",
+      "sourceFrame": "tmp/preparation-review-20261111/clip-001/native/frame-57.jpg",
+      "sha256": "47d7f905287836720f2f5b3221e46c1c90ee8f92721bcfdf9ce631e16199c790",
+      "width": 810,
+      "height": 1440,
+      "reviewed": true
+    },
+    {
+      "path": "apps/site/photos/preparation-room/clip-001-069s.jpg",
+      "videoSecond": 69,
+      "caption": "실내 주 제어반",
+      "sourceFrame": "tmp/preparation-review-20261111/clip-001/native/frame-69.jpg",
+      "sha256": "826490f9e3eb5984c75c6c6b26c391b61b4c77b11f630706b157d84a2b69af25",
+      "width": 810,
+      "height": 1440,
+      "reviewed": true
+    },
+    {
+      "path": "apps/site/photos/preparation-room/clip-001-076s.jpg",
+      "videoSecond": 76,
+      "caption": "현장 조명 배치도 오른쪽: 에어샤워·사무실·CIP·탱크",
+      "sourceFrame": "tmp/preparation-review-20261111/clip-001/native/frame-76.jpg",
+      "sha256": "83c10c56d1b3c5ac83ca9e97fc2910a2c25384bcde6ef683ea8ccf9e99582a4b",
+      "width": 810,
+      "height": 1440,
+      "reviewed": true
+    },
+    {
+      "path": "apps/site/photos/preparation-room/clip-001-078s.jpg",
+      "videoSecond": 78,
+      "caption": "현장 조명도 범례: 노란 원은 전등 250W",
+      "sourceFrame": "tmp/preparation-review-20261111/clip-001/native/frame-78.jpg",
+      "sha256": "d919e1cfaf49870aa46e8b0565ba4e233fa956373b8ea8e87cb3e657f39e92a0",
+      "width": 810,
+      "height": 1440,
+      "reviewed": true
+    },
+    {
+      "path": "apps/site/photos/preparation-room/clip-001-087s.jpg",
+      "videoSecond": 87,
+      "caption": "사무실 유리벽 안 책상·모니터·의자",
+      "sourceFrame": "tmp/preparation-review-20261111/clip-001/native/frame-87.jpg",
+      "sha256": "9da154eddd8a8cbe724c34405174cd7c147cc347ed0fd2949568ed23274cbd86",
+      "width": 810,
+      "height": 1440,
+      "reviewed": true
+    },
+    {
+      "path": "apps/site/photos/preparation-room/clip-001-099s.jpg",
+      "videoSecond": 99,
+      "caption": "크림색 플랫폼 기둥과 제어반·배관",
+      "sourceFrame": "tmp/preparation-review-20261111/clip-001/native/frame-99.jpg",
+      "sha256": "a14955d51b657d9441adf7dd84a5eb26e1f8c180e78a6c102b63e1bc3bbd7123",
+      "width": 810,
+      "height": 1440,
+      "reviewed": true
+    },
+    {
+      "path": "apps/site/photos/preparation-room/clip-001-105s.jpg",
+      "videoSecond": 105,
+      "caption": "실제 분말 투입 작업대·경사 후드·하부 호퍼",
+      "sourceFrame": "tmp/preparation-review-20261111/clip-001/native/frame-105.jpg",
+      "sha256": "cfc9225a9aa02b8d867d0800716d1bbea773d62528012d2e283b9e51444603da",
+      "width": 810,
+      "height": 1440,
+      "reviewed": true
+    },
+    {
+      "path": "apps/site/photos/preparation-room/clip-001-111s.jpg",
+      "videoSecond": 111,
+      "caption": "사무실 옆 지원실 두 문과 내부 배관",
+      "sourceFrame": "tmp/preparation-review-20261111/clip-001/native/frame-111.jpg",
+      "sha256": "cdc6acb8d4b739eb4127f3a1d7a7131e725ff21b5b776949d250b3b8041a6fc1",
+      "width": 810,
+      "height": 1440,
+      "reviewed": true
+    },
+    {
+      "path": "apps/site/photos/preparation-room/clip-001-135s.jpg",
+      "videoSecond": 135,
+      "caption": "CIP 인접 지원실 노란 창·배관·밸브",
+      "sourceFrame": "tmp/preparation-review-20261111/clip-001/native/frame-135.jpg",
+      "sha256": "5271d8c1761f287ed1d0436b9a1f04fb095d37b425f33ab0838ee71d24434d47",
+      "width": 810,
+      "height": 1440,
+      "reviewed": true
+    },
+    {
+      "path": "apps/site/photos/preparation-room/clip-001-153s.jpg",
+      "videoSecond": 153,
+      "caption": "위생 지원공간 스테인리스 살균건조 캐비닛",
+      "sourceFrame": "tmp/preparation-review-20261111/clip-001/native/frame-153.jpg",
+      "sha256": "ef842f3738ccdf44ec604af4280002ee36031b219601353806065e8530178f06",
+      "width": 810,
+      "height": 1440,
+      "reviewed": true
+    },
+    {
+      "path": "apps/site/photos/preparation-room/clip-001-165s.jpg",
+      "videoSecond": 165,
+      "caption": "에어샤워 원형 벽 노즐과 천장 팬",
+      "sourceFrame": "tmp/preparation-review-20261111/clip-001/native/frame-165.jpg",
+      "sha256": "61ede67a06a36b696d32b4040f6d02a85a8902f25fac94482822fe9e80cb4eee",
+      "width": 810,
+      "height": 1440,
+      "reviewed": true
+    },
+    {
+      "path": "apps/site/photos/preparation-room/clip-001-175s.jpg",
+      "videoSecond": 175,
+      "caption": "실내 전체와 서비스 플랫폼·탱크 위치 관계",
+      "sourceFrame": "tmp/preparation-review-20261111/clip-001/native/frame-175.jpg",
+      "sha256": "ffc94e0aa40a4644fd9672814453af905a6da72d59fe031c7c5cc431529385d2",
+      "width": 810,
+      "height": 1440,
+      "reviewed": true
+    },
+    {
+      "path": "apps/site/photos/preparation-room/clip-001-195s.jpg",
+      "videoSecond": 195,
+      "caption": "플랫폼 체커플레이트와 보온 배관",
+      "sourceFrame": "tmp/preparation-review-20261111/clip-001/native/frame-195.jpg",
+      "sha256": "705845b4b4036c8379a060d303c7d75e3581436ebf5a33581d5379b0883f5387",
+      "width": 810,
+      "height": 1440,
+      "reviewed": true
+    },
+    {
+      "path": "apps/site/photos/preparation-room/clip-001-215s.jpg",
+      "videoSecond": 215,
+      "caption": "탱크 상부 밸브·공압 호스",
+      "sourceFrame": "tmp/preparation-review-20261111/clip-001/native/frame-215.jpg",
+      "sha256": "276b6c2a32bece4c53c503f89f6f075c73f06f110c9609629496fcf2be7c4557",
+      "width": 810,
+      "height": 1440,
+      "reviewed": true
+    },
+    {
+      "path": "apps/site/photos/preparation-room/clip-001-232s.jpg",
+      "videoSecond": 232,
+      "caption": "플랫폼 운전판넬과 터치화면",
+      "sourceFrame": "tmp/preparation-review-20261111/clip-001/native/frame-232.jpg",
+      "sha256": "4374c94d151126da4fda5cd725fd2c41ea4cf7f668f04d0df10b172c79e22657",
+      "width": 810,
+      "height": 1440,
+      "reviewed": true
+    },
+    {
+      "path": "apps/site/photos/preparation-room/clip-001-255s.jpg",
+      "videoSecond": 255,
+      "caption": "냉수이송 라벨·보온배관·모터",
+      "sourceFrame": "tmp/preparation-review-20261111/clip-001/native/frame-255.jpg",
+      "sha256": "c76ef4e09797c52dbde516430e64fb35fd85e839c75cac17d6624bb22f35fe4f",
+      "width": 810,
+      "height": 1440,
+      "reviewed": true
+    },
+    {
+      "path": "apps/site/photos/preparation-room/clip-001-075p2s-plan.jpg",
+      "videoSecondApprox": 75.2,
+      "caption": "현장 조명 배치도 왼쪽: 원료창고 두 구역·메인판넬·카제인 포함 탱크열",
+      "sourceFrame": "tmp/preparation-review-20261111/clip-001/plan-sequence/frame-07.jpg",
+      "sha256": "69c57fae41df2133cc731cd6315803f9a88c7509432ef76ac5e05c1333d7651c",
+      "width": 810,
+      "height": 1440,
+      "reviewed": true
+    }
+  ]
+}

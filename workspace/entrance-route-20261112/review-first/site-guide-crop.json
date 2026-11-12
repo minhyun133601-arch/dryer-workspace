@@ -1,0 +1,12 @@
+{
+  "source": "workspace\\entrance-route-20261112\\review-first\\native\\frame-144s.jpg",
+  "target": "apps\\site\\assets\\drawings\\campus\\entrance-site-guide-2026.jpg",
+  "videoSeconds": 144,
+  "cropPixels": [
+    270,
+    380,
+    1030,
+    1350
+  ],
+  "method": "rectangular document crop only; no perspective correction; all site-map labels retained"
+}

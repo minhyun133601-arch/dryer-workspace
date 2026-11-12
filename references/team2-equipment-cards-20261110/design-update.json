@@ -1,0 +1,1569 @@
+{
+  "date": "2026-11-10",
+  "identity": {
+    "team": "2팀",
+    "buildingNumber": 9,
+    "buildingName": "스틱·소포장동",
+    "historicalExclusion": "과거 건조실을 2팀으로 부른 자료는 별도 건물 근거로 분리"
+  },
+  "employeeClarification": "현재 2팀은 스틱·소포장동. 과거 건조실도 2팀으로 불렀으므로 자료의 팀명만으로 공간을 대응하지 않는다.",
+  "archive": "2팀 3팀 설비이력카드_2026-11-10-20261110T010039Z-1-001.zip",
+  "archiveSha256": "bf8a6810e9493c99b02ce7d644f9207982357f4ed52d474e01a424ee58c3db2e",
+  "sourceCards": 41,
+  "sourceFiles": 127,
+  "currentModelGroups": {
+    "1": 26,
+    "2": 31,
+    "3": 26
+  },
+  "wholeView": {
+    "floorElevations": {
+      "1": 0,
+      "2": 6,
+      "3": 12.15
+    },
+    "coordinatePolicy": "화면에서만 층고를 가산하고 저장되는 설비 Y는 해당 층 로컬 0을 유지"
+  },
+  "stairs": {
+    "profiles": {
+      "1": {
+        "fromFloor": 0,
+        "toFloor": 1,
+        "fromElevation": 0,
+        "toElevation": 0.1,
+        "rise": 0.1,
+        "flights": 1,
+        "stepsPerFlight": 1
+      },
+      "2": {
+        "fromFloor": 1,
+        "toFloor": 2,
+        "fromElevation": 0.1,
+        "toElevation": 6.1,
+        "rise": 6,
+        "flights": 4,
+        "stepsPerFlight": 9
+      },
+      "3": {
+        "fromFloor": 2,
+        "toFloor": 3,
+        "fromElevation": 6.1,
+        "toElevation": 12.25,
+        "rise": 6.15,
+        "flights": 4,
+        "stepsPerFlight": 10
+      }
+    },
+    "policy": "선택층과 바로 아래층의 연결만 표시. 전체 보기에서 이 구간을 층고대로 조합.",
+    "caveat": "높이 차는 A-11을 따른다. 런·단수와 1층 문턱 형상은 실측 단수 확인이 아닌 영상·도면 범위의 재현값."
+  },
+  "assignments": [
+    {
+      "id": "packaging-f1-rotary-1",
+      "name": "로터리 1호기 포장기",
+      "floor": 1,
+      "card": 40,
+      "cardName": "로터리 1호기 포장기",
+      "match": "direct",
+      "position": [
+        -10.1,
+        0,
+        -7.7
+      ],
+      "size": [
+        3.1,
+        3.1,
+        2.2
+      ],
+      "photo": "./photos/team2-cards/card-040-front.jpg",
+      "photos": [
+        "./photos/team2-cards/card-040-front.jpg",
+        "./photos/team2-cards/card-040-left.jpg",
+        "./photos/team2-cards/card-040-right.jpg",
+        "./photos/team2-cards/card-040-rear.jpg",
+        "./photos/team2-cards/card-040.jpg"
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "packaging-f1-rotary-2",
+      "name": "로터리 2호기 포장기",
+      "floor": 1,
+      "card": 39,
+      "cardName": "로터리 2호기 포장기",
+      "match": "direct",
+      "position": [
+        -10.1,
+        0,
+        -4.8
+      ],
+      "size": [
+        3.1,
+        3.1,
+        2.2
+      ],
+      "photo": "./photos/team2-cards/card-039-front.jpg",
+      "photos": [
+        "./photos/team2-cards/card-039-front.jpg",
+        "./photos/team2-cards/card-039-left.jpg",
+        "./photos/team2-cards/card-039-right.jpg",
+        "./photos/team2-cards/card-039-rear.jpg",
+        "./photos/team2-cards/card-039.jpg"
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "packaging-f1-vertical",
+      "name": "버티컬 2호기 포장기",
+      "floor": 1,
+      "card": 38,
+      "cardName": "버티컬 2호기 포장기",
+      "match": "direct",
+      "position": [
+        -10.1,
+        0,
+        -1.7
+      ],
+      "size": [
+        2.9,
+        3.5,
+        2.4
+      ],
+      "photo": "./photos/team2-cards/card-038-front.jpg",
+      "photos": [
+        "./photos/team2-cards/card-038-front.jpg",
+        "./photos/team2-cards/card-038-left.jpg",
+        "./photos/team2-cards/card-038-right.jpg",
+        "./photos/team2-cards/card-038-rear.jpg",
+        "./photos/team2-cards/card-038.jpg"
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "packaging-f1-bag-filler",
+      "name": "지대백 포장기",
+      "floor": 1,
+      "card": 41,
+      "cardName": "지대백포장기",
+      "match": "direct",
+      "position": [
+        -10.1,
+        0,
+        5.3
+      ],
+      "size": [
+        2.9,
+        3.1,
+        2.1
+      ],
+      "photo": "./photos/team2-cards/card-041-front.jpg",
+      "photos": [
+        "./photos/team2-cards/card-041-front.jpg",
+        "./photos/team2-cards/card-041-left.jpg",
+        "./photos/team2-cards/card-041-right.jpg",
+        "./photos/team2-cards/card-041-rear.jpg",
+        "./photos/team2-cards/card-041.jpg"
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "packaging-f1-check-1",
+      "name": "중량선별기 1",
+      "floor": 1,
+      "card": 36,
+      "cardName": "A라인 중량 선별기",
+      "match": "same-type",
+      "position": [
+        -6.5,
+        0,
+        -7.7
+      ],
+      "size": [
+        2.1,
+        1.3,
+        1.1
+      ],
+      "photo": "./photos/team2-cards/card-036-front.jpg",
+      "photos": [
+        "./photos/team2-cards/card-036-front.jpg",
+        "./photos/team2-cards/card-036-left.jpg",
+        "./photos/team2-cards/card-036-right.jpg",
+        "./photos/team2-cards/card-036-rear.jpg",
+        "./photos/team2-cards/card-036.jpg"
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "packaging-f1-check-2",
+      "name": "중량선별기 2",
+      "floor": 1,
+      "card": 36,
+      "cardName": "A라인 중량 선별기",
+      "match": "same-type",
+      "position": [
+        -6.5,
+        0,
+        -4.8
+      ],
+      "size": [
+        2.1,
+        1.3,
+        1.1
+      ],
+      "photo": "./photos/team2-cards/card-036-front.jpg",
+      "photos": [
+        "./photos/team2-cards/card-036-front.jpg",
+        "./photos/team2-cards/card-036-left.jpg",
+        "./photos/team2-cards/card-036-right.jpg",
+        "./photos/team2-cards/card-036-rear.jpg",
+        "./photos/team2-cards/card-036.jpg"
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "packaging-f1-check-3",
+      "name": "중량선별기 3",
+      "floor": 1,
+      "card": 36,
+      "cardName": "A라인 중량 선별기",
+      "match": "same-type",
+      "position": [
+        -6.5,
+        0,
+        -1.7
+      ],
+      "size": [
+        2.1,
+        1.3,
+        1.1
+      ],
+      "photo": "./photos/team2-cards/card-036-front.jpg",
+      "photos": [
+        "./photos/team2-cards/card-036-front.jpg",
+        "./photos/team2-cards/card-036-left.jpg",
+        "./photos/team2-cards/card-036-right.jpg",
+        "./photos/team2-cards/card-036-rear.jpg",
+        "./photos/team2-cards/card-036.jpg"
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "packaging-f1-xray-1",
+      "name": "X-Ray 1호기",
+      "floor": 1,
+      "card": 25,
+      "cardName": "엑스레이 1호기",
+      "match": "direct",
+      "position": [
+        -1.5,
+        0,
+        -6.9
+      ],
+      "size": [
+        2.1,
+        1.8,
+        1.25
+      ],
+      "photo": "./photos/team2-cards/card-025-front.jpg",
+      "photos": [
+        "./photos/team2-cards/card-025-front.jpg",
+        "./photos/team2-cards/card-025-left.jpg",
+        "./photos/team2-cards/card-025-right.jpg",
+        "./photos/team2-cards/card-025-rear.jpg",
+        "./photos/team2-cards/card-025.jpg"
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "packaging-f1-xray-2",
+      "name": "X-Ray 2호기",
+      "floor": 1,
+      "card": 22,
+      "cardName": "엑스레이 2호기",
+      "match": "direct",
+      "position": [
+        -1.5,
+        0,
+        -4.4
+      ],
+      "size": [
+        2.1,
+        1.8,
+        1.25
+      ],
+      "photo": "./photos/team2-cards/card-022-front.jpg",
+      "photos": [
+        "./photos/team2-cards/card-022-front.jpg",
+        "./photos/team2-cards/card-022-left.jpg",
+        "./photos/team2-cards/card-022-right.jpg",
+        "./photos/team2-cards/card-022-rear.jpg",
+        "./photos/team2-cards/card-022.jpg"
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "packaging-f1-xray-3",
+      "name": "X-Ray 3호기",
+      "floor": 1,
+      "card": 21,
+      "cardName": "엑스레이 3호기",
+      "match": "direct",
+      "position": [
+        -1.5,
+        0,
+        -0.9
+      ],
+      "size": [
+        2.1,
+        1.8,
+        1.25
+      ],
+      "photo": "./photos/team2-cards/card-021-front.jpg",
+      "photos": [
+        "./photos/team2-cards/card-021-front.jpg",
+        "./photos/team2-cards/card-021-left.jpg",
+        "./photos/team2-cards/card-021-right.jpg",
+        "./photos/team2-cards/card-021-rear.jpg",
+        "./photos/team2-cards/card-021.jpg"
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "packaging-f1-robot-1",
+      "name": "포장 로봇 1",
+      "floor": 1,
+      "card": 18,
+      "cardName": "티칭로봇 2호기",
+      "match": "same-type",
+      "position": [
+        1.1,
+        0,
+        -6.9
+      ],
+      "size": [
+        1.6,
+        3.5,
+        1.5
+      ],
+      "photo": "./photos/team2-cards/card-018-front.jpg",
+      "photos": [
+        "./photos/team2-cards/card-018-front.jpg",
+        "./photos/team2-cards/card-018-left.jpg",
+        "./photos/team2-cards/card-018-right.jpg",
+        "./photos/team2-cards/card-018-rear.jpg",
+        "./photos/team2-cards/card-018.jpg"
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "packaging-f1-robot-2",
+      "name": "포장 로봇 2",
+      "floor": 1,
+      "card": 18,
+      "cardName": "티칭로봇 2호기",
+      "match": "direct",
+      "position": [
+        1.1,
+        0,
+        -4.4
+      ],
+      "size": [
+        1.6,
+        3.5,
+        1.5
+      ],
+      "photo": "./photos/team2-cards/card-018-front.jpg",
+      "photos": [
+        "./photos/team2-cards/card-018-front.jpg",
+        "./photos/team2-cards/card-018-left.jpg",
+        "./photos/team2-cards/card-018-right.jpg",
+        "./photos/team2-cards/card-018-rear.jpg",
+        "./photos/team2-cards/card-018.jpg"
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "packaging-f1-robot-3",
+      "name": "포장 로봇 3",
+      "floor": 1,
+      "card": 18,
+      "cardName": "티칭로봇 2호기",
+      "match": "same-type",
+      "position": [
+        1.1,
+        0,
+        -0.9
+      ],
+      "size": [
+        1.6,
+        3.5,
+        1.5
+      ],
+      "photo": "./photos/team2-cards/card-018-front.jpg",
+      "photos": [
+        "./photos/team2-cards/card-018-front.jpg",
+        "./photos/team2-cards/card-018-left.jpg",
+        "./photos/team2-cards/card-018-right.jpg",
+        "./photos/team2-cards/card-018-rear.jpg",
+        "./photos/team2-cards/card-018.jpg"
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "packaging-f1-sealer-1",
+      "name": "날인·테이핑기 1",
+      "floor": 1,
+      "card": 17,
+      "cardName": "테이핑기",
+      "match": "same-type",
+      "position": [
+        3.8,
+        0,
+        -6.9
+      ],
+      "size": [
+        1.7,
+        1.7,
+        1.2
+      ],
+      "photo": "./photos/team2-cards/card-017-front.jpg",
+      "photos": [
+        "./photos/team2-cards/card-017-front.jpg",
+        "./photos/team2-cards/card-017-left.jpg",
+        "./photos/team2-cards/card-017-right.jpg",
+        "./photos/team2-cards/card-017-rear.jpg",
+        "./photos/team2-cards/card-017.jpg"
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "packaging-f1-sealer-2",
+      "name": "날인·테이핑기 2",
+      "floor": 1,
+      "card": 17,
+      "cardName": "테이핑기",
+      "match": "same-type",
+      "position": [
+        3.8,
+        0,
+        -4.4
+      ],
+      "size": [
+        1.7,
+        1.7,
+        1.2
+      ],
+      "photo": "./photos/team2-cards/card-017-front.jpg",
+      "photos": [
+        "./photos/team2-cards/card-017-front.jpg",
+        "./photos/team2-cards/card-017-left.jpg",
+        "./photos/team2-cards/card-017-right.jpg",
+        "./photos/team2-cards/card-017-rear.jpg",
+        "./photos/team2-cards/card-017.jpg"
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "packaging-f1-sealer-3",
+      "name": "날인·테이핑기 3",
+      "floor": 1,
+      "card": 17,
+      "cardName": "테이핑기",
+      "match": "same-type",
+      "position": [
+        3.8,
+        0,
+        -0.9
+      ],
+      "size": [
+        1.7,
+        1.7,
+        1.2
+      ],
+      "photo": "./photos/team2-cards/card-017-front.jpg",
+      "photos": [
+        "./photos/team2-cards/card-017-front.jpg",
+        "./photos/team2-cards/card-017-left.jpg",
+        "./photos/team2-cards/card-017-right.jpg",
+        "./photos/team2-cards/card-017-rear.jpg",
+        "./photos/team2-cards/card-017.jpg"
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "packaging-f1-box-check-1",
+      "name": "박스 중량선별기 1",
+      "floor": 1,
+      "card": 36,
+      "cardName": "A라인 중량 선별기",
+      "match": "same-type",
+      "position": [
+        6.3,
+        0,
+        -6.9
+      ],
+      "size": [
+        1.7,
+        1.35,
+        1.2
+      ],
+      "photo": "./photos/team2-cards/card-036-front.jpg",
+      "photos": [
+        "./photos/team2-cards/card-036-front.jpg",
+        "./photos/team2-cards/card-036-left.jpg",
+        "./photos/team2-cards/card-036-right.jpg",
+        "./photos/team2-cards/card-036-rear.jpg",
+        "./photos/team2-cards/card-036.jpg"
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "packaging-f1-box-check-2",
+      "name": "박스 중량선별기 2",
+      "floor": 1,
+      "card": 36,
+      "cardName": "A라인 중량 선별기",
+      "match": "same-type",
+      "position": [
+        6.3,
+        0,
+        -4.4
+      ],
+      "size": [
+        1.7,
+        1.35,
+        1.2
+      ],
+      "photo": "./photos/team2-cards/card-036-front.jpg",
+      "photos": [
+        "./photos/team2-cards/card-036-front.jpg",
+        "./photos/team2-cards/card-036-left.jpg",
+        "./photos/team2-cards/card-036-right.jpg",
+        "./photos/team2-cards/card-036-rear.jpg",
+        "./photos/team2-cards/card-036.jpg"
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "packaging-f1-box-check-3",
+      "name": "박스 중량선별기 3",
+      "floor": 1,
+      "card": 36,
+      "cardName": "A라인 중량 선별기",
+      "match": "same-type",
+      "position": [
+        6.3,
+        0,
+        -0.9
+      ],
+      "size": [
+        1.7,
+        1.35,
+        1.2
+      ],
+      "photo": "./photos/team2-cards/card-036-front.jpg",
+      "photos": [
+        "./photos/team2-cards/card-036-front.jpg",
+        "./photos/team2-cards/card-036-left.jpg",
+        "./photos/team2-cards/card-036-right.jpg",
+        "./photos/team2-cards/card-036-rear.jpg",
+        "./photos/team2-cards/card-036.jpg"
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "packaging-f1-erector-3",
+      "name": "제함기 3호기",
+      "floor": 1,
+      "card": 19,
+      "cardName": "2팀용 제함기 3",
+      "match": "direct",
+      "position": [
+        -0.8,
+        0,
+        -13.6
+      ],
+      "size": [
+        2.5,
+        1.9,
+        1.3
+      ],
+      "photo": "./photos/team2-cards/card-019-front.jpg",
+      "photos": [
+        "./photos/team2-cards/card-019-front.jpg",
+        "./photos/team2-cards/card-019-left.jpg",
+        "./photos/team2-cards/card-019-right.jpg",
+        "./photos/team2-cards/card-019-rear.jpg",
+        "./photos/team2-cards/card-019.jpg"
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "packaging-f1-erector-2",
+      "name": "제함기 2호기",
+      "floor": 1,
+      "card": 20,
+      "cardName": "2팀용 제함기 2",
+      "match": "direct",
+      "position": [
+        -0.8,
+        0,
+        -11.7
+      ],
+      "size": [
+        2.5,
+        1.9,
+        1.3
+      ],
+      "photo": "./photos/team2-cards/card-020-front.jpg",
+      "photos": [
+        "./photos/team2-cards/card-020-front.jpg",
+        "./photos/team2-cards/card-020-left.jpg",
+        "./photos/team2-cards/card-020-right.jpg",
+        "./photos/team2-cards/card-020-rear.jpg",
+        "./photos/team2-cards/card-020.jpg"
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "packaging-f1-erector-1",
+      "name": "제함기 1호기",
+      "floor": 1,
+      "card": 24,
+      "cardName": "2팀용 제함기",
+      "match": "direct",
+      "position": [
+        -0.8,
+        0,
+        -9.9
+      ],
+      "size": [
+        2.5,
+        1.9,
+        1.3
+      ],
+      "photo": "./photos/team2-cards/card-024-front.jpg",
+      "photos": [
+        "./photos/team2-cards/card-024-front.jpg",
+        "./photos/team2-cards/card-024-left.jpg",
+        "./photos/team2-cards/card-024-right.jpg",
+        "./photos/team2-cards/card-024-rear.jpg",
+        "./photos/team2-cards/card-024.jpg"
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "packaging-f1-robot-4",
+      "name": "케이샤 4호기",
+      "floor": 1,
+      "card": 16,
+      "cardName": "케이샤 4호기",
+      "match": "direct",
+      "position": [
+        9.1,
+        0,
+        3.2
+      ],
+      "size": [
+        2.2,
+        3.2,
+        2.3
+      ],
+      "photo": "./photos/team2-cards/card-016-front.jpg",
+      "photos": [
+        "./photos/team2-cards/card-016-front.jpg",
+        "./photos/team2-cards/card-016-left.jpg",
+        "./photos/team2-cards/card-016-right.jpg",
+        "./photos/team2-cards/card-016-rear.jpg",
+        "./photos/team2-cards/card-016.jpg"
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "packaging-f1-robot-5",
+      "name": "케이샤 5호기",
+      "floor": 1,
+      "card": 15,
+      "cardName": "케이샤 5호기",
+      "match": "direct",
+      "position": [
+        9.1,
+        0,
+        -4
+      ],
+      "size": [
+        2.2,
+        3.2,
+        2.3
+      ],
+      "photo": "./photos/team2-cards/card-015-front.jpg",
+      "photos": [
+        "./photos/team2-cards/card-015-front.jpg",
+        "./photos/team2-cards/card-015-left.jpg",
+        "./photos/team2-cards/card-015-right.jpg",
+        "./photos/team2-cards/card-015-rear.jpg",
+        "./photos/team2-cards/card-015.jpg"
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "packaging-f2-stick-1",
+      "name": "스틱 1호기",
+      "floor": 2,
+      "card": 11,
+      "cardName": "스틱 1,2호기",
+      "match": "direct",
+      "position": [
+        8.7,
+        0,
+        -8.4
+      ],
+      "size": [
+        2,
+        2.9,
+        2.4
+      ],
+      "photo": "./photos/team2-cards/card-011-front.jpg",
+      "photos": [
+        "./photos/team2-cards/card-011-front.jpg",
+        "./photos/team2-cards/card-011-left.jpg",
+        "./photos/team2-cards/card-011-right.jpg",
+        "./photos/team2-cards/card-011-rear.jpg",
+        "./photos/team2-cards/card-011.jpg"
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "packaging-f2-stick-2",
+      "name": "스틱 2호기",
+      "floor": 2,
+      "card": 11,
+      "cardName": "스틱 1,2호기",
+      "match": "direct",
+      "position": [
+        12.7,
+        0,
+        -8.4
+      ],
+      "size": [
+        2,
+        2.9,
+        2.4
+      ],
+      "photo": "./photos/team2-cards/card-011-front.jpg",
+      "photos": [
+        "./photos/team2-cards/card-011-front.jpg",
+        "./photos/team2-cards/card-011-left.jpg",
+        "./photos/team2-cards/card-011-right.jpg",
+        "./photos/team2-cards/card-011-rear.jpg",
+        "./photos/team2-cards/card-011.jpg"
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "packaging-f2-stick-3",
+      "name": "스틱 3호기",
+      "floor": 2,
+      "card": 10,
+      "cardName": "스틱 3,4호기",
+      "match": "direct",
+      "position": [
+        8.7,
+        0,
+        -4.1
+      ],
+      "size": [
+        2,
+        2.9,
+        2.4
+      ],
+      "photo": "./photos/team2-cards/card-010-front.jpg",
+      "photos": [
+        "./photos/team2-cards/card-010-front.jpg",
+        "./photos/team2-cards/card-010-left.jpg",
+        "./photos/team2-cards/card-010-right.jpg",
+        "./photos/team2-cards/card-010-rear.jpg",
+        "./photos/team2-cards/card-010.jpg"
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "packaging-f2-stick-4",
+      "name": "스틱 4호기",
+      "floor": 2,
+      "card": 10,
+      "cardName": "스틱 3,4호기",
+      "match": "direct",
+      "position": [
+        12.7,
+        0,
+        -4.1
+      ],
+      "size": [
+        2,
+        2.9,
+        2.4
+      ],
+      "photo": "./photos/team2-cards/card-010-front.jpg",
+      "photos": [
+        "./photos/team2-cards/card-010-front.jpg",
+        "./photos/team2-cards/card-010-left.jpg",
+        "./photos/team2-cards/card-010-right.jpg",
+        "./photos/team2-cards/card-010-rear.jpg",
+        "./photos/team2-cards/card-010.jpg"
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "packaging-f2-stick-5",
+      "name": "스틱 5호기",
+      "floor": 2,
+      "card": 8,
+      "cardName": "스틱 5,6호기",
+      "match": "direct",
+      "position": [
+        8.7,
+        0,
+        0.2
+      ],
+      "size": [
+        2,
+        2.9,
+        2.4
+      ],
+      "photo": "./photos/team2-cards/card-008-front.jpg",
+      "photos": [
+        "./photos/team2-cards/card-008-front.jpg",
+        "./photos/team2-cards/card-008-left.jpg",
+        "./photos/team2-cards/card-008-right.jpg",
+        "./photos/team2-cards/card-008-rear.jpg",
+        "./photos/team2-cards/card-008.jpg"
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "packaging-f2-stick-6",
+      "name": "스틱 6호기",
+      "floor": 2,
+      "card": 8,
+      "cardName": "스틱 5,6호기",
+      "match": "direct",
+      "position": [
+        12.7,
+        0,
+        0.2
+      ],
+      "size": [
+        2,
+        2.9,
+        2.4
+      ],
+      "photo": "./photos/team2-cards/card-008-front.jpg",
+      "photos": [
+        "./photos/team2-cards/card-008-front.jpg",
+        "./photos/team2-cards/card-008-left.jpg",
+        "./photos/team2-cards/card-008-right.jpg",
+        "./photos/team2-cards/card-008-rear.jpg",
+        "./photos/team2-cards/card-008.jpg"
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "packaging-f2-stick-7",
+      "name": "스틱 7호기",
+      "floor": 2,
+      "card": 9,
+      "cardName": "스틱 7,8호기",
+      "match": "direct",
+      "position": [
+        8.7,
+        0,
+        3.8
+      ],
+      "size": [
+        2,
+        2.9,
+        2.4
+      ],
+      "photo": "./photos/team2-cards/card-009-front.jpg",
+      "photos": [
+        "./photos/team2-cards/card-009-front.jpg",
+        "./photos/team2-cards/card-009-left.jpg",
+        "./photos/team2-cards/card-009-right.jpg",
+        "./photos/team2-cards/card-009-rear.jpg",
+        "./photos/team2-cards/card-009.jpg"
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "packaging-f2-stick-8",
+      "name": "스틱 8호기",
+      "floor": 2,
+      "card": 9,
+      "cardName": "스틱 7,8호기",
+      "match": "direct",
+      "position": [
+        12.7,
+        0,
+        3.8
+      ],
+      "size": [
+        2,
+        2.9,
+        2.4
+      ],
+      "photo": "./photos/team2-cards/card-009-front.jpg",
+      "photos": [
+        "./photos/team2-cards/card-009-front.jpg",
+        "./photos/team2-cards/card-009-left.jpg",
+        "./photos/team2-cards/card-009-right.jpg",
+        "./photos/team2-cards/card-009-rear.jpg",
+        "./photos/team2-cards/card-009.jpg"
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "packaging-f2-xray-1",
+      "name": "X-Ray 1호기",
+      "floor": 2,
+      "card": 37,
+      "cardName": "A라인 엑스레이",
+      "match": "direct",
+      "position": [
+        -1,
+        0,
+        -6.2
+      ],
+      "size": [
+        1.8,
+        1.8,
+        1.25
+      ],
+      "photo": "./photos/team2-cards/card-037-front.jpg",
+      "photos": [
+        "./photos/team2-cards/card-037-front.jpg",
+        "./photos/team2-cards/card-037-left.jpg",
+        "./photos/team2-cards/card-037-right.jpg",
+        "./photos/team2-cards/card-037-rear.jpg",
+        "./photos/team2-cards/card-037.jpg"
+      ],
+      "rotation": 1.5707963267948966
+    },
+    {
+      "id": "packaging-f2-xray-3",
+      "name": "X-Ray 3호기",
+      "floor": 2,
+      "card": 35,
+      "cardName": "C라인 엑스레이",
+      "match": "direct",
+      "position": [
+        1.3,
+        0,
+        2.5
+      ],
+      "size": [
+        1.8,
+        1.8,
+        1.25
+      ],
+      "photo": "./photos/team2-cards/card-035-front.jpg",
+      "photos": [
+        "./photos/team2-cards/card-035-front.jpg",
+        "./photos/team2-cards/card-035-left.jpg",
+        "./photos/team2-cards/card-035-right.jpg",
+        "./photos/team2-cards/card-035-rear.jpg",
+        "./photos/team2-cards/card-035.jpg"
+      ],
+      "rotation": 1.5707963267948966
+    },
+    {
+      "id": "packaging-f2-xray-2",
+      "name": "X-Ray 2호기",
+      "floor": 2,
+      "card": 26,
+      "cardName": "B라인 엑스레이",
+      "match": "direct",
+      "position": [
+        -0.5,
+        0,
+        7.3
+      ],
+      "size": [
+        1.8,
+        1.8,
+        1.25
+      ],
+      "photo": "./photos/team2-cards/card-026-front.jpg",
+      "photos": [
+        "./photos/team2-cards/card-026-front.jpg",
+        "./photos/team2-cards/card-026-left.jpg",
+        "./photos/team2-cards/card-026-right.jpg",
+        "./photos/team2-cards/card-026-rear.jpg",
+        "./photos/team2-cards/card-026.jpg"
+      ],
+      "rotation": 1.5707963267948966
+    },
+    {
+      "id": "packaging-f2-check-1",
+      "name": "중량선별기 1",
+      "floor": 2,
+      "card": 36,
+      "cardName": "A라인 중량 선별기",
+      "match": "direct",
+      "position": [
+        -1,
+        0,
+        -4.4
+      ],
+      "size": [
+        1.8,
+        1.3,
+        1.1
+      ],
+      "photo": "./photos/team2-cards/card-036-front.jpg",
+      "photos": [
+        "./photos/team2-cards/card-036-front.jpg",
+        "./photos/team2-cards/card-036-left.jpg",
+        "./photos/team2-cards/card-036-right.jpg",
+        "./photos/team2-cards/card-036-rear.jpg",
+        "./photos/team2-cards/card-036.jpg"
+      ],
+      "rotation": 1.5707963267948966
+    },
+    {
+      "id": "packaging-f2-check-2",
+      "name": "중량선별기 2",
+      "floor": 2,
+      "card": 29,
+      "cardName": "B라인 중량 선별기",
+      "match": "same-type",
+      "position": [
+        1.3,
+        0,
+        4.3
+      ],
+      "size": [
+        1.8,
+        1.3,
+        1.1
+      ],
+      "photo": "./photos/team2-cards/card-029-front.jpg",
+      "photos": [
+        "./photos/team2-cards/card-029-front.jpg",
+        "./photos/team2-cards/card-029-left.jpg",
+        "./photos/team2-cards/card-029-right.jpg",
+        "./photos/team2-cards/card-029-rear.jpg",
+        "./photos/team2-cards/card-029.jpg"
+      ],
+      "rotation": 1.5707963267948966
+    },
+    {
+      "id": "packaging-f2-check-3",
+      "name": "중량선별기 3",
+      "floor": 2,
+      "card": 29,
+      "cardName": "B라인 중량 선별기",
+      "match": "direct",
+      "position": [
+        -0.5,
+        0,
+        9.1
+      ],
+      "size": [
+        1.8,
+        1.3,
+        1.1
+      ],
+      "photo": "./photos/team2-cards/card-029-front.jpg",
+      "photos": [
+        "./photos/team2-cards/card-029-front.jpg",
+        "./photos/team2-cards/card-029-left.jpg",
+        "./photos/team2-cards/card-029-right.jpg",
+        "./photos/team2-cards/card-029-rear.jpg",
+        "./photos/team2-cards/card-029.jpg"
+      ],
+      "rotation": 1.5707963267948966
+    },
+    {
+      "id": "packaging-f2-taper-1",
+      "name": "A라인 테이핑기",
+      "floor": 2,
+      "card": 27,
+      "cardName": "A라인 테이핑기",
+      "match": "direct",
+      "position": [
+        -1,
+        0,
+        -2.7
+      ],
+      "size": [
+        1.65,
+        1.8,
+        1.1
+      ],
+      "photo": "./photos/team2-cards/card-027-front.jpg",
+      "photos": [
+        "./photos/team2-cards/card-027-front.jpg",
+        "./photos/team2-cards/card-027-left.jpg",
+        "./photos/team2-cards/card-027-right.jpg",
+        "./photos/team2-cards/card-027-rear.jpg",
+        "./photos/team2-cards/card-027.jpg"
+      ],
+      "rotation": 1.5707963267948966
+    },
+    {
+      "id": "packaging-f2-taper-2",
+      "name": "C라인 테이핑기",
+      "floor": 2,
+      "card": 32,
+      "cardName": "C라인 테이핑기",
+      "match": "direct",
+      "position": [
+        1.3,
+        0,
+        6
+      ],
+      "size": [
+        1.65,
+        1.8,
+        1.1
+      ],
+      "photo": "./photos/team2-cards/card-032-front.jpg",
+      "photos": [
+        "./photos/team2-cards/card-032-front.jpg",
+        "./photos/team2-cards/card-032-left.jpg",
+        "./photos/team2-cards/card-032-right.jpg",
+        "./photos/team2-cards/card-032-rear.jpg",
+        "./photos/team2-cards/card-032.jpg"
+      ],
+      "rotation": 1.5707963267948966
+    },
+    {
+      "id": "packaging-f2-taper-3",
+      "name": "B라인 테이핑기",
+      "floor": 2,
+      "card": 30,
+      "cardName": "B라인 테이핑기",
+      "match": "direct",
+      "position": [
+        -0.5,
+        0,
+        10.8
+      ],
+      "size": [
+        1.65,
+        1.8,
+        1.1
+      ],
+      "photo": "./photos/team2-cards/card-030-front.jpg",
+      "photos": [
+        "./photos/team2-cards/card-030-front.jpg",
+        "./photos/team2-cards/card-030-left.jpg",
+        "./photos/team2-cards/card-030-right.jpg",
+        "./photos/team2-cards/card-030-rear.jpg",
+        "./photos/team2-cards/card-030.jpg"
+      ],
+      "rotation": 1.5707963267948966
+    },
+    {
+      "id": "packaging-f2-nitrogen",
+      "name": "질소발생기",
+      "floor": 2,
+      "card": 28,
+      "cardName": "질소발생기",
+      "match": "direct",
+      "position": [
+        5.6,
+        0,
+        -13.8
+      ],
+      "size": [
+        1.3,
+        2,
+        1
+      ],
+      "photo": "./photos/team2-cards/card-028-front.jpg",
+      "photos": [
+        "./photos/team2-cards/card-028-front.jpg",
+        "./photos/team2-cards/card-028-left.jpg",
+        "./photos/team2-cards/card-028-right.jpg",
+        "./photos/team2-cards/card-028-rear.jpg",
+        "./photos/team2-cards/card-028.jpg"
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "packaging-f2-hot-air",
+      "name": "열풍기",
+      "floor": 2,
+      "card": 33,
+      "cardName": "열풍기",
+      "match": "direct",
+      "position": [
+        11.4,
+        0,
+        -13.8
+      ],
+      "size": [
+        2,
+        2.5,
+        1.2
+      ],
+      "photo": "./photos/team2-cards/card-033-front.jpg",
+      "photos": [
+        "./photos/team2-cards/card-033-front.jpg",
+        "./photos/team2-cards/card-033-left.jpg",
+        "./photos/team2-cards/card-033-right.jpg",
+        "./photos/team2-cards/card-033-rear.jpg",
+        "./photos/team2-cards/card-033.jpg"
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "packaging-main-mixer-1",
+      "name": "무중력 믹서 1호기",
+      "floor": 3,
+      "card": 12,
+      "cardName": "무중력 1호기",
+      "match": "direct",
+      "position": [
+        -11.3,
+        0,
+        -7.5
+      ],
+      "size": [
+        3.1,
+        7.25,
+        4.1
+      ],
+      "photo": "./photos/team2-cards/card-012-front.jpg",
+      "photos": [
+        "./photos/team2-cards/card-012-front.jpg",
+        "./photos/team2-cards/card-012-left.jpg",
+        "./photos/team2-cards/card-012-right.jpg",
+        "./photos/team2-cards/card-012-rear.jpg",
+        "./photos/team2-cards/card-012.jpg"
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "packaging-main-mixer-2",
+      "name": "무중력 믹서 2호기",
+      "floor": 3,
+      "card": 14,
+      "cardName": "무중력 2호기",
+      "match": "direct",
+      "position": [
+        -11.3,
+        0,
+        -2.9
+      ],
+      "size": [
+        3.1,
+        6.6,
+        4.1
+      ],
+      "photo": "./photos/team2-cards/card-014-front.jpg",
+      "photos": [
+        "./photos/team2-cards/card-014-front.jpg",
+        "./photos/team2-cards/card-014-left.jpg",
+        "./photos/team2-cards/card-014-right.jpg",
+        "./photos/team2-cards/card-014-rear.jpg",
+        "./photos/team2-cards/card-014.jpg"
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "packaging-main-mixer-3",
+      "name": "무중력 믹서 3호기",
+      "floor": 3,
+      "card": 13,
+      "cardName": "무중력 3호기",
+      "match": "direct",
+      "position": [
+        -11.3,
+        0,
+        1.6
+      ],
+      "size": [
+        3.1,
+        6.6,
+        4.1
+      ],
+      "photo": "./photos/team2-cards/card-013-front.jpg",
+      "photos": [
+        "./photos/team2-cards/card-013-front.jpg",
+        "./photos/team2-cards/card-013-left.jpg",
+        "./photos/team2-cards/card-013-right.jpg",
+        "./photos/team2-cards/card-013-rear.jpg",
+        "./photos/team2-cards/card-013.jpg"
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "packaging-round-process",
+      "name": "교반기 #4 · 지대",
+      "floor": 3,
+      "card": 1,
+      "cardName": "교반기#4(지대)",
+      "match": "direct",
+      "position": [
+        -11.3,
+        0,
+        5.5
+      ],
+      "size": [
+        2.7,
+        5.95,
+        2.8
+      ],
+      "photo": "./photos/team2-cards/card-001-front.jpg",
+      "photos": [
+        "./photos/team2-cards/card-001-front.jpg",
+        "./photos/team2-cards/card-001-left.jpg",
+        "./photos/team2-cards/card-001-right.jpg",
+        "./photos/team2-cards/card-001-rear.jpg",
+        "./photos/team2-cards/card-001.jpg"
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "packaging-mixer-sieve-1",
+      "name": "진동채 1호기",
+      "floor": 3,
+      "card": 7,
+      "cardName": "진동채 1호기",
+      "match": "direct",
+      "position": [
+        -7.5,
+        0,
+        -7.5
+      ],
+      "size": [
+        1.2,
+        4.1,
+        2.6
+      ],
+      "photo": "./photos/team2-cards/card-007-front.jpg",
+      "photos": [
+        "./photos/team2-cards/card-007-front.jpg",
+        "./photos/team2-cards/card-007-left.jpg",
+        "./photos/team2-cards/card-007-right.jpg",
+        "./photos/team2-cards/card-007-rear.jpg",
+        "./photos/team2-cards/card-007.jpg"
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "packaging-mixer-sieve-2",
+      "name": "진동채 2호기",
+      "floor": 3,
+      "card": 6,
+      "cardName": "진동채 2호기",
+      "match": "direct",
+      "position": [
+        -7.5,
+        0,
+        -2.9
+      ],
+      "size": [
+        1.2,
+        4.1,
+        2.6
+      ],
+      "photo": "./photos/team2-cards/card-006-front.jpg",
+      "photos": [
+        "./photos/team2-cards/card-006-front.jpg",
+        "./photos/team2-cards/card-006-left.jpg",
+        "./photos/team2-cards/card-006-right.jpg",
+        "./photos/team2-cards/card-006-rear.jpg",
+        "./photos/team2-cards/card-006.jpg"
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "packaging-mixer-sieve-3",
+      "name": "진동채 3호기",
+      "floor": 3,
+      "card": 5,
+      "cardName": "진동채 3호기",
+      "match": "direct",
+      "position": [
+        -7.5,
+        0,
+        1.6
+      ],
+      "size": [
+        1.2,
+        4.1,
+        2.6
+      ],
+      "photo": "./photos/team2-cards/card-005-front.jpg",
+      "photos": [
+        "./photos/team2-cards/card-005-front.jpg",
+        "./photos/team2-cards/card-005-left.jpg",
+        "./photos/team2-cards/card-005-right.jpg",
+        "./photos/team2-cards/card-005-rear.jpg",
+        "./photos/team2-cards/card-005.jpg"
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "packaging-card-hopper-1",
+      "name": "호퍼 1호기 · 원통 교반형",
+      "floor": 3,
+      "card": 4,
+      "cardName": "호퍼 1호기",
+      "match": "direct",
+      "position": [
+        -8.9,
+        0,
+        -7.5
+      ],
+      "size": [
+        1.7,
+        5.6,
+        1.7
+      ],
+      "photo": "./photos/team2-cards/card-004-front.jpg",
+      "photos": [
+        "./photos/team2-cards/card-004-front.jpg",
+        "./photos/team2-cards/card-004-left.jpg",
+        "./photos/team2-cards/card-004-right.jpg",
+        "./photos/team2-cards/card-004-rear.jpg",
+        "./photos/team2-cards/card-004.jpg"
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "packaging-card-hopper-2",
+      "name": "호퍼 2호기 · 원통 교반형",
+      "floor": 3,
+      "card": 3,
+      "cardName": "호퍼 2호기",
+      "match": "direct",
+      "position": [
+        -8.9,
+        0,
+        -2.9
+      ],
+      "size": [
+        1.7,
+        5.6,
+        1.7
+      ],
+      "photo": "./photos/team2-cards/card-003-front.jpg",
+      "photos": [
+        "./photos/team2-cards/card-003-front.jpg",
+        "./photos/team2-cards/card-003-left.jpg",
+        "./photos/team2-cards/card-003-right.jpg",
+        "./photos/team2-cards/card-003-rear.jpg",
+        "./photos/team2-cards/card-003.jpg"
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "packaging-card-hopper-3",
+      "name": "호퍼 3호기 · 원통 교반형",
+      "floor": 3,
+      "card": 2,
+      "cardName": "호퍼 3호기",
+      "match": "direct",
+      "position": [
+        -8.9,
+        0,
+        1.6
+      ],
+      "size": [
+        1.7,
+        5.2,
+        1.7
+      ],
+      "photo": "./photos/team2-cards/card-002-front.jpg",
+      "photos": [
+        "./photos/team2-cards/card-002-front.jpg",
+        "./photos/team2-cards/card-002-left.jpg",
+        "./photos/team2-cards/card-002-right.jpg",
+        "./photos/team2-cards/card-002-rear.jpg",
+        "./photos/team2-cards/card-002.jpg"
+      ],
+      "rotation": 0
+    }
+  ],
+  "drawingIdentityAudit": [
+    {
+      "source": "9동 A-05/A-06/A-07/A-11",
+      "use": true,
+      "basis": "표제의 9동·유산공장 증축공사·1/2/3층, 외곽과 계단/LIFT 대응 확인"
+    },
+    {
+      "source": "2025 작업장평면도 7d69c424a44c / pages004·005·006",
+      "use": true,
+      "basis": "1층 로터리/버티컬/지대/로봇, 2층 스틱 8대/호퍼 4대/VMIX 2대, 3층 배합실/무중력 3대/스틱 공급부"
+    },
+    {
+      "source": "스틱 작업장평면도(2023.10.18) cc15d9358b58",
+      "use": true,
+      "basis": "2층 스틱 1~8·VMIX·내포장/외포장 동선. 방 명칭은 2025 자료 우선"
+    },
+    {
+      "source": "생산2팀(V-MIX포함) efb5cf836463",
+      "use": true,
+      "basis": "동일한 1/2/3층 설비와 실명으로 현 스틱·소포장동을 교차 확인하는 보조 근거"
+    },
+    {
+      "source": "생산2팀1층평면도 d91b52882e88",
+      "use": false,
+      "basis": "전처리·용해 MIX·S1·오일·균질기·ICA·보일러 계통. 9동 스틱·소포장 배치와 불일치하므로 팀명만으로 재사용하지 않음"
+    },
+    {
+      "source": "OWP 과거 team2",
+      "use": false,
+      "basis": "DRYER 태그·5~7층·균질기/용해공정 등 건조실 자료. 현재 2팀 외형에 전용하지 않음"
+    },
+    {
+      "source": "생산2팀 집진열풍 f13f9 / 조도0692",
+      "use": false,
+      "basis": "현재 판독 가능한 미리보기와 공간 정체성 확인이 없어 외형·좌표 근거로 사용하지 않음"
+    }
+  ],
+  "keyCorrections": [
+    "무중력 1~3은 큰 하부 모터/경사 SS 커버와 끝단 상부 모터 2개를 동시에 가진 카드 사진의 형상으로 보완",
+    "호퍼 1~3 카드의 낮은 원통 교반형 설비는 믹서 하부 각뿔 및 우측 8개 호퍼 열과 구분",
+    "4번째 표시 그룹의 리본 믹서 근사를 현재 카드 001의 원통 교반기 #4(지대)로 교정. 상부 시프트는 통합해 중복 생성하지 않음",
+    "2025 자료의 리본 4 명칭과 현재 카드 #4의 외형 차이를 보존하며 두 자료만으로 동일 본체의 변경 이력을 확정하지 않음",
+    "원통 호퍼 3개의 정확한 앵커는 이력카드 사진만으로 측량할 수 없어 메인 플랫폼 동일 구역의 배치 근사로 명시",
+    "스틱 1~8의 외형은 신성기계 표기가 있는 실제 카드 008~011의 해당 호기를 우선. 이전 YOUNG TECH PACK 참고 선도를 해당 호기의 확정 모델로 취급하지 않음",
+    "케이샤 4·5는 파란 베이스/크림 팔, 티칭로봇 2는 상부 프레임의 병렬 링크형으로 교정",
+    "1·3번 포장로봇과 일부 선별기는 개별 번호 대응 사진이 없어 같은 종류 카드의 외형 참고로 분리"
+  ],
+  "photoOnlyCards": [
+    {
+      "number": 23,
+      "name": "다지기 롤러"
+    },
+    {
+      "number": 31,
+      "name": "봉함기"
+    },
+    {
+      "number": 34,
+      "name": "밴드 씰링기"
+    }
+  ],
+  "photoOnlyPolicy": "카드 사진과 도면의 개별 설치 위치 대응이 확인되지 않은 설비는 층 참고 갤러리에 제공하고 임의 위치에 새 기기를 추가하지 않음",
+  "limitations": [
+    "좌표·설비 치수는 실측값이 아닌 도면/사진 비례 재현값. 카드의 모델명 공란을 추정 명칭으로 채우지 않음.",
+    "서로 다른 시기의 도면/카드를 현재 설치 이력으로 단정하지 않음.",
+    "사진의 부속·나사·표면 질감은 일부 단순화. 사진 정합이나 공장 전체 실측 스캔 결과는 아님."
+  ],
+  "transportSummary": {
+    "reference": "transport-update.json",
+    "fixedSections": {
+      "1": 17,
+      "2": 11,
+      "3": 0
+    },
+    "countsUnchanged": true
+  }
+}

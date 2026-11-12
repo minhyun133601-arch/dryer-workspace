@@ -1,0 +1,74 @@
+{
+  "id": "3-1782094717064-376072",
+  "line": "",
+  "name": "펄 진동채",
+  "note": "",
+  "plan": "",
+  "rate": 0,
+  "room": "배합실",
+  "team": "3팀",
+  "group": "",
+  "owner": "",
+  "status": "비가동중",
+  "process": "",
+  "documents": [],
+  "lastCheck": "",
+  "modelName": "",
+  "nextCheck": "",
+  "photoCrop": null,
+  "photoName": "펄 진동채 photo.jpg",
+  "detailInfo": [
+    {
+      "label": "설비명",
+      "value": "펄 진동채"
+    },
+    {
+      "label": "관리팀",
+      "value": "3팀"
+    },
+    {
+      "label": "가동률",
+      "value": "0%"
+    }
+  ],
+  "ownerLabel": "담당 업체",
+  "production": "",
+  "teamDataKey": "work_team_calendar_team3",
+  "detailGroups": {
+    "equipmentSpecs": []
+  },
+  "manufacturer": "",
+  "photoDataUrl": "",
+  "equipmentCode": "3-1782094717064-376072",
+  "operationInfo": [
+    {
+      "label": "설비명",
+      "value": "펄 진동채"
+    },
+    {
+      "label": "관리팀",
+      "value": "3팀"
+    },
+    {
+      "label": "실",
+      "value": "배합실"
+    },
+    {
+      "label": "공정",
+      "value": ""
+    },
+    {
+      "label": "가동률",
+      "value": "0"
+    }
+  ],
+  "manufacturedAt": "",
+  "photoDocumentId": "74c6fa79-6d1a-4f39-a44f-77658aa98668",
+  "photoPreviewUrl": "/api/files/74c6fa79-6d1a-4f39-a44f-77658aa98668/view",
+  "photoDownloadUrl": "/api/files/74c6fa79-6d1a-4f39-a44f-77658aa98668/download",
+  "manufacturerLabel": "제조사",
+  "photoThumbDataUrl": "",
+  "maintenanceHistory": [],
+  "photoAttachmentKey": "equipment-photo-main",
+  "photoStorageRelPath": "equipment-assets/equipment-history/펄 진동채/images/591f9bcc-488c-456a-b054-a60e27de7704.jpg"
+}

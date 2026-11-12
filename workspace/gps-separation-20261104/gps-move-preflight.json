@@ -1,0 +1,723 @@
+{
+  "source": "C:\\Users\\user\\Desktop\\프로젝트\\FieldCapture-A34",
+  "destination": "C:\\Users\\user\\Desktop\\GPS 좌표 촬영앱",
+  "checked_at": "2026-11-04T17:05:00.802179+09:00",
+  "status": "preflight_passed",
+  "files": [
+    {
+      "relative": ".gitignore",
+      "bytes": 61,
+      "modified_ns": 1793236162477600000,
+      "file_id": 5629499534697410,
+      "sha256": "8e96ac560aa24c49644560560c8cb0d5f198c55da3314490f7e6c74874033964"
+    },
+    {
+      "relative": "AGENTS.md",
+      "bytes": 2102,
+      "modified_ns": 1793320323807004600,
+      "file_id": 9288674231635228,
+      "sha256": "a648af4972d8fd930a7e3e095198519762869ab3dff521dff7af32fe4320b896"
+    },
+    {
+      "relative": "AI_REVIEW_REQUEST.txt",
+      "bytes": 1663,
+      "modified_ns": 1793238478904739000,
+      "file_id": 8162774325144061,
+      "sha256": "400f016e025aeec6f40c5e750fcf7ca14b1af0f0ab5cbd60a4fd6a9856ddabc5"
+    },
+    {
+      "relative": "README.md",
+      "bytes": 9519,
+      "modified_ns": 1793336452821849400,
+      "file_id": 18014398509624844,
+      "sha256": "61074e0d42d404e39a3e22ace04f51ca874c8d8e7e167d8e1b8b9d7c6a572c64"
+    },
+    {
+      "relative": "START_HERE_KO.md",
+      "bytes": 7109,
+      "modified_ns": 1793336452821849400,
+      "file_id": 113434415614568376,
+      "sha256": "58600e12b266cdd448872412df3b0085383dadfed9d9a615181979b876d1a355"
+    },
+    {
+      "relative": "START_LEGACY_AR_KO.md",
+      "bytes": 8268,
+      "modified_ns": 1793320323811018200,
+      "file_id": 51791395714761037,
+      "sha256": "22f1327694446d5f6fa49088e92648b90f146da14948ad460abe16b6df61f803"
+    },
+    {
+      "relative": "START_OUTLINE_KO.md",
+      "bytes": 5920,
+      "modified_ns": 1793248852570633900,
+      "file_id": 31243722414909888,
+      "sha256": "a557603c20e74e8be7cfe394c271740599ceddf8e29b77179137ebfbe2578598"
+    },
+    {
+      "relative": "app\\build.gradle",
+      "bytes": 1076,
+      "modified_ns": 1793336350946264700,
+      "file_id": 5910974511408067,
+      "sha256": "9cbc43825a831c0ab3d8ca76493d8804794a6b90ce07c276f9b06bf1d846d897"
+    },
+    {
+      "relative": "app\\src\\androidTest\\AndroidManifest.xml",
+      "bytes": 406,
+      "modified_ns": 1793336112548994000,
+      "file_id": 188025284442725431,
+      "sha256": "006610e0a269bebab14dd81bb2ac48a506242ae88822babbe0e73e9462af7086"
+    },
+    {
+      "relative": "app\\src\\androidTest\\java\\kr\\fieldcapture\\a34\\CapturePhotoPipelineTest.java",
+      "bytes": 8373,
+      "modified_ns": 1793336465118092000,
+      "file_id": 58828270132557252,
+      "sha256": "a50a89774f8785c2d95f373e74d81d51f684d93566d42c959d8f5f84aa392b93"
+    },
+    {
+      "relative": "app\\src\\androidTest\\java\\kr\\fieldcapture\\a34\\GalleryPhotoSaverTest.java",
+      "bytes": 3537,
+      "modified_ns": 1793336400541200900,
+      "file_id": 19703248369846599,
+      "sha256": "f825e9dab03d70ba828275a4dce625ec582e4159967d3cff2a2e671fd9c66294"
+    },
+    {
+      "relative": "app\\src\\androidTest\\java\\kr\\fieldcapture\\a34\\LocationPhotoStampTest.java",
+      "bytes": 8486,
+      "modified_ns": 1793335195880574300,
+      "file_id": 20829148276686961,
+      "sha256": "b0a0975bf590d3d84c17a342dfac05699c1b923e2debf19d8402ccb7811a7fdc"
+    },
+    {
+      "relative": "app\\src\\main\\AndroidManifest.xml",
+      "bytes": 1340,
+      "modified_ns": 1793320078043354500,
+      "file_id": 5629499534697456,
+      "sha256": "4ab40c1f1c936a7995c33ab48266cd08579362ac96dab3a9022dec7c4b015080"
+    },
+    {
+      "relative": "app\\src\\main\\assets\\tessdata\\LICENSE.txt",
+      "bytes": 11358,
+      "modified_ns": 1793238160242589200,
+      "file_id": 3940649674273707,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "relative": "app\\src\\main\\assets\\tessdata\\eng.traineddata",
+      "bytes": 4113088,
+      "modified_ns": 1793238160024051800,
+      "file_id": 6473924464669610,
+      "sha256": "7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2"
+    },
+    {
+      "relative": "app\\src\\main\\assets\\tessdata\\kor.traineddata",
+      "bytes": 1677415,
+      "modified_ns": 1793238158389946000,
+      "file_id": 36591746972539964,
+      "sha256": "6b85e11d9bbf07863b97b3523b1b112844c43e713df8b66418a081fd1060b3b2"
+    },
+    {
+      "relative": "app\\src\\main\\assets\\tessdata\\models.json",
+      "bytes": 831,
+      "modified_ns": 1793238220922367600,
+      "file_id": 12384898975553655,
+      "sha256": "45e14a214b9cadfef296c8be6fb9adfa04c1de230512c388cf7726eee3b37280"
+    },
+    {
+      "relative": "app\\src\\main\\java\\kr\\fieldcapture\\a34\\ArCaptureView.java",
+      "bytes": 41920,
+      "modified_ns": 1793238108521885300,
+      "file_id": 3940649674467124,
+      "sha256": "a24f200d06d6c907f28d5628e5f24076a961f97d667b7a6b967b2d10fe368e14"
+    },
+    {
+      "relative": "app\\src\\main\\java\\kr\\fieldcapture\\a34\\CaptureSequence.java",
+      "bytes": 2455,
+      "modified_ns": 1793235355575576600,
+      "file_id": 28147497671092458,
+      "sha256": "b0182197b880e203d25cc4a71b2be226d8e39a1cf8dfe87d2e58ed43980c52ae"
+    },
+    {
+      "relative": "app\\src\\main\\java\\kr\\fieldcapture\\a34\\CaptureStore.java",
+      "bytes": 57643,
+      "modified_ns": 1793336327581964600,
+      "file_id": 5348024558020354,
+      "sha256": "d90f7efeee7c4fc2b2756fdb3747385a4c1ca843cc9e17ab839758e40da43bf4"
+    },
+    {
+      "relative": "app\\src\\main\\java\\kr\\fieldcapture\\a34\\GalleryPhotoSaver.java",
+      "bytes": 5014,
+      "modified_ns": 1793336350945265400,
+      "file_id": 7881299347998942,
+      "sha256": "7e72e9b79010a74465590331e87cf34cfb6c428fbe8afa8d70a169868f2b2887"
+    },
+    {
+      "relative": "app\\src\\main\\java\\kr\\fieldcapture\\a34\\GeoObservation.java",
+      "bytes": 9438,
+      "modified_ns": 1793320118056138900,
+      "file_id": 29554872554943616,
+      "sha256": "33850137a5af1f10301ef3c6fcb3027bbd84dc101635d51c34459d584b497b70"
+    },
+    {
+      "relative": "app\\src\\main\\java\\kr\\fieldcapture\\a34\\GeoTracker.java",
+      "bytes": 10715,
+      "modified_ns": 1793320238227456200,
+      "file_id": 13229323905785407,
+      "sha256": "e656cc68b2267919ee875c4790568b428ceee5db041fb7dd3877200c68da4625"
+    },
+    {
+      "relative": "app\\src\\main\\java\\kr\\fieldcapture\\a34\\GpsCameraView.java",
+      "bytes": 35251,
+      "modified_ns": 1793320231274654200,
+      "file_id": 10414574138678943,
+      "sha256": "cffe05db8a21eb191192b10117f593daa958c390b14ff62ebdbd2e2651612bf2"
+    },
+    {
+      "relative": "app\\src\\main\\java\\kr\\fieldcapture\\a34\\GpsCaptureActivity.java",
+      "bytes": 38547,
+      "modified_ns": 1793336400540196500,
+      "file_id": 9288674231776327,
+      "sha256": "c63b5bb8900d0aa3ca2ac5133da33efb6bc50c5f80fde90df6fb9e0e7e8ec2f3"
+    },
+    {
+      "relative": "app\\src\\main\\java\\kr\\fieldcapture\\a34\\LocationPhotoStamp.java",
+      "bytes": 11336,
+      "modified_ns": 1793335095411578700,
+      "file_id": 31525197391630091,
+      "sha256": "538064367b237487023e3c1cdd30c12782698ba7498414fc9e4830c3649c0c7d"
+    },
+    {
+      "relative": "app\\src\\main\\java\\kr\\fieldcapture\\a34\\MainActivity.java",
+      "bytes": 53678,
+      "modified_ns": 1793238422771725700,
+      "file_id": 4785074604599062,
+      "sha256": "c6516d1f8d6722d6b605498d7f053b6efc585da3224fc0f5056463e974d06ba1"
+    },
+    {
+      "relative": "app\\src\\main\\java\\kr\\fieldcapture\\a34\\PhotoFileName.java",
+      "bytes": 4434,
+      "modified_ns": 1793336325688857500,
+      "file_id": 161566636631934269,
+      "sha256": "15c8e98494d84ccb6413a73d7b5b7a5e97d54a45bf9c40fa667d5bc555b155cb"
+    },
+    {
+      "relative": "app\\src\\main\\java\\kr\\fieldcapture\\a34\\PhotoLocationExport.java",
+      "bytes": 16787,
+      "modified_ns": 1793336371421500900,
+      "file_id": 19140298416388963,
+      "sha256": "0b76ebe048d869dc988c94365e5a8328b44bad86b1f92e4c46159737210e6ecf"
+    },
+    {
+      "relative": "app\\src\\main\\java\\kr\\fieldcapture\\a34\\PhotoStampRecord.java",
+      "bytes": 7181,
+      "modified_ns": 1793335195877854000,
+      "file_id": 109212290963754663,
+      "sha256": "430c167293d9382a9cd5935d408221c47599fe56c5b480fae16bef1ec42890fc"
+    },
+    {
+      "relative": "app\\src\\main\\java\\kr\\fieldcapture\\a34\\PhotoTextRecognizer.java",
+      "bytes": 11119,
+      "modified_ns": 1793238233337126600,
+      "file_id": 41376821576472645,
+      "sha256": "d3b1b748654467802fa2671c9883ca9df281db90829664222641ecb6d513238f"
+    },
+    {
+      "relative": "app\\src\\main\\java\\kr\\fieldcapture\\a34\\YuvConverter.java",
+      "bytes": 3135,
+      "modified_ns": 1793235517147490100,
+      "file_id": 3940649674467123,
+      "sha256": "eb100e39a5422c95a23fe1565393451b4eeb1a65fe2296ac08a94d57d7f07727"
+    },
+    {
+      "relative": "app\\src\\main\\res\\drawable\\ic_launcher.xml",
+      "bytes": 601,
+      "modified_ns": 1793235367164643300,
+      "file_id": 5629499534697465,
+      "sha256": "f68b10f8bc2b01558d04fb880dcce5833564ce108458193cfddbdf1eb44d42fb"
+    },
+    {
+      "relative": "app\\src\\main\\res\\values\\styles.xml",
+      "bytes": 641,
+      "modified_ns": 1793235367164643300,
+      "file_id": 6192449488118769,
+      "sha256": "f5e4f907dcb1b729c10f7189b8e5d7f44594f85a1471d24ae12d2207b9a946fe"
+    },
+    {
+      "relative": "app\\src\\test\\java\\kr\\fieldcapture\\a34\\CaptureSequenceTest.java",
+      "bytes": 3141,
+      "modified_ns": 1793235355575576600,
+      "file_id": 21392098230048927,
+      "sha256": "eed0300b5b718e6736f3974cbf48f22129a460ab87b889c7a260a5419061fdfc"
+    },
+    {
+      "relative": "app\\src\\test\\java\\kr\\fieldcapture\\a34\\CaptureStoreTest.java",
+      "bytes": 17691,
+      "modified_ns": 1793238137154591100,
+      "file_id": 4785074604623046,
+      "sha256": "e91b77bd3f4e763695f33afa76b99afb07047f433a2d1a9328669b40f0084a3d"
+    },
+    {
+      "relative": "app\\src\\test\\java\\kr\\fieldcapture\\a34\\GeoObservationTest.java",
+      "bytes": 8696,
+      "modified_ns": 1793320118061305000,
+      "file_id": 17169973579734666,
+      "sha256": "ba49dc7ed50fcdff79049dcc819382301d02ee6ae8d0ac7e1decc4fa8c3f4b50"
+    },
+    {
+      "relative": "app\\src\\test\\java\\kr\\fieldcapture\\a34\\PhotoAnnotationStoreTest.java",
+      "bytes": 11119,
+      "modified_ns": 1793335454189198700,
+      "file_id": 48132221017606698,
+      "sha256": "258b0a29920cfe9f2cfc1ef3eec77dc531f660072c31a31a1f0051d5fc5f4119"
+    },
+    {
+      "relative": "app\\src\\test\\java\\kr\\fieldcapture\\a34\\PhotoFileNameTest.java",
+      "bytes": 5177,
+      "modified_ns": 1793336325688857500,
+      "file_id": 1970324837691767,
+      "sha256": "81d1984d5e29d6f78f207a220cd32188e15b8f08cfc73b3c0047df151c69e8c2"
+    },
+    {
+      "relative": "app\\src\\test\\java\\kr\\fieldcapture\\a34\\PhotoLocationExportTest.java",
+      "bytes": 9466,
+      "modified_ns": 1793320508021508000,
+      "file_id": 11540474045521566,
+      "sha256": "e19477e52956898f2b1c7adc6307925b072f1f51cfa7b456d99261f957408040"
+    },
+    {
+      "relative": "app\\src\\test\\java\\kr\\fieldcapture\\a34\\PhotoNamedExportTest.java",
+      "bytes": 6253,
+      "modified_ns": 1793336415155023100,
+      "file_id": 5066549581508994,
+      "sha256": "ed0045c4828204108242026d810ff7b2287adf316738bfbd4ee17b2b9145b3e7"
+    },
+    {
+      "relative": "app\\src\\test\\java\\kr\\fieldcapture\\a34\\PhotoStampRecordTest.java",
+      "bytes": 6928,
+      "modified_ns": 1793335195879335400,
+      "file_id": 28147497671137025,
+      "sha256": "139113c7b987e23928abf46c140b4c08963ba5b948f87ae075b6ce0a61a8337e"
+    },
+    {
+      "relative": "app\\src\\test\\java\\kr\\fieldcapture\\a34\\YuvConverterTest.java",
+      "bytes": 4186,
+      "modified_ns": 1793235807569298000,
+      "file_id": 13229323905528222,
+      "sha256": "475b33696f2a91b598e8759298e3916b28c97937cd1823ee1be17b471b1e3371"
+    },
+    {
+      "relative": "build.gradle",
+      "bytes": 73,
+      "modified_ns": 1793235367161934400,
+      "file_id": 5629499534697400,
+      "sha256": "f03e7c046fcd72e2617eca66b5a085bbab4dc1b6a37b386cfc2c797729092a87"
+    },
+    {
+      "relative": "docs\\AI_REVIEW_BRIEF_EN.md",
+      "bytes": 23439,
+      "modified_ns": 1793336506081627300,
+      "file_id": 3940649674467106,
+      "sha256": "849e817dbc155f5b18fe58815091a45339b78f6cba7c9cf3ca714ba39b42b589"
+    },
+    {
+      "relative": "docs\\DATA_FORMAT_EN.md",
+      "bytes": 21782,
+      "modified_ns": 1793336506080621100,
+      "file_id": 17732923532911806,
+      "sha256": "4eb6b9b34ab4d6389076de63c395a00e7bfa2de92c65fe8d3488ae3bede2c199"
+    },
+    {
+      "relative": "docs\\IMPLEMENTATION_STATUS_EN.md",
+      "bytes": 22762,
+      "modified_ns": 1793594339876663500,
+      "file_id": 8162774325144045,
+      "sha256": "6b94e82ea4173bf732f7ef793aebfbcfb3df52135cc03966f4459b2c61371a3b"
+    },
+    {
+      "relative": "docs\\OUTLINE_IMPLEMENTATION_STATUS_EN.md",
+      "bytes": 8478,
+      "modified_ns": 1793248852569221200,
+      "file_id": 11821949022229535,
+      "sha256": "860462fce603ffe2198427141f42ebef4da0a571680236dba0f45ecd5a88d8d9"
+    },
+    {
+      "relative": "docs\\OUTLINE_REVIEW_BRIEF_EN.md",
+      "bytes": 5579,
+      "modified_ns": 1793245961715175000,
+      "file_id": 8725724278382481,
+      "sha256": "8e97e6d7a30a61cc8ca1cc5833c843b24f63abc854f5b7ccd91e668f1936e755"
+    },
+    {
+      "relative": "docs\\REVIEW_CHECKLIST_EN.md",
+      "bytes": 15140,
+      "modified_ns": 1793238398958859100,
+      "file_id": 3940649674467107,
+      "sha256": "6e15febd90f707b7e651f92e113213bbdbc91976051746819ae064d07230c169"
+    },
+    {
+      "relative": "gradle.properties",
+      "bytes": 237,
+      "modified_ns": 1793320343856183600,
+      "file_id": 5629499534697405,
+      "sha256": "958476e5957a6739765eb413dff78429e4ba831c42e95613cdad2fbde6eb60aa"
+    },
+    {
+      "relative": "gradle\\wrapper\\gradle-wrapper.jar",
+      "bytes": 45457,
+      "modified_ns": 1793235393913007800,
+      "file_id": 4503599627888361,
+      "sha256": "76805e32c009c0cf0dd5d206bddc9fb22ea42e84db904b764f3047de095493f3"
+    },
+    {
+      "relative": "gradle\\wrapper\\gradle-wrapper.properties",
+      "bytes": 252,
+      "modified_ns": 1793235393911001100,
+      "file_id": 9288674231969512,
+      "sha256": "6009cea91ce8dbcc62cb2ea6dec6ddd4c87b65fc326872f5abfc7e77fd24aa36"
+    },
+    {
+      "relative": "gradlew",
+      "bytes": 8618,
+      "modified_ns": 1793235394031296500,
+      "file_id": 4222124651177707,
+      "sha256": "fb68debc1b1acf8ec55dc0d5e5495e1dedd0bd6b61f304bee61613eeb2bd9b92"
+    },
+    {
+      "relative": "gradlew.bat",
+      "bytes": 2896,
+      "modified_ns": 1793235394145579400,
+      "file_id": 3940649674467054,
+      "sha256": "fedad02c18e266ec094995a5751b7fe1eb6e74f66bf75db64fae2e50eb22c234"
+    },
+    {
+      "relative": "local.properties",
+      "bytes": 50,
+      "modified_ns": 1793336491054982200,
+      "file_id": 6755399441540092,
+      "sha256": "c8048d1bd6ac7abda4e437ea146c27f5fe7f20978e592eea0bd1cc78eb4d7713"
+    },
+    {
+      "relative": "outline\\build.gradle",
+      "bytes": 757,
+      "modified_ns": 1793245448754304000,
+      "file_id": 13792273858964867,
+      "sha256": "01d25d0fa92b25b53733704c3e649b70df7155d3c8b9196795ffded1c58a73e1"
+    },
+    {
+      "relative": "outline\\src\\main\\AndroidManifest.xml",
+      "bytes": 1162,
+      "modified_ns": 1793245448757200600,
+      "file_id": 3940649674105564,
+      "sha256": "57ef149286fd3f45e2f2d83db6f52c7301ae0ce0637af3322b4d8316d1f79c92"
+    },
+    {
+      "relative": "outline\\src\\main\\java\\kr\\fieldoutline\\a34\\ArOutlineView.java",
+      "bytes": 32738,
+      "modified_ns": 1793246266434105900,
+      "file_id": 3940649674105617,
+      "sha256": "b1384d3c326ca94786098fd5660d66040101ac3ffa84eb9b01271f7e3372acd3"
+    },
+    {
+      "relative": "outline\\src\\main\\java\\kr\\fieldoutline\\a34\\MainActivity.java",
+      "bytes": 43470,
+      "modified_ns": 1793245961713163100,
+      "file_id": 9570149208281328,
+      "sha256": "5e57dcee6d0007e6ff3dba43425bd51c38fed2c80c707ee481e1fe357a3a3fab"
+    },
+    {
+      "relative": "outline\\src\\main\\java\\kr\\fieldoutline\\a34\\OutlineGeometry.java",
+      "bytes": 5861,
+      "modified_ns": 1793245564454164200,
+      "file_id": 4503599627526985,
+      "sha256": "53382e2330ac40ebf4ea2707bb48223b8898867d90553aca1f741179b11d13e9"
+    },
+    {
+      "relative": "outline\\src\\main\\java\\kr\\fieldoutline\\a34\\OutlineMapView.java",
+      "bytes": 21022,
+      "modified_ns": 1793245598488829300,
+      "file_id": 4503599627526963,
+      "sha256": "dc46ff75978e615e438cc2efb7b7141867eb8c41102e6fdefdecc06ec33624e7"
+    },
+    {
+      "relative": "outline\\src\\main\\java\\kr\\fieldoutline\\a34\\OutlineStore.java",
+      "bytes": 32275,
+      "modified_ns": 1793246273546217500,
+      "file_id": 3940649674105674,
+      "sha256": "8f786ba957fcce34b7aaea34c43617067e0835b565090ceb20d0b49e2d685334"
+    },
+    {
+      "relative": "outline\\src\\main\\res\\drawable\\ic_launcher.xml",
+      "bytes": 625,
+      "modified_ns": 1793245448761782000,
+      "file_id": 6192449487790830,
+      "sha256": "172741e058b9aedba85f8da89e3f8927a380a20c63c8075a696b856d5ab7f107"
+    },
+    {
+      "relative": "outline\\src\\main\\res\\values\\styles.xml",
+      "bytes": 576,
+      "modified_ns": 1793245448760663400,
+      "file_id": 6192449487790822,
+      "sha256": "9ba86f175a20e8e470c14f1fff814c9efbe47d93e23707e86c953757a56ed510"
+    },
+    {
+      "relative": "outline\\src\\test\\java\\kr\\fieldoutline\\a34\\OutlineStoreTest.java",
+      "bytes": 18457,
+      "modified_ns": 1793246273549216200,
+      "file_id": 3940649674105684,
+      "sha256": "a963c0ceca9e0e9d30563c56bdfc73491e9e69d500eb5f3d0168682647cb7697"
+    },
+    {
+      "relative": "releases\\FieldCapture-A34-source-review.zip",
+      "bytes": 3277891,
+      "modified_ns": 1793248853240666100,
+      "file_id": 8444249301462498,
+      "sha256": "07b1489044c33fde8fa93118e4752149ebfdb6c50f01fa64358025a1aff73557"
+    },
+    {
+      "relative": "releases\\FieldCapture-A34-v0.1.0.apk",
+      "bytes": 3531958,
+      "modified_ns": 1793236169491639400,
+      "file_id": 12103423998685919,
+      "sha256": "17573b1ca15000bd16d24775c37d8c87df2f051fec2b7b03c582569ca282f072"
+    },
+    {
+      "relative": "releases\\FieldCapture-A34-v0.1.1.apk",
+      "bytes": 35761586,
+      "modified_ns": 1793238427179776700,
+      "file_id": 7036874418051264,
+      "sha256": "fbed9366f5524d3cdd43b62afe4c7fa19892daf865c342003f3d5db74f1fead6"
+    },
+    {
+      "relative": "releases\\FieldCapture-A34-v0.2.0.apk",
+      "bytes": 35876366,
+      "modified_ns": 1793320512384306300,
+      "file_id": 13510798882135687,
+      "sha256": "0b87672a9de98e414e3dcbff7b3fedafc2b263b30873f3a73e7a3d970f049ea0"
+    },
+    {
+      "relative": "releases\\FieldCapture-A34-v0.2.1.apk",
+      "bytes": 35909134,
+      "modified_ns": 1793335460719564300,
+      "file_id": 5629499534318947,
+      "sha256": "155891b9e3390a13630cc57bc0a4eab0b6c528ff1006cbd35e8c574c749d6ead"
+    },
+    {
+      "relative": "releases\\FieldCapture-A34-v0.2.2.apk",
+      "bytes": 35909134,
+      "modified_ns": 1793336496021445100,
+      "file_id": 5910974510961706,
+      "sha256": "f4f72eb48e38f643e1be5fa979c730a6642488384c0f422819f8e425bf0f0059"
+    },
+    {
+      "relative": "releases\\FieldOutline-A34-v0.1.0.apk",
+      "bytes": 3548350,
+      "modified_ns": 1793246291916096800,
+      "file_id": 4785074604237686,
+      "sha256": "d04f1ca7114ae89191bc55915235c0c2e3beb4d6b40f7e7797501553c8d5362c"
+    },
+    {
+      "relative": "settings.gradle",
+      "bytes": 504,
+      "modified_ns": 1793245448749326100,
+      "file_id": 6192449488118707,
+      "sha256": "f5e820450700e065cecedddae338169e4f84749d7584715ff74b90c73159bc2e"
+    },
+    {
+      "relative": "tools\\android-test-build-v0.2.1.log",
+      "bytes": 12524,
+      "modified_ns": 1793336115168370700,
+      "file_id": 5066549580898499,
+      "sha256": "3558d5a79cad3b35bfa7c4977143b92b75faad387ffa4712972e7a1fc413a73f"
+    },
+    {
+      "relative": "tools\\android-test-build-v0.2.2.log",
+      "bytes": 11044,
+      "modified_ns": 1793336515355307800,
+      "file_id": 80220368362542994,
+      "sha256": "c7e20bfab77bf5b8d4f749a4daddd70f30c20adc7e29a601389484149ccdb543"
+    },
+    {
+      "relative": "tools\\build-outline.ps1",
+      "bytes": 2061,
+      "modified_ns": 1793245448762824600,
+      "file_id": 7036874417922800,
+      "sha256": "20a1bcafa28a2e453160d44403d7ebf2c2aa94fc8a3971ab15139669d29a26a9"
+    },
+    {
+      "relative": "tools\\build-verification-outline-capture-regression.log",
+      "bytes": 11316,
+      "modified_ns": 1793246040321236200,
+      "file_id": 108649341010343410,
+      "sha256": "82a9d08c4f3f598ad11387b7e955c0436b82a3ff017e692501d70b4832f9772a"
+    },
+    {
+      "relative": "tools\\build-verification-outline-v0.1.0.log",
+      "bytes": 12742,
+      "modified_ns": 1793246293633691800,
+      "file_id": 5910974511080306,
+      "sha256": "8ca143987069554b8613ba1848b75ad760df492cbd9d44a8fad0ecab5832d36c"
+    },
+    {
+      "relative": "tools\\build-verification-v0.1.1.log",
+      "bytes": 12290,
+      "modified_ns": 1793238429967717600,
+      "file_id": 9570149208487112,
+      "sha256": "d05133050a3d0d5284cde54445647e59a21ed8cf856c1317a7016c053e77de2a"
+    },
+    {
+      "relative": "tools\\build-verification-v0.2.0.log",
+      "bytes": 12788,
+      "modified_ns": 1793320516207606100,
+      "file_id": 9851624185257685,
+      "sha256": "c8aa9c8c7366ad1225e9deb9c0720af14b43c65717b5c22fb85e2c2e1bce74f8"
+    },
+    {
+      "relative": "tools\\build-verification-v0.2.1.log",
+      "bytes": 12788,
+      "modified_ns": 1793335463924571400,
+      "file_id": 13229323905503189,
+      "sha256": "25f0f4fc1970a7776eb2f4b9e97d8c2c0a27ac597b086b04c4fdac54c87d31f9"
+    },
+    {
+      "relative": "tools\\build-verification-v0.2.2.log",
+      "bytes": 12768,
+      "modified_ns": 1793336499288161800,
+      "file_id": 139893063425199991,
+      "sha256": "b0658c5bccbe0dabbda88dd715833fa7d1c21bf732486113a0ca686f107d5d5c"
+    },
+    {
+      "relative": "tools\\build-verification.log",
+      "bytes": 12156,
+      "modified_ns": 1793236175056871100,
+      "file_id": 9288674231805644,
+      "sha256": "2d5e6b8550264b4de3388696011c0eb192bc237954c4d7cde2cc1cca9cdfec19"
+    },
+    {
+      "relative": "tools\\build.ps1",
+      "bytes": 2802,
+      "modified_ns": 1793320468622285600,
+      "file_id": 6755399441337328,
+      "sha256": "81a3c7f8abf8ddfb0bb76a635e70a6a505ad884576cac00548c1cc55b752c283"
+    },
+    {
+      "relative": "tools\\device-verification-v0.2.1.log",
+      "bytes": 454,
+      "modified_ns": 1793336130506848400,
+      "file_id": 9851624184954554,
+      "sha256": "4fd2042b78ce3a1d5998f8e080d632cdc6e9e8eaabb05045c9cead9e48949aab"
+    },
+    {
+      "relative": "tools\\device-verification-v0.2.2.log",
+      "bytes": 454,
+      "modified_ns": 1793336548851224200,
+      "file_id": 54324670505269900,
+      "sha256": "7eab9abf16cb502e9dd119bd4423dd11d132ab0c51bceb63b362e44f297bbc95"
+    },
+    {
+      "relative": "tools\\emulator-stderr.log",
+      "bytes": 0,
+      "modified_ns": 1793235568476957900,
+      "file_id": 5066549581309744,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative": "tools\\emulator-stdout.log",
+      "bytes": 7542,
+      "modified_ns": 1793235570963106600,
+      "file_id": 12666373952497444,
+      "sha256": "fcd6885a0a7d41cc762d4d67a46965d3d3c11a7291906ef270e35f05bd159bd7"
+    },
+    {
+      "relative": "tools\\install-gps-v0.2.0.log",
+      "bytes": 809,
+      "modified_ns": 1793334777258678900,
+      "file_id": 61080069946244393,
+      "sha256": "294592dbd6a8b194179bafeb8e97e9188e9f5ab06dd908a4ad4ced99d3be0fdb"
+    },
+    {
+      "relative": "tools\\install-gps-v0.2.2.log",
+      "bytes": 594,
+      "modified_ns": 1793336623563580400,
+      "file_id": 125537839612981463,
+      "sha256": "0144540c1a3ac1032b09ffa8b998845f0c62ff91cddd41f97611691221bd2dbc"
+    },
+    {
+      "relative": "tools\\install-outline-v0.1.0.log",
+      "bytes": 436,
+      "modified_ns": 1793248812285952200,
+      "file_id": 4503599627557817,
+      "sha256": "cd8660838e8514bc3561b242dfc7d23610d0daa5954868b119628f9568aebc68"
+    },
+    {
+      "relative": "tools\\lint-final-v0.2.1.log",
+      "bytes": 8454,
+      "modified_ns": 1793335552060697400,
+      "file_id": 1688849860980912,
+      "sha256": "6f7705818824bc8b520f400772c14d6216cdd02559856c63f196c8172d68fb7c"
+    },
+    {
+      "relative": "tools\\package-review.ps1",
+      "bytes": 2031,
+      "modified_ns": 1793246012814008100,
+      "file_id": 7318349395012124,
+      "sha256": "7e35490afe8b41a1478fa60aa481d6cbeba0f1d498001d1af30fb5a6ab8f19fb"
+    },
+    {
+      "relative": "빌드.cmd",
+      "bytes": 95,
+      "modified_ns": 1793235907455154300,
+      "file_id": 2251799814025353,
+      "sha256": "14e98c202f2ee2b22e1ec4e3cfbc50b3ef5b0817c3074dd82a8cb5cb9168fda5"
+    }
+  ],
+  "directories": [
+    "app",
+    "app\\src",
+    "app\\src\\androidTest",
+    "app\\src\\androidTest\\java",
+    "app\\src\\androidTest\\java\\kr",
+    "app\\src\\androidTest\\java\\kr\\fieldcapture",
+    "app\\src\\androidTest\\java\\kr\\fieldcapture\\a34",
+    "app\\src\\main",
+    "app\\src\\main\\assets",
+    "app\\src\\main\\assets\\tessdata",
+    "app\\src\\main\\java",
+    "app\\src\\main\\java\\kr",
+    "app\\src\\main\\java\\kr\\fieldcapture",
+    "app\\src\\main\\java\\kr\\fieldcapture\\a34",
+    "app\\src\\main\\res",
+    "app\\src\\main\\res\\drawable",
+    "app\\src\\main\\res\\values",
+    "app\\src\\main\\res\\xml",
+    "app\\src\\test",
+    "app\\src\\test\\java",
+    "app\\src\\test\\java\\kr",
+    "app\\src\\test\\java\\kr\\fieldcapture",
+    "app\\src\\test\\java\\kr\\fieldcapture\\a34",
+    "docs",
+    "gradle",
+    "gradle\\wrapper",
+    "outline",
+    "outline\\src",
+    "outline\\src\\main",
+    "outline\\src\\main\\java",
+    "outline\\src\\main\\java\\kr",
+    "outline\\src\\main\\java\\kr\\fieldoutline",
+    "outline\\src\\main\\java\\kr\\fieldoutline\\a34",
+    "outline\\src\\main\\res",
+    "outline\\src\\main\\res\\drawable",
+    "outline\\src\\main\\res\\values",
+    "outline\\src\\test",
+    "outline\\src\\test\\java",
+    "outline\\src\\test\\java\\kr",
+    "outline\\src\\test\\java\\kr\\fieldoutline",
+    "outline\\src\\test\\java\\kr\\fieldoutline\\a34",
+    "releases",
+    "tools"
+  ],
+  "file_count": 95,
+  "directory_count": 43,
+  "bytes": 160505881,
+  "reparse_paths": [],
+  "operation": "same-volume exact-directory move; no source/app/APK edits"
+}

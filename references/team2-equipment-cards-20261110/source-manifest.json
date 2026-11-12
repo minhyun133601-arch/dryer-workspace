@@ -1,0 +1,773 @@
+{
+  "zip": "2팀 3팀 설비이력카드_2026-11-10-20261110T010039Z-1-001.zip",
+  "files": [
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/외포장실/022_엑스레이 2호기/설비사진_엑스레이 2호기.jpg",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\외포장실\\022_엑스레이 2호기\\설비사진_엑스레이 2호기.jpg",
+      "bytes": 210395,
+      "sha256": "504a1b225b187c8a4b982e2740d56feb3c1919c9fcd09571cecfbf847d7dcb0e"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/외포장실/024_2팀용 제함기/원본카드.json",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\외포장실\\024_2팀용 제함기\\원본카드.json",
+      "bytes": 1642,
+      "sha256": "2f2c9d4d29ec474429487fa9dc4ace7f820292d08994db7e4235c37a69c1c8b4"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/외포장실/020_2팀용 제함기 2/원본카드.json",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\외포장실\\020_2팀용 제함기 2\\원본카드.json",
+      "bytes": 1656,
+      "sha256": "d2e3edca6cb58a0fc7f3f3a99a3e9092c8b62723db71ec2f6afb0774d8afd635"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/외포장실/015_케이샤 5호기/원본카드.json",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\외포장실\\015_케이샤 5호기\\원본카드.json",
+      "bytes": 1639,
+      "sha256": "b3bfe0886d59602313db6bcd418ada71c629cfb4652eeccefe42830f6e34f1d6"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/외포장실/023_다지기 롤러/설비사진_다지기 롤러.jpg",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\외포장실\\023_다지기 롤러\\설비사진_다지기 롤러.jpg",
+      "bytes": 186429,
+      "sha256": "9048db8f67a2157585988da38f6ee61e9246e12d2d0a3999958d6c983276b4cf"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/외포장실/020_2팀용 제함기 2/설비사진_2팀용 제함기 2.jpg",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\외포장실\\020_2팀용 제함기 2\\설비사진_2팀용 제함기 2.jpg",
+      "bytes": 207063,
+      "sha256": "7f0e0872bdf4912407312ff00b9cfbabcb49379731a7c4c519d0b1ac5016580f"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/외포장실/018_티칭로봇 2호기/설비사진_티칭로봇 2호기.jpg",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\외포장실\\018_티칭로봇 2호기\\설비사진_티칭로봇 2호기.jpg",
+      "bytes": 212997,
+      "sha256": "cd7f9cb10306750e159d488c81cfefde0bb5d3b314ffd8ff62a957a0eca83b03"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/외포장실/024_2팀용 제함기/설비이력카드.html",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\외포장실\\024_2팀용 제함기\\설비이력카드.html",
+      "bytes": 255226,
+      "sha256": "01b389f0c4aead448f5426af6e3caa792696d13810734dd989c038a986df18cf"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/외포장실/022_엑스레이 2호기/원본카드.json",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\외포장실\\022_엑스레이 2호기\\원본카드.json",
+      "bytes": 1657,
+      "sha256": "adf3881e14d7d05ba43652508aa0351a474f397f1ddfaf43a5fdb3b0e0b46fd1"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/외포장실/024_2팀용 제함기/설비사진_2팀용 제함기.jpg",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\외포장실\\024_2팀용 제함기\\설비사진_2팀용 제함기.jpg",
+      "bytes": 176416,
+      "sha256": "9f03a7f2b3755ba5c8a339eb78a479b94559dbc524cc0cb8f6ddc358ccf4380d"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/외포장실/022_엑스레이 2호기/설비이력카드.html",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\외포장실\\022_엑스레이 2호기\\설비이력카드.html",
+      "bytes": 300548,
+      "sha256": "b96008985e0b2c82d262a95501c8805d7f11f03917f186947fc492a9037dd4d8"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/외포장실/021_엑스레이 3호기/원본카드.json",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\외포장실\\021_엑스레이 3호기\\원본카드.json",
+      "bytes": 1657,
+      "sha256": "3ed5da06af835e7e2bf3f767e6261c68b208a2abddcc5fc007347cd0f8c13963"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/외포장실/025_엑스레이 1호기/설비사진_엑스레이 1호기.jpg",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\외포장실\\025_엑스레이 1호기\\설비사진_엑스레이 1호기.jpg",
+      "bytes": 208509,
+      "sha256": "f81ec5bd1a886c83c0853c77173b7f1b2846c3cfe8fbde960d0c826dc77531bd"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/외포장실/015_케이샤 5호기/설비이력카드.html",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\외포장실\\015_케이샤 5호기\\설비이력카드.html",
+      "bytes": 341015,
+      "sha256": "fc0290fd4b904a6521ff01f3d453deaa379368ab6b7434b2feac65fe2fe64366"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/외포장실/025_엑스레이 1호기/원본카드.json",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\외포장실\\025_엑스레이 1호기\\원본카드.json",
+      "bytes": 1653,
+      "sha256": "963addb129dc9419365e13cea53786cbe7b8fef9e5a5d756cfbda5ec35967173"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/외포장실/019_2팀용 제함기 3/원본카드.json",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\외포장실\\019_2팀용 제함기 3\\원본카드.json",
+      "bytes": 1718,
+      "sha256": "ba3f57bd15b49f55926e3cccb2efc24a7b321b7ca257a24a783c62a5e96f238c"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/외포장실/017_테이핑기/원본카드.json",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\외포장실\\017_테이핑기\\원본카드.json",
+      "bytes": 1613,
+      "sha256": "14468ffa5a4f9fc045d649c8f24109db5f97bfabf19272064c195dda16bf74fd"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/외포장실/023_다지기 롤러/원본카드.json",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\외포장실\\023_다지기 롤러\\원본카드.json",
+      "bytes": 1689,
+      "sha256": "ba4161e53da175018a7d37f275989075a74d909448efe168d107ababad6dea8d"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/외포장실/017_테이핑기/설비사진_테이핑기.jpg",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\외포장실\\017_테이핑기\\설비사진_테이핑기.jpg",
+      "bytes": 246034,
+      "sha256": "56b29469eb9072f7a9ec961697b1a5c7904a483883badfd88afd0a683d6cf316"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/내포장실/041_지대백포장기/원본카드.json",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\내포장실\\041_지대백포장기\\원본카드.json",
+      "bytes": 2561,
+      "sha256": "138cdff20d990703301fd6a28b1f1bb32fc7d3b8bbf6166ad7e42a9c6d0ef376"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/내포장실/040_로터리 1호기 포장기/설비사진_로터리 1호기 포장기.jpg",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\내포장실\\040_로터리 1호기 포장기\\설비사진_로터리 1호기 포장기.jpg",
+      "bytes": 243781,
+      "sha256": "53bd0bd4adbed0d0bd79191b36a5998ce70f69509de853ab44c0e2d73a8b65be"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/외포장실/015_케이샤 5호기/설비사진_케이샤 5호기.jpg",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\외포장실\\015_케이샤 5호기\\설비사진_케이샤 5호기.jpg",
+      "bytes": 240762,
+      "sha256": "74a6e5ace362dc9c7cefd6b28466c9e550969d2e944c041673878f732566d0a5"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/내포장실/041_지대백포장기/설비사진_지대백포장기.jpg",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\내포장실\\041_지대백포장기\\설비사진_지대백포장기.jpg",
+      "bytes": 197134,
+      "sha256": "97e40f404d4780aa0a62d078b8671fc63e450f5e6971e7afbce2d03132f7b7eb"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/내포장실/040_로터리 1호기 포장기/원본카드.json",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\내포장실\\040_로터리 1호기 포장기\\원본카드.json",
+      "bytes": 1761,
+      "sha256": "9649e61d9a8b93cfd13b502db350f08f0471341c055b66a916a7cfc23c8ddfed"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/내포장실/041_지대백포장기/설비이력카드.html",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\내포장실\\041_지대백포장기\\설비이력카드.html",
+      "bytes": 284676,
+      "sha256": "2b26f63720e460809ba5f0058e306f6cd8d05be488646b8ebd02bd6deae0afd1"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/내포장실/038_버티컬 2호기 포장기/원본카드.json",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\내포장실\\038_버티컬 2호기 포장기\\원본카드.json",
+      "bytes": 1751,
+      "sha256": "b91c8aa58f029724061873a3d8ccc0dba0d432745f2861449d93d6a10851d960"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/내포장실/039_로터리 2호기 포장기/설비이력카드.html",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\내포장실\\039_로터리 2호기 포장기\\설비이력카드.html",
+      "bytes": 323913,
+      "sha256": "43252f985254d256d4bca11ce0613b0a6b628c60479c45157597a9c924f23c7d"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/내포장실/039_로터리 2호기 포장기/설비사진_로터리 2호기 포장기.jpg",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\내포장실\\039_로터리 2호기 포장기\\설비사진_로터리 2호기 포장기.jpg",
+      "bytes": 227883,
+      "sha256": "68da6927f1e8deac63a0366b22632f3766a794845332928adc2c443f9738996c"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/내포장실/039_로터리 2호기 포장기/원본카드.json",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\내포장실\\039_로터리 2호기 포장기\\원본카드.json",
+      "bytes": 1751,
+      "sha256": "54f811ccd509008f217da34844467b3c7f0ec72ff05874f1d068bab4d2234795"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/외포장실/025_엑스레이 1호기/설비이력카드.html",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\외포장실\\025_엑스레이 1호기\\설비이력카드.html",
+      "bytes": 298030,
+      "sha256": "53d2729edd50191ec04599d099d2fbe4d60ee204018f4cfea068fa56a3370259"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/외포장실/016_케이샤 4호기/원본카드.json",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\외포장실\\016_케이샤 4호기\\원본카드.json",
+      "bytes": 1700,
+      "sha256": "d68e50dc9aecd59f6ac88f3b7bb0bd3cfd8eaff9428651eda441a014f23ebba0"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/외포장실/021_엑스레이 3호기/설비사진_엑스레이 3호기.jpg",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\외포장실\\021_엑스레이 3호기\\설비사진_엑스레이 3호기.jpg",
+      "bytes": 210628,
+      "sha256": "fef04abe56fd0a3448ed08a69c058a9257bb0ec3230cc124c61c498474e72e6a"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/외포장실/019_2팀용 제함기 3/설비사진_2팀용 제함기 3.jpg",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\외포장실\\019_2팀용 제함기 3\\설비사진_2팀용 제함기 3.jpg",
+      "bytes": 202163,
+      "sha256": "8fd504821ea06d1f772a82d2affdd23a2b6dc918da88bcc0f1361b0ae576ceb6"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/내포장실/038_버티컬 2호기 포장기/설비사진_버티컬 2호기 포장기.jpg",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\내포장실\\038_버티컬 2호기 포장기\\설비사진_버티컬 2호기 포장기.jpg",
+      "bytes": 209856,
+      "sha256": "6c9fbed14f2808c558ac67209ecda64f26da24e14d65f2da4f62bbe6bf3d1294"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/외포장실/018_티칭로봇 2호기/원본카드.json",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\외포장실\\018_티칭로봇 2호기\\원본카드.json",
+      "bytes": 1657,
+      "sha256": "bc28dc22a2168ba795681cd97988f9be282c8921ae3e0e77a110db5eb751bb2e"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/내포장실/040_로터리 1호기 포장기/설비이력카드.html",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\내포장실\\040_로터리 1호기 포장기\\설비이력카드.html",
+      "bytes": 345115,
+      "sha256": "65b4d3eec0a2759d8ae8703dabe84b69584825f8f5a14de911b39657f2758602"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/외포장실/021_엑스레이 3호기/설비이력카드.html",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\외포장실\\021_엑스레이 3호기\\설비이력카드.html",
+      "bytes": 300860,
+      "sha256": "72f7a452b4b17d9ae26dc082c59127ac7dc7b1cd3c18d0e2b68a33f4c8503523"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/외포장실/016_케이샤 4호기/설비사진_케이샤 4호기.jpg",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\외포장실\\016_케이샤 4호기\\설비사진_케이샤 4호기.jpg",
+      "bytes": 202832,
+      "sha256": "438c296f4e46ff23d394656d008959a0b1068c6f6e72157cac5e49589fe88ced"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/외포장실/019_2팀용 제함기 3/설비이력카드.html",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\외포장실\\019_2팀용 제함기 3\\설비이력카드.html",
+      "bytes": 289576,
+      "sha256": "7d8201aa1269844e199e4b1c7fbcd3d0bd3cc98dfa9c0aed74b377328352b3f1"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/내포장실/038_버티컬 2호기 포장기/설비이력카드.html",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\내포장실\\038_버티컬 2호기 포장기\\설비이력카드.html",
+      "bytes": 299877,
+      "sha256": "f45bbfaa42c4a08ebba5c6ab845540e9a61ffc4adf45825d7cf10a6854aa2387"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/외포장실/023_다지기 롤러/설비이력카드.html",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\외포장실\\023_다지기 롤러\\설비이력카드.html",
+      "bytes": 268578,
+      "sha256": "1369ed561c22e5d5cd911262bc4f9e7dd983ed7e2b1e793052d37ca8dbe54e02"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/외포장실/018_티칭로봇 2호기/설비이력카드.html",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\외포장실\\018_티칭로봇 2호기\\설비이력카드.html",
+      "bytes": 304016,
+      "sha256": "c08d2e3031e3c3d06c24c0e1d1ac024dc1756aa31ac5d07b33d49d9a45f2943b"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/외포장실/017_테이핑기/설비이력카드.html",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\외포장실\\017_테이핑기\\설비이력카드.html",
+      "bytes": 348020,
+      "sha256": "82f2a79de651239a3218962e5d50b7b032c0d0cb7591439b1910270fefaf4be2"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/외포장실/020_2팀용 제함기 2/설비이력카드.html",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\외포장실\\020_2팀용 제함기 2\\설비이력카드.html",
+      "bytes": 296098,
+      "sha256": "f9d54a061b744fb58f6431d9af6d0f943cf2f773f0802affabda02ead4ced48b"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/외포장실/016_케이샤 4호기/설비이력카드.html",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\외포장실\\016_케이샤 4호기\\설비이력카드.html",
+      "bytes": 290454,
+      "sha256": "eb327049ac17eb7282129d93611b232222df704428eec4857855e0f6235caf5e"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/스틱,소포장실/034_밴드 씰링기/원본카드.json",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\스틱,소포장실\\034_밴드 씰링기\\원본카드.json",
+      "bytes": 1706,
+      "sha256": "e62d4068652545f9156904fbb957c9630ad2ddb7cdf7c948494c3755c15148c9"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/스틱,소포장실/032_C라인 테이핑기/설비사진_C라인 테이핑기.jpg",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\스틱,소포장실\\032_C라인 테이핑기\\설비사진_C라인 테이핑기.jpg",
+      "bytes": 184129,
+      "sha256": "93c424de93470169738ecd8f6251952aa3cd9c7e4f0bdf0ac057336167d225f1"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/스틱,소포장실/008_스틱 5,6호기/설비사진_스틱 5,6호기.jpg",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\스틱,소포장실\\008_스틱 5,6호기\\설비사진_스틱 5,6호기.jpg",
+      "bytes": 219081,
+      "sha256": "72ed1fb17c93109ce9cf68677a401260707dc0c7ffee504d8bec85af3166a7fd"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/스틱,소포장실/033_열풍기/원본카드.json",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\스틱,소포장실\\033_열풍기\\원본카드.json",
+      "bytes": 1667,
+      "sha256": "41724cad83bd0bbdc26946d5faf6f6c4455f34a0cc80bb0b7687fed3d9981bcd"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/스틱,소포장실/035_C라인 엑스레이/설비사진_C라인 엑스레이.jpg",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\스틱,소포장실\\035_C라인 엑스레이\\설비사진_C라인 엑스레이.jpg",
+      "bytes": 173981,
+      "sha256": "00292399ce99a262473723bef344b3e61de9a7c0d3204a2786f4c5ce8755de18"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/스틱,소포장실/032_C라인 테이핑기/설비이력카드.html",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\스틱,소포장실\\032_C라인 테이핑기\\설비이력카드.html",
+      "bytes": 265556,
+      "sha256": "1f7b29f08648724bdc4aa9ec93e3710a2f7bcce56240c14ae9dfca23e4846fed"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/스틱,소포장실/036_A라인 중량 선별기/설비사진_A라인 중량 선별기.jpg",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\스틱,소포장실\\036_A라인 중량 선별기\\설비사진_A라인 중량 선별기.jpg",
+      "bytes": 181494,
+      "sha256": "b2da2c4583c155cddfd800dd115201c6946f18f425bac5b0549822a80a92bccc"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/스틱,소포장실/036_A라인 중량 선별기/원본카드.json",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\스틱,소포장실\\036_A라인 중량 선별기\\원본카드.json",
+      "bytes": 1748,
+      "sha256": "aceb0e560c381f867e5334509b72de8db79adb4561c81740cd98f93bcfc860fd"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/스틱,소포장실/011_스틱 1,2호기/원본카드.json",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\스틱,소포장실\\011_스틱 1,2호기\\원본카드.json",
+      "bytes": 1850,
+      "sha256": "e6d60ff0f0e3df5718e92e8ba65463e4cd59d8b48b4fb42097055f8848dc031b"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/스틱,소포장실/037_A라인 엑스레이/원본카드.json",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\스틱,소포장실\\037_A라인 엑스레이\\원본카드.json",
+      "bytes": 1730,
+      "sha256": "899226be1d69956588611acab0d2160915787f122bc861e2a0dc888ec9dced3a"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/스틱,소포장실/009_스틱 7,8호기/설비사진_스틱 7,8호기.jpg",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\스틱,소포장실\\009_스틱 7,8호기\\설비사진_스틱 7,8호기.jpg",
+      "bytes": 206604,
+      "sha256": "34ee866e20895e301bf67c7d90f3bafe98901a92aa225d7e9d92442bddd07826"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/스틱,소포장실/028_질소발생기/원본카드.json",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\스틱,소포장실\\028_질소발생기\\원본카드.json",
+      "bytes": 1839,
+      "sha256": "a0d77410168e290c13d1601bd578d47f31fc41b5bb0b4d3c96735f3391fc1b75"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/스틱,소포장실/035_C라인 엑스레이/원본카드.json",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\스틱,소포장실\\035_C라인 엑스레이\\원본카드.json",
+      "bytes": 1730,
+      "sha256": "89c1af691360363c29b9e19d72dee5c0310754f07f4d3fbb8bc6c00c8472f126"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/스틱,소포장실/037_A라인 엑스레이/설비사진_A라인 엑스레이.jpg",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\스틱,소포장실\\037_A라인 엑스레이\\설비사진_A라인 엑스레이.jpg",
+      "bytes": 180790,
+      "sha256": "e9dab98fe023be02552d617ae96f7a546a648b360535f6903734f52cd1102071"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/스틱,소포장실/032_C라인 테이핑기/원본카드.json",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\스틱,소포장실\\032_C라인 테이핑기\\원본카드.json",
+      "bytes": 1730,
+      "sha256": "7e811d452c8460af26fa3d6105241ac1a954bd4586939e099b1e3309e496230d"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/스틱,소포장실/035_C라인 엑스레이/설비이력카드.html",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\스틱,소포장실\\035_C라인 엑스레이\\설비이력카드.html",
+      "bytes": 252024,
+      "sha256": "7a06ed837ebbfc5f6287039e096a923964f43a56b189e59373d0a019896569a6"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/스틱,소포장실/034_밴드 씰링기/설비사진_밴드 씰링기.jpg",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\스틱,소포장실\\034_밴드 씰링기\\설비사진_밴드 씰링기.jpg",
+      "bytes": 175539,
+      "sha256": "59f7a99534382eff70d2d1df2a95d12885473592e83dec42c30bfa4fdab5d714"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/스틱,소포장실/036_A라인 중량 선별기/설비이력카드.html",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\스틱,소포장실\\036_A라인 중량 선별기\\설비이력카드.html",
+      "bytes": 262063,
+      "sha256": "a67a1deaa219bd7b4ef4b54a14111d160e672f9e14185c31c3127a969050aaa8"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/스틱,소포장실/029_B라인 중량 선별기/설비사진_B라인 중량 선별기.jpg",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\스틱,소포장실\\029_B라인 중량 선별기\\설비사진_B라인 중량 선별기.jpg",
+      "bytes": 182626,
+      "sha256": "5fd461a3dcb52f3dd385ce9ab6e64db5218eae1579db801e81603fb13194f475"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/스틱,소포장실/034_밴드 씰링기/설비이력카드.html",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\스틱,소포장실\\034_밴드 씰링기\\설비이력카드.html",
+      "bytes": 254076,
+      "sha256": "5fc441a89fe3d984204db293650af3f0e76ae5bbb5a1162eef0ac732e3b789c4"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/스틱,소포장실/008_스틱 5,6호기/원본카드.json",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\스틱,소포장실\\008_스틱 5,6호기\\원본카드.json",
+      "bytes": 2004,
+      "sha256": "c4da455ea5c31a4803374c0a91708204910478d3218f74d9b129272fd12e464b"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/스틱,소포장실/029_B라인 중량 선별기/원본카드.json",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\스틱,소포장실\\029_B라인 중량 선별기\\원본카드.json",
+      "bytes": 4613,
+      "sha256": "520754273e2be6694802c932d0a3b381ad0a82d9bb362c93a4fcfb65c85fcac9"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/스틱,소포장실/031_봉함기/원본카드.json",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\스틱,소포장실\\031_봉함기\\원본카드.json",
+      "bytes": 1681,
+      "sha256": "0558a3d730d01fdb69fead357082cbf7674e9a79b21cead01576093b9400ef22"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/스틱,소포장실/010_스틱 3,4호기/원본카드.json",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\스틱,소포장실\\010_스틱 3,4호기\\원본카드.json",
+      "bytes": 1850,
+      "sha256": "d6b19cfcec7814ea930d99b798a3f5e635b71d14f68465732df7a8bc149a0bb6"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/스틱,소포장실/037_A라인 엑스레이/설비이력카드.html",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\스틱,소포장실\\037_A라인 엑스레이\\설비이력카드.html",
+      "bytes": 261104,
+      "sha256": "a2567667d67a07ba62b9add270b72260accba92d8b9a5fa5437c9451e94d968d"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/스틱,소포장실/009_스틱 7,8호기/원본카드.json",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\스틱,소포장실\\009_스틱 7,8호기\\원본카드.json",
+      "bytes": 1850,
+      "sha256": "6785d6b0b1ae5643b698f07715e5c4764faece2dc6c50574a7f164dcb96de740"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/스틱,소포장실/028_질소발생기/설비이력카드.html",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\스틱,소포장실\\028_질소발생기\\설비이력카드.html",
+      "bytes": 180659,
+      "sha256": "bd27030f60731591d501f605d90b84c8b01a1d3d3fb256edbdbaf936ccdc3012"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/스틱,소포장실/031_봉함기/설비이력카드.html",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\스틱,소포장실\\031_봉함기\\설비이력카드.html",
+      "bytes": 236378,
+      "sha256": "113f5173090edaeb5f0798861464386da28828b8e541f13bacc79f267164d01b"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/스틱,소포장실/033_열풍기/설비사진_열풍기.jpg",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\스틱,소포장실\\033_열풍기\\설비사진_열풍기.jpg",
+      "bytes": 140695,
+      "sha256": "3fa8e1ebd65ff90a219c2a42c00e6eb8d924e8dcdbea8bb5b6d9c5b558fdd0bd"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/스틱,소포장실/011_스틱 1,2호기/설비사진_스틱 1,2호기.jpg",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\스틱,소포장실\\011_스틱 1,2호기\\설비사진_스틱 1,2호기.jpg",
+      "bytes": 195559,
+      "sha256": "afeff66b41160c2daf73cb4188614266c2e06b5236a5f3c2da004482b7e38764"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/스틱,소포장실/027_A라인 테이핑기/원본카드.json",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\스틱,소포장실\\027_A라인 테이핑기\\원본카드.json",
+      "bytes": 1728,
+      "sha256": "ce1136e1ee235cd71ee508067df579bf2e6d4b0d6a7bcf19c78757afb2b67163"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/스틱,소포장실/026_B라인 엑스레이/원본카드.json",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\스틱,소포장실\\026_B라인 엑스레이\\원본카드.json",
+      "bytes": 1880,
+      "sha256": "7b3f8c351913734c73ed9190908febe2bb43fbfdbbffa719d9cab786d89556c8"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/스틱,소포장실/031_봉함기/설비사진_봉함기.jpg",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\스틱,소포장실\\031_봉함기\\설비사진_봉함기.jpg",
+      "bytes": 162295,
+      "sha256": "f3abb455f7a137f390ef8307d1799d4d587c072279e58b96502c1272ee630b1c"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/스틱,소포장실/026_B라인 엑스레이/설비사진_B라인 엑스레이.jpg",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\스틱,소포장실\\026_B라인 엑스레이\\설비사진_B라인 엑스레이.jpg",
+      "bytes": 198676,
+      "sha256": "e8271ba4cf07afe8c38bb665fbc5a269c14f0a89478550911bcfe970e7d6f219"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/스틱,소포장실/027_A라인 테이핑기/설비사진_A라인 테이핑기.jpg",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\스틱,소포장실\\027_A라인 테이핑기\\설비사진_A라인 테이핑기.jpg",
+      "bytes": 221778,
+      "sha256": "2182a0637ed9e9304a2633ed1bc6c7e90a9bb14f8880cb38d3466d982d150050"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/스틱,소포장실/030_B라인 테이핑기/설비사진_B라인 테이핑기.jpg",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\스틱,소포장실\\030_B라인 테이핑기\\설비사진_B라인 테이핑기.jpg",
+      "bytes": 213514,
+      "sha256": "4dec334838c8dc5c94c5edc5c5ff73f27a50016d3bf45f7a2e16ce8a26473340"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/스틱,소포장실/010_스틱 3,4호기/설비사진_스틱 3,4호기.jpg",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\스틱,소포장실\\010_스틱 3,4호기\\설비사진_스틱 3,4호기.jpg",
+      "bytes": 207771,
+      "sha256": "1286ec2a763494037ee119a81a26318f2056ca617e6bde73444e2aec34896d7c"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/스틱,소포장실/008_스틱 5,6호기/설비이력카드.html",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\스틱,소포장실\\008_스틱 5,6호기\\설비이력카드.html",
+      "bytes": 312695,
+      "sha256": "aa8ba5f1ea01b6acb335bb7f845fc42756a1688d1b130f6741014fc0625234c4"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/스틱,소포장실/011_스틱 1,2호기/설비이력카드.html",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\스틱,소포장실\\011_스틱 1,2호기\\설비이력카드.html",
+      "bytes": 280985,
+      "sha256": "f386d176f05ce6da85dab1880a354e1b25d68a5de4eb668a1bc96eee6e381fcf"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/스틱,소포장실/033_열풍기/설비이력카드.html",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\스틱,소포장실\\033_열풍기\\설비이력카드.html",
+      "bytes": 207576,
+      "sha256": "c2763f5d1725ccda3e4af1723ba72a047ae90f6d6184f9cfe1a7927fd20bbaaa"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/스틱,소포장실/030_B라인 테이핑기/원본카드.json",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\스틱,소포장실\\030_B라인 테이핑기\\원본카드.json",
+      "bytes": 1730,
+      "sha256": "3d54790c195cb2aa215cb5338cb5b8116724d6ff4f0910b8982f85fd14c95736"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/스틱,소포장실/009_스틱 7,8호기/설비이력카드.html",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\스틱,소포장실\\009_스틱 7,8호기\\설비이력카드.html",
+      "bytes": 295709,
+      "sha256": "3c179bb7520774718b6dee4475a0bb6a11de02251df854514876742bbd016a07"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/스틱,소포장실/027_A라인 테이핑기/설비이력카드.html",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\스틱,소포장실\\027_A라인 테이핑기\\설비이력카드.html",
+      "bytes": 315751,
+      "sha256": "4c56d0b837abaf526c8acd41d7f30c1e5ddb3e08af36195e36ce88101d676e95"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/스틱,소포장실/029_B라인 중량 선별기/설비이력카드.html",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\스틱,소포장실\\029_B라인 중량 선별기\\설비이력카드.html",
+      "bytes": 265551,
+      "sha256": "9f05fa4ad520224d2fedd4ea84e850fb1175aec31aec7de99966fd3905dac40d"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/스틱,소포장실/026_B라인 엑스레이/설비이력카드.html",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\스틱,소포장실\\026_B라인 엑스레이\\설비이력카드.html",
+      "bytes": 285172,
+      "sha256": "0379d5a041030e7590000b9aa9674c47d711644a88cf9bb4dd606f4a07562ac2"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/스틱,소포장실/030_B라인 테이핑기/설비이력카드.html",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\스틱,소포장실\\030_B라인 테이핑기\\설비이력카드.html",
+      "bytes": 304736,
+      "sha256": "da8890d7a7d0bd4165728ef0cc6038d26aa6c819a8c7e36b29aca01a064147b6"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/스틱,소포장실/028_질소발생기/설비사진_질소발생기.jpg",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\스틱,소포장실\\028_질소발생기\\설비사진_질소발생기.jpg",
+      "bytes": 120321,
+      "sha256": "4654ae77d257168255d7b96f48d8ba7d76b2e18244366c2577e4e72c3cbb1afa"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/스틱,소포장실/010_스틱 3,4호기/설비이력카드.html",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\스틱,소포장실\\010_스틱 3,4호기\\설비이력카드.html",
+      "bytes": 297265,
+      "sha256": "218b794ae25d330af8d32837cb75cfb606860a9ca63a662723e22a9f4f29f2c9"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/3층/014_무중력 2호기/설비사진_무중력 2호기.jpg",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\3층\\014_무중력 2호기\\설비사진_무중력 2호기.jpg",
+      "bytes": 217581,
+      "sha256": "41f4bed1bba4eb4e47c34e056aac96aa551516b13733800beb89df4363f0c718"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/3층/007_진동채 1호기/원본카드.json",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\3층\\007_진동채 1호기\\원본카드.json",
+      "bytes": 1689,
+      "sha256": "572845bbf6327d63a1640be19177e172ed8985807e03d4f7cc8bc0ff276e6c5d"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/3층/013_무중력 3호기/설비사진_무중력 3호기.jpg",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\3층\\013_무중력 3호기\\설비사진_무중력 3호기.jpg",
+      "bytes": 187854,
+      "sha256": "51b0c7e7edc71a4345d378815f2fb4e9521ffa03ead29f20eec5899863a51f9c"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/3층/012_무중력 1호기/설비사진_무중력 1호기.jpg",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\3층\\012_무중력 1호기\\설비사진_무중력 1호기.jpg",
+      "bytes": 179794,
+      "sha256": "eb85d8c796dabd01fb1694fd9539462661f054ad2cd09eb301d0e411a643efc6"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/3층/014_무중력 2호기/원본카드.json",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\3층\\014_무중력 2호기\\원본카드.json",
+      "bytes": 1627,
+      "sha256": "6492df79075b06c636fee2b19667eb31c1b2f48d03df4ff249a6e6aa22f02405"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/3층/012_무중력 1호기/원본카드.json",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\3층\\012_무중력 1호기\\원본카드.json",
+      "bytes": 1685,
+      "sha256": "d9c1752794996fe059fa773829a1358fb11fe2c66d06a02bdd984bcde04463c1"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/3층/013_무중력 3호기/원본카드.json",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\3층\\013_무중력 3호기\\원본카드.json",
+      "bytes": 1627,
+      "sha256": "e0324d94d14f3654c57cd553ce3be3374030538888e91f333c83f032baa5971c"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/3층/014_무중력 2호기/설비이력카드.html",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\3층\\014_무중력 2호기\\설비이력카드.html",
+      "bytes": 310085,
+      "sha256": "78a5d78f08bcd80d014cef16904e292c0fed2928ecd1a9f2dd28494848dbacf6"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/3층/005_진동채 3호기/원본카드.json",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\3층\\005_진동채 3호기\\원본카드.json",
+      "bytes": 1689,
+      "sha256": "8be7ac656953baba05de09bf3fa491c0d6cfaede477e4b8ffbf9fadc8e4ece42"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/3층/004_호퍼 1호기/원본카드.json",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\3층\\004_호퍼 1호기\\원본카드.json",
+      "bytes": 1674,
+      "sha256": "97cf8ba8c7eeb96429cb82eddc37678f76a0970341e2c34c7914cd19f6d26072"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/3층/007_진동채 1호기/설비사진_진동채 1호기.jpg",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\3층\\007_진동채 1호기\\설비사진_진동채 1호기.jpg",
+      "bytes": 210293,
+      "sha256": "8767e4ce3dcf76ca6fe5d6a6635dac3b327a263133e025d9288948ca4eb4caef"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/3층/007_진동채 1호기/설비이력카드.html",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\3층\\007_진동채 1호기\\설비이력카드.html",
+      "bytes": 300379,
+      "sha256": "deb570f4538c2cd71a7c005c9a5f178c900256e92e4306f1b6efd1cda54b5b58"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/3층/005_진동채 3호기/설비사진_진동채 3호기.jpg",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\3층\\005_진동채 3호기\\설비사진_진동채 3호기.jpg",
+      "bytes": 210471,
+      "sha256": "9677d71c3f614666037e219660e1330c7b9ba00ed6616288c4f1917ffddc3ea3"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/3층/013_무중력 3호기/설비이력카드.html",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\3층\\013_무중력 3호기\\설비이력카드.html",
+      "bytes": 270449,
+      "sha256": "d76bfd1e0b5c931c0cd2354099e4a8a18b30e38750f8f6b22e843320b59e8d5a"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/3층/004_호퍼 1호기/설비사진_호퍼 1호기.jpg",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\3층\\004_호퍼 1호기\\설비사진_호퍼 1호기.jpg",
+      "bytes": 217866,
+      "sha256": "ca6e427733f2a7a56a4ff3f416461eb56b9e3d6d47028010dc102acdd875d6e3"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/3층/001_교반기#4(지대)/원본카드.json",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\3층\\001_교반기#4(지대)\\원본카드.json",
+      "bytes": 2571,
+      "sha256": "13256efddfd0f2bf000cff2fa08afe2564be49957c8193c3ab97daae3a49c072"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/3층/001_교반기#4(지대)/설비사진_교반기#4(지대).jpg",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\3층\\001_교반기#4(지대)\\설비사진_교반기#4(지대).jpg",
+      "bytes": 238290,
+      "sha256": "462284b0a7cbf64493a3bd4674939606fed29529b0d0935d1cc746860ed9f41f"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/3층/006_진동채 2호기/원본카드.json",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\3층\\006_진동채 2호기\\원본카드.json",
+      "bytes": 1689,
+      "sha256": "f15ee9811f3c510369cea66e31c25b56f645e78569ab0940eaf78182947f2491"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/3층/003_호퍼 2호기/원본카드.json",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\3층\\003_호퍼 2호기\\원본카드.json",
+      "bytes": 1674,
+      "sha256": "cfd2a3cf6be46b869a826162db333af77929ac53caa8b4a32494d54acc5f8c5a"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/3층/002_호퍼 3호기/원본카드.json",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\3층\\002_호퍼 3호기\\원본카드.json",
+      "bytes": 1674,
+      "sha256": "fe1b23fcc20bf4aa3a03f07f5c15927ee055a780cf9720862c42f3b19b92717e"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/3층/006_진동채 2호기/설비사진_진동채 2호기.jpg",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\3층\\006_진동채 2호기\\설비사진_진동채 2호기.jpg",
+      "bytes": 248999,
+      "sha256": "2aa632760cd562fe756eca2457bea1484ca2ebcc14b33939051199a253e2beee"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/3층/002_호퍼 3호기/설비사진_호퍼 3호기.jpg",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\3층\\002_호퍼 3호기\\설비사진_호퍼 3호기.jpg",
+      "bytes": 233782,
+      "sha256": "fd4a102442a7c1982628dd72c684f55d4c984dfa285a64f04008e142542ef2cd"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/3층/012_무중력 1호기/설비이력카드.html",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\3층\\012_무중력 1호기\\설비이력카드.html",
+      "bytes": 259713,
+      "sha256": "ec1eb8cd87b05c176750a86e92b0dc612b2105da27275d11df0e2bf9e1dc41c6"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/3층/005_진동채 3호기/설비이력카드.html",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\3층\\005_진동채 3호기\\설비이력카드.html",
+      "bytes": 300615,
+      "sha256": "d99224460c4bca33565a768e60125a7eae3244ca68dc45f930dcd8bb6a0cd165"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/3층/003_호퍼 2호기/설비사진_호퍼 2호기.jpg",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\3층\\003_호퍼 2호기\\설비사진_호퍼 2호기.jpg",
+      "bytes": 228011,
+      "sha256": "b4ce5911dad075f32d409fe8f81b79aed3d51706e1c758488477a0b72824304f"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/스틱,소포장실/029_B라인 중량 선별기/첨부문서/03_교체전.jpg",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\스틱,소포장실\\029_B라인 중량 선별기\\첨부문서\\03_교체전.jpg",
+      "bytes": 419137,
+      "sha256": "7f16966160c7c450f7cf65a6add178540cdc422940206173d0510cdbf6fb218c"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/스틱,소포장실/029_B라인 중량 선별기/첨부문서/01_점검보고서)체크웨이트 기판수리.pdf",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\스틱,소포장실\\029_B라인 중량 선별기\\첨부문서\\01_점검보고서)체크웨이트 기판수리.pdf",
+      "bytes": 385905,
+      "sha256": "3fdae79d0cfa0fcb57ad2c0f1bc13a3a12e6073ce5e0f127fcd634568049549b"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/스틱,소포장실/029_B라인 중량 선별기/첨부문서/04_교체후.jpg",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\스틱,소포장실\\029_B라인 중량 선별기\\첨부문서\\04_교체후.jpg",
+      "bytes": 515118,
+      "sha256": "45b29a1b4fbdff9a544a019171452899f33100346e6962f1fbd4a304d97d2b16"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/3층/003_호퍼 2호기/설비이력카드.html",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\3층\\003_호퍼 2호기\\설비이력카드.html",
+      "bytes": 323985,
+      "sha256": "ca34a2865f2038e37588b01c8d79355d947760f665362440daec053404c32697"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/3층/004_호퍼 1호기/설비이력카드.html",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\3층\\004_호퍼 1호기\\설비이력카드.html",
+      "bytes": 310457,
+      "sha256": "cad0fe81dbc617729be6bcdde580373034551decff0846b407fadde5c46904c3"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/스틱,소포장실/029_B라인 중량 선별기/첨부문서/02_견적서)체크웨이트 기판 교체 작업.pdf",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\스틱,소포장실\\029_B라인 중량 선별기\\첨부문서\\02_견적서)체크웨이트 기판 교체 작업.pdf",
+      "bytes": 430242,
+      "sha256": "90b6b4342d71b0a981fb748e022f3a8a9614c942b39fed14b2aa53c79836c2c2"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/3층/006_진동채 2호기/설비이력카드.html",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\3층\\006_진동채 2호기\\설비이력카드.html",
+      "bytes": 351987,
+      "sha256": "9551a8b29ae3fd62b6c79ec0b1431f7b2e65b18636b123fd1821ad9ed6189d91"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/3층/002_호퍼 3호기/설비이력카드.html",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\3층\\002_호퍼 3호기\\설비이력카드.html",
+      "bytes": 331681,
+      "sha256": "41c3b94db63a7e5b99e0c0a72a746a51f21ca36d91c13eedfea33208b6aeef3e"
+    },
+    {
+      "zipMember": "2팀 3팀 설비이력카드_2026-11-10/2팀/3층/001_교반기#4(지대)/설비이력카드.html",
+      "localPath": "references\\team2-equipment-cards-20261110\\source\\2팀\\3층\\001_교반기#4(지대)\\설비이력카드.html",
+      "bytes": 339485,
+      "sha256": "fc520666b244579fa929d97532b56c75fc485aa1ba9ff1c3a166afc9d042b4a9"
+    }
+  ],
+  "archiveSha256": "bf8a6810e9493c99b02ce7d644f9207982357f4ed52d474e01a424ee58c3db2e",
+  "identity": {
+    "currentTeam": "2팀",
+    "building": "스틱·소포장동(9동)",
+    "excludedHistoricalAlias": "과거 건조실의 2팀 호칭은 현재 9동 모델에 전용하지 않음"
+  }
+}

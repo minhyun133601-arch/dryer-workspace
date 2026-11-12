@@ -1,0 +1,204 @@
+{
+  "reviewDate": "2026-11-10",
+  "scope": {
+    "building": "현재 2팀의 9동 스틱·소포장동",
+    "floor": 3,
+    "sourceArchive": "2팀 3팀 설비이력카드_2026-11-10-20261110T010039Z-1-001.zip",
+    "reviewedCards": 10,
+    "reviewedCompositePhotos": 10,
+    "reviewedDirectionalViews": 40,
+    "excludedSources": ["ZIP의 3팀 카드", "과거에 생산2팀으로 불린 다른 건물·건조실의 설비"],
+    "method": "아래 원본 합성사진 10장을 각각 실제 열어 정면·좌측면·우측면·후면을 확인하고 외형을 대응했다. 도면상 위치·치수를 카드의 사진 비례로 실측 확정하지 않았다.",
+    "geometryFile": "apps/site/packaging-equipment-v2.js",
+    "reviewStatus": "카드 원본 판독·형상 반영과 대표 렌더 5개 대조 완료. 판독된 두 형상 차이를 추가 교정했으며 최종 재렌더는 별도 확인한다."
+  },
+  "identityAndCounting": {
+    "modelNames": "이 10개 카드의 modelName 필드가 공란이므로 제조 모델·용량을 새로 부여하지 않았다.",
+    "cardHoppers": "호퍼 1·2·3호기는 체커 데크 위의 수직 원통·중앙 수직 구동 설비다. 무중력 믹서 아래의 역사각뿔 배출 호퍼, 우측 소형 공급 호퍼 8개와 서로 다른 어셈블리로 구분한다.",
+    "agitatorFour": "교반기#4(지대)는 원통 몸통과 상부 원형 진동채·크림 철골이 확인된다. 기존 네 번째 자리를 리본 U자 트로프로 추정했던 형상을 이 카드 형상으로 대체했다. 리본 혼합기의 내부 구조를 만들지 않는다.",
+    "sieveFour": "교반기#4의 사진에 함께 보이는 상부 진동채를 해당 어셈블리 안에 한 번만 구현한다. 기존 독립 네 번째 시프트와 중복 생성하지 않는다.",
+    "otherSieves": "메인 진동채 1·2·3은 각 카드로 대응한다. 우측 스틱 시프트 2대는 이번 10개 카드와 동일 설비라고 확정하지 않으며 기존 현장 영상 근거를 유지한다.",
+    "mixerDrives": "무중력 1·2·3호기 각각에서 큰 하부 모터·경사 SS 커버와 끝단 상부 소형 모터 2개·어두운 사다리꼴 커버가 함께 관찰된다. 두 구동 형식을 서로 다른 기종의 대체 선택지로 처리하지 않는다."
+  },
+  "cards": [
+    {
+      "cardName": "무중력 1호기",
+      "sourcePhoto": "source/2팀/3층/012_무중력 1호기/설비사진_무중력 1호기.jpg",
+      "modelId": "packaging-main-mixer-1",
+      "features": [
+        {"observed": "긴 SS 몸통, 넓은 사각 점검문, 둥근 하부", "appliedTo": "낮고 긴 몸통의 하부 곡률과 정면 힌지·클램프 점검문"},
+        {"observed": "정면 상부에 길게 열린 SS 투입 뚜껑", "appliedTo": "폭이 긴 직사각 투입구와 열린 힌지 뚜껑"},
+        {"observed": "하부의 큰 녹회색 모터와 길고 경사진 SS 커버", "appliedTo": "낮은 대형 모터·냉각핀·팬 면과 별도의 경사 SS 벨트 가드"},
+        {"observed": "측면의 어두운 사다리꼴 커버와 그 위 소형 모터 2개", "appliedTo": "어두운 가드·SS 테두리·상부 모터 두 개와 얇은 SS 차양"},
+        {"observed": "반대 끝판의 베어링 두 개, 하부 구동부와 공압·청록 호스", "appliedTo": "2축 베어링·볼트, 하부 감속기 두 개·가로 실린더·투명 서비스함·호스"}
+      ],
+      "excluded": ["모델명·용량 추정", "차폐판 내부의 보이지 않는 벨트와 패들"],
+      "limits": "부품별 실제 치수는 미제공이다. 구동부와 몸통 비례는 카드·영상의 외형을 참고한 재현값이다."
+    },
+    {
+      "cardName": "무중력 2호기",
+      "sourcePhoto": "source/2팀/3층/014_무중력 2호기/설비사진_무중력 2호기.jpg",
+      "modelId": "packaging-main-mixer-2",
+      "features": [
+        {"observed": "큰 사각 점검문과 둥근 하부가 이어지는 SS 몸통", "appliedTo": "하부가 둥근 긴 SS 몸통·큰 힌지 점검문"},
+        {"observed": "정면의 길게 열린 상부 투입 덮개", "appliedTo": "열린 긴 SS 뚜껑과 경첩·접힌 가장자리"},
+        {"observed": "정면 하부 큰 모터와 가늘고 긴 경사 SS 커버", "appliedTo": "낮은 대형 모터와 별도 경사 벨트 가드"},
+        {"observed": "측면의 어두운 넓은 커버, 상부 모터 2개", "appliedTo": "사다리꼴 가드·SS 테두리·상부 모터 두 개"},
+        {"observed": "반대 끝판의 두 축 베어링·청록 공기 호스·하부 구동", "appliedTo": "끝판 베어링 두 개와 서비스함·공압 실린더·감속기·호스"}
+      ],
+      "excluded": ["정식 모델명 추정", "카드에 보이는 도면·표찰 내용을 임의 복원"],
+      "limits": "사진의 어두운 커버 일부에는 내부 풀리가 비치지만 현재 외형 모델은 불투명 가드로 단순화했다. 내부 구동계 정합을 완료한 모델은 아니다."
+    },
+    {
+      "cardName": "무중력 3호기",
+      "sourcePhoto": "source/2팀/3층/013_무중력 3호기/설비사진_무중력 3호기.jpg",
+      "modelId": "packaging-main-mixer-3",
+      "features": [
+        {"observed": "열린 긴 상부 뚜껑과 그 아래 사각 점검문", "appliedTo": "열린 투입 덮개·힌지와 큰 몸통 점검문"},
+        {"observed": "곡면 하부와 낮은 대형 모터 받침", "appliedTo": "둥근 하부 SS 몸통과 낮은 대형 모터"},
+        {"observed": "정면 측면의 길게 경사진 SS 구동 커버", "appliedTo": "대형 모터 옆의 경사 벨트 가드"},
+        {"observed": "반대 측면 어두운 가드와 그 위 모터 2개", "appliedTo": "어두운 사다리꼴 가드·SS 테두리와 상부 소형 모터 두 개"},
+        {"observed": "끝판 베어링 두 개·투명함·호스와 하부 가로 실린더", "appliedTo": "끝판 2축 베어링·서비스함과 하부 공압·구동 부속"}
+      ],
+      "excluded": ["할랄 표찰의 인증 내용·현재 유효성 판단", "보이지 않는 내부 혼합 날개"],
+      "limits": "이 카드의 LEFT/RIGHT 캡션과 다른 카드의 촬영 방향 차이만으로 도면상의 회전을 확정하지 않았다. 기기 번호와 도면상 주 배치를 유지하고 상세 방향은 근사로 남긴다."
+    },
+    {
+      "cardName": "진동채 1호기",
+      "sourcePhoto": "source/2팀/3층/007_진동채 1호기/설비사진_진동채 1호기.jpg",
+      "modelId": "packaging-mixer-sieve-1",
+      "features": [
+        {"observed": "짙은 원통형 하부 진동 받침", "appliedTo": "낮은 어두운 원통 받침과 밑판"},
+        {"observed": "큰 지름의 SS 원형 다단 몸통", "appliedTo": "다단 원형 스크린 몸통과 SS 원주 링"},
+        {"observed": "몸통 둘레의 세로 클램프와 청록 손잡이", "appliedTo": "긴 세로 체결봉·청록 클램프 손잡이"},
+        {"observed": "몸통 전체에 느슨하게 씌운 투명 비닐", "appliedTo": "불투명 원뿔 뚜껑을 대신하는 투명 외피"},
+        {"observed": "낮은 측면 배출 팔과 원형 끝", "appliedTo": "길게 돌출한 SS 배출 팔·끝단 포트"}
+      ],
+      "excluded": ["브랜드·모델 번호 판독", "비닐의 주름을 실측 외피로 취급"],
+      "limits": "배출 팔은 통로와 난간을 침범하지 않게 모델 내부에서 Z방향으로 배치했다. 카드 촬영 방향과 도면 회전의 정밀 등록은 미완료다."
+    },
+    {
+      "cardName": "진동채 2호기",
+      "sourcePhoto": "source/2팀/3층/006_진동채 2호기/설비사진_진동채 2호기.jpg",
+      "modelId": "packaging-mixer-sieve-2",
+      "features": [
+        {"observed": "짙은 원통 받침과 바닥 원형 플랜지", "appliedTo": "어두운 원통 베이스·밑판"},
+        {"observed": "광택 SS 다단 몸통과 원주 링", "appliedTo": "큰 원통 몸통 2구간·원주 체결 링 3개"},
+        {"observed": "세로 체결봉·몸통 둘레 클램프", "appliedTo": "긴 세로 체결봉과 손잡이"},
+        {"observed": "몸통 위에서 옆으로 늘어진 투명 비닐", "appliedTo": "상부와 몸통을 감싸는 투명 외피"},
+        {"observed": "서로 다른 높이에 돌출한 SS 측면 팔", "appliedTo": "높이를 나눈 두 측면 배출 팔과 끝 포트"}
+      ],
+      "excluded": ["제품 분말·적재 포대를 고정 기계로 추가", "같은 배출 팔을 별도 독립 설비로 집계"],
+      "limits": "비닐의 실제 불규칙한 처짐과 기계 표면의 마모는 개략화했다. 배출 팔의 도면상 방향은 근사다."
+    },
+    {
+      "cardName": "진동채 3호기",
+      "sourcePhoto": "source/2팀/3층/005_진동채 3호기/설비사진_진동채 3호기.jpg",
+      "modelId": "packaging-mixer-sieve-3",
+      "features": [
+        {"observed": "노출된 SS 원형 다단 몸통", "appliedTo": "전면 비닐을 씌우지 않은 SS 스크린 몸통"},
+        {"observed": "아래 원통 받침과 둘레 스프링", "appliedTo": "원통 베이스·외부 코일 스프링"},
+        {"observed": "넓고 낮은 SS 뚜껑과 위의 얕은 원형 그릇", "appliedTo": "낮은 원형 뚜껑·상부 얕은 SS 그릇"},
+        {"observed": "두 높이의 긴 측면 배출 팔", "appliedTo": "높이를 구분한 SS 배출 팔·원형 포트"},
+        {"observed": "옆 청색 수거 봉투와 가는 지지 프레임", "appliedTo": "청색 봉투·열린 가는 관 프레임"}
+      ],
+      "excluded": ["그릇 안 분말을 기계 구조로 모델링", "봉투를 별도 고정 생산 설비로 집계"],
+      "limits": "공정·메시 규격·처리량은 카드로 판독되지 않는다. 청색 봉투는 사진의 외형 부속을 단순화한 것이다."
+    },
+    {
+      "cardName": "호퍼 1호기",
+      "sourcePhoto": "source/2팀/3층/004_호퍼 1호기/설비사진_호퍼 1호기.jpg",
+      "modelId": "packaging-card-hopper-1",
+      "features": [
+        {"observed": "낮고 넓은 SS 수직 원통 몸통", "appliedTo": "독립 원통 몸통·낮은 받침 링"},
+        {"observed": "평평한 원형 상판과 반원형 접근 덮개 경계", "appliedTo": "원형 뚜껑·가로 경첩선·빨간 잠금 손잡이"},
+        {"observed": "상판 중앙의 수직 모터·감속기", "appliedTo": "수직 냉각핀 모터·하부 감속기"},
+        {"observed": "상판에서 위로 이어지는 투입 연결과 굵은 옆 주름관", "appliedTo": "투입 슬리브·플랜지·측면 주름 호스"},
+        {"observed": "낮은 사각 점검문과 방사형 SS 발", "appliedTo": "전면 점검문·힌지·클램프와 방사형 스키드 받침"}
+      ],
+      "excluded": ["무중력 믹서 바로 아래 역사각뿔 호퍼와 동일시", "관찰되지 않은 내부 교반 날개"],
+      "limits": "현재 위치는 동일 메인 플랫폼 구역 안의 근사 배치다. 사진만으로 어느 믹서와 직접 연결되는지 확정하지 않는다. 몸통·모터·투입관의 치수는 실측값이 아니다."
+    },
+    {
+      "cardName": "호퍼 2호기",
+      "sourcePhoto": "source/2팀/3층/003_호퍼 2호기/설비사진_호퍼 2호기.jpg",
+      "modelId": "packaging-card-hopper-2",
+      "features": [
+        {"observed": "SS 수직 원통과 넓은 원형 상판", "appliedTo": "1호기와 구분된 독립 원통 몸통·원형 덮개"},
+        {"observed": "상판 중앙의 수직 모터·감속기", "appliedTo": "수직 모터·냉각핀·감속기"},
+        {"observed": "위로 향한 두 투입 연결과 원형 체결부", "appliedTo": "수직 투입 슬리브 두 개·원형 플랜지"},
+        {"observed": "한쪽으로 내려가는 굵은 검정 주름 호스", "appliedTo": "측면 주름관과 검정 모터 서비스 케이블"},
+        {"observed": "하부 점검부와 밖으로 벌어진 낮은 SS 발", "appliedTo": "사각 점검문·힌지·잠금쇠·방사형 스키드"}
+      ],
+      "excluded": ["우측 8개 소형 공급 호퍼와 동일 번호 체계로 간주", "사진을 기준으로 배관 공정 연결을 새로 확정"],
+      "limits": "카드에 보이는 측면 원형 포트의 모든 세부 형상은 현재 모델에 반영하지 않았다. 플랫폼 내 정확한 설치 회전·이격은 근사다."
+    },
+    {
+      "cardName": "호퍼 3호기",
+      "sourcePhoto": "source/2팀/3층/002_호퍼 3호기/설비사진_호퍼 3호기.jpg",
+      "modelId": "packaging-card-hopper-3",
+      "features": [
+        {"observed": "1·2호기보다 낮고 넓게 보이는 SS 원통", "appliedTo": "낮은 몸통 높이·조금 큰 몸통 지름"},
+        {"observed": "원형 상판과 가로 경계가 있는 접근 덮개", "appliedTo": "낮은 원형 상판·힌지선·클램프"},
+        {"observed": "상판의 수직 모터와 감속기", "appliedTo": "원통 몸통과 구분된 수직 구동부"},
+        {"observed": "상부 투입관·필터·뚜껑 포트와 검정 주름관", "appliedTo": "투입 슬리브·짧은 흰 필터·청색 캡·측면 주름관"},
+        {"observed": "몸통 하부의 사각 점검문과 방사형 발", "appliedTo": "낮은 점검문·손잡이·방사형 SS 스키드"}
+      ],
+      "excluded": ["주변 노란 철골을 이 원통 설비의 도장색으로 복사", "카드의 모든 주변 구조를 설비 부품으로 중복 생성"],
+      "limits": "주변 철골·기둥·상부 데크와의 실제 설치 관계를 도면에 정밀 등록하지 않았다. 본체 높이 차이도 사진 비례에 따른 재현값이다."
+    },
+    {
+      "cardName": "교반기#4(지대)",
+      "sourcePhoto": "source/2팀/3층/001_교반기#4(지대)/설비사진_교반기#4(지대).jpg",
+      "modelId": "packaging-round-process",
+      "features": [
+        {"observed": "낮은 SS 수직 원통 교반 몸통", "appliedTo": "기존 U자 트로프 대신 원통 몸통·낮은 스키드"},
+        {"observed": "넓은 원형 상판·접근 덮개·앞 점검문", "appliedTo": "원형 덮개·경첩선·전면 사각 점검부"},
+        {"observed": "몸통 위 중앙 수직 모터·감속기", "appliedTo": "수직 냉각핀 모터·감속기"},
+        {"observed": "한 단 높은 크림 철골·그레이팅과 원형 진동채", "appliedTo": "별도 높은 보조 프레임과 통합 상부 원형 시프트"},
+        {"observed": "상부에서 하부 몸통으로 향하는 투입 슬리브", "appliedTo": "상부 시프트·하부 원통 사이 흰 수직 연결부"}
+      ],
+      "excluded": ["리본 믹서라는 기존 추정 형상을 유지", "상부 시프트를 별도 네 번째 설비로 중복 집계", "원통 내부 날개·용량·모델명 추정"],
+      "limits": "상부 시프트와 원통의 상대 높이를 사진에서 근사했다. 카드에 함께 보이는 모든 관의 공정 연결을 검증한 모델은 아니다."
+    }
+  ],
+  "placementBoundary": {
+    "authoritativeDimensions": "9동 건축 도면의 본체 외곽과 플랫폼, 2025 스틱·소포장 작업장평면도의 영역·기기 순서를 유지한다.",
+    "approximatePositions": "새 원통 호퍼 3대의 메인 플랫폼 내 개별 이격·회전은 사진의 동일 구역 관계를 참고한 근사다. 설비 카드에는 현장 좌표나 도면 대응점이 없다.",
+    "pathConstraint": "메인 통로 X=-10.1m와 난간 접근을 유지하려고 큰 모터의 끝단 배치와 시프트 배출 팔의 방향을 조정했다. 실제 작업자의 통행 안전을 인증하는 치수가 아니다.",
+    "unregisteredViews": "카드 FRONT/LEFT/RIGHT/REAR는 카드 촬영 표기다. 공장 도면의 동서남북 또는 +X/-X/+Z/-Z와 자동으로 동일시하지 않는다."
+  },
+  "generationVerification": {
+    "coordinates": "아래 높이는 3층 마감 바닥을 Y=0으로 하는 층별 로컬 좌표(m)다. 2팀 전체 보기에서 적용하는 층별 적층 오프셋은 포함하지 않는다.",
+    "method": "실제 장면 helper 계약을 따르는 Three.js 생성 검사. 현재 데이터의 23개 지원 설비를 생성하고 정점 유효성·실제 분리 계층 3개·빈 계층 여부를 확인했다.",
+    "geometryFinite": true,
+    "actualPartsPerEquipment": 3,
+    "newAssemblyBounds": [
+      {"modelId": "packaging-card-hopper-1", "topY": 5.34, "minimumRoofYOverFootprint": 7.201, "roofMargin": 1.861, "widthIncludingHoseAndFeet": 1.577},
+      {"modelId": "packaging-card-hopper-2", "topY": 5.42, "minimumRoofYOverFootprint": 6.378, "roofMargin": 0.958, "widthIncludingHoseAndFeet": 1.577},
+      {"modelId": "packaging-card-hopper-3", "topY": 5.1, "minimumRoofYOverFootprint": 6.165, "roofMargin": 1.065, "widthIncludingHoseAndFeet": 1.612},
+      {"modelId": "packaging-round-process", "topY": 5.797, "minimumRoofYOverFootprint": 6.815, "roofMargin": 1.018, "widthIncludingUpperSieveArms": 2.055}
+    ],
+    "limit": "생성·구문 검사의 통과는 카드 사진과의 완전한 시각 정합, 실제 설치 치수 또는 공정 연결을 증명하지 않는다. 최종 렌더의 형태·가림·관통은 별도 검토해야 한다."
+  },
+  "representativeRenderAudit": {
+    "reviewedImages": [
+      "tmp/team2-cards-20261110/qa/mixer-1.png",
+      "tmp/team2-cards-20261110/qa/mixer-2.png",
+      "tmp/team2-cards-20261110/qa/hopper-1.png",
+      "tmp/team2-cards-20261110/qa/agitator-4.png",
+      "tmp/team2-cards-20261110/qa/sieve-3.png"
+    ],
+    "confirmed": [
+      "무중력 1·2호기 렌더에 큰 하부 모터·경사 SS 커버와 어두운 측면 가드·상부 소형 모터 두 개가 함께 표시된다.",
+      "원통 호퍼와 교반기#4가 이전의 역사각뿔 호퍼·U자 트로프와 구분되는 원통 어셈블리로 표시된다.",
+      "교반기#4의 높은 보조 프레임과 상부 시프트가 같은 설비의 실제 분리 계층 안에 표시된다."
+    ],
+    "geometryCorrectionsAfterAudit": [
+      "원통 호퍼·교반기 받침의 두꺼운 블록과 봉 보강을 두께 25mm SS 바닥판 및 두께 16mm 삼각판 보강으로 교정했다. 실제 제작 두께를 확정한 값은 아니다.",
+      "카드형 진동채를 큰 원통 2구간과 링 3개로 바꾸고 상판의 원추 높이를 120mm에서 45mm로 낮춰 평평한 SS 뚜껑에 가깝게 교정했다."
+    ],
+    "postCorrectionVerification": "23개 지원 설비의 실제 분리 계층 3개·빈 계층 없음·모든 정점 유효성을 다시 확인했다. 받침 평면 외곽은 기존보다 커지지 않았으며 장착 높이를 유지했다.",
+    "limit": "대표 렌더 5개를 확인했으며 카드 10개의 모든 4면을 동일 카메라로 정밀 정합한 검토는 아니다. 밝은 SS 반사띠·표면 마모·타공 그릴·일부 포트와 배관 연결은 사진보다 단순하다."
+  }
+}

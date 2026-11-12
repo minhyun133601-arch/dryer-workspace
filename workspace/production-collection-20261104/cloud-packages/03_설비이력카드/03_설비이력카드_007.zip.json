@@ -1,0 +1,11 @@
+{
+  "pack_id": "2f40b083859be28f5ddbcc7e9bb58d1096b0c6a1c5d6eede9a4044a99deba0c7",
+  "file_uri": "C:\\Users\\user\\Desktop\\프로젝트\\workspace\\production-collection-20261104\\cloud-packages\\03_설비이력카드\\03_설비이력카드_007.zip",
+  "file_name": "03_설비이력카드_007.zip",
+  "bytes": 678741,
+  "local_mtime_ns": 1793767890710294000,
+  "sha256": "bffdb9435aa251c6c2a5cf3aa13cd4b4699eafe955c8a0bfb334ee0551ccbcef",
+  "files": 65,
+  "compression": "ZIP_DEFLATED level 1; lossless",
+  "verification": "Every member SHA256 verified while writing; ZIP package SHA256 computed locally."
+}

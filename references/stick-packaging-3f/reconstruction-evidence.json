@@ -1,0 +1,4000 @@
+{
+  "schema_version": 1,
+  "updated_on": "2026-11-10",
+  "purpose": "직원이 촬영·확인한 별도 스틱·소포장동3층의 도면·영상 근거와 모델 근사 범위를 보존.",
+  "employee_confirmed": {
+    "site": "양산시 유산공단7길45 희창유업·HC글로벌 유산공장",
+    "building_relation": "간판이 있는7층 건조실 옆의 별도 건물이 스틱·소포장동",
+    "video_floor": 3,
+    "dryer_building_floors": 7,
+    "outdoor_cyclone_floor": 3,
+    "identity_basis": "실내 GPS 추정이나 다른층 도식이 아닌 직원의 명시 확인을 우선"
+  },
+  "source_video": {
+    "path": "좌표/20261109_144753KST_GPS-VALID_LAT35.3623483_LON129.0303950_H214.1-TN_DIR-AVAILABLE_P-65.3_ACC37.5m_FV-c54af9f3-48dc-45ba-982d-b856cbecf21b.mp4",
+    "coordinate_text_path": "좌표/20261109_144753KST_GPS-VALID_LAT35.3623483_LON129.0303950_H214.1-TN_DIR-AVAILABLE_P-65.3_ACC37.5m_FV-c54af9f3-48dc-45ba-982d-b856cbecf21b.txt",
+    "duration_seconds": 1102.886922,
+    "duration_display": "18분22.887초(통상18분23초)",
+    "bytes": 1651365116,
+    "recording_start_label": "2026-11-09 14:47:53 KST",
+    "audio_analysis_used": false,
+    "original_modified": false
+  },
+  "visual_review": {
+    "index_path": "workspace/stick-packaging-3f-20261109/video-review/index.json",
+    "sample_interval_seconds": 5,
+    "sample_frame_count": 221,
+    "last_sample_seconds": 1100,
+    "contact_sheet_count": 12,
+    "contact_layout": "100초당20개표본11장과1100초마지막1개표본1장",
+    "contact_files": [
+      "workspace/stick-packaging-3f-20261109/video-review/contact-0000-0095s.jpg",
+      "workspace/stick-packaging-3f-20261109/video-review/contact-0100-0195s.jpg",
+      "workspace/stick-packaging-3f-20261109/video-review/contact-0200-0295s.jpg",
+      "workspace/stick-packaging-3f-20261109/video-review/contact-0300-0395s.jpg",
+      "workspace/stick-packaging-3f-20261109/video-review/contact-0400-0495s.jpg",
+      "workspace/stick-packaging-3f-20261109/video-review/contact-0500-0595s.jpg",
+      "workspace/stick-packaging-3f-20261109/video-review/contact-0600-0695s.jpg",
+      "workspace/stick-packaging-3f-20261109/video-review/contact-0700-0795s.jpg",
+      "workspace/stick-packaging-3f-20261109/video-review/contact-0800-0895s.jpg",
+      "workspace/stick-packaging-3f-20261109/video-review/contact-0900-0995s.jpg",
+      "workspace/stick-packaging-3f-20261109/video-review/contact-1000-1095s.jpg",
+      "workspace/stick-packaging-3f-20261109/video-review/contact-1100-1100s.jpg"
+    ],
+    "review_method": "전반·후반 접촉시트를 순서대로 확인하고 주요 위치는 개별 고해상도 표본으로 확대 대조. 모든 원본 영상 프레임의 전수 판독을 의미하지 않음.",
+    "first_half_observations": {
+      "path": "workspace/stick-packaging-3f-20261109/video-review/first-half-observations.txt",
+      "range_seconds": [
+        0,
+        550
+      ]
+    },
+    "second_half_observations": {
+      "json_path": "workspace/stick-packaging-3f-20261109/observations-second-half.json",
+      "text_path": "workspace/stick-packaging-3f-20261109/observations-second-half.txt",
+      "range_seconds": [
+        550,
+        1102.886922
+      ]
+    },
+    "duplicate_rules": [
+      "관찰 시점 수를 장비 수로 세지 않음",
+      "전동기2개를 독립 혼합기2대로 바꾸지 않음",
+      "최소6개 콘형 배출구를 독립 혼합기6대로 바꾸지 않음",
+      "반사면의 사람·장치와 이동 물건은 고정 설비 수에 포함하지 않음",
+      "480/490초원형다단유닛과989~995초현수사각분배체는별도외형으로구분하고각각의시점반복은기기수로늘리지않음"
+    ],
+    "dense_additional_review": {
+      "index_path": "workspace/stick-packaging-3f-20261109/dense-review/index.json",
+      "source": "좌표/20261109_144753KST_GPS-VALID_LAT35.3623483_LON129.0303950_H214.1-TN_DIR-AVAILABLE_P-65.3_ACC37.5m_FV-c54af9f3-48dc-45ba-982d-b856cbecf21b.mp4",
+      "duration_seconds": 1102.886922,
+      "sample_interval_seconds": 1,
+      "sample_range_seconds": [
+        175,
+        1101
+      ],
+      "sample_frame_count": 927,
+      "contact_sheet_count": 58,
+      "contact_files": [
+        "workspace/stick-packaging-3f-20261109/dense-review/contact-0175-0190s.jpg",
+        "workspace/stick-packaging-3f-20261109/dense-review/contact-0191-0206s.jpg",
+        "workspace/stick-packaging-3f-20261109/dense-review/contact-0207-0222s.jpg",
+        "workspace/stick-packaging-3f-20261109/dense-review/contact-0223-0238s.jpg",
+        "workspace/stick-packaging-3f-20261109/dense-review/contact-0239-0254s.jpg",
+        "workspace/stick-packaging-3f-20261109/dense-review/contact-0255-0270s.jpg",
+        "workspace/stick-packaging-3f-20261109/dense-review/contact-0271-0286s.jpg",
+        "workspace/stick-packaging-3f-20261109/dense-review/contact-0287-0302s.jpg",
+        "workspace/stick-packaging-3f-20261109/dense-review/contact-0303-0318s.jpg",
+        "workspace/stick-packaging-3f-20261109/dense-review/contact-0319-0334s.jpg",
+        "workspace/stick-packaging-3f-20261109/dense-review/contact-0335-0350s.jpg",
+        "workspace/stick-packaging-3f-20261109/dense-review/contact-0351-0366s.jpg",
+        "workspace/stick-packaging-3f-20261109/dense-review/contact-0367-0382s.jpg",
+        "workspace/stick-packaging-3f-20261109/dense-review/contact-0383-0398s.jpg",
+        "workspace/stick-packaging-3f-20261109/dense-review/contact-0399-0414s.jpg",
+        "workspace/stick-packaging-3f-20261109/dense-review/contact-0415-0430s.jpg",
+        "workspace/stick-packaging-3f-20261109/dense-review/contact-0431-0446s.jpg",
+        "workspace/stick-packaging-3f-20261109/dense-review/contact-0447-0462s.jpg",
+        "workspace/stick-packaging-3f-20261109/dense-review/contact-0463-0478s.jpg",
+        "workspace/stick-packaging-3f-20261109/dense-review/contact-0479-0494s.jpg",
+        "workspace/stick-packaging-3f-20261109/dense-review/contact-0495-0510s.jpg",
+        "workspace/stick-packaging-3f-20261109/dense-review/contact-0511-0526s.jpg",
+        "workspace/stick-packaging-3f-20261109/dense-review/contact-0527-0542s.jpg",
+        "workspace/stick-packaging-3f-20261109/dense-review/contact-0543-0558s.jpg",
+        "workspace/stick-packaging-3f-20261109/dense-review/contact-0559-0574s.jpg",
+        "workspace/stick-packaging-3f-20261109/dense-review/contact-0575-0590s.jpg",
+        "workspace/stick-packaging-3f-20261109/dense-review/contact-0591-0606s.jpg",
+        "workspace/stick-packaging-3f-20261109/dense-review/contact-0607-0622s.jpg",
+        "workspace/stick-packaging-3f-20261109/dense-review/contact-0623-0638s.jpg",
+        "workspace/stick-packaging-3f-20261109/dense-review/contact-0639-0654s.jpg",
+        "workspace/stick-packaging-3f-20261109/dense-review/contact-0655-0670s.jpg",
+        "workspace/stick-packaging-3f-20261109/dense-review/contact-0671-0686s.jpg",
+        "workspace/stick-packaging-3f-20261109/dense-review/contact-0687-0702s.jpg",
+        "workspace/stick-packaging-3f-20261109/dense-review/contact-0703-0718s.jpg",
+        "workspace/stick-packaging-3f-20261109/dense-review/contact-0719-0734s.jpg",
+        "workspace/stick-packaging-3f-20261109/dense-review/contact-0735-0750s.jpg",
+        "workspace/stick-packaging-3f-20261109/dense-review/contact-0751-0766s.jpg",
+        "workspace/stick-packaging-3f-20261109/dense-review/contact-0767-0782s.jpg",
+        "workspace/stick-packaging-3f-20261109/dense-review/contact-0783-0798s.jpg",
+        "workspace/stick-packaging-3f-20261109/dense-review/contact-0799-0814s.jpg",
+        "workspace/stick-packaging-3f-20261109/dense-review/contact-0815-0830s.jpg",
+        "workspace/stick-packaging-3f-20261109/dense-review/contact-0831-0846s.jpg",
+        "workspace/stick-packaging-3f-20261109/dense-review/contact-0847-0862s.jpg",
+        "workspace/stick-packaging-3f-20261109/dense-review/contact-0863-0878s.jpg",
+        "workspace/stick-packaging-3f-20261109/dense-review/contact-0879-0894s.jpg",
+        "workspace/stick-packaging-3f-20261109/dense-review/contact-0895-0910s.jpg",
+        "workspace/stick-packaging-3f-20261109/dense-review/contact-0911-0926s.jpg",
+        "workspace/stick-packaging-3f-20261109/dense-review/contact-0927-0942s.jpg",
+        "workspace/stick-packaging-3f-20261109/dense-review/contact-0943-0958s.jpg",
+        "workspace/stick-packaging-3f-20261109/dense-review/contact-0959-0974s.jpg",
+        "workspace/stick-packaging-3f-20261109/dense-review/contact-0975-0990s.jpg",
+        "workspace/stick-packaging-3f-20261109/dense-review/contact-0991-1006s.jpg",
+        "workspace/stick-packaging-3f-20261109/dense-review/contact-1007-1022s.jpg",
+        "workspace/stick-packaging-3f-20261109/dense-review/contact-1023-1038s.jpg",
+        "workspace/stick-packaging-3f-20261109/dense-review/contact-1039-1054s.jpg",
+        "workspace/stick-packaging-3f-20261109/dense-review/contact-1055-1070s.jpg",
+        "workspace/stick-packaging-3f-20261109/dense-review/contact-1071-1086s.jpg",
+        "workspace/stick-packaging-3f-20261109/dense-review/contact-1087-1101s.jpg"
+      ],
+      "status": "manufacturing_range_review_complete",
+      "method": "이전5초표본에추가해제조실진입후175~1101초를1초간격으로재검토. 다른각도·반사·동일기기중복을분리하고관찰메모가확정되면근거에연결.",
+      "does_not_mean_every_source_video_frame_was_inspected": true,
+      "reviewer_notes": [
+        {
+          "role": "manufacturing_first_half",
+          "source_path": "workspace/stick-packaging-3f-20261109/dense-first-half-observations.txt",
+          "bundle_path": "references/stick-packaging-3f/video-observations/dense-first-half-observations.txt",
+          "range_seconds": [
+            175,
+            558
+          ],
+          "bytes": 13666,
+          "sha256": "e8b1bc34e11aed41e443d7e90dbc3cdd3a5c815bdd912d63a9cc567751a03b29"
+        },
+        {
+          "role": "manufacturing_second_half",
+          "source_path": "workspace/stick-packaging-3f-20261109/dense-second-half-observations.txt",
+          "bundle_path": "references/stick-packaging-3f/video-observations/dense-second-half-observations.txt",
+          "range_seconds": [
+            543,
+            1101
+          ],
+          "bytes": 25921,
+          "sha256": "120978cd37df19f2649c3aa137bd71cc8a8fc6edd79ab87dc136c6be9d9f4eda"
+        }
+      ]
+    },
+    "stair_entry_additional_review": {
+      "index_path": "workspace/stick-packaging-3f-20261109/stair-review/index.json",
+      "sample_interval_seconds": 1,
+      "range_seconds": [
+        0,
+        174
+      ],
+      "sample_frame_count": 175,
+      "contact_sheet_count": 11,
+      "contact_files": [
+        "workspace/stick-packaging-3f-20261109/stair-review/contact-0000-0015s.jpg",
+        "workspace/stick-packaging-3f-20261109/stair-review/contact-0016-0031s.jpg",
+        "workspace/stick-packaging-3f-20261109/stair-review/contact-0032-0047s.jpg",
+        "workspace/stick-packaging-3f-20261109/stair-review/contact-0048-0063s.jpg",
+        "workspace/stick-packaging-3f-20261109/stair-review/contact-0064-0079s.jpg",
+        "workspace/stick-packaging-3f-20261109/stair-review/contact-0080-0095s.jpg",
+        "workspace/stick-packaging-3f-20261109/stair-review/contact-0096-0111s.jpg",
+        "workspace/stick-packaging-3f-20261109/stair-review/contact-0112-0127s.jpg",
+        "workspace/stick-packaging-3f-20261109/stair-review/contact-0128-0143s.jpg",
+        "workspace/stick-packaging-3f-20261109/stair-review/contact-0144-0159s.jpg",
+        "workspace/stick-packaging-3f-20261109/stair-review/contact-0160-0174s.jpg"
+      ],
+      "status": "entry_stair_range_review_complete",
+      "purpose": "입실 전 계단·복도·전실과 제조실 작업 플랫폼을 구분하며 가구나 휴게공간을 생산기계로 오인하지 않음.",
+      "reviewer_notes": [
+        {
+          "role": "entry_stairs",
+          "source_path": "workspace/stick-packaging-3f-20261109/dense-entry-stair-observations.txt",
+          "bundle_path": "references/stick-packaging-3f/video-observations/dense-entry-stair-observations.txt",
+          "range_seconds": [
+            0,
+            174
+          ],
+          "bytes": 2746,
+          "sha256": "1fa6c32073fc29a03e74d4a5eedb4c2aa90a6719de727120ef8587aab55f44be"
+        }
+      ]
+    },
+    "one_second_review_total": {
+      "range_seconds": [
+        0,
+        1101
+      ],
+      "sample_frame_count": 1102,
+      "contact_sheet_count": 69,
+      "split_sources": [
+        "stair-review/index.json",
+        "dense-review/index.json"
+      ],
+      "status": "all_69_contact_sheets_visually_reviewed",
+      "limitation": "1초표본검토이며 원본의모든동영상프레임전수판독은아님",
+      "manufacturing_sheet_overlap_note": "전반24장과후반35장중0543~0558시트1장이겹침. 제조실고유접촉시트58장과진입계단11장으로전체69장.",
+      "source_video_end_extra_inspection": {
+        "seconds": 1102,
+        "path": "tmp/stick-second-half/frame-1102s-final.jpg",
+        "note": "접촉시트0~1101초표본외에끝문장면을추가추출해확인. 추가장비식별근거없음."
+      }
+    },
+    "dense_findings": {
+      "supersedes_earlier_five_second_notes": true,
+      "corrected_identifications": [
+        {
+          "seconds": [
+            480,
+            485,
+            490
+          ],
+          "correction": "원형다단장치→사각2포트뚜껑→원형장치를카메라가번갈아봄.485초를원형상판으로본초기판독정정."
+        },
+        {
+          "seconds": [
+            989,
+            990,
+            995,
+            1012,
+            1018
+          ],
+          "correction": "후반현수식사각뚜껑·스프링·붉은클램프분배체는전반멀티링원형장치와외형이다름.수직원통·원추와연결된어셈블리로구분."
+        },
+        {
+          "seconds": [
+            763
+          ],
+          "correction": "슬라이딩문으로단정하지않고확대에서확인한환기구/몰딩으로정정."
+        }
+      ],
+      "confirmed_visual_features": [
+        "557초F-750 MIXER CONTROL PANEL의노출조작면과561초검정테두리투명문·경광등외함은서로다른외형",
+        "794/817초검정탄성링각뿔형출구와830초밸브함·바닥플랜지형출구차이",
+        "904초명판3,4호기호퍼(커피)문구.그표시와현재모델A/B/C의정확대응은미확정",
+        "995/1012/1018초의수직원통·원추·점검구·계기와현수분배체연결",
+        "739~766초계량PC/키보드·CAS저울·텔레스코프후드·흰2호스의부속구역",
+        "161~174초위생전실·손조작형출입장치와175초녹색제조실진입",
+        "실내메자닌의주계단과917/1035초별도2단정비스텝구분"
+      ],
+      "location_limits": [
+        "계량PC/흡입후드구역의도면상방이름·정확좌표미확정",
+        "수직공정외형은영상확인이나도면오른쪽후보위치와개별일치미확정",
+        "A/B/C는영상으로확인한외형차이를적용한프로토타입이며실제기기번호단정아님",
+        "진입4flight·5landing의장면높이-6~0m와10단씩은영상비례근사.실측높이·총단수·정확한두계단중대응미확정"
+      ]
+    },
+    "earlier_observations_status": "5초관찰은초기판독이력으로보존. 485/763/989~995기기식별이달라진부분은보존한최종1초관찰TXT를우선함."
+  },
+  "drawing_sources": [
+    {
+      "name": "소포장 3층 평면도.pdf",
+      "sha256": "48e451589dba4125332ba8fd34e226f71f8182b237bf980014f7231367019b33",
+      "relative_path": "근거 자료/건물3D 후보도면/03_층별·생산팀평면/미확정/소포장 3층 평면도__48e451589dba.pdf",
+      "absolute_path": "C:/Users/user/Desktop/프로젝트/근거 자료/건물3D 후보도면/03_층별·생산팀평면/미확정/소포장 3층 평면도__48e451589dba.pdf",
+      "role": "primary_floor_3_plan",
+      "page_count": 1,
+      "source_sha_verified": true
+    },
+    {
+      "name": "소포장 3층 평면도 측량.pdf",
+      "sha256": "b932b98e4f848582adcd6f02d3461945b0c67e7439b6663be7b7538bea623dfa",
+      "relative_path": "근거 자료/건물3D 후보도면/03_층별·생산팀평면/미확정/소포장 3층 평면도 측량__b932b98e4f84.pdf",
+      "absolute_path": "C:/Users/user/Desktop/프로젝트/근거 자료/건물3D 후보도면/03_층별·생산팀평면/미확정/소포장 3층 평면도 측량__b932b98e4f84.pdf",
+      "role": "primary_floor_3_dimensions",
+      "page_count": 1,
+      "source_sha_verified": true
+    }
+  ],
+  "drawing_identity": {
+    "plain_title": "9동 3층 평면도",
+    "sheet": "A-07",
+    "date_as_printed": "07.11",
+    "measurement_project": "(주)에이치씨글로벌 유산 공장 증축공사",
+    "floor_3_confirmed": true,
+    "classification_caveat": "CSV 공장단서는 미확정이지만 측량 PDF 자체 표제에서 유산공장 확인. 현재 준공 최종revision은 미확인.",
+    "both_primary_pdfs_pages": 1
+  },
+  "drawing_difference": {
+    "plain_pdf": "오른쪽 추가2유닛과 소형 플랫폼의 색상 배치를 포함",
+    "measured_pdf": "본체 치수와 왼쪽 메인 플랫폼 배치, 오른쪽 추가2유닛은 보이지 않음",
+    "policy": "두 도면의 설비revision 차이를 구분하고 현재 영상과 개별 동일성을 확정하지 않음",
+    "historical_date": "07.11 / A-07 / 9동3층",
+    "current_as_built_revision_confirmed": false
+  },
+  "confirmed_plan_dimensions_m": {
+    "main_outer_width": 31.35,
+    "main_outer_depth": 30.4,
+    "axis_total_x": 30.75,
+    "axis_spacing_x": [
+      5.125,
+      5.125,
+      5.125,
+      5.125,
+      5.125,
+      5.125
+    ],
+    "axis_total_z": 29.8,
+    "axis_spacing_z": [
+      4.9,
+      5,
+      5,
+      5,
+      5,
+      4.9
+    ],
+    "outer_wall_thickness": 0.3,
+    "left_rear_stair_projection": 3.45,
+    "front_stair_lift_projection": 3.15,
+    "overall_bbox_width_with_left_stair": 34.8,
+    "overall_bbox_depth_with_front_stair_lift": 33.55,
+    "main_platform_marked_longitudinal_dimension": 17.2,
+    "main_platform_stair_width_marked": 1.2,
+    "cargo_lift_capacity_label": "3TON"
+  },
+  "frame_and_height_limits": {
+    "coordinate_frame": "본체중심0,+X바로세운도면오른쪽,+Z앞계단방향. 북쪽·GPS정합미등록.",
+    "north_heading": null,
+    "main_outer_dimensions_m": [
+      31.35,
+      30.4
+    ],
+    "whole_extent_with_stairs_m": [
+      34.8,
+      33.55
+    ],
+    "platform_height_m": 2.4,
+    "platform_height_status": "영상 높이 관계를 표현한 모형 근사",
+    "upper_context_height_m": 6.2,
+    "upper_context_height_status": "기둥·상부 구조 표현용 근사값이며 측정 천장고/층고가 아님. 지붕을 확정 재현한 값도 아님.",
+    "partition_opening_and_equipment_position_status": "도면과 영상 비례 근사. 실측 통로 폭·배관 계통과 구분."
+  },
+  "model_groups": {
+    "total_selectable_groups": 15,
+    "physical_visual_groups": 14,
+    "cip_drawing_area_markers": 1,
+    "physical_group_count_note": "14는독립생산기계실측대수가아니라선택하는물리외형그룹수.제어함군·PC/후드·위생전실장치를포함.",
+    "aux_group_count": 2,
+    "aux_status": "영상형상이확인된수직공정어셈블리1그룹과도면추가보조유닛후보를포함.도면위치와현영상개별대응은미확정",
+    "cip_status": "도면상 CIP실 문구·위치만 낮은 영역 표시. 내부 미확인이라 탱크나 펌프를 임의로 그리지 않음.",
+    "equipment": [
+      {
+        "id": "packaging-main-mixer-1",
+        "name": "주 혼합설비 A",
+        "type": "packaging-mixer",
+        "tag": "주 혼합설비 A",
+        "floor": "packaging",
+        "floorLevel": 3,
+        "position": [
+          -11.3,
+          0,
+          -7.5
+        ],
+        "width": 3,
+        "depth": 3.8,
+        "height": 5.2,
+        "rotation": 0,
+        "platformHeight": 2.4,
+        "labelHeight": 5.7,
+        "photo": "./photos/packaging-3f/frame-0370s.jpg",
+        "photos": [
+          "./photos/packaging-3f/frame-0370s.jpg",
+          "./photos/packaging-3f/frame-0342s.jpg",
+          "./photos/packaging-3f/frame-0350s.jpg"
+        ],
+        "parts": [
+          "지지 프레임·하부 호퍼",
+          "상부 혼합 외함·뚜껑",
+          "모터·감속기·배출구"
+        ],
+        "confidence": "도면 메인 플랫폼의 유닛 순서 참고 · 영상의 개별 기기 번호 대조는 미확정",
+        "details": [
+          "3층 도면 왼쪽 플랫폼의 첫 유닛 위치를 참고했습니다.",
+          "같은 기기를 여러 각도에서 찍은 장면은 새 설비로 중복 가산하지 않았습니다.",
+          "플랫폼 2.4m와 전체 높이 5.2m는 영상 비례 근사입니다."
+        ],
+        "summary": "3층 도면 메인 플랫폼의 첫 번째 큰 유닛입니다. 영상에서 보이는 스테인리스 외함, 상부 덮개와 하부 배출 구조를 참고했습니다.",
+        "representation_role": "physical_visual_model_group"
+      },
+      {
+        "id": "packaging-main-mixer-2",
+        "name": "주 혼합설비 B",
+        "type": "packaging-mixer",
+        "tag": "주 혼합설비 B",
+        "floor": "packaging",
+        "floorLevel": 3,
+        "position": [
+          -11.3,
+          0,
+          -2.9
+        ],
+        "width": 3,
+        "depth": 3.8,
+        "height": 5.2,
+        "rotation": 0,
+        "platformHeight": 2.4,
+        "labelHeight": 5.7,
+        "photo": "./photos/packaging-3f/frame-0377s.jpg",
+        "photos": [
+          "./photos/packaging-3f/frame-0377s.jpg",
+          "./photos/packaging-3f/frame-0390s.jpg",
+          "./photos/packaging-3f/frame-0465s.jpg",
+          "./photos/packaging-3f/frame-0794s.jpg",
+          "./photos/packaging-3f/frame-0817s.jpg"
+        ],
+        "parts": [
+          "지지 프레임·하부 호퍼",
+          "상부 혼합 외함·뚜껑",
+          "모터·감속기·배출구"
+        ],
+        "confidence": "도면 메인 플랫폼의 유닛 순서 참고 · 영상의 개별 기기 번호 대조는 미확정",
+        "details": [
+          "도면의 메인 플랫폼 유닛 순서와 이격을 참고했습니다.",
+          "794~817초의 검은 연결링과 점검문을 가진 하부 외형을 반영했습니다. 이 외형이 도면상 두 번째 유닛에 속하는지는 미확정입니다.",
+          "영상의 호퍼·상부 원형 뚜껑·모터는 한 장비의 위아래 또는 반대쪽 모습일 수 있어 부품으로 묶었습니다.",
+          "기기별 정식 번호와 정밀 배관 경로는 확인되지 않았습니다."
+        ],
+        "dischargeVariant": "black-ring",
+        "summary": "메인 플랫폼 중앙의 두 번째 큰 유닛입니다. 계단·그레이팅 주변의 하부 각뿔형 호퍼와 상부 구동 외형을 참고했습니다.",
+        "representation_role": "physical_visual_model_group"
+      },
+      {
+        "id": "packaging-main-mixer-3",
+        "name": "주 혼합설비 C",
+        "type": "packaging-mixer",
+        "tag": "주 혼합설비 C",
+        "floor": "packaging",
+        "floorLevel": 3,
+        "position": [
+          -11.3,
+          0,
+          1.6
+        ],
+        "width": 3,
+        "depth": 3.8,
+        "height": 5.2,
+        "rotation": 0,
+        "platformHeight": 2.4,
+        "labelHeight": 5.7,
+        "photo": "./photos/packaging-3f/frame-0540s.jpg",
+        "photos": [
+          "./photos/packaging-3f/frame-0540s.jpg",
+          "./photos/packaging-3f/frame-0543s.jpg",
+          "./photos/packaging-3f/frame-0615s.jpg",
+          "./photos/packaging-3f/frame-0830s.jpg",
+          "./photos/packaging-3f/frame-0930s.jpg"
+        ],
+        "parts": [
+          "지지 프레임·하부 호퍼",
+          "상부 혼합 외함·뚜껑",
+          "모터·감속기·배출구"
+        ],
+        "confidence": "도면 메인 플랫폼의 유닛 순서 참고 · 영상의 개별 기기 번호 대조는 미확정",
+        "details": [
+          "615~620초에 모터 두 개가 한 화면에 보여도 이를 별도 혼합기 두 대로 단정하지 않았습니다.",
+          "830초에서 확인한 두 원추형 호퍼와 사각 밸브함·바닥 플랜지의 외형을 반영했습니다. 도면상 세 번째 유닛과의 정확한 동일성은 미확정입니다.",
+          "혼합기 제어반은 별도 외함으로 선택할 수 있고, 영상에서 반복되는 동일 장비 외형은 중복 모델로 추가하지 않았습니다."
+        ],
+        "dischargeVariant": "round-valve-pair",
+        "summary": "메인 플랫폼의 세 번째 큰 유닛입니다. 수평 스테인리스 외함과 구동부를 하나의 설비 그룹으로 구성했습니다.",
+        "representation_role": "physical_visual_model_group"
+      },
+      {
+        "id": "packaging-round-process",
+        "name": "소형 원형 처리설비",
+        "type": "packaging-sieve",
+        "tag": "소형 원형 처리설비",
+        "floor": "packaging",
+        "floorLevel": 3,
+        "position": [
+          -11.3,
+          0,
+          4.5
+        ],
+        "width": 1.8,
+        "depth": 2.4,
+        "height": 4.1,
+        "rotation": 0,
+        "platformHeight": 2.4,
+        "labelHeight": 4.6,
+        "photo": "./photos/packaging-3f/frame-0480s.jpg",
+        "photos": [
+          "./photos/packaging-3f/frame-0480s.jpg",
+          "./photos/packaging-3f/frame-0490s.jpg",
+          "./photos/packaging-3f/frame-0520s.jpg"
+        ],
+        "parts": [
+          "받침·하부 배출부",
+          "원형 외함·덮개",
+          "체결부·구동·연결관"
+        ],
+        "confidence": "3층 도면의 소형 유닛 위치 참고 · 영상의 정식 기능·개별 대응 미확정",
+        "details": [
+          "도면에는 VIBRATOR 등의 문자와 작은 유닛이 보이지만 이 기기의 정확한 기능·모델명은 확정하지 않았습니다.",
+          "480~520초의 다단 원형 외함을 근거로 합니다. 990초 부근은 확대 재검토 결과 수직 원통 설비 아래의 사각 분배함으로 구분했습니다."
+        ],
+        "summary": "메인 플랫폼 끝의 작은 원형 유닛입니다. 도면의 소형 유닛과 영상의 원형 덮개·클램프 외형을 참고했습니다.",
+        "representation_role": "physical_visual_model_group"
+      },
+      {
+        "id": "packaging-aux-mixer-1",
+        "name": "수직 원통·하부 분배설비 · 도면 위치 참고",
+        "type": "packaging-vertical-process",
+        "tag": "수직 원통·하부 분배설비 · 도면 위치 참고",
+        "floor": "packaging",
+        "floorLevel": 3,
+        "position": [
+          9.1,
+          0,
+          -5.8
+        ],
+        "width": 2.5,
+        "depth": 2.4,
+        "height": 5.9,
+        "rotation": 0,
+        "platformHeight": 2.4,
+        "labelHeight": 6.4,
+        "photo": "./photos/packaging-3f/frame-0995s.jpg",
+        "photos": [
+          "./photos/packaging-3f/frame-0995s.jpg",
+          "./photos/packaging-3f/frame-0990s.jpg",
+          "./photos/packaging-3f/frame-1012s.jpg",
+          "./photos/packaging-3f/frame-1018s.jpg"
+        ],
+        "parts": [
+          "작업발판·하부 수신 호퍼",
+          "상부 원통·원추·분배함",
+          "점검문·밸브·체결부·덕트"
+        ],
+        "confidence": "수직 원통·원추·분배함 외형은 영상 확인 · 우측 도면 유닛과의 정확한 대응·치수는 미확정",
+        "details": [
+          "995초에서 원추 아래의 검정·적색 밸브와 붉은 클램프 분배함, 1012~1018초에서 상부 원통과 점검구를 확인했습니다.",
+          "일반 도면의 오른쪽 추가 유닛 위치를 사용하지만 이 영상 기기가 그 유닛과 동일한지, 현재의 정확한 간격과 방향은 미확정입니다.",
+          "상부 원통과 아래 원추는 한 연결 구조로 묶었습니다. 별도 독립 기계 수를 늘리는 근거로 쓰지 않았습니다."
+        ],
+        "summary": "후반 영상의 플랫폼 위 수직 원통과 아래 큰 원추, 현수식 분배함·낮은 수신 호퍼를 연결된 구조로 표현했습니다.",
+        "representation_role": "physical_visual_model_group"
+      },
+      {
+        "id": "packaging-aux-mixer-2",
+        "name": "우측 혼합설비 B · 도면 참고",
+        "type": "packaging-aux-mixer",
+        "tag": "우측 혼합설비 B · 도면 참고",
+        "floor": "packaging",
+        "floorLevel": 3,
+        "position": [
+          9.1,
+          0,
+          -3.1
+        ],
+        "width": 2.5,
+        "depth": 2.4,
+        "height": 4.8,
+        "rotation": 0,
+        "platformHeight": 2.4,
+        "labelHeight": 5.3,
+        "photo": "./photos/packaging-3f/frame-0850s.jpg",
+        "photos": [
+          "./photos/packaging-3f/frame-0850s.jpg",
+          "./photos/packaging-3f/frame-0880s.jpg",
+          "./photos/packaging-3f/frame-0930s.jpg"
+        ],
+        "parts": [
+          "지지 프레임·배출 구조",
+          "상부 혼합 외함",
+          "구동·연결 부품"
+        ],
+        "confidence": "3층 평면도에 별도 추가된 두 유닛 · 영상과 개별 동일성·현 배치 일치는 미확정",
+        "details": [
+          "영상 790~875초에는 여러 원뿔 배출구가 보이지만 배출구 개수와 독립 장비 개수는 다릅니다.",
+          "도면의 두 유닛을 참고한 배치이며 영상 장비의 정확한 설치 위치로 확정하지 않았습니다."
+        ],
+        "summary": "일반 3층 평면도의 오른쪽 추가 배치에서 두 번째로 구분되는 유닛입니다. 영상의 배출부·구동 외형을 참고했습니다.",
+        "representation_role": "physical_visual_model_group"
+      },
+      {
+        "id": "packaging-air-unit",
+        "name": "4구 원형 토출 공조설비",
+        "type": "packaging-air-unit",
+        "tag": "4구 원형 토출 공조설비",
+        "floor": "packaging",
+        "floorLevel": 3,
+        "position": [
+          -14.5,
+          0,
+          9.4
+        ],
+        "width": 4.4,
+        "depth": 1.3,
+        "height": 4.5,
+        "rotation": 1.5707963267948966,
+        "platformHeight": 0,
+        "labelHeight": 5,
+        "photo": "./photos/packaging-3f/frame-0230s.jpg",
+        "photos": [
+          "./photos/packaging-3f/frame-0230s.jpg",
+          "./photos/packaging-3f/frame-0250s.jpg"
+        ],
+        "parts": [
+          "하부 캐비닛·받침",
+          "수직 연결부·상부 외함",
+          "원형 토출구 4개·덕트"
+        ],
+        "confidence": "원형 토출구 4개·캐비닛 외형 영상 확인 · 도면 내 세부 위치 근사",
+        "details": [
+          "노란 창 앞의 하부 외함, 세로 연결부와 네 개의 큰 원형 토출구를 한 그룹으로 묶었습니다.",
+          "명판·정확한 장비 형식과 용량은 판독되지 않아 외형 중심의 명칭을 사용합니다."
+        ],
+        "summary": "230~250초 장면의 큰 원형 토출구 네 개와 하부 흰 캐비닛을 가진 설비입니다.",
+        "representation_role": "physical_visual_model_group"
+      },
+      {
+        "id": "packaging-wash-sink",
+        "name": "스테인리스 세척대",
+        "type": "packaging-sink",
+        "tag": "스테인리스 세척대",
+        "floor": "packaging",
+        "floorLevel": 3,
+        "position": [
+          -14.6,
+          0,
+          4.2
+        ],
+        "width": 1.4,
+        "depth": 0.7,
+        "height": 1.8,
+        "rotation": 1.5707963267948966,
+        "platformHeight": 0,
+        "labelHeight": 2.3,
+        "photo": "./photos/packaging-3f/frame-0320s.jpg",
+        "photos": [
+          "./photos/packaging-3f/frame-0320s.jpg"
+        ],
+        "parts": [
+          "본체·받침",
+          "세척조·높은 뒤판",
+          "수도꼭지·호스 연결부"
+        ],
+        "confidence": "수도꼭지·세척조 영상 확인 · 위치와 치수 근사",
+        "details": [
+          "앞의 이동 물통이나 걸린 비닐류는 별도 고정 설비로 추가하지 않았습니다.",
+          "269~321초는 문을 통과한 세척·습식 소구역입니다. 이 소구역과 도면상의 특정 실이 동일한지, 현재 모델에서의 정확한 위치는 미확정입니다."
+        ],
+        "summary": "320초에 보이는 수도꼭지와 세척조, 높은 스테인리스 뒤판의 외형을 참고한 세척대입니다.",
+        "representation_role": "physical_visual_model_group"
+      },
+      {
+        "id": "packaging-ground-vessel",
+        "name": "지상 원형 용기·연결 배관",
+        "type": "packaging-vessel",
+        "tag": "지상 원형 용기·연결 배관",
+        "floor": "packaging",
+        "floorLevel": 3,
+        "position": [
+          -14.3,
+          0,
+          0.7
+        ],
+        "width": 1.6,
+        "depth": 1.6,
+        "height": 2.8,
+        "rotation": 0,
+        "platformHeight": 0,
+        "labelHeight": 3.3,
+        "photo": "./photos/packaging-3f/frame-0310s.jpg",
+        "photos": [
+          "./photos/packaging-3f/frame-0310s.jpg",
+          "./photos/packaging-3f/frame-0300s.jpg",
+          "./photos/packaging-3f/frame-0315s.jpg"
+        ],
+        "parts": [
+          "용기 본체·다리",
+          "상부 덮개·계기부",
+          "배관·밸브 연결부"
+        ],
+        "confidence": "지상 용기·연결부 외형 참고 · 형식·용량·정확한 위치 미확정",
+        "details": [
+          "이 용기는 메인 플랫폼 위 원형 처리 유닛과 구분합니다.",
+          "영상의 압력계·용기 외형만 참고하며 압력 등급이나 운전 기능은 추정하지 않았습니다.",
+          "문을 통과한 세척·습식 소구역의 설비이며 도면상의 특정 실과 정확히 대응하는지는 미확정입니다."
+        ],
+        "summary": "바닥 배수로 주변에서 보이는 지상 스테인리스 용기와 다리·연결 배관을 참고했습니다.",
+        "representation_role": "physical_visual_model_group"
+      },
+      {
+        "id": "packaging-mixer-control",
+        "name": "혼합기 제어반 · 두 외함",
+        "type": "packaging-control",
+        "tag": "혼합기 제어반 · 두 외함",
+        "floor": "packaging",
+        "floorLevel": 3,
+        "position": [
+          -7.7,
+          0,
+          -2.9
+        ],
+        "width": 1.6,
+        "depth": 0.6,
+        "height": 4.5,
+        "rotation": 0,
+        "platformHeight": 2.4,
+        "labelHeight": 5,
+        "photo": "./photos/packaging-3f/frame-0557s.jpg",
+        "photos": [
+          "./photos/packaging-3f/frame-0557s.jpg",
+          "./photos/packaging-3f/frame-0561s.jpg",
+          "./photos/packaging-3f/frame-0565s.jpg"
+        ],
+        "parts": [
+          "노출 패널·투명문 패널 외함",
+          "표시계·버튼·선택 스위치",
+          "손잡이·경광등·인입 배선"
+        ],
+        "confidence": "F-750 문구·두 외함 형상 영상 확인 · 외함 사이 정확한 간격과 연결 설비는 미확정",
+        "details": [
+          "F-750 패널의 상단 표시등 여섯 개, 아날로그 계기 두 개와 카운터, 아래 버튼 행을 참고했습니다.",
+          "다른 외함은 검은 테두리 투명문과 상단 붉은 경광등을 가집니다. 두 외함이 각각 독립 혼합기를 뜻하는지는 확인되지 않았습니다.",
+          "두 외함을 하나의 선택 그룹으로 묶었습니다. 개별 기계 번호와 실제 제어 태그·동작은 확정하지 않았습니다."
+        ],
+        "controlVariant": "dual-mixer",
+        "summary": "557초의 F-750 MIXER CONTROL PANEL과 559~562초의 투명문 제어함은 외형이 달라 두 외함으로 표현했습니다.",
+        "representation_role": "physical_visual_model_group"
+      },
+      {
+        "id": "packaging-wall-control",
+        "name": "벽면 조작함",
+        "type": "packaging-control",
+        "tag": "벽면 조작함",
+        "floor": "packaging",
+        "floorLevel": 3,
+        "position": [
+          15.3,
+          0,
+          7.5
+        ],
+        "width": 0.8,
+        "depth": 0.3,
+        "height": 1.9,
+        "rotation": -1.5707963267948966,
+        "platformHeight": 0,
+        "labelHeight": 2.4,
+        "photo": "./photos/packaging-3f/frame-0285s.jpg",
+        "photos": [
+          "./photos/packaging-3f/frame-0285s.jpg"
+        ],
+        "parts": [
+          "벽면 고정 외함",
+          "표시·조작부",
+          "인입 배관·배선"
+        ],
+        "confidence": "벽면 외함 영상 확인 · 회로·기능과 도면 내 정확한 위치 미확정",
+        "details": [
+          "휴대폰 영상의 발광 표시와 외함 형상만 참고했습니다. 흐린 화면으로 기능이나 계기 값을 판정하지 않았습니다."
+        ],
+        "wallMounted": true,
+        "mountHeight": 1.1,
+        "summary": "285초 장면의 벽면 표시·조작함을 참고한 작은 외함입니다. 혼합기 제어반과 별도 외함으로 구분했습니다.",
+        "representation_role": "physical_visual_model_group"
+      },
+      {
+        "id": "packaging-cip-area",
+        "name": "도면상 CIP실 · 내부 미확인",
+        "type": "packaging-cip",
+        "tag": "도면상 CIP실 · 내부 미확인",
+        "floor": "packaging",
+        "floorLevel": 3,
+        "position": [
+          -10.4,
+          0,
+          -13.75
+        ],
+        "width": 2.2,
+        "depth": 1.6,
+        "height": 0.12,
+        "rotation": 0,
+        "platformHeight": 0,
+        "labelHeight": 0.62,
+        "photo": "./photos/packaging-3f/third-floor-plan.png",
+        "photos": [
+          "./photos/packaging-3f/third-floor-plan.png",
+          "./photos/packaging-3f/third-floor-measured-plan.png"
+        ],
+        "parts": [
+          "도면상 공간 범위",
+          "3층 참고 도면",
+          "내부 설비 확인 대기"
+        ],
+        "confidence": "CIP실 위치·문구는 도면 확인 · 내부 구성·영상 기기의 기능 연결은 미확정",
+        "details": [
+          "영상 속 이동 펌프가 실제 이 CIP실에 설치된 것인지는 확인하지 않았습니다.",
+          "CIP 운전 순서나 배관 계통을 추론하지 않고 도면의 공간과 시각적 기기 외형을 구분해 기록합니다."
+        ],
+        "summary": "3층 도면에 표시된 CIP실의 위치만 표시합니다. 내부 기기와 현장 영상의 개별 대응이 확인되지 않아 탱크나 펌프를 임의로 채우지 않았습니다.",
+        "representation_role": "drawing_space_marker_no_interior_equipment"
+      },
+      {
+        "id": "packaging-floor-scale",
+        "name": "대형 표시부 바닥 저울",
+        "type": "packaging-scale",
+        "tag": "대형 표시부 바닥 저울",
+        "floor": "packaging",
+        "floorLevel": 3,
+        "position": [
+          -5.7,
+          0,
+          8.5
+        ],
+        "width": 0.85,
+        "depth": 1,
+        "height": 1.5,
+        "rotation": 0,
+        "platformHeight": 0,
+        "labelHeight": 2,
+        "photo": "./photos/packaging-3f/frame-0750s.jpg",
+        "photos": [
+          "./photos/packaging-3f/frame-0750s.jpg"
+        ],
+        "parts": [
+          "계량 발판·받침",
+          "지주·표시기",
+          "표시부 외함·연결부"
+        ],
+        "confidence": "저울 표시기·지주 영상 확인 · 계량 범위와 정확한 설치 위치 미확정",
+        "details": [
+          "임시 적재된 자재와 포장물은 설비 모델에서 제외했습니다.",
+          "원료 계량실이라는 도면 실명과 별개로 이 저울의 실제 설치 위치는 영상 비례 근사입니다."
+        ],
+        "summary": "750초에 보이는 CAS 표시기와 지주형 바닥 저울의 외형을 참고했습니다.",
+        "representation_role": "physical_visual_model_group"
+      },
+      {
+        "id": "packaging-weigh-services",
+        "name": "계량 보조설비 · 조작함·흡입후드",
+        "type": "packaging-weigh-services",
+        "tag": "계량 보조설비 · 조작함·흡입후드",
+        "floor": "packaging",
+        "floorLevel": 3,
+        "position": [
+          -5.8,
+          0,
+          10.4
+        ],
+        "width": 1.8,
+        "depth": 1.1,
+        "height": 2.8,
+        "rotation": 0,
+        "platformHeight": 0,
+        "labelHeight": 3.3,
+        "photo": "./photos/packaging-3f/frame-0745s.jpg",
+        "photos": [
+          "./photos/packaging-3f/frame-0745s.jpg",
+          "./photos/packaging-3f/frame-0760s.jpg"
+        ],
+        "parts": [
+          "파란 조작 캐비닛·받침",
+          "금속 텔레스코프 흡입관·원추 후드",
+          "화면·관절·호스 연결부"
+        ],
+        "confidence": "743~760초의 외형·같은 구역 관계 확인 · 도면상 특정 실·현재 위치와 치수는 근사",
+        "details": [
+          "낮은 천장·벽체와 함께 보이는 계량 코너입니다. 도면의 원료 계량실과 동일한 방인지는 확정하지 않았습니다.",
+          "흡입관·후드와 조작함은 한 선택 그룹으로 묶었고, 별도 스틱 충전 라인으로 해석하지 않았습니다."
+        ],
+        "summary": "계량 코너에서 보이는 파란 PC 조작 캐비닛과 관절식 금속 흡입관을 재현했습니다. CAS 저울과는 별도로 선택할 수 있습니다.",
+        "representation_role": "physical_visual_model_group"
+      },
+      {
+        "id": "packaging-entry-station",
+        "name": "3층 위생 전실 · 세정·출입설비",
+        "type": "packaging-hygiene-station",
+        "tag": "3층 위생 전실 · 세정·출입설비",
+        "floor": "packaging",
+        "floorLevel": 3,
+        "position": [
+          -5.8,
+          0,
+          13.2
+        ],
+        "width": 2.2,
+        "depth": 1,
+        "height": 2.3,
+        "rotation": 0,
+        "platformHeight": 0,
+        "labelHeight": 2.8,
+        "photo": "./photos/packaging-3f/frame-0167s.jpg",
+        "photos": [
+          "./photos/packaging-3f/frame-0167s.jpg",
+          "./photos/packaging-3f/frame-0169s.jpg",
+          "./photos/packaging-3f/frame-0174s.jpg"
+        ],
+        "parts": [
+          "스테인리스 캐비닛·받침",
+          "세정·출입 조작부",
+          "배관·표시등·출입 프레임"
+        ],
+        "confidence": "161~175초의 계단→전실→제조실 연결 확인 · 장비 치수와 방 안의 정확한 방향은 근사",
+        "details": [
+          "167~174초의 스테인리스 세정 설비와 손을 넣는 출입 조작부를 참고했습니다.",
+          "맨 처음 0~16초의 사물함·파란 칸막이 구역은 별도 시작 지점이므로 3층 설비로 복제하지 않았습니다.",
+          "통로를 열어 두고 계단 상부 참에서 제조실로 진입하는 관계를 표현합니다."
+        ],
+        "summary": "계단에서 문을 지나 3층 제조실로 들어가기 직전 보이는 스테인리스 위생·출입 설비입니다.",
+        "representation_role": "physical_visual_model_group"
+      }
+    ],
+    "aux_group_count_meaning": "도면오른쪽위치후보두그룹;모두수평믹서라는뜻이아님"
+  },
+  "runtime_snapshot": {
+    "data_file": "apps/site/packaging-data.js",
+    "data_sha256": "807d4bc00351f3966a734886d013d8fb73f984cbf3efd2678a9effce6f86609d",
+    "models_file": "apps/site/packaging-models.js",
+    "snapshot_phase": "final_navigation_after_mezzanine_walk_and_end_look_target",
+    "room": {
+      "id": "packaging",
+      "floor": "packaging",
+      "floorLevel": 3,
+      "name": "스틱·소포장 · 3층",
+      "shortName": "스틱·소포장 3층",
+      "title": "스틱·소포장 · 3층",
+      "center": [
+        0,
+        1.8,
+        0
+      ],
+      "span": 47,
+      "length": 33.55,
+      "width": 34.8,
+      "depth": 33.55,
+      "anchor": [
+        0,
+        0,
+        0
+      ],
+      "rotation": 0,
+      "bounds": {
+        "minX": -19.125,
+        "maxX": 15.675,
+        "minZ": -15.2,
+        "maxZ": 18.35
+      },
+      "mainBounds": {
+        "minX": -15.675,
+        "maxX": 15.675,
+        "minZ": -15.2,
+        "maxZ": 15.2
+      },
+      "layout": {
+        "mainBounds": {
+          "minX": -15.675,
+          "maxX": 15.675,
+          "minZ": -15.2,
+          "maxZ": 15.2
+        },
+        "mainPlatform": {
+          "minX": -12.9,
+          "maxX": -6.9,
+          "minZ": -11.4,
+          "maxZ": 8,
+          "height": 2.4,
+          "stairLength": 1.2,
+          "stairEnds": [
+            "minZ",
+            "maxZ"
+          ]
+        },
+        "auxPlatform": {
+          "minX": 10.4,
+          "maxX": 14.5,
+          "minZ": -11,
+          "maxZ": -0.3,
+          "height": 2.4,
+          "stairLength": 1.2,
+          "stairEnds": [
+            "minZ"
+          ]
+        },
+        "partitions": [
+          {
+            "id": "store-side",
+            "from": [
+              -13,
+              -15.2
+            ],
+            "to": [
+              -13,
+              -12.5
+            ],
+            "height": 3,
+            "thickness": 0.1
+          },
+          {
+            "id": "store-front",
+            "from": [
+              -15.675,
+              -12.5
+            ],
+            "to": [
+              -14,
+              -12.5
+            ],
+            "height": 3,
+            "thickness": 0.1
+          },
+          {
+            "id": "cip-front",
+            "from": [
+              -13,
+              -12.5
+            ],
+            "to": [
+              -7.8,
+              -12.5
+            ],
+            "height": 3,
+            "thickness": 0.1
+          },
+          {
+            "id": "cip-side",
+            "from": [
+              -7.8,
+              -15.2
+            ],
+            "to": [
+              -7.8,
+              -12.5
+            ],
+            "height": 3,
+            "thickness": 0.1
+          },
+          {
+            "id": "weigh-side",
+            "from": [
+              -2.6,
+              -15.2
+            ],
+            "to": [
+              -2.6,
+              -11.2
+            ],
+            "height": 3,
+            "thickness": 0.1
+          },
+          {
+            "id": "weigh-front",
+            "from": [
+              -2.6,
+              -11.2
+            ],
+            "to": [
+              5.4,
+              -11.2
+            ],
+            "height": 3,
+            "thickness": 0.1
+          },
+          {
+            "id": "back-room-side-0",
+            "from": [
+              5.4,
+              -15.2
+            ],
+            "to": [
+              5.4,
+              -11.2
+            ],
+            "height": 3,
+            "thickness": 0.1
+          },
+          {
+            "id": "back-room-side-1",
+            "from": [
+              9.6,
+              -15.2
+            ],
+            "to": [
+              9.6,
+              -11.2
+            ],
+            "height": 3,
+            "thickness": 0.1
+          },
+          {
+            "id": "back-room-side-2",
+            "from": [
+              12.8,
+              -15.2
+            ],
+            "to": [
+              12.8,
+              -11.2
+            ],
+            "height": 3,
+            "thickness": 0.1
+          },
+          {
+            "id": "back-room-front-a",
+            "from": [
+              5.4,
+              -11.2
+            ],
+            "to": [
+              7.5,
+              -11.2
+            ],
+            "height": 3,
+            "thickness": 0.1
+          },
+          {
+            "id": "back-room-front-b",
+            "from": [
+              8.7,
+              -11.2
+            ],
+            "to": [
+              10.4,
+              -11.2
+            ],
+            "height": 3,
+            "thickness": 0.1
+          },
+          {
+            "id": "back-room-front-c",
+            "from": [
+              11.6,
+              -11.2
+            ],
+            "to": [
+              13.4,
+              -11.2
+            ],
+            "height": 3,
+            "thickness": 0.1
+          },
+          {
+            "id": "back-room-front-d",
+            "from": [
+              14.6,
+              -11.2
+            ],
+            "to": [
+              15.675,
+              -11.2
+            ],
+            "height": 3,
+            "thickness": 0.1
+          },
+          {
+            "id": "front-room-back",
+            "from": [
+              -0.8,
+              -0.3
+            ],
+            "to": [
+              15.675,
+              -0.3
+            ],
+            "height": 3,
+            "thickness": 0.1
+          },
+          {
+            "id": "front-room-side",
+            "from": [
+              -0.8,
+              -0.3
+            ],
+            "to": [
+              -0.8,
+              11.6
+            ],
+            "height": 3,
+            "thickness": 0.1
+          }
+        ],
+        "doors": [
+          {
+            "id": "store-door",
+            "x": -13.5,
+            "z": -12.5,
+            "width": 1,
+            "rotation": 0,
+            "kind": "swing"
+          },
+          {
+            "id": "remnant-door",
+            "x": 8.1,
+            "z": -11.2,
+            "width": 1.2,
+            "rotation": 0,
+            "kind": "swing"
+          },
+          {
+            "id": "record-door",
+            "x": 11,
+            "z": -11.2,
+            "width": 1.2,
+            "rotation": 0,
+            "kind": "swing"
+          },
+          {
+            "id": "parts-door",
+            "x": 14,
+            "z": -11.2,
+            "width": 1.2,
+            "rotation": 0,
+            "kind": "swing"
+          },
+          {
+            "id": "front-room-door",
+            "x": -0.8,
+            "z": 12.2,
+            "width": 1.2,
+            "rotation": 1.5707963267948966,
+            "kind": "swing"
+          },
+          {
+            "id": "entry-door",
+            "x": -4,
+            "z": 15.2,
+            "width": 1.4,
+            "rotation": 0,
+            "kind": "swing"
+          },
+          {
+            "id": "rear-stair-door",
+            "x": -15.675,
+            "z": -11.3,
+            "width": 1.1,
+            "rotation": 1.5707963267948966,
+            "kind": "swing"
+          }
+        ],
+        "columns": [
+          {
+            "x": -15.375,
+            "z": -14.9,
+            "width": 0.3,
+            "depth": 0.3,
+            "height": 6.2
+          },
+          {
+            "x": -15.375,
+            "z": 14.9,
+            "width": 0.3,
+            "depth": 0.3,
+            "height": 6.2
+          },
+          {
+            "x": -10.25,
+            "z": -14.9,
+            "width": 0.3,
+            "depth": 0.3,
+            "height": 6.2
+          },
+          {
+            "x": -10.25,
+            "z": 14.9,
+            "width": 0.3,
+            "depth": 0.3,
+            "height": 6.2
+          },
+          {
+            "x": -5.125,
+            "z": -14.9,
+            "width": 0.3,
+            "depth": 0.3,
+            "height": 6.2
+          },
+          {
+            "x": -5.125,
+            "z": 14.9,
+            "width": 0.3,
+            "depth": 0.3,
+            "height": 6.2
+          },
+          {
+            "x": 0,
+            "z": -14.9,
+            "width": 0.3,
+            "depth": 0.3,
+            "height": 6.2
+          },
+          {
+            "x": 0,
+            "z": 14.9,
+            "width": 0.3,
+            "depth": 0.3,
+            "height": 6.2
+          },
+          {
+            "x": 5.125,
+            "z": -14.9,
+            "width": 0.3,
+            "depth": 0.3,
+            "height": 6.2
+          },
+          {
+            "x": 5.125,
+            "z": 14.9,
+            "width": 0.3,
+            "depth": 0.3,
+            "height": 6.2
+          },
+          {
+            "x": 10.25,
+            "z": -14.9,
+            "width": 0.3,
+            "depth": 0.3,
+            "height": 6.2
+          },
+          {
+            "x": 10.25,
+            "z": 14.9,
+            "width": 0.3,
+            "depth": 0.3,
+            "height": 6.2
+          },
+          {
+            "x": 15.375,
+            "z": -14.9,
+            "width": 0.3,
+            "depth": 0.3,
+            "height": 6.2
+          },
+          {
+            "x": 15.375,
+            "z": 14.9,
+            "width": 0.3,
+            "depth": 0.3,
+            "height": 6.2
+          },
+          {
+            "x": -15.375,
+            "z": -10,
+            "width": 0.3,
+            "depth": 0.3,
+            "height": 6.2
+          },
+          {
+            "x": 15.375,
+            "z": -10,
+            "width": 0.3,
+            "depth": 0.3,
+            "height": 6.2
+          },
+          {
+            "x": -15.375,
+            "z": -5,
+            "width": 0.3,
+            "depth": 0.3,
+            "height": 6.2
+          },
+          {
+            "x": 15.375,
+            "z": -5,
+            "width": 0.3,
+            "depth": 0.3,
+            "height": 6.2
+          },
+          {
+            "x": -15.375,
+            "z": 0,
+            "width": 0.3,
+            "depth": 0.3,
+            "height": 6.2
+          },
+          {
+            "x": 15.375,
+            "z": 0,
+            "width": 0.3,
+            "depth": 0.3,
+            "height": 6.2
+          },
+          {
+            "x": -15.375,
+            "z": 5,
+            "width": 0.3,
+            "depth": 0.3,
+            "height": 6.2
+          },
+          {
+            "x": 15.375,
+            "z": 5,
+            "width": 0.3,
+            "depth": 0.3,
+            "height": 6.2
+          },
+          {
+            "x": -15.375,
+            "z": 10,
+            "width": 0.3,
+            "depth": 0.3,
+            "height": 6.2
+          },
+          {
+            "x": 15.375,
+            "z": 10,
+            "width": 0.3,
+            "depth": 0.3,
+            "height": 6.2
+          },
+          {
+            "x": -5.125,
+            "z": 0,
+            "width": 0.3,
+            "depth": 0.3,
+            "height": 6.2
+          },
+          {
+            "x": 5.125,
+            "z": 0,
+            "width": 0.3,
+            "depth": 0.3,
+            "height": 6.2
+          }
+        ],
+        "rooms": [
+          {
+            "id": "store",
+            "name": "창고",
+            "minX": -15.675,
+            "maxX": -13,
+            "minZ": -15.2,
+            "maxZ": -12.5,
+            "height": 3,
+            "drawWalls": false,
+            "confidence": "도면 실명 참고 · 칸막이 이격과 높이는 근사"
+          },
+          {
+            "id": "cip-room",
+            "name": "CIP실",
+            "minX": -13,
+            "maxX": -7.8,
+            "minZ": -15.2,
+            "maxZ": -12.5,
+            "height": 3,
+            "drawWalls": false,
+            "confidence": "도면 실명 참고 · 칸막이 이격과 높이는 근사"
+          },
+          {
+            "id": "material-stage",
+            "name": "계량 원료 적재대",
+            "minX": -7.8,
+            "maxX": -2.6,
+            "minZ": -15.2,
+            "maxZ": -11.2,
+            "height": 3,
+            "drawWalls": false,
+            "confidence": "도면 실명 참고 · 칸막이 이격과 높이는 근사"
+          },
+          {
+            "id": "weigh-room",
+            "name": "원료 계량실",
+            "minX": -2.6,
+            "maxX": 5.4,
+            "minZ": -15.2,
+            "maxZ": -11.2,
+            "height": 3,
+            "drawWalls": false,
+            "confidence": "도면 실명 참고 · 칸막이 이격과 높이는 근사"
+          },
+          {
+            "id": "remnant-store",
+            "name": "짜투리 보관창고",
+            "minX": 5.4,
+            "maxX": 9.6,
+            "minZ": -15.2,
+            "maxZ": -11.2,
+            "height": 3,
+            "drawWalls": false,
+            "confidence": "도면 실명 참고 · 칸막이 이격과 높이는 근사"
+          },
+          {
+            "id": "record-room",
+            "name": "향료·색소 계량 일지 정리실",
+            "minX": 9.6,
+            "maxX": 12.8,
+            "minZ": -15.2,
+            "maxZ": -11.2,
+            "height": 3,
+            "drawWalls": false,
+            "confidence": "도면 실명 참고 · 칸막이 이격과 높이는 근사"
+          },
+          {
+            "id": "parts-store",
+            "name": "부품창고",
+            "minX": 12.8,
+            "maxX": 15.675,
+            "minZ": -15.2,
+            "maxZ": -11.2,
+            "height": 3,
+            "drawWalls": false,
+            "confidence": "도면 실명 참고 · 칸막이 이격과 높이는 근사"
+          }
+        ],
+        "stairs": [
+          {
+            "id": "rear-stair",
+            "name": "계단실2",
+            "minX": -19.125,
+            "maxX": -15.675,
+            "minZ": -15.2,
+            "maxZ": -9.7,
+            "steps": 12,
+            "rise": 3,
+            "direction": "z"
+          },
+          {
+            "id": "front-stair",
+            "name": "3층 진입 계단·참",
+            "minX": -5.125,
+            "maxX": -0.8,
+            "minZ": 15.2,
+            "maxZ": 18.35,
+            "flights": 4,
+            "stepsPerFlight": 10,
+            "rise": 6,
+            "direction": "x",
+            "confidence": "영상의 반복 U턴·참·석재/자주색 노징·흰 난간 참고 · 총 높이와 매단 치수, 도면 계단과의 정확한 대응은 근사"
+          }
+        ],
+        "lift": {
+          "id": "cargo-lift",
+          "name": "화물용 LIFT",
+          "minX": -0.8,
+          "maxX": 4.6,
+          "minZ": 15.2,
+          "maxZ": 18.35,
+          "capacity": "3TON",
+          "height": 3
+        },
+        "ceilingHeight": 6.2,
+        "heightReference": "장면의 기둥·상부 구조 표현용 근사 높이이며 천장·층고 실측값이 아님",
+        "confidence": "도면 치수 기준 · 칸막이·기둥 높이·개구부 이격·플랫폼 높이는 영상 비례 근사"
+      },
+      "path": [
+        [
+          -4.6,
+          -4.35,
+          17.55
+        ],
+        [
+          -4.075,
+          -4.35,
+          17.55
+        ],
+        [
+          -1.85,
+          -2.85,
+          17.55
+        ],
+        [
+          -1.325,
+          -2.85,
+          17.55
+        ],
+        [
+          -1.325,
+          -2.85,
+          15.95
+        ],
+        [
+          -1.85,
+          -2.85,
+          15.95
+        ],
+        [
+          -4.075,
+          -1.35,
+          15.95
+        ],
+        [
+          -4.6,
+          -1.35,
+          15.95
+        ],
+        [
+          -4.6,
+          -1.35,
+          17.55
+        ],
+        [
+          -4.075,
+          -1.35,
+          17.55
+        ],
+        [
+          -1.85,
+          0.15,
+          17.55
+        ],
+        [
+          -1.325,
+          0.15,
+          17.55
+        ],
+        [
+          -1.325,
+          0.15,
+          15.95
+        ],
+        [
+          -1.85,
+          0.15,
+          15.95
+        ],
+        [
+          -4.075,
+          1.65,
+          15.95
+        ],
+        [
+          -4.6,
+          1.65,
+          15.95
+        ],
+        [
+          -4,
+          1.65,
+          15.95
+        ],
+        [
+          -4,
+          1.65,
+          12
+        ],
+        [
+          -4,
+          1.65,
+          3
+        ],
+        [
+          -4,
+          1.65,
+          -8
+        ],
+        [
+          -4,
+          1.65,
+          -11.8
+        ],
+        [
+          -10.45,
+          1.65,
+          -11.8
+        ],
+        [
+          -10.45,
+          1.65,
+          -10.8
+        ],
+        [
+          -10.05,
+          1.65,
+          -10.8
+        ],
+        [
+          -7.05,
+          4.05,
+          -10.8
+        ],
+        [
+          -7.2,
+          4.05,
+          -10.3
+        ],
+        [
+          -9.1,
+          4.05,
+          -10.3
+        ],
+        [
+          -9.1,
+          4.05,
+          6.5
+        ],
+        [
+          -7.2,
+          4.05,
+          6.5
+        ],
+        [
+          -7.05,
+          4.05,
+          7.4
+        ],
+        [
+          -10.05,
+          1.65,
+          7.4
+        ],
+        [
+          -10.45,
+          1.65,
+          7.4
+        ],
+        [
+          -9.7,
+          1.65,
+          9.8
+        ],
+        [
+          -8,
+          1.65,
+          11.4
+        ],
+        [
+          -4,
+          1.65,
+          11.4
+        ],
+        [
+          -4,
+          1.65,
+          -9.8
+        ],
+        [
+          7,
+          1.65,
+          -9.8
+        ],
+        [
+          10.95,
+          1.65,
+          -10.4
+        ],
+        [
+          11.35,
+          1.65,
+          -10.4
+        ],
+        [
+          14.35,
+          4.05,
+          -10.4
+        ],
+        [
+          14.2,
+          4.05,
+          -9.7
+        ],
+        [
+          12.4,
+          4.05,
+          -9.7
+        ],
+        [
+          12.4,
+          4.05,
+          -1
+        ]
+      ],
+      "reference": "./photos/packaging-3f/third-floor-plan.png",
+      "photos": [
+        "./photos/packaging-3f/frame-0017s.jpg",
+        "./photos/packaging-3f/frame-0114s.jpg",
+        "./photos/packaging-3f/frame-0156s.jpg",
+        "./photos/packaging-3f/frame-0169s.jpg",
+        "./photos/packaging-3f/frame-0230s.jpg",
+        "./photos/packaging-3f/frame-0310s.jpg",
+        "./photos/packaging-3f/frame-0320s.jpg",
+        "./photos/packaging-3f/frame-0342s.jpg",
+        "./photos/packaging-3f/frame-0370s.jpg",
+        "./photos/packaging-3f/frame-0465s.jpg",
+        "./photos/packaging-3f/frame-0490s.jpg",
+        "./photos/packaging-3f/frame-0543s.jpg",
+        "./photos/packaging-3f/frame-0557s.jpg",
+        "./photos/packaging-3f/frame-0561s.jpg",
+        "./photos/packaging-3f/frame-0620s.jpg",
+        "./photos/packaging-3f/frame-0750s.jpg",
+        "./photos/packaging-3f/frame-0760s.jpg",
+        "./photos/packaging-3f/frame-0850s.jpg",
+        "./photos/packaging-3f/frame-0930s.jpg",
+        "./photos/packaging-3f/frame-1035s.jpg",
+        "./photos/packaging-3f/third-floor-plan.png",
+        "./photos/packaging-3f/third-floor-measured-plan.png"
+      ],
+      "source": "직원 촬영 2026-11-09 14:47:53 영상(18분23초) · 소포장 3층 평면도/측량 PDF · 사용자 건물·3층 확인",
+      "confidence": "3층 공간은 직원 확인 · 본체 치수는 도면 참고 · 설비 개별 대응·높이는 근사",
+      "summary": "건조실 간판동 옆 스틱·소포장 건물의 3층을 별도 공간으로 구성했습니다. 계단과 화물리프트, 원료 계량·보관실, 메인 플랫폼과 혼합 설비를 도면과 현장 영상으로 함께 확인합니다.",
+      "details": [
+        "직원이 이 영상을 건조실 간판동 옆 스틱·소포장 건물의 3층으로 확인했습니다. 2층 스틱 충전기 1~8호기 도식은 이 공간에 복사하지 않았습니다.",
+        "3층 도면 본체 외곽은 31.35×30.40m이고, 계단·화물리프트 돌출을 포함한 전체 범위는 약 34.80×33.55m입니다. 도면은 9동 3층/A-07/07.11 표기를 포함합니다.",
+        "왼쪽 메인 플랫폼의 네 유닛과 오른쪽 추가 플랫폼은 도면에서 구분했습니다. 영상의 여러 시점에 같은 기기가 다시 보일 수 있어 사진만으로 새 기기를 계속 추가하지 않았습니다.",
+        "제조 구간 175~1101초를 1초 간격으로 다시 대조했습니다. 호퍼 점검문·연결관, 원형 처리설비와 대형 외함, 두 종류의 제어반을 구분했습니다. 세척·습식 소구역은 영상에서 확인되지만 도면의 특정 실과 정확히 대응하는지는 미확정입니다.",
+        "0~174초의 진입 계단도 1초 간격으로 별도 확인했습니다. 석재 계단의 자주색 모서리, 흰 난간과 중간 가로대, 반복되는 U턴 참을 표현하고 3층 통로까지 높이가 이어지는 이동 경로를 연결했습니다. 총 계단 높이 6m·매단수는 재현용 근사이며 휴게실 층번호는 판독하지 못했습니다.",
+        "평면의 북쪽과 공장 전경 내 정확한 회전은 미등록입니다. 도면 로컬 좌표를 쓰며 좌표는 화면에 표시하지 않습니다. 플랫폼 2.4m와 상부 구조 표현 높이 6.2m는 근사이며 실측 층고·천장 높이는 확정하지 않았습니다."
+      ],
+      "drawingSources": [
+        {
+          "sha256": "48e451589dba4125332ba8fd34e226f71f8182b237bf980014f7231367019b33",
+          "name": "소포장 3층 평면도.pdf",
+          "page": 1
+        },
+        {
+          "sha256": "b932b98e4f848582adcd6f02d3461945b0c67e7439b6663be7b7538bea623dfa",
+          "name": "소포장 3층 평면도 측량.pdf",
+          "page": 1
+        }
+      ],
+      "pathEndLookAt": [
+        9.1,
+        4.4,
+        -5.8
+      ]
+    },
+    "campus_building_links": [
+      {
+        "id": "campus-office",
+        "name": "본관",
+        "roomLink": null,
+        "floorCount": null,
+        "thirdFloorElevation": null,
+        "position": [
+          -36,
+          0,
+          20
+        ],
+        "width": 44,
+        "depth": 35,
+        "height": 18
+      },
+      {
+        "id": "campus-dryer-tower",
+        "name": "건조실 · 7층",
+        "roomLink": "all",
+        "floorCount": 7,
+        "thirdFloorElevation": 7.3,
+        "position": [
+          28,
+          0,
+          -49
+        ],
+        "width": 17.2,
+        "depth": 26.8,
+        "height": 40.4
+      },
+      {
+        "id": "campus-packaging-building",
+        "name": "스틱·소포장동 · 3층",
+        "roomLink": "packaging",
+        "floorCount": 3,
+        "thirdFloorElevation": null,
+        "position": [
+          2.225,
+          0,
+          -49
+        ],
+        "width": 31.35,
+        "depth": 30.4,
+        "height": 13.3
+      },
+      {
+        "id": "campus-production",
+        "name": "물류장",
+        "roomLink": null,
+        "floorCount": null,
+        "thirdFloorElevation": null,
+        "position": [
+          27,
+          0,
+          6
+        ],
+        "width": 80,
+        "depth": 51,
+        "height": 10
+      },
+      {
+        "id": "campus-blue-annex",
+        "name": "액상",
+        "roomLink": null,
+        "floorCount": null,
+        "thirdFloorElevation": null,
+        "position": [
+          -47,
+          0,
+          -42
+        ],
+        "width": 64,
+        "depth": 40,
+        "height": 8
+      },
+      {
+        "id": "campus-guardhouse",
+        "name": "정문 녹색 경비실",
+        "roomLink": null,
+        "floorCount": null,
+        "thirdFloorElevation": null,
+        "position": [
+          71,
+          0,
+          53
+        ],
+        "width": 10,
+        "depth": 8.9,
+        "height": 3.2
+      }
+    ]
+  },
+  "campus_click_navigation": {
+    "rule": "배치이동 모드가 아닐 때 캠퍼스에서 해당 건물을 직접 클릭하면 연결된 내부 공간으로 이동. 전체 이름표는 기본 숨김이고 선택한 대상의 이름만 확인.",
+    "dryer": {
+      "building_id": "campus-dryer-tower",
+      "label": "건조실 · 7층",
+      "roomLink": "all",
+      "meaning": "기존 건조실 층별 내부로 이동. 건조실3층 옥외 작업면의 사이클론과 별도 스틱·소포장동을 구분."
+    },
+    "packaging": {
+      "building_id": "campus-packaging-building",
+      "label": "스틱·소포장동 · 3층",
+      "roomLink": "packaging",
+      "meaning": "이번18분23초 영상으로 보완한 별도3층 내부로 이동."
+    },
+    "height_and_spacing_note": "별동 위치·간격과 캠퍼스 층고는 도면/CG비례 근사. 직원의 건물 구분 확인과 측량 정합을 혼동하지 않음."
+  },
+  "excluded_or_unverified": {
+    "floor_2_diagram": {
+      "source_sha256": "cc15d9358b583246ee08c59b8970668c5b6d31d1f6e77fc63d23f66c41221bb6",
+      "pages": 2,
+      "both_pages_explicit_title": "2층 평면도",
+      "shown_equipment": [
+        "스틱1~8호기",
+        "호파1~4",
+        "X-Ray1~3호기",
+        "V MIX2대",
+        "위생전실·공조실·부자재창고"
+      ],
+      "policy": "8개 스틱 충전기 및2층 작업자/부자재 동선을 이번3층 실내로 복사하지 않음."
+    },
+    "other_diagrams": {
+      "liquid_stick_pdf": "층수 표제가 없고 액상 PET라인·배합실·탱크·샤워/탈의실·주차장 도식이므로 이번3층 외벽/장비위치 확정에 사용하지 않음.",
+      "robot_relocation_dwg": "2018DWG 미리보기180×78px로 배치·문구 판독 불가. 추가변환하지 않음.",
+      "process_pdf": "㈜희창유업제2공장 소포장 제조공정 Rev02(2022.09.21). 원료입고/보관/분쇄/계량/여과/혼합/자석봉/지대또는소포장/중량선별/이물선별/외포장/보관/출고 명칭만 참고. 특정층 기계 위치·개수·공정관리 수치를 모델에 전용하지 않음."
+    },
+    "omitted_visual_objects": [
+      "팔레트",
+      "포대·박스·적재 원료",
+      "비닐·수거통·이동식 거치대",
+      "사람·반사면 속 장치"
+    ],
+    "unknown": [
+      "정밀 장비명·일련번호·실제 기기별대응",
+      "CIP내부구성",
+      "실측 층고·천장고·플랫폼고",
+      "북쪽/GPS등록",
+      "현재 최종 준공revision"
+    ]
+  },
+  "gps_use_policy": {
+    "file_name_H": "높이가 아닌 heading 방위각",
+    "phone_coordinates": "WGS84 촬영 위치 추정값이며 기계 모서리·벽체·층고 실측점이 아님",
+    "indoor_quality": "실내 반사·오차·드리프트가 있어 표시 수평오차만으로 배치를 고정하지 않음. 시작 표시는37.5m 오차.",
+    "altitude": "WGS84 타원체 기준으로 층고나 층수 판정에 사용하지 않음",
+    "priority": "직원의 별동·3층 확인을 우선",
+    "display_coordinates_in_ui": false,
+    "raw_track_modified": false
+  },
+  "asset_policy": {
+    "canonical_asset_directory": "apps/site/photos/packaging-3f",
+    "files": 66,
+    "video_sample_jpegs": 64,
+    "drawing_pngs": 2,
+    "duplicate_images_copied_to_this_bundle": false,
+    "note": "이미지는 앱 자산 폴더에만 보관하고 이 근거bundle에는 경로만 연결함. 221개 검토 표본·12개 접촉시트도 기존workspace 위치를 참조함."
+  },
+  "preservation": {
+    "copied_compact_reviews": [
+      "references/stick-packaging-3f/drawing-review.json",
+      "references/stick-packaging-3f/도면 검토.txt"
+    ],
+    "original_video_modified": false,
+    "coordinate_txt_modified": false,
+    "original_drawings_modified": false,
+    "sqlite_modified": false,
+    "new_bulk_cad_conversion": false,
+    "copied_visual_review_notes": [
+      "references/stick-packaging-3f/video-observations/dense-entry-stair-observations.txt",
+      "references/stick-packaging-3f/video-observations/dense-first-half-observations.txt",
+      "references/stick-packaging-3f/video-observations/dense-second-half-observations.txt"
+    ],
+    "copied_compact_reviews_status": "초기직접도면검토JSON/TXT의사본. 도면기하근거는유효하고영상기기식별은최종dense관찰을우선함."
+  },
+  "documentation_paths": [
+    "README.md",
+    "docs/site.md"
+  ],
+  "plan_model_recheck": {
+    "status": "read_only_plan_geometry_comparison",
+    "rooms_lift_and_main_partition": "상단실배치·앞중앙화물LIFT·좌상계단·중앙L구획은두3층PDF의상대위치와큰차이없음. 기기내부정확위치는여전히비례근사.",
+    "main_platform_stairs_issue_reported": "도면양끝계단코선은Z와평행하므로X방향보행폭약3m를가로질러전개됨. 끝Z띠1.2m를계단Z진행길이로보면높이2.4m에지나치게가파름. root와모델담당자에게방향·폭해석보강요청.",
+    "source_crop": "tmp/stick3f-drawing-review/main-platform-stair-direction.png",
+    "code_modified_by_this_review": false,
+    "fix_status": "main_platform_stairs_changed_to_cross_x_run_by_model_owner",
+    "fix_note": "실측단높이확정없이,도면Z띠폭과영상의열린계단진행방향을구분해반영."
+  },
+  "update_phase": "dense_visual_review_complete_and_15_group_model_recorded",
+  "dense_review_note_copies": [
+    {
+      "role": "entry_stairs",
+      "source_path": "workspace/stick-packaging-3f-20261109/dense-entry-stair-observations.txt",
+      "bundle_path": "references/stick-packaging-3f/video-observations/dense-entry-stair-observations.txt",
+      "range_seconds": [
+        0,
+        174
+      ],
+      "bytes": 2746,
+      "sha256": "1fa6c32073fc29a03e74d4a5eedb4c2aa90a6719de727120ef8587aab55f44be"
+    },
+    {
+      "role": "manufacturing_first_half",
+      "source_path": "workspace/stick-packaging-3f-20261109/dense-first-half-observations.txt",
+      "bundle_path": "references/stick-packaging-3f/video-observations/dense-first-half-observations.txt",
+      "range_seconds": [
+        175,
+        558
+      ],
+      "bytes": 13666,
+      "sha256": "e8b1bc34e11aed41e443d7e90dbc3cdd3a5c815bdd912d63a9cc567751a03b29"
+    },
+    {
+      "role": "manufacturing_second_half",
+      "source_path": "workspace/stick-packaging-3f-20261109/dense-second-half-observations.txt",
+      "bundle_path": "references/stick-packaging-3f/video-observations/dense-second-half-observations.txt",
+      "range_seconds": [
+        543,
+        1101
+      ],
+      "bytes": 25921,
+      "sha256": "120978cd37df19f2649c3aa137bd71cc8a8fc6edd79ab87dc136c6be9d9f4eda"
+    }
+  ],
+  "model_refinement_record": {
+    "main_mixers": "폐쇄형후드·사각점검문·볼트·클램프·모터받침·구동축·호스와하부연결을세부화. B검정탄성링/C밸브함·플랜지의외형차이프로토타입을구분.",
+    "round_unit": "동심링·스프링원형장치를사각2포트뚜껑및후반현수분배체와구분. 원형근거는480/490/520.",
+    "right_candidate": "한위치후보를수직원통·원추·점검구·계기·현수분배체·수신부연결형상으로변경. 위치는미확정.",
+    "control_cluster": "557노출판과561투명문외함을한선택그룹의다른외함으로묶음. 외함수를믹서수로환산하지않음.",
+    "added_fixed_groups": [
+      "계량PC·텔레스코프후드부속구역",
+      "3층위생전실출입장치"
+    ],
+    "entry_stairwell": "영상의4flight·5landing/U턴·큰창·흰난간·자주색노징을참고.3층바닥0,접근-6~0m는근사.",
+    "mezzanine_stairs": "메인플랫폼양끝Z띠1.2m안에서계단을X방향약3m전개.짧은Zrun으로가파르게오르던해석을도면·영상에맞춰보강.",
+    "cip_area": "내부기기미확인인낮은도면영역표시만유지.",
+    "visual_owner_reported_checks": {
+      "groups": 15,
+      "parts": 45,
+      "scene_tests_passed": 4,
+      "syntax_check_passed": true,
+      "mesh_count": 328,
+      "instanced_repeat_elements": 1221,
+      "note": "모델담당최종검사기록. 실제기기의성능·현장실측·PC프레임레이트를뜻하지않음."
+    }
+  },
+  "navigation_final": {
+    "source_data_file": "apps/site/packaging-data.js",
+    "path_points": [
+      [
+        -4.6,
+        -4.35,
+        17.55
+      ],
+      [
+        -4.075,
+        -4.35,
+        17.55
+      ],
+      [
+        -1.85,
+        -2.85,
+        17.55
+      ],
+      [
+        -1.325,
+        -2.85,
+        17.55
+      ],
+      [
+        -1.325,
+        -2.85,
+        15.95
+      ],
+      [
+        -1.85,
+        -2.85,
+        15.95
+      ],
+      [
+        -4.075,
+        -1.35,
+        15.95
+      ],
+      [
+        -4.6,
+        -1.35,
+        15.95
+      ],
+      [
+        -4.6,
+        -1.35,
+        17.55
+      ],
+      [
+        -4.075,
+        -1.35,
+        17.55
+      ],
+      [
+        -1.85,
+        0.15,
+        17.55
+      ],
+      [
+        -1.325,
+        0.15,
+        17.55
+      ],
+      [
+        -1.325,
+        0.15,
+        15.95
+      ],
+      [
+        -1.85,
+        0.15,
+        15.95
+      ],
+      [
+        -4.075,
+        1.65,
+        15.95
+      ],
+      [
+        -4.6,
+        1.65,
+        15.95
+      ],
+      [
+        -4,
+        1.65,
+        15.95
+      ],
+      [
+        -4,
+        1.65,
+        12
+      ],
+      [
+        -4,
+        1.65,
+        3
+      ],
+      [
+        -4,
+        1.65,
+        -8
+      ],
+      [
+        -4,
+        1.65,
+        -11.8
+      ],
+      [
+        -10.45,
+        1.65,
+        -11.8
+      ],
+      [
+        -10.45,
+        1.65,
+        -10.8
+      ],
+      [
+        -10.05,
+        1.65,
+        -10.8
+      ],
+      [
+        -7.05,
+        4.05,
+        -10.8
+      ],
+      [
+        -7.2,
+        4.05,
+        -10.3
+      ],
+      [
+        -9.1,
+        4.05,
+        -10.3
+      ],
+      [
+        -9.1,
+        4.05,
+        6.5
+      ],
+      [
+        -7.2,
+        4.05,
+        6.5
+      ],
+      [
+        -7.05,
+        4.05,
+        7.4
+      ],
+      [
+        -10.05,
+        1.65,
+        7.4
+      ],
+      [
+        -10.45,
+        1.65,
+        7.4
+      ],
+      [
+        -9.7,
+        1.65,
+        9.8
+      ],
+      [
+        -8,
+        1.65,
+        11.4
+      ],
+      [
+        -4,
+        1.65,
+        11.4
+      ],
+      [
+        -4,
+        1.65,
+        -9.8
+      ],
+      [
+        7,
+        1.65,
+        -9.8
+      ],
+      [
+        10.95,
+        1.65,
+        -10.4
+      ],
+      [
+        11.35,
+        1.65,
+        -10.4
+      ],
+      [
+        14.35,
+        4.05,
+        -10.4
+      ],
+      [
+        14.2,
+        4.05,
+        -9.7
+      ],
+      [
+        12.4,
+        4.05,
+        -9.7
+      ],
+      [
+        12.4,
+        4.05,
+        -1
+      ]
+    ],
+    "pathEndLookAt": [
+      9.1,
+      4.4,
+      -5.8
+    ],
+    "local_coordinate_frame_not_gps": true,
+    "route_description": "계단접근·3층진입→제조실메인플랫폼계단상승→발판길→반대계단하강→우측플랫폼상승. 끝에서는수직원통설비를향해봄.",
+    "geometry_validation_reported": "실제기하raycast·cameraY·휴대폰/데스크톱4개장면검사통과를root가확인.",
+    "physical_limits": "좌표와눈높이·계단높이는모델근사. 영상의실측동선·절대방위로단정하지않음."
+  },
+  "redesign_20261110": {
+    "date": "2026-11-10",
+    "scope": "스틱·소포장동 1·2·3층 보강",
+    "counts": {
+      "1": 26,
+      "2": 31,
+      "3": 24
+    },
+    "reviewPriority": [
+      3,
+      2,
+      1
+    ],
+    "sources": [
+      {
+        "name": "2025 작업장평면도(집진·열풍배관 후드교체 기안 첨부4)",
+        "sha256": "7d69c424a44cce71aed8b92be322b8ab2283e3f5c8ffd81d4d187fe12b85c20f",
+        "pages": {
+          "1": 4,
+          "2": 5,
+          "3": 6
+        },
+        "use": "층별 설비 이름·순서·실명·덕트 경로"
+      },
+      {
+        "name": "9동 1층 평면도 A-05",
+        "sha256": "83cdb3939ce1bf9cf9381c5e30b46cbd166a2bbda4dd2af7c6dc28ccba343fbf",
+        "use": "1층 외곽·기둥·개구부"
+      },
+      {
+        "name": "9동 2층 평면도 A-06",
+        "sha256": "567934f80f867cf46a3459ca3c5d32e950e860e54119ad5f1792f4b6b7ed1425",
+        "use": "2층 외곽·호퍼 작업대·실내 구획"
+      },
+      {
+        "name": "9동 3층 평면도 A-07",
+        "sha256": "5e277bc0ef93126be48afa878cd5938a60c93a64caae7cabb529770708cdde1f",
+        "use": "본체 31.35×30.40m·플랫폼·3m 방 천장"
+      },
+      {
+        "name": "소포장 3층 평면도(색상 설비 추가 판본)",
+        "sha256": "48e451589dba4125332ba8fd34e226f71f8182b237bf980014f7231367019b33",
+        "use": "우측 빨간 2유닛·청록 그레이팅 위치. 치수 도면 판본과 구별"
+      },
+      {
+        "name": "9동 단면도 A-11",
+        "sha256": "a916647d98da42e492055d2ba73508d83f2e4e827d61ecd46d61030ae615e1ec",
+        "use": "바닥간 높이 1F6.0/2F6.15, 3F처마6.0·용마루 차1.36"
+      },
+      {
+        "name": "9동 입면도 A-09·A-10",
+        "sha256": "e27e79d777b09d9dbdf30019a4f7df80a539e4ad78cc7f3be56768546d6c1e4a",
+        "use": "창 띠가 있는 면"
+      },
+      {
+        "name": "9동 창호도",
+        "sha256": "12645fe5baa18f1af28a6bc304358d2491521b8c5ebd9329ab87f342beeaecdc",
+        "use": "창호 높이·문 형식"
+      },
+      {
+        "name": "스틱 작업장평면도(2023.10.18)",
+        "sha256": "cc15d9358b583246ee08c59b8970668c5b6d31d1f6e77fc63d23f66c41221bb6",
+        "use": "2층 작업자·부자재 동선. 실명은 2025 우선"
+      },
+      {
+        "name": "(배치도)-1 / YOUNG TECH PACK YST-3S-LAYOUT 평면",
+        "sha256": "07ce5734ed93e87a9fd1ec3a583f96c7e077fdeb109406ef8bf7b2b0b4deb5ac",
+        "use": "희창유업 발주 참고 스틱 포장기 도형. 개별 호기 모델명 확정용 아님"
+      },
+      {
+        "name": "(배치도)-2 / 정면·측면",
+        "sha256": "7e144dcd98288e7e13dcdbce9340e5b11af7591845120a40ad7478da23ccbb9d",
+        "use": "본체폭1.6+측부.4 / 깊이2.4 / 본체2.0+투입.9m 및 다열충전·실링·측면 제어반"
+      },
+      {
+        "name": "스틱 2층 설비배치도 / 오거 신규 도입 자료",
+        "sha256": "f3f9d5f00a582e4aeebed7270253177fb4260a33f0663c22359524059b9d2d71",
+        "use": "AS-IS/TO-BE 계획 참고 갤러리. 설치완료 증거가 없고 검사기 대수가 2025 도면과 달라 3D 수량 변경에 쓰지 않음"
+      }
+    ],
+    "observedSmallHoppers": {
+      "count": 8,
+      "arrangement": "2열×4개",
+      "seconds": [
+        805,
+        829,
+        850,
+        854,
+        859,
+        862,
+        905
+      ],
+      "evidence": "850초 전후 출구·밸브·바닥 플랜지를 따라 고유 위치를 대조. 854·859·862초는 같은 열의 반복 촬영.",
+      "drawingDifference": "2025 도식은 공급대상 1,2용3+3,4용3+5~8각1=10을 표기. 도면 표기를 영상 실물 대수로 강제하지 않고 직원 지적과 영상의 8개 관찰을 반영."
+    },
+    "confirmedThirdFloor": {
+      "zeroGravityMixers": 3,
+      "ribbonMixers": 1,
+      "stickMixers": 2,
+      "sieves": 6,
+      "smallHoppers": 8
+    },
+    "approximations": [
+      "리본 믹서 개별 외형은 영상 번호 대응 미확정이므로 도면상 종류·대표 U트로프로 재현",
+      "싸이클론 탱크는 가려진 부분과 명판-실물 대응이 남아 5기 대표 배치. 현수 분배함은 직접 보이는 1세트만 생성",
+      "1층 포장기·로봇·검사기 외형은 도면 기호에 따른 종류별 재현이며 현장 실측·제조사 모델 확정 아님",
+      "2층 스틱 형상은 발주 참고 선도. 8대 모두가 같은 YST 모델이라는 뜻 아님",
+      "상부 지붕의 처마6.0/상승1.36을 우선. 대칭반경간7.6×경사.15=1.14와의 불일치는 보존",
+      "층별 장면은 독립 로컬Y=0. 설치 높이·좌표·계단·배관 연결은 도면/영상 비례 재현값. GPS 실측으로 사용하지 않음"
+    ],
+    "rooms": {
+      "1": [
+        {
+          "id": "f1-material-store",
+          "name": "부자재창고",
+          "minX": -15.675,
+          "maxX": -4.4,
+          "minZ": -15.2,
+          "maxZ": -10.1,
+          "height": 3,
+          "drawWalls": false
+        },
+        {
+          "id": "f1-small-pack",
+          "name": "소포장 포장실",
+          "minX": -15.675,
+          "maxX": -4.4,
+          "minZ": -10.1,
+          "maxZ": 15.2,
+          "height": 3,
+          "drawWalls": false
+        },
+        {
+          "id": "f1-outer-pack",
+          "name": "외포장실",
+          "minX": -4.4,
+          "maxX": 12.2,
+          "minZ": -15.2,
+          "maxZ": 15.2,
+          "height": 3,
+          "drawWalls": false
+        },
+        {
+          "id": "f1-aisle",
+          "name": "통로",
+          "minX": 12.2,
+          "maxX": 15.675,
+          "minZ": -15.2,
+          "maxZ": 15.2,
+          "height": 3,
+          "drawWalls": false
+        },
+        {
+          "id": "f1-air-shower",
+          "name": "부자재 에어샤워",
+          "minX": -15.675,
+          "maxX": -12.3,
+          "minZ": 11.4,
+          "maxZ": 15.2,
+          "height": 3,
+          "drawWalls": false
+        },
+        {
+          "id": "f1-cip",
+          "name": "CIP실",
+          "minX": -2.2,
+          "maxX": -1.2,
+          "minZ": 12.2,
+          "maxZ": 15.2,
+          "height": 3,
+          "drawWalls": false
+        }
+      ],
+      "2": [
+        {
+          "id": "f2-store",
+          "name": "창고",
+          "minX": -15.675,
+          "maxX": -12,
+          "minZ": -15.2,
+          "maxZ": -12.7,
+          "height": 3,
+          "drawWalls": false
+        },
+        {
+          "id": "f2-cip",
+          "name": "CIP룸",
+          "minX": -12,
+          "maxX": -7.2,
+          "minZ": -15.2,
+          "maxZ": -12.7,
+          "height": 3,
+          "drawWalls": false
+        },
+        {
+          "id": "f2-break",
+          "name": "휴게실",
+          "minX": -7.2,
+          "maxX": -0.6,
+          "minZ": -15.2,
+          "maxZ": -12.7,
+          "height": 3,
+          "drawWalls": false
+        },
+        {
+          "id": "f2-office",
+          "name": "사무실",
+          "minX": -0.6,
+          "maxX": 3.2,
+          "minZ": -15.2,
+          "maxZ": -12.7,
+          "height": 3,
+          "drawWalls": false
+        },
+        {
+          "id": "f2-nitrogen",
+          "name": "질소발생기실",
+          "minX": 3.2,
+          "maxX": 8.1,
+          "minZ": -15.2,
+          "maxZ": -12.7,
+          "height": 3,
+          "drawWalls": false
+        },
+        {
+          "id": "f2-hot-air",
+          "name": "열풍기실",
+          "minX": 8.1,
+          "maxX": 15.675,
+          "minZ": -15.2,
+          "maxZ": -12.7,
+          "height": 3,
+          "drawWalls": false
+        },
+        {
+          "id": "f2-stick",
+          "name": "스틱 포장실",
+          "minX": 4.4,
+          "maxX": 15.675,
+          "minZ": -11.5,
+          "maxZ": 5.4,
+          "height": 3,
+          "drawWalls": false
+        },
+        {
+          "id": "f2-hygiene",
+          "name": "위생전실",
+          "minX": 4.4,
+          "maxX": 9.4,
+          "minZ": 5.4,
+          "maxZ": 8.1,
+          "height": 3,
+          "drawWalls": false
+        },
+        {
+          "id": "f2-air-shower",
+          "name": "부자재 에어샤워",
+          "minX": 10.6,
+          "maxX": 14.5,
+          "minZ": 5.5,
+          "maxZ": 7.9,
+          "height": 3,
+          "drawWalls": false
+        },
+        {
+          "id": "f2-material-store",
+          "name": "부자재창고",
+          "minX": 9.4,
+          "maxX": 15.675,
+          "minZ": 5.4,
+          "maxZ": 10.4,
+          "height": 3,
+          "drawWalls": false
+        },
+        {
+          "id": "f2-air",
+          "name": "공조실",
+          "minX": 9.4,
+          "maxX": 15.675,
+          "minZ": 10.4,
+          "maxZ": 15.2,
+          "height": 3,
+          "drawWalls": false
+        },
+        {
+          "id": "f2-outer-pack",
+          "name": "외포장실",
+          "minX": -4.4,
+          "maxX": 4.4,
+          "minZ": -12.7,
+          "maxZ": 15.2,
+          "height": 3,
+          "drawWalls": false,
+          "ceiling": false
+        }
+      ],
+      "3": [
+        {
+          "id": "store",
+          "name": "창고",
+          "minX": -15.675,
+          "maxX": -13,
+          "minZ": -15.2,
+          "maxZ": -12.5,
+          "height": 3,
+          "drawWalls": false
+        },
+        {
+          "id": "cip-room",
+          "name": "CIP실",
+          "minX": -13,
+          "maxX": -7.8,
+          "minZ": -15.2,
+          "maxZ": -12.5,
+          "height": 3,
+          "drawWalls": false
+        },
+        {
+          "id": "material-stage",
+          "name": "분쇄실",
+          "minX": -7.8,
+          "maxX": -3.2,
+          "minZ": -15.2,
+          "maxZ": -12.5,
+          "height": 3,
+          "drawWalls": false
+        },
+        {
+          "id": "weigh-room",
+          "name": "계량실",
+          "minX": -3.2,
+          "maxX": 5.4,
+          "minZ": -15.2,
+          "maxZ": -12.5,
+          "height": 3,
+          "drawWalls": false
+        },
+        {
+          "id": "remnant-store",
+          "name": "알레르기 계량실",
+          "minX": 5.4,
+          "maxX": 10,
+          "minZ": -15.2,
+          "maxZ": -12.5,
+          "height": 3,
+          "drawWalls": false
+        },
+        {
+          "id": "parts-store",
+          "name": "부자재 보관실",
+          "minX": 10,
+          "maxX": 15.675,
+          "minZ": -15.2,
+          "maxZ": -12.5,
+          "height": 3,
+          "drawWalls": false
+        },
+        {
+          "id": "front-store",
+          "name": "창고",
+          "minX": -15.675,
+          "maxX": -13,
+          "minZ": 12.5,
+          "maxZ": 15.2,
+          "height": 3,
+          "drawWalls": false
+        },
+        {
+          "id": "materials-warehouse",
+          "name": "원부자재 보관창고",
+          "minX": -0.8,
+          "maxX": 15.675,
+          "minZ": -0.3,
+          "maxZ": 15.2,
+          "height": 3,
+          "drawWalls": false
+        },
+        {
+          "id": "inner-material-store",
+          "name": "원료보관창고",
+          "minX": 8,
+          "maxX": 15.3,
+          "minZ": 11.4,
+          "maxZ": 14.8,
+          "height": 3,
+          "drawWalls": false
+        },
+        {
+          "id": "hygiene",
+          "name": "위생전실",
+          "minX": -5.125,
+          "maxX": -0.8,
+          "minZ": 12.4,
+          "maxZ": 18.35,
+          "height": 3,
+          "drawWalls": false
+        }
+      ]
+    },
+    "equipment": [
+      {
+        "id": "packaging-f1-rotary-1",
+        "name": "로타리 1호기",
+        "type": "packaging-rotary-packer",
+        "floorLevel": 1,
+        "position": [
+          -10.1,
+          0,
+          -7.7
+        ],
+        "rotation": 0,
+        "width": 3.1,
+        "depth": 2.2,
+        "height": 3.1,
+        "platformHeight": 0
+      },
+      {
+        "id": "packaging-f1-rotary-2",
+        "name": "로타리 2호기",
+        "type": "packaging-rotary-packer",
+        "floorLevel": 1,
+        "position": [
+          -10.1,
+          0,
+          -4.8
+        ],
+        "rotation": 0,
+        "width": 3.1,
+        "depth": 2.2,
+        "height": 3.1,
+        "platformHeight": 0
+      },
+      {
+        "id": "packaging-f1-vertical",
+        "name": "버티컬 포장기",
+        "type": "packaging-vertical-packer",
+        "floorLevel": 1,
+        "position": [
+          -10.1,
+          0,
+          -1.7
+        ],
+        "rotation": 0,
+        "width": 2.9,
+        "depth": 2.4,
+        "height": 3.5,
+        "platformHeight": 0
+      },
+      {
+        "id": "packaging-f1-bag-filler",
+        "name": "지대충진기",
+        "type": "packaging-bag-filler",
+        "floorLevel": 1,
+        "position": [
+          -10.1,
+          0,
+          5.3
+        ],
+        "rotation": 0,
+        "width": 2.9,
+        "depth": 2.1,
+        "height": 3.1,
+        "platformHeight": 0
+      },
+      {
+        "id": "packaging-f1-check-1",
+        "name": "중량선별기 1",
+        "type": "packaging-checkweigher",
+        "floorLevel": 1,
+        "position": [
+          -6.5,
+          0,
+          -7.7
+        ],
+        "rotation": 0,
+        "width": 2.1,
+        "depth": 1.1,
+        "height": 1.3,
+        "platformHeight": 0
+      },
+      {
+        "id": "packaging-f1-check-2",
+        "name": "중량선별기 2",
+        "type": "packaging-checkweigher",
+        "floorLevel": 1,
+        "position": [
+          -6.5,
+          0,
+          -4.8
+        ],
+        "rotation": 0,
+        "width": 2.1,
+        "depth": 1.1,
+        "height": 1.3,
+        "platformHeight": 0
+      },
+      {
+        "id": "packaging-f1-check-3",
+        "name": "중량선별기 3",
+        "type": "packaging-checkweigher",
+        "floorLevel": 1,
+        "position": [
+          -6.5,
+          0,
+          -1.7
+        ],
+        "rotation": 0,
+        "width": 2.1,
+        "depth": 1.1,
+        "height": 1.3,
+        "platformHeight": 0
+      },
+      {
+        "id": "packaging-f1-xray-1",
+        "name": "X-Ray 1호기",
+        "type": "packaging-xray",
+        "floorLevel": 1,
+        "position": [
+          -1.5,
+          0,
+          -6.9
+        ],
+        "rotation": 0,
+        "width": 2.1,
+        "depth": 1.25,
+        "height": 1.8,
+        "platformHeight": 0
+      },
+      {
+        "id": "packaging-f1-xray-2",
+        "name": "X-Ray 2호기",
+        "type": "packaging-xray",
+        "floorLevel": 1,
+        "position": [
+          -1.5,
+          0,
+          -4.4
+        ],
+        "rotation": 0,
+        "width": 2.1,
+        "depth": 1.25,
+        "height": 1.8,
+        "platformHeight": 0
+      },
+      {
+        "id": "packaging-f1-xray-3",
+        "name": "X-Ray 3호기",
+        "type": "packaging-xray",
+        "floorLevel": 1,
+        "position": [
+          -1.5,
+          0,
+          -0.9
+        ],
+        "rotation": 0,
+        "width": 2.1,
+        "depth": 1.25,
+        "height": 1.8,
+        "platformHeight": 0
+      },
+      {
+        "id": "packaging-f1-robot-1",
+        "name": "로봇 1",
+        "type": "packaging-robot",
+        "floorLevel": 1,
+        "position": [
+          1.1,
+          0,
+          -6.9
+        ],
+        "rotation": 0,
+        "width": 1.6,
+        "depth": 1.5,
+        "height": 2.1,
+        "platformHeight": 0
+      },
+      {
+        "id": "packaging-f1-robot-2",
+        "name": "로봇 2",
+        "type": "packaging-robot",
+        "floorLevel": 1,
+        "position": [
+          1.1,
+          0,
+          -4.4
+        ],
+        "rotation": 0,
+        "width": 1.6,
+        "depth": 1.5,
+        "height": 2.1,
+        "platformHeight": 0
+      },
+      {
+        "id": "packaging-f1-robot-3",
+        "name": "로봇 3",
+        "type": "packaging-robot",
+        "floorLevel": 1,
+        "position": [
+          1.1,
+          0,
+          -0.9
+        ],
+        "rotation": 0,
+        "width": 1.6,
+        "depth": 1.5,
+        "height": 2.1,
+        "platformHeight": 0
+      },
+      {
+        "id": "packaging-f1-sealer-1",
+        "name": "날인·테이핑기 1",
+        "type": "packaging-case-sealer",
+        "floorLevel": 1,
+        "position": [
+          3.8,
+          0,
+          -6.9
+        ],
+        "rotation": 0,
+        "width": 1.7,
+        "depth": 1.2,
+        "height": 1.7,
+        "platformHeight": 0
+      },
+      {
+        "id": "packaging-f1-sealer-2",
+        "name": "날인·테이핑기 2",
+        "type": "packaging-case-sealer",
+        "floorLevel": 1,
+        "position": [
+          3.8,
+          0,
+          -4.4
+        ],
+        "rotation": 0,
+        "width": 1.7,
+        "depth": 1.2,
+        "height": 1.7,
+        "platformHeight": 0
+      },
+      {
+        "id": "packaging-f1-sealer-3",
+        "name": "날인·테이핑기 3",
+        "type": "packaging-case-sealer",
+        "floorLevel": 1,
+        "position": [
+          3.8,
+          0,
+          -0.9
+        ],
+        "rotation": 0,
+        "width": 1.7,
+        "depth": 1.2,
+        "height": 1.7,
+        "platformHeight": 0
+      },
+      {
+        "id": "packaging-f1-box-check-1",
+        "name": "박스 중량선별기 1",
+        "type": "packaging-checkweigher",
+        "floorLevel": 1,
+        "position": [
+          6.3,
+          0,
+          -6.9
+        ],
+        "rotation": 0,
+        "width": 1.7,
+        "depth": 1.2,
+        "height": 1.35,
+        "platformHeight": 0
+      },
+      {
+        "id": "packaging-f1-box-check-2",
+        "name": "박스 중량선별기 2",
+        "type": "packaging-checkweigher",
+        "floorLevel": 1,
+        "position": [
+          6.3,
+          0,
+          -4.4
+        ],
+        "rotation": 0,
+        "width": 1.7,
+        "depth": 1.2,
+        "height": 1.35,
+        "platformHeight": 0
+      },
+      {
+        "id": "packaging-f1-box-check-3",
+        "name": "박스 중량선별기 3",
+        "type": "packaging-checkweigher",
+        "floorLevel": 1,
+        "position": [
+          6.3,
+          0,
+          -0.9
+        ],
+        "rotation": 0,
+        "width": 1.7,
+        "depth": 1.2,
+        "height": 1.35,
+        "platformHeight": 0
+      },
+      {
+        "id": "packaging-f1-erector-3",
+        "name": "제함기 3호기",
+        "type": "packaging-carton-erector",
+        "floorLevel": 1,
+        "position": [
+          -0.8,
+          0,
+          -13.6
+        ],
+        "rotation": 0,
+        "width": 2.5,
+        "depth": 1.3,
+        "height": 1.9,
+        "platformHeight": 0
+      },
+      {
+        "id": "packaging-f1-erector-2",
+        "name": "제함기 2호기",
+        "type": "packaging-carton-erector",
+        "floorLevel": 1,
+        "position": [
+          -0.8,
+          0,
+          -11.7
+        ],
+        "rotation": 0,
+        "width": 2.5,
+        "depth": 1.3,
+        "height": 1.9,
+        "platformHeight": 0
+      },
+      {
+        "id": "packaging-f1-erector-1",
+        "name": "제함기 1호기",
+        "type": "packaging-carton-erector",
+        "floorLevel": 1,
+        "position": [
+          -0.8,
+          0,
+          -9.9
+        ],
+        "rotation": 0,
+        "width": 2.5,
+        "depth": 1.3,
+        "height": 1.9,
+        "platformHeight": 0
+      },
+      {
+        "id": "packaging-f1-metal",
+        "name": "금속검출기",
+        "type": "packaging-metal-detector",
+        "floorLevel": 1,
+        "position": [
+          0.1,
+          0,
+          6.3
+        ],
+        "rotation": 0,
+        "width": 2.1,
+        "depth": 1.1,
+        "height": 1.4,
+        "platformHeight": 0
+      },
+      {
+        "id": "packaging-f1-robot-4",
+        "name": "로봇 4",
+        "type": "packaging-robot",
+        "floorLevel": 1,
+        "position": [
+          9.1,
+          0,
+          3.2
+        ],
+        "rotation": 0,
+        "width": 2.2,
+        "depth": 2.3,
+        "height": 2.5,
+        "platformHeight": 0
+      },
+      {
+        "id": "packaging-f1-robot-5",
+        "name": "로봇 5",
+        "type": "packaging-robot",
+        "floorLevel": 1,
+        "position": [
+          9.1,
+          0,
+          -4
+        ],
+        "rotation": 0,
+        "width": 2.2,
+        "depth": 2.3,
+        "height": 2.5,
+        "platformHeight": 0
+      },
+      {
+        "id": "packaging-f1-conveyor-trunk",
+        "name": "외포장 이송 컨베이어",
+        "type": "packaging-conveyor",
+        "floorLevel": 1,
+        "position": [
+          11.1,
+          0,
+          -1.8
+        ],
+        "rotation": 0,
+        "width": 1,
+        "depth": 22,
+        "height": 1,
+        "platformHeight": 0
+      },
+      {
+        "id": "packaging-f2-hopper-1",
+        "name": "호퍼 1",
+        "type": "packaging-hopper",
+        "floorLevel": 2,
+        "position": [
+          -10.3,
+          0,
+          -8
+        ],
+        "rotation": 0,
+        "width": 2.5,
+        "depth": 2.8,
+        "height": 4.3,
+        "platformHeight": 1.2
+      },
+      {
+        "id": "packaging-f2-hopper-2",
+        "name": "호퍼 2",
+        "type": "packaging-hopper",
+        "floorLevel": 2,
+        "position": [
+          -10.3,
+          0,
+          -3.8
+        ],
+        "rotation": 0,
+        "width": 2.5,
+        "depth": 2.8,
+        "height": 4.3,
+        "platformHeight": 1.2
+      },
+      {
+        "id": "packaging-f2-hopper-3",
+        "name": "호퍼 3",
+        "type": "packaging-hopper",
+        "floorLevel": 2,
+        "position": [
+          -10.3,
+          0,
+          0.4
+        ],
+        "rotation": 0,
+        "width": 2.5,
+        "depth": 2.8,
+        "height": 4.3,
+        "platformHeight": 1.2
+      },
+      {
+        "id": "packaging-f2-hopper-4",
+        "name": "호퍼 4",
+        "type": "packaging-hopper",
+        "floorLevel": 2,
+        "position": [
+          -10.3,
+          0,
+          4.6
+        ],
+        "rotation": 0,
+        "width": 2.5,
+        "depth": 2.8,
+        "height": 4.3,
+        "platformHeight": 1.2
+      },
+      {
+        "id": "packaging-f2-stick-1",
+        "name": "스틱 1호기",
+        "type": "packaging-stick-filler",
+        "floorLevel": 2,
+        "position": [
+          8.7,
+          0,
+          -8.4
+        ],
+        "rotation": 0,
+        "width": 2,
+        "depth": 2.4,
+        "height": 2.9,
+        "platformHeight": 0
+      },
+      {
+        "id": "packaging-f2-stick-2",
+        "name": "스틱 2호기",
+        "type": "packaging-stick-filler",
+        "floorLevel": 2,
+        "position": [
+          12.7,
+          0,
+          -8.4
+        ],
+        "rotation": 0,
+        "width": 2,
+        "depth": 2.4,
+        "height": 2.9,
+        "platformHeight": 0
+      },
+      {
+        "id": "packaging-f2-stick-3",
+        "name": "스틱 3호기",
+        "type": "packaging-stick-filler",
+        "floorLevel": 2,
+        "position": [
+          8.7,
+          0,
+          -4.1
+        ],
+        "rotation": 0,
+        "width": 2,
+        "depth": 2.4,
+        "height": 2.9,
+        "platformHeight": 0
+      },
+      {
+        "id": "packaging-f2-stick-4",
+        "name": "스틱 4호기",
+        "type": "packaging-stick-filler",
+        "floorLevel": 2,
+        "position": [
+          12.7,
+          0,
+          -4.1
+        ],
+        "rotation": 0,
+        "width": 2,
+        "depth": 2.4,
+        "height": 2.9,
+        "platformHeight": 0
+      },
+      {
+        "id": "packaging-f2-stick-5",
+        "name": "스틱 5호기",
+        "type": "packaging-stick-filler",
+        "floorLevel": 2,
+        "position": [
+          8.7,
+          0,
+          0.2
+        ],
+        "rotation": 0,
+        "width": 2,
+        "depth": 2.4,
+        "height": 2.9,
+        "platformHeight": 0
+      },
+      {
+        "id": "packaging-f2-stick-6",
+        "name": "스틱 6호기",
+        "type": "packaging-stick-filler",
+        "floorLevel": 2,
+        "position": [
+          12.7,
+          0,
+          0.2
+        ],
+        "rotation": 0,
+        "width": 2,
+        "depth": 2.4,
+        "height": 2.9,
+        "platformHeight": 0
+      },
+      {
+        "id": "packaging-f2-stick-7",
+        "name": "스틱 7호기",
+        "type": "packaging-stick-filler",
+        "floorLevel": 2,
+        "position": [
+          8.7,
+          0,
+          3.8
+        ],
+        "rotation": 0,
+        "width": 2,
+        "depth": 2.4,
+        "height": 2.9,
+        "platformHeight": 0
+      },
+      {
+        "id": "packaging-f2-stick-8",
+        "name": "스틱 8호기",
+        "type": "packaging-stick-filler",
+        "floorLevel": 2,
+        "position": [
+          12.7,
+          0,
+          3.8
+        ],
+        "rotation": 0,
+        "width": 2,
+        "depth": 2.4,
+        "height": 2.9,
+        "platformHeight": 0
+      },
+      {
+        "id": "packaging-f2-v-mix-1",
+        "name": "V-MIX 1",
+        "type": "packaging-v-mixer",
+        "floorLevel": 2,
+        "position": [
+          -12.6,
+          0,
+          12.6
+        ],
+        "rotation": 0,
+        "width": 2.8,
+        "depth": 1.8,
+        "height": 2.5,
+        "platformHeight": 0
+      },
+      {
+        "id": "packaging-f2-v-mix-2",
+        "name": "V-MIX 2",
+        "type": "packaging-v-mixer",
+        "floorLevel": 2,
+        "position": [
+          -8.5,
+          0,
+          12.6
+        ],
+        "rotation": 0,
+        "width": 2.8,
+        "depth": 1.8,
+        "height": 2.5,
+        "platformHeight": 0
+      },
+      {
+        "id": "packaging-f2-xray-1",
+        "name": "X-Ray 1호기",
+        "type": "packaging-xray",
+        "floorLevel": 2,
+        "position": [
+          -1,
+          0,
+          -6.2
+        ],
+        "rotation": 0,
+        "width": 1.8,
+        "depth": 1.25,
+        "height": 1.8,
+        "platformHeight": 0
+      },
+      {
+        "id": "packaging-f2-xray-3",
+        "name": "X-Ray 3호기",
+        "type": "packaging-xray",
+        "floorLevel": 2,
+        "position": [
+          1.3,
+          0,
+          2.5
+        ],
+        "rotation": 0,
+        "width": 1.8,
+        "depth": 1.25,
+        "height": 1.8,
+        "platformHeight": 0
+      },
+      {
+        "id": "packaging-f2-xray-2",
+        "name": "X-Ray 2호기",
+        "type": "packaging-xray",
+        "floorLevel": 2,
+        "position": [
+          -0.5,
+          0,
+          7.3
+        ],
+        "rotation": 0,
+        "width": 1.8,
+        "depth": 1.25,
+        "height": 1.8,
+        "platformHeight": 0
+      },
+      {
+        "id": "packaging-f2-check-1",
+        "name": "중량선별기 1",
+        "type": "packaging-checkweigher",
+        "floorLevel": 2,
+        "position": [
+          -1,
+          0,
+          -4.4
+        ],
+        "rotation": 0,
+        "width": 1.8,
+        "depth": 1.1,
+        "height": 1.3,
+        "platformHeight": 0
+      },
+      {
+        "id": "packaging-f2-check-2",
+        "name": "중량선별기 2",
+        "type": "packaging-checkweigher",
+        "floorLevel": 2,
+        "position": [
+          1.3,
+          0,
+          4.3
+        ],
+        "rotation": 0,
+        "width": 1.8,
+        "depth": 1.1,
+        "height": 1.3,
+        "platformHeight": 0
+      },
+      {
+        "id": "packaging-f2-check-3",
+        "name": "중량선별기 3",
+        "type": "packaging-checkweigher",
+        "floorLevel": 2,
+        "position": [
+          -0.5,
+          0,
+          9.1
+        ],
+        "rotation": 0,
+        "width": 1.8,
+        "depth": 1.1,
+        "height": 1.3,
+        "platformHeight": 0
+      },
+      {
+        "id": "packaging-f2-taper-1",
+        "name": "박스 테이핑기 1",
+        "type": "packaging-case-sealer",
+        "floorLevel": 2,
+        "position": [
+          -1,
+          0,
+          -2.7
+        ],
+        "rotation": 0,
+        "width": 1.8,
+        "depth": 1.1,
+        "height": 1.8,
+        "platformHeight": 0
+      },
+      {
+        "id": "packaging-f2-taper-2",
+        "name": "박스 테이핑기 2",
+        "type": "packaging-case-sealer",
+        "floorLevel": 2,
+        "position": [
+          1.3,
+          0,
+          6
+        ],
+        "rotation": 0,
+        "width": 1.8,
+        "depth": 1.1,
+        "height": 1.8,
+        "platformHeight": 0
+      },
+      {
+        "id": "packaging-f2-taper-3",
+        "name": "박스 테이핑기 3",
+        "type": "packaging-case-sealer",
+        "floorLevel": 2,
+        "position": [
+          -0.5,
+          0,
+          10.8
+        ],
+        "rotation": 0,
+        "width": 1.8,
+        "depth": 1.1,
+        "height": 1.8,
+        "platformHeight": 0
+      },
+      {
+        "id": "packaging-f2-incase",
+        "name": "인케이스 포장기",
+        "type": "packaging-carton-erector",
+        "floorLevel": 2,
+        "position": [
+          2.5,
+          0,
+          -7
+        ],
+        "rotation": 0,
+        "width": 1.8,
+        "depth": 1.5,
+        "height": 2,
+        "platformHeight": 0
+      },
+      {
+        "id": "packaging-f2-nitrogen",
+        "name": "질소발생기",
+        "type": "packaging-service-cabinet",
+        "floorLevel": 2,
+        "position": [
+          5.6,
+          0,
+          -13.8
+        ],
+        "rotation": 0,
+        "width": 1.3,
+        "depth": 1,
+        "height": 2,
+        "platformHeight": 0
+      },
+      {
+        "id": "packaging-f2-hot-air",
+        "name": "열풍기",
+        "type": "packaging-service-cabinet",
+        "floorLevel": 2,
+        "position": [
+          11.4,
+          0,
+          -13.8
+        ],
+        "rotation": 0,
+        "width": 2,
+        "depth": 1.2,
+        "height": 2.5,
+        "platformHeight": 0
+      },
+      {
+        "id": "packaging-f2-hotmelt-1",
+        "name": "핫멜트 1",
+        "type": "packaging-service-cabinet",
+        "floorLevel": 2,
+        "position": [
+          5.9,
+          0,
+          -8.4
+        ],
+        "rotation": 0,
+        "width": 0.7,
+        "depth": 0.7,
+        "height": 1.3,
+        "platformHeight": 0
+      },
+      {
+        "id": "packaging-f2-hotmelt-2",
+        "name": "핫멜트 2",
+        "type": "packaging-service-cabinet",
+        "floorLevel": 2,
+        "position": [
+          5.9,
+          0,
+          0.2
+        ],
+        "rotation": 0,
+        "width": 0.7,
+        "depth": 0.7,
+        "height": 1.3,
+        "platformHeight": 0
+      },
+      {
+        "id": "packaging-f2-printer-1",
+        "name": "날인기 1",
+        "type": "packaging-service-cabinet",
+        "floorLevel": 2,
+        "position": [
+          6.7,
+          0,
+          -8.4
+        ],
+        "rotation": 0,
+        "width": 0.6,
+        "depth": 0.6,
+        "height": 1.2,
+        "platformHeight": 0
+      },
+      {
+        "id": "packaging-f2-printer-2",
+        "name": "날인기 2",
+        "type": "packaging-service-cabinet",
+        "floorLevel": 2,
+        "position": [
+          6.7,
+          0,
+          0.2
+        ],
+        "rotation": 0,
+        "width": 0.6,
+        "depth": 0.6,
+        "height": 1.2,
+        "platformHeight": 0
+      },
+      {
+        "id": "packaging-f2-hygiene",
+        "name": "위생전실 세정설비",
+        "type": "packaging-hygiene-station",
+        "floorLevel": 2,
+        "position": [
+          6.2,
+          0,
+          6.5
+        ],
+        "rotation": 0,
+        "width": 1.8,
+        "depth": 0.7,
+        "height": 2.1,
+        "platformHeight": 0
+      },
+      {
+        "id": "packaging-main-mixer-1",
+        "name": "무중력 믹서 1호기",
+        "type": "packaging-mixer",
+        "floorLevel": 3,
+        "position": [
+          -11.3,
+          0,
+          -7.5
+        ],
+        "rotation": 0,
+        "width": 3.1,
+        "depth": 3.5,
+        "height": 7.25,
+        "platformHeight": 2.55
+      },
+      {
+        "id": "packaging-main-mixer-2",
+        "name": "무중력 믹서 2호기",
+        "type": "packaging-mixer",
+        "floorLevel": 3,
+        "position": [
+          -11.3,
+          0,
+          -2.9
+        ],
+        "rotation": 0,
+        "width": 3.1,
+        "depth": 3.5,
+        "height": 6.6,
+        "platformHeight": 2.55
+      },
+      {
+        "id": "packaging-main-mixer-3",
+        "name": "무중력 믹서 3호기",
+        "type": "packaging-mixer",
+        "floorLevel": 3,
+        "position": [
+          -11.3,
+          0,
+          1.6
+        ],
+        "rotation": 0,
+        "width": 3.1,
+        "depth": 3.5,
+        "height": 6.6,
+        "platformHeight": 2.55
+      },
+      {
+        "id": "packaging-round-process",
+        "name": "리본 믹서 4호기",
+        "type": "packaging-ribbon-mixer",
+        "floorLevel": 3,
+        "position": [
+          -11.3,
+          0,
+          5.5
+        ],
+        "rotation": 0,
+        "width": 2.7,
+        "depth": 2.8,
+        "height": 5.8,
+        "platformHeight": 2.55
+      },
+      {
+        "id": "packaging-mixer-sieve-1",
+        "name": "믹서 시프트 1",
+        "type": "packaging-sieve",
+        "floorLevel": 3,
+        "position": [
+          -8,
+          0,
+          -7.5
+        ],
+        "rotation": 0,
+        "width": 1.05,
+        "depth": 1.05,
+        "height": 3.9,
+        "platformHeight": 2.55
+      },
+      {
+        "id": "packaging-mixer-sieve-2",
+        "name": "믹서 시프트 2",
+        "type": "packaging-sieve",
+        "floorLevel": 3,
+        "position": [
+          -8,
+          0,
+          -2.9
+        ],
+        "rotation": 0,
+        "width": 1.05,
+        "depth": 1.05,
+        "height": 3.9,
+        "platformHeight": 2.55
+      },
+      {
+        "id": "packaging-mixer-sieve-3",
+        "name": "믹서 시프트 3",
+        "type": "packaging-sieve",
+        "floorLevel": 3,
+        "position": [
+          -8,
+          0,
+          1.6
+        ],
+        "rotation": 0,
+        "width": 1.05,
+        "depth": 1.05,
+        "height": 3.9,
+        "platformHeight": 2.55
+      },
+      {
+        "id": "packaging-mixer-sieve-4",
+        "name": "믹서 시프트 4",
+        "type": "packaging-sieve",
+        "floorLevel": 3,
+        "position": [
+          -8,
+          0,
+          5.5
+        ],
+        "rotation": 0,
+        "width": 1.05,
+        "depth": 1.05,
+        "height": 3.9,
+        "platformHeight": 2.55
+      },
+      {
+        "id": "packaging-aux-mixer-1",
+        "name": "스틱 믹서 1호기",
+        "type": "packaging-stick-mixer",
+        "floorLevel": 3,
+        "position": [
+          8.35,
+          0,
+          -7.5
+        ],
+        "rotation": 0,
+        "width": 2.5,
+        "depth": 2.8,
+        "height": 5.65,
+        "platformHeight": 2.4
+      },
+      {
+        "id": "packaging-aux-mixer-2",
+        "name": "스틱 믹서 2호기",
+        "type": "packaging-stick-mixer",
+        "floorLevel": 3,
+        "position": [
+          8.35,
+          0,
+          -3.6
+        ],
+        "rotation": 0,
+        "width": 2.5,
+        "depth": 2.8,
+        "height": 5.65,
+        "platformHeight": 2.4
+      },
+      {
+        "id": "packaging-stick-sieve-1",
+        "name": "스틱 시프트 1",
+        "type": "packaging-sieve",
+        "floorLevel": 3,
+        "position": [
+          6.9,
+          0,
+          -8.8
+        ],
+        "rotation": 0,
+        "width": 1,
+        "depth": 1,
+        "height": 3.8,
+        "platformHeight": 2.4
+      },
+      {
+        "id": "packaging-stick-sieve-2",
+        "name": "스틱 시프트 2",
+        "type": "packaging-sieve",
+        "floorLevel": 3,
+        "position": [
+          6.9,
+          0,
+          -1.6
+        ],
+        "rotation": 0,
+        "width": 1,
+        "depth": 1,
+        "height": 3.8,
+        "platformHeight": 2.4
+      },
+      {
+        "id": "packaging-stick-hopper-row",
+        "name": "소형 공급 호퍼 · 8개",
+        "type": "packaging-stick-hoppers",
+        "floorLevel": 3,
+        "position": [
+          12.2,
+          0,
+          -5.5
+        ],
+        "rotation": 0,
+        "width": 3.3,
+        "depth": 8.4,
+        "height": 4.5,
+        "platformHeight": 2.4
+      },
+      {
+        "id": "packaging-cyclone-frame",
+        "name": "싸이클론 탱크·2단 프레임",
+        "type": "packaging-cyclone-frame",
+        "floorLevel": 3,
+        "position": [
+          12.2,
+          0,
+          -5.5
+        ],
+        "rotation": 0,
+        "width": 3.5,
+        "depth": 8,
+        "height": 6.7,
+        "platformHeight": 2.4
+      },
+      {
+        "id": "packaging-suspended-distribution",
+        "name": "현수 분배함",
+        "type": "packaging-suspended-distributor",
+        "floorLevel": 3,
+        "position": [
+          12.2,
+          0,
+          -5.5
+        ],
+        "rotation": 0,
+        "width": 3,
+        "depth": 8.8,
+        "height": 4.8,
+        "platformHeight": 2.4
+      },
+      {
+        "id": "packaging-mixer-control",
+        "name": "무중력 믹서 제어반 · F-750 외",
+        "type": "packaging-control",
+        "floorLevel": 3,
+        "position": [
+          -9,
+          0,
+          -0.65
+        ],
+        "rotation": 0,
+        "width": 1.4,
+        "depth": 0.55,
+        "height": 4.55,
+        "platformHeight": 2.55
+      },
+      {
+        "id": "packaging-hopper-level-control",
+        "name": "HOPPER LEVEL 제어반",
+        "type": "packaging-control",
+        "floorLevel": 3,
+        "position": [
+          5.2,
+          0,
+          -5.5
+        ],
+        "rotation": 0,
+        "width": 0.8,
+        "depth": 0.5,
+        "height": 2,
+        "platformHeight": 0
+      },
+      {
+        "id": "packaging-wall-control",
+        "name": "벽면 조작함",
+        "type": "packaging-control",
+        "floorLevel": 3,
+        "position": [
+          14.9,
+          0,
+          7.5
+        ],
+        "rotation": 0,
+        "width": 0.65,
+        "depth": 0.3,
+        "height": 1.9,
+        "platformHeight": 0
+      },
+      {
+        "id": "packaging-ground-vessel",
+        "name": "CIP실 온수탱크",
+        "type": "packaging-vessel",
+        "floorLevel": 3,
+        "position": [
+          -11.8,
+          0,
+          -13.8
+        ],
+        "rotation": 0,
+        "width": 1.15,
+        "depth": 1.2,
+        "height": 2.5,
+        "platformHeight": 0
+      },
+      {
+        "id": "packaging-wash-sink",
+        "name": "CIP실 2조 싱크",
+        "type": "packaging-sink",
+        "floorLevel": 3,
+        "position": [
+          -9.6,
+          0,
+          -14.2
+        ],
+        "rotation": 0,
+        "width": 1.65,
+        "depth": 0.65,
+        "height": 1.2,
+        "platformHeight": 0
+      },
+      {
+        "id": "packaging-cip-services",
+        "name": "CIP실 세척·건조 설비",
+        "type": "packaging-cip-services",
+        "floorLevel": 3,
+        "position": [
+          -10.3,
+          0,
+          -12.9
+        ],
+        "rotation": 0,
+        "width": 1.8,
+        "depth": 0.8,
+        "height": 1.8,
+        "platformHeight": 0
+      },
+      {
+        "id": "packaging-floor-scale",
+        "name": "계량실 CAS 저울",
+        "type": "packaging-scale",
+        "floorLevel": 3,
+        "position": [
+          -1.8,
+          0,
+          -13.4
+        ],
+        "rotation": 0,
+        "width": 0.8,
+        "depth": 1,
+        "height": 1.5,
+        "platformHeight": 0
+      },
+      {
+        "id": "packaging-weigh-services",
+        "name": "계량실 흡입후드·PC 캐비닛",
+        "type": "packaging-weigh-services",
+        "floorLevel": 3,
+        "position": [
+          1,
+          0,
+          -13.8
+        ],
+        "rotation": 0,
+        "width": 2,
+        "depth": 1,
+        "height": 2.8,
+        "platformHeight": 0
+      },
+      {
+        "id": "packaging-entry-station",
+        "name": "위생전실 세정·출입설비",
+        "type": "packaging-hygiene-station",
+        "floorLevel": 3,
+        "position": [
+          -5.8,
+          0,
+          13.2
+        ],
+        "rotation": 0,
+        "width": 2.2,
+        "depth": 1,
+        "height": 2.3,
+        "platformHeight": 0
+      }
+    ]
+  }
+}

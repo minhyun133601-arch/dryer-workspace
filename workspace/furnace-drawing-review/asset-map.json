@@ -1,0 +1,101 @@
+[
+  {
+    "source": "references/화덕/도면/KakaoTalk_20261105_105315975.jpg",
+    "target": "apps/site/photos/furnace/sheetpiping.jpg",
+    "observations": "Upright grayscale sheet.",
+    "source_sha256": "413b02501634bbccbc4ca29f6a38c9d02bbcb86ed29ea07bbbb3b129fc405d1f",
+    "width": 2400,
+    "height": 1747,
+    "bytes": 448440
+  },
+  {
+    "source": "references/화덕/도면/KakaoTalk_20261105_105315975_01.jpg",
+    "target": "apps/site/photos/furnace/sheetburner.jpg",
+    "observations": "Upright grayscale sheet.",
+    "source_sha256": "222ee802a60f35a77dd9ec63133371f863960aaa7fc86afafcc97ad482369c75",
+    "width": 2400,
+    "height": 1750,
+    "bytes": 313379
+  },
+  {
+    "source": "references/화덕/20261104_110652.jpg",
+    "target": "apps/site/photos/furnace/regulator.jpg",
+    "observations": "Main regulator with stem and orange cap; pilot regulator in front.",
+    "source_sha256": "e16e1ac1bd9cebbbc5543076669d5b07c5672f26fae0cbe55c0e7f38fc266df0",
+    "width": 675,
+    "height": 900,
+    "bytes": 82068
+  },
+  {
+    "source": "references/화덕/20261104_110535.jpg",
+    "target": "apps/site/photos/furnace/vmr.jpg",
+    "observations": "Elektrogas shut-off valve, nameplate VMR6-2 Rp2.",
+    "source_sha256": "a1a19f091d1d24a797df6241bf1d0c6ec19ef4b4ea0a383e0ebb25b386676f7c",
+    "width": 675,
+    "height": 900,
+    "bytes": 61525
+  },
+  {
+    "source": "references/화덕/20261104_110533.jpg",
+    "target": "apps/site/photos/furnace/modutrol.jpg",
+    "observations": "Honeywell Modutrol IV nameplate M7284A1004 and crank.",
+    "source_sha256": "f9dbd2490ddab2a29af4a4f4bc7d10e39711f37c305cd9c080b698db24b97f07",
+    "width": 675,
+    "height": 900,
+    "bytes": 87073
+  },
+  {
+    "source": "references/화덕/20261104_110542.jpg",
+    "target": "apps/site/photos/furnace/switchhigh.jpg",
+    "observations": "Gauge over DUNGS GW 150 A6 pressure switch and ball valve.",
+    "source_sha256": "153a1be7a9351fcad555d50c9e6f462725f38f52d658af23723528124ee7d2fd",
+    "width": 675,
+    "height": 900,
+    "bytes": 67668
+  },
+  {
+    "source": "references/화덕/20261104_110537.jpg",
+    "target": "apps/site/photos/furnace/switchlow.jpg",
+    "observations": "Gauge, DUNGS pressure switch and ball valve after the regulator.",
+    "source_sha256": "b9ff0a25a5d35b03ef7e06416c089289a71b71f63457737811425641f18157ce",
+    "width": 900,
+    "height": 836,
+    "bytes": 95397
+  },
+  {
+    "source": "references/화덕/20261104_110550.jpg",
+    "target": "apps/site/photos/furnace/sight.jpg",
+    "observations": "Sight glass plate and the UV SCANNER, SPARK PLUG, PILOT GAS tags.",
+    "source_sha256": "c7f890810514bfa20f92add8502a28415613eedbd96274d468aca85641b5898f",
+    "width": 675,
+    "height": 900,
+    "bytes": 85802
+  },
+  {
+    "source": "references/화덕/20261104_110720.jpg",
+    "target": "apps/site/photos/furnace/manifold.jpg",
+    "observations": "40A stub, flange pair, elbow and flexible hose beside the wall.",
+    "source_sha256": "7d04f927a82c01ce8ee2b309c9cf66831890ee1a1f387c9e3b689eb2ce502aa6",
+    "width": 675,
+    "height": 900,
+    "bytes": 67261
+  },
+  {
+    "source": "references/화덕/20261104_110606.jpg",
+    "target": "apps/site/photos/furnace/valve.jpg",
+    "observations": "Control valve dial, crank linkage and 50A flange pair.",
+    "source_sha256": "40127cb074578a4fdecdd36baf1f6aaa903ef299b9abdf6eaf50d7bbc4594b4a",
+    "width": 900,
+    "height": 450,
+    "bytes": 80428
+  },
+  {
+    "source": "references/화덕/20261104_110650.jpg",
+    "target": "apps/site/photos/furnace/pilot.jpg",
+    "observations": "Pilot line running on the wall side of the main regulator.",
+    "source_sha256": "e4fddd916425325f1e0093a87b86dfff7bb5c0029f0bf948abe3b736aeecd318",
+    "width": 675,
+    "height": 900,
+    "bytes": 83062
+  }
+]

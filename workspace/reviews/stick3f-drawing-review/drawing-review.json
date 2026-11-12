@@ -1,0 +1,253 @@
+{
+  "scope": "3층 스틱·소포장 별도 모델용 도면 조사. 코드·원본·SQLite·표준캐시 수정 또는 DWG 변환 없음.",
+  "sources": [
+    {
+      "name": "소포장 3층 평면도.pdf",
+      "sha256": "48e451589dba4125332ba8fd34e226f71f8182b237bf980014f7231367019b33",
+      "relative_path": "근거 자료/건물3D 후보도면/03_층별·생산팀평면/미확정/소포장 3층 평면도__48e451589dba.pdf",
+      "absolute_path": "C:/Users/user/Desktop/프로젝트/근거 자료/건물3D 후보도면/03_층별·생산팀평면/미확정/소포장 3층 평면도__48e451589dba.pdf",
+      "role": "primary_floor_3_plan",
+      "page_count": 1,
+      "source_sha_verified": true
+    },
+    {
+      "name": "소포장 3층 평면도 측량.pdf",
+      "sha256": "b932b98e4f848582adcd6f02d3461945b0c67e7439b6663be7b7538bea623dfa",
+      "relative_path": "근거 자료/건물3D 후보도면/03_층별·생산팀평면/미확정/소포장 3층 평면도 측량__b932b98e4f84.pdf",
+      "absolute_path": "C:/Users/user/Desktop/프로젝트/근거 자료/건물3D 후보도면/03_층별·생산팀평면/미확정/소포장 3층 평면도 측량__b932b98e4f84.pdf",
+      "role": "primary_floor_3_dimensions",
+      "page_count": 1,
+      "source_sha_verified": true
+    },
+    {
+      "name": "희창유업(액상ㅡ스틱배치 완료.pdf",
+      "sha256": "e514c3c11438875b34c20404b376dd247b0a0d4155c2d2f612d83548f4fc2951",
+      "relative_path": "근거 자료/건물3D 후보도면/04_검토필요/미확정/희창유업(액상ㅡ스틱배치 완료__e514c3c11438.pdf",
+      "absolute_path": "C:/Users/user/Desktop/프로젝트/근거 자료/건물3D 후보도면/04_검토필요/미확정/희창유업(액상ㅡ스틱배치 완료__e514c3c11438.pdf",
+      "role": "floor_unknown_liquid_stick_layout_not_reused",
+      "page_count": 1,
+      "source_sha_verified": true
+    },
+    {
+      "name": "희창유업(액상ㅡ스틱배치 완료.dwg",
+      "sha256": "e68a990930010868d0875f720a26d9f7154a7752d65e95b3ea75b71990b38cbb",
+      "relative_path": "근거 자료/건물3D 후보도면/원본 DWG/04_검토필요/미확정/희창유업(액상ㅡ스틱배치 완료__e68a99093001.dwg",
+      "absolute_path": "C:/Users/user/Desktop/프로젝트/근거 자료/건물3D 후보도면/원본 DWG/04_검토필요/미확정/희창유업(액상ㅡ스틱배치 완료__e68a99093001.dwg",
+      "role": "floor_unknown_dwg_not_converted"
+    },
+    {
+      "name": "스틱 작업장평면도(2023.10.18).xls",
+      "sha256": "cc15d9358b583246ee08c59b8970668c5b6d31d1f6e77fc63d23f66c41221bb6",
+      "relative_path": "근거 자료/건물3D 후보도면/03_층별·생산팀평면/미확정/스틱 작업장평면도(2023.10.18)__cc15d9358b58.xls",
+      "absolute_path": "C:/Users/user/Desktop/프로젝트/근거 자료/건물3D 후보도면/03_층별·생산팀평면/미확정/스틱 작업장평면도(2023.10.18)__cc15d9358b58.xls",
+      "role": "explicit_floor_2_do_not_reuse_as_floor_3"
+    },
+    {
+      "name": "2018현장평면도 정리완료.dwg스틱로보트이설.dwg",
+      "sha256": "23a3cc30ee94bf6f0ebd08a68fce3e3374ca5a16edf3e17ef441bbe6bd862074",
+      "relative_path": "근거 자료/건물3D 후보도면/원본 DWG/03_층별·생산팀평면/미확정/2018현장평면도 정리완료.dwg스틱로보트이설__23a3cc30ee94.dwg",
+      "absolute_path": "C:/Users/user/Desktop/프로젝트/근거 자료/건물3D 후보도면/원본 DWG/03_층별·생산팀평면/미확정/2018현장평면도 정리완료.dwg스틱로보트이설__23a3cc30ee94.dwg",
+      "role": "low_resolution_dwg_thumbnail_not_reused"
+    },
+    {
+      "name": "붙임 4. 제조공정도(통합)_소포장_분쇄공정추가 (22.09.21).pdf",
+      "sha256": "e18666ec963bffcd004c4ca4ffd6f53b13731fd77b62c8f6b585ef0877266e5f",
+      "relative_path": "근거 자료/건물3D 후보도면/04_검토필요/미확정/붙임 4. 제조공정도(통합)_소포장_분쇄공정추가 (22.09.21)__e18666ec963b.pdf",
+      "absolute_path": "C:/Users/user/Desktop/프로젝트/근거 자료/건물3D 후보도면/04_검토필요/미확정/붙임 4. 제조공정도(통합)_소포장_분쇄공정추가 (22.09.21)__e18666ec963b.pdf",
+      "role": "process_names_only_not_spatial_geometry",
+      "page_count": 1,
+      "source_sha_verified": true
+    }
+  ],
+  "primary_drawing_identity": {
+    "plain_title": "9동 3층 평면도",
+    "sheet": "A-07",
+    "date_as_printed": "07.11",
+    "measurement_project": "(주)에이치씨글로벌 유산 공장 증축공사",
+    "floor_3_confirmed": true,
+    "classification_caveat": "CSV 공장단서는 미확정이지만 측량 PDF 자체 표제에서 유산공장 확인. 현재 준공 최종revision은 미확인.",
+    "both_primary_pdfs_pages": 1
+  },
+  "confirmed_dimensions_m": {
+    "main_outer_width": 31.35,
+    "main_outer_depth": 30.4,
+    "axis_total_x": 30.75,
+    "axis_spacing_x": [
+      5.125,
+      5.125,
+      5.125,
+      5.125,
+      5.125,
+      5.125
+    ],
+    "axis_total_z": 29.8,
+    "axis_spacing_z": [
+      4.9,
+      5,
+      5,
+      5,
+      5,
+      4.9
+    ],
+    "outer_wall_thickness": 0.3,
+    "left_rear_stair_projection": 3.45,
+    "front_stair_lift_projection": 3.15,
+    "overall_bbox_width_with_left_stair": 34.8,
+    "overall_bbox_depth_with_front_stair_lift": 33.55,
+    "main_platform_marked_longitudinal_dimension": 17.2,
+    "main_platform_stair_width_marked": 1.2,
+    "cargo_lift_capacity_label": "3TON"
+  },
+  "height_caveat": "층고·플랫폼고 실측값은 확정하지 않음. H=3,000 등은 특정 칸막이 상세이며 전체 천장고로 전용하지 않음.",
+  "recommended_local_frame": {
+    "status": "model_coordinate_proposal_not_georeferenced",
+    "drawing_orientation": "캐시 원본 PNG를 반시계90도 돌려 글자가 바로 보이게 한 도면",
+    "origin": "본체 외곽 직사각형 중심, 바닥 Y=0",
+    "positive_x": "바로 세운 도면 오른쪽",
+    "positive_z": "바로 세운 도면 아래쪽(앞 계단·화물리프트 방향)",
+    "main_bbox_xz": [
+      [
+        -15.675,
+        -15.2
+      ],
+      [
+        15.675,
+        15.2
+      ]
+    ],
+    "left_stair_min_x": -19.125,
+    "front_stair_max_z": 18.35,
+    "north_heading": "도면상 확인되지 않음. 건물전경 GPS좌표계에 임의로 회전·이동 등록하지 않음."
+  },
+  "visually_confirmed_labels": {
+    "back_row_left_to_right": [
+      "계단실2(본체 왼쪽 돌출)",
+      "창고",
+      "CIP실",
+      "계량 원료 적재대",
+      "원료 계량실",
+      "짜투리 보관창고(앞 수식어 판독 신중)",
+      "향료, 색소 계량 일지 정리실",
+      "부품창고"
+    ],
+    "front_edge": [
+      "청소도구함(왼쪽)",
+      "계단·화물용 LIFT 3TON(중앙 돌출)",
+      "전동지게차 충전",
+      "부품창고",
+      "비닐, 파지 쓰레기"
+    ],
+    "equipment_text": [
+      "VIBRATOR",
+      "A.혼합물 대기대"
+    ]
+  },
+  "equipment_geometry_observations": {
+    "main_left_platform": "길쭉한 그레이팅 메인 플랫폼과 양끝 계단. 왼쪽에 정방형 기계3개와 하단 작은 기계1개가 직렬 배치됨. 각각의 제조사·모델·정식설비명은 도면만으로 확정하지 않음.",
+    "additional_right_platform": "일반3층평면 PDF에 오른쪽 추가 색상 배치가 있으며 기계2개와 소형·그레이팅 플랫폼이 보임. 측량 PDF에는 이 추가 배치가 없어 두 도면의 설비revision을 구분함.",
+    "partition": "일반3층평면에서 오른쪽 전면부를 구분하는 L자 칸막이가 보임."
+  },
+  "approximate_layout_for_root_dataset_only": {
+    "unit": "m",
+    "method": "도면의 확정 본체 치수에 PNG상 위치 비례를 대응. 설비배치는 근사값이며 영상과 확인 후 채택.",
+    "main_platform_bbox_xz": [
+      [
+        -12.9,
+        -10.2
+      ],
+      [
+        -6.9,
+        6.8
+      ]
+    ],
+    "main_platform_with_end_stairs_length_about": 19.6,
+    "main_units_centers_xz": [
+      [
+        -11.3,
+        -7.5
+      ],
+      [
+        -11.3,
+        -2.9
+      ],
+      [
+        -11.3,
+        1.6
+      ],
+      [
+        -11.3,
+        4.5
+      ]
+    ],
+    "right_additional_units_centers_xz": [
+      [
+        9.1,
+        -5.8
+      ],
+      [
+        9.1,
+        -3.1
+      ]
+    ],
+    "right_cyan_platform_bbox_xz": [
+      [
+        10.4,
+        -11
+      ],
+      [
+        14.5,
+        -0.3
+      ]
+    ],
+    "back_rooms_z_range": [
+      -15.2,
+      -11.2
+    ],
+    "partition_segments_xz": [
+      [
+        [
+          15.675,
+          -0.3
+        ],
+        [
+          -0.8,
+          -0.3
+        ]
+      ],
+      [
+        [
+          -0.8,
+          -0.3
+        ],
+        [
+          -0.8,
+          11.6
+        ]
+      ]
+    ]
+  },
+  "floor_2_exclusion": {
+    "source_sha256": "cc15d9358b583246ee08c59b8970668c5b6d31d1f6e77fc63d23f66c41221bb6",
+    "pages": 2,
+    "both_pages_explicit_title": "2층 평면도",
+    "shown_equipment": [
+      "스틱1~8호기",
+      "호파1~4",
+      "X-Ray1~3호기",
+      "V MIX2대",
+      "위생전실·공조실·부자재창고"
+    ],
+    "policy": "8개 스틱 충전기 및2층 작업자/부자재 동선을 이번3층 실내로 복사하지 않음."
+  },
+  "other_sources_limits": {
+    "liquid_stick_pdf": "층수 표제가 없고 액상 PET라인·배합실·탱크·샤워/탈의실·주차장 도식이므로 이번3층 외벽/장비위치 확정에 사용하지 않음.",
+    "robot_relocation_dwg": "2018DWG 미리보기180×78px로 배치·문구 판독 불가. 추가변환하지 않음.",
+    "process_pdf": "㈜희창유업제2공장 소포장 제조공정 Rev02(2022.09.21). 원료입고/보관/분쇄/계량/여과/혼합/자석봉/지대또는소포장/중량선별/이물선별/외포장/보관/출고 명칭만 참고. 특정층 기계 위치·개수·공정관리 수치를 모델에 전용하지 않음."
+  },
+  "video_crosscheck_pending": "담당자0~550초 및550~1100초 관찰과 비교. 후반 수평스테인리스 믹서2대/하부6개이상 cone출구는3층오른쪽추가플랫폼과 맞을 가능성이 있으나 중복시점·기기동일성 확정 전 별도 신설 개수로 세지 않음.",
+  "review_images": [
+    "tmp/stick3f-drawing-review/plan3f-upright.png",
+    "tmp/stick3f-drawing-review/measure3f-upright.png",
+    "tmp/stick3f-drawing-review/room-labels.png"
+  ]
+}

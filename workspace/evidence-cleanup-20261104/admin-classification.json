@@ -1,0 +1,752 @@
+{
+    "scope":  "C:\\Users\\user\\Desktop\\근거 자료",
+    "excluded":  "사업자료 subtree handled by parent; all external Desktop folders including 프로젝트 untouched",
+    "mode":  "read-only classification; no files deleted or moved",
+    "as_of":  "2026-11-04",
+    "rows":  [
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\KPI-전기-가스-월별-2024-2026 (1).xlsx",
+                     "relative":  "KPI-전기-가스-월별-2024-2026 (1).xlsx",
+                     "action":  "keep",
+                     "kind":  "file",
+                     "files":  1,
+                     "bytes":  42330,
+                     "reason":  "건조기 열교환기 절감효과·회수기간 검토의 전기·가스 실적 원본 근거로 유지.",
+                     "evidence":  "명시적인 월별 전기·가스 KPI 원장; 부모 작업 지시에서 관련 finance/energy workbook 보존 지정."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\최종자료\\건조기 열교환기 시뮬레이터.html",
+                     "relative":  "최종자료\\건조기 열교환기 시뮬레이터.html",
+                     "action":  "keep",
+                     "kind":  "file",
+                     "files":  1,
+                     "bytes":  14885936,
+                     "reason":  "건조기 폐열회수·열교환기 기술 모델과 경제성 설명의 최종 산출물.",
+                     "evidence":  "명칭과 관리자료/자료관리 안내.txt의 시뮬레이터 설명."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\최종자료\\열교환기 백데이터.html",
+                     "relative":  "최종자료\\열교환기 백데이터.html",
+                     "action":  "keep",
+                     "kind":  "file",
+                     "files":  1,
+                     "bytes":  5932966,
+                     "reason":  "건조기 열교환기 원문·도면·견적·재무 및 열량 검토의 상세 근거.",
+                     "evidence":  "관리자료/자료관리 안내.txt 및 _work_heat_exchanger/build_html.py."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_heat_exchanger",
+                     "relative":  "관리자료\\수집·검토\\_work_heat_exchanger",
+                     "action":  "keep",
+                     "kind":  "directory",
+                     "files":  154,
+                     "bytes":  35567582,
+                     "reason":  "건조기 열교환기 재생성에 필요한 기술 원문 추출, 정면·평면·배관 모델, 이미지·자산 및 비용·열량 근거 전체.",
+                     "evidence":  "자료관리 안내.txt 재생성 절: build_oneglance_3d.py, 3d_assets, full_reconstruction과 원문 자료 필요 명시. doc_source.json docId334757 제목 유산)건조기 열교환기(폐열회수 장치) 설치."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\approval_review_data.json",
+                     "relative":  "관리자료\\수집·검토\\_work_approvals\\approval_review_data.json",
+                     "action":  "keep",
+                     "kind":  "file",
+                     "files":  1,
+                     "bytes":  2531549,
+                     "reason":  "열교환기 빌더가 건조기 기안 docId334757을 고르는 직접 입력 데이터. 혼합 자료이므로 전체 approvals 폴더 삭제 금지.",
+                     "evidence":  "build_html.py:11; build_oneglance.py:7; full_reconstruction/export_source_geometry.py:8 직접 참조."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\00_자료열기.html",
+                     "relative":  "00_자료열기.html",
+                     "action":  "ambiguous_keep",
+                     "kind":  "file",
+                     "files":  1,
+                     "bytes":  259547,
+                     "reason":  "건조기·프로젝트와 사업자료를 연결하는 시작 화면. 삭제보다 건조기 보존 항목으로 목록·링크 재생성이 필요.",
+                     "evidence":  "현재 102개 사업 목록과 ../프로젝트/exports 건조기 통합 툴·화덕 링크 포함."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\안전",
+                     "relative":  "안전",
+                     "action":  "ambiguous_keep",
+                     "kind":  "directory",
+                     "files":  354,
+                     "bytes":  453938310,
+                     "reason":  "초기 수집 보고서 집합과 별도로 최근 생긴 안전개선 작업 폴더로 보임. 사용자가 직접 진행 중인 안전 자료까지 삭제 승인됐는지 불명확하므로 보수적으로 보존.",
+                     "evidence":  "2027_안전개선_근거자료, 월별 자율안전신고 PPT, 독립 _work와 .playwright-mcp 존재. 건조기 기술 자료로 단정하지 않음."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\정리기록",
+                     "relative":  "관리자료\\정리기록",
+                     "action":  "ambiguous_keep",
+                     "kind":  "directory",
+                     "files":  26,
+                     "bytes":  2452975,
+                     "reason":  "보고서 원문이 아닌 이동·중복·원문 링크 검증 및 과거 수집 목록. 이번 삭제 검증·복구 근거로 소량 보존 권고.",
+                     "evidence":  "자료관리 안내.txt 정리기록 설명; 이전수집목록은 HTML/JSON 3개로 실제 사업 원문이 아님."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\자료관리 안내.txt",
+                     "relative":  "관리자료\\자료관리 안내.txt",
+                     "action":  "ambiguous_keep",
+                     "kind":  "file",
+                     "files":  1,
+                     "bytes":  2546,
+                     "reason":  "현재 자료와 열교환기 재생성 방법을 설명하는 관리 안내. 삭제 후 수량·구조 갱신이 필요.",
+                     "evidence":  "열교환기 빌더와 자산 의존성을 명시하는 직접 안내문."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\삭제자료",
+                     "relative":  "삭제자료",
+                     "action":  "delete_candidate",
+                     "kind":  "directory",
+                     "files":  18,
+                     "bytes":  57047061,
+                     "reason":  "이미 최종자료와 원문에 영향 없는 임시 배포 묶음·검토 캡처로 구분된 자료.",
+                     "evidence":  "삭제자료/읽어주세요.txt에 삭제해도 현재 최종자료·사업 원문 열기에 영향 없고 원문171건·첨부533개 미포함 명시."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\.playwright-mcp",
+                     "relative":  ".playwright-mcp",
+                     "action":  "delete_candidate",
+                     "kind":  "directory",
+                     "files":  19,
+                     "bytes":  198405,
+                     "reason":  "브라우저 검토 로그·스냅샷이며 보고서 원문 또는 건조기 모델 입력이 아님.",
+                     "evidence":  "파일은 console-*.log, page-*.yml이며 모델 자산 별도 보존."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\최종자료\\2025-2026 금액총괄.xlsx",
+                     "relative":  "최종자료\\2025-2026 금액총괄.xlsx",
+                     "action":  "delete_candidate",
+                     "kind":  "file",
+                     "files":  1,
+                     "bytes":  314064,
+                     "reason":  "전체 사업 금액 총괄 집계 산출물로 건조기 전용 기술 근거가 아님. 건조기 개별 원문·열교환기 재무 근거는 별도로 보존.",
+                     "evidence":  "자료관리 안내.txt 최종자료 설명과 _work_approvals/export_totals.mjs 용도. 전기·가스 원장과 구분."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\최종자료\\2027 추진안건.html",
+                     "relative":  "최종자료\\2027 추진안건.html",
+                     "action":  "delete_candidate",
+                     "kind":  "file",
+                     "files":  1,
+                     "bytes":  706,
+                     "reason":  "전체 투자실적·2027 투자계획 웹으로 이동하는 일반 투자자료 시작 페이지.",
+                     "evidence":  "파일 본문은 ../관리자료/웹소스/final-investment-hub/dist/index.html로 리다이렉트."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\최종자료\\자료총괄.html",
+                     "relative":  "최종자료\\자료총괄.html",
+                     "action":  "delete_candidate",
+                     "kind":  "file",
+                     "files":  1,
+                     "bytes":  2312055,
+                     "reason":  "전체 사업 자료 총괄 화면으로 건조기 전용 보고서가 아님. 개별 건조기 원문을 보존한 뒤 일반 수집 결과 정리 대상.",
+                     "evidence":  "관리자료/자료관리 안내.txt 사업별 자료총괄 설명; 전체102사업 정보 포함."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\웹소스\\final-investment-hub",
+                     "relative":  "관리자료\\웹소스\\final-investment-hub",
+                     "action":  "delete_candidate",
+                     "kind":  "directory",
+                     "files":  611,
+                     "bytes":  108140541,
+                     "reason":  "전체 투자·기안·비용 비교 웹 소스 및 게시용 복제 자료. 독립 건조기 프로젝트나 열교환기 기술 빌더의 직접 입력이 아님.",
+                     "evidence":  "prepare_approval_site.py, prepare_multiyear.py, data.json 및 2027 추진안건 리다이렉트 대상. 프로젝트는 외부 Desktop/프로젝트로 별도 보존."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\이전작업",
+                     "relative":  "관리자료\\이전작업",
+                     "action":  "ambiguous_keep",
+                     "kind":  "directory",
+                     "files":  63,
+                     "bytes":  3661685,
+                     "reason":  "보고서 원문보다 과거 작성·수집용 관리 소스이며 하위에 외부 Codex 런타임 junction이 존재함. 관련 외부 참조를 건드리지 않도록 이번 보고서 정리에서는 상위 폴더 전체를 보수적으로 보존.",
+                     "evidence":  "비추적 BFS에서 하위 node_modules junction 확인. 파일·링크·외부 대상 모두 삭제하지 않음."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_2025",
+                     "relative":  "관리자료\\수집·검토\\_work_2025",
+                     "action":  "ambiguous_keep",
+                     "kind":  "directory",
+                     "files":  27,
+                     "bytes":  3075233,
+                     "reason":  "보고서 원문보다 과거 작성·수집용 관리 소스이며 하위에 외부 Codex 런타임 junction이 존재함. 관련 외부 참조를 건드리지 않도록 이번 보고서 정리에서는 상위 폴더 전체를 보수적으로 보존.",
+                     "evidence":  "비추적 BFS에서 하위 node_modules junction 확인. 파일·링크·외부 대상 모두 삭제하지 않음."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\node_modules",
+                     "relative":  "관리자료\\수집·검토\\_work_approvals\\node_modules",
+                     "action":  "skip_external_reference",
+                     "kind":  "junction",
+                     "files":  0,
+                     "bytes":  0,
+                     "reason":  "외부 Codex 런타임 공용 의존성으로 연결된 junction이므로 삭제·회수 용량 집계에서 제외. 링크와 외부 대상 모두 변경하지 않음.",
+                     "evidence":  "부모 검증의 Path.resolve 결과가 근거 자료 범위 밖의 Codex 공용 node_modules로 확인됨.",
+                     "resolved_target":  "C:\\Users\\user\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\node_modules",
+                     "reclaimable_bytes":  0
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\xlsx_qa",
+                     "relative":  "관리자료\\수집·검토\\_work_approvals\\xlsx_qa",
+                     "action":  "delete_candidate",
+                     "kind":  "directory",
+                     "files":  7,
+                     "bytes":  1149777,
+                     "reason":  "전체 기안·투자금액 수집·검증·일반 웹 제작 중간자료. 열교환기 직접 참조 입력 approval_review_data.json만 별도 보호했으며 개별 건조기 원문은 사업자료에 보존.",
+                     "evidence":  "heat 기술 소스 전체에서 직접 approvals 참조는 approval_review_data.json 1개만 확인. current_document.json은 외부 냉동창고 작업 doc329247로 비건조기."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\2025_root_chunk.json",
+                     "relative":  "관리자료\\수집·검토\\_work_approvals\\2025_root_chunk.json",
+                     "action":  "delete_candidate",
+                     "kind":  "file",
+                     "files":  1,
+                     "bytes":  70795,
+                     "reason":  "전체 기안·투자금액 수집·검증·일반 웹 제작 중간자료. 열교환기 직접 참조 입력 approval_review_data.json만 별도 보호했으며 개별 건조기 원문은 사업자료에 보존.",
+                     "evidence":  "heat 기술 소스 전체에서 직접 approvals 참조는 approval_review_data.json 1개만 확인. current_document.json은 외부 냉동창고 작업 doc329247로 비건조기."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\additional_reference_inventory.json",
+                     "relative":  "관리자료\\수집·검토\\_work_approvals\\additional_reference_inventory.json",
+                     "action":  "delete_candidate",
+                     "kind":  "file",
+                     "files":  1,
+                     "bytes":  200,
+                     "reason":  "전체 기안·투자금액 수집·검증·일반 웹 제작 중간자료. 열교환기 직접 참조 입력 approval_review_data.json만 별도 보호했으며 개별 건조기 원문은 사업자료에 보존.",
+                     "evidence":  "heat 기술 소스 전체에서 직접 approvals 참조는 approval_review_data.json 1개만 확인. current_document.json은 외부 냉동창고 작업 doc329247로 비건조기."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\add_2027_sheet.mjs",
+                     "relative":  "관리자료\\수집·검토\\_work_approvals\\add_2027_sheet.mjs",
+                     "action":  "delete_candidate",
+                     "kind":  "file",
+                     "files":  1,
+                     "bytes":  9983,
+                     "reason":  "전체 기안·투자금액 수집·검증·일반 웹 제작 중간자료. 열교환기 직접 참조 입력 approval_review_data.json만 별도 보호했으며 개별 건조기 원문은 사업자료에 보존.",
+                     "evidence":  "heat 기술 소스 전체에서 직접 approvals 참조는 approval_review_data.json 1개만 확인. current_document.json은 외부 냉동창고 작업 doc329247로 비건조기."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\all_documents.json",
+                     "relative":  "관리자료\\수집·검토\\_work_approvals\\all_documents.json",
+                     "action":  "delete_candidate",
+                     "kind":  "file",
+                     "files":  1,
+                     "bytes":  1138432,
+                     "reason":  "전체 기안·투자금액 수집·검증·일반 웹 제작 중간자료. 열교환기 직접 참조 입력 approval_review_data.json만 별도 보호했으며 개별 건조기 원문은 사업자료에 보존.",
+                     "evidence":  "heat 기술 소스 전체에서 직접 approvals 참조는 approval_review_data.json 1개만 확인. current_document.json은 외부 냉동창고 작업 doc329247로 비건조기."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\append_2027_sheet.py",
+                     "relative":  "관리자료\\수집·검토\\_work_approvals\\append_2027_sheet.py",
+                     "action":  "delete_candidate",
+                     "kind":  "file",
+                     "files":  1,
+                     "bytes":  7562,
+                     "reason":  "전체 기안·투자금액 수집·검증·일반 웹 제작 중간자료. 열교환기 직접 참조 입력 approval_review_data.json만 별도 보호했으며 개별 건조기 원문은 사업자료에 보존.",
+                     "evidence":  "heat 기술 소스 전체에서 직접 approvals 참조는 approval_review_data.json 1개만 확인. current_document.json은 외부 냉동창고 작업 doc329247로 비건조기."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\browser_download.cjs",
+                     "relative":  "관리자료\\수집·검토\\_work_approvals\\browser_download.cjs",
+                     "action":  "delete_candidate",
+                     "kind":  "file",
+                     "files":  1,
+                     "bytes":  6188,
+                     "reason":  "전체 기안·투자금액 수집·검증·일반 웹 제작 중간자료. 열교환기 직접 참조 입력 approval_review_data.json만 별도 보호했으며 개별 건조기 원문은 사업자료에 보존.",
+                     "evidence":  "heat 기술 소스 전체에서 직접 approvals 참조는 approval_review_data.json 1개만 확인. current_document.json은 외부 냉동창고 작업 doc329247로 비건조기."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\build_project_match_review.py",
+                     "relative":  "관리자료\\수집·검토\\_work_approvals\\build_project_match_review.py",
+                     "action":  "delete_candidate",
+                     "kind":  "file",
+                     "files":  1,
+                     "bytes":  11055,
+                     "reason":  "전체 기안·투자금액 수집·검증·일반 웹 제작 중간자료. 열교환기 직접 참조 입력 approval_review_data.json만 별도 보호했으며 개별 건조기 원문은 사업자료에 보존.",
+                     "evidence":  "heat 기술 소스 전체에서 직접 approvals 참조는 approval_review_data.json 1개만 확인. current_document.json은 외부 냉동창고 작업 doc329247로 비건조기."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\build_proposals_2025_support.py",
+                     "relative":  "관리자료\\수집·검토\\_work_approvals\\build_proposals_2025_support.py",
+                     "action":  "delete_candidate",
+                     "kind":  "file",
+                     "files":  1,
+                     "bytes":  11570,
+                     "reason":  "전체 기안·투자금액 수집·검증·일반 웹 제작 중간자료. 열교환기 직접 참조 입력 approval_review_data.json만 별도 보호했으며 개별 건조기 원문은 사업자료에 보존.",
+                     "evidence":  "heat 기술 소스 전체에서 직접 approvals 참조는 approval_review_data.json 1개만 확인. current_document.json은 외부 냉동창고 작업 doc329247로 비건조기."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\build_proposals_2026_a.py",
+                     "relative":  "관리자료\\수집·검토\\_work_approvals\\build_proposals_2026_a.py",
+                     "action":  "delete_candidate",
+                     "kind":  "file",
+                     "files":  1,
+                     "bytes":  29156,
+                     "reason":  "전체 기안·투자금액 수집·검증·일반 웹 제작 중간자료. 열교환기 직접 참조 입력 approval_review_data.json만 별도 보호했으며 개별 건조기 원문은 사업자료에 보존.",
+                     "evidence":  "heat 기술 소스 전체에서 직접 approvals 참조는 approval_review_data.json 1개만 확인. current_document.json은 외부 냉동창고 작업 doc329247로 비건조기."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\build_proposals_2026_b.py",
+                     "relative":  "관리자료\\수집·검토\\_work_approvals\\build_proposals_2026_b.py",
+                     "action":  "delete_candidate",
+                     "kind":  "file",
+                     "files":  1,
+                     "bytes":  32675,
+                     "reason":  "전체 기안·투자금액 수집·검증·일반 웹 제작 중간자료. 열교환기 직접 참조 입력 approval_review_data.json만 별도 보호했으며 개별 건조기 원문은 사업자료에 보존.",
+                     "evidence":  "heat 기술 소스 전체에서 직접 approvals 참조는 approval_review_data.json 1개만 확인. current_document.json은 외부 냉동창고 작업 doc329247로 비건조기."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\build_registry.py",
+                     "relative":  "관리자료\\수집·검토\\_work_approvals\\build_registry.py",
+                     "action":  "delete_candidate",
+                     "kind":  "file",
+                     "files":  1,
+                     "bytes":  4632,
+                     "reason":  "전체 기안·투자금액 수집·검증·일반 웹 제작 중간자료. 열교환기 직접 참조 입력 approval_review_data.json만 별도 보호했으며 개별 건조기 원문은 사업자료에 보존.",
+                     "evidence":  "heat 기술 소스 전체에서 직접 approvals 참조는 approval_review_data.json 1개만 확인. current_document.json은 외부 냉동창고 작업 doc329247로 비건조기."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\build_review_data.py",
+                     "relative":  "관리자료\\수집·검토\\_work_approvals\\build_review_data.py",
+                     "action":  "delete_candidate",
+                     "kind":  "file",
+                     "files":  1,
+                     "bytes":  18511,
+                     "reason":  "전체 기안·투자금액 수집·검증·일반 웹 제작 중간자료. 열교환기 직접 참조 입력 approval_review_data.json만 별도 보호했으며 개별 건조기 원문은 사업자료에 보존.",
+                     "evidence":  "heat 기술 소스 전체에서 직접 approvals 참조는 approval_review_data.json 1개만 확인. current_document.json은 외부 냉동창고 작업 doc329247로 비건조기."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\build_review_html.py",
+                     "relative":  "관리자료\\수집·검토\\_work_approvals\\build_review_html.py",
+                     "action":  "delete_candidate",
+                     "kind":  "file",
+                     "files":  1,
+                     "bytes":  40251,
+                     "reason":  "전체 기안·투자금액 수집·검증·일반 웹 제작 중간자료. 열교환기 직접 참조 입력 approval_review_data.json만 별도 보호했으며 개별 건조기 원문은 사업자료에 보존.",
+                     "evidence":  "heat 기술 소스 전체에서 직접 approvals 참조는 approval_review_data.json 1개만 확인. current_document.json은 외부 냉동창고 작업 doc329247로 비건조기."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\build_site_frontend.py",
+                     "relative":  "관리자료\\수집·검토\\_work_approvals\\build_site_frontend.py",
+                     "action":  "delete_candidate",
+                     "kind":  "file",
+                     "files":  1,
+                     "bytes":  22107,
+                     "reason":  "전체 기안·투자금액 수집·검증·일반 웹 제작 중간자료. 열교환기 직접 참조 입력 approval_review_data.json만 별도 보호했으며 개별 건조기 원문은 사업자료에 보존.",
+                     "evidence":  "heat 기술 소스 전체에서 직접 approvals 참조는 approval_review_data.json 1개만 확인. current_document.json은 외부 냉동창고 작업 doc329247로 비건조기."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\chunk_2026_a.json",
+                     "relative":  "관리자료\\수집·검토\\_work_approvals\\chunk_2026_a.json",
+                     "action":  "delete_candidate",
+                     "kind":  "file",
+                     "files":  1,
+                     "bytes":  8217,
+                     "reason":  "전체 기안·투자금액 수집·검증·일반 웹 제작 중간자료. 열교환기 직접 참조 입력 approval_review_data.json만 별도 보호했으며 개별 건조기 원문은 사업자료에 보존.",
+                     "evidence":  "heat 기술 소스 전체에서 직접 approvals 참조는 approval_review_data.json 1개만 확인. current_document.json은 외부 냉동창고 작업 doc329247로 비건조기."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\current_document.json",
+                     "relative":  "관리자료\\수집·검토\\_work_approvals\\current_document.json",
+                     "action":  "delete_candidate",
+                     "kind":  "file",
+                     "files":  1,
+                     "bytes":  4502,
+                     "reason":  "전체 기안·투자금액 수집·검증·일반 웹 제작 중간자료. 열교환기 직접 참조 입력 approval_review_data.json만 별도 보호했으며 개별 건조기 원문은 사업자료에 보존.",
+                     "evidence":  "heat 기술 소스 전체에서 직접 approvals 참조는 approval_review_data.json 1개만 확인. current_document.json은 외부 냉동창고 작업 doc329247로 비건조기."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\download_failures.json",
+                     "relative":  "관리자료\\수집·검토\\_work_approvals\\download_failures.json",
+                     "action":  "delete_candidate",
+                     "kind":  "file",
+                     "files":  1,
+                     "bytes":  2,
+                     "reason":  "전체 기안·투자금액 수집·검증·일반 웹 제작 중간자료. 열교환기 직접 참조 입력 approval_review_data.json만 별도 보호했으며 개별 건조기 원문은 사업자료에 보존.",
+                     "evidence":  "heat 기술 소스 전체에서 직접 approvals 참조는 approval_review_data.json 1개만 확인. current_document.json은 외부 냉동창고 작업 doc329247로 비건조기."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\download_manifest.json",
+                     "relative":  "관리자료\\수집·검토\\_work_approvals\\download_manifest.json",
+                     "action":  "delete_candidate",
+                     "kind":  "file",
+                     "files":  1,
+                     "bytes":  662457,
+                     "reason":  "전체 기안·투자금액 수집·검증·일반 웹 제작 중간자료. 열교환기 직접 참조 입력 approval_review_data.json만 별도 보호했으며 개별 건조기 원문은 사업자료에 보존.",
+                     "evidence":  "heat 기술 소스 전체에서 직접 approvals 참조는 approval_review_data.json 1개만 확인. current_document.json은 외부 냉동창고 작업 doc329247로 비건조기."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\draft_2025_inventory.json",
+                     "relative":  "관리자료\\수집·검토\\_work_approvals\\draft_2025_inventory.json",
+                     "action":  "delete_candidate",
+                     "kind":  "file",
+                     "files":  1,
+                     "bytes":  9357,
+                     "reason":  "전체 기안·투자금액 수집·검증·일반 웹 제작 중간자료. 열교환기 직접 참조 입력 approval_review_data.json만 별도 보호했으며 개별 건조기 원문은 사업자료에 보존.",
+                     "evidence":  "heat 기술 소스 전체에서 직접 approvals 참조는 approval_review_data.json 1개만 확인. current_document.json은 외부 냉동창고 작업 doc329247로 비건조기."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\draft_2026_hc_inventory.json",
+                     "relative":  "관리자료\\수집·검토\\_work_approvals\\draft_2026_hc_inventory.json",
+                     "action":  "delete_candidate",
+                     "kind":  "file",
+                     "files":  1,
+                     "bytes":  700,
+                     "reason":  "전체 기안·투자금액 수집·검증·일반 웹 제작 중간자료. 열교환기 직접 참조 입력 approval_review_data.json만 별도 보호했으며 개별 건조기 원문은 사업자료에 보존.",
+                     "evidence":  "heat 기술 소스 전체에서 직접 approvals 참조는 approval_review_data.json 1개만 확인. current_document.json은 외부 냉동창고 작업 doc329247로 비건조기."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\draft_2026_inventory.json",
+                     "relative":  "관리자료\\수집·검토\\_work_approvals\\draft_2026_inventory.json",
+                     "action":  "delete_candidate",
+                     "kind":  "file",
+                     "files":  1,
+                     "bytes":  15557,
+                     "reason":  "전체 기안·투자금액 수집·검증·일반 웹 제작 중간자료. 열교환기 직접 참조 입력 approval_review_data.json만 별도 보호했으며 개별 건조기 원문은 사업자료에 보존.",
+                     "evidence":  "heat 기술 소스 전체에서 직접 approvals 참조는 approval_review_data.json 1개만 확인. current_document.json은 외부 냉동창고 작업 doc329247로 비건조기."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\enhance_scan_ocr_2026_b.py",
+                     "relative":  "관리자료\\수집·검토\\_work_approvals\\enhance_scan_ocr_2026_b.py",
+                     "action":  "delete_candidate",
+                     "kind":  "file",
+                     "files":  1,
+                     "bytes":  2144,
+                     "reason":  "전체 기안·투자금액 수집·검증·일반 웹 제작 중간자료. 열교환기 직접 참조 입력 approval_review_data.json만 별도 보호했으며 개별 건조기 원문은 사업자료에 보존.",
+                     "evidence":  "heat 기술 소스 전체에서 직접 approvals 참조는 approval_review_data.json 1개만 확인. current_document.json은 외부 냉동창고 작업 doc329247로 비건조기."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\export_totals.mjs",
+                     "relative":  "관리자료\\수집·검토\\_work_approvals\\export_totals.mjs",
+                     "action":  "delete_candidate",
+                     "kind":  "file",
+                     "files":  1,
+                     "bytes":  26332,
+                     "reason":  "전체 기안·투자금액 수집·검증·일반 웹 제작 중간자료. 열교환기 직접 참조 입력 approval_review_data.json만 별도 보호했으며 개별 건조기 원문은 사업자료에 보존.",
+                     "evidence":  "heat 기술 소스 전체에서 직접 approvals 참조는 approval_review_data.json 1개만 확인. current_document.json은 외부 냉동창고 작업 doc329247로 비건조기."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\extract_2026_b.py",
+                     "relative":  "관리자료\\수집·검토\\_work_approvals\\extract_2026_b.py",
+                     "action":  "delete_candidate",
+                     "kind":  "file",
+                     "files":  1,
+                     "bytes":  5525,
+                     "reason":  "전체 기안·투자금액 수집·검증·일반 웹 제작 중간자료. 열교환기 직접 참조 입력 approval_review_data.json만 별도 보호했으며 개별 건조기 원문은 사업자료에 보존.",
+                     "evidence":  "heat 기술 소스 전체에서 직접 approvals 참조는 approval_review_data.json 1개만 확인. current_document.json은 외부 냉동창고 작업 doc329247로 비건조기."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\extract_proposal_a.py",
+                     "relative":  "관리자료\\수집·검토\\_work_approvals\\extract_proposal_a.py",
+                     "action":  "delete_candidate",
+                     "kind":  "file",
+                     "files":  1,
+                     "bytes":  2374,
+                     "reason":  "전체 기안·투자금액 수집·검증·일반 웹 제작 중간자료. 열교환기 직접 참조 입력 approval_review_data.json만 별도 보호했으며 개별 건조기 원문은 사업자료에 보존.",
+                     "evidence":  "heat 기술 소스 전체에서 직접 approvals 참조는 approval_review_data.json 1개만 확인. current_document.json은 외부 냉동창고 작업 doc329247로 비건조기."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\extract_proposal_a_attachments.py",
+                     "relative":  "관리자료\\수집·검토\\_work_approvals\\extract_proposal_a_attachments.py",
+                     "action":  "delete_candidate",
+                     "kind":  "file",
+                     "files":  1,
+                     "bytes":  3491,
+                     "reason":  "전체 기안·투자금액 수집·검증·일반 웹 제작 중간자료. 열교환기 직접 참조 입력 approval_review_data.json만 별도 보호했으며 개별 건조기 원문은 사업자료에 보존.",
+                     "evidence":  "heat 기술 소스 전체에서 직접 approvals 참조는 approval_review_data.json 1개만 확인. current_document.json은 외부 냉동창고 작업 doc329247로 비건조기."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\extract_support_2025.py",
+                     "relative":  "관리자료\\수집·검토\\_work_approvals\\extract_support_2025.py",
+                     "action":  "delete_candidate",
+                     "kind":  "file",
+                     "files":  1,
+                     "bytes":  2032,
+                     "reason":  "전체 기안·투자금액 수집·검증·일반 웹 제작 중간자료. 열교환기 직접 참조 입력 approval_review_data.json만 별도 보호했으며 개별 건조기 원문은 사업자료에 보존.",
+                     "evidence":  "heat 기술 소스 전체에서 직접 approvals 참조는 approval_review_data.json 1개만 확인. current_document.json은 외부 냉동창고 작업 doc329247로 비건조기."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\final_delivery_receipt.json",
+                     "relative":  "관리자료\\수집·검토\\_work_approvals\\final_delivery_receipt.json",
+                     "action":  "delete_candidate",
+                     "kind":  "file",
+                     "files":  1,
+                     "bytes":  686,
+                     "reason":  "전체 기안·투자금액 수집·검증·일반 웹 제작 중간자료. 열교환기 직접 참조 입력 approval_review_data.json만 별도 보호했으며 개별 건조기 원문은 사업자료에 보존.",
+                     "evidence":  "heat 기술 소스 전체에서 직접 approvals 참조는 approval_review_data.json 1개만 확인. current_document.json은 외부 냉동창고 작업 doc329247로 비건조기."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\manifest_2026.json",
+                     "relative":  "관리자료\\수집·검토\\_work_approvals\\manifest_2026.json",
+                     "action":  "delete_candidate",
+                     "kind":  "file",
+                     "files":  1,
+                     "bytes":  240376,
+                     "reason":  "전체 기안·투자금액 수집·검증·일반 웹 제작 중간자료. 열교환기 직접 참조 입력 approval_review_data.json만 별도 보호했으며 개별 건조기 원문은 사업자료에 보존.",
+                     "evidence":  "heat 기술 소스 전체에서 직접 approvals 참조는 approval_review_data.json 1개만 확인. current_document.json은 외부 냉동창고 작업 doc329247로 비건조기."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\manifest_2026.verification.json",
+                     "relative":  "관리자료\\수집·검토\\_work_approvals\\manifest_2026.verification.json",
+                     "action":  "delete_candidate",
+                     "kind":  "file",
+                     "files":  1,
+                     "bytes":  18161,
+                     "reason":  "전체 기안·투자금액 수집·검증·일반 웹 제작 중간자료. 열교환기 직접 참조 입력 approval_review_data.json만 별도 보호했으며 개별 건조기 원문은 사업자료에 보존.",
+                     "evidence":  "heat 기술 소스 전체에서 직접 approvals 참조는 approval_review_data.json 1개만 확인. current_document.json은 외부 냉동창고 작업 doc329247로 비건조기."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\missing_reference_ids.json",
+                     "relative":  "관리자료\\수집·검토\\_work_approvals\\missing_reference_ids.json",
+                     "action":  "delete_candidate",
+                     "kind":  "file",
+                     "files":  1,
+                     "bytes":  2,
+                     "reason":  "전체 기안·투자금액 수집·검증·일반 웹 제작 중간자료. 열교환기 직접 참조 입력 approval_review_data.json만 별도 보호했으며 개별 건조기 원문은 사업자료에 보존.",
+                     "evidence":  "heat 기술 소스 전체에서 직접 approvals 참조는 approval_review_data.json 1개만 확인. current_document.json은 외부 냉동창고 작업 doc329247로 비건조기."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\patch_totals_hyperlinks.py",
+                     "relative":  "관리자료\\수집·검토\\_work_approvals\\patch_totals_hyperlinks.py",
+                     "action":  "delete_candidate",
+                     "kind":  "file",
+                     "files":  1,
+                     "bytes":  3222,
+                     "reason":  "전체 기안·투자금액 수집·검증·일반 웹 제작 중간자료. 열교환기 직접 참조 입력 approval_review_data.json만 별도 보호했으며 개별 건조기 원문은 사업자료에 보존.",
+                     "evidence":  "heat 기술 소스 전체에서 직접 approvals 참조는 approval_review_data.json 1개만 확인. current_document.json은 외부 냉동창고 작업 doc329247로 비건조기."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\project_match_review.json",
+                     "relative":  "관리자료\\수집·검토\\_work_approvals\\project_match_review.json",
+                     "action":  "delete_candidate",
+                     "kind":  "file",
+                     "files":  1,
+                     "bytes":  47143,
+                     "reason":  "전체 기안·투자금액 수집·검증·일반 웹 제작 중간자료. 열교환기 직접 참조 입력 approval_review_data.json만 별도 보호했으며 개별 건조기 원문은 사업자료에 보존.",
+                     "evidence":  "heat 기술 소스 전체에서 직접 approvals 참조는 approval_review_data.json 1개만 확인. current_document.json은 외부 냉동창고 작업 doc329247로 비건조기."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\proposals_2025_a.json",
+                     "relative":  "관리자료\\수집·검토\\_work_approvals\\proposals_2025_a.json",
+                     "action":  "delete_candidate",
+                     "kind":  "file",
+                     "files":  1,
+                     "bytes":  92822,
+                     "reason":  "전체 기안·투자금액 수집·검증·일반 웹 제작 중간자료. 열교환기 직접 참조 입력 approval_review_data.json만 별도 보호했으며 개별 건조기 원문은 사업자료에 보존.",
+                     "evidence":  "heat 기술 소스 전체에서 직접 approvals 참조는 approval_review_data.json 1개만 확인. current_document.json은 외부 냉동창고 작업 doc329247로 비건조기."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\proposals_2025_b.json",
+                     "relative":  "관리자료\\수집·검토\\_work_approvals\\proposals_2025_b.json",
+                     "action":  "delete_candidate",
+                     "kind":  "file",
+                     "files":  1,
+                     "bytes":  72566,
+                     "reason":  "전체 기안·투자금액 수집·검증·일반 웹 제작 중간자료. 열교환기 직접 참조 입력 approval_review_data.json만 별도 보호했으며 개별 건조기 원문은 사업자료에 보존.",
+                     "evidence":  "heat 기술 소스 전체에서 직접 approvals 참조는 approval_review_data.json 1개만 확인. current_document.json은 외부 냉동창고 작업 doc329247로 비건조기."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\proposals_2025_support.json",
+                     "relative":  "관리자료\\수집·검토\\_work_approvals\\proposals_2025_support.json",
+                     "action":  "delete_candidate",
+                     "kind":  "file",
+                     "files":  1,
+                     "bytes":  66958,
+                     "reason":  "전체 기안·투자금액 수집·검증·일반 웹 제작 중간자료. 열교환기 직접 참조 입력 approval_review_data.json만 별도 보호했으며 개별 건조기 원문은 사업자료에 보존.",
+                     "evidence":  "heat 기술 소스 전체에서 직접 approvals 참조는 approval_review_data.json 1개만 확인. current_document.json은 외부 냉동창고 작업 doc329247로 비건조기."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\proposals_2026_a.json",
+                     "relative":  "관리자료\\수집·검토\\_work_approvals\\proposals_2026_a.json",
+                     "action":  "delete_candidate",
+                     "kind":  "file",
+                     "files":  1,
+                     "bytes":  212740,
+                     "reason":  "전체 기안·투자금액 수집·검증·일반 웹 제작 중간자료. 열교환기 직접 참조 입력 approval_review_data.json만 별도 보호했으며 개별 건조기 원문은 사업자료에 보존.",
+                     "evidence":  "heat 기술 소스 전체에서 직접 approvals 참조는 approval_review_data.json 1개만 확인. current_document.json은 외부 냉동창고 작업 doc329247로 비건조기."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\proposals_2026_b.json",
+                     "relative":  "관리자료\\수집·검토\\_work_approvals\\proposals_2026_b.json",
+                     "action":  "delete_candidate",
+                     "kind":  "file",
+                     "files":  1,
+                     "bytes":  391181,
+                     "reason":  "전체 기안·투자금액 수집·검증·일반 웹 제작 중간자료. 열교환기 직접 참조 입력 approval_review_data.json만 별도 보호했으며 개별 건조기 원문은 사업자료에 보존.",
+                     "evidence":  "heat 기술 소스 전체에서 직접 approvals 참조는 approval_review_data.json 1개만 확인. current_document.json은 외부 냉동창고 작업 doc329247로 비건조기."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\proposals_2026_b_audit.json",
+                     "relative":  "관리자료\\수집·검토\\_work_approvals\\proposals_2026_b_audit.json",
+                     "action":  "delete_candidate",
+                     "kind":  "file",
+                     "files":  1,
+                     "bytes":  7832,
+                     "reason":  "전체 기안·투자금액 수집·검증·일반 웹 제작 중간자료. 열교환기 직접 참조 입력 approval_review_data.json만 별도 보호했으며 개별 건조기 원문은 사업자료에 보존.",
+                     "evidence":  "heat 기술 소스 전체에서 직접 approvals 참조는 approval_review_data.json 1개만 확인. current_document.json은 외부 냉동창고 작업 doc329247로 비건조기."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\proposals_a_body.txt",
+                     "relative":  "관리자료\\수집·검토\\_work_approvals\\proposals_a_body.txt",
+                     "action":  "delete_candidate",
+                     "kind":  "file",
+                     "files":  1,
+                     "bytes":  26647,
+                     "reason":  "전체 기안·투자금액 수집·검증·일반 웹 제작 중간자료. 열교환기 직접 참조 입력 approval_review_data.json만 별도 보호했으며 개별 건조기 원문은 사업자료에 보존.",
+                     "evidence":  "heat 기술 소스 전체에서 직접 approvals 참조는 approval_review_data.json 1개만 확인. current_document.json은 외부 냉동창고 작업 doc329247로 비건조기."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\proposals_extra.json",
+                     "relative":  "관리자료\\수집·검토\\_work_approvals\\proposals_extra.json",
+                     "action":  "delete_candidate",
+                     "kind":  "file",
+                     "files":  1,
+                     "bytes":  20776,
+                     "reason":  "전체 기안·투자금액 수집·검증·일반 웹 제작 중간자료. 열교환기 직접 참조 입력 approval_review_data.json만 별도 보호했으며 개별 건조기 원문은 사업자료에 보존.",
+                     "evidence":  "heat 기술 소스 전체에서 직접 approvals 참조는 approval_review_data.json 1개만 확인. current_document.json은 외부 냉동창고 작업 doc329247로 비건조기."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\review_desktop.png",
+                     "relative":  "관리자료\\수집·검토\\_work_approvals\\review_desktop.png",
+                     "action":  "delete_candidate",
+                     "kind":  "file",
+                     "files":  1,
+                     "bytes":  101857,
+                     "reason":  "전체 기안·투자금액 수집·검증·일반 웹 제작 중간자료. 열교환기 직접 참조 입력 approval_review_data.json만 별도 보호했으며 개별 건조기 원문은 사업자료에 보존.",
+                     "evidence":  "heat 기술 소스 전체에서 직접 approvals 참조는 approval_review_data.json 1개만 확인. current_document.json은 외부 냉동창고 작업 doc329247로 비건조기."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\review_mobile.png",
+                     "relative":  "관리자료\\수집·검토\\_work_approvals\\review_mobile.png",
+                     "action":  "delete_candidate",
+                     "kind":  "file",
+                     "files":  1,
+                     "bytes":  45727,
+                     "reason":  "전체 기안·투자금액 수집·검증·일반 웹 제작 중간자료. 열교환기 직접 참조 입력 approval_review_data.json만 별도 보호했으며 개별 건조기 원문은 사업자료에 보존.",
+                     "evidence":  "heat 기술 소스 전체에서 직접 approvals 참조는 approval_review_data.json 1개만 확인. current_document.json은 외부 냉동창고 작업 doc329247로 비건조기."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\review_runtime.js",
+                     "relative":  "관리자료\\수집·검토\\_work_approvals\\review_runtime.js",
+                     "action":  "delete_candidate",
+                     "kind":  "file",
+                     "files":  1,
+                     "bytes":  12457,
+                     "reason":  "전체 기안·투자금액 수집·검증·일반 웹 제작 중간자료. 열교환기 직접 참조 입력 approval_review_data.json만 별도 보호했으며 개별 건조기 원문은 사업자료에 보존.",
+                     "evidence":  "heat 기술 소스 전체에서 직접 approvals 참조는 approval_review_data.json 1개만 확인. current_document.json은 외부 냉동창고 작업 doc329247로 비건조기."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\site_match_data.json",
+                     "relative":  "관리자료\\수집·검토\\_work_approvals\\site_match_data.json",
+                     "action":  "delete_candidate",
+                     "kind":  "file",
+                     "files":  1,
+                     "bytes":  238386,
+                     "reason":  "전체 기안·투자금액 수집·검증·일반 웹 제작 중간자료. 열교환기 직접 참조 입력 approval_review_data.json만 별도 보호했으며 개별 건조기 원문은 사업자료에 보존.",
+                     "evidence":  "heat 기술 소스 전체에서 직접 approvals 참조는 approval_review_data.json 1개만 확인. current_document.json은 외부 냉동창고 작업 doc329247로 비건조기."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\site_review_desktop.png",
+                     "relative":  "관리자료\\수집·검토\\_work_approvals\\site_review_desktop.png",
+                     "action":  "delete_candidate",
+                     "kind":  "file",
+                     "files":  1,
+                     "bytes":  111703,
+                     "reason":  "전체 기안·투자금액 수집·검증·일반 웹 제작 중간자료. 열교환기 직접 참조 입력 approval_review_data.json만 별도 보호했으며 개별 건조기 원문은 사업자료에 보존.",
+                     "evidence":  "heat 기술 소스 전체에서 직접 approvals 참조는 approval_review_data.json 1개만 확인. current_document.json은 외부 냉동창고 작업 doc329247로 비건조기."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\site_review_desktop_final.png",
+                     "relative":  "관리자료\\수집·검토\\_work_approvals\\site_review_desktop_final.png",
+                     "action":  "delete_candidate",
+                     "kind":  "file",
+                     "files":  1,
+                     "bytes":  107953,
+                     "reason":  "전체 기안·투자금액 수집·검증·일반 웹 제작 중간자료. 열교환기 직접 참조 입력 approval_review_data.json만 별도 보호했으며 개별 건조기 원문은 사업자료에 보존.",
+                     "evidence":  "heat 기술 소스 전체에서 직접 approvals 참조는 approval_review_data.json 1개만 확인. current_document.json은 외부 냉동창고 작업 doc329247로 비건조기."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\site_review_mobile.png",
+                     "relative":  "관리자료\\수집·검토\\_work_approvals\\site_review_mobile.png",
+                     "action":  "delete_candidate",
+                     "kind":  "file",
+                     "files":  1,
+                     "bytes":  48346,
+                     "reason":  "전체 기안·투자금액 수집·검증·일반 웹 제작 중간자료. 열교환기 직접 참조 입력 approval_review_data.json만 별도 보호했으며 개별 건조기 원문은 사업자료에 보존.",
+                     "evidence":  "heat 기술 소스 전체에서 직접 approvals 참조는 approval_review_data.json 1개만 확인. current_document.json은 외부 냉동창고 작업 doc329247로 비건조기."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\site_review_mobile_plans.png",
+                     "relative":  "관리자료\\수집·검토\\_work_approvals\\site_review_mobile_plans.png",
+                     "action":  "delete_candidate",
+                     "kind":  "file",
+                     "files":  1,
+                     "bytes":  51086,
+                     "reason":  "전체 기안·투자금액 수집·검증·일반 웹 제작 중간자료. 열교환기 직접 참조 입력 approval_review_data.json만 별도 보호했으며 개별 건조기 원문은 사업자료에 보존.",
+                     "evidence":  "heat 기술 소스 전체에서 직접 approvals 참조는 approval_review_data.json 1개만 확인. current_document.json은 외부 냉동창고 작업 doc329247로 비건조기."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\unresolved_report_references.json",
+                     "relative":  "관리자료\\수집·검토\\_work_approvals\\unresolved_report_references.json",
+                     "action":  "delete_candidate",
+                     "kind":  "file",
+                     "files":  1,
+                     "bytes":  2,
+                     "reason":  "전체 기안·투자금액 수집·검증·일반 웹 제작 중간자료. 열교환기 직접 참조 입력 approval_review_data.json만 별도 보호했으며 개별 건조기 원문은 사업자료에 보존.",
+                     "evidence":  "heat 기술 소스 전체에서 직접 approvals 참조는 approval_review_data.json 1개만 확인. current_document.json은 외부 냉동창고 작업 doc329247로 비건조기."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\verify_totals.py",
+                     "relative":  "관리자료\\수집·검토\\_work_approvals\\verify_totals.py",
+                     "action":  "delete_candidate",
+                     "kind":  "file",
+                     "files":  1,
+                     "bytes":  5824,
+                     "reason":  "전체 기안·투자금액 수집·검증·일반 웹 제작 중간자료. 열교환기 직접 참조 입력 approval_review_data.json만 별도 보호했으며 개별 건조기 원문은 사업자료에 보존.",
+                     "evidence":  "heat 기술 소스 전체에서 직접 approvals 참조는 approval_review_data.json 1개만 확인. current_document.json은 외부 냉동창고 작업 doc329247로 비건조기."
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\이전작업\\_work\\node_modules",
+                     "relative":  "관리자료\\이전작업\\_work\\node_modules",
+                     "action":  "skip_external_reference",
+                     "kind":  "junction",
+                     "files":  0,
+                     "bytes":  0,
+                     "reason":  "외부 Codex 런타임 공용 의존성 junction. 소유한 보고서가 아니므로 링크와 외부 내용 모두 정리 대상에서 제외.",
+                     "evidence":  "비추적 BFS와 Get-Item LinkType=Junction, Target 확인.",
+                     "resolved_target":  "C:\\Users\\user\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\node_modules",
+                     "reclaimable_bytes":  0
+                 },
+                 {
+                     "path":  "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_2025\\final_exports_build\\node_modules",
+                     "relative":  "관리자료\\수집·검토\\_work_2025\\final_exports_build\\node_modules",
+                     "action":  "skip_external_reference",
+                     "kind":  "junction",
+                     "files":  0,
+                     "bytes":  0,
+                     "reason":  "외부 Codex 런타임 공용 의존성 junction. 소유한 보고서가 아니므로 링크와 외부 내용 모두 정리 대상에서 제외.",
+                     "evidence":  "비추적 BFS와 Get-Item LinkType=Junction, Target 확인.",
+                     "resolved_target":  "C:\\Users\\user\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\node_modules",
+                     "reclaimable_bytes":  0
+                 }
+             ],
+    "summary":  {
+                    "keep":  5,
+                    "ambiguous_keep":  6,
+                    "delete_candidates":  58,
+                    "candidate_bytes":  173232869,
+                    "skip_external_reference":  3
+                },
+    "protected_containers":  [
+                                 "C:\\Users\\user\\Desktop\\근거 자료\\관리자료",
+                                 "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토",
+                                 "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals",
+                                 "C:\\Users\\user\\Desktop\\근거 자료\\최종자료",
+                                 "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\이전작업",
+                                 "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_2025",
+                                 "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\이전작업\\_work",
+                                 "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_2025\\final_exports_build"
+                             ],
+    "deletion_candidates_reparse_checked":  true
+}

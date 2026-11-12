@@ -1,0 +1,587 @@
+{
+  "source": "1팀 2파트 출입구 - 1.5층 - 3층\\20261112_145442KST_GPS-VALID_LAT35.3631133_LON129.0300967_H153.0-TN_DIR-AVAILABLE_P-21.2_ACC2.6m_FV-7459fd4f-decc-45cb-974d-d90fc6bca7f5.mp4",
+  "duration_seconds": 724.804311,
+  "step_seconds": 6,
+  "samples": [
+    {
+      "seconds": 0,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0000.00s.jpg"
+    },
+    {
+      "seconds": 6,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0006.00s.jpg"
+    },
+    {
+      "seconds": 12,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0012.00s.jpg"
+    },
+    {
+      "seconds": 18,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0018.00s.jpg"
+    },
+    {
+      "seconds": 24,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0024.00s.jpg"
+    },
+    {
+      "seconds": 30,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0030.00s.jpg"
+    },
+    {
+      "seconds": 36,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0036.00s.jpg"
+    },
+    {
+      "seconds": 42,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0042.00s.jpg"
+    },
+    {
+      "seconds": 48,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0048.00s.jpg"
+    },
+    {
+      "seconds": 54,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0054.00s.jpg"
+    },
+    {
+      "seconds": 60,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0060.00s.jpg"
+    },
+    {
+      "seconds": 66,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0066.00s.jpg"
+    },
+    {
+      "seconds": 72,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0072.00s.jpg"
+    },
+    {
+      "seconds": 78,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0078.00s.jpg"
+    },
+    {
+      "seconds": 84,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0084.00s.jpg"
+    },
+    {
+      "seconds": 90,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0090.00s.jpg"
+    },
+    {
+      "seconds": 96,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0096.00s.jpg"
+    },
+    {
+      "seconds": 102,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0102.00s.jpg"
+    },
+    {
+      "seconds": 108,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0108.00s.jpg"
+    },
+    {
+      "seconds": 114,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0114.00s.jpg"
+    },
+    {
+      "seconds": 120,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0120.00s.jpg"
+    },
+    {
+      "seconds": 126,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0126.00s.jpg"
+    },
+    {
+      "seconds": 132,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0132.00s.jpg"
+    },
+    {
+      "seconds": 138,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0138.00s.jpg"
+    },
+    {
+      "seconds": 144,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0144.00s.jpg"
+    },
+    {
+      "seconds": 150,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0150.00s.jpg"
+    },
+    {
+      "seconds": 156,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0156.00s.jpg"
+    },
+    {
+      "seconds": 162,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0162.00s.jpg"
+    },
+    {
+      "seconds": 168,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0168.00s.jpg"
+    },
+    {
+      "seconds": 174,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0174.00s.jpg"
+    },
+    {
+      "seconds": 180,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0180.00s.jpg"
+    },
+    {
+      "seconds": 186,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0186.00s.jpg"
+    },
+    {
+      "seconds": 192,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0192.00s.jpg"
+    },
+    {
+      "seconds": 198,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0198.00s.jpg"
+    },
+    {
+      "seconds": 204,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0204.00s.jpg"
+    },
+    {
+      "seconds": 210,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0210.00s.jpg"
+    },
+    {
+      "seconds": 216,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0216.00s.jpg"
+    },
+    {
+      "seconds": 222,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0222.00s.jpg"
+    },
+    {
+      "seconds": 228,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0228.00s.jpg"
+    },
+    {
+      "seconds": 234,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0234.00s.jpg"
+    },
+    {
+      "seconds": 240,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0240.00s.jpg"
+    },
+    {
+      "seconds": 246,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0246.00s.jpg"
+    },
+    {
+      "seconds": 252,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0252.00s.jpg"
+    },
+    {
+      "seconds": 258,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0258.00s.jpg"
+    },
+    {
+      "seconds": 264,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0264.00s.jpg"
+    },
+    {
+      "seconds": 270,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0270.00s.jpg"
+    },
+    {
+      "seconds": 276,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0276.00s.jpg"
+    },
+    {
+      "seconds": 282,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0282.00s.jpg"
+    },
+    {
+      "seconds": 288,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0288.00s.jpg"
+    },
+    {
+      "seconds": 294,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0294.00s.jpg"
+    },
+    {
+      "seconds": 300,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0300.00s.jpg"
+    },
+    {
+      "seconds": 306,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0306.00s.jpg"
+    },
+    {
+      "seconds": 312,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0312.00s.jpg"
+    },
+    {
+      "seconds": 318,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0318.00s.jpg"
+    },
+    {
+      "seconds": 324,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0324.00s.jpg"
+    },
+    {
+      "seconds": 330,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0330.00s.jpg"
+    },
+    {
+      "seconds": 336,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0336.00s.jpg"
+    },
+    {
+      "seconds": 342,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0342.00s.jpg"
+    },
+    {
+      "seconds": 348,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0348.00s.jpg"
+    },
+    {
+      "seconds": 354,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0354.00s.jpg"
+    },
+    {
+      "seconds": 360,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0360.00s.jpg"
+    },
+    {
+      "seconds": 366,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0366.00s.jpg"
+    },
+    {
+      "seconds": 372,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0372.00s.jpg"
+    },
+    {
+      "seconds": 378,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0378.00s.jpg"
+    },
+    {
+      "seconds": 384,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0384.00s.jpg"
+    },
+    {
+      "seconds": 390,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0390.00s.jpg"
+    },
+    {
+      "seconds": 396,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0396.00s.jpg"
+    },
+    {
+      "seconds": 402,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0402.00s.jpg"
+    },
+    {
+      "seconds": 408,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0408.00s.jpg"
+    },
+    {
+      "seconds": 414,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0414.00s.jpg"
+    },
+    {
+      "seconds": 420,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0420.00s.jpg"
+    },
+    {
+      "seconds": 426,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0426.00s.jpg"
+    },
+    {
+      "seconds": 432,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0432.00s.jpg"
+    },
+    {
+      "seconds": 438,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0438.00s.jpg"
+    },
+    {
+      "seconds": 444,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0444.00s.jpg"
+    },
+    {
+      "seconds": 450,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0450.00s.jpg"
+    },
+    {
+      "seconds": 456,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0456.00s.jpg"
+    },
+    {
+      "seconds": 462,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0462.00s.jpg"
+    },
+    {
+      "seconds": 468,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0468.00s.jpg"
+    },
+    {
+      "seconds": 474,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0474.00s.jpg"
+    },
+    {
+      "seconds": 480,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0480.00s.jpg"
+    },
+    {
+      "seconds": 486,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0486.00s.jpg"
+    },
+    {
+      "seconds": 492,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0492.00s.jpg"
+    },
+    {
+      "seconds": 498,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0498.00s.jpg"
+    },
+    {
+      "seconds": 504,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0504.00s.jpg"
+    },
+    {
+      "seconds": 510,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0510.00s.jpg"
+    },
+    {
+      "seconds": 516,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0516.00s.jpg"
+    },
+    {
+      "seconds": 522,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0522.00s.jpg"
+    },
+    {
+      "seconds": 528,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0528.00s.jpg"
+    },
+    {
+      "seconds": 534,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0534.00s.jpg"
+    },
+    {
+      "seconds": 540,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0540.00s.jpg"
+    },
+    {
+      "seconds": 546,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0546.00s.jpg"
+    },
+    {
+      "seconds": 552,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0552.00s.jpg"
+    },
+    {
+      "seconds": 558,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0558.00s.jpg"
+    },
+    {
+      "seconds": 564,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0564.00s.jpg"
+    },
+    {
+      "seconds": 570,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0570.00s.jpg"
+    },
+    {
+      "seconds": 576,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0576.00s.jpg"
+    },
+    {
+      "seconds": 582,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0582.00s.jpg"
+    },
+    {
+      "seconds": 588,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0588.00s.jpg"
+    },
+    {
+      "seconds": 594,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0594.00s.jpg"
+    },
+    {
+      "seconds": 600,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0600.00s.jpg"
+    },
+    {
+      "seconds": 606,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0606.00s.jpg"
+    },
+    {
+      "seconds": 612,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0612.00s.jpg"
+    },
+    {
+      "seconds": 618,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0618.00s.jpg"
+    },
+    {
+      "seconds": 624,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0624.00s.jpg"
+    },
+    {
+      "seconds": 630,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0630.00s.jpg"
+    },
+    {
+      "seconds": 636,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0636.00s.jpg"
+    },
+    {
+      "seconds": 642,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0642.00s.jpg"
+    },
+    {
+      "seconds": 648,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0648.00s.jpg"
+    },
+    {
+      "seconds": 654,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0654.00s.jpg"
+    },
+    {
+      "seconds": 660,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0660.00s.jpg"
+    },
+    {
+      "seconds": 666,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0666.00s.jpg"
+    },
+    {
+      "seconds": 672,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0672.00s.jpg"
+    },
+    {
+      "seconds": 678,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0678.00s.jpg"
+    },
+    {
+      "seconds": 684,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0684.00s.jpg"
+    },
+    {
+      "seconds": 690,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0690.00s.jpg"
+    },
+    {
+      "seconds": 696,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0696.00s.jpg"
+    },
+    {
+      "seconds": 702,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0702.00s.jpg"
+    },
+    {
+      "seconds": 708,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0708.00s.jpg"
+    },
+    {
+      "seconds": 714,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0714.00s.jpg"
+    },
+    {
+      "seconds": 720,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0720.00s.jpg"
+    }
+  ],
+  "probe": {
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+        "profile": "High",
+        "codec_type": "video",
+        "codec_tag_string": "avc1",
+        "codec_tag": "0x31637661",
+        "mime_codec_string": "avc1.640028",
+        "width": 1920,
+        "height": 1080,
+        "coded_width": 1920,
+        "coded_height": 1080,
+        "has_b_frames": 0,
+        "pix_fmt": "yuv420p",
+        "level": 40,
+        "color_range": "tv",
+        "color_space": "bt709",
+        "color_transfer": "bt709",
+        "color_primaries": "bt709",
+        "chroma_location": "left",
+        "field_order": "progressive",
+        "is_avc": "true",
+        "nal_length_size": "4",
+        "id": "0x1",
+        "r_frame_rate": "30/1",
+        "avg_frame_rate": "488655000/16308097",
+        "time_base": "1/90000",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 65232388,
+        "duration": "724.804311",
+        "bit_rate": "11989350",
+        "bits_per_raw_sample": "8",
+        "nb_frames": "21718",
+        "extradata_size": 36,
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "creation_time": "2026-11-12T06:06:46.000000Z",
+          "language": "eng",
+          "handler_name": "VideoHandle"
+        },
+        "side_data_list": [
+          {
+            "side_data_type": "Display Matrix",
+            "displaymatrix": "\n00000000:            0       65536           0\n00000001:       -65536           0           0\n00000002:            0           0  1073741824\n",
+            "rotation": -90
+          }
+        ]
+      }
+    ],
+    "format": {
+      "filename": "C:\\Users\\user\\Desktop\\프로젝트\\1팀 2파트 출입구 - 1.5층 - 3층\\20261112_145442KST_GPS-VALID_LAT35.3631133_LON129.0300967_H153.0-TN_DIR-AVAILABLE_P-21.2_ACC2.6m_FV-7459fd4f-decc-45cb-974d-d90fc6bca7f5.mp4",
+      "nb_streams": 1,
+      "nb_programs": 0,
+      "nb_stream_groups": 0,
+      "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+      "format_long_name": "QuickTime / MOV",
+      "start_time": "0.000000",
+      "duration": "724.804311",
+      "size": "1086386547",
+      "bit_rate": "11990950",
+      "probe_score": 100,
+      "tags": {
+        "major_brand": "mp42",
+        "minor_version": "0",
+        "compatible_brands": "isommp42",
+        "creation_time": "2026-11-12T06:06:46.000000Z",
+        "com.android.version": "16"
+      }
+    }
+  },
+  "method": "Timestamped visual review; auto-rotated video frames. Original untouched. GPS is camera metadata, never room geometry.",
+  "drawing_policy": "Photographed drawings are reference-only; current visible room sequence and explicit user corrections govern reconstruction."
+}

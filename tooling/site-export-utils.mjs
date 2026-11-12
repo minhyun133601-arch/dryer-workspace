@@ -1,0 +1,51 @@
+import { readFile } from 'node:fs/promises';
+
+const projectRoot = new URL('../', import.meta.url);
+export const readProjectText = async name => (await readFile(new URL(name, projectRoot), 'utf8')).replace(/\r\n/g, '\n');
+
+export function replaceRequired(source, before, after) {
+  if (!source.includes(before)) throw new Error(`Expected source fragment was not found: ${before}`);
+  return source.replace(before, () => after);
+}
+
+// Each source module keeps its own scope and explicit public bindings in the
+// standalone viewer. Unexpected imports stop the build instead of leaking URLs.
+export function namespaceModule(source, name, imports = []) {
+  for (const statement of imports) source = replaceRequired(source, statement, '');
+  const bindings = [];
+  source = source.replace(/^export\s+(const|let|var|function|class)\s+(\w+)/gm, (_, kind, binding) => {
+    bindings.push(binding);
+    return `${kind} ${binding}`;
+  });
+  source = source.replace(/^export\s*\{([^}]+)\};?\s*$/gm, (_, exports) => {
+    bindings.push(...exports.split(',').map(entry => {
+      const [local, alias = local] = entry.trim().split(/\s+as\s+/);
+      return local === alias ? local : `${alias}: ${local}`;
+    }).filter(Boolean));
+    return '';
+  });
+  if (!bindings.length || /^\s*(?:import|export)\s/m.test(source) || /\bimport\s*\(/.test(source)) throw new Error(`Unsupported module structure: ${name}`);
+  return `const ${name} = (() => {\n${source}\nreturn { ${bindings.join(', ')} };\n})();\n`;
+}
+
+export async function bundleBurnerMaintenance() {
+  const [dataSource, viewerSource, { BURNER_MAINTENANCE_DOCUMENTS }] = await Promise.all([
+    readProjectText('apps/site/burner-maintenance-data.js'),
+    readProjectText('apps/site/burner-maintenance.js'),
+    import('../apps/site/burner-maintenance-data.js'),
+  ]);
+  let source = dataSource;
+  for (const reference of new Set(BURNER_MAINTENANCE_DOCUMENTS.flatMap(document => document.slides.map(slide => slide.image)))) {
+    if (!/^\.\/assets\/documents\/dryer-burner\/[a-z0-9-]+\/slide-\d{3}\.jpg$/.test(reference)) throw new Error(`Invalid burner maintenance image: ${reference}`);
+    if (!source.includes(reference)) throw new Error(`Missing maintenance image literal: ${reference}`);
+    const bytes = await readFile(new URL(`apps/site/${reference.slice(2)}`, projectRoot));
+    if (bytes[0] !== 0xff || bytes[1] !== 0xd8) throw new Error(`Invalid burner maintenance JPEG: ${reference}`);
+    source = source.replaceAll(reference, `data:image/jpeg;base64,${bytes.toString('base64')}`);
+  }
+  return [
+    namespaceModule(source, 'burnerMaintenanceDataModule'),
+    'const { BURNER_MAINTENANCE_DOCUMENTS } = burnerMaintenanceDataModule;',
+    namespaceModule(viewerSource, 'burnerMaintenanceModule'),
+    'const { createBurnerMaintenance } = burnerMaintenanceModule;',
+  ].join('\n');
+}

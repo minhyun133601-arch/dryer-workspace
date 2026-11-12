@@ -1,0 +1,152 @@
+2026-02-20 생산2팀 스틱파트 질소발생기 소모품 교체 완료 보고의 件 공무환경팀-202602-보고서-1
+희창 그룹웨어 보고서
+문서번호: 공무환경팀-202602-보고서-1
+상신일: 2026-02-20
+완료일: 2026-02-20
+제목: 생산2팀 스틱파트 질소발생기 소모품 교체 완료 보고의 件
+원본 보고서 ID: 338327
+목록 페이지: 5
+원본 URL: https://gw.heechang.co.kr/DeskPlusEIP/Approval/Folder/Common/View.aspx?p=ZG9jdW1lbnRJRD0zMzgzMjcmY3VycmVudFBhZ2U9NSZzZWFyY2hUZXJtPSZzZWFyY2hUZXJtVmFsdWU9JnNlYXJjaEZpZWxkPSZzZWFyY2hWYWx1ZT0mb3JkZXI9Q29tcGxldGVEYXRlJTIwZGVzYyZ0YXJnZXRQYWdlPS9EZXNrcGx1c0VJUC9BcHByb3ZhbC9Gb2xkZXIvRGVwdC9MaXN0LmFzcHgmY2FiaW5ldElEPWRlcHRfMjk2JnR5cGVzPVMmZm9ybUlEPTI5NiZ5eXl5PSZ5eXl5bW09JmhlYWRlck5hbWU9JXVCQ0Y0JXVBQ0UwJXVDMTFD
+원본 문서 표기
+작성부서: 공무환경팀
+문서번호: 공무환경팀-202602-보고서-1
+작성일자: 2026-02-20
+제목: 생산2팀 스틱파트 질소발생기 소모품 교체 완료 보고의 件
+본문
+보 고 서
+작성부서
+결
+작 성
+검   토
+승 인
+/
+/
+재
+선임 안준수 2026-02-20
+수석 류원대 2026-02-20
+이사 황용광 2026-02-20
+문서번호
+작성일자
+경   유
+협
+/
+수   신
+/
+참   조
+희창생산팀/책임/이균원,
+조
+/
+제   목
+                     1) 기안서(공무환경팀-202601-기안서-2)와 관련된 건 입니다.
+                     2) 생산2팀(스틱) 질소발생기 설비의 질소 공급 상태를 진단하고 장비의 문제점을 조치하였기에 아래와 같이 보고 드립니다.
+----------- 아          래 -----------
+1. 정비내용 
+정비 종류
+정비 기간
+정비 인원
+정비 내용
+예방보전(PM)
+26년 2월 1일 
+08:00 ~ 15:00
+업체 2명
+1) 산소흡착제 교체
+2) 유분활성탄 교체
+3) 엔드필터 교체[자체]
+2. 정비결과
+장비 상태
+문제점
+원인
+정비업체
+정상
+질소 순도 저하
+1) 활성탄 교체 주기 초과
+2) 산소흡착제 성능(효율) 저하
+에어플랜
+ ☞ 정비 결과 : 첨부파일 참조 
+ ☞ 현재까지 특이사항 없이 사용中
+3. 발생비용 
+내     용
+업체명
+견적 금액(원)
+네고가(원)
+지급조건
+질소발생기 
+소모품교체
+에어플랜
+\ 8,258,000
+\ 8,000,000
+교체완료 후 정기지급
+5. 첨부파일 
+   1) 점검보고서 ----------- 1부. 끝.
+[류원대/수석/공무환경팀]- 2026-02-20 오후 1:03:42
+1.작업 완료
+2.정상 운영중
+3.이력카드 및 소모품 교체 주기 확립
+첨부파일
+1. 완료보고)질소발생기 소모품 교체의 件.pdf
+관련문서
+1. 공무환경팀-202601-기안서-2
+보관 확인
+본문 원본 ZIP 항목: ZipFile/생산2팀 스틱파트 질소발생기 소모품 교체 완료 보고의 件.jpg
+원본 ZIP SHA256: 1ccff3b0a206f7f19cfb997a7c26743552e0e81ed47b1d50d2452a796f8a5d81
+본문 JPG SHA256: 1d648e7570ab1f0fb8c4d2f4b4ccfe66f5090f4c9a5c0a55cda9b66fbce31ab4
+본문 PDF는 원본 JPG를 재압축 없이 포함한 사본입니다.
+
+
+2026-02-25 (생산1팀 1Part) MSD건조기 챔버 크랙 보수 공사 (완료보고서) 공무환경팀-202602-보고서-2
+희창 그룹웨어 보고서
+문서번호: 공무환경팀-202602-보고서-2
+상신일: 2026-02-25
+완료일: 2026-04-09
+제목: (생산1팀 1Part) MSD건조기 챔버 크랙 보수 공사 (완료보고서)
+원본 보고서 ID: 338950
+목록 페이지: 4
+원본 URL: https://gw.heechang.co.kr/DeskPlusEIP/Approval/Folder/Common/View.aspx?p=ZG9jdW1lbnRJRD0zMzg5NTAmY3VycmVudFBhZ2U9NCZzZWFyY2hUZXJtPSZzZWFyY2hUZXJtVmFsdWU9JnNlYXJjaEZpZWxkPSZzZWFyY2hWYWx1ZT0mb3JkZXI9Q29tcGxldGVEYXRlJTIwZGVzYyZ0YXJnZXRQYWdlPS9EZXNrcGx1c0VJUC9BcHByb3ZhbC9Gb2xkZXIvRGVwdC9MaXN0LmFzcHgmY2FiaW5ldElEPWRlcHRfMjk2JnR5cGVzPVMmZm9ybUlEPTI5NiZ5eXl5PSZ5eXl5bW09JmhlYWRlck5hbWU9JXVCQ0Y0JXVBQ0UwJXVDMTFD
+원본 문서 표기
+작성부서: 공무환경팀
+문서번호: 공무환경팀-202602-보고서-2
+작성일자: 2026-02-25
+제목: (생산1팀 1Part) MSD건조기 챔버 크랙 보수 공사 (완료보고서)
+본문
+보 고 서
+작성부서
+결
+작 성
+검   토
+승 인
+/
+재
+책임 김민규 2026-02-25
+수석 류원대 2026-02-26
+이사 황용광 2026-02-26
+회장 박창현 2026-04-09
+문서번호
+작성일자
+경   유
+협
+/
+수   신
+희창생산팀/책임/양효진,
+/
+참   조
+재경팀/수석/정부용,
+조
+/
+제   목
+[류원대/수석/공무환경팀]- 2026-02-26 오전 9:03:35
+1.챔버 크랙부분 -2개소
+→내/외부 용접 보강(그라인더 포함)
+→외부 덮판 보강(플레이트 보강)
+2.에어 햄머 : 패드등 18개소 교체
+3.현재: 에어햄머 정상 작동
+→용접부 이상없음
+4.cip시 계속 모니터링중
+첨부파일
+1. 설치보고서.xlsx
+관련문서
+1. 공무환경팀-202601-기안서-4
+보관 확인
+본문 원본 ZIP 항목: ZipFile/(생산1팀 1Part) MSD건조기 챔버 크랙 보수 공사 (완료보고서).jpg
+원본 ZIP SHA256: 79786467afca4d7759ea32a8c10b0bfb686681155f3ae795528845be275a58bd
+본문 JPG SHA256: 5eabe4e37dc7bfae6d2cb840c5069769eb031c3c2d4367eb2f9d4104b4bd3228
+본문 PDF는 원본 JPG를 재압축 없이 포함한 사본입니다.

@@ -1,0 +1,8 @@
+import { readFile, writeFile } from 'node:fs/promises';
+for (const file of ['apps/site/index.html','apps/site/share/index.html']) {
+  let source=await readFile(file,'utf8');
+  const anchor='<button id="valve-room-open"';
+  if (!source.includes(anchor)) throw new Error(file);
+  source=source.replace(anchor,'<button id="wastewater-open" class="furnace-open" type="button" hidden>폐수처리장 내부 <span aria-hidden="true">↗</span></button>'+anchor);
+  await writeFile(file,source);
+}

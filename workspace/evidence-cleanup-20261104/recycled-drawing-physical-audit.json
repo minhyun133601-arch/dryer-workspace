@@ -1,0 +1,3830 @@
+{
+  "mode": "read_only_recycle_physical_filename_metadata",
+  "checked_at": "2026-11-04T15:25:57",
+  "receipt_rows": 160,
+  "receipt_unique_paths": 160,
+  "matching_recycle_payloads": 160,
+  "missing_receipt_paths": [],
+  "targets": [
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-07-04 생산1팀1파트) 옥외 저장 탱크 교체에 따른 환경 정리작업(고철처리) 완료",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RZDIIRG",
+      "exists": true,
+      "files": 7,
+      "bytes": 531801791,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\웹소스\\final-investment-hub",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RSTTA0J",
+      "exists": true,
+      "files": 611,
+      "bytes": 108140541,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-06-09 (생산1팀 1Part) 건조실 SD 및 MSD 균질기 부분 보수 작업 건",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RPWB9PQ",
+      "exists": true,
+      "files": 17,
+      "bytes": 94068734,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-07-15 북정)조제실 내부 환경 개선 공사",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RR2QMC9",
+      "exists": true,
+      "files": 15,
+      "bytes": 80488445,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-06-02 생산2팀) 위생전실 및 1,2,3층 위생실 개선(리모델링) 공사",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RGUWER5",
+      "exists": true,
+      "files": 18,
+      "bytes": 71670550,
+      "drawing_candidates": 1
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2024-09-13 생산2팀 1파트 스틱파트 원료 배합부 근로환경개선 진행",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R252432",
+      "exists": true,
+      "files": 17,
+      "bytes": 68716866,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-03-11 (생산1팀 1Part) 건조실 노후 AIR유틸리티 설비 및 CIP 설비 보수 공사",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RG5H4B3",
+      "exists": true,
+      "files": 15,
+      "bytes": 58723202,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-05-21 (생산1팀 1Part) 건조기 챔버 및 싸이클론 에어햄머 보수 작업 건",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R0OWQPK",
+      "exists": true,
+      "files": 16,
+      "bytes": 57399523,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\삭제자료",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RKQY58K",
+      "exists": true,
+      "files": 18,
+      "bytes": 57047061,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-04-03 생산3팀)액상 자동화 설비 관련 부대설비(건축 외)",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RNKFRCH",
+      "exists": true,
+      "files": 8,
+      "bytes": 50429632,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-02-09 생산1팀1파트 MSD 콘 계단 및 데크확장 공사",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R6NFI1M",
+      "exists": true,
+      "files": 15,
+      "bytes": 43937257,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-07-15 유산)폐수장 최종침전조(64㎥) 탱크 FRP 코팅 공사",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R5TVJH7",
+      "exists": true,
+      "files": 16,
+      "bytes": 43412169,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-06-22 (생산1팀 1Part) MSD건조기 싸이클론 리턴브로와 교체 공사",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RC6KD9N",
+      "exists": true,
+      "files": 14,
+      "bytes": 41937540,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-02-06 생산3팀(액상) 설비 증설로 인한 유틸리티 증설건",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RNRFPB2",
+      "exists": true,
+      "files": 26,
+      "bytes": 41698627,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-02-24 (생산1팀 1Part) 외포장실 적재 로봇 신규 Hand 교체 및 예비부품 구매 건",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RCUBK18",
+      "exists": true,
+      "files": 14,
+      "bytes": 37650698,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-02-21 생산1팀1P SD 내포장실 헤드미싱기 교체 건",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RZPL6TR",
+      "exists": true,
+      "files": 15,
+      "bytes": 37260422,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2024-10-11 2025년 생산3팀(액상) 생산 Capa 증대 및 자동화 Project",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RDBVVXI",
+      "exists": true,
+      "files": 12,
+      "bytes": 37147426,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2024-11-25 스틱 포장기 오버홀 및 Stick Round Cutter제작 설치 건",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RSO47DZ",
+      "exists": true,
+      "files": 16,
+      "bytes": 35110580,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-05-21 에이치씨글로벌 대기오염물질 총량관리사업장 설치허가 결과",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R7U62E8",
+      "exists": true,
+      "files": 8,
+      "bytes": 34495810,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2024-08-30 (생산2팀 1Part) 소포장 외포장실 자동화라인 설치 건",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R91HQ9Z",
+      "exists": true,
+      "files": 17,
+      "bytes": 34443056,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-02-26 유산)생산1팀 2파트 옥외 팜유(2번)탱크 교반기 OVERHAUL 작업",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R1XHH10",
+      "exists": true,
+      "files": 17,
+      "bytes": 32208781,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-07-27 생산2팀) 여성 휴게실 환경 개선(리모델링) 공사",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RT5E0YP",
+      "exists": true,
+      "files": 15,
+      "bytes": 31416660,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-05-14 생산1팀 1파트 물류 창고 전기 증설 및 조명등 공사",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R1O2PH1",
+      "exists": true,
+      "files": 13,
+      "bytes": 30235123,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-04-22 생산1팀 2파트 옥외 팜유,저감미당탱크 스팀밸브 및 배관 개조 공사",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RIJ5SII",
+      "exists": true,
+      "files": 18,
+      "bytes": 30146942,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-10-08 북정)SD 이산화규소 재료 투입구 개선 공사",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RND81NT",
+      "exists": true,
+      "files": 17,
+      "bytes": 29742026,
+      "drawing_candidates": 1
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-02-25 (생산1팀 1Part) 폐수장 에어 공급 배관 설치 및 콤프레셔 전기 증설 공사 건",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RCYYNQ3",
+      "exists": true,
+      "files": 12,
+      "bytes": 25133703,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2024-12-16 북정공장)굴뚝 및 2층 슬라브 건물 철거 공사",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R15PSO3",
+      "exists": true,
+      "files": 16,
+      "bytes": 24928815,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2024-12-03 북정공장) 구 건물 2층 옥상 방수(복지관 외2개동)작업",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RLLF6OF",
+      "exists": true,
+      "files": 17,
+      "bytes": 24710210,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-03-11 (생산1팀 1Part) SD MSD 건조기 싸이클론 로터리밸브 및 디버터 밸브 교체 공사",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R8HP29V",
+      "exists": true,
+      "files": 15,
+      "bytes": 24447243,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-02-20 유산공장 3톤 보일러 연도 및 공기예열기 노후교체 공사",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RT61F3R",
+      "exists": true,
+      "files": 21,
+      "bytes": 24334088,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-01-21 (생산1팀 1Part) MSD건조기 챔버 크랙 보수 공사",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RLPRI8T",
+      "exists": true,
+      "files": 13,
+      "bytes": 23792807,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2024-10-17 생산 1팀 2파트 옥외 야경유 이중자켓배관 노후로 인한 배관보수 공사",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RB6WWTF",
+      "exists": true,
+      "files": 17,
+      "bytes": 23726253,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-04-25 생산3팀)배합실 출입구 스피드도어 설치(2곳) 및 공간 건축 공사",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RSI7TMY",
+      "exists": true,
+      "files": 19,
+      "bytes": 22315216,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-06-09 생산1팀2파트 조제실 열수탱크 스팀배관 코일설치 공사",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RPFC863",
+      "exists": true,
+      "files": 16,
+      "bytes": 21059870,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-02-18 (생산1팀 1Part) 저당탱크 제작 설치공사",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R0X5G4A",
+      "exists": true,
+      "files": 10,
+      "bytes": 20844143,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-01-30 (생산1팀 1Part) 조제실 저당 3,4번 탱크 교반기 오버 홀 수리 공사",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RVQERKP",
+      "exists": true,
+      "files": 14,
+      "bytes": 20777136,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-08-04 생산1팀2파트) 건조 증대를 위한 배합실 통합 구분 관리 스피드 도어 설치(2곳)",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RAC7IH6",
+      "exists": true,
+      "files": 16,
+      "bytes": 20621114,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-03-26 생산 2팀(9동) 건물 노후 지붕 보수 개선 작업",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RG6816G",
+      "exists": true,
+      "files": 18,
+      "bytes": 20573773,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-10-13 생산2팀) 입구 환경 개선 공사",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RLDU015",
+      "exists": true,
+      "files": 14,
+      "bytes": 20539944,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-04-15 생산3팀(액상) 설비 증설로 인한 유틸리티1차 배관 공사",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RPT1B9Q",
+      "exists": true,
+      "files": 9,
+      "bytes": 20349104,
+      "drawing_candidates": 1
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-01-26 생산1팀2파트 건조실 CIP탱크 스팀배관 노후 교체 및 간이CIP탱크 스팀배관 교체 공사건",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RX2CF5U",
+      "exists": true,
+      "files": 16,
+      "bytes": 19484971,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-07-14 북정)폐수장 침전조(12.5㎥)웰류웨어 FRP코팅 개선 공사",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RQOCKNQ",
+      "exists": true,
+      "files": 14,
+      "bytes": 17014528,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2024-11-30 희창3공장)물류센터 신규 사업 관련 스팀 배관 설치 공사",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RE3Z8WC",
+      "exists": true,
+      "files": 18,
+      "bytes": 16360705,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-08-24 생산1팀1파트)SD사이크론 및 CIP열수탱크 위험 요소 제거 개선",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RY1Z5R6",
+      "exists": true,
+      "files": 16,
+      "bytes": 15683017,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-05-15 북정)복지관 옥상 물탱크 설치 공사",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RKXP7XK",
+      "exists": true,
+      "files": 23,
+      "bytes": 15382753,
+      "drawing_candidates": 2
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-01-20 생산3팀)액상 100RT 냉동기중 일체형 증발기 내부 수리",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RP9S42U",
+      "exists": true,
+      "files": 15,
+      "bytes": 15183249,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-10-14 2027년 고정투자자산 계획",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RC5IOJ3",
+      "exists": true,
+      "files": 1,
+      "bytes": 14247566,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-03-26 생산1팀2파트 적재로봇 내 안전장치 설치건",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RQYB6MT",
+      "exists": true,
+      "files": 15,
+      "bytes": 13488439,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-08-05 생산1팀2파트 지대 충진기 계량기호퍼OVERHAUL건",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RAOF79P",
+      "exists": true,
+      "files": 16,
+      "bytes": 13485008,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-02-26 (생산1팀 1Part) MSD청정실 상부 CIP드레인 배관 교체 공사 건",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RFPPSWL",
+      "exists": true,
+      "files": 13,
+      "bytes": 13275445,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-03-24 유산)폐수처리장 방류조 FRP 코팅 작업",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RT791WB",
+      "exists": true,
+      "files": 15,
+      "bytes": 12662933,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-08-28 유산)9동 계단 통로 픽스유리창 썬팅 작업",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RAHLF98",
+      "exists": true,
+      "files": 16,
+      "bytes": 12569639,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-07-20 액상 배합실 A라인 스팀배관 개선 공사",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RSMW9UA",
+      "exists": true,
+      "files": 13,
+      "bytes": 12264262,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-11-14 북정 대기자가측정 업체 변경",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R929EXE",
+      "exists": true,
+      "files": 9,
+      "bytes": 12104432,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-08-06 유산공장 액상 폐수 이송 배관 부분 교체 작업",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RAVHFO3",
+      "exists": true,
+      "files": 24,
+      "bytes": 12099035,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-04-10 유산, 북정 대기자가측정 2025년도 업체 변경 및 계약",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RBJ3GYO",
+      "exists": true,
+      "files": 8,
+      "bytes": 11123752,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-02-24 유산)생산1팀2파트(4동) 옥상 소방용수 겸용 SMC 물탱크 개선 공사",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RLCT9N0",
+      "exists": true,
+      "files": 15,
+      "bytes": 10623650,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-11-04 액상 제환기 #1·#2 구동부 순차 수리",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RYPPBPI",
+      "exists": true,
+      "files": 20,
+      "bytes": 10219350,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-09-17 생산1팀1파트)SD4층 경계면 우수 배관 교체 공사",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RY2W7E1",
+      "exists": true,
+      "files": 16,
+      "bytes": 9956377,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-07-17 생산1팀2파트) 건조 증대를 위한 파우더믹스 설치 공간 확보 공사",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R406SO5",
+      "exists": true,
+      "files": 14,
+      "bytes": 9946784,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-12-02 HC글로벌 인버터형 컴프레셔(100Hp) 구매 및 설치",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RZ8UZG1",
+      "exists": true,
+      "files": 20,
+      "bytes": 9906857,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-09-15 유산 균질기 감속기 긴급수리 및 Rossi 신품 교체",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R1ZR0AJ",
+      "exists": true,
+      "files": 20,
+      "bytes": 9795412,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-03-25 (생산1팀 1Part) 물류 대기품 보관 창고 스피드 도어 설치 건",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RI2EY1U",
+      "exists": true,
+      "files": 13,
+      "bytes": 9744200,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-03-06 생산2팀 소포장 원료 호퍼 교반기 오버홀 및 개조 공사 진행",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RWJOIMS",
+      "exists": true,
+      "files": 16,
+      "bytes": 9627705,
+      "drawing_candidates": 1
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-02-24 (생산1팀 1Part) 건조실 및 조제실 조명등 교체 공사 건",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RUUZDBW",
+      "exists": true,
+      "files": 13,
+      "bytes": 9526357,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-03-17 (생산1팀 1Part) MSD 내포장실 누름컨베어 보수 작업 건 (기안서)",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R67AHQR",
+      "exists": true,
+      "files": 13,
+      "bytes": 8661412,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-08-26 냉동기 정비 및 효율 증가 개선 결과",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R8VPQSL",
+      "exists": true,
+      "files": 12,
+      "bytes": 7821068,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-01-15 생산3팀)액상 대용량 로타리 1열 포장기 매각 처리",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R2FUKUN",
+      "exists": true,
+      "files": 7,
+      "bytes": 7575314,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-08-19 액상 칠러 이코노마이저 설치",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RYSJQWS",
+      "exists": true,
+      "files": 7,
+      "bytes": 7221482,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-10-06 북정)폐수장 앞 파렛트 투입구 지반 침하 개선 공사",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RUTQYHN",
+      "exists": true,
+      "files": 7,
+      "bytes": 6855078,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-04-10 유산, 북정 폐수처리오니 업체 재계약(갱신)",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R95EIR9",
+      "exists": true,
+      "files": 8,
+      "bytes": 6675918,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-01-15 생산2팀 스틱파트 질소발생기 소모품 교체 진행",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RNY4ENZ",
+      "exists": true,
+      "files": 14,
+      "bytes": 6630010,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-07-09 생산 2팀 내포장실 덕트 설치 작업 및 환경인허가 변경",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RAF9BBD",
+      "exists": true,
+      "files": 14,
+      "bytes": 6459280,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-03-14 생산 1팀 2파트 청정실 덕트 수정작업 및 외포장실 팬스 이설 작업",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RM101BH",
+      "exists": true,
+      "files": 14,
+      "bytes": 6314226,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-04-29 카제인 탱크 철거·정산",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RVG84HD",
+      "exists": true,
+      "files": 7,
+      "bytes": 6029170,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-09-02 생산 2팀 소포장 지대 라인 이송 컨베이어 개선 진행",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RF6KRMS",
+      "exists": true,
+      "files": 14,
+      "bytes": 5981383,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-01-15 생산3팀 제환실 폐수집수조 교체 공사",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RC9PYPU",
+      "exists": true,
+      "files": 14,
+      "bytes": 5976318,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-01-23 생산3팀(액상팀) 제환 설비 개선 보수 진행",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$ROLMSGG",
+      "exists": true,
+      "files": 17,
+      "bytes": 5196578,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-03-20 MSD 카제인 고속믹서 보수",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RY5RV4R",
+      "exists": true,
+      "files": 9,
+      "bytes": 5125978,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-05-13 생산3팀(액상) 유틸리티 설비 교체 및 유지보수 진행",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$REXN2EM",
+      "exists": true,
+      "files": 12,
+      "bytes": 5110652,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-05-19 생산3팀 급속냉동기 압축기 교체",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RI81VSF",
+      "exists": true,
+      "files": 15,
+      "bytes": 4641897,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-12-02 생산3팀외부냉동창고 소모품교체·이코노마이저",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RZK4EUK",
+      "exists": true,
+      "files": 15,
+      "bytes": 4624065,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-11-04 생산2팀 부자재 출입로 환경 개선 진행",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RMVJYKZ",
+      "exists": true,
+      "files": 15,
+      "bytes": 4433368,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-12-24 (생산1팀 1Part) SD건조기 배풍기 모터 소손으로 모터 교체 시운전 건",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R0OTXE4",
+      "exists": true,
+      "files": 9,
+      "bytes": 4119598,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-03-27 생산1팀2파트 건조 Capa 증대를 위한 파우더믹서 관련설비 투자",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R5FG7MB",
+      "exists": true,
+      "files": 17,
+      "bytes": 3289452,
+      "drawing_candidates": 1
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-05-15 건조기 배기 스택 연장",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R9KNB9B",
+      "exists": true,
+      "files": 6,
+      "bytes": 2934990,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-03-13 유산 폐수처리장 위탁관리 업체 선정",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RYUUXAB",
+      "exists": true,
+      "files": 12,
+      "bytes": 2821863,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-08-21 북정) 폐수처리장 정상화 작업",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R07AE27",
+      "exists": true,
+      "files": 9,
+      "bytes": 2793934,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-12-05 생산2팀)생산 설비 중 V-MIXER(2기) 매각 처리",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RL4LLCQ",
+      "exists": true,
+      "files": 10,
+      "bytes": 2769384,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-09-24 북정 대기자가측정 업체 변경",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R4HRCTE",
+      "exists": true,
+      "files": 7,
+      "bytes": 2769042,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-07-09 압축기 모니터링 구축",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RYWCS20",
+      "exists": true,
+      "files": 7,
+      "bytes": 2378666,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2024-12-30 유산, 북정 수질오염물질 전항목 시험 분석 의뢰",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RIS72AE",
+      "exists": true,
+      "files": 16,
+      "bytes": 2364943,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\최종자료\\자료총괄.html",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R1Z29VO.html",
+      "exists": true,
+      "files": 1,
+      "bytes": 2312055,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-07-23 폐수 pH 중화장치 효과 검증",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RU3OPVK",
+      "exists": true,
+      "files": 6,
+      "bytes": 2109055,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-08-05 양산시청 수질관리과 처분통지서",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R4VWAC5",
+      "exists": true,
+      "files": 8,
+      "bytes": 2084277,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-05-11 SD 충진라인 자동화",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RPBGZDU",
+      "exists": true,
+      "files": 9,
+      "bytes": 1924500,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-06-24 100마력 냉동식 드라이어 신품 교체",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RWB7DC3",
+      "exists": true,
+      "files": 14,
+      "bytes": 1885664,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-08-27 북정 대기자가측정 업체 변경",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RNP1C5Y",
+      "exists": true,
+      "files": 8,
+      "bytes": 1308916,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\xlsx_qa",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RHPMLJB",
+      "exists": true,
+      "files": 7,
+      "bytes": 1149777,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\all_documents.json",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RLI6BFQ.json",
+      "exists": true,
+      "files": 1,
+      "bytes": 1138432,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-03-25 유산 폐수처리장 위탁관리 재계약",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RY69GEI",
+      "exists": true,
+      "files": 7,
+      "bytes": 1055750,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-08-20 북정 SD건조기 설비 이상현상 최종보고",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RP2ET2S",
+      "exists": true,
+      "files": 1,
+      "bytes": 804432,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-09-14 생산1팀 1파트 레시틴 공급용 고점도 에어 피스톤 펌프 구매",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RBXD3RB",
+      "exists": true,
+      "files": 6,
+      "bytes": 663534,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\download_manifest.json",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RDIROFN.json",
+      "exists": true,
+      "files": 1,
+      "bytes": 662457,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-11-02 공무환경팀 10월 KPI",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R60RT1W",
+      "exists": true,
+      "files": 1,
+      "bytes": 651762,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-11-03 2027년 KPI 및 중점추진과제",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RFC9PL2",
+      "exists": true,
+      "files": 1,
+      "bytes": 648995,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-03-18 잔여 원부자재 폐기",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$ROKKF0G",
+      "exists": true,
+      "files": 6,
+      "bytes": 615922,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-06-24 물류센터(희창3공장) 승강기 유지 관리 계약 변경",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R636JIT",
+      "exists": true,
+      "files": 7,
+      "bytes": 525398,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\proposals_2026_b.json",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RQSANEK.json",
+      "exists": true,
+      "files": 1,
+      "bytes": 391181,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\최종자료\\2025-2026 금액총괄.xlsx",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RPGCZYY.xlsx",
+      "exists": true,
+      "files": 1,
+      "bytes": 314064,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\manifest_2026.json",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RW1UG27.json",
+      "exists": true,
+      "files": 1,
+      "bytes": 240376,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\site_match_data.json",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RNYBDPK.json",
+      "exists": true,
+      "files": 1,
+      "bytes": 238386,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\proposals_2026_a.json",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$ROH82R6.json",
+      "exists": true,
+      "files": 1,
+      "bytes": 212740,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\.playwright-mcp",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RDA4M2P.playwright-mcp",
+      "exists": true,
+      "files": 19,
+      "bytes": 198405,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\site_review_desktop.png",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R3WFS6L.png",
+      "exists": true,
+      "files": 1,
+      "bytes": 111703,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\site_review_desktop_final.png",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RN7HY3V.png",
+      "exists": true,
+      "files": 1,
+      "bytes": 107953,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\review_desktop.png",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R8A1HNT.png",
+      "exists": true,
+      "files": 1,
+      "bytes": 101857,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\proposals_2025_a.json",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R2UMXY9.json",
+      "exists": true,
+      "files": 1,
+      "bytes": 92822,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\proposals_2025_b.json",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RIM961V.json",
+      "exists": true,
+      "files": 1,
+      "bytes": 72566,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\2025_root_chunk.json",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RIH4FI6.json",
+      "exists": true,
+      "files": 1,
+      "bytes": 70795,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\proposals_2025_support.json",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RDX3UTC.json",
+      "exists": true,
+      "files": 1,
+      "bytes": 66958,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\site_review_mobile_plans.png",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RENRCLM.png",
+      "exists": true,
+      "files": 1,
+      "bytes": 51086,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\site_review_mobile.png",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RPA5NFI.png",
+      "exists": true,
+      "files": 1,
+      "bytes": 48346,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\project_match_review.json",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R4EGIJN.json",
+      "exists": true,
+      "files": 1,
+      "bytes": 47143,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\review_mobile.png",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R3JWQYP.png",
+      "exists": true,
+      "files": 1,
+      "bytes": 45727,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\build_review_html.py",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RHGJ1NP.py",
+      "exists": true,
+      "files": 1,
+      "bytes": 40251,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\build_proposals_2026_b.py",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RLY3CDR.py",
+      "exists": true,
+      "files": 1,
+      "bytes": 32675,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\build_proposals_2026_a.py",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RDG8PD7.py",
+      "exists": true,
+      "files": 1,
+      "bytes": 29156,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\proposals_a_body.txt",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R5QPMRQ.txt",
+      "exists": true,
+      "files": 1,
+      "bytes": 26647,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\export_totals.mjs",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RNQIN76.mjs",
+      "exists": true,
+      "files": 1,
+      "bytes": 26332,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\build_site_frontend.py",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RRSQUL7.py",
+      "exists": true,
+      "files": 1,
+      "bytes": 22107,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\proposals_extra.json",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R9AOB54.json",
+      "exists": true,
+      "files": 1,
+      "bytes": 20776,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\build_review_data.py",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RMONZ1V.py",
+      "exists": true,
+      "files": 1,
+      "bytes": 18511,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\manifest_2026.verification.json",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RV820KV.json",
+      "exists": true,
+      "files": 1,
+      "bytes": 18161,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\draft_2026_inventory.json",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R7UMJ25.json",
+      "exists": true,
+      "files": 1,
+      "bytes": 15557,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\review_runtime.js",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R3R0H87.js",
+      "exists": true,
+      "files": 1,
+      "bytes": 12457,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\build_proposals_2025_support.py",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RG0041N.py",
+      "exists": true,
+      "files": 1,
+      "bytes": 11570,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\build_project_match_review.py",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RNRJMN2.py",
+      "exists": true,
+      "files": 1,
+      "bytes": 11055,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\add_2027_sheet.mjs",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RR4HN0W.mjs",
+      "exists": true,
+      "files": 1,
+      "bytes": 9983,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\draft_2025_inventory.json",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RUBMSNS.json",
+      "exists": true,
+      "files": 1,
+      "bytes": 9357,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\chunk_2026_a.json",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RRWSJ00.json",
+      "exists": true,
+      "files": 1,
+      "bytes": 8217,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\proposals_2026_b_audit.json",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RUX1BX2.json",
+      "exists": true,
+      "files": 1,
+      "bytes": 7832,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\append_2027_sheet.py",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R84QQ17.py",
+      "exists": true,
+      "files": 1,
+      "bytes": 7562,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\browser_download.cjs",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RN3JHI2.cjs",
+      "exists": true,
+      "files": 1,
+      "bytes": 6188,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\verify_totals.py",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RU42SXJ.py",
+      "exists": true,
+      "files": 1,
+      "bytes": 5824,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\extract_2026_b.py",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R5UVU02.py",
+      "exists": true,
+      "files": 1,
+      "bytes": 5525,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\build_registry.py",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RWFGCVI.py",
+      "exists": true,
+      "files": 1,
+      "bytes": 4632,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\current_document.json",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RLQ2ICT.json",
+      "exists": true,
+      "files": 1,
+      "bytes": 4502,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\extract_proposal_a_attachments.py",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RCZTLHM.py",
+      "exists": true,
+      "files": 1,
+      "bytes": 3491,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\patch_totals_hyperlinks.py",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RIBCYDU.py",
+      "exists": true,
+      "files": 1,
+      "bytes": 3222,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\extract_proposal_a.py",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RVHICDC.py",
+      "exists": true,
+      "files": 1,
+      "bytes": 2374,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\enhance_scan_ocr_2026_b.py",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R3K0Y1P.py",
+      "exists": true,
+      "files": 1,
+      "bytes": 2144,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\extract_support_2025.py",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R1JNHDP.py",
+      "exists": true,
+      "files": 1,
+      "bytes": 2032,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\최종자료\\2027 추진안건.html",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R0P9BC5.html",
+      "exists": true,
+      "files": 1,
+      "bytes": 706,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\draft_2026_hc_inventory.json",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RZETCO0.json",
+      "exists": true,
+      "files": 1,
+      "bytes": 700,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\final_delivery_receipt.json",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$ROXJZTN.json",
+      "exists": true,
+      "files": 1,
+      "bytes": 686,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\additional_reference_inventory.json",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RVUR0R9.json",
+      "exists": true,
+      "files": 1,
+      "bytes": 200,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\unresolved_report_references.json",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R1I1RQ0.json",
+      "exists": true,
+      "files": 1,
+      "bytes": 2,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\missing_reference_ids.json",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RN59MCV.json",
+      "exists": true,
+      "files": 1,
+      "bytes": 2,
+      "drawing_candidates": 0
+    },
+    {
+      "original": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\download_failures.json",
+      "payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RPUAJDK.json",
+      "exists": true,
+      "files": 1,
+      "bytes": 2,
+      "drawing_candidates": 0
+    }
+  ],
+  "drawing_candidates": [
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-06-02 생산2팀) 위생전실 및 1,2,3층 위생실 개선(리모델링) 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-06-02 생산2팀) 위생전실 및 1,2,3층 위생실 개선(리모델링) 공사\\첨부파일\\HC 글로벌 위생실,전실 공사 최종 도면 (1).pdf",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RGUWER5\\첨부파일\\HC 글로벌 위생실,전실 공사 최종 도면 (1).pdf",
+      "name": "HC 글로벌 위생실,전실 공사 최종 도면 (1).pdf",
+      "bytes": 2236257,
+      "modified": "2026-11-03T13:19:43",
+      "extension": ".pdf",
+      "evidence": "drawing_keyword_in_filename",
+      "matched_keyword": "도면"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-05-15 북정)복지관 옥상 물탱크 설치 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-05-15 북정)복지관 옥상 물탱크 설치 공사\\2026-05-15 북정)복지관 옥상 물탱크 설치 공사\\첨부파일\\2026 1분기노사협의 및 설치도.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RKXP7XK\\2026-05-15 북정)복지관 옥상 물탱크 설치 공사\\첨부파일\\2026 1분기노사협의 및 설치도.pptx",
+      "name": "2026 1분기노사협의 및 설치도.pptx",
+      "bytes": 1620680,
+      "modified": "2026-11-03T13:19:43",
+      "extension": ".pptx",
+      "evidence": "drawing_keyword_in_filename",
+      "matched_keyword": "설치도"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-05-15 북정)복지관 옥상 물탱크 설치 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-05-15 북정)복지관 옥상 물탱크 설치 공사\\첨부파일\\2026 1분기노사협의 및 설치도.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RKXP7XK\\첨부파일\\2026 1분기노사협의 및 설치도.pptx",
+      "name": "2026 1분기노사협의 및 설치도.pptx",
+      "bytes": 1620680,
+      "modified": "2026-11-03T13:19:43",
+      "extension": ".pptx",
+      "evidence": "drawing_keyword_in_filename",
+      "matched_keyword": "설치도"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-03-06 생산2팀 소포장 원료 호퍼 교반기 오버홀 및 개조 공사 진행",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-03-06 생산2팀 소포장 원료 호퍼 교반기 오버홀 및 개조 공사 진행\\첨부파일\\도면)원료호퍼교반기 개조안.pdf",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RWJOIMS\\첨부파일\\도면)원료호퍼교반기 개조안.pdf",
+      "name": "도면)원료호퍼교반기 개조안.pdf",
+      "bytes": 456422,
+      "modified": "2026-11-03T13:19:44",
+      "extension": ".pdf",
+      "evidence": "drawing_keyword_in_filename",
+      "matched_keyword": "도면"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-04-15 생산3팀(액상) 설비 증설로 인한 유틸리티1차 배관 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-04-15 생산3팀(액상) 설비 증설로 인한 유틸리티1차 배관 공사\\첨부파일\\액상 유틸리티배관 현장 설치도.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RPT1B9Q\\첨부파일\\액상 유틸리티배관 현장 설치도.pptx",
+      "name": "액상 유틸리티배관 현장 설치도.pptx",
+      "bytes": 171892,
+      "modified": "2026-11-03T12:15:38",
+      "extension": ".pptx",
+      "evidence": "drawing_keyword_in_filename",
+      "matched_keyword": "설치도"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-03-27 생산1팀2파트 건조 Capa 증대를 위한 파우더믹서 관련설비 투자",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-03-27 생산1팀2파트 건조 Capa 증대를 위한 파우더믹서 관련설비 투자\\첨부파일\\첨부#4 조제실 변경안(평면도).pdf",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R5FG7MB\\첨부파일\\첨부#4 조제실 변경안(평면도).pdf",
+      "name": "첨부#4 조제실 변경안(평면도).pdf",
+      "bytes": 90462,
+      "modified": "2026-11-03T12:22:29",
+      "extension": ".pdf",
+      "evidence": "drawing_keyword_in_filename",
+      "matched_keyword": "평면"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-10-08 북정)SD 이산화규소 재료 투입구 개선 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-10-08 북정)SD 이산화규소 재료 투입구 개선 공사\\2026-11-01 북정)SD이산화규소 재료 투입구 개선 공사\\첨부파일\\SD이산화규소 투입구 도면.pdf",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RND81NT\\2026-11-01 북정)SD이산화규소 재료 투입구 개선 공사\\첨부파일\\SD이산화규소 투입구 도면.pdf",
+      "name": "SD이산화규소 투입구 도면.pdf",
+      "bytes": 69333,
+      "modified": "2026-11-02T16:57:13",
+      "extension": ".pdf",
+      "evidence": "drawing_keyword_in_filename",
+      "matched_keyword": "도면"
+    }
+  ],
+  "archive_files": [
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-07-04 생산1팀1파트) 옥외 저장 탱크 교체에 따른 환경 정리작업(고철처리) 완료",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-07-04 생산1팀1파트) 옥외 저장 탱크 교체에 따른 환경 정리작업(고철처리) 완료\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RZDIIRG\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 265856788,
+      "modified": "2026-11-03T12:14:19",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-06-09 (생산1팀 1Part) 건조실 SD 및 MSD 균질기 부분 보수 작업 건",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-06-09 (생산1팀 1Part) 건조실 SD 및 MSD 균질기 부분 보수 작업 건\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RPWB9PQ\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 24395287,
+      "modified": "2026-11-03T13:17:43",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-06-09 (생산1팀 1Part) 건조실 SD 및 MSD 균질기 부분 보수 작업 건",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-06-09 (생산1팀 1Part) 건조실 SD 및 MSD 균질기 부분 보수 작업 건\\2026-09-09 (생산1팀 1Part) 건조실 SD 및 MSD 균질기 부분 보수 작업 건 (완료보고서)\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RPWB9PQ\\2026-09-09 (생산1팀 1Part) 건조실 SD 및 MSD 균질기 부분 보수 작업 건 (완료보고서)\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 22422957,
+      "modified": "2026-11-02T16:51:03",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-07-15 북정)조제실 내부 환경 개선 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-07-15 북정)조제실 내부 환경 개선 공사\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RR2QMC9\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 14281759,
+      "modified": "2026-11-03T13:17:32",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-07-15 북정)조제실 내부 환경 개선 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-07-15 북정)조제실 내부 환경 개선 공사\\2026-09-09 북정)조제실 내부 환경 개선 완료\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RR2QMC9\\2026-09-09 북정)조제실 내부 환경 개선 완료\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 24699097,
+      "modified": "2026-11-02T16:56:17",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-06-02 생산2팀) 위생전실 및 1,2,3층 위생실 개선(리모델링) 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-06-02 생산2팀) 위생전실 및 1,2,3층 위생실 개선(리모델링) 공사\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RGUWER5\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 7376617,
+      "modified": "2026-11-03T13:17:46",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-06-02 생산2팀) 위생전실 및 1,2,3층 위생실 개선(리모델링) 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-06-02 생산2팀) 위생전실 및 1,2,3층 위생실 개선(리모델링) 공사\\2026-09-09 생산2팀)위생전실 및 1,2,3층 위생실 개선(리모델링)공사 완료\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RGUWER5\\2026-09-09 생산2팀)위생전실 및 1,2,3층 위생실 개선(리모델링)공사 완료\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 27897614,
+      "modified": "2026-11-02T16:56:04",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2024-09-13 생산2팀 1파트 스틱파트 원료 배합부 근로환경개선 진행",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2024-09-13 생산2팀 1파트 스틱파트 원료 배합부 근로환경개선 진행\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R252432\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 1023484,
+      "modified": "2026-11-03T12:20:40",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2024-09-13 생산2팀 1파트 스틱파트 원료 배합부 근로환경개선 진행",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2024-09-13 생산2팀 1파트 스틱파트 원료 배합부 근로환경개선 진행\\2025-01-24 생산2팀1파트 스틱 원료배합부 근로환경개선 작업\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R252432\\2025-01-24 생산2팀1파트 스틱 원료배합부 근로환경개선 작업\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 33071273,
+      "modified": "2026-11-03T12:15:20",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-03-11 (생산1팀 1Part) 건조실 노후 AIR유틸리티 설비 및 CIP 설비 보수 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-03-11 (생산1팀 1Part) 건조실 노후 AIR유틸리티 설비 및 CIP 설비 보수 공사\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RG5H4B3\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 9746549,
+      "modified": "2026-11-03T12:18:28",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-03-11 (생산1팀 1Part) 건조실 노후 AIR유틸리티 설비 및 CIP 설비 보수 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-03-11 (생산1팀 1Part) 건조실 노후 AIR유틸리티 설비 및 CIP 설비 보수 공사\\2025-06-16 (생산1팀 1Part) 건조실 노후 AIR유틸리티 설비 및 CIP 설비 보수 공사 건\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RG5H4B3\\2025-06-16 (생산1팀 1Part) 건조실 노후 AIR유틸리티 설비 및 CIP 설비 보수 공사 건\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 19389461,
+      "modified": "2026-11-03T12:11:06",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-05-21 (생산1팀 1Part) 건조기 챔버 및 싸이클론 에어햄머 보수 작업 건",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-05-21 (생산1팀 1Part) 건조기 챔버 및 싸이클론 에어햄머 보수 작업 건\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R0OWQPK\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 11467829,
+      "modified": "2026-11-03T13:17:48",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-05-21 (생산1팀 1Part) 건조기 챔버 및 싸이클론 에어햄머 보수 작업 건",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-05-21 (생산1팀 1Part) 건조기 챔버 및 싸이클론 에어햄머 보수 작업 건\\2026-07-03 (생산1팀 1Part) 건조기 챔버 및 싸이클론 에어햄머 보수 작업 (완료보고서)\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R0OWQPK\\2026-07-03 (생산1팀 1Part) 건조기 챔버 및 싸이클론 에어햄머 보수 작업 (완료보고서)\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 17049046,
+      "modified": "2026-11-02T16:49:08",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-04-03 생산3팀)액상 자동화 설비 관련 부대설비(건축 외)",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-04-03 생산3팀)액상 자동화 설비 관련 부대설비(건축 외)\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RNKFRCH\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 24963071,
+      "modified": "2026-11-03T12:15:05",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-02-09 생산1팀1파트 MSD 콘 계단 및 데크확장 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-02-09 생산1팀1파트 MSD 콘 계단 및 데크확장 공사\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R6NFI1M\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 21199332,
+      "modified": "2026-11-03T13:18:18",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-02-09 생산1팀1파트 MSD 콘 계단 및 데크확장 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-02-09 생산1팀1파트 MSD 콘 계단 및 데크확장 공사\\2026-03-30 생산1팀1파트 MSD 콘 계단 및 안전데크 확장공사 건\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R6NFI1M\\2026-03-30 생산1팀1파트 MSD 콘 계단 및 안전데크 확장공사 건\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 573514,
+      "modified": "2026-11-02T16:45:19",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-07-15 유산)폐수장 최종침전조(64㎥) 탱크 FRP 코팅 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-07-15 유산)폐수장 최종침전조(64㎥) 탱크 FRP 코팅 공사\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R5TVJH7\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 3223283,
+      "modified": "2026-11-03T13:17:29",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-07-15 유산)폐수장 최종침전조(64㎥) 탱크 FRP 코팅 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-07-15 유산)폐수장 최종침전조(64㎥) 탱크 FRP 코팅 공사\\2026-08-27 유산)폐수처리장 최종침전조(64㎥)FRP코팅 공사 완료 보고\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R5TVJH7\\2026-08-27 유산)폐수처리장 최종침전조(64㎥)FRP코팅 공사 완료 보고\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 18255629,
+      "modified": "2026-11-02T16:56:28",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-06-22 (생산1팀 1Part) MSD건조기 싸이클론 리턴브로와 교체 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-06-22 (생산1팀 1Part) MSD건조기 싸이클론 리턴브로와 교체 공사\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RC6KD9N\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 13145615,
+      "modified": "2026-11-03T13:17:34",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-06-22 (생산1팀 1Part) MSD건조기 싸이클론 리턴브로와 교체 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-06-22 (생산1팀 1Part) MSD건조기 싸이클론 리턴브로와 교체 공사\\2026-09-18 (생산1팀 1Part) MSD건조기 싸이클론 리턴브로와 교체 공사 (완료보고서)\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RC6KD9N\\2026-09-18 (생산1팀 1Part) MSD건조기 싸이클론 리턴브로와 교체 공사 (완료보고서)\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 7570560,
+      "modified": "2026-11-02T16:55:28",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-02-06 생산3팀(액상) 설비 증설로 인한 유틸리티 증설건",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-02-06 생산3팀(액상) 설비 증설로 인한 유틸리티 증설건\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RNRFPB2\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 7687316,
+      "modified": "2026-11-03T12:18:34",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-02-06 생산3팀(액상) 설비 증설로 인한 유틸리티 증설건",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-02-06 생산3팀(액상) 설비 증설로 인한 유틸리티 증설건\\2025-05-02 생산3팀(액상) 설비 증설로 인한 유틸리티 설비 공사\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RNRFPB2\\2025-05-02 생산3팀(액상) 설비 증설로 인한 유틸리티 설비 공사\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 12618815,
+      "modified": "2026-11-03T12:14:40",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-02-24 (생산1팀 1Part) 외포장실 적재 로봇 신규 Hand 교체 및 예비부품 구매 건",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-02-24 (생산1팀 1Part) 외포장실 적재 로봇 신규 Hand 교체 및 예비부품 구매 건\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RCUBK18\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 6254858,
+      "modified": "2026-11-03T13:18:00",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-02-24 (생산1팀 1Part) 외포장실 적재 로봇 신규 Hand 교체 및 예비부품 구매 건",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-02-24 (생산1팀 1Part) 외포장실 적재 로봇 신규 Hand 교체 및 예비부품 구매 건\\2026-06-26 (생산1팀 1Part) 외포장실 적재 로봇 신규 Hand 교체 및 예비부품 구매 건 (완료보고서)\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RCUBK18\\2026-06-26 (생산1팀 1Part) 외포장실 적재 로봇 신규 Hand 교체 및 예비부품 구매 건 (완료보고서)\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 12398010,
+      "modified": "2026-11-02T16:45:54",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-02-21 생산1팀1P SD 내포장실 헤드미싱기 교체 건",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-02-21 생산1팀1P SD 내포장실 헤드미싱기 교체 건\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RZPL6TR\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 18049808,
+      "modified": "2026-11-03T13:18:12",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-02-21 생산1팀1P SD 내포장실 헤드미싱기 교체 건",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-02-21 생산1팀1P SD 내포장실 헤드미싱기 교체 건\\2026-03-07 생산1팀1파트 SD 내포장실 미싱기 교체\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RZPL6TR\\2026-03-07 생산1팀1파트 SD 내포장실 미싱기 교체\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 366663,
+      "modified": "2026-11-02T16:39:48",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2024-10-11 2025년 생산3팀(액상) 생산 Capa 증대 및 자동화 Project",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2024-10-11 2025년 생산3팀(액상) 생산 Capa 증대 및 자동화 Project\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RDBVVXI\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 14765744,
+      "modified": "2026-11-03T12:20:28",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2024-11-25 스틱 포장기 오버홀 및 Stick Round Cutter제작 설치 건",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2024-11-25 스틱 포장기 오버홀 및 Stick Round Cutter제작 설치 건\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RSO47DZ\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 1574493,
+      "modified": "2026-11-03T12:20:24",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2024-11-25 스틱 포장기 오버홀 및 Stick Round Cutter제작 설치 건",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2024-11-25 스틱 포장기 오버홀 및 Stick Round Cutter제작 설치 건\\2025-02-25 생산2팀)스틱포장기 라운드컷팅 개조 공사 교체 부분 고철 처리\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RSO47DZ\\2025-02-25 생산2팀)스틱포장기 라운드컷팅 개조 공사 교체 부분 고철 처리\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 15691930,
+      "modified": "2026-11-03T12:09:30",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-05-21 에이치씨글로벌 대기오염물질 총량관리사업장 설치허가 결과",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-05-21 에이치씨글로벌 대기오염물질 총량관리사업장 설치허가 결과\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R7U62E8\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 12461687,
+      "modified": "2026-11-03T12:14:25",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2024-08-30 (생산2팀 1Part) 소포장 외포장실 자동화라인 설치 건",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2024-08-30 (생산2팀 1Part) 소포장 외포장실 자동화라인 설치 건\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R91HQ9Z\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 7352489,
+      "modified": "2026-11-03T12:20:26",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2024-08-30 (생산2팀 1Part) 소포장 외포장실 자동화라인 설치 건",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2024-08-30 (생산2팀 1Part) 소포장 외포장실 자동화라인 설치 건\\2025-02-05 생산2팀)소포장 외포장실 자동화라인 설치 관련 고철 처리\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R91HQ9Z\\2025-02-05 생산2팀)소포장 외포장실 자동화라인 설치 관련 고철 처리\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 9600340,
+      "modified": "2026-11-03T12:09:33",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-02-26 유산)생산1팀 2파트 옥외 팜유(2번)탱크 교반기 OVERHAUL 작업",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-02-26 유산)생산1팀 2파트 옥외 팜유(2번)탱크 교반기 OVERHAUL 작업\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R1XHH10\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 4436914,
+      "modified": "2026-11-03T13:17:59",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-02-26 유산)생산1팀 2파트 옥외 팜유(2번)탱크 교반기 OVERHAUL 작업",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-02-26 유산)생산1팀 2파트 옥외 팜유(2번)탱크 교반기 OVERHAUL 작업\\2026-04-09 생산 1팀 2파트 옥외팜유(2번)탱크 교반기 OVERHAU\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R1XHH10\\2026-04-09 생산 1팀 2파트 옥외팜유(2번)탱크 교반기 OVERHAU\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 11091926,
+      "modified": "2026-11-02T16:42:12",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-07-27 생산2팀) 여성 휴게실 환경 개선(리모델링) 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-07-27 생산2팀) 여성 휴게실 환경 개선(리모델링) 공사\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RT5E0YP\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 2372480,
+      "modified": "2026-11-03T13:17:35",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-07-27 생산2팀) 여성 휴게실 환경 개선(리모델링) 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-07-27 생산2팀) 여성 휴게실 환경 개선(리모델링) 공사\\2026-08-26 생산2팀)여성 휴게실 환경개선(리모델링)작업 완료 보고\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RT5E0YP\\2026-08-26 생산2팀)여성 휴게실 환경개선(리모델링)작업 완료 보고\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 13081802,
+      "modified": "2026-11-02T16:48:20",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-05-14 생산1팀 1파트 물류 창고 전기 증설 및 조명등 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-05-14 생산1팀 1파트 물류 창고 전기 증설 및 조명등 공사\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R1O2PH1\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 8803443,
+      "modified": "2026-11-03T13:17:55",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-05-14 생산1팀 1파트 물류 창고 전기 증설 및 조명등 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-05-14 생산1팀 1파트 물류 창고 전기 증설 및 조명등 공사\\2026-06-01 생산1팀 1파트 물류 창고 전기 증설 및 조명등 공사 (완료보고서)\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R1O2PH1\\2026-06-01 생산1팀 1파트 물류 창고 전기 증설 및 조명등 공사 (완료보고서)\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 6080393,
+      "modified": "2026-11-02T16:46:11",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-04-22 생산1팀 2파트 옥외 팜유,저감미당탱크 스팀밸브 및 배관 개조 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-04-22 생산1팀 2파트 옥외 팜유,저감미당탱크 스팀밸브 및 배관 개조 공사\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RIJ5SII\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 2723477,
+      "modified": "2026-11-03T12:18:21",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-04-22 생산1팀 2파트 옥외 팜유,저감미당탱크 스팀밸브 및 배관 개조 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-04-22 생산1팀 2파트 옥외 팜유,저감미당탱크 스팀밸브 및 배관 개조 공사\\2025-07-11 생산 1팀 2파트 옥외 팜유,저감미당탱크 스팀밸브 개선 공사\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RIJ5SII\\2025-07-11 생산 1팀 2파트 옥외 팜유,저감미당탱크 스팀밸브 개선 공사\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 11325893,
+      "modified": "2026-11-03T12:11:01",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-10-08 북정)SD 이산화규소 재료 투입구 개선 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-10-08 북정)SD 이산화규소 재료 투입구 개선 공사\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RND81NT\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 2936173,
+      "modified": "2026-11-03T13:17:22",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-10-08 북정)SD 이산화규소 재료 투입구 개선 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-10-08 북정)SD 이산화규소 재료 투입구 개선 공사\\2026-11-01 북정)SD이산화규소 재료 투입구 개선 공사\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RND81NT\\2026-11-01 북정)SD이산화규소 재료 투입구 개선 공사\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 11475050,
+      "modified": "2026-11-02T16:50:35",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-02-25 (생산1팀 1Part) 폐수장 에어 공급 배관 설치 및 콤프레셔 전기 증설 공사 건",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-02-25 (생산1팀 1Part) 폐수장 에어 공급 배관 설치 및 콤프레셔 전기 증설 공사 건\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RCYYNQ3\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 3739011,
+      "modified": "2026-11-03T13:18:07",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-02-25 (생산1팀 1Part) 폐수장 에어 공급 배관 설치 및 콤프레셔 전기 증설 공사 건",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-02-25 (생산1팀 1Part) 폐수장 에어 공급 배관 설치 및 콤프레셔 전기 증설 공사 건\\2026-04-06 (생산1팀 1Part) 폐수장 에어 공급 배관 설치 및 콤프레셔 전기 증설 공사 건 (완료보고서)\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RCYYNQ3\\2026-04-06 (생산1팀 1Part) 폐수장 에어 공급 배관 설치 및 콤프레셔 전기 증설 공사 건 (완료보고서)\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 8663634,
+      "modified": "2026-11-02T16:44:23",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2024-12-16 북정공장)굴뚝 및 2층 슬라브 건물 철거 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2024-12-16 북정공장)굴뚝 및 2층 슬라브 건물 철거 공사\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R15PSO3\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 2180372,
+      "modified": "2026-11-03T12:20:29",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2024-12-16 북정공장)굴뚝 및 2층 슬라브 건물 철거 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2024-12-16 북정공장)굴뚝 및 2층 슬라브 건물 철거 공사\\2025-01-09 북정공장)굴뚝 및 2층 슬라브 건물 철거 공사 완료\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R15PSO3\\2025-01-09 북정공장)굴뚝 및 2층 슬라브 건물 철거 공사 완료\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 10039689,
+      "modified": "2026-11-03T12:10:15",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2024-12-03 북정공장) 구 건물 2층 옥상 방수(복지관 외2개동)작업",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2024-12-03 북정공장) 구 건물 2층 옥상 방수(복지관 외2개동)작업\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RLLF6OF\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 5782334,
+      "modified": "2026-11-03T12:20:31",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2024-12-03 북정공장) 구 건물 2층 옥상 방수(복지관 외2개동)작업",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2024-12-03 북정공장) 구 건물 2층 옥상 방수(복지관 외2개동)작업\\2025-01-08 북정)구 건물 2층 옥상 방수(복지관 외2개동)작업 완료\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RLLF6OF\\2025-01-08 북정)구 건물 2층 옥상 방수(복지관 외2개동)작업 완료\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 6266087,
+      "modified": "2026-11-03T12:10:17",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-03-11 (생산1팀 1Part) SD MSD 건조기 싸이클론 로터리밸브 및 디버터 밸브 교체 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-03-11 (생산1팀 1Part) SD MSD 건조기 싸이클론 로터리밸브 및 디버터 밸브 교체 공사\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R8HP29V\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 3359796,
+      "modified": "2026-11-03T12:18:26",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-03-11 (생산1팀 1Part) SD MSD 건조기 싸이클론 로터리밸브 및 디버터 밸브 교체 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-03-11 (생산1팀 1Part) SD MSD 건조기 싸이클론 로터리밸브 및 디버터 밸브 교체 공사\\2025-08-22 (생산1팀 1Part) SD MSD 건조기 로터리밸브 및 디버터 밸브 교체 공사 건\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R8HP29V\\2025-08-22 (생산1팀 1Part) SD MSD 건조기 로터리밸브 및 디버터 밸브 교체 공사 건\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 8676717,
+      "modified": "2026-11-03T12:10:46",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-02-20 유산공장 3톤 보일러 연도 및 공기예열기 노후교체 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-02-20 유산공장 3톤 보일러 연도 및 공기예열기 노후교체 공사\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RT61F3R\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 3648671,
+      "modified": "2026-11-03T13:18:02",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-02-20 유산공장 3톤 보일러 연도 및 공기예열기 노후교체 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-02-20 유산공장 3톤 보일러 연도 및 공기예열기 노후교체 공사\\2026-05-12 유산)3톤 보일러 부속 장치(공기예열기) 교체 고철 처리\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RT61F3R\\2026-05-12 유산)3톤 보일러 부속 장치(공기예열기) 교체 고철 처리\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 397315,
+      "modified": "2026-11-02T16:47:41",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-02-20 유산공장 3톤 보일러 연도 및 공기예열기 노후교체 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-02-20 유산공장 3톤 보일러 연도 및 공기예열기 노후교체 공사\\2026-05-19 유산공장 3톤 보일러 연도 및 공기예열기 노후교체\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RT61F3R\\2026-05-19 유산공장 3톤 보일러 연도 및 공기예열기 노후교체\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 7634365,
+      "modified": "2026-11-02T16:46:22",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-01-21 (생산1팀 1Part) MSD건조기 챔버 크랙 보수 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-01-21 (생산1팀 1Part) MSD건조기 챔버 크랙 보수 공사\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RLPRI8T\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 10146741,
+      "modified": "2026-11-03T13:18:22",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-01-21 (생산1팀 1Part) MSD건조기 챔버 크랙 보수 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-01-21 (생산1팀 1Part) MSD건조기 챔버 크랙 보수 공사\\2026-02-25 (생산1팀 1Part) MSD건조기 챔버 크랙 보수 공사 (완료보고서)\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RLPRI8T\\2026-02-25 (생산1팀 1Part) MSD건조기 챔버 크랙 보수 공사 (완료보고서)\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 1605039,
+      "modified": "2026-11-02T16:44:00",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2024-10-17 생산 1팀 2파트 옥외 야경유 이중자켓배관 노후로 인한 배관보수 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2024-10-17 생산 1팀 2파트 옥외 야경유 이중자켓배관 노후로 인한 배관보수 공사\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RB6WWTF\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 3196093,
+      "modified": "2026-11-03T12:20:33",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2024-10-17 생산 1팀 2파트 옥외 야경유 이중자켓배관 노후로 인한 배관보수 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2024-10-17 생산 1팀 2파트 옥외 야경유 이중자켓배관 노후로 인한 배관보수 공사\\2025-01-03 생산1팀 2파트 옥외 야경유배관 노후로 이중자켓배관 보수 공사\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RB6WWTF\\2025-01-03 생산1팀 2파트 옥외 야경유배관 노후로 이중자켓배관 보수 공사\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 8432001,
+      "modified": "2026-11-03T12:10:20",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-04-25 생산3팀)배합실 출입구 스피드도어 설치(2곳) 및 공간 건축 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-04-25 생산3팀)배합실 출입구 스피드도어 설치(2곳) 및 공간 건축 공사\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RSI7TMY\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 1039578,
+      "modified": "2026-11-03T12:18:22",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-04-25 생산3팀)배합실 출입구 스피드도어 설치(2곳) 및 공간 건축 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-04-25 생산3팀)배합실 출입구 스피드도어 설치(2곳) 및 공간 건축 공사\\2025-06-09 생산3팀)배합실 출입구 스피드도어(2곳)설치 및 공간 건축 공사\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RSI7TMY\\2025-06-09 생산3팀)배합실 출입구 스피드도어(2곳)설치 및 공간 건축 공사\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 9460563,
+      "modified": "2026-11-03T12:14:22",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-06-09 생산1팀2파트 조제실 열수탱크 스팀배관 코일설치 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-06-09 생산1팀2파트 조제실 열수탱크 스팀배관 코일설치 공사\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RPFC863\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 2621614,
+      "modified": "2026-11-03T13:17:44",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-06-09 생산1팀2파트 조제실 열수탱크 스팀배관 코일설치 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-06-09 생산1팀2파트 조제실 열수탱크 스팀배관 코일설치 공사\\2026-07-20 생산1팀2파트 조제실 열수탱크 스팀배관 코일설치 공사\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RPFC863\\2026-07-20 생산1팀2파트 조제실 열수탱크 스팀배관 코일설치 공사\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 7513140,
+      "modified": "2026-11-02T16:48:40",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-02-18 (생산1팀 1Part) 저당탱크 제작 설치공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-02-18 (생산1팀 1Part) 저당탱크 제작 설치공사\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R0X5G4A\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 9708807,
+      "modified": "2026-11-03T12:20:37",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-01-30 (생산1팀 1Part) 조제실 저당 3,4번 탱크 교반기 오버 홀 수리 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-01-30 (생산1팀 1Part) 조제실 저당 3,4번 탱크 교반기 오버 홀 수리 공사\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RVQERKP\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 5092618,
+      "modified": "2026-11-03T13:18:14",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-01-30 (생산1팀 1Part) 조제실 저당 3,4번 탱크 교반기 오버 홀 수리 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-01-30 (생산1팀 1Part) 조제실 저당 3,4번 탱크 교반기 오버 홀 수리 공사\\2026-04-10 (생산1팀 1Part) 조제실 저당 3,4번 탱크 교반기 오버 홀 수리 건 (완료보고서)\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RVQERKP\\2026-04-10 (생산1팀 1Part) 조제실 저당 3,4번 탱크 교반기 오버 홀 수리 건 (완료보고서)\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 5116547,
+      "modified": "2026-11-02T16:42:02",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-08-04 생산1팀2파트) 건조 증대를 위한 배합실 통합 구분 관리 스피드 도어 설치(2곳)",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-08-04 생산1팀2파트) 건조 증대를 위한 배합실 통합 구분 관리 스피드 도어 설치(2곳)\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RAC7IH6\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 903504,
+      "modified": "2026-11-03T12:18:18",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-08-04 생산1팀2파트) 건조 증대를 위한 배합실 통합 구분 관리 스피드 도어 설치(2곳)",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-08-04 생산1팀2파트) 건조 증대를 위한 배합실 통합 구분 관리 스피드 도어 설치(2곳)\\2025-08-18 생산1팀2파트 거존 증대를 위한 배합실 통합 관리 스피드도어 설치(2곳)\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RAC7IH6\\2025-08-18 생산1팀2파트 거존 증대를 위한 배합실 통합 관리 스피드도어 설치(2곳)\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 8816041,
+      "modified": "2026-11-03T12:10:51",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-03-26 생산 2팀(9동) 건물 노후 지붕 보수 개선 작업",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-03-26 생산 2팀(9동) 건물 노후 지붕 보수 개선 작업\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RG6816G\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 3051810,
+      "modified": "2026-11-03T12:18:23",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-03-26 생산 2팀(9동) 건물 노후 지붕 보수 개선 작업",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-03-26 생산 2팀(9동) 건물 노후 지붕 보수 개선 작업\\2025-04-21 생산2팀(9동) 건물 노후 지붕 보수 공사\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RG6816G\\2025-04-21 생산2팀(9동) 건물 노후 지붕 보수 공사\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 6849915,
+      "modified": "2026-11-03T12:14:45",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-10-13 생산2팀) 입구 환경 개선 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-10-13 생산2팀) 입구 환경 개선 공사\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RLDU015\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 2513852,
+      "modified": "2026-11-03T13:23:30",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-10-13 생산2팀) 입구 환경 개선 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-10-13 생산2팀) 입구 환경 개선 공사\\2026-10-21 생산2팀) 입구 환경 개선 완료\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RLDU015\\2026-10-21 생산2팀) 입구 환경 개선 완료\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 7435884,
+      "modified": "2026-11-02T16:50:41",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-04-15 생산3팀(액상) 설비 증설로 인한 유틸리티1차 배관 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-04-15 생산3팀(액상) 설비 증설로 인한 유틸리티1차 배관 공사\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RPT1B9Q\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 9875637,
+      "modified": "2026-11-03T12:14:51",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-01-26 생산1팀2파트 건조실 CIP탱크 스팀배관 노후 교체 및 간이CIP탱크 스팀배관 교체 공사건",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-01-26 생산1팀2파트 건조실 CIP탱크 스팀배관 노후 교체 및 간이CIP탱크 스팀배관 교체 공사건\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RX2CF5U\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 3609172,
+      "modified": "2026-11-03T13:18:19",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-01-26 생산1팀2파트 건조실 CIP탱크 스팀배관 노후 교체 및 간이CIP탱크 스팀배관 교체 공사건",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-01-26 생산1팀2파트 건조실 CIP탱크 스팀배관 노후 교체 및 간이CIP탱크 스팀배관 교체 공사건\\2026-03-24 생산1팀2파트 CIP탱크,간이CIP탱크 스팀배관 교체 공사 완료\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RX2CF5U\\2026-03-24 생산1팀2파트 CIP탱크,간이CIP탱크 스팀배관 교체 공사 완료\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 5712848,
+      "modified": "2026-11-02T16:42:21",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-07-14 북정)폐수장 침전조(12.5㎥)웰류웨어 FRP코팅 개선 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-07-14 북정)폐수장 침전조(12.5㎥)웰류웨어 FRP코팅 개선 공사\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RQOCKNQ\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 1744830,
+      "modified": "2026-11-03T13:17:37",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-07-14 북정)폐수장 침전조(12.5㎥)웰류웨어 FRP코팅 개선 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-07-14 북정)폐수장 침전조(12.5㎥)웰류웨어 FRP코팅 개선 공사\\2026-08-21 북정)폐수처리장 침전조 웰류웨어 FRP 작업\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RQOCKNQ\\2026-08-21 북정)폐수처리장 침전조 웰류웨어 FRP 작업\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 6587056,
+      "modified": "2026-11-02T16:48:30",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2024-11-30 희창3공장)물류센터 신규 사업 관련 스팀 배관 설치 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2024-11-30 희창3공장)물류센터 신규 사업 관련 스팀 배관 설치 공사\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RE3Z8WC\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 2923745,
+      "modified": "2026-11-03T12:20:31",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2024-11-30 희창3공장)물류센터 신규 사업 관련 스팀 배관 설치 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2024-11-30 희창3공장)물류센터 신규 사업 관련 스팀 배관 설치 공사\\2025-01-06 희창3공장)물류센터 신규 사업 관련 Heating 배관 설치 공사\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RE3Z8WC\\2025-01-06 희창3공장)물류센터 신규 사업 관련 Heating 배관 설치 공사\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 5025637,
+      "modified": "2026-11-03T12:10:18",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-08-24 생산1팀1파트)SD사이크론 및 CIP열수탱크 위험 요소 제거 개선",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-08-24 생산1팀1파트)SD사이크론 및 CIP열수탱크 위험 요소 제거 개선\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RY1Z5R6\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 1903246,
+      "modified": "2026-11-03T12:18:14",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-08-24 생산1팀1파트)SD사이크론 및 CIP열수탱크 위험 요소 제거 개선",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-08-24 생산1팀1파트)SD사이크론 및 CIP열수탱크 위험 요소 제거 개선\\2025-10-14 북정)SD사이크론 및 CIP열수 탱크 위험 요소 제거 개선 공사\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RY1Z5R6\\2025-10-14 북정)SD사이크론 및 CIP열수 탱크 위험 요소 제거 개선 공사\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 5726865,
+      "modified": "2026-11-03T12:10:27",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-05-15 북정)복지관 옥상 물탱크 설치 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-05-15 북정)복지관 옥상 물탱크 설치 공사\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RKXP7XK\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 1761845,
+      "modified": "2026-11-03T13:17:52",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-05-15 북정)복지관 옥상 물탱크 설치 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-05-15 북정)복지관 옥상 물탱크 설치 공사\\2026-05-15 북정)복지관 옥상 물탱크 설치 공사\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RKXP7XK\\2026-05-15 북정)복지관 옥상 물탱크 설치 공사\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 1759911,
+      "modified": "2026-11-03T13:17:51",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-05-15 북정)복지관 옥상 물탱크 설치 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-05-15 북정)복지관 옥상 물탱크 설치 공사\\2026-06-05 북정)복지관 옥상 물탱크 설치 공사\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RKXP7XK\\2026-06-05 북정)복지관 옥상 물탱크 설치 공사\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 3704374,
+      "modified": "2026-11-02T16:46:02",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-01-20 생산3팀)액상 100RT 냉동기중 일체형 증발기 내부 수리",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-01-20 생산3팀)액상 100RT 냉동기중 일체형 증발기 내부 수리\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RP9S42U\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 1354481,
+      "modified": "2026-11-03T12:18:35",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-01-20 생산3팀)액상 100RT 냉동기중 일체형 증발기 내부 수리",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-01-20 생산3팀)액상 100RT 냉동기중 일체형 증발기 내부 수리\\2025-02-12 생산3팀)액상 100 RT 냉동기중 일체형 증발기 수리\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RP9S42U\\2025-02-12 생산3팀)액상 100 RT 냉동기중 일체형 증발기 수리\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 5990307,
+      "modified": "2026-11-03T12:09:31",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-03-26 생산1팀2파트 적재로봇 내 안전장치 설치건",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-03-26 생산1팀2파트 적재로봇 내 안전장치 설치건\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RQYB6MT\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 3000872,
+      "modified": "2026-11-03T13:18:04",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-03-26 생산1팀2파트 적재로봇 내 안전장치 설치건",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-03-26 생산1팀2파트 적재로봇 내 안전장치 설치건\\2026-05-27 생산1팀2파트 적재로봇내 안전장치 설치\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RQYB6MT\\2026-05-27 생산1팀2파트 적재로봇내 안전장치 설치\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 3543476,
+      "modified": "2026-11-02T16:46:59",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-08-05 생산1팀2파트 지대 충진기 계량기호퍼OVERHAUL건",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-08-05 생산1팀2파트 지대 충진기 계량기호퍼OVERHAUL건\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RAOF79P\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 1863903,
+      "modified": "2026-11-03T12:18:15",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-08-05 생산1팀2파트 지대 충진기 계량기호퍼OVERHAUL건",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-08-05 생산1팀2파트 지대 충진기 계량기호퍼OVERHAUL건\\2025-09-24 생산1팀 2파트 지대충진기 계량기호퍼OVERHAUL 건\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RAOF79P\\2025-09-24 생산1팀 2파트 지대충진기 계량기호퍼OVERHAUL 건\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 4633379,
+      "modified": "2026-11-03T12:10:40",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-02-26 (생산1팀 1Part) MSD청정실 상부 CIP드레인 배관 교체 공사 건",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-02-26 (생산1팀 1Part) MSD청정실 상부 CIP드레인 배관 교체 공사 건\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RFPPSWL\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 3937758,
+      "modified": "2026-11-03T12:18:31",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-02-26 (생산1팀 1Part) MSD청정실 상부 CIP드레인 배관 교체 공사 건",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-02-26 (생산1팀 1Part) MSD청정실 상부 CIP드레인 배관 교체 공사 건\\2025-03-18 생산1팀(1Part) MSD청정실 상부 CIP드레인 배관 교체 공사\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RFPPSWL\\2025-03-18 생산1팀(1Part) MSD청정실 상부 CIP드레인 배관 교체 공사\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 2543236,
+      "modified": "2026-11-03T12:15:24",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-03-24 유산)폐수처리장 방류조 FRP 코팅 작업",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-03-24 유산)폐수처리장 방류조 FRP 코팅 작업\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RT791WB\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 1875807,
+      "modified": "2026-11-03T13:18:05",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-03-24 유산)폐수처리장 방류조 FRP 코팅 작업",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-03-24 유산)폐수처리장 방류조 FRP 코팅 작업\\2026-04-02 유산)폐수처리장 방류조 FRP 작업\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RT791WB\\2026-04-02 유산)폐수처리장 방류조 FRP 작업\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 4257615,
+      "modified": "2026-11-02T16:44:31",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-08-28 유산)9동 계단 통로 픽스유리창 썬팅 작업",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-08-28 유산)9동 계단 통로 픽스유리창 썬팅 작업\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RAHLF98\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 930741,
+      "modified": "2026-11-03T13:17:28",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-08-28 유산)9동 계단 통로 픽스유리창 썬팅 작업",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-08-28 유산)9동 계단 통로 픽스유리창 썬팅 작업\\2026-09-03 유산)9동 계단 통로 썬팅 작업 완료 보고\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RAHLF98\\2026-09-03 유산)9동 계단 통로 썬팅 작업 완료 보고\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 5165653,
+      "modified": "2026-11-02T16:48:12",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-07-20 액상 배합실 A라인 스팀배관 개선 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-07-20 액상 배합실 A라인 스팀배관 개선 공사\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RSMW9UA\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 1935433,
+      "modified": "2026-11-03T13:17:36",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-07-20 액상 배합실 A라인 스팀배관 개선 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-07-20 액상 배합실 A라인 스팀배관 개선 공사\\2026-08-18 액상 배합실 A라인 스팀배관 개선 공사\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RSMW9UA\\2026-08-18 액상 배합실 A라인 스팀배관 개선 공사\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 3931762,
+      "modified": "2026-11-02T16:49:17",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-11-14 북정 대기자가측정 업체 변경",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-11-14 북정 대기자가측정 업체 변경\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R929EXE\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 5175345,
+      "modified": "2026-11-03T12:18:09",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-08-06 유산공장 액상 폐수 이송 배관 부분 교체 작업",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-08-06 유산공장 액상 폐수 이송 배관 부분 교체 작업\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RAVHFO3\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 1777930,
+      "modified": "2026-11-03T12:18:16",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-08-06 유산공장 액상 폐수 이송 배관 부분 교체 작업",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-08-06 유산공장 액상 폐수 이송 배관 부분 교체 작업\\2025-09-09 생산3팀)액상 폐수 이송 배관 부분 교체에 따른 고철 처리 정산\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RAVHFO3\\2025-09-09 생산3팀)액상 폐수 이송 배관 부분 교체에 따른 고철 처리 정산\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 351973,
+      "modified": "2026-11-03T12:10:42",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-08-06 유산공장 액상 폐수 이송 배관 부분 교체 작업",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-08-06 유산공장 액상 폐수 이송 배관 부분 교체 작업\\2025-09-10 생산3팀 액상 폐수 이송 배관 부분 교체작업 완료\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RAVHFO3\\2025-09-10 생산3팀 액상 폐수 이송 배관 부분 교체작업 완료\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 3614587,
+      "modified": "2026-11-03T12:10:41",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-04-10 유산, 북정 대기자가측정 2025년도 업체 변경 및 계약",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-04-10 유산, 북정 대기자가측정 2025년도 업체 변경 및 계약\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RBJ3GYO\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 4956345,
+      "modified": "2026-11-03T12:18:25",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-02-24 유산)생산1팀2파트(4동) 옥상 소방용수 겸용 SMC 물탱크 개선 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-02-24 유산)생산1팀2파트(4동) 옥상 소방용수 겸용 SMC 물탱크 개선 공사\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RLCT9N0\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 1981541,
+      "modified": "2026-11-03T13:18:09",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-02-24 유산)생산1팀2파트(4동) 옥상 소방용수 겸용 SMC 물탱크 개선 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-02-24 유산)생산1팀2파트(4동) 옥상 소방용수 겸용 SMC 물탱크 개선 공사\\2026-03-20 유산)4동 옥상 소방용수 겸용 SMC물탱크 개선 공사\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RLCT9N0\\2026-03-20 유산)4동 옥상 소방용수 겸용 SMC물탱크 개선 공사\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 3150215,
+      "modified": "2026-11-02T16:38:38",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-11-04 액상 제환기 #1·#2 구동부 순차 수리",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-11-04 액상 제환기 #1·#2 구동부 순차 수리\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RYPPBPI\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 1225394,
+      "modified": "2026-11-03T12:18:10",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-11-04 액상 제환기 #1·#2 구동부 순차 수리",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-11-04 액상 제환기 #1·#2 구동부 순차 수리\\2025-11-17 제환기#2호기 수리 완료건\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RYPPBPI\\2025-11-17 제환기#2호기 수리 완료건\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 2252235,
+      "modified": "2026-11-03T12:10:25",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-11-04 액상 제환기 #1·#2 구동부 순차 수리",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-11-04 액상 제환기 #1·#2 구동부 순차 수리\\2025-12-02 생산3팀(액상) 제환기#1호기 수리 완료건\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RYPPBPI\\2025-12-02 생산3팀(액상) 제환기#1호기 수리 완료건\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 1390279,
+      "modified": "2026-11-03T12:10:24",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-09-17 생산1팀1파트)SD4층 경계면 우수 배관 교체 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-09-17 생산1팀1파트)SD4층 경계면 우수 배관 교체 공사\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RY2W7E1\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 845991,
+      "modified": "2026-11-03T12:18:13",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-09-17 생산1팀1파트)SD4층 경계면 우수 배관 교체 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-09-17 생산1팀1파트)SD4층 경계면 우수 배관 교체 공사\\2025-10-16 북정)SD4층 경계면 우수 배관 교체 공사\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RY2W7E1\\2025-10-16 북정)SD4층 경계면 우수 배관 교체 공사\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 3940030,
+      "modified": "2026-11-03T12:10:28",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-07-17 생산1팀2파트) 건조 증대를 위한 파우더믹스 설치 공간 확보 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-07-17 생산1팀2파트) 건조 증대를 위한 파우더믹스 설치 공간 확보 공사\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R406SO5\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 1940970,
+      "modified": "2026-11-03T12:18:19",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-07-17 생산1팀2파트) 건조 증대를 위한 파우더믹스 설치 공간 확보 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-07-17 생산1팀2파트) 건조 증대를 위한 파우더믹스 설치 공간 확보 공사\\2025-08-11 생산1팀2파트)건조 증대를 위한 파우더믹스 설치 공간 확보\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R406SO5\\2025-08-11 생산1팀2파트)건조 증대를 위한 파우더믹스 설치 공간 확보\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 2870888,
+      "modified": "2026-11-03T12:10:56",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-12-02 HC글로벌 인버터형 컴프레셔(100Hp) 구매 및 설치",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-12-02 HC글로벌 인버터형 컴프레셔(100Hp) 구매 및 설치\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RZ8UZG1\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 1841784,
+      "modified": "2026-11-03T12:18:08",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-12-02 HC글로벌 인버터형 컴프레셔(100Hp) 구매 및 설치",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-12-02 HC글로벌 인버터형 컴프레셔(100Hp) 구매 및 설치\\2026-01-29 희창)100마력 인버터형 콤퓨레셔 설치에 따른 고철 처리\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RZ8UZG1\\2026-01-29 희창)100마력 인버터형 콤퓨레셔 설치에 따른 고철 처리\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 385470,
+      "modified": "2026-11-02T16:40:26",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-12-02 HC글로벌 인버터형 컴프레셔(100Hp) 구매 및 설치",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-12-02 HC글로벌 인버터형 컴프레셔(100Hp) 구매 및 설치\\2026-04-13 HC글로벌 인버터형 컴프레서(100Hp) 구매 및 설치 완료 결과보고\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RZ8UZG1\\2026-04-13 HC글로벌 인버터형 컴프레서(100Hp) 구매 및 설치 완료 결과보고\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 2227849,
+      "modified": "2026-11-02T16:47:50",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-09-15 유산 균질기 감속기 긴급수리 및 Rossi 신품 교체",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-09-15 유산 균질기 감속기 긴급수리 및 Rossi 신품 교체\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R1ZR0AJ\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 2183478,
+      "modified": "2026-11-03T13:23:31",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-09-15 유산 균질기 감속기 긴급수리 및 Rossi 신품 교체",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-09-15 유산 균질기 감속기 긴급수리 및 Rossi 신품 교체\\2026-09-14 유산공장 건조기 균질기 감속기 고장 수리\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R1ZR0AJ\\2026-09-14 유산공장 건조기 균질기 감속기 고장 수리\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 855615,
+      "modified": "2026-11-02T16:57:03",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-09-15 유산 균질기 감속기 긴급수리 및 Rossi 신품 교체",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-09-15 유산 균질기 감속기 긴급수리 및 Rossi 신품 교체\\2026-10-05 유산공장 건조기 균질기 감속기 수입 후 설치 작업\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R1ZR0AJ\\2026-10-05 유산공장 건조기 균질기 감속기 수입 후 설치 작업\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 1463794,
+      "modified": "2026-11-02T16:55:51",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-03-25 (생산1팀 1Part) 물류 대기품 보관 창고 스피드 도어 설치 건",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-03-25 (생산1팀 1Part) 물류 대기품 보관 창고 스피드 도어 설치 건\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RI2EY1U\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 2945771,
+      "modified": "2026-11-03T13:18:03",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-03-25 (생산1팀 1Part) 물류 대기품 보관 창고 스피드 도어 설치 건",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-03-25 (생산1팀 1Part) 물류 대기품 보관 창고 스피드 도어 설치 건\\2026-05-15 (생산1팀 1Part) 물류 대기품 보관 창고 스피드 도어 설치 건\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RI2EY1U\\2026-05-15 (생산1팀 1Part) 물류 대기품 보관 창고 스피드 도어 설치 건\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 1777523,
+      "modified": "2026-11-02T16:47:08",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-03-06 생산2팀 소포장 원료 호퍼 교반기 오버홀 및 개조 공사 진행",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-03-06 생산2팀 소포장 원료 호퍼 교반기 오버홀 및 개조 공사 진행\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RWJOIMS\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 2380880,
+      "modified": "2026-11-03T13:17:58",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-03-06 생산2팀 소포장 원료 호퍼 교반기 오버홀 및 개조 공사 진행",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-03-06 생산2팀 소포장 원료 호퍼 교반기 오버홀 및 개조 공사 진행\\2026-06-10 생산2팀 원료호퍼교반기 개조 및 보수 공사 결과\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RWJOIMS\\2026-06-10 생산2팀 원료호퍼교반기 개조 및 보수 공사 결과\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 2034920,
+      "modified": "2026-11-02T16:50:09",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-02-24 (생산1팀 1Part) 건조실 및 조제실 조명등 교체 공사 건",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-02-24 (생산1팀 1Part) 건조실 및 조제실 조명등 교체 공사 건\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RUUZDBW\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 1338932,
+      "modified": "2026-11-03T13:18:08",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-02-24 (생산1팀 1Part) 건조실 및 조제실 조명등 교체 공사 건",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-02-24 (생산1팀 1Part) 건조실 및 조제실 조명등 교체 공사 건\\2026-03-13 생산1팀 1파트 건조실 및 조제실 조명등 교체 공사 건 (완료보고서)\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RUUZDBW\\2026-03-13 생산1팀 1파트 건조실 및 조제실 조명등 교체 공사 건 (완료보고서)\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 3186718,
+      "modified": "2026-11-02T16:39:40",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-03-17 (생산1팀 1Part) MSD 내포장실 누름컨베어 보수 작업 건 (기안서)",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-03-17 (생산1팀 1Part) MSD 내포장실 누름컨베어 보수 작업 건 (기안서)\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R67AHQR\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 1155782,
+      "modified": "2026-11-03T13:18:06",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-03-17 (생산1팀 1Part) MSD 내포장실 누름컨베어 보수 작업 건 (기안서)",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-03-17 (생산1팀 1Part) MSD 내포장실 누름컨베어 보수 작업 건 (기안서)\\2026-04-17 (생산1팀 1Part) MSD 내포장실 누름컨베어 보수 작업 (완료보고서)\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R67AHQR\\2026-04-17 (생산1팀 1Part) MSD 내포장실 누름컨베어 보수 작업 (완료보고서)\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 3017161,
+      "modified": "2026-11-02T16:43:52",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-08-26 냉동기 정비 및 효율 증가 개선 결과",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-08-26 냉동기 정비 및 효율 증가 개선 결과\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R8VPQSL\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 3726835,
+      "modified": "2026-11-03T12:10:44",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-01-15 생산3팀)액상 대용량 로타리 1열 포장기 매각 처리",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-01-15 생산3팀)액상 대용량 로타리 1열 포장기 매각 처리\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R2FUKUN\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 3687279,
+      "modified": "2026-11-03T12:09:35",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-08-19 액상 칠러 이코노마이저 설치",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-08-19 액상 칠러 이코노마이저 설치\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RYSJQWS\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 3435393,
+      "modified": "2026-11-02T16:49:27",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-10-06 북정)폐수장 앞 파렛트 투입구 지반 침하 개선 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-10-06 북정)폐수장 앞 파렛트 투입구 지반 침하 개선 공사\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RUTQYHN\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 3213027,
+      "modified": "2026-11-03T13:17:23",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-04-10 유산, 북정 폐수처리오니 업체 재계약(갱신)",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-04-10 유산, 북정 폐수처리오니 업체 재계약(갱신)\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R95EIR9\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 3133966,
+      "modified": "2026-11-03T13:17:56",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-01-15 생산2팀 스틱파트 질소발생기 소모품 교체 진행",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-01-15 생산2팀 스틱파트 질소발생기 소모품 교체 진행\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RNY4ENZ\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 1746095,
+      "modified": "2026-11-03T13:18:24",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-01-15 생산2팀 스틱파트 질소발생기 소모품 교체 진행",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-01-15 생산2팀 스틱파트 질소발생기 소모품 교체 진행\\2026-02-20 생산2팀 스틱파트 질소발생기 소모품 교체 완료\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RNY4ENZ\\2026-02-20 생산2팀 스틱파트 질소발생기 소모품 교체 완료\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 1355006,
+      "modified": "2026-11-02T16:40:18",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-07-09 생산 2팀 내포장실 덕트 설치 작업 및 환경인허가 변경",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-07-09 생산 2팀 내포장실 덕트 설치 작업 및 환경인허가 변경\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RAF9BBD\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 1494902,
+      "modified": "2026-11-03T12:18:17",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-07-09 생산 2팀 내포장실 덕트 설치 작업 및 환경인허가 변경",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-07-09 생산 2팀 내포장실 덕트 설치 작업 및 환경인허가 변경\\2025-09-26 생산2팀 내포장실 덕트 설치 작업 완료\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RAF9BBD\\2025-09-26 생산2팀 내포장실 덕트 설치 작업 완료\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 1339187,
+      "modified": "2026-11-03T12:10:29",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-03-14 생산 1팀 2파트 청정실 덕트 수정작업 및 외포장실 팬스 이설 작업",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-03-14 생산 1팀 2파트 청정실 덕트 수정작업 및 외포장실 팬스 이설 작업\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RM101BH\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 905117,
+      "modified": "2026-11-03T12:18:30",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-03-14 생산 1팀 2파트 청정실 덕트 수정작업 및 외포장실 팬스 이설 작업",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-03-14 생산 1팀 2파트 청정실 덕트 수정작업 및 외포장실 팬스 이설 작업\\2025-05-12 생산 1팀 2파트 청정실 덕트 수정작업 및 외포장실 팬스 이설 작업 완료\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RM101BH\\2025-05-12 생산 1팀 2파트 청정실 덕트 수정작업 및 외포장실 팬스 이설 작업 완료\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 1988660,
+      "modified": "2026-11-03T12:14:26",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-04-29 카제인 탱크 철거·정산",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-04-29 카제인 탱크 철거·정산\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RVG84HD\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 2917946,
+      "modified": "2026-11-02T16:42:31",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-09-02 생산 2팀 소포장 지대 라인 이송 컨베이어 개선 진행",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-09-02 생산 2팀 소포장 지대 라인 이송 컨베이어 개선 진행\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RF6KRMS\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 1217299,
+      "modified": "2026-11-03T13:17:27",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-09-02 생산 2팀 소포장 지대 라인 이송 컨베이어 개선 진행",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-09-02 생산 2팀 소포장 지대 라인 이송 컨베이어 개선 진행\\2026-10-20 생산2팀 소포장 컨베이어 유지보수 효율 개선 결과보고\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RF6KRMS\\2026-10-20 생산2팀 소포장 컨베이어 유지보수 효율 개선 결과보고\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 1459181,
+      "modified": "2026-11-02T16:50:52",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-01-15 생산3팀 제환실 폐수집수조 교체 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-01-15 생산3팀 제환실 폐수집수조 교체 공사\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RC9PYPU\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 499082,
+      "modified": "2026-11-03T13:18:25",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-01-15 생산3팀 제환실 폐수집수조 교체 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-01-15 생산3팀 제환실 폐수집수조 교체 공사\\2026-01-22 생산3팀 제환실 폐수집수조 교체 공사의件\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RC9PYPU\\2026-01-22 생산3팀 제환실 폐수집수조 교체 공사의件\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 2291076,
+      "modified": "2026-11-02T16:40:55",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-01-23 생산3팀(액상팀) 제환 설비 개선 보수 진행",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-01-23 생산3팀(액상팀) 제환 설비 개선 보수 진행\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$ROLMSGG\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 1289184,
+      "modified": "2026-11-03T12:18:32",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-01-23 생산3팀(액상팀) 제환 설비 개선 보수 진행",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-01-23 생산3팀(액상팀) 제환 설비 개선 보수 진행\\2025-02-12 생산3팀 제환설비 개선 및 보수 완료\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$ROLMSGG\\2025-02-12 생산3팀 제환설비 개선 및 보수 완료\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 1127420,
+      "modified": "2026-11-03T12:07:19",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-03-20 MSD 카제인 고속믹서 보수",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-03-20 MSD 카제인 고속믹서 보수\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RY5RV4R\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 2455818,
+      "modified": "2026-11-02T16:45:27",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-05-13 생산3팀(액상) 유틸리티 설비 교체 및 유지보수 진행",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-05-13 생산3팀(액상) 유틸리티 설비 교체 및 유지보수 진행\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$REXN2EM\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 2317818,
+      "modified": "2026-11-03T13:17:49",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-05-19 생산3팀 급속냉동기 압축기 교체",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-05-19 생산3팀 급속냉동기 압축기 교체\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RI81VSF\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 913880,
+      "modified": "2026-11-03T12:20:39",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-05-19 생산3팀 급속냉동기 압축기 교체",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-05-19 생산3팀 급속냉동기 압축기 교체\\2025-06-19 생산3팀 급속냉동기 압축기 교체\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RI81VSF\\2025-06-19 생산3팀 급속냉동기 압축기 교체\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 1218414,
+      "modified": "2026-11-03T12:14:20",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-12-02 생산3팀외부냉동창고 소모품교체·이코노마이저",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-12-02 생산3팀외부냉동창고 소모품교체·이코노마이저\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RZK4EUK\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 908196,
+      "modified": "2026-11-03T13:24:37",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-12-02 생산3팀외부냉동창고 소모품교체·이코노마이저",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-12-02 생산3팀외부냉동창고 소모품교체·이코노마이저\\2026-01-05 생산3팀(액상) 외부 냉동창고 점검 및 전력비 절감 개선 결과\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RZK4EUK\\2026-01-05 생산3팀(액상) 외부 냉동창고 점검 및 전력비 절감 개선 결과\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 1141951,
+      "modified": "2026-11-02T16:41:12",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-11-04 생산2팀 부자재 출입로 환경 개선 진행",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-11-04 생산2팀 부자재 출입로 환경 개선 진행\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RMVJYKZ\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 645105,
+      "modified": "2026-11-03T12:18:11",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-11-04 생산2팀 부자재 출입로 환경 개선 진행",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-11-04 생산2팀 부자재 출입로 환경 개선 진행\\2025-12-17 생산 2팀 부자재 출입로 개선 작업\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RMVJYKZ\\2025-12-17 생산 2팀 부자재 출입로 개선 작업\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 1398460,
+      "modified": "2026-11-03T12:10:23",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-12-24 (생산1팀 1Part) SD건조기 배풍기 모터 소손으로 모터 교체 시운전 건",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-12-24 (생산1팀 1Part) SD건조기 배풍기 모터 소손으로 모터 교체 시운전 건\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R0OTXE4\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 1976487,
+      "modified": "2026-11-03T12:10:22",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-03-27 생산1팀2파트 건조 Capa 증대를 위한 파우더믹서 관련설비 투자",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-03-27 생산1팀2파트 건조 Capa 증대를 위한 파우더믹서 관련설비 투자\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R5FG7MB\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 1430282,
+      "modified": "2026-11-03T12:20:41",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-05-15 건조기 배기 스택 연장",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-05-15 건조기 배기 스택 연장\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R9KNB9B\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 1368932,
+      "modified": "2026-11-02T16:46:42",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-03-13 유산 폐수처리장 위탁관리 업체 선정",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-03-13 유산 폐수처리장 위탁관리 업체 선정\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RYUUXAB\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 1200047,
+      "modified": "2026-11-03T12:18:29",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-08-21 북정) 폐수처리장 정상화 작업",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-08-21 북정) 폐수처리장 정상화 작업\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R07AE27\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 1225659,
+      "modified": "2026-11-03T13:17:25",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-12-05 생산2팀)생산 설비 중 V-MIXER(2기) 매각 처리",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-12-05 생산2팀)생산 설비 중 V-MIXER(2기) 매각 처리\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RL4LLCQ\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 1265237,
+      "modified": "2026-11-03T12:10:20",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-09-24 북정 대기자가측정 업체 변경",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-09-24 북정 대기자가측정 업체 변경\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R4HRCTE\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 1175053,
+      "modified": "2026-11-03T12:18:12",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-07-09 압축기 모니터링 구축",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-07-09 압축기 모니터링 구축\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RYWCS20\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 1103343,
+      "modified": "2026-11-02T16:50:00",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2024-12-30 유산, 북정 수질오염물질 전항목 시험 분석 의뢰",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2024-12-30 유산, 북정 수질오염물질 전항목 시험 분석 의뢰\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RIS72AE\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 599666,
+      "modified": "2026-11-03T12:20:26",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2024-12-30 유산, 북정 수질오염물질 전항목 시험 분석 의뢰",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2024-12-30 유산, 북정 수질오염물질 전항목 시험 분석 의뢰\\2025-01-22 유산, 북정 수질오염물질 전항목 시험 분석 완료\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RIS72AE\\2025-01-22 유산, 북정 수질오염물질 전항목 시험 분석 완료\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 425876,
+      "modified": "2026-11-03T12:09:34",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-07-23 폐수 pH 중화장치 효과 검증",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-07-23 폐수 pH 중화장치 효과 검증\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RU3OPVK\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 962344,
+      "modified": "2026-11-02T16:49:36",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-08-05 양산시청 수질관리과 처분통지서",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-08-05 양산시청 수질관리과 처분통지서\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R4VWAC5\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 884914,
+      "modified": "2026-11-03T12:10:53",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-05-11 SD 충진라인 자동화",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-05-11 SD 충진라인 자동화\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RPBGZDU\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 835865,
+      "modified": "2026-11-02T16:46:50",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-06-24 100마력 냉동식 드라이어 신품 교체",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-06-24 100마력 냉동식 드라이어 신품 교체\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RWB7DC3\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 421463,
+      "modified": "2026-11-03T12:20:34",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-06-24 100마력 냉동식 드라이어 신품 교체",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-06-24 100마력 냉동식 드라이어 신품 교체\\2025-07-21 100마력 냉동식 드라이어 신품 교체\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RWB7DC3\\2025-07-21 100마력 냉동식 드라이어 신품 교체\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 353319,
+      "modified": "2026-11-03T12:11:02",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-08-27 북정 대기자가측정 업체 변경",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-08-27 북정 대기자가측정 업체 변경\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RNP1C5Y\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 502674,
+      "modified": "2026-11-03T13:17:24",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-03-25 유산 폐수처리장 위탁관리 재계약",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-03-25 유산 폐수처리장 위탁관리 재계약\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RY69GEI\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 371017,
+      "modified": "2026-11-03T13:17:57",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-09-14 생산1팀 1파트 레시틴 공급용 고점도 에어 피스톤 펌프 구매",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-09-14 생산1팀 1파트 레시틴 공급용 고점도 에어 피스톤 펌프 구매\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RBXD3RB\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 238004,
+      "modified": "2026-11-03T13:17:26",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-03-18 잔여 원부자재 폐기",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-03-18 잔여 원부자재 폐기\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$ROKKF0G\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 238730,
+      "modified": "2026-11-02T16:39:32",
+      "extension": ".zip"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-06-24 물류센터(희창3공장) 승강기 유지 관리 계약 변경",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-06-24 물류센터(희창3공장) 승강기 유지 관리 계약 변경\\문서 원본 백업.zip",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R636JIT\\문서 원본 백업.zip",
+      "name": "문서 원본 백업.zip",
+      "bytes": 189082,
+      "modified": "2026-11-03T12:18:20",
+      "extension": ".zip"
+    }
+  ],
+  "presentation_files": [
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\웹소스\\final-investment-hub",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\웹소스\\final-investment-hub\\dist\\downloads\\2026-2027-summary.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RSTTA0J\\dist\\downloads\\2026-2027-summary.pptx",
+      "name": "2026-2027-summary.pptx",
+      "bytes": 226436,
+      "modified": "2026-11-03T09:35:32",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\웹소스\\final-investment-hub",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\웹소스\\final-investment-hub\\dist\\evidence\\2026-kpi-original.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RSTTA0J\\dist\\evidence\\2026-kpi-original.pptx",
+      "name": "2026-kpi-original.pptx",
+      "bytes": 651762,
+      "modified": "2026-11-02T15:45:17",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\웹소스\\final-investment-hub",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\웹소스\\final-investment-hub\\dist\\evidence\\2027-plan-original.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RSTTA0J\\dist\\evidence\\2027-plan-original.pptx",
+      "name": "2027-plan-original.pptx",
+      "bytes": 14247566,
+      "modified": "2026-10-21T16:26:14",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\웹소스\\final-investment-hub",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\웹소스\\final-investment-hub\\dist\\evidence\\waste-ph-installation.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RSTTA0J\\dist\\evidence\\waste-ph-installation.pptx",
+      "name": "waste-ph-installation.pptx",
+      "bytes": 783547,
+      "modified": "2026-11-02T16:50:17",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-07-15 북정)조제실 내부 환경 개선 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-07-15 북정)조제실 내부 환경 개선 공사\\첨부파일\\㈜희창유업 북정동 공장 조제실 개선공사.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RR2QMC9\\첨부파일\\㈜희창유업 북정동 공장 조제실 개선공사.pptx",
+      "name": "㈜희창유업 북정동 공장 조제실 개선공사.pptx",
+      "bytes": 15172924,
+      "modified": "2026-11-03T13:19:41",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-06-02 생산2팀) 위생전실 및 1,2,3층 위생실 개선(리모델링) 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-06-02 생산2팀) 위생전실 및 1,2,3층 위생실 개선(리모델링) 공사\\첨부파일\\생산2팀)위생전실 개선의 건.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RGUWER5\\첨부파일\\생산2팀)위생전실 개선의 건.pptx",
+      "name": "생산2팀)위생전실 개선의 건.pptx",
+      "bytes": 2122387,
+      "modified": "2026-11-03T13:19:43",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-06-02 생산2팀) 위생전실 및 1,2,3층 위생실 개선(리모델링) 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-06-02 생산2팀) 위생전실 및 1,2,3층 위생실 개선(리모델링) 공사\\첨부파일\\희창유업 위생실 위생기구.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RGUWER5\\첨부파일\\희창유업 위생실 위생기구.pptx",
+      "name": "희창유업 위생실 위생기구.pptx",
+      "bytes": 1368876,
+      "modified": "2026-11-03T13:19:43",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2024-09-13 생산2팀 1파트 스틱파트 원료 배합부 근로환경개선 진행",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2024-09-13 생산2팀 1파트 스틱파트 원료 배합부 근로환경개선 진행\\2025-01-24 생산2팀1파트 스틱 원료배합부 근로환경개선 작업\\첨부파일\\완료보고)2팀 스틱 원료배합부 근로환경개선의件.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R252432\\2025-01-24 생산2팀1파트 스틱 원료배합부 근로환경개선 작업\\첨부파일\\완료보고)2팀 스틱 원료배합부 근로환경개선의件.pptx",
+      "name": "완료보고)2팀 스틱 원료배합부 근로환경개선의件.pptx",
+      "bytes": 731968,
+      "modified": "2026-11-03T12:15:39",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2024-09-13 생산2팀 1파트 스틱파트 원료 배합부 근로환경개선 진행",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2024-09-13 생산2팀 1파트 스틱파트 원료 배합부 근로환경개선 진행\\첨부파일\\계획보고)2팀1파트 배합실 근무환경개선의 件.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R252432\\첨부파일\\계획보고)2팀1파트 배합실 근무환경개선의 件.pptx",
+      "name": "계획보고)2팀1파트 배합실 근무환경개선의 件.pptx",
+      "bytes": 450210,
+      "modified": "2026-11-03T12:22:29",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-05-21 (생산1팀 1Part) 건조기 챔버 및 싸이클론 에어햄머 보수 작업 건",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-05-21 (생산1팀 1Part) 건조기 챔버 및 싸이클론 에어햄머 보수 작업 건\\첨부파일\\첨부#2-1 북정,유산공장 건조기 에어햄머 현황.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R0OWQPK\\첨부파일\\첨부#2-1 북정,유산공장 건조기 에어햄머 현황.pptx",
+      "name": "첨부#2-1 북정,유산공장 건조기 에어햄머 현황.pptx",
+      "bytes": 103645,
+      "modified": "2026-11-03T13:19:43",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-07-15 유산)폐수장 최종침전조(64㎥) 탱크 FRP 코팅 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-07-15 유산)폐수장 최종침전조(64㎥) 탱크 FRP 코팅 공사\\첨부파일\\유산)최종침전조 FRP작업.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R5TVJH7\\첨부파일\\유산)최종침전조 FRP작업.pptx",
+      "name": "유산)최종침전조 FRP작업.pptx",
+      "bytes": 2950171,
+      "modified": "2026-11-03T13:19:41",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-02-06 생산3팀(액상) 설비 증설로 인한 유틸리티 증설건",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-02-06 생산3팀(액상) 설비 증설로 인한 유틸리티 증설건\\2025-05-02 생산3팀(액상) 설비 증설로 인한 유틸리티 설비 공사\\첨부파일\\액상 유틸리티 설비 설치 공사 완료 자료.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RNRFPB2\\2025-05-02 생산3팀(액상) 설비 증설로 인한 유틸리티 설비 공사\\첨부파일\\액상 유틸리티 설비 설치 공사 완료 자료.pptx",
+      "name": "액상 유틸리티 설비 설치 공사 완료 자료.pptx",
+      "bytes": 11246693,
+      "modified": "2026-11-03T12:15:37",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-02-06 생산3팀(액상) 설비 증설로 인한 유틸리티 증설건",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-02-06 생산3팀(액상) 설비 증설로 인한 유틸리티 증설건\\첨부파일\\액상 유틸리티 현장 설치 장소.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RNRFPB2\\첨부파일\\액상 유틸리티 현장 설치 장소.pptx",
+      "name": "액상 유틸리티 현장 설치 장소.pptx",
+      "bytes": 1945811,
+      "modified": "2026-11-03T12:22:27",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-02-21 생산1팀1P SD 내포장실 헤드미싱기 교체 건",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-02-21 생산1팀1P SD 내포장실 헤드미싱기 교체 건\\첨부파일\\1.SD 내포장실 미싱기 교체 검토 보고서(1).pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RZPL6TR\\첨부파일\\1.SD 내포장실 미싱기 교체 검토 보고서(1).pptx",
+      "name": "1.SD 내포장실 미싱기 교체 검토 보고서(1).pptx",
+      "bytes": 17939026,
+      "modified": "2026-11-03T13:19:46",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-02-26 유산)생산1팀 2파트 옥외 팜유(2번)탱크 교반기 OVERHAUL 작업",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-02-26 유산)생산1팀 2파트 옥외 팜유(2번)탱크 교반기 OVERHAUL 작업\\2026-04-09 생산 1팀 2파트 옥외팜유(2번)탱크 교반기 OVERHAU\\첨부파일\\옥외 팜유2번탱크 교반기 오버홀.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R1XHH10\\2026-04-09 생산 1팀 2파트 옥외팜유(2번)탱크 교반기 OVERHAU\\첨부파일\\옥외 팜유2번탱크 교반기 오버홀.pptx",
+      "name": "옥외 팜유2번탱크 교반기 오버홀.pptx",
+      "bytes": 7119351,
+      "modified": "2026-11-02T16:45:31",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-02-26 유산)생산1팀 2파트 옥외 팜유(2번)탱크 교반기 OVERHAUL 작업",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-02-26 유산)생산1팀 2파트 옥외 팜유(2번)탱크 교반기 OVERHAUL 작업\\첨부파일\\옥외 팜유2번탱크 교반기 오버홀.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R1XHH10\\첨부파일\\옥외 팜유2번탱크 교반기 오버홀.pptx",
+      "name": "옥외 팜유2번탱크 교반기 오버홀.pptx",
+      "bytes": 4239924,
+      "modified": "2026-11-03T13:19:44",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-07-27 생산2팀) 여성 휴게실 환경 개선(리모델링) 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-07-27 생산2팀) 여성 휴게실 환경 개선(리모델링) 공사\\첨부파일\\생산2팀여성휴게실 리모델링.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RT5E0YP\\첨부파일\\생산2팀여성휴게실 리모델링.pptx",
+      "name": "생산2팀여성휴게실 리모델링.pptx",
+      "bytes": 1925261,
+      "modified": "2026-11-03T13:19:42",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-05-14 생산1팀 1파트 물류 창고 전기 증설 및 조명등 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-05-14 생산1팀 1파트 물류 창고 전기 증설 및 조명등 공사\\첨부파일\\사진#1 생산1팀 1파트 물류 창고 전기 증설 및 조명등 공사.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R1O2PH1\\첨부파일\\사진#1 생산1팀 1파트 물류 창고 전기 증설 및 조명등 공사.pptx",
+      "name": "사진#1 생산1팀 1파트 물류 창고 전기 증설 및 조명등 공사.pptx",
+      "bytes": 8674335,
+      "modified": "2026-11-03T13:19:44",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-04-22 생산1팀 2파트 옥외 팜유,저감미당탱크 스팀밸브 및 배관 개조 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-04-22 생산1팀 2파트 옥외 팜유,저감미당탱크 스팀밸브 및 배관 개조 공사\\2025-07-11 생산 1팀 2파트 옥외 팜유,저감미당탱크 스팀밸브 개선 공사\\첨부파일\\옥외 스팀밸브 개선 공사 후 검증자료.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RIJ5SII\\2025-07-11 생산 1팀 2파트 옥외 팜유,저감미당탱크 스팀밸브 개선 공사\\첨부파일\\옥외 스팀밸브 개선 공사 후 검증자료.pptx",
+      "name": "옥외 스팀밸브 개선 공사 후 검증자료.pptx",
+      "bytes": 2944703,
+      "modified": "2026-11-03T12:15:30",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-04-22 생산1팀 2파트 옥외 팜유,저감미당탱크 스팀밸브 및 배관 개조 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-04-22 생산1팀 2파트 옥외 팜유,저감미당탱크 스팀밸브 및 배관 개조 공사\\2025-07-11 생산 1팀 2파트 옥외 팜유,저감미당탱크 스팀밸브 개선 공사\\첨부파일\\옥외 팜유(2대),저감미당탱크(3대)스팀밸브 개선 공사 완료 사진.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RIJ5SII\\2025-07-11 생산 1팀 2파트 옥외 팜유,저감미당탱크 스팀밸브 개선 공사\\첨부파일\\옥외 팜유(2대),저감미당탱크(3대)스팀밸브 개선 공사 완료 사진.pptx",
+      "name": "옥외 팜유(2대),저감미당탱크(3대)스팀밸브 개선 공사 완료 사진.pptx",
+      "bytes": 5268615,
+      "modified": "2026-11-03T12:15:30",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-04-22 생산1팀 2파트 옥외 팜유,저감미당탱크 스팀밸브 및 배관 개조 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-04-22 생산1팀 2파트 옥외 팜유,저감미당탱크 스팀밸브 및 배관 개조 공사\\첨부파일\\옥외 팜유(2대),저감미당탱크(3대)스팀밸브 개선 공사.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RIJ5SII\\첨부파일\\옥외 팜유(2대),저감미당탱크(3대)스팀밸브 개선 공사.pptx",
+      "name": "옥외 팜유(2대),저감미당탱크(3대)스팀밸브 개선 공사.pptx",
+      "bytes": 2415141,
+      "modified": "2026-11-03T12:22:26",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-10-08 북정)SD 이산화규소 재료 투입구 개선 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-10-08 북정)SD 이산화규소 재료 투입구 개선 공사\\첨부파일\\2026 3분기 노사협의회,산업안전협 안건(수정).pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RND81NT\\첨부파일\\2026 3분기 노사협의회,산업안전협 안건(수정).pptx",
+      "name": "2026 3분기 노사협의회,산업안전협 안건(수정).pptx",
+      "bytes": 957001,
+      "modified": "2026-11-03T13:19:40",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-10-08 북정)SD 이산화규소 재료 투입구 개선 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-10-08 북정)SD 이산화규소 재료 투입구 개선 공사\\첨부파일\\안전 개선 공사.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RND81NT\\첨부파일\\안전 개선 공사.pptx",
+      "name": "안전 개선 공사.pptx",
+      "bytes": 1899151,
+      "modified": "2026-11-03T13:19:40",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-02-25 (생산1팀 1Part) 폐수장 에어 공급 배관 설치 및 콤프레셔 전기 증설 공사 건",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-02-25 (생산1팀 1Part) 폐수장 에어 공급 배관 설치 및 콤프레셔 전기 증설 공사 건\\첨부파일\\첨부#1 사진.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RCYYNQ3\\첨부파일\\첨부#1 사진.pptx",
+      "name": "첨부#1 사진.pptx",
+      "bytes": 3531647,
+      "modified": "2026-11-03T13:19:45",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2024-12-16 북정공장)굴뚝 및 2층 슬라브 건물 철거 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2024-12-16 북정공장)굴뚝 및 2층 슬라브 건물 철거 공사\\첨부파일\\북정)굴뚝 철거 공사 기초 자료.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R15PSO3\\첨부파일\\북정)굴뚝 철거 공사 기초 자료.pptx",
+      "name": "북정)굴뚝 철거 공사 기초 자료.pptx",
+      "bytes": 1884396,
+      "modified": "2026-11-03T12:22:28",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2024-12-03 북정공장) 구 건물 2층 옥상 방수(복지관 외2개동)작업",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2024-12-03 북정공장) 구 건물 2층 옥상 방수(복지관 외2개동)작업\\첨부파일\\북정공장 방수공사.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RLLF6OF\\첨부파일\\북정공장 방수공사.pptx",
+      "name": "북정공장 방수공사.pptx",
+      "bytes": 5364214,
+      "modified": "2026-11-03T12:22:28",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-02-20 유산공장 3톤 보일러 연도 및 공기예열기 노후교체 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-02-20 유산공장 3톤 보일러 연도 및 공기예열기 노후교체 공사\\2026-05-19 유산공장 3톤 보일러 연도 및 공기예열기 노후교체\\첨부파일\\3톤 보일러 연도 및 공기예열기 교체 공사.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RT61F3R\\2026-05-19 유산공장 3톤 보일러 연도 및 공기예열기 노후교체\\첨부파일\\3톤 보일러 연도 및 공기예열기 교체 공사.pptx",
+      "name": "3톤 보일러 연도 및 공기예열기 교체 공사.pptx",
+      "bytes": 4275629,
+      "modified": "2026-11-02T16:47:56",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-02-20 유산공장 3톤 보일러 연도 및 공기예열기 노후교체 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-02-20 유산공장 3톤 보일러 연도 및 공기예열기 노후교체 공사\\첨부파일\\3톤 보일러 연도 및 공기예열기 교체 공사.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RT61F3R\\첨부파일\\3톤 보일러 연도 및 공기예열기 교체 공사.pptx",
+      "name": "3톤 보일러 연도 및 공기예열기 교체 공사.pptx",
+      "bytes": 1184631,
+      "modified": "2026-11-03T13:19:44",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2024-10-17 생산 1팀 2파트 옥외 야경유 이중자켓배관 노후로 인한 배관보수 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2024-10-17 생산 1팀 2파트 옥외 야경유 이중자켓배관 노후로 인한 배관보수 공사\\2025-01-03 생산1팀 2파트 옥외 야경유배관 노후로 이중자켓배관 보수 공사\\첨부파일\\옥외 야경유탱크 이중자켓 공사건 작업진행 내역(참조1).pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RB6WWTF\\2025-01-03 생산1팀 2파트 옥외 야경유배관 노후로 이중자켓배관 보수 공사\\첨부파일\\옥외 야경유탱크 이중자켓 공사건 작업진행 내역(참조1).pptx",
+      "name": "옥외 야경유탱크 이중자켓 공사건 작업진행 내역(참조1).pptx",
+      "bytes": 7365400,
+      "modified": "2026-11-03T12:10:31",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2024-10-17 생산 1팀 2파트 옥외 야경유 이중자켓배관 노후로 인한 배관보수 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2024-10-17 생산 1팀 2파트 옥외 야경유 이중자켓배관 노후로 인한 배관보수 공사\\첨부파일\\옥외 야경유탱크 이중자켓 공사건(참조).pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RB6WWTF\\첨부파일\\옥외 야경유탱크 이중자켓 공사건(참조).pptx",
+      "name": "옥외 야경유탱크 이중자켓 공사건(참조).pptx",
+      "bytes": 2627087,
+      "modified": "2026-11-03T12:22:28",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-06-09 생산1팀2파트 조제실 열수탱크 스팀배관 코일설치 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-06-09 생산1팀2파트 조제실 열수탱크 스팀배관 코일설치 공사\\2026-07-20 생산1팀2파트 조제실 열수탱크 스팀배관 코일설치 공사\\첨부파일\\열수탱크 스팀배관 (코일)개선 공사 작업 완료사진.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RPFC863\\2026-07-20 생산1팀2파트 조제실 열수탱크 스팀배관 코일설치 공사\\첨부파일\\열수탱크 스팀배관 (코일)개선 공사 작업 완료사진.pptx",
+      "name": "열수탱크 스팀배관 (코일)개선 공사 작업 완료사진.pptx",
+      "bytes": 5286790,
+      "modified": "2026-11-02T16:50:16",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-06-09 생산1팀2파트 조제실 열수탱크 스팀배관 코일설치 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-06-09 생산1팀2파트 조제실 열수탱크 스팀배관 코일설치 공사\\첨부파일\\열수탱크 스팀배관 (코일)개선 공사.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RPFC863\\첨부파일\\열수탱크 스팀배관 (코일)개선 공사.pptx",
+      "name": "열수탱크 스팀배관 (코일)개선 공사.pptx",
+      "bytes": 2317010,
+      "modified": "2026-11-03T13:19:43",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-08-04 생산1팀2파트) 건조 증대를 위한 배합실 통합 구분 관리 스피드 도어 설치(2곳)",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-08-04 생산1팀2파트) 건조 증대를 위한 배합실 통합 구분 관리 스피드 도어 설치(2곳)\\첨부파일\\스피드도어 설치.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RAC7IH6\\첨부파일\\스피드도어 설치.pptx",
+      "name": "스피드도어 설치.pptx",
+      "bytes": 668084,
+      "modified": "2026-11-03T12:22:26",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-03-26 생산 2팀(9동) 건물 노후 지붕 보수 개선 작업",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-03-26 생산 2팀(9동) 건물 노후 지붕 보수 개선 작업\\2025-04-21 생산2팀(9동) 건물 노후 지붕 보수 공사\\첨부파일\\완료보고)9동 지붕 보수 진행의件.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RG6816G\\2025-04-21 생산2팀(9동) 건물 노후 지붕 보수 공사\\첨부파일\\완료보고)9동 지붕 보수 진행의件.pptx",
+      "name": "완료보고)9동 지붕 보수 진행의件.pptx",
+      "bytes": 5995067,
+      "modified": "2026-11-03T12:15:37",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-03-26 생산 2팀(9동) 건물 노후 지붕 보수 개선 작업",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-03-26 생산 2팀(9동) 건물 노후 지붕 보수 개선 작업\\첨부파일\\계획보고)9동 지붕 보수 진행의件(최종).pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RG6816G\\첨부파일\\계획보고)9동 지붕 보수 진행의件(최종).pptx",
+      "name": "계획보고)9동 지붕 보수 진행의件(최종).pptx",
+      "bytes": 1752286,
+      "modified": "2026-11-03T12:22:26",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-10-13 생산2팀) 입구 환경 개선 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-10-13 생산2팀) 입구 환경 개선 공사\\첨부파일\\생산2팀)입구 환경 정리작업.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RLDU015\\첨부파일\\생산2팀)입구 환경 정리작업.pptx",
+      "name": "생산2팀)입구 환경 정리작업.pptx",
+      "bytes": 2395657,
+      "modified": "2026-11-03T13:27:19",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-04-15 생산3팀(액상) 설비 증설로 인한 유틸리티1차 배관 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-04-15 생산3팀(액상) 설비 증설로 인한 유틸리티1차 배관 공사\\첨부파일\\액상 유틸리티배관 현장 설치도.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RPT1B9Q\\첨부파일\\액상 유틸리티배관 현장 설치도.pptx",
+      "name": "액상 유틸리티배관 현장 설치도.pptx",
+      "bytes": 171892,
+      "modified": "2026-11-03T12:15:38",
+      "extension": ".pptx",
+      "evidence": "drawing_keyword_in_filename",
+      "matched_keyword": "설치도"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-01-26 생산1팀2파트 건조실 CIP탱크 스팀배관 노후 교체 및 간이CIP탱크 스팀배관 교체 공사건",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-01-26 생산1팀2파트 건조실 CIP탱크 스팀배관 노후 교체 및 간이CIP탱크 스팀배관 교체 공사건\\2026-03-24 생산1팀2파트 CIP탱크,간이CIP탱크 스팀배관 교체 공사 완료\\첨부파일\\건조실 자동CIP탱크 스팀배관 및 간이CIP탱크 스팀배관개선 공사 완료.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RX2CF5U\\2026-03-24 생산1팀2파트 CIP탱크,간이CIP탱크 스팀배관 교체 공사 완료\\첨부파일\\건조실 자동CIP탱크 스팀배관 및 간이CIP탱크 스팀배관개선 공사 완료.pptx",
+      "name": "건조실 자동CIP탱크 스팀배관 및 간이CIP탱크 스팀배관개선 공사 완료.pptx",
+      "bytes": 3312646,
+      "modified": "2026-11-02T16:45:32",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-01-26 생산1팀2파트 건조실 CIP탱크 스팀배관 노후 교체 및 간이CIP탱크 스팀배관 교체 공사건",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-01-26 생산1팀2파트 건조실 CIP탱크 스팀배관 노후 교체 및 간이CIP탱크 스팀배관 교체 공사건\\첨부파일\\건조실 자동CIP탱크 스팀배관 및 간이CIP탱크 스팀배관개선 공사건.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RX2CF5U\\첨부파일\\건조실 자동CIP탱크 스팀배관 및 간이CIP탱크 스팀배관개선 공사건.pptx",
+      "name": "건조실 자동CIP탱크 스팀배관 및 간이CIP탱크 스팀배관개선 공사건.pptx",
+      "bytes": 3273055,
+      "modified": "2026-11-03T13:19:46",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-07-14 북정)폐수장 침전조(12.5㎥)웰류웨어 FRP코팅 개선 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-07-14 북정)폐수장 침전조(12.5㎥)웰류웨어 FRP코팅 개선 공사\\첨부파일\\북정)침전조 FRP작업.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RQOCKNQ\\첨부파일\\북정)침전조 FRP작업.pptx",
+      "name": "북정)침전조 FRP작업.pptx",
+      "bytes": 1611899,
+      "modified": "2026-11-03T13:19:42",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2024-11-30 희창3공장)물류센터 신규 사업 관련 스팀 배관 설치 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2024-11-30 희창3공장)물류센터 신규 사업 관련 스팀 배관 설치 공사\\첨부파일\\물류센터 스팀배관공사.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RE3Z8WC\\첨부파일\\물류센터 스팀배관공사.pptx",
+      "name": "물류센터 스팀배관공사.pptx",
+      "bytes": 2093436,
+      "modified": "2026-11-03T12:22:28",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-08-24 생산1팀1파트)SD사이크론 및 CIP열수탱크 위험 요소 제거 개선",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-08-24 생산1팀1파트)SD사이크론 및 CIP열수탱크 위험 요소 제거 개선\\첨부파일\\25년 안전점검 및 개선안.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RY1Z5R6\\첨부파일\\25년 안전점검 및 개선안.pptx",
+      "name": "25년 안전점검 및 개선안.pptx",
+      "bytes": 1231316,
+      "modified": "2026-11-03T12:22:26",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-05-15 북정)복지관 옥상 물탱크 설치 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-05-15 북정)복지관 옥상 물탱크 설치 공사\\2026-05-15 북정)복지관 옥상 물탱크 설치 공사\\첨부파일\\2026 1분기노사협의 및 설치도.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RKXP7XK\\2026-05-15 북정)복지관 옥상 물탱크 설치 공사\\첨부파일\\2026 1분기노사협의 및 설치도.pptx",
+      "name": "2026 1분기노사협의 및 설치도.pptx",
+      "bytes": 1620680,
+      "modified": "2026-11-03T13:19:43",
+      "extension": ".pptx",
+      "evidence": "drawing_keyword_in_filename",
+      "matched_keyword": "설치도"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-05-15 북정)복지관 옥상 물탱크 설치 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-05-15 북정)복지관 옥상 물탱크 설치 공사\\첨부파일\\2026 1분기노사협의 및 설치도.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RKXP7XK\\첨부파일\\2026 1분기노사협의 및 설치도.pptx",
+      "name": "2026 1분기노사협의 및 설치도.pptx",
+      "bytes": 1620680,
+      "modified": "2026-11-03T13:19:43",
+      "extension": ".pptx",
+      "evidence": "drawing_keyword_in_filename",
+      "matched_keyword": "설치도"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-01-20 생산3팀)액상 100RT 냉동기중 일체형 증발기 내부 수리",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-01-20 생산3팀)액상 100RT 냉동기중 일체형 증발기 내부 수리\\첨부파일\\100RT증발기 고장 현황.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RP9S42U\\첨부파일\\100RT증발기 고장 현황.pptx",
+      "name": "100RT증발기 고장 현황.pptx",
+      "bytes": 1207080,
+      "modified": "2026-11-03T12:22:27",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-10-14 2027년 고정투자자산 계획",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-10-14 2027년 고정투자자산 계획\\27년 고정투자자산관련 총합본 20261014 rev03.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RC5IOJ3\\27년 고정투자자산관련 총합본 20261014 rev03.pptx",
+      "name": "27년 고정투자자산관련 총합본 20261014 rev03.pptx",
+      "bytes": 14247566,
+      "modified": "2026-10-21T16:26:14",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-03-26 생산1팀2파트 적재로봇 내 안전장치 설치건",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-03-26 생산1팀2파트 적재로봇 내 안전장치 설치건\\2026-05-27 생산1팀2파트 적재로봇내 안전장치 설치\\첨부파일\\적재로봇 안전장치 설치건.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RQYB6MT\\2026-05-27 생산1팀2파트 적재로봇내 안전장치 설치\\첨부파일\\적재로봇 안전장치 설치건.pptx",
+      "name": "적재로봇 안전장치 설치건.pptx",
+      "bytes": 3317562,
+      "modified": "2026-11-02T16:47:56",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-03-26 생산1팀2파트 적재로봇 내 안전장치 설치건",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-03-26 생산1팀2파트 적재로봇 내 안전장치 설치건\\첨부파일\\적재로봇내 안전장치 설치건.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RQYB6MT\\첨부파일\\적재로봇내 안전장치 설치건.pptx",
+      "name": "적재로봇내 안전장치 설치건.pptx",
+      "bytes": 1402459,
+      "modified": "2026-11-03T13:19:45",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-08-05 생산1팀2파트 지대 충진기 계량기호퍼OVERHAUL건",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-08-05 생산1팀2파트 지대 충진기 계량기호퍼OVERHAUL건\\2025-09-24 생산1팀 2파트 지대충진기 계량기호퍼OVERHAUL 건\\첨부파일\\지대충진기 계량호퍼 오버홀 공사 작업.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RAOF79P\\2025-09-24 생산1팀 2파트 지대충진기 계량기호퍼OVERHAUL 건\\첨부파일\\지대충진기 계량호퍼 오버홀 공사 작업.pptx",
+      "name": "지대충진기 계량호퍼 오버홀 공사 작업.pptx",
+      "bytes": 3268126,
+      "modified": "2026-11-03T12:15:29",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-08-05 생산1팀2파트 지대 충진기 계량기호퍼OVERHAUL건",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-08-05 생산1팀2파트 지대 충진기 계량기호퍼OVERHAUL건\\첨부파일\\백 충진기 계량호퍼 크랙.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RAOF79P\\첨부파일\\백 충진기 계량호퍼 크랙.pptx",
+      "name": "백 충진기 계량호퍼 크랙.pptx",
+      "bytes": 1222675,
+      "modified": "2026-11-03T12:22:26",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-02-26 (생산1팀 1Part) MSD청정실 상부 CIP드레인 배관 교체 공사 건",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-02-26 (생산1팀 1Part) MSD청정실 상부 CIP드레인 배관 교체 공사 건\\첨부파일\\사진.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RFPPSWL\\첨부파일\\사진.pptx",
+      "name": "사진.pptx",
+      "bytes": 3667523,
+      "modified": "2026-11-03T12:22:27",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-03-24 유산)폐수처리장 방류조 FRP 코팅 작업",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-03-24 유산)폐수처리장 방류조 FRP 코팅 작업\\첨부파일\\유산)방류조 FRP작업.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RT791WB\\첨부파일\\유산)방류조 FRP작업.pptx",
+      "name": "유산)방류조 FRP작업.pptx",
+      "bytes": 1569025,
+      "modified": "2026-11-03T13:19:45",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-08-28 유산)9동 계단 통로 픽스유리창 썬팅 작업",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-08-28 유산)9동 계단 통로 픽스유리창 썬팅 작업\\첨부파일\\생산2팀)픽스창 썬팅 작업.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RAHLF98\\첨부파일\\생산2팀)픽스창 썬팅 작업.pptx",
+      "name": "생산2팀)픽스창 썬팅 작업.pptx",
+      "bytes": 703461,
+      "modified": "2026-11-03T13:19:41",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-07-20 액상 배합실 A라인 스팀배관 개선 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-07-20 액상 배합실 A라인 스팀배관 개선 공사\\2026-08-18 액상 배합실 A라인 스팀배관 개선 공사\\첨부파일\\액상 배합실 A라인 스팀배관 개선공사.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RSMW9UA\\2026-08-18 액상 배합실 A라인 스팀배관 개선 공사\\첨부파일\\액상 배합실 A라인 스팀배관 개선공사.pptx",
+      "name": "액상 배합실 A라인 스팀배관 개선공사.pptx",
+      "bytes": 3633399,
+      "modified": "2026-11-02T16:50:17",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-07-20 액상 배합실 A라인 스팀배관 개선 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-07-20 액상 배합실 A라인 스팀배관 개선 공사\\첨부파일\\액상 배합실 A라인 스팀배관 개선공사.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RSMW9UA\\첨부파일\\액상 배합실 A라인 스팀배관 개선공사.pptx",
+      "name": "액상 배합실 A라인 스팀배관 개선공사.pptx",
+      "bytes": 1832160,
+      "modified": "2026-11-03T13:19:42",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-08-06 유산공장 액상 폐수 이송 배관 부분 교체 작업",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-08-06 유산공장 액상 폐수 이송 배관 부분 교체 작업\\2025-09-10 생산3팀 액상 폐수 이송 배관 부분 교체작업 완료\\첨부파일\\첨부1. 완료보고) 유산공장 액상 폐수 배관 교체 완료보고의 件.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RAVHFO3\\2025-09-10 생산3팀 액상 폐수 이송 배관 부분 교체작업 완료\\첨부파일\\첨부1. 완료보고) 유산공장 액상 폐수 배관 교체 완료보고의 件.pptx",
+      "name": "첨부1. 완료보고) 유산공장 액상 폐수 배관 교체 완료보고의 件.pptx",
+      "bytes": 2384940,
+      "modified": "2026-11-03T12:15:29",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-08-06 유산공장 액상 폐수 이송 배관 부분 교체 작업",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-08-06 유산공장 액상 폐수 이송 배관 부분 교체 작업\\첨부파일\\첨부 #1. 계획보고) 유산공장 액상 폐수 배관 누수 현황도.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RAVHFO3\\첨부파일\\첨부 #1. 계획보고) 유산공장 액상 폐수 배관 누수 현황도.pptx",
+      "name": "첨부 #1. 계획보고) 유산공장 액상 폐수 배관 누수 현황도.pptx",
+      "bytes": 1237021,
+      "modified": "2026-11-03T12:22:26",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-02-24 유산)생산1팀2파트(4동) 옥상 소방용수 겸용 SMC 물탱크 개선 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-02-24 유산)생산1팀2파트(4동) 옥상 소방용수 겸용 SMC 물탱크 개선 공사\\첨부파일\\옥상SMC물탱크 현황 및 개선안.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RLCT9N0\\첨부파일\\옥상SMC물탱크 현황 및 개선안.pptx",
+      "name": "옥상SMC물탱크 현황 및 개선안.pptx",
+      "bytes": 1791154,
+      "modified": "2026-11-03T13:19:45",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-11-04 액상 제환기 #1·#2 구동부 순차 수리",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-11-04 액상 제환기 #1·#2 구동부 순차 수리\\2025-11-17 제환기#2호기 수리 완료건\\첨부파일\\제환기(제환 구동부 수리).pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RYPPBPI\\2025-11-17 제환기#2호기 수리 완료건\\첨부파일\\제환기(제환 구동부 수리).pptx",
+      "name": "제환기(제환 구동부 수리).pptx",
+      "bytes": 2189804,
+      "modified": "2026-11-03T12:10:32",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-11-04 액상 제환기 #1·#2 구동부 순차 수리",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-11-04 액상 제환기 #1·#2 구동부 순차 수리\\2025-12-02 생산3팀(액상) 제환기#1호기 수리 완료건\\첨부파일\\제환기#1호기 수기건(제환 구동부 수리).pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RYPPBPI\\2025-12-02 생산3팀(액상) 제환기#1호기 수리 완료건\\첨부파일\\제환기#1호기 수기건(제환 구동부 수리).pptx",
+      "name": "제환기#1호기 수기건(제환 구동부 수리).pptx",
+      "bytes": 1284133,
+      "modified": "2026-11-03T12:10:32",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-11-04 액상 제환기 #1·#2 구동부 순차 수리",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-11-04 액상 제환기 #1·#2 구동부 순차 수리\\첨부파일\\제환기(제환 구동부 수리).pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RYPPBPI\\첨부파일\\제환기(제환 구동부 수리).pptx",
+      "name": "제환기(제환 구동부 수리).pptx",
+      "bytes": 1104761,
+      "modified": "2026-11-03T12:22:26",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-09-17 생산1팀1파트)SD4층 경계면 우수 배관 교체 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-09-17 생산1팀1파트)SD4층 경계면 우수 배관 교체 공사\\첨부파일\\첨부 #1. 계획보고) 북정공장SD4층경계면 누수 현황도.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RY2W7E1\\첨부파일\\첨부 #1. 계획보고) 북정공장SD4층경계면 누수 현황도.pptx",
+      "name": "첨부 #1. 계획보고) 북정공장SD4층경계면 누수 현황도.pptx",
+      "bytes": 491549,
+      "modified": "2026-11-03T12:22:26",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-07-17 생산1팀2파트) 건조 증대를 위한 파우더믹스 설치 공간 확보 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-07-17 생산1팀2파트) 건조 증대를 위한 파우더믹스 설치 공간 확보 공사\\첨부파일\\원료계량실과 조제실 병합.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R406SO5\\첨부파일\\원료계량실과 조제실 병합.pptx",
+      "name": "원료계량실과 조제실 병합.pptx",
+      "bytes": 1562679,
+      "modified": "2026-11-03T12:22:26",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-03-25 (생산1팀 1Part) 물류 대기품 보관 창고 스피드 도어 설치 건",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-03-25 (생산1팀 1Part) 물류 대기품 보관 창고 스피드 도어 설치 건\\첨부파일\\첨부#1 - 사진.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RI2EY1U\\첨부파일\\첨부#1 - 사진.pptx",
+      "name": "첨부#1 - 사진.pptx",
+      "bytes": 2360351,
+      "modified": "2026-11-03T13:19:45",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-02-24 (생산1팀 1Part) 건조실 및 조제실 조명등 교체 공사 건",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-02-24 (생산1팀 1Part) 건조실 및 조제실 조명등 교체 공사 건\\첨부파일\\생산1팀 1파트 건조실 및 조제실 조명등 교체 공사 건 - 사진.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RUUZDBW\\첨부파일\\생산1팀 1파트 건조실 및 조제실 조명등 교체 공사 건 - 사진.pptx",
+      "name": "생산1팀 1파트 건조실 및 조제실 조명등 교체 공사 건 - 사진.pptx",
+      "bytes": 809467,
+      "modified": "2026-11-03T13:19:45",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-01-15 생산3팀)액상 대용량 로타리 1열 포장기 매각 처리",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-01-15 생산3팀)액상 대용량 로타리 1열 포장기 매각 처리\\첨부파일\\공간 활용 방안.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R2FUKUN\\첨부파일\\공간 활용 방안.pptx",
+      "name": "공간 활용 방안.pptx",
+      "bytes": 3511642,
+      "modified": "2026-11-03T12:10:31",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-08-19 액상 칠러 이코노마이저 설치",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-08-19 액상 칠러 이코노마이저 설치\\첨부파일\\액상 100RT, 40RT칠러 이코노마이져 설치 공사.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RYSJQWS\\첨부파일\\액상 100RT, 40RT칠러 이코노마이져 설치 공사.pptx",
+      "name": "액상 100RT, 40RT칠러 이코노마이져 설치 공사.pptx",
+      "bytes": 3081836,
+      "modified": "2026-11-02T16:50:17",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-10-06 북정)폐수장 앞 파렛트 투입구 지반 침하 개선 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-10-06 북정)폐수장 앞 파렛트 투입구 지반 침하 개선 공사\\첨부파일\\2026년 자율안전신고제(북정).pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RUTQYHN\\첨부파일\\2026년 자율안전신고제(북정).pptx",
+      "name": "2026년 자율안전신고제(북정).pptx",
+      "bytes": 3255804,
+      "modified": "2026-11-03T13:19:41",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-04-10 유산, 북정 폐수처리오니 업체 재계약(갱신)",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-04-10 유산, 북정 폐수처리오니 업체 재계약(갱신)\\첨부파일\\첨부1. 유산, 북정 폐수처리오니 업체 재계약(갱신)의 件.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R95EIR9\\첨부파일\\첨부1. 유산, 북정 폐수처리오니 업체 재계약(갱신)의 件.pptx",
+      "name": "첨부1. 유산, 북정 폐수처리오니 업체 재계약(갱신)의 件.pptx",
+      "bytes": 92890,
+      "modified": "2026-11-03T13:19:44",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-07-09 생산 2팀 내포장실 덕트 설치 작업 및 환경인허가 변경",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-07-09 생산 2팀 내포장실 덕트 설치 작업 및 환경인허가 변경\\2025-09-26 생산2팀 내포장실 덕트 설치 작업 완료\\첨부파일\\완료보고) 생산2팀 내포장실 덕트 설치 작업 완료보고의 件.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RAF9BBD\\2025-09-26 생산2팀 내포장실 덕트 설치 작업 완료\\첨부파일\\완료보고) 생산2팀 내포장실 덕트 설치 작업 완료보고의 件.pptx",
+      "name": "완료보고) 생산2팀 내포장실 덕트 설치 작업 완료보고의 件.pptx",
+      "bytes": 1265068,
+      "modified": "2026-11-03T12:10:32",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-07-09 생산 2팀 내포장실 덕트 설치 작업 및 환경인허가 변경",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-07-09 생산 2팀 내포장실 덕트 설치 작업 및 환경인허가 변경\\첨부파일\\첨부1. 생산2팀 내포장실 덕트 설치 작업 및 환경인허가 변경의 件.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RAF9BBD\\첨부파일\\첨부1. 생산2팀 내포장실 덕트 설치 작업 및 환경인허가 변경의 件.pptx",
+      "name": "첨부1. 생산2팀 내포장실 덕트 설치 작업 및 환경인허가 변경의 件.pptx",
+      "bytes": 569289,
+      "modified": "2026-11-03T12:22:26",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-03-14 생산 1팀 2파트 청정실 덕트 수정작업 및 외포장실 팬스 이설 작업",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-03-14 생산 1팀 2파트 청정실 덕트 수정작업 및 외포장실 팬스 이설 작업\\2025-05-12 생산 1팀 2파트 청정실 덕트 수정작업 및 외포장실 팬스 이설 작업 완료\\첨부파일\\완료보고) 1팀 2파트 청정실 덕트 수정 작업 및 외포장실 팬스 이설 작업 완료 보고의 件.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RM101BH\\2025-05-12 생산 1팀 2파트 청정실 덕트 수정작업 및 외포장실 팬스 이설 작업 완료\\첨부파일\\완료보고) 1팀 2파트 청정실 덕트 수정 작업 및 외포장실 팬스 이설 작업 완료 보고의 件.pptx",
+      "name": "완료보고) 1팀 2파트 청정실 덕트 수정 작업 및 외포장실 팬스 이설 작업 완료 보고의 件.pptx",
+      "bytes": 1767235,
+      "modified": "2026-11-03T12:15:37",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-03-14 생산 1팀 2파트 청정실 덕트 수정작업 및 외포장실 팬스 이설 작업",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-03-14 생산 1팀 2파트 청정실 덕트 수정작업 및 외포장실 팬스 이설 작업\\첨부파일\\계획보고) 1팀 2파트 청정실 덕트 수정 작업 및 외포장실 팬스 이설 작업.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RM101BH\\첨부파일\\계획보고) 1팀 2파트 청정실 덕트 수정 작업 및 외포장실 팬스 이설 작업.pptx",
+      "name": "계획보고) 1팀 2파트 청정실 덕트 수정 작업 및 외포장실 팬스 이설 작업.pptx",
+      "bytes": 705080,
+      "modified": "2026-11-03T12:22:27",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-04-29 카제인 탱크 철거·정산",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-04-29 카제인 탱크 철거·정산\\첨부파일\\유산)배합실(카제인)일부 철거 작업.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RVG84HD\\첨부파일\\유산)배합실(카제인)일부 철거 작업.pptx",
+      "name": "유산)배합실(카제인)일부 철거 작업.pptx",
+      "bytes": 2428358,
+      "modified": "2026-11-02T16:45:32",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-01-15 생산3팀 제환실 폐수집수조 교체 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-01-15 생산3팀 제환실 폐수집수조 교체 공사\\2026-01-22 생산3팀 제환실 폐수집수조 교체 공사의件\\첨부파일\\완료보고) 생산3팀 제환실 폐수집수조 교체 공사의 件.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RC9PYPU\\2026-01-22 생산3팀 제환실 폐수집수조 교체 공사의件\\첨부파일\\완료보고) 생산3팀 제환실 폐수집수조 교체 공사의 件.pptx",
+      "name": "완료보고) 생산3팀 제환실 폐수집수조 교체 공사의 件.pptx",
+      "bytes": 991319,
+      "modified": "2026-11-02T16:45:31",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-01-15 생산3팀 제환실 폐수집수조 교체 공사",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-01-15 생산3팀 제환실 폐수집수조 교체 공사\\첨부파일\\계획보고) 생산3팀 제환실 폐수집수조 교체 공사의 件.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RC9PYPU\\첨부파일\\계획보고) 생산3팀 제환실 폐수집수조 교체 공사의 件.pptx",
+      "name": "계획보고) 생산3팀 제환실 폐수집수조 교체 공사의 件.pptx",
+      "bytes": 324371,
+      "modified": "2026-11-03T13:19:47",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-01-23 생산3팀(액상팀) 제환 설비 개선 보수 진행",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-01-23 생산3팀(액상팀) 제환 설비 개선 보수 진행\\2025-02-12 생산3팀 제환설비 개선 및 보수 완료\\첨부파일\\완료보고)생산3팀 제환설비 개조보수의 件.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$ROLMSGG\\2025-02-12 생산3팀 제환설비 개선 및 보수 완료\\첨부파일\\완료보고)생산3팀 제환설비 개조보수의 件.pptx",
+      "name": "완료보고)생산3팀 제환설비 개조보수의 件.pptx",
+      "bytes": 773475,
+      "modified": "2026-11-03T12:10:30",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-01-23 생산3팀(액상팀) 제환 설비 개선 보수 진행",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-01-23 생산3팀(액상팀) 제환 설비 개선 보수 진행\\첨부파일\\계획보고)생산3팀 제환설비 개조보수의 件.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$ROLMSGG\\첨부파일\\계획보고)생산3팀 제환설비 개조보수의 件.pptx",
+      "name": "계획보고)생산3팀 제환설비 개조보수의 件.pptx",
+      "bytes": 840727,
+      "modified": "2026-11-03T12:22:27",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-03-20 MSD 카제인 고속믹서 보수",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-03-20 MSD 카제인 고속믹서 보수\\첨부파일\\첨부# - 조제실 MSD카제인 고속믹서기 고장 발생 보고서.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RY5RV4R\\첨부파일\\첨부# - 조제실 MSD카제인 고속믹서기 고장 발생 보고서.pptx",
+      "name": "첨부# - 조제실 MSD카제인 고속믹서기 고장 발생 보고서.pptx",
+      "bytes": 2161471,
+      "modified": "2026-11-02T16:47:55",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-05-19 생산3팀 급속냉동기 압축기 교체",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-05-19 생산3팀 급속냉동기 압축기 교체\\2025-06-19 생산3팀 급속냉동기 압축기 교체\\첨부파일\\완료보고)급속냉동기 압축기 점검의件.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RI81VSF\\2025-06-19 생산3팀 급속냉동기 압축기 교체\\첨부파일\\완료보고)급속냉동기 압축기 점검의件.pptx",
+      "name": "완료보고)급속냉동기 압축기 점검의件.pptx",
+      "bytes": 1061327,
+      "modified": "2026-11-03T12:15:36",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-05-19 생산3팀 급속냉동기 압축기 교체",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-05-19 생산3팀 급속냉동기 압축기 교체\\첨부파일\\계획보고)급속냉동기 압축기 구매의件.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RI81VSF\\첨부파일\\계획보고)급속냉동기 압축기 구매의件.pptx",
+      "name": "계획보고)급속냉동기 압축기 구매의件.pptx",
+      "bytes": 548470,
+      "modified": "2026-11-03T12:22:29",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-12-02 생산3팀외부냉동창고 소모품교체·이코노마이저",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-12-02 생산3팀외부냉동창고 소모품교체·이코노마이저\\첨부파일\\계획보고)야외 냉동창고 정기점검 진행의 件.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RZK4EUK\\첨부파일\\계획보고)야외 냉동창고 정기점검 진행의 件.pptx",
+      "name": "계획보고)야외 냉동창고 정기점검 진행의 件.pptx",
+      "bytes": 679071,
+      "modified": "2026-11-03T13:27:20",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-11-04 생산2팀 부자재 출입로 환경 개선 진행",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-11-04 생산2팀 부자재 출입로 환경 개선 진행\\첨부파일\\계획보고)부자재 출입로 개선의 件.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RMVJYKZ\\첨부파일\\계획보고)부자재 출입로 개선의 件.pptx",
+      "name": "계획보고)부자재 출입로 개선의 件.pptx",
+      "bytes": 544930,
+      "modified": "2026-11-03T12:22:26",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-12-24 (생산1팀 1Part) SD건조기 배풍기 모터 소손으로 모터 교체 시운전 건",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-12-24 (생산1팀 1Part) SD건조기 배풍기 모터 소손으로 모터 교체 시운전 건\\첨부파일\\생산1팀 1파트 SD건조기 정지 발생 보고서.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R0OTXE4\\첨부파일\\생산1팀 1파트 SD건조기 정지 발생 보고서.pptx",
+      "name": "생산1팀 1파트 SD건조기 정지 발생 보고서.pptx",
+      "bytes": 1695556,
+      "modified": "2026-11-03T12:10:31",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-05-15 건조기 배기 스택 연장",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-05-15 건조기 배기 스택 연장\\첨부파일\\#첨부1. (완료보고)유산공장 건조기 STACK 연장 설치의 件.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R9KNB9B\\첨부파일\\#첨부1. (완료보고)유산공장 건조기 STACK 연장 설치의 件.pptx",
+      "name": "#첨부1. (완료보고)유산공장 건조기 STACK 연장 설치의 件.pptx",
+      "bytes": 1170247,
+      "modified": "2026-11-02T16:47:56",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-12-05 생산2팀)생산 설비 중 V-MIXER(2기) 매각 처리",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2025-12-05 생산2팀)생산 설비 중 V-MIXER(2기) 매각 처리\\첨부파일\\V-MIXER철거 관련.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RL4LLCQ\\첨부파일\\V-MIXER철거 관련.pptx",
+      "name": "V-MIXER철거 관련.pptx",
+      "bytes": 750845,
+      "modified": "2026-11-03T12:10:31",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-07-23 폐수 pH 중화장치 효과 검증",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-07-23 폐수 pH 중화장치 효과 검증\\첨부파일\\첨부1. 유산 폐수처리장 집수조 약품중화장치 설치의 件.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RU3OPVK\\첨부파일\\첨부1. 유산 폐수처리장 집수조 약품중화장치 설치의 件.pptx",
+      "name": "첨부1. 유산 폐수처리장 집수조 약품중화장치 설치의 件.pptx",
+      "bytes": 783547,
+      "modified": "2026-11-02T16:50:17",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-03-25 유산 폐수처리장 위탁관리 재계약",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-03-25 유산 폐수처리장 위탁관리 재계약\\첨부파일\\첨부1. 유산 폐수처리장 위탁관리 재계약의 件.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RY69GEI\\첨부파일\\첨부1. 유산 폐수처리장 위탁관리 재계약의 件.pptx",
+      "name": "첨부1. 유산 폐수처리장 위탁관리 재계약의 件.pptx",
+      "bytes": 96993,
+      "modified": "2026-11-03T13:19:44",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-11-02 공무환경팀 10월 KPI",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-11-02 공무환경팀 10월 KPI\\(공무환경팀) 10월 KPI 20261102.pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$R60RT1W\\(공무환경팀) 10월 KPI 20261102.pptx",
+      "name": "(공무환경팀) 10월 KPI 20261102.pptx",
+      "bytes": 651762,
+      "modified": "2026-11-02T15:45:17",
+      "extension": ".pptx"
+    },
+    {
+      "original_report": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-11-03 2027년 KPI 및 중점추진과제",
+      "original_file": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-11-03 2027년 KPI 및 중점추진과제\\1.27년 OO팀 KPI 및 중점추진과제 보고(1차 심의회).pptx",
+      "recycle_payload": "C:\\$Recycle.Bin\\S-1-5-21-1320689847-2503618178-1215424881-1001\\$RFC9PL2\\1.27년 OO팀 KPI 및 중점추진과제 보고(1차 심의회).pptx",
+      "name": "1.27년 OO팀 KPI 및 중점추진과제 보고(1차 심의회).pptx",
+      "bytes": 648995,
+      "modified": "2026-11-03T11:05:25",
+      "extension": ".pptx"
+    }
+  ],
+  "pdf_count": 776,
+  "extension_summary": {
+    ".zip": {
+      "files": 170,
+      "bytes": 1136813487
+    },
+    ".xlsb": {
+      "files": 18,
+      "bytes": 374003397
+    },
+    ".xlsx": {
+      "files": 95,
+      "bytes": 352227660
+    },
+    ".pdf": {
+      "files": 776,
+      "bytes": 279618040
+    },
+    ".pptx": {
+      "files": 90,
+      "bytes": 246655209
+    },
+    ".gz": {
+      "files": 1,
+      "bytes": 53647225
+    },
+    "": {
+      "files": 257,
+      "bytes": 41609865
+    },
+    ".jpg": {
+      "files": 182,
+      "bytes": 25526635
+    },
+    ".json": {
+      "files": 160,
+      "bytes": 6662426
+    },
+    ".png": {
+      "files": 29,
+      "bytes": 4558563
+    },
+    ".docx": {
+      "files": 4,
+      "bytes": 3471362
+    },
+    ".xls": {
+      "files": 16,
+      "bytes": 3005440
+    },
+    ".html": {
+      "files": 3,
+      "bytes": 2320425
+    },
+    ".js": {
+      "files": 3,
+      "bytes": 1302712
+    },
+    ".txt": {
+      "files": 172,
+      "bytes": 827470
+    },
+    ".py": {
+      "files": 23,
+      "bytes": 302515
+    },
+    ".yml": {
+      "files": 11,
+      "bytes": 192565
+    },
+    ".doc": {
+      "files": 1,
+      "bytes": 153088
+    },
+    ".pyc": {
+      "files": 3,
+      "bytes": 87627
+    },
+    ".hwp": {
+      "files": 1,
+      "bytes": 76288
+    },
+    ".mjs": {
+      "files": 2,
+      "bytes": 36315
+    },
+    ".sample": {
+      "files": 14,
+      "bytes": 26788
+    },
+    ".css": {
+      "files": 1,
+      "bytes": 20454
+    },
+    ".cjs": {
+      "files": 1,
+      "bytes": 6188
+    },
+    ".log": {
+      "files": 8,
+      "bytes": 5840
+    },
+    ".svg": {
+      "files": 1,
+      "bytes": 264
+    }
+  },
+  "errors": [],
+  "skipped_reparse": [],
+  "total_files": 2042,
+  "total_bytes": 2533157848
+}

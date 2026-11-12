@@ -1,0 +1,100 @@
+{
+  "review_date": "2026-11-12",
+  "scope_seconds": [384, 724.804311],
+  "source_manifest": "workspace/dryer-entrance-mezzanine-20261112/overview/index.json",
+  "method": "Viewed all four overview contact sheets covering 384–720 seconds, native 720-pixel-wide frames and denser 1–3 second sampling for the stair, cone bank and tank deck. Original video remains unchanged.",
+  "evidence_policy": {
+    "priority": ["Explicit user corrections", "Visible continuous room and doorway sequence", "Visible equipment shapes and legible labels", "Historical drawings for contextual proportions only"],
+    "coordinates": "Relative topological descriptions below are observations, not surveyed positions. Do not assign room coordinates from phone GPS, heading, altitude, step timing or camera motion alone.",
+    "plans": "No filmed or historical drawing should override the continuous visible room sequence. Keep drawing images as references; do not treat old room names or proposed equipment as current installation facts.",
+    "floor_ownership": "The explicit 3F wall marker at 440 seconds confirms the building floor. The local tank-deck stair at 686–692 seconds is an equipment service platform, not another building floor."
+  },
+  "timeline": [
+    {
+      "seconds": [384, 414],
+      "certainty": "direct-observation",
+      "space": "1.5층 관찰 복도 끝 구간",
+      "observations": ["녹색 바닥, 낮은 흰 천장, 한쪽 벽의 긴 연속 가로창", "390–402초 창 너머로 아래층 생산기계와 높은 금속 점검 통로를 내려다봄", "414초 복도를 되돌아본 뒤 측면 문으로 이동"],
+      "implementation": "관찰창은 불투명 벽 그림으로 처리하지 말고 아래층을 볼 수 있는 실제 창과 높은 층간 공간을 유지. 이 복도를 완전한 넓은 2층 공장으로 확장하지 않음.",
+      "frames": [384, 390, 402, 414]
+    },
+    {
+      "seconds": [418, 444],
+      "certainty": "direct-observation",
+      "space": "1.5층에서 3층으로 연결되는 외벽 유리 계단실",
+      "observations": ["418–420초 단일 회색 손잡이 문을 열어 계단실로 진입", "421초 위로 오르는 단과 반대편 아래 계단을 함께 관찰", "밝은 회색 석재/타일 디딤판과 검은 미끄럼 방지 코, 검은 벽 하부 걸레받이", "스테인리스 세로살 난간과 구형 상부 장식 기둥", "426–433초 중간 참에서 큰 세로창과 가로 안전봉, 바깥 판넬벽·세로창·옹벽을 바라봄", "434–438초 다음 런 끝의 천공 철문과 적갈색 매트", "440초 벽의 파란 3F 표기를 명확하게 확인", "441초 철문을 지나며443–444초 내려가는 계단을 되돌아봄"],
+      "implementation": "두 런, 열린 중간 참, 세로창·안전봉·실제 난간과 3F 표지를 반영. 촬영만으로 정확한 단수·런 길이·절대 방향은 확정하지 않음.",
+      "frames": [420, 421, 426, 430, 435, 438, 440, 443]
+    },
+    {
+      "seconds": [445, 486],
+      "certainty": "direct-observation",
+      "space": "3층 생산 홀의 계단 측 진입부",
+      "observations": ["녹색 바닥과 흰 기둥·벽, 노출된 높은 설비 공간", "출입 직후 시야 왼쪽에 노란 관찰창을 가진 작은 판넬실, 열린 단일문과 같은 방 측면 노란창", "462–480초 노란창 방으로 들어가 공구함·플라스틱 상자·벽걸이 선반·스테인리스 선반을 확인하고 나옴", "진입 통로 끝 회색 단일문, 문 위 피난유도등, 문 왼쪽 보라색 포충등과 벽 배선", "바닥에 폭이 좁은 실제 배수 트렌치"],
+      "identity_limit": "노란창 방 내부는 촬영상 공구·물품 보관 성격이다. OP실·탈의실로 단정하지 않으며 1.5층 OP실과 혼동하지 않음.",
+      "frames": [446, 450, 462, 474, 486]
+    },
+    {
+      "seconds": [492, 554],
+      "certainty": "direct-observation",
+      "space": "3층 원추 호퍼·분말 이송 구역",
+      "observations": ["고천장 아래 붉은색·파란색 상부 배관", "502초 노란색 가로창/판넬을 가진 긴 외벽과 아래 금속 벽 보호판", "504–514초 서로 인접한 수직 모터·감속부가 있는 낮고 둥근 스테인리스 하우징 최소2개, 사각 보호프레임·상부 적색 경광등", "516–520초 길게 평행한 덮개형 스테인리스 이송 트로프3열", "538·554초 넓은 역원추형 스테인리스 호퍼2개가 한 공통 상부 점검 데크에서 나란히 지지됨", "상부 데크에 노란 난간, 뒤쪽으로 올라가는 노란 손잡이 계단", "호퍼 상단의 짧은 원통부, 경사 금속 공급관·플랜지·유연 이음", "각 호퍼 하부 검은 유연연결부·회전/배출 조립체와 낮은 이송선", "535–548초 호퍼 측면 소형 센서·케이블 및 주변의 굵은 세로 배관"],
+      "identity_limit": "호퍼 표지의 전체 문구·정격·공정기능은 이 판독에서 확정하지 않음. 기존 OWP 홀딩장치 한 개의 확정 형상으로 단정하지 않음.",
+      "implementation": "최소 관찰 수량2개 호퍼와3개 이송 트로프를 표현하고 공통 철골·상부 점검면을 유지. 호퍼 원추를 바닥 위에 단독으로 놓지 않음.",
+      "frames": [502, 508, 514, 516, 520, 538, 540, 548, 554]
+    },
+    {
+      "seconds": [558, 574],
+      "certainty": "direct-observation-with-unconfirmed-door-destination",
+      "space": "호퍼 지지대 뒤 판넬면",
+      "observations": ["작은 회색 단일문/점검문이 흰 판넬벽에 있음", "563·568초 옆의 노란 손잡이 금속 계단", "567초 같은 호퍼 구역 반대편을 돌아보면 큰 롤러 셔터 앞 자루 팔레트 적재물"],
+      "identity_limit": "564–573초 문에 접근하지만 문이 열리는 장면은 보이지 않는다. 이를 통과해 별실에 들어간 것으로 해석하지 않음. 문의 용도와 내부는 미확인.",
+      "frames": [558, 563, 567, 568, 572]
+    },
+    {
+      "seconds": [575, 620],
+      "certainty": "direct-observation",
+      "space": "동일 3층 홀의 액체·세정 설비 방향",
+      "observations": ["575–589초 낮은 직사각 스테인리스 외함과 굵은 배관, 별도 베이스의 가로 모터·황색 곡면 구동부 덮개", "580–582초 벽 가까이 낮은 사각 용기 상단 원형 뚜껑 최소2개", "590–599초 독립된 세로 원통 스테인리스 탱크와 벽면 노란창, 녹색 수직 펌프·압력계·배관", "593초 나란한 판형 직사각 설비 프레임", "605–614초 큰 스테인리스 전면 제어함·모니터/버튼·비상정지, 상부 서비스 구조와 배관", "617초 흰 IBC 용기3개를 벽을 따라 배치", "620초 벽 쪽 큰 단일문과 선풍기, 상부배관"],
+      "identity_limit": "살균기·균질기·세척장치의 정확한 개별 ID 및 기종은 표지가 읽히지 않아 확정하지 않음. 원형 모터와 세로 탱크를 임의로 별도 호기 수로 중복 집계하지 않음.",
+      "frames": [575, 576, 581, 588, 590, 593, 596, 605, 614, 617, 620]
+    },
+    {
+      "seconds": [626, 684],
+      "certainty": "direct-observation",
+      "space": "상부 탱크 점검 데크와 그 아래 설비",
+      "observations": ["공통 높이의 넓은 스테인리스 점검면에 탱크 상단들이 들어가고 전체 철골 기둥·가새로 지지됨", "하부에 접시형/곡면 바닥 탱크와 가로 모터·황색 커플링/구동부 덮개, 연결 배관", "648초 파란 테두리 표지 CIP탱크(산)를 명확히 읽음", "입구 쪽 제어함과 흰 이동식 선풍기, 바닥 케이블릴", "호스·전기선과 일시적 분홍색 차단 테이프", "650–672초 철골 하부를 돌아 같은 홀을 이동", "684초 높은 홀 천장과 연속된 설비데크·외벽창·기둥 간격을 넓게 관찰"],
+      "identity_limit": "산 탱크 명칭 외 나머지 라벨은 확정하지 않음. 바닥 호스·케이블·차단테이프는 촬영 당시 이동물이며 영구 벽·고정 동선으로 만들지 않음.",
+      "frames": [626, 632, 635, 638, 644, 648, 672, 678, 684]
+    },
+    {
+      "seconds": [686, 724.804311],
+      "certainty": "direct-observation",
+      "space": "3층 내부 탱크 점검 데크 상부",
+      "observations": ["686–692초 한 직선 런의 스테인리스 금속 계단을 올라감", "692–694초 미끄럼 방지 체크판 발판, 개방형 난간, 아래쪽 제어함과 바닥을 내려다봄", "696–708초 점검면 위로 원형 탱크 뚜껑·목부와 열린 맨홀 최소2개를 연속 관찰", "탱크 상단 회녹색 세로 교반 모터, 모터 축의 방호/필름, 스테인리스 배관", "탱크 몸통이 점검면 아래로 내려가며 주변에 둥근 개구 틈이 있음", "710–718초 점검면 옆 열린 설비 구역을 통해 하부 구동부와 제어함을 내려다봄", "720–722초 복잡한 상부 배관·매니폴드와 기둥"],
+      "implementation": "탱크를 데크 위 바닥 받침형으로 올리지 않고 탱크 몸통 관통 개구부·체크판 통로·열린 난간·하부 장비가 읽히도록 구성. 이 국소 데크를3층 위의 또 다른 정규층으로 표시하지 않음.",
+      "identity_limit": "검토 프레임만으로 전체 CIP탱크 수량과 모든 교반모터 대응을 확정하지 않음. 최소2개 상부 관찰 탱크만 별도 확인됨.",
+      "frames": [686, 688, 692, 694, 702, 704, 706, 708, 710, 714, 720, 722]
+    }
+  ],
+  "relative_topology": [
+    "1.5층 긴 관찰 복도 → 측면 단일문 → 외벽 세로유리와2런 계단 →3F 표기·천공 철문 →3층 생산 홀",
+    "3층 진입부 한쪽의 노란창 소실과 그 옆 열린 보행 통로; 반대쪽의 호퍼2기·공통 점검 데크와 낮은 이송선",
+    "호퍼 구역 외곽에서 롤러 셔터와 자루 팔레트; 호퍼 뒤 닫힌 판넬문과 별도 상부 점검 계단",
+    "같은3층 홀에서 원통 탱크·펌프·판형 외함·제어함·IBC 방향으로 연속 이동; 새 정규층으로 이동하는 장면 없음",
+    "CIP산 표지와 공통 탱크 데크; 옆의 직선 금속 계단을 올라 탱크 상단을 보며 아래 설비와 같은 층간 높이 안의 국소 플랫폼임을 확인"
+  ],
+  "third_floor_footprint": {
+    "direct_evidence": "3F marker, compact single high production hall, stair wall and outer window wall, contrasting low-ceiling1.5층 observation corridor sequence.",
+    "user_confirmed": "3층부터 공간이 줄어듦",
+    "implementation_constraint": "Do not carry the entire1F/1.5F low-wing interior floorplate upward as3F indoor production space. Preserve separately represented lower-wing roofs.",
+    "limitation": "Video does not measure the full polygon or absolute shrink ratio. Historical17.2×26.8m+stair-bay proportions remain contextual registration, not a newly surveyed boundary."
+  },
+  "dense_review_folders": [
+    "workspace/dryer-entrance-mezzanine-20261112/stair-to-third",
+    "workspace/dryer-entrance-mezzanine-20261112/third-cones",
+    "workspace/dryer-entrance-mezzanine-20261112/third-service",
+    "workspace/dryer-entrance-mezzanine-20261112/third-through-door",
+    "workspace/dryer-entrance-mezzanine-20261112/third-cip-deck"
+  ]
+}

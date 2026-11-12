@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ko" data-profile="dryer">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#f5f6f0">
+  <meta name="description" content="희창유업 건조실의 층별 설비·옥상과 버너 구조·정비자료를 살펴보는 3D 모델입니다.">
+  <title>희창유업 건조실 3D</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23355f46'/%3E%3Cpath d='m6 11 10-5 10 5-10 5-10-5m0 6 10 5 10-5M6 23l10 5 10-5' fill='none' stroke='%23f5f6f0' stroke-width='1.8' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./dryer-styles.css">
+  <link rel="stylesheet" href="../layout-editor.css">
+  <link rel="stylesheet" href="../furnace-detail.css">
+  <script type="module" src="./dryer-app.js"></script>
+</head>
+<body data-area="dryer">
+  <a class="skip-link" href="#site-canvas">건조실 3D로 바로가기</a>
+  <main class="map-app">
+    <header class="map-header">
+      <div class="map-brand">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 28 28"><path d="m3 9 11-6 11 6-11 6L3 9Zm0 6 11 6 11-6M3 21l11 6 11-6"/></svg></span>
+        <div><h1>희창유업 건조실 3D</h1><p>HEECHANG DRYER <span>전체 · 옥상 · 층별 설비</span></p></div>
+      </div>
+      <button id="share-button" class="share-button" type="button" title="건조실 3D 공유 파일 저장"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></svg><span>공유 파일 저장</span></button>
+    </header>
+    <section id="layout-editor" aria-label="설비 배치 편집"></section>
+    <section class="map-controls" aria-label="건조실 탐색 도구">
+      <div class="area-navigation"><p id="area-summary" class="area-summary" aria-live="polite"></p></div>
+      <div id="floor-selector" class="floor-selector" role="group" aria-label="건조실 층 선택"></div>
+      <div class="detail-open-actions" aria-label="설비 상세 보기">
+        <button id="furnace-open" class="furnace-open" type="button">버너 · 도면·정비자료 <span aria-hidden="true">↗</span></button>
+        <button id="elevator-room-open" class="furnace-open" type="button" hidden>엘리베이터실 내부 <span aria-hidden="true">↗</span></button>
+      </div>
+      <div class="view-selector" role="group" aria-label="관찰 시점"><button type="button" data-view="perspective" aria-pressed="true">입체</button><button type="button" data-view="top" aria-pressed="false">평면</button><button type="button" data-view="aisle" aria-pressed="false">통로</button></div>
+      <div class="viewport-tools" role="group" aria-label="화면 조작">
+        <button id="zoom-in" class="icon-button" type="button" aria-label="확대" title="확대"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+        <button id="zoom-out" class="icon-button" type="button" aria-label="축소" title="축소"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/></svg></button>
+        <button id="reset-view" class="icon-button" type="button" aria-label="시점 초기화" title="시점 초기화 (R)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10a8 8 0 1 1 1 7M4 4v6h6"/></svg></button>
+        <button id="fullscreen-button" class="icon-button" type="button" aria-label="전체 화면" title="전체 화면"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5M16 3h5v5M21 16v5h-5M3 16v5h5"/></svg></button>
+        <button id="snapshot-button" class="icon-button" type="button" aria-label="현재 화면을 이미지로 저장" title="화면 이미지 저장"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="15" rx="2"/><circle cx="8" cy="10" r="1.5"/><path d="m4 17 5-5 4 4 3-3 5 5"/></svg></button>
+      </div>
+      <div class="display-options" role="group" aria-label="지도 표시 옵션"><label><input id="labels-toggle" type="checkbox">전체 이름표</label><label><input id="structure-toggle" type="checkbox" checked>건물 구조</label><label><input id="partitions-toggle" type="checkbox">칸막이 전체</label><label><input id="ducts-toggle" type="checkbox" checked>연결 덕트</label></div>
+    </section>
+    <section id="scene-viewport" class="scene-viewport" aria-label="희창유업 건조실 3D">
+      <canvas id="site-canvas" tabindex="0" aria-label="건조실 설비를 눌러 살펴보세요. 버너를 선택하면 구조·정비자료가 열립니다. 드래그로 회전하고 평면에서는 이동합니다. 더블클릭 또는 두 번 탭한 지점을 확대합니다. 휠은 커서 지점 확대·축소, 우클릭·가운데 버튼·Shift 드래그는 화면 이동입니다. 두 손가락으로 이동·확대하고 R로 시점을 초기화합니다."></canvas>
+      <div id="scene-loading" class="scene-state" role="status"><span class="spinner" aria-hidden="true"></span><strong>건조실 3D를 준비하고 있어요</strong></div>
+      <div id="scene-error" class="scene-state scene-error" role="alert" hidden><strong>건조실 3D를 불러오지 못했어요</strong><p>브라우저의 하드웨어 가속을 켜고 다시 열어 주세요.</p><button id="reload-button" type="button">다시 불러오기</button></div>
+    </section>
+    <section id="selection" class="selection" aria-label="선택한 설비" hidden>
+      <div class="selection-title"><span>선택한 설비</span><strong id="selection-name"></strong></div>
+      <button id="focus-equipment" type="button" class="focus-button">가까이 보기 <span aria-hidden="true">↗</span></button>
+      <button id="move-equipment" type="button" class="focus-button" aria-describedby="layout-move-help" disabled>설비 이동</button>
+      <label class="isolation-option"><input id="isolation-toggle" type="checkbox">이 설비만</label>
+      <label class="explosion-control" for="explosion-input"><span>구조 분리 <output id="explosion-output" for="explosion-input">0%</output></span><input id="explosion-input" type="range" min="0" max="100" step="1" value="0" aria-valuetext="조립 상태"></label>
+      <button id="clear-selection" class="icon-button" type="button" aria-label="설비 선택 해제" title="선택 해제"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M6 18 18 6"/></svg></button>
+    </section>
+    <footer class="map-footer"><p>버너를 누르면 구조·정비자료를 볼 수 있습니다.</p><p class="gesture-hint"><span class="desktop-hint">더블클릭 확대 · 우·가운데·Shift 이동 · 휠 줌</span><span class="touch-hint">두 번 탭 확대 · 두 손가락 이동·확대</span></p></footer>
+  </main>
+  <div id="toast" class="toast" role="status" hidden></div>
+  <noscript><p class="no-script">건조실 3D를 보려면 브라우저의 JavaScript를 켜 주세요.</p></noscript>
+</body>
+</html>

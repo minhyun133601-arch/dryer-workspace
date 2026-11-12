@@ -1,0 +1,140 @@
+{
+  "date": "2026-11-12",
+  "scope": "Indoor door-head mounts and doorway approaches",
+  "basis": [
+    "Existing registered preparation-room geometry and references/preparation-room-20261111/route-evidence.json",
+    "Existing filmed sanitation reconstruction in references/preparation-room-20261111/sanitation-evidence.json",
+    "Packaging A07/A11 metric room data and registered filmed fixture shapes",
+    "Actual THREE geometry bounds, doorway clear volumes and rays against wall meshes"
+  ],
+  "changes": [
+    {
+      "file": "apps/site/dryer-building-envelope.js",
+      "problem": "Roller housings straddled the solid lintel at the wall centre plane.",
+      "correction": "Move the housing to z0.16, bottom above the registered opening head; keep guides and curtain in that same plane, add wall standoffs, and raise the retracted curtain into the housing.",
+      "wallThicknessMetres": 0.12,
+      "housingBackGapMetres": 0.02,
+      "verification": "Every architectural shutter housing contains its fully raised curtain; registered clear opening height is retained."
+    },
+    {
+      "file": "apps/site/preparation-environment.js",
+      "problem": "The inner rapid-door roll housing intersected its partition; open curtain strips did not line up fully inside the roll housing.",
+      "correction": "Place the roll body, curtain strips and side guides 0.28m toward the occupied side of the actual wall plane, with two standoff levels. The outer wall plane accounts for the existing 0.15m inward doorway registration. Raise gathered strips from 2.58..2.672m to 2.62..2.712m.",
+      "housingBackGapMetres": 0.02,
+      "verification": "Both inner and outer roll housings contain all 24 raised strips."
+    },
+    {
+      "file": "apps/site/preparation-environment.js",
+      "problem": "A movable IBC sat 0.14m in front of the inner shutter and across its middle; adjacent pallet corner touched the left jamb approach.",
+      "movesLocalXZ": [
+        {
+          "object": "IBC",
+          "from": [
+            28.95,
+            3.95
+          ],
+          "to": [
+            31.25,
+            3.85
+          ]
+        },
+        {
+          "object": "weighing-area pallet",
+          "from": [
+            26.6,
+            3.5
+          ],
+          "to": [
+            26.35,
+            3.5
+          ]
+        }
+      ],
+      "verification": "Full 2.85m shutter width is free of movable storage within the three-metre approach bands z1.6 to z7.6 at body height; quantities remain unchanged.",
+      "confidence": "Movable-object parking correction within the same registered room; exact original parking was approximate."
+    },
+    {
+      "file": "apps/site/preparation-environment.js",
+      "problem": "The quality board was oriented across the narrow corridor and appeared unsupported; footwear sat across the washroom threshold and opening sweep.",
+      "correction": "Rotate the quality board onto the outer wall, place its back 15mm clear of the wall face, and park the two slippers against an unused washroom side wall.",
+      "boardLocalXZ": [
+        34.295,
+        12.05
+      ],
+      "boardYawDegrees": -90,
+      "verification": "Board depth stays below 0.09m and leaves more than 0.85m corridor width; footwear clears the washroom doorway/swing volume."
+    },
+    {
+      "file": "apps/site/packaging-environment-v2.js",
+      "problem": "Green exit-sign casings were centred in the doorway wall and faced outside. Tall four-nozzle air-unit bodies overlapped the inner perimeter wall. Interior door intervals also removed their entire-height lintel above the opening.",
+      "correction": "Mount exit signs toward the production-room interior, with 10mm body gap and wall plates. Shift the two air-unit bases inward by 0.14m and add riser wall standoffs. Restore each partition lintel only above the registered door height, including cell walls already split at jambs.",
+      "verification": "Actual wall ray hits occur 40mm behind sign centres; 60mm casings are clear of the wall. Air cabinets retain at least 50mm body gap. Door height ray checks hit the restored lintel while passage tests remain clear."
+    }
+  ],
+  "preserved": [
+    "Registered building metre dimensions and all door/frame threshold positions",
+    "Manual F and automatic-door metadata and portal connections",
+    "IBC/pallet/footwear counts and all photographed equipment groups",
+    "Dryer roof machine-room geometry, reviewed without a clear corrective issue"
+  ],
+  "tests": {
+    "command": "node --test tests/indoor-mount-clearance.test.mjs tests/preparation-environment.test.mjs tests/dryer-building-envelope.test.mjs tests/packaging-scene.test.mjs",
+    "passed": 27,
+    "failed": 0,
+    "log": "workspace/door-mount-clearance-20261112/indoor/tests.log"
+  },
+  "limits": "Mount gaps, bracket sizes and corrected movable-object parking are plausible model geometry, not newly measured installation specifications.",
+  "renderFollowUp": {
+    "evidence": "Root rendered preparation-door-after.png and packaging-exit-sign-after.png; the first showed the movable forklift across the shutter sightline, the second an insect trap overlapping the entry-door head.",
+    "forklift": {
+      "fromXZ": [
+        29.7,
+        7.4
+      ],
+      "toXZ": [
+        32.55,
+        8.25
+      ],
+      "area": "same preparation hall, east-side parking",
+      "checks": [
+        "Full mast and forks outside 2.85m doorway width and three-metre bands on both sides",
+        "At least 0.5m lateral clearance from approach band",
+        "At least 0.9m gap to outer wall",
+        "No intersection with individual structural column instances, actual walls/fixed fixtures or all actual preparation-equipment meshes"
+      ]
+    },
+    "insectTraps": {
+      "mountHeightMetres": 2.8,
+      "entrySideX": {
+        "from": -3.4,
+        "to": -2.65
+      },
+      "rearStairSideZ": {
+        "from": -11.1,
+        "to": -12.3
+      },
+      "countPreserved": 3,
+      "changes": "All face into room, mount above 2.5m window glazing, sit beside complete doorway heads and use mounting plates contacting actual wall faces."
+    },
+    "physicalDoorPlaneAlignment": {
+      "preparationRapidDoors": {
+        "normal": [
+          -1,
+          0,
+          0
+        ],
+        "trigger": "[rollPlane,0,0]",
+        "test": "Actual closed curtain ray hit from measured passage plane on both rotated and unrotated doors"
+      },
+      "architecturalRollerDoors": {
+        "trigger": [
+          0,
+          0,
+          0.16
+        ],
+        "reason": "Keep navigation threshold at the moved physical curtain plane"
+      }
+    },
+    "verification": "All 27 targeted tests pass after follow-up; test log refreshed."
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "source": {
+    "file": "three.module.js",
+    "sha256": "ce1fa418de16a19495a9f72495580e3015d7745c296d3ce0485897f902ddedfb",
+    "bytes": 1314681,
+    "revision": "170"
+  },
+  "result": {
+    "file": "three.export.min.js",
+    "sha256": "0da1d321a65be9b3ee0af7c6b5eac0745bea651468fe22f8a44646d84d9dc485",
+    "bytes": 750894,
+    "exports": 415
+  },
+  "minifier": {
+    "name": "terser",
+    "version": "5.51.2",
+    "module": true,
+    "mangle": true,
+    "compress": false,
+    "keep_classnames": true,
+    "keep_fnames": true,
+    "ascii_only": true
+  },
+  "license": {
+    "spdx": "MIT",
+    "copyright": "Copyright 2010-2024 Three.js Authors",
+    "file": "three.export.min.LICENSE.txt",
+    "sha256": "4c40a1ef62450b857c3b2aaf294936304cd552d965fbcd9d32d4c5bcf4ba4454"
+  },
+  "verification": {
+    "allExportNamesEqual": true,
+    "primitiveValuesChecked": 197,
+    "callableNamesChecked": 205,
+    "shaderChunksEqual": true,
+    "geometryAttributeFixtures": [
+      "BoxGeometry",
+      "LatheGeometry",
+      "ExtrudeGeometry",
+      "TubeGeometry"
+    ],
+    "originalUnchanged": true,
+    "terminalExportStartsNewLine": true
+  }
+}

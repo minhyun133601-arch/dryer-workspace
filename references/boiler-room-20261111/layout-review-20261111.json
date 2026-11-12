@@ -1,0 +1,199 @@
+{
+ "date": "2026-11-11",
+ "review": "second pass after user request: positions vs reference videos, boiler interior, overlapping doors, tank-yard gaps, elevator marking, break-room name, return-navigation breakage",
+ "method": [
+  "1 fps keyframes of all four videos, 2 s contact sheets, full-resolution key frames",
+  "GPS sidecar converted to campus X/Z (heading used only as a hint)",
+  "Esri aerial resampled into campus coordinates and blended with the model top view",
+  "headless renders from video-like camera poses for side-by-side comparison"
+ ],
+ "boilerRoom": {
+  "position": [
+   60,
+   0,
+   -59
+  ],
+  "rotation": "PI/2",
+  "width": 13.5,
+  "depth": 14,
+  "height": 6.2,
+  "previousDefault": [
+   61.5,
+   0,
+   -59
+  ],
+  "sideRoadOpeningOrder": [
+   "corner",
+   "personnel door (single perforated leaf, tile surround) Z≈-59.45",
+   "grey equipment shutter Z -58.2..-54.8",
+   "window Z≈-53.85",
+   "yellow gas riser Z≈-52.7",
+   "orange raw-material fast door (outside the boiler room)"
+  ],
+  "mainBoiler": {
+   "nameplate": "동양 보일러 · 연관식 DBHI-SS 300형",
+   "maxEvaporation": "3,000 kg/h",
+   "manufactured": "2006",
+   "orientation": "axis perpendicular to the side-road wall, burner and control cabinet facing the aisle",
+   "source": "clip002 0:22, 2:42.5"
+  },
+  "placedItems": [
+   "once-through 1.5t/h with red-damper stack",
+   "yellow-guard blower (태성플랜트)",
+   "steam header frame",
+   "two horizontal service tanks",
+   "vertical service tank + two green inline pumps",
+   "two FRP softeners, brine tank, salt pallet",
+   "chemical tank + red dosing pump",
+   "internal concrete stair with two vertical multistage pumps below",
+   "gas meter/strainer/valves and three blue pumps on the end wall",
+   "hipped glazed skylight",
+   "parts shelving, cart, crate (stored, not equipment)"
+  ],
+  "photos": [
+   {
+    "file": "apps/site/photos/boiler-room/clip-002-022s.jpg",
+    "sourceClip": "002",
+    "seconds": 22,
+    "caption": "출입문 안: 왼쪽 셔터 안쪽, 오른쪽 버너·제어반",
+    "sha256": "629a247cf25b346552b6b67445a716cc2b4fc6f40b468d64822694ea10026931",
+    "bytes": 116000
+   },
+   {
+    "file": "apps/site/photos/boiler-room/clip-002-037s.jpg",
+    "sourceClip": "002",
+    "seconds": 37,
+    "caption": "보일러 상부 통로·사다리·피라미드형 채광 지붕",
+    "sha256": "56e8a5b477e135ddbcf8e6ef64d4ee8c0b94a1470ab22eb80bdbf29d6529b8df",
+    "bytes": 111131
+   },
+   {
+    "file": "apps/site/photos/boiler-room/clip-002-074s.jpg",
+    "sourceClip": "002",
+    "seconds": 74,
+    "caption": "안쪽 벽 콘크리트 계단 아래",
+    "sha256": "5adea896ea0e378ca6f01b9467004934859c5d87c61c1a817ffe63ba5e2e2810",
+    "bytes": 46771
+   },
+   {
+    "file": "apps/site/photos/boiler-room/clip-002-106s.jpg",
+    "sourceClip": "002",
+    "seconds": 106,
+    "caption": "노란 보호망 송풍기",
+    "sha256": "4c2ae22107c8cfc88b671c2579cafada75df83ec866c0829fb00882e991fc41d",
+    "bytes": 111352
+   },
+   {
+    "file": "apps/site/photos/boiler-room/clip-002-118s.jpg",
+    "sourceClip": "002",
+    "seconds": 118,
+    "caption": "스테인리스 틀 증기 헤더·트랩",
+    "sha256": "3f857aa631c748c2e146c1154521be9ffeb28f7b4d3fe39cc7da3f568ffe393f",
+    "bytes": 130805
+   },
+   {
+    "file": "apps/site/photos/boiler-room/clip-002-162s.jpg",
+    "sourceClip": "002",
+    "seconds": 162.5,
+    "caption": "명판 동양 보일러 연관식 DBHI-SS 300형 (원본 2:42.5)",
+    "sha256": "859cf7d7667af6b07a64bcdef39ea325298a726f61946e573f96b633629ce381",
+    "bytes": 70666
+   },
+   {
+    "file": "apps/site/photos/boiler-room/clip-002-218s.jpg",
+    "sourceClip": "002",
+    "seconds": 218,
+    "caption": "끝벽 가스 배관·청색 펌프",
+    "sha256": "f3dfd4b09fa6c751afd64b6bee2b1a4838b1b90f0dd617484ad445777b9da4c4",
+    "bytes": 75950
+   },
+   {
+    "file": "apps/site/photos/boiler-room/clip-002-238s.jpg",
+    "sourceClip": "002",
+    "seconds": 238,
+    "caption": "소금 포대·연수 설비·관류형 보일러",
+    "sha256": "e053ccd1761ca8b6186a55153176690c4a7e66194a875e46be913fd9970d8211",
+    "bytes": 58786
+   }
+  ]
+ },
+ "doorOverlapsFixed": [
+  "지대가온실 canopy overlapped orange door canopy by 1.5 m -> moved door to tower-local z 3.6",
+  "fast-door control box sat inside the orange door -> tower-local z 1.75",
+  "boiler door overlapped grey shutter -> single 1.05 m leaf at Z -59.45",
+  "annex side window bands crossed doors and the boiler wall -> small windows only on free wall",
+  "duplicate 화장실 floor label removed"
+ ],
+ "maintenanceWorkshop": {
+  "officePositionKept": [
+   42.5,
+   0,
+   -82.75
+  ],
+  "workshopDoorLocal": [
+   -3.1,
+   0,
+   5.8
+  ],
+  "doorStyle": "grey paired steel door, left leaf shut with plates, right leaf open",
+  "lpgPosition": {
+   "from": [
+    33.5,
+    0,
+    -77
+   ],
+   "to": [
+    33.5,
+    0,
+    -83.5
+   ]
+  },
+  "pipeBridge": {
+   "heightM": 8.45,
+   "spanM": 12.5,
+   "contentsConfirmed": false
+  },
+  "source": "boiler clip001 1:56-2:02, 2:56-3:00"
+ },
+ "tankYard": {
+  "fillPipeLabels": [
+   "야경유 2",
+   "저감미당 1",
+   "팜유 1",
+   "저감미당 2",
+   "팜유 2",
+   "저감미당 3"
+  ],
+  "labelsSource": "boiler clip001 1:18.5",
+  "parkedCars": 2,
+  "carsObserved": "boiler clip001 1:36-1:38",
+  "otherItems": [
+   "coupling box with six camlock couplings",
+   "야경유 1 box with black hose",
+   "세척도구/공구 lockers",
+   "red-yellow striped pole",
+   "two castor sinks",
+   "yellow-black guard posts",
+   "leaning ladder"
+  ]
+ },
+ "elevator": {
+  "floors": "dryer 1F-5F drawn ELEV core",
+  "marking": "tinted shaft volume, closed stainless landing doors, blue sign",
+  "carOrMechanismAdded": false
+ },
+ "breakRoom": {
+  "label": "1팀 2파트 휴게실",
+  "plateInVideo": "생산 2팀 휴게실",
+  "basis": "user statement 2026-11-11: video may show 생산 2팀 but the room is 1팀 2파트"
+ },
+ "navigationRobustness": [
+  "hidden canvas keeps last size (no 1x1 camera squash)",
+  "WebGL context loss pauses drawing, restore redraws, forced restore after 1.5 s on return"
+ ],
+ "limits": [
+  "room sizes, spacings and heights are video-proportion approximations, not survey values",
+  "GPS is a phone estimate with several metres of bias indoors and near buildings",
+  "cars change daily; parking bays and capacity are not confirmed"
+ ]
+}

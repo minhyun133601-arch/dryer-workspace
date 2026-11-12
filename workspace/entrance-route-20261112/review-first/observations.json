@@ -1,0 +1,18 @@
+{
+  "source": "references/guardhouse-team2-20261112/source",
+  "reviewedSeconds": [0, 145],
+  "sampling": {"stepSeconds":2,"sampleCount":73,"nativeFramesSeconds":[2,8,12,20,28,36,46,54,64,68,80,96,104,122,130,136,140,144]},
+  "rotation": "ffmpeg display rotation applied; portrait 1080x1920",
+  "findings": [
+    {"seconds":[2,8,14,20],"certainty":"direct","object":"3동 창고 하역 전면","observed":"청색 박공 여러개와 중앙 곡면 아치, 큰 어두운 개구부, 청회색 얇은 금속 캐노피·사선 지지봉, 낮은 미닫이창, 문 황흑 보호기둥. 보이는 박공과 아치 모두 3동 표기","correction":"기존 전체 지붕형상 보존, 단순 상자 앞면 대신 실제 문 개구부·얕은 어두운 recess, 지지 캐노피·낮은 창·표찰·보호기둥 보완"},
+    {"seconds":[24,28,36,46,56,64,68],"certainty":"direct type; count/offset approximate","object":"3동 도로측 긴 외벽","observed":"연회색 세로 골판 상부, 흰 하단 띠, 검정 바닥턱. 크기·pane수가 서로 다른 낮은 미닫이창 묶음. 베이지 낙수관과 흰 하부 엘보. 벽 앞 노란 가장자리선","correction":"단일 균일 12pane strip을 별개 2·3pane 창bank로 대체. 모델11bank 및7낙수관의 정확수량·간격은 근사. 세로골·상하벽색·문틀/실 보완"},
+    {"seconds":[68,70,120,126],"certainty":"direct","object":"창고 끝 도로 모퉁이","observed":"노랑/흰 과속방지턱, 흰 횡단보도, 주차측 기둥 반사경","correction":"도로 고정시설로 추가 가능. 이동 파렛트·촬영 당시 차량은 재현 고정물로 추가하지 않음"},
+    {"seconds":[80,90,96,100,104,106],"certainty":"direct","object":"건조실 저층 별동 측면","observed":"크림색 가로 패널 외장, 좁고 긴 녹청색 세로창, 작은 회색셔터와 얇은 콘크리트 캐노피, 하단 황흑 방호관. 원거리 간판탑에는 주황 세로 모서리띠","correction":"별동을 균일한 흰 벽·보편적인 가로창 행으로 표현한 부분 수정 필요. 구조 외곽은 기존건축도면/전체장면과 함께 대조"},
+    {"seconds":[130,132,140],"certainty":"direct","object":"생산1팀2파트 출입구","observed":"흰 상자형 돌출 전실·유리2짝문·측벽 실명판·두꺼운 콘크리트 캐노피. 옆 긴 세로창과 현장 안내도, 작은 파란 표찰. 전면 낮은 황흑방호관·노란선. 옆 배수그레이팅과 붉은 고정 소화설비","correction":"평면 paired-door/frosted 표현을 돌출 전실로 교체. 치수는 영상비례 근사이며 실측확정 아님"},
+    {"seconds":[136,144],"certainty":"direct readable","object":"현장 배치 안내도","observed":"오른쪽 입구·경비실; 안쪽 3동창고/4동창고/2동창고; 왼쪽 건조실/소포장·스틱라인; 아래 1동창고/액상라인/사무동. 현위치표시는 건조실 맨위 출입구","correction":"창고3·4·2를 보이는 개별 박공지붕 번호로 해석하면 안 됨. 현장 안내도는 active drawing asset으로 등록 가능"}
+  ],
+  "guardhouseObservationLimit":"앞절반에는 경비실 본체가 직접 충분히 나오지 않음. 이름이 경비실~2팀입구인 원본이라도 미관찰 경비실 디테일을 추정하지 않음",
+  "implementationFiles":["apps/site/entrance-route-data.js","apps/site/entrance-production-models.js"],
+  "drawingAsset":"apps/site/assets/drawings/campus/entrance-site-guide-2026.jpg",
+  "limitations":["스마트폰 GPS는 촬영자 위치이며 건물 모서리 좌표가 아님","현장물품·차량·번호판을 고정 설비나 식별 근거로 추가하지 않음","창 총수와 배수관 간격·세부 치수는 모델근사, 실측확정 아님"]
+}

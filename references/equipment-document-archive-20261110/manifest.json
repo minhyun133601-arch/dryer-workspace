@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-10",
+  "files": [
+    {
+      "formerPath": "apps/site/equipment-documents.js",
+      "archivedPath": "references/equipment-document-archive-20261110/source/equipment-documents.js",
+      "sha256": "7157af38315091aab0795d7bfda3b7a79a30ea37f3412f5207063ec24f06d934",
+      "bytes": 7438
+    },
+    {
+      "formerPath": "apps/site/equipment-documents.css",
+      "archivedPath": "references/equipment-document-archive-20261110/source/equipment-documents.css",
+      "sha256": "5534b6bd6125cdab5ca921748585bd77d9e5cae5854c3385f01959e5149d1a09",
+      "bytes": 11020
+    },
+    {
+      "formerPath": "apps/site/documents/cheerpack-ahu-history-preview.png",
+      "archivedPath": "references/equipment-document-archive-20261110/documents/cheerpack-ahu-history-preview.png",
+      "sha256": "d224f33fddb285af9d597b825d40388f914fcd575c31b7d391a7805acb9f3d84",
+      "bytes": 464643
+    },
+    {
+      "formerPath": "apps/site/documents/cheerpack-ahu-history.pdf",
+      "archivedPath": "references/equipment-document-archive-20261110/documents/cheerpack-ahu-history.pdf",
+      "sha256": "fcbdcbd3e110100c32c6fbc99a41afc7b81872ec37b4a0b10818524fe2bc2cf3",
+      "bytes": 307669
+    }
+  ]
+}

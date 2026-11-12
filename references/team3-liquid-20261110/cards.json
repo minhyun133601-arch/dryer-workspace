@@ -1,0 +1,4422 @@
+[
+  {
+    "id": "3-pet-28-pet-1782257756103-222626",
+    "line": "",
+    "name": "28파이 Pet 충진기",
+    "note": "",
+    "plan": "",
+    "rate": 0,
+    "room": "Pet실",
+    "team": "3팀",
+    "group": "",
+    "owner": "",
+    "status": "비가동중",
+    "process": "",
+    "documents": [],
+    "lastCheck": "",
+    "modelName": "",
+    "nextCheck": "",
+    "photoCrop": null,
+    "photoName": "28파이 Pet 충진기 photo.jpg",
+    "detailInfo": [
+      {
+        "label": "설비명",
+        "value": "28파이 Pet 충진기"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "가동률",
+        "value": "0%"
+      }
+    ],
+    "ownerLabel": "담당 업체",
+    "production": "",
+    "teamDataKey": "work_team_calendar_team3",
+    "detailGroups": {
+      "equipmentSpecs": []
+    },
+    "manufacturer": "",
+    "photoDataUrl": "",
+    "equipmentCode": "3-PET-28-PET-1782257756103-222626",
+    "operationInfo": [
+      {
+        "label": "설비명",
+        "value": "28파이 Pet 충진기"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "실",
+        "value": "Pet실"
+      },
+      {
+        "label": "공정",
+        "value": ""
+      },
+      {
+        "label": "가동률",
+        "value": "0"
+      }
+    ],
+    "manufacturedAt": "",
+    "photoDocumentId": "8e04a23e-fce3-4200-9f21-0cd339b5b6b6",
+    "photoPreviewUrl": "/api/files/8e04a23e-fce3-4200-9f21-0cd339b5b6b6/view",
+    "photoDownloadUrl": "/api/files/8e04a23e-fce3-4200-9f21-0cd339b5b6b6/download",
+    "manufacturerLabel": "제조사",
+    "photoThumbDataUrl": "",
+    "maintenanceHistory": [],
+    "photoAttachmentKey": "equipment-photo-main",
+    "photoStorageRelPath": "equipment-assets/equipment-history/28파이 Pet 충진기/images/5e853df3-261a-42fe-8821-adf3e20ca44b.jpg",
+    "_archiveNumber": 42,
+    "_sourceJson": "references/team3-liquid-20261110/source/3팀/Pet실/042_28파이 Pet 충진기/원본카드.json",
+    "_sourceDir": "references/team3-liquid-20261110/source/3팀/Pet실/042_28파이 Pet 충진기",
+    "_photoPath": "apps/site/photos/team3-liquid-cards/card-042.jpg",
+    "_photoPanels": {
+      "front": "apps/site/photos/team3-liquid-cards/card-042-front.jpg",
+      "left": "apps/site/photos/team3-liquid-cards/card-042-left.jpg",
+      "right": "apps/site/photos/team3-liquid-cards/card-042-right.jpg",
+      "rear": "apps/site/photos/team3-liquid-cards/card-042-rear.jpg"
+    },
+    "_photoReflowPath": "apps/site/photos/team3-liquid-cards/card-042-reflow.jpg"
+  },
+  {
+    "id": "3-pet-pet-1-1782257708398-736241",
+    "line": "",
+    "name": "Pet실 1",
+    "note": "",
+    "plan": "",
+    "rate": 0,
+    "room": "Pet실",
+    "team": "3팀",
+    "group": "",
+    "owner": "",
+    "status": "비가동중",
+    "process": "",
+    "documents": [],
+    "lastCheck": "",
+    "modelName": "",
+    "nextCheck": "",
+    "photoCrop": null,
+    "photoName": "Pet실 1 photo.jpg",
+    "detailInfo": [
+      {
+        "label": "설비명",
+        "value": "Pet실 1"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "가동률",
+        "value": "0%"
+      }
+    ],
+    "ownerLabel": "담당 업체",
+    "production": "",
+    "teamDataKey": "work_team_calendar_team3",
+    "detailGroups": {
+      "equipmentSpecs": []
+    },
+    "manufacturer": "",
+    "photoDataUrl": "",
+    "equipmentCode": "3-PET-PET-1-1782257708398-736241",
+    "operationInfo": [
+      {
+        "label": "설비명",
+        "value": "Pet실 1"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "실",
+        "value": "Pet실"
+      },
+      {
+        "label": "공정",
+        "value": ""
+      },
+      {
+        "label": "가동률",
+        "value": "0"
+      }
+    ],
+    "manufacturedAt": "",
+    "photoDocumentId": "1d0287d5-7c93-4e87-8836-1caac666fe85",
+    "photoPreviewUrl": "/api/files/1d0287d5-7c93-4e87-8836-1caac666fe85/view",
+    "photoDownloadUrl": "/api/files/1d0287d5-7c93-4e87-8836-1caac666fe85/download",
+    "manufacturerLabel": "제조사",
+    "photoThumbDataUrl": "",
+    "maintenanceHistory": [],
+    "photoAttachmentKey": "equipment-photo-main",
+    "photoStorageRelPath": "equipment-assets/equipment-history/Pet실 1/images/8faa3fcf-302d-407a-8525-f9ca01187902.jpg",
+    "_archiveNumber": 43,
+    "_sourceJson": "references/team3-liquid-20261110/source/3팀/Pet실/043_Pet실 1/원본카드.json",
+    "_sourceDir": "references/team3-liquid-20261110/source/3팀/Pet실/043_Pet실 1",
+    "_photoPath": "apps/site/photos/team3-liquid-cards/card-043.jpg",
+    "_photoPanels": {
+      "front": "apps/site/photos/team3-liquid-cards/card-043-front.jpg",
+      "left": "apps/site/photos/team3-liquid-cards/card-043-left.jpg",
+      "right": "apps/site/photos/team3-liquid-cards/card-043-right.jpg",
+      "rear": "apps/site/photos/team3-liquid-cards/card-043-rear.jpg"
+    },
+    "_photoReflowPath": "apps/site/photos/team3-liquid-cards/card-043-reflow.jpg"
+  },
+  {
+    "id": "3-pet-pet-1782257675430-806890",
+    "line": "",
+    "name": "Pet 라인",
+    "note": "",
+    "plan": "",
+    "rate": 0,
+    "room": "Pet실",
+    "team": "3팀",
+    "group": "",
+    "owner": "",
+    "status": "비가동중",
+    "process": "",
+    "documents": [],
+    "lastCheck": "",
+    "modelName": "",
+    "nextCheck": "",
+    "photoCrop": null,
+    "photoName": "Pet 라인 photo.jpg",
+    "detailInfo": [
+      {
+        "label": "설비명",
+        "value": "Pet 라인"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "가동률",
+        "value": "0%"
+      }
+    ],
+    "ownerLabel": "담당 업체",
+    "production": "",
+    "teamDataKey": "work_team_calendar_team3",
+    "detailGroups": {
+      "equipmentSpecs": []
+    },
+    "manufacturer": "",
+    "photoDataUrl": "",
+    "equipmentCode": "3-PET-PET-1782257675430-806890",
+    "operationInfo": [
+      {
+        "label": "설비명",
+        "value": "Pet 라인"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "실",
+        "value": "Pet실"
+      },
+      {
+        "label": "공정",
+        "value": ""
+      },
+      {
+        "label": "가동률",
+        "value": "0"
+      }
+    ],
+    "manufacturedAt": "",
+    "photoDocumentId": "af53c340-28c0-4d0c-9dcd-bf297fdff02e",
+    "photoPreviewUrl": "/api/files/af53c340-28c0-4d0c-9dcd-bf297fdff02e/view",
+    "photoDownloadUrl": "/api/files/af53c340-28c0-4d0c-9dcd-bf297fdff02e/download",
+    "manufacturerLabel": "제조사",
+    "photoThumbDataUrl": "",
+    "maintenanceHistory": [],
+    "photoAttachmentKey": "equipment-photo-main",
+    "photoStorageRelPath": "equipment-assets/equipment-history/Pet 라인/images/b715e342-3a22-4f4a-a235-1d5735a8e6ce.jpg",
+    "_archiveNumber": 44,
+    "_sourceJson": "references/team3-liquid-20261110/source/3팀/Pet실/044_Pet 라인/원본카드.json",
+    "_sourceDir": "references/team3-liquid-20261110/source/3팀/Pet실/044_Pet 라인",
+    "_photoPath": "apps/site/photos/team3-liquid-cards/card-044.jpg",
+    "_photoPanels": {
+      "front": "apps/site/photos/team3-liquid-cards/card-044-front.jpg",
+      "left": "apps/site/photos/team3-liquid-cards/card-044-left.jpg",
+      "right": "apps/site/photos/team3-liquid-cards/card-044-right.jpg",
+      "rear": "apps/site/photos/team3-liquid-cards/card-044-rear.jpg"
+    },
+    "_photoReflowPath": "apps/site/photos/team3-liquid-cards/card-044-reflow.jpg"
+  },
+  {
+    "id": "3-38-1782257625120-69647",
+    "line": "",
+    "name": "38파이 라벨러",
+    "note": "",
+    "plan": "",
+    "rate": 0,
+    "room": "외포장실",
+    "team": "3팀",
+    "group": "",
+    "owner": "",
+    "status": "비가동중",
+    "process": "",
+    "documents": [],
+    "lastCheck": "",
+    "modelName": "",
+    "nextCheck": "",
+    "photoCrop": null,
+    "photoName": "38파이 라벨러 photo.jpg",
+    "detailInfo": [
+      {
+        "label": "설비명",
+        "value": "38파이 라벨러"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "가동률",
+        "value": "0%"
+      }
+    ],
+    "ownerLabel": "담당 업체",
+    "production": "",
+    "teamDataKey": "work_team_calendar_team3",
+    "detailGroups": {
+      "equipmentSpecs": []
+    },
+    "manufacturer": "",
+    "photoDataUrl": "",
+    "equipmentCode": "3-38-1782257625120-69647",
+    "operationInfo": [
+      {
+        "label": "설비명",
+        "value": "38파이 라벨러"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "실",
+        "value": "외포장실"
+      },
+      {
+        "label": "공정",
+        "value": ""
+      },
+      {
+        "label": "가동률",
+        "value": "0"
+      }
+    ],
+    "manufacturedAt": "",
+    "photoDocumentId": "504c5272-5348-422b-bfd4-434c7015bb04",
+    "photoPreviewUrl": "/api/files/504c5272-5348-422b-bfd4-434c7015bb04/view",
+    "photoDownloadUrl": "/api/files/504c5272-5348-422b-bfd4-434c7015bb04/download",
+    "manufacturerLabel": "제조사",
+    "photoThumbDataUrl": "",
+    "maintenanceHistory": [],
+    "photoAttachmentKey": "equipment-photo-main",
+    "photoStorageRelPath": "equipment-assets/equipment-history/38파이 라벨러/images/31c00eaf-0245-41c6-ab11-dd4eb59dbedb.jpg",
+    "_archiveNumber": 45,
+    "_sourceJson": "references/team3-liquid-20261110/source/3팀/외포장실/045_38파이 라벨러/원본카드.json",
+    "_sourceDir": "references/team3-liquid-20261110/source/3팀/외포장실/045_38파이 라벨러",
+    "_photoPath": "apps/site/photos/team3-liquid-cards/card-045.jpg",
+    "_photoPanels": {
+      "front": "apps/site/photos/team3-liquid-cards/card-045-front.jpg",
+      "left": "apps/site/photos/team3-liquid-cards/card-045-left.jpg",
+      "right": "apps/site/photos/team3-liquid-cards/card-045-right.jpg",
+      "rear": "apps/site/photos/team3-liquid-cards/card-045-rear.jpg"
+    },
+    "_photoReflowPath": "apps/site/photos/team3-liquid-cards/card-045-reflow.jpg"
+  },
+  {
+    "id": "3-pet-1782257532626-573918",
+    "line": "",
+    "name": "파스텔 라이저",
+    "note": "",
+    "plan": "",
+    "rate": 0,
+    "room": "Pet실",
+    "team": "3팀",
+    "group": "",
+    "owner": "",
+    "status": "비가동중",
+    "process": "",
+    "documents": [],
+    "lastCheck": "",
+    "modelName": "",
+    "nextCheck": "",
+    "photoCrop": null,
+    "photoName": "파스텔 라이저 photo.jpg",
+    "detailInfo": [
+      {
+        "label": "설비명",
+        "value": "파스텔 라이저"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "가동률",
+        "value": "0%"
+      }
+    ],
+    "ownerLabel": "담당 업체",
+    "production": "",
+    "teamDataKey": "work_team_calendar_team3",
+    "detailGroups": {
+      "equipmentSpecs": []
+    },
+    "manufacturer": "",
+    "photoDataUrl": "",
+    "equipmentCode": "3-PET-1782257532626-573918",
+    "operationInfo": [
+      {
+        "label": "설비명",
+        "value": "파스텔 라이저"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "실",
+        "value": "Pet실"
+      },
+      {
+        "label": "공정",
+        "value": ""
+      },
+      {
+        "label": "가동률",
+        "value": "0"
+      }
+    ],
+    "manufacturedAt": "",
+    "photoDocumentId": "bd901ac5-a41c-410a-9346-f4949a0a0c3d",
+    "photoPreviewUrl": "/api/files/bd901ac5-a41c-410a-9346-f4949a0a0c3d/view",
+    "photoDownloadUrl": "/api/files/bd901ac5-a41c-410a-9346-f4949a0a0c3d/download",
+    "manufacturerLabel": "제조사",
+    "photoThumbDataUrl": "",
+    "maintenanceHistory": [],
+    "photoAttachmentKey": "equipment-photo-main",
+    "photoStorageRelPath": "equipment-assets/equipment-history/파스텔 라이저/images/40c61f35-db2b-46df-bf5a-e2e3423e9e47.jpg",
+    "_archiveNumber": 46,
+    "_sourceJson": "references/team3-liquid-20261110/source/3팀/Pet실/046_파스텔 라이저/원본카드.json",
+    "_sourceDir": "references/team3-liquid-20261110/source/3팀/Pet실/046_파스텔 라이저",
+    "_photoPath": "apps/site/photos/team3-liquid-cards/card-046.jpg",
+    "_photoPanels": {
+      "front": "apps/site/photos/team3-liquid-cards/card-046-front.jpg",
+      "left": "apps/site/photos/team3-liquid-cards/card-046-left.jpg",
+      "right": "apps/site/photos/team3-liquid-cards/card-046-right.jpg",
+      "rear": "apps/site/photos/team3-liquid-cards/card-046-rear.jpg"
+    },
+    "_photoReflowPath": "apps/site/photos/team3-liquid-cards/card-046-reflow.jpg"
+  },
+  {
+    "id": "3-pet-88-1782257448563-513964",
+    "line": "",
+    "name": "88파이 자동 충진기",
+    "note": "",
+    "plan": "",
+    "rate": 0,
+    "room": "Pet실",
+    "team": "3팀",
+    "group": "",
+    "owner": "",
+    "status": "비가동중",
+    "process": "",
+    "documents": [],
+    "lastCheck": "",
+    "modelName": "",
+    "nextCheck": "",
+    "photoCrop": null,
+    "photoName": "88파이 자동 충진기 photo.jpg",
+    "detailInfo": [
+      {
+        "label": "설비명",
+        "value": "88파이 자동 충진기"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "가동률",
+        "value": "0%"
+      }
+    ],
+    "ownerLabel": "담당 업체",
+    "production": "",
+    "teamDataKey": "work_team_calendar_team3",
+    "detailGroups": {
+      "equipmentSpecs": []
+    },
+    "manufacturer": "",
+    "photoDataUrl": "",
+    "equipmentCode": "3-PET-88-1782257448563-513964",
+    "operationInfo": [
+      {
+        "label": "설비명",
+        "value": "88파이 자동 충진기"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "실",
+        "value": "Pet실"
+      },
+      {
+        "label": "공정",
+        "value": ""
+      },
+      {
+        "label": "가동률",
+        "value": "0"
+      }
+    ],
+    "manufacturedAt": "",
+    "photoDocumentId": "d8b2edb8-6fe4-446c-ad1f-065d84670a7f",
+    "photoPreviewUrl": "/api/files/d8b2edb8-6fe4-446c-ad1f-065d84670a7f/view",
+    "photoDownloadUrl": "/api/files/d8b2edb8-6fe4-446c-ad1f-065d84670a7f/download",
+    "manufacturerLabel": "제조사",
+    "photoThumbDataUrl": "",
+    "maintenanceHistory": [],
+    "photoAttachmentKey": "equipment-photo-main",
+    "photoStorageRelPath": "equipment-assets/equipment-history/88파이 자동 충진기/images/6e3e0c3e-5502-458c-a42c-b4bb8d5274ee.jpg",
+    "_archiveNumber": 47,
+    "_sourceJson": "references/team3-liquid-20261110/source/3팀/Pet실/047_88파이 자동 충진기/원본카드.json",
+    "_sourceDir": "references/team3-liquid-20261110/source/3팀/Pet실/047_88파이 자동 충진기",
+    "_photoPath": "apps/site/photos/team3-liquid-cards/card-047.jpg",
+    "_photoPanels": {
+      "front": "apps/site/photos/team3-liquid-cards/card-047-front.jpg",
+      "left": "apps/site/photos/team3-liquid-cards/card-047-left.jpg",
+      "right": "apps/site/photos/team3-liquid-cards/card-047-right.jpg",
+      "rear": "apps/site/photos/team3-liquid-cards/card-047-rear.jpg"
+    },
+    "_photoReflowPath": "apps/site/photos/team3-liquid-cards/card-047-reflow.jpg"
+  },
+  {
+    "id": "3-hipe-16-2-1782201441972-2778",
+    "line": "",
+    "name": "HIPE 16 스틱 충진기-2",
+    "note": "",
+    "plan": "",
+    "rate": 0,
+    "room": "스틱실",
+    "team": "3팀",
+    "group": "",
+    "owner": "",
+    "status": "비가동중",
+    "process": "",
+    "documents": [],
+    "lastCheck": "",
+    "modelName": "",
+    "nextCheck": "",
+    "photoCrop": null,
+    "photoName": "HIPE 16 스틱 충진기-2 photo.jpg",
+    "detailInfo": [
+      {
+        "label": "설비명",
+        "value": "HIPE 16 스틱 충진기-2"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "가동률",
+        "value": "0%"
+      }
+    ],
+    "ownerLabel": "담당 업체",
+    "production": "",
+    "teamDataKey": "work_team_calendar_team3",
+    "detailGroups": {
+      "equipmentSpecs": []
+    },
+    "manufacturer": "",
+    "photoDataUrl": "",
+    "equipmentCode": "3-HIPE-16-2-1782201441972-2778",
+    "operationInfo": [
+      {
+        "label": "설비명",
+        "value": "HIPE 16 스틱 충진기-2"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "실",
+        "value": "스틱실"
+      },
+      {
+        "label": "공정",
+        "value": ""
+      },
+      {
+        "label": "가동률",
+        "value": "0"
+      }
+    ],
+    "manufacturedAt": "",
+    "photoDocumentId": "2fb3ec70-dc27-434f-9682-cff6df04d392",
+    "photoPreviewUrl": "/api/files/2fb3ec70-dc27-434f-9682-cff6df04d392/view",
+    "photoDownloadUrl": "/api/files/2fb3ec70-dc27-434f-9682-cff6df04d392/download",
+    "manufacturerLabel": "제조사",
+    "photoThumbDataUrl": "",
+    "maintenanceHistory": [],
+    "photoAttachmentKey": "equipment-photo-main",
+    "photoStorageRelPath": "equipment-assets/equipment-history/HIPE 16 스틱 충진기-2/images/cfb6cfe5-2140-4898-83bb-d6e75ed5db18.jpg",
+    "_archiveNumber": 48,
+    "_sourceJson": "references/team3-liquid-20261110/source/3팀/스틱실/048_HIPE 16 스틱 충진기-2/원본카드.json",
+    "_sourceDir": "references/team3-liquid-20261110/source/3팀/스틱실/048_HIPE 16 스틱 충진기-2",
+    "_photoPath": "apps/site/photos/team3-liquid-cards/card-048.jpg",
+    "_photoPanels": {
+      "front": "apps/site/photos/team3-liquid-cards/card-048-front.jpg",
+      "left": "apps/site/photos/team3-liquid-cards/card-048-left.jpg",
+      "right": "apps/site/photos/team3-liquid-cards/card-048-right.jpg",
+      "rear": "apps/site/photos/team3-liquid-cards/card-048-rear.jpg"
+    },
+    "_photoReflowPath": "apps/site/photos/team3-liquid-cards/card-048-reflow.jpg"
+  },
+  {
+    "id": "3-hipe-16-1-1782201375691-128165",
+    "line": "",
+    "name": "Hipe 16 스틱 충진기-1",
+    "note": "",
+    "plan": "",
+    "rate": 0,
+    "room": "스틱실",
+    "team": "3팀",
+    "group": "",
+    "owner": "",
+    "status": "비가동중",
+    "process": "",
+    "documents": [],
+    "lastCheck": "",
+    "modelName": "",
+    "nextCheck": "",
+    "photoCrop": null,
+    "photoName": "Hipe 16 스틱 충진기-1 photo.jpg",
+    "detailInfo": [
+      {
+        "label": "설비명",
+        "value": "Hipe 16 스틱 충진기-1"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "가동률",
+        "value": "0%"
+      }
+    ],
+    "ownerLabel": "담당 업체",
+    "production": "",
+    "teamDataKey": "work_team_calendar_team3",
+    "detailGroups": {
+      "equipmentSpecs": []
+    },
+    "manufacturer": "",
+    "photoDataUrl": "",
+    "equipmentCode": "3-HIPE-16-1-1782201375691-128165",
+    "operationInfo": [
+      {
+        "label": "설비명",
+        "value": "Hipe 16 스틱 충진기-1"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "실",
+        "value": "스틱실"
+      },
+      {
+        "label": "공정",
+        "value": ""
+      },
+      {
+        "label": "가동률",
+        "value": "0"
+      }
+    ],
+    "manufacturedAt": "",
+    "photoDocumentId": "e6f55539-000d-4cbd-ac7b-bf3afc3f32ef",
+    "photoPreviewUrl": "/api/files/e6f55539-000d-4cbd-ac7b-bf3afc3f32ef/view",
+    "photoDownloadUrl": "/api/files/e6f55539-000d-4cbd-ac7b-bf3afc3f32ef/download",
+    "manufacturerLabel": "제조사",
+    "photoThumbDataUrl": "",
+    "maintenanceHistory": [],
+    "photoAttachmentKey": "equipment-photo-main",
+    "photoStorageRelPath": "equipment-assets/equipment-history/Hipe 16 스틱 충진기-1/images/dbd64631-230a-448f-be3b-9d54afaf351a.jpg",
+    "_archiveNumber": 49,
+    "_sourceJson": "references/team3-liquid-20261110/source/3팀/스틱실/049_Hipe 16 스틱 충진기-1/원본카드.json",
+    "_sourceDir": "references/team3-liquid-20261110/source/3팀/스틱실/049_Hipe 16 스틱 충진기-1",
+    "_photoPath": "apps/site/photos/team3-liquid-cards/card-049.jpg",
+    "_photoPanels": {
+      "front": "apps/site/photos/team3-liquid-cards/card-049-front.jpg",
+      "left": "apps/site/photos/team3-liquid-cards/card-049-left.jpg",
+      "right": "apps/site/photos/team3-liquid-cards/card-049-right.jpg",
+      "rear": "apps/site/photos/team3-liquid-cards/card-049-rear.jpg"
+    },
+    "_photoReflowPath": "apps/site/photos/team3-liquid-cards/card-049-reflow.jpg"
+  },
+  {
+    "id": "3-pet-1782201240668-3025",
+    "line": "",
+    "name": "병뚜껑 조립기",
+    "note": "",
+    "plan": "",
+    "rate": 0,
+    "room": "Pet실",
+    "team": "3팀",
+    "group": "",
+    "owner": "",
+    "status": "비가동중",
+    "process": "",
+    "documents": [],
+    "lastCheck": "",
+    "modelName": "",
+    "nextCheck": "",
+    "photoCrop": null,
+    "photoName": "병뚜껑 조립기 photo.jpg",
+    "detailInfo": [
+      {
+        "label": "설비명",
+        "value": "병뚜껑 조립기"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "가동률",
+        "value": "0%"
+      }
+    ],
+    "ownerLabel": "담당 업체",
+    "production": "",
+    "teamDataKey": "work_team_calendar_team3",
+    "detailGroups": {
+      "equipmentSpecs": []
+    },
+    "manufacturer": "",
+    "photoDataUrl": "",
+    "equipmentCode": "3-PET-1782201240668-3025",
+    "operationInfo": [
+      {
+        "label": "설비명",
+        "value": "병뚜껑 조립기"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "실",
+        "value": "Pet실"
+      },
+      {
+        "label": "공정",
+        "value": ""
+      },
+      {
+        "label": "가동률",
+        "value": "0"
+      }
+    ],
+    "manufacturedAt": "",
+    "photoDocumentId": "e9729aed-062f-42ea-aa82-a220c5b16edf",
+    "photoPreviewUrl": "/api/files/e9729aed-062f-42ea-aa82-a220c5b16edf/view",
+    "photoDownloadUrl": "/api/files/e9729aed-062f-42ea-aa82-a220c5b16edf/download",
+    "manufacturerLabel": "제조사",
+    "photoThumbDataUrl": "",
+    "maintenanceHistory": [],
+    "photoAttachmentKey": "equipment-photo-main",
+    "photoStorageRelPath": "equipment-assets/equipment-history/병뚜껑 조립기/images/d4fb4615-0ee8-48ee-a334-debfec1e6cb3.jpg",
+    "_archiveNumber": 50,
+    "_sourceJson": "references/team3-liquid-20261110/source/3팀/Pet실/050_병뚜껑 조립기/원본카드.json",
+    "_sourceDir": "references/team3-liquid-20261110/source/3팀/Pet실/050_병뚜껑 조립기",
+    "_photoPath": "apps/site/photos/team3-liquid-cards/card-050.jpg",
+    "_photoPanels": {
+      "front": "apps/site/photos/team3-liquid-cards/card-050-front.jpg",
+      "left": "apps/site/photos/team3-liquid-cards/card-050-left.jpg",
+      "right": "apps/site/photos/team3-liquid-cards/card-050-right.jpg",
+      "rear": "apps/site/photos/team3-liquid-cards/card-050-rear.jpg"
+    },
+    "_photoReflowPath": "apps/site/photos/team3-liquid-cards/card-050-reflow.jpg"
+  },
+  {
+    "id": "3-1782201141915-142510",
+    "line": "",
+    "name": "연수기",
+    "note": "",
+    "plan": "",
+    "rate": 0,
+    "room": "보일러실",
+    "team": "3팀",
+    "group": "",
+    "owner": "",
+    "status": "비가동중",
+    "process": "",
+    "documents": [],
+    "lastCheck": "",
+    "modelName": "",
+    "nextCheck": "",
+    "photoCrop": null,
+    "photoName": "연수기 photo.jpg",
+    "detailInfo": [
+      {
+        "label": "설비명",
+        "value": "연수기"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "가동률",
+        "value": "0%"
+      }
+    ],
+    "ownerLabel": "담당 업체",
+    "production": "",
+    "teamDataKey": "work_team_calendar_team3",
+    "detailGroups": {
+      "equipmentSpecs": []
+    },
+    "manufacturer": "",
+    "photoDataUrl": "",
+    "equipmentCode": "3-1782201141915-142510",
+    "operationInfo": [
+      {
+        "label": "설비명",
+        "value": "연수기"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "실",
+        "value": "보일러실"
+      },
+      {
+        "label": "공정",
+        "value": ""
+      },
+      {
+        "label": "가동률",
+        "value": "0"
+      }
+    ],
+    "manufacturedAt": "",
+    "photoDocumentId": "f0324cf5-816b-43ff-a76d-6d9021181259",
+    "photoPreviewUrl": "/api/files/f0324cf5-816b-43ff-a76d-6d9021181259/view",
+    "photoDownloadUrl": "/api/files/f0324cf5-816b-43ff-a76d-6d9021181259/download",
+    "manufacturerLabel": "제조사",
+    "photoThumbDataUrl": "",
+    "maintenanceHistory": [],
+    "photoAttachmentKey": "equipment-photo-main",
+    "photoStorageRelPath": "equipment-assets/equipment-history/연수기/images/51842fa5-7cae-4b51-b720-17b95a91a872.jpg",
+    "_archiveNumber": 51,
+    "_sourceJson": "references/team3-liquid-20261110/source/3팀/보일러실/051_연수기/원본카드.json",
+    "_sourceDir": "references/team3-liquid-20261110/source/3팀/보일러실/051_연수기",
+    "_photoPath": "apps/site/photos/team3-liquid-cards/card-051.jpg",
+    "_photoPanels": {
+      "front": "apps/site/photos/team3-liquid-cards/card-051-front.jpg",
+      "left": "apps/site/photos/team3-liquid-cards/card-051-left.jpg",
+      "right": "apps/site/photos/team3-liquid-cards/card-051-right.jpg",
+      "rear": "apps/site/photos/team3-liquid-cards/card-051-rear.jpg"
+    },
+    "_photoReflowPath": "apps/site/photos/team3-liquid-cards/card-051-reflow.jpg"
+  },
+  {
+    "id": "3-1782201070046-377867",
+    "line": "",
+    "name": "병 라인 중량 선별기",
+    "note": "",
+    "plan": "",
+    "rate": 0,
+    "room": "외포장실",
+    "team": "3팀",
+    "group": "",
+    "owner": "",
+    "status": "비가동중",
+    "process": "",
+    "documents": [],
+    "lastCheck": "",
+    "modelName": "",
+    "nextCheck": "",
+    "photoCrop": null,
+    "photoName": "선별기 photo.jpg",
+    "detailInfo": [
+      {
+        "label": "설비명",
+        "value": "병 라인 중량 선별기"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "가동률",
+        "value": "0%"
+      }
+    ],
+    "ownerLabel": "담당 업체",
+    "production": "",
+    "teamDataKey": "work_team_calendar_team3",
+    "detailGroups": {
+      "equipmentSpecs": []
+    },
+    "manufacturer": "",
+    "photoDataUrl": "",
+    "equipmentCode": "3-1782201070046-377867",
+    "operationInfo": [
+      {
+        "label": "설비명",
+        "value": "병 라인 중량 선별기"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "실",
+        "value": "외포장실"
+      },
+      {
+        "label": "공정",
+        "value": ""
+      },
+      {
+        "label": "가동률",
+        "value": "0"
+      }
+    ],
+    "manufacturedAt": "",
+    "photoDocumentId": "6af2f78d-d667-436a-8a54-fc2292e83c57",
+    "photoPreviewUrl": "/api/files/6af2f78d-d667-436a-8a54-fc2292e83c57/view",
+    "photoDownloadUrl": "/api/files/6af2f78d-d667-436a-8a54-fc2292e83c57/download",
+    "manufacturerLabel": "제조사",
+    "photoThumbDataUrl": "",
+    "maintenanceHistory": [],
+    "photoAttachmentKey": "equipment-photo-main",
+    "photoStorageRelPath": "equipment-assets/equipment-history/선별기/images/09ad2af6-6176-4188-ab12-68c503e22dd5.jpg",
+    "_archiveNumber": 52,
+    "_sourceJson": "references/team3-liquid-20261110/source/3팀/외포장실/052_병 라인 중량 선별기/원본카드.json",
+    "_sourceDir": "references/team3-liquid-20261110/source/3팀/외포장실/052_병 라인 중량 선별기",
+    "_photoPath": "apps/site/photos/team3-liquid-cards/card-052.jpg",
+    "_photoPanels": {
+      "front": "apps/site/photos/team3-liquid-cards/card-052-front.jpg",
+      "left": "apps/site/photos/team3-liquid-cards/card-052-left.jpg",
+      "right": "apps/site/photos/team3-liquid-cards/card-052-right.jpg",
+      "rear": "apps/site/photos/team3-liquid-cards/card-052-rear.jpg"
+    },
+    "_photoReflowPath": "apps/site/photos/team3-liquid-cards/card-052-reflow.jpg"
+  },
+  {
+    "id": "3-1782201040483-585481",
+    "line": "",
+    "name": "카토너",
+    "note": "",
+    "plan": "",
+    "rate": 0,
+    "room": "외포장실",
+    "team": "3팀",
+    "group": "",
+    "owner": "",
+    "status": "비가동중",
+    "process": "",
+    "documents": [],
+    "lastCheck": "",
+    "modelName": "",
+    "nextCheck": "",
+    "photoCrop": null,
+    "photoName": "카토너 photo.jpg",
+    "detailInfo": [
+      {
+        "label": "설비명",
+        "value": "카토너"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "가동률",
+        "value": "0%"
+      }
+    ],
+    "ownerLabel": "담당 업체",
+    "production": "",
+    "teamDataKey": "work_team_calendar_team3",
+    "detailGroups": {
+      "equipmentSpecs": []
+    },
+    "manufacturer": "",
+    "photoDataUrl": "",
+    "equipmentCode": "3-1782201040483-585481",
+    "operationInfo": [
+      {
+        "label": "설비명",
+        "value": "카토너"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "실",
+        "value": "외포장실"
+      },
+      {
+        "label": "공정",
+        "value": ""
+      },
+      {
+        "label": "가동률",
+        "value": "0"
+      }
+    ],
+    "manufacturedAt": "",
+    "photoDocumentId": "5ea61779-bda0-48db-b21f-fbd2c79d8b3c",
+    "photoPreviewUrl": "/api/files/5ea61779-bda0-48db-b21f-fbd2c79d8b3c/view",
+    "photoDownloadUrl": "/api/files/5ea61779-bda0-48db-b21f-fbd2c79d8b3c/download",
+    "manufacturerLabel": "제조사",
+    "photoThumbDataUrl": "",
+    "maintenanceHistory": [],
+    "photoAttachmentKey": "equipment-photo-main",
+    "photoStorageRelPath": "equipment-assets/equipment-history/카토너/images/74ae1403-d233-4188-b163-3e78f338231c.jpg",
+    "_archiveNumber": 53,
+    "_sourceJson": "references/team3-liquid-20261110/source/3팀/외포장실/053_카토너/원본카드.json",
+    "_sourceDir": "references/team3-liquid-20261110/source/3팀/외포장실/053_카토너",
+    "_photoPath": "apps/site/photos/team3-liquid-cards/card-053.jpg",
+    "_photoPanels": {
+      "front": "apps/site/photos/team3-liquid-cards/card-053-front.jpg",
+      "left": "apps/site/photos/team3-liquid-cards/card-053-left.jpg",
+      "right": "apps/site/photos/team3-liquid-cards/card-053-right.jpg",
+      "rear": "apps/site/photos/team3-liquid-cards/card-053-rear.jpg"
+    },
+    "_photoReflowPath": "apps/site/photos/team3-liquid-cards/card-053-reflow.jpg"
+  },
+  {
+    "id": "3-1-1782201031607-115039",
+    "line": "",
+    "name": "3팀용 제함기 1호기",
+    "note": "",
+    "plan": "",
+    "rate": 0,
+    "room": "외포장실",
+    "team": "3팀",
+    "group": "",
+    "owner": "",
+    "status": "비가동중",
+    "process": "",
+    "documents": [],
+    "lastCheck": "",
+    "modelName": "",
+    "nextCheck": "",
+    "photoCrop": null,
+    "photoName": "제함기 1호기 photo.jpg",
+    "detailInfo": [
+      {
+        "label": "설비명",
+        "value": "3팀용 제함기 1호기"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "가동률",
+        "value": "0%"
+      }
+    ],
+    "ownerLabel": "담당 업체",
+    "production": "",
+    "teamDataKey": "work_team_calendar_team3",
+    "detailGroups": {
+      "equipmentSpecs": []
+    },
+    "manufacturer": "",
+    "photoDataUrl": "",
+    "equipmentCode": "3-1-1782201031607-115039",
+    "operationInfo": [
+      {
+        "label": "설비명",
+        "value": "3팀용 제함기 1호기"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "실",
+        "value": "외포장실"
+      },
+      {
+        "label": "공정",
+        "value": ""
+      },
+      {
+        "label": "가동률",
+        "value": "0"
+      }
+    ],
+    "manufacturedAt": "",
+    "photoDocumentId": "c7afd82b-977b-4e6e-966f-f94c6d7ffd6b",
+    "photoPreviewUrl": "/api/files/c7afd82b-977b-4e6e-966f-f94c6d7ffd6b/view",
+    "photoDownloadUrl": "/api/files/c7afd82b-977b-4e6e-966f-f94c6d7ffd6b/download",
+    "manufacturerLabel": "제조사",
+    "photoThumbDataUrl": "",
+    "maintenanceHistory": [],
+    "photoAttachmentKey": "equipment-photo-main",
+    "photoStorageRelPath": "equipment-assets/equipment-history/제함기 1호기/images/0d2e601b-8a37-475a-9692-d11be3d765d6.jpg",
+    "_archiveNumber": 54,
+    "_sourceJson": "references/team3-liquid-20261110/source/3팀/외포장실/054_3팀용 제함기 1호기/원본카드.json",
+    "_sourceDir": "references/team3-liquid-20261110/source/3팀/외포장실/054_3팀용 제함기 1호기",
+    "_photoPath": "apps/site/photos/team3-liquid-cards/card-054.jpg",
+    "_photoPanels": {
+      "front": "apps/site/photos/team3-liquid-cards/card-054-front.jpg",
+      "left": "apps/site/photos/team3-liquid-cards/card-054-left.jpg",
+      "right": "apps/site/photos/team3-liquid-cards/card-054-right.jpg",
+      "rear": "apps/site/photos/team3-liquid-cards/card-054-rear.jpg"
+    },
+    "_photoReflowPath": "apps/site/photos/team3-liquid-cards/card-054-reflow.jpg"
+  },
+  {
+    "id": "3-10-1782201018278-982282",
+    "line": "",
+    "name": "10입 자동 포장기",
+    "note": "",
+    "plan": "",
+    "rate": 0,
+    "room": "외포장실",
+    "team": "3팀",
+    "group": "",
+    "owner": "",
+    "status": "비가동중",
+    "process": "",
+    "documents": [],
+    "lastCheck": "",
+    "modelName": "",
+    "nextCheck": "",
+    "photoCrop": null,
+    "photoName": "10입 자동 포장기 photo.jpg",
+    "detailInfo": [
+      {
+        "label": "설비명",
+        "value": "10입 자동 포장기"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "가동률",
+        "value": "0%"
+      }
+    ],
+    "ownerLabel": "담당 업체",
+    "production": "",
+    "teamDataKey": "work_team_calendar_team3",
+    "detailGroups": {
+      "equipmentSpecs": []
+    },
+    "manufacturer": "",
+    "photoDataUrl": "",
+    "equipmentCode": "3-10-1782201018278-982282",
+    "operationInfo": [
+      {
+        "label": "설비명",
+        "value": "10입 자동 포장기"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "실",
+        "value": "외포장실"
+      },
+      {
+        "label": "공정",
+        "value": ""
+      },
+      {
+        "label": "가동률",
+        "value": "0"
+      }
+    ],
+    "manufacturedAt": "",
+    "photoDocumentId": "923342fe-ebdd-40ea-b643-0d6e78247445",
+    "photoPreviewUrl": "/api/files/923342fe-ebdd-40ea-b643-0d6e78247445/view",
+    "photoDownloadUrl": "/api/files/923342fe-ebdd-40ea-b643-0d6e78247445/download",
+    "manufacturerLabel": "제조사",
+    "photoThumbDataUrl": "",
+    "maintenanceHistory": [],
+    "photoAttachmentKey": "equipment-photo-main",
+    "photoStorageRelPath": "equipment-assets/equipment-history/10입 자동 포장기/images/fbc0aee1-4693-4f6d-8603-f6fd3dd98df7.jpg",
+    "_archiveNumber": 55,
+    "_sourceJson": "references/team3-liquid-20261110/source/3팀/외포장실/055_10입 자동 포장기/원본카드.json",
+    "_sourceDir": "references/team3-liquid-20261110/source/3팀/외포장실/055_10입 자동 포장기",
+    "_photoPath": "apps/site/photos/team3-liquid-cards/card-055.jpg",
+    "_photoPanels": {
+      "front": "apps/site/photos/team3-liquid-cards/card-055-front.jpg",
+      "left": "apps/site/photos/team3-liquid-cards/card-055-left.jpg",
+      "right": "apps/site/photos/team3-liquid-cards/card-055-right.jpg",
+      "rear": "apps/site/photos/team3-liquid-cards/card-055-rear.jpg"
+    },
+    "_photoReflowPath": "apps/site/photos/team3-liquid-cards/card-055-reflow.jpg"
+  },
+  {
+    "id": "3-1782200963495-312438",
+    "line": "",
+    "name": "파우치 후살균수조",
+    "note": "",
+    "plan": "",
+    "rate": 0,
+    "room": "후살균실",
+    "team": "3팀",
+    "group": "",
+    "owner": "",
+    "status": "비가동중",
+    "process": "",
+    "documents": [],
+    "lastCheck": "",
+    "modelName": "",
+    "nextCheck": "",
+    "photoCrop": null,
+    "photoName": "파우치 후살균수조 photo.jpg",
+    "detailInfo": [
+      {
+        "label": "설비명",
+        "value": "파우치 후살균수조"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "가동률",
+        "value": "0%"
+      }
+    ],
+    "ownerLabel": "담당 업체",
+    "production": "",
+    "teamDataKey": "work_team_calendar_team3",
+    "detailGroups": {
+      "equipmentSpecs": []
+    },
+    "manufacturer": "",
+    "photoDataUrl": "",
+    "equipmentCode": "3-1782200963495-312438",
+    "operationInfo": [
+      {
+        "label": "설비명",
+        "value": "파우치 후살균수조"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "실",
+        "value": "후살균실"
+      },
+      {
+        "label": "공정",
+        "value": ""
+      },
+      {
+        "label": "가동률",
+        "value": "0"
+      }
+    ],
+    "manufacturedAt": "",
+    "photoDocumentId": "0501b2a2-c2cf-42c9-be4c-9dea519fdb75",
+    "photoPreviewUrl": "/api/files/0501b2a2-c2cf-42c9-be4c-9dea519fdb75/view",
+    "photoDownloadUrl": "/api/files/0501b2a2-c2cf-42c9-be4c-9dea519fdb75/download",
+    "manufacturerLabel": "제조사",
+    "photoThumbDataUrl": "",
+    "maintenanceHistory": [],
+    "photoAttachmentKey": "equipment-photo-main",
+    "photoStorageRelPath": "equipment-assets/equipment-history/파우치 후살균수조/images/6dd13c9d-e378-4f05-b758-3cbac435eab7.jpg",
+    "_archiveNumber": 56,
+    "_sourceJson": "references/team3-liquid-20261110/source/3팀/후살균실/056_파우치 후살균수조/원본카드.json",
+    "_sourceDir": "references/team3-liquid-20261110/source/3팀/후살균실/056_파우치 후살균수조",
+    "_photoPath": "apps/site/photos/team3-liquid-cards/card-056.jpg",
+    "_photoPanels": {
+      "front": "apps/site/photos/team3-liquid-cards/card-056-front.jpg",
+      "left": "apps/site/photos/team3-liquid-cards/card-056-left.jpg",
+      "right": "apps/site/photos/team3-liquid-cards/card-056-right.jpg",
+      "rear": "apps/site/photos/team3-liquid-cards/card-056-rear.jpg"
+    },
+    "_photoReflowPath": "apps/site/photos/team3-liquid-cards/card-056-reflow.jpg"
+  },
+  {
+    "id": "3-1782200950997-340050",
+    "line": "",
+    "name": "파우치 냉각수조",
+    "note": "",
+    "plan": "",
+    "rate": 0,
+    "room": "후살균실",
+    "team": "3팀",
+    "group": "",
+    "owner": "",
+    "status": "비가동중",
+    "process": "",
+    "documents": [],
+    "lastCheck": "",
+    "modelName": "",
+    "nextCheck": "",
+    "photoCrop": null,
+    "photoName": "파우치 냉각수조 photo.jpg",
+    "detailInfo": [
+      {
+        "label": "설비명",
+        "value": "파우치 냉각수조"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "가동률",
+        "value": "0%"
+      }
+    ],
+    "ownerLabel": "담당 업체",
+    "production": "",
+    "teamDataKey": "work_team_calendar_team3",
+    "detailGroups": {
+      "equipmentSpecs": []
+    },
+    "manufacturer": "",
+    "photoDataUrl": "",
+    "equipmentCode": "3-1782200950997-340050",
+    "operationInfo": [
+      {
+        "label": "설비명",
+        "value": "파우치 냉각수조"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "실",
+        "value": "후살균실"
+      },
+      {
+        "label": "공정",
+        "value": ""
+      },
+      {
+        "label": "가동률",
+        "value": "0"
+      }
+    ],
+    "manufacturedAt": "",
+    "photoDocumentId": "d6500d5d-cf2c-4933-9138-a10f5fa37385",
+    "photoPreviewUrl": "/api/files/d6500d5d-cf2c-4933-9138-a10f5fa37385/view",
+    "photoDownloadUrl": "/api/files/d6500d5d-cf2c-4933-9138-a10f5fa37385/download",
+    "manufacturerLabel": "제조사",
+    "photoThumbDataUrl": "",
+    "maintenanceHistory": [],
+    "photoAttachmentKey": "equipment-photo-main",
+    "photoStorageRelPath": "equipment-assets/equipment-history/파우치 냉각수조/images/5d9d02bf-580e-4a3b-87f2-8a8d22462acc.jpg",
+    "_archiveNumber": 57,
+    "_sourceJson": "references/team3-liquid-20261110/source/3팀/후살균실/057_파우치 냉각수조/원본카드.json",
+    "_sourceDir": "references/team3-liquid-20261110/source/3팀/후살균실/057_파우치 냉각수조",
+    "_photoPath": "apps/site/photos/team3-liquid-cards/card-057.jpg",
+    "_photoPanels": {
+      "front": "apps/site/photos/team3-liquid-cards/card-057-front.jpg",
+      "left": "apps/site/photos/team3-liquid-cards/card-057-left.jpg",
+      "right": "apps/site/photos/team3-liquid-cards/card-057-right.jpg",
+      "rear": "apps/site/photos/team3-liquid-cards/card-057-rear.jpg"
+    },
+    "_photoReflowPath": "apps/site/photos/team3-liquid-cards/card-057-reflow.jpg"
+  },
+  {
+    "id": "3-1782200936653-362090",
+    "line": "",
+    "name": "후살균기",
+    "note": "",
+    "plan": "",
+    "rate": 0,
+    "room": "후살균실",
+    "team": "3팀",
+    "group": "",
+    "owner": "",
+    "status": "비가동중",
+    "process": "",
+    "documents": [],
+    "lastCheck": "",
+    "modelName": "",
+    "nextCheck": "",
+    "photoCrop": null,
+    "photoName": "후살균기 photo.jpg",
+    "detailInfo": [
+      {
+        "label": "설비명",
+        "value": "후살균기"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "가동률",
+        "value": "0%"
+      }
+    ],
+    "ownerLabel": "담당 업체",
+    "production": "",
+    "teamDataKey": "work_team_calendar_team3",
+    "detailGroups": {
+      "equipmentSpecs": []
+    },
+    "manufacturer": "",
+    "photoDataUrl": "",
+    "equipmentCode": "3-1782200936653-362090",
+    "operationInfo": [
+      {
+        "label": "설비명",
+        "value": "후살균기"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "실",
+        "value": "후살균실"
+      },
+      {
+        "label": "공정",
+        "value": ""
+      },
+      {
+        "label": "가동률",
+        "value": "0"
+      }
+    ],
+    "manufacturedAt": "",
+    "photoDocumentId": "f97b55fc-bee6-4e0c-bf39-3b13314bfa79",
+    "photoPreviewUrl": "/api/files/f97b55fc-bee6-4e0c-bf39-3b13314bfa79/view",
+    "photoDownloadUrl": "/api/files/f97b55fc-bee6-4e0c-bf39-3b13314bfa79/download",
+    "manufacturerLabel": "제조사",
+    "photoThumbDataUrl": "",
+    "maintenanceHistory": [],
+    "photoAttachmentKey": "equipment-photo-main",
+    "photoStorageRelPath": "equipment-assets/equipment-history/후살균기/images/55cfbbb6-ba55-4ff8-926e-9f3bf620ad17.jpg",
+    "_archiveNumber": 58,
+    "_sourceJson": "references/team3-liquid-20261110/source/3팀/후살균실/058_후살균기/원본카드.json",
+    "_sourceDir": "references/team3-liquid-20261110/source/3팀/후살균실/058_후살균기",
+    "_photoPath": "apps/site/photos/team3-liquid-cards/card-058.jpg",
+    "_photoPanels": {
+      "front": "apps/site/photos/team3-liquid-cards/card-058-front.jpg",
+      "left": "apps/site/photos/team3-liquid-cards/card-058-left.jpg",
+      "right": "apps/site/photos/team3-liquid-cards/card-058-right.jpg",
+      "rear": "apps/site/photos/team3-liquid-cards/card-058-rear.jpg"
+    },
+    "_photoReflowPath": "apps/site/photos/team3-liquid-cards/card-058-reflow.jpg"
+  },
+  {
+    "id": "3-1782200894771-588759",
+    "line": "",
+    "name": "치어팩 언로더",
+    "note": "",
+    "plan": "",
+    "rate": 0,
+    "room": "파우치실",
+    "team": "3팀",
+    "group": "",
+    "owner": "",
+    "status": "비가동중",
+    "process": "",
+    "documents": [],
+    "lastCheck": "",
+    "modelName": "",
+    "nextCheck": "",
+    "photoCrop": null,
+    "photoName": "치어팩 언로더 photo.jpg",
+    "detailInfo": [
+      {
+        "label": "설비명",
+        "value": "치어팩 언로더"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "가동률",
+        "value": "0%"
+      }
+    ],
+    "ownerLabel": "담당 업체",
+    "production": "",
+    "teamDataKey": "work_team_calendar_team3",
+    "detailGroups": {
+      "equipmentSpecs": []
+    },
+    "manufacturer": "",
+    "photoDataUrl": "",
+    "equipmentCode": "3-1782200894771-588759",
+    "operationInfo": [
+      {
+        "label": "설비명",
+        "value": "치어팩 언로더"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "실",
+        "value": "파우치실"
+      },
+      {
+        "label": "공정",
+        "value": ""
+      },
+      {
+        "label": "가동률",
+        "value": "0"
+      }
+    ],
+    "manufacturedAt": "",
+    "photoDocumentId": "c16b25be-2022-440b-a422-a149df760a5c",
+    "photoPreviewUrl": "/api/files/c16b25be-2022-440b-a422-a149df760a5c/view",
+    "photoDownloadUrl": "/api/files/c16b25be-2022-440b-a422-a149df760a5c/download",
+    "manufacturerLabel": "제조사",
+    "photoThumbDataUrl": "",
+    "maintenanceHistory": [],
+    "photoAttachmentKey": "equipment-photo-main",
+    "photoStorageRelPath": "equipment-assets/equipment-history/치어팩 언로더/images/c7f50cc3-0162-4fdc-aad7-bea9fbf5bb83.jpg",
+    "_archiveNumber": 59,
+    "_sourceJson": "references/team3-liquid-20261110/source/3팀/파우치실/059_치어팩 언로더/원본카드.json",
+    "_sourceDir": "references/team3-liquid-20261110/source/3팀/파우치실/059_치어팩 언로더",
+    "_photoPath": "apps/site/photos/team3-liquid-cards/card-059.jpg",
+    "_photoPanels": {
+      "front": "apps/site/photos/team3-liquid-cards/card-059-front.jpg",
+      "left": "apps/site/photos/team3-liquid-cards/card-059-left.jpg",
+      "right": "apps/site/photos/team3-liquid-cards/card-059-right.jpg",
+      "rear": "apps/site/photos/team3-liquid-cards/card-059-rear.jpg"
+    },
+    "_photoReflowPath": "apps/site/photos/team3-liquid-cards/card-059-reflow.jpg"
+  },
+  {
+    "id": "3-1782200711248-29398",
+    "line": "",
+    "name": "스틱 냉각기",
+    "note": "",
+    "plan": "",
+    "rate": 0,
+    "room": "스틱실",
+    "team": "3팀",
+    "group": "",
+    "owner": "",
+    "status": "비가동중",
+    "process": "",
+    "documents": [],
+    "lastCheck": "",
+    "modelName": "",
+    "nextCheck": "",
+    "photoCrop": null,
+    "photoName": "스틱 냉각기 photo.jpg",
+    "detailInfo": [
+      {
+        "label": "설비명",
+        "value": "스틱 냉각기"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "가동률",
+        "value": "0%"
+      }
+    ],
+    "ownerLabel": "담당 업체",
+    "production": "",
+    "teamDataKey": "work_team_calendar_team3",
+    "detailGroups": {
+      "equipmentSpecs": []
+    },
+    "manufacturer": "",
+    "photoDataUrl": "",
+    "equipmentCode": "3-1782200711248-29398",
+    "operationInfo": [
+      {
+        "label": "설비명",
+        "value": "스틱 냉각기"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "실",
+        "value": "스틱실"
+      },
+      {
+        "label": "공정",
+        "value": ""
+      },
+      {
+        "label": "가동률",
+        "value": "0"
+      }
+    ],
+    "manufacturedAt": "",
+    "photoDocumentId": "63afd96d-9e4e-495b-b350-fffcf45907da",
+    "photoPreviewUrl": "/api/files/63afd96d-9e4e-495b-b350-fffcf45907da/view",
+    "photoDownloadUrl": "/api/files/63afd96d-9e4e-495b-b350-fffcf45907da/download",
+    "manufacturerLabel": "제조사",
+    "photoThumbDataUrl": "",
+    "maintenanceHistory": [],
+    "photoAttachmentKey": "equipment-photo-main",
+    "photoStorageRelPath": "equipment-assets/equipment-history/스틱 냉각기/images/e84d1ab3-dfca-4915-a14c-9205f35c0fbb.jpg",
+    "_archiveNumber": 60,
+    "_sourceJson": "references/team3-liquid-20261110/source/3팀/스틱실/060_스틱 냉각기/원본카드.json",
+    "_sourceDir": "references/team3-liquid-20261110/source/3팀/스틱실/060_스틱 냉각기",
+    "_photoPath": "apps/site/photos/team3-liquid-cards/card-060.jpg",
+    "_photoPanels": {
+      "front": "apps/site/photos/team3-liquid-cards/card-060-front.jpg",
+      "left": "apps/site/photos/team3-liquid-cards/card-060-left.jpg",
+      "right": "apps/site/photos/team3-liquid-cards/card-060-right.jpg",
+      "rear": "apps/site/photos/team3-liquid-cards/card-060-rear.jpg"
+    },
+    "_photoReflowPath": "apps/site/photos/team3-liquid-cards/card-060-reflow.jpg"
+  },
+  {
+    "id": "3-3-1782200601092-201721",
+    "line": "",
+    "name": "파우치 충진기 3호기",
+    "note": "",
+    "plan": "",
+    "rate": 0,
+    "room": "파우치실",
+    "team": "3팀",
+    "group": "",
+    "owner": "",
+    "status": "비가동중",
+    "process": "",
+    "documents": [],
+    "lastCheck": "",
+    "modelName": "",
+    "nextCheck": "",
+    "photoCrop": null,
+    "photoName": "파우치 충진기 3호기 photo.jpg",
+    "detailInfo": [
+      {
+        "label": "설비명",
+        "value": "파우치 충진기 3호기"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "가동률",
+        "value": "0%"
+      }
+    ],
+    "ownerLabel": "담당 업체",
+    "production": "",
+    "teamDataKey": "work_team_calendar_team3",
+    "detailGroups": {
+      "equipmentSpecs": []
+    },
+    "manufacturer": "",
+    "photoDataUrl": "",
+    "equipmentCode": "3-3-1782200601092-201721",
+    "operationInfo": [
+      {
+        "label": "설비명",
+        "value": "파우치 충진기 3호기"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "실",
+        "value": "파우치실"
+      },
+      {
+        "label": "공정",
+        "value": ""
+      },
+      {
+        "label": "가동률",
+        "value": "0"
+      }
+    ],
+    "manufacturedAt": "",
+    "photoDocumentId": "52eb5a04-f991-4157-af84-c08a8c7eb170",
+    "photoPreviewUrl": "/api/files/52eb5a04-f991-4157-af84-c08a8c7eb170/view",
+    "photoDownloadUrl": "/api/files/52eb5a04-f991-4157-af84-c08a8c7eb170/download",
+    "manufacturerLabel": "제조사",
+    "photoThumbDataUrl": "",
+    "maintenanceHistory": [],
+    "photoAttachmentKey": "equipment-photo-main",
+    "photoStorageRelPath": "equipment-assets/equipment-history/파우치 충진기 3호기/images/aa27634e-d4d6-4725-ad18-b8d63ce9f2ea.jpg",
+    "_archiveNumber": 61,
+    "_sourceJson": "references/team3-liquid-20261110/source/3팀/파우치실/061_파우치 충진기 3호기/원본카드.json",
+    "_sourceDir": "references/team3-liquid-20261110/source/3팀/파우치실/061_파우치 충진기 3호기",
+    "_photoPath": "apps/site/photos/team3-liquid-cards/card-061.jpg",
+    "_photoPanels": {
+      "front": "apps/site/photos/team3-liquid-cards/card-061-front.jpg",
+      "left": "apps/site/photos/team3-liquid-cards/card-061-left.jpg",
+      "right": "apps/site/photos/team3-liquid-cards/card-061-right.jpg",
+      "rear": "apps/site/photos/team3-liquid-cards/card-061-rear.jpg"
+    },
+    "_photoReflowPath": "apps/site/photos/team3-liquid-cards/card-061-reflow.jpg"
+  },
+  {
+    "id": "3-2-1782200588354-621557",
+    "line": "",
+    "name": "파우치 충진기 2호기",
+    "note": "",
+    "plan": "",
+    "rate": 0,
+    "room": "파우치실",
+    "team": "3팀",
+    "group": "",
+    "owner": "",
+    "status": "비가동중",
+    "process": "",
+    "documents": [],
+    "lastCheck": "",
+    "modelName": "",
+    "nextCheck": "",
+    "photoCrop": null,
+    "photoName": "파우치 충진기 2호기 photo.jpg",
+    "detailInfo": [
+      {
+        "label": "설비명",
+        "value": "파우치 충진기 2호기"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "가동률",
+        "value": "0%"
+      }
+    ],
+    "ownerLabel": "담당 업체",
+    "production": "",
+    "teamDataKey": "work_team_calendar_team3",
+    "detailGroups": {
+      "equipmentSpecs": []
+    },
+    "manufacturer": "",
+    "photoDataUrl": "",
+    "equipmentCode": "3-2-1782200588354-621557",
+    "operationInfo": [
+      {
+        "label": "설비명",
+        "value": "파우치 충진기 2호기"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "실",
+        "value": "파우치실"
+      },
+      {
+        "label": "공정",
+        "value": ""
+      },
+      {
+        "label": "가동률",
+        "value": "0"
+      }
+    ],
+    "manufacturedAt": "",
+    "photoDocumentId": "6c9a57d6-d08a-4ac3-a339-b3024c28b9c0",
+    "photoPreviewUrl": "/api/files/6c9a57d6-d08a-4ac3-a339-b3024c28b9c0/view",
+    "photoDownloadUrl": "/api/files/6c9a57d6-d08a-4ac3-a339-b3024c28b9c0/download",
+    "manufacturerLabel": "제조사",
+    "photoThumbDataUrl": "",
+    "maintenanceHistory": [],
+    "photoAttachmentKey": "equipment-photo-main",
+    "photoStorageRelPath": "equipment-assets/equipment-history/파우치 충진기 2호기/images/295264d6-9bff-4e82-8c07-59e7fb6e6f97.jpg",
+    "_archiveNumber": 62,
+    "_sourceJson": "references/team3-liquid-20261110/source/3팀/파우치실/062_파우치 충진기 2호기/원본카드.json",
+    "_sourceDir": "references/team3-liquid-20261110/source/3팀/파우치실/062_파우치 충진기 2호기",
+    "_photoPath": "apps/site/photos/team3-liquid-cards/card-062.jpg",
+    "_photoPanels": {
+      "front": "apps/site/photos/team3-liquid-cards/card-062-front.jpg",
+      "left": "apps/site/photos/team3-liquid-cards/card-062-left.jpg",
+      "right": "apps/site/photos/team3-liquid-cards/card-062-right.jpg",
+      "rear": "apps/site/photos/team3-liquid-cards/card-062-rear.jpg"
+    },
+    "_photoReflowPath": "apps/site/photos/team3-liquid-cards/card-062-reflow.jpg"
+  },
+  {
+    "id": "3-1-1782200579857-7535",
+    "line": "",
+    "name": "파우치 충진기 1호기",
+    "note": "",
+    "plan": "",
+    "rate": 0,
+    "room": "파우치실",
+    "team": "3팀",
+    "group": "",
+    "owner": "",
+    "status": "비가동중",
+    "process": "",
+    "documents": [],
+    "lastCheck": "",
+    "modelName": "",
+    "nextCheck": "",
+    "photoCrop": null,
+    "photoName": "파우치 충진기 1호기 photo.jpg",
+    "detailInfo": [
+      {
+        "label": "설비명",
+        "value": "파우치 충진기 1호기"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "가동률",
+        "value": "0%"
+      }
+    ],
+    "ownerLabel": "담당 업체",
+    "production": "",
+    "teamDataKey": "work_team_calendar_team3",
+    "detailGroups": {
+      "equipmentSpecs": []
+    },
+    "manufacturer": "",
+    "photoDataUrl": "",
+    "equipmentCode": "3-1-1782200579857-7535",
+    "operationInfo": [
+      {
+        "label": "설비명",
+        "value": "파우치 충진기 1호기"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "실",
+        "value": "파우치실"
+      },
+      {
+        "label": "공정",
+        "value": ""
+      },
+      {
+        "label": "가동률",
+        "value": "0"
+      }
+    ],
+    "manufacturedAt": "",
+    "photoDocumentId": "dce38485-b1d5-4a07-8e96-02effcbfeba7",
+    "photoPreviewUrl": "/api/files/dce38485-b1d5-4a07-8e96-02effcbfeba7/view",
+    "photoDownloadUrl": "/api/files/dce38485-b1d5-4a07-8e96-02effcbfeba7/download",
+    "manufacturerLabel": "제조사",
+    "photoThumbDataUrl": "",
+    "maintenanceHistory": [],
+    "photoAttachmentKey": "equipment-photo-main",
+    "photoStorageRelPath": "equipment-assets/equipment-history/파우치 충진기 1호기/images/3e8ba5a0-17ca-41c6-87f2-ea1cbc5ed2df.jpg",
+    "_archiveNumber": 63,
+    "_sourceJson": "references/team3-liquid-20261110/source/3팀/파우치실/063_파우치 충진기 1호기/원본카드.json",
+    "_sourceDir": "references/team3-liquid-20261110/source/3팀/파우치실/063_파우치 충진기 1호기",
+    "_photoPath": "apps/site/photos/team3-liquid-cards/card-063.jpg",
+    "_photoPanels": {
+      "front": "apps/site/photos/team3-liquid-cards/card-063-front.jpg",
+      "left": "apps/site/photos/team3-liquid-cards/card-063-left.jpg",
+      "right": "apps/site/photos/team3-liquid-cards/card-063-right.jpg",
+      "rear": "apps/site/photos/team3-liquid-cards/card-063-rear.jpg"
+    },
+    "_photoReflowPath": "apps/site/photos/team3-liquid-cards/card-063-reflow.jpg"
+  },
+  {
+    "id": "3-3-1782200565686-874559",
+    "line": "",
+    "name": "치어팩 충진기 3호기",
+    "note": "",
+    "plan": "",
+    "rate": 0,
+    "room": "파우치실",
+    "team": "3팀",
+    "group": "",
+    "owner": "",
+    "status": "비가동중",
+    "process": "",
+    "documents": [],
+    "lastCheck": "",
+    "modelName": "",
+    "nextCheck": "",
+    "photoCrop": null,
+    "photoName": "치어팩 충진기 3호기 photo.jpg",
+    "detailInfo": [
+      {
+        "label": "설비명",
+        "value": "치어팩 충진기 3호기"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "가동률",
+        "value": "0%"
+      }
+    ],
+    "ownerLabel": "담당 업체",
+    "production": "",
+    "teamDataKey": "work_team_calendar_team3",
+    "detailGroups": {
+      "equipmentSpecs": []
+    },
+    "manufacturer": "",
+    "photoDataUrl": "",
+    "equipmentCode": "3-3-1782200565686-874559",
+    "operationInfo": [
+      {
+        "label": "설비명",
+        "value": "치어팩 충진기 3호기"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "실",
+        "value": "파우치실"
+      },
+      {
+        "label": "공정",
+        "value": ""
+      },
+      {
+        "label": "가동률",
+        "value": "0"
+      }
+    ],
+    "manufacturedAt": "",
+    "photoDocumentId": "f9a2d5ee-74b1-4930-8c09-a40d40658c66",
+    "photoPreviewUrl": "/api/files/f9a2d5ee-74b1-4930-8c09-a40d40658c66/view",
+    "photoDownloadUrl": "/api/files/f9a2d5ee-74b1-4930-8c09-a40d40658c66/download",
+    "manufacturerLabel": "제조사",
+    "photoThumbDataUrl": "",
+    "maintenanceHistory": [],
+    "photoAttachmentKey": "equipment-photo-main",
+    "photoStorageRelPath": "equipment-assets/equipment-history/치어팩 충진기 3호기/images/bcd3b5b4-c124-45ef-95b4-101c759e9e62.jpg",
+    "_archiveNumber": 64,
+    "_sourceJson": "references/team3-liquid-20261110/source/3팀/파우치실/064_치어팩 충진기 3호기/원본카드.json",
+    "_sourceDir": "references/team3-liquid-20261110/source/3팀/파우치실/064_치어팩 충진기 3호기",
+    "_photoPath": "apps/site/photos/team3-liquid-cards/card-064.jpg",
+    "_photoPanels": {
+      "front": "apps/site/photos/team3-liquid-cards/card-064-front.jpg",
+      "left": "apps/site/photos/team3-liquid-cards/card-064-left.jpg",
+      "right": "apps/site/photos/team3-liquid-cards/card-064-right.jpg",
+      "rear": "apps/site/photos/team3-liquid-cards/card-064-rear.jpg"
+    },
+    "_photoReflowPath": "apps/site/photos/team3-liquid-cards/card-064-reflow.jpg"
+  },
+  {
+    "id": "3-2-1782200528143-548764",
+    "line": "",
+    "name": "치어팩 충진기 2호기",
+    "note": "",
+    "plan": "",
+    "rate": 0,
+    "room": "파우치실",
+    "team": "3팀",
+    "group": "",
+    "owner": "",
+    "status": "비가동중",
+    "process": "",
+    "documents": [],
+    "lastCheck": "",
+    "modelName": "",
+    "nextCheck": "",
+    "photoCrop": null,
+    "photoName": "치어팩 충진기 2호기 photo.jpg",
+    "detailInfo": [
+      {
+        "label": "설비명",
+        "value": "치어팩 충진기 2호기"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "가동률",
+        "value": "0%"
+      }
+    ],
+    "ownerLabel": "담당 업체",
+    "production": "",
+    "teamDataKey": "work_team_calendar_team3",
+    "detailGroups": {
+      "equipmentSpecs": []
+    },
+    "manufacturer": "",
+    "photoDataUrl": "",
+    "equipmentCode": "3-2-1782200528143-548764",
+    "operationInfo": [
+      {
+        "label": "설비명",
+        "value": "치어팩 충진기 2호기"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "실",
+        "value": "파우치실"
+      },
+      {
+        "label": "공정",
+        "value": ""
+      },
+      {
+        "label": "가동률",
+        "value": "0"
+      }
+    ],
+    "manufacturedAt": "",
+    "photoDocumentId": "9985a132-660f-44c0-b3f4-1972d5cbfc1d",
+    "photoPreviewUrl": "/api/files/9985a132-660f-44c0-b3f4-1972d5cbfc1d/view",
+    "photoDownloadUrl": "/api/files/9985a132-660f-44c0-b3f4-1972d5cbfc1d/download",
+    "manufacturerLabel": "제조사",
+    "photoThumbDataUrl": "",
+    "maintenanceHistory": [],
+    "photoAttachmentKey": "equipment-photo-main",
+    "photoStorageRelPath": "equipment-assets/equipment-history/치어팩 충진기 2호기/images/1da7507a-037c-4154-aad5-b8994e576528.jpg",
+    "_archiveNumber": 65,
+    "_sourceJson": "references/team3-liquid-20261110/source/3팀/파우치실/065_치어팩 충진기 2호기/원본카드.json",
+    "_sourceDir": "references/team3-liquid-20261110/source/3팀/파우치실/065_치어팩 충진기 2호기",
+    "_photoPath": "apps/site/photos/team3-liquid-cards/card-065.jpg",
+    "_photoPanels": {
+      "front": "apps/site/photos/team3-liquid-cards/card-065-front.jpg",
+      "left": "apps/site/photos/team3-liquid-cards/card-065-left.jpg",
+      "right": "apps/site/photos/team3-liquid-cards/card-065-right.jpg",
+      "rear": "apps/site/photos/team3-liquid-cards/card-065-rear.jpg"
+    },
+    "_photoReflowPath": "apps/site/photos/team3-liquid-cards/card-065-reflow.jpg"
+  },
+  {
+    "id": "3-1-1782200515670-577706",
+    "line": "",
+    "name": "치어팩 충진기 1호기",
+    "note": "",
+    "plan": "",
+    "rate": 0,
+    "room": "파우치실",
+    "team": "3팀",
+    "group": "",
+    "owner": "",
+    "status": "비가동중",
+    "process": "",
+    "documents": [],
+    "lastCheck": "",
+    "modelName": "",
+    "nextCheck": "",
+    "photoCrop": null,
+    "photoName": "치어팩 충진기 1호기 photo.jpg",
+    "detailInfo": [
+      {
+        "label": "설비명",
+        "value": "치어팩 충진기 1호기"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "가동률",
+        "value": "0%"
+      }
+    ],
+    "ownerLabel": "담당 업체",
+    "production": "",
+    "teamDataKey": "work_team_calendar_team3",
+    "detailGroups": {
+      "equipmentSpecs": []
+    },
+    "manufacturer": "",
+    "photoDataUrl": "",
+    "equipmentCode": "3-1-1782200515670-577706",
+    "operationInfo": [
+      {
+        "label": "설비명",
+        "value": "치어팩 충진기 1호기"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "실",
+        "value": "파우치실"
+      },
+      {
+        "label": "공정",
+        "value": ""
+      },
+      {
+        "label": "가동률",
+        "value": "0"
+      }
+    ],
+    "manufacturedAt": "",
+    "photoDocumentId": "bb74f54f-3dc3-410f-b1fb-e190f0b0e7b3",
+    "photoPreviewUrl": "/api/files/bb74f54f-3dc3-410f-b1fb-e190f0b0e7b3/view",
+    "photoDownloadUrl": "/api/files/bb74f54f-3dc3-410f-b1fb-e190f0b0e7b3/download",
+    "manufacturerLabel": "제조사",
+    "photoThumbDataUrl": "",
+    "maintenanceHistory": [],
+    "photoAttachmentKey": "equipment-photo-main",
+    "photoStorageRelPath": "equipment-assets/equipment-history/치어팩 충진기 1호기/images/63c38f88-405c-4b6b-9abb-c432e857c2b9.jpg",
+    "_archiveNumber": 66,
+    "_sourceJson": "references/team3-liquid-20261110/source/3팀/파우치실/066_치어팩 충진기 1호기/원본카드.json",
+    "_sourceDir": "references/team3-liquid-20261110/source/3팀/파우치실/066_치어팩 충진기 1호기",
+    "_photoPath": "apps/site/photos/team3-liquid-cards/card-066.jpg",
+    "_photoPanels": {
+      "front": "apps/site/photos/team3-liquid-cards/card-066-front.jpg",
+      "left": "apps/site/photos/team3-liquid-cards/card-066-left.jpg",
+      "right": "apps/site/photos/team3-liquid-cards/card-066-right.jpg",
+      "rear": "apps/site/photos/team3-liquid-cards/card-066-rear.jpg"
+    },
+    "_photoReflowPath": "apps/site/photos/team3-liquid-cards/card-066-reflow.jpg"
+  },
+  {
+    "id": "3-1782200441882-56403",
+    "line": "",
+    "name": "믹서탱크",
+    "note": "",
+    "plan": "",
+    "rate": 0,
+    "room": "배합실",
+    "team": "3팀",
+    "group": "",
+    "owner": "",
+    "status": "비가동중",
+    "process": "",
+    "documents": [],
+    "lastCheck": "",
+    "modelName": "",
+    "nextCheck": "",
+    "photoCrop": null,
+    "photoName": "믹서탱크 photo.jpg",
+    "detailInfo": [
+      {
+        "label": "설비명",
+        "value": "믹서탱크"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "가동률",
+        "value": "0%"
+      }
+    ],
+    "ownerLabel": "담당 업체",
+    "production": "",
+    "teamDataKey": "work_team_calendar_team3",
+    "detailGroups": {
+      "equipmentSpecs": []
+    },
+    "manufacturer": "",
+    "photoDataUrl": "",
+    "equipmentCode": "3-1782200441882-56403",
+    "operationInfo": [
+      {
+        "label": "설비명",
+        "value": "믹서탱크"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "실",
+        "value": "배합실"
+      },
+      {
+        "label": "공정",
+        "value": ""
+      },
+      {
+        "label": "가동률",
+        "value": "0"
+      }
+    ],
+    "manufacturedAt": "",
+    "photoDocumentId": "e96a2126-051f-464f-929a-f4d63d670fca",
+    "photoPreviewUrl": "/api/files/e96a2126-051f-464f-929a-f4d63d670fca/view",
+    "photoDownloadUrl": "/api/files/e96a2126-051f-464f-929a-f4d63d670fca/download",
+    "manufacturerLabel": "제조사",
+    "photoThumbDataUrl": "",
+    "maintenanceHistory": [],
+    "photoAttachmentKey": "equipment-photo-main",
+    "photoStorageRelPath": "equipment-assets/equipment-history/믹서탱크/images/d4bf5450-6571-4f13-9afc-b607f046c368.jpg",
+    "_archiveNumber": 67,
+    "_sourceJson": "references/team3-liquid-20261110/source/3팀/배합실/067_믹서탱크/원본카드.json",
+    "_sourceDir": "references/team3-liquid-20261110/source/3팀/배합실/067_믹서탱크",
+    "_photoPath": "apps/site/photos/team3-liquid-cards/card-067.jpg",
+    "_photoPanels": {
+      "front": "apps/site/photos/team3-liquid-cards/card-067-front.jpg",
+      "left": "apps/site/photos/team3-liquid-cards/card-067-left.jpg",
+      "right": "apps/site/photos/team3-liquid-cards/card-067-right.jpg",
+      "rear": "apps/site/photos/team3-liquid-cards/card-067-rear.jpg"
+    },
+    "_photoReflowPath": "apps/site/photos/team3-liquid-cards/card-067-reflow.jpg"
+  },
+  {
+    "id": "3-10-1782196831070-119843",
+    "line": "",
+    "name": "배합탱크 10",
+    "note": "",
+    "plan": "",
+    "rate": 0,
+    "room": "배합실",
+    "team": "3팀",
+    "group": "",
+    "owner": "",
+    "status": "비가동중",
+    "process": "",
+    "documents": [],
+    "lastCheck": "",
+    "modelName": "",
+    "nextCheck": "",
+    "photoCrop": null,
+    "photoName": "배합탱크 10 photo.jpg",
+    "detailInfo": [
+      {
+        "label": "설비명",
+        "value": "배합탱크 10"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "가동률",
+        "value": "0%"
+      }
+    ],
+    "ownerLabel": "담당 업체",
+    "production": "",
+    "teamDataKey": "work_team_calendar_team3",
+    "detailGroups": {
+      "equipmentSpecs": []
+    },
+    "manufacturer": "",
+    "photoDataUrl": "",
+    "equipmentCode": "3-10-1782196831070-119843",
+    "operationInfo": [
+      {
+        "label": "설비명",
+        "value": "배합탱크 10"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "실",
+        "value": "배합실"
+      },
+      {
+        "label": "공정",
+        "value": ""
+      },
+      {
+        "label": "가동률",
+        "value": "0"
+      }
+    ],
+    "manufacturedAt": "",
+    "photoDocumentId": "afba2400-fedd-405a-91b8-7d89001460b7",
+    "photoPreviewUrl": "/api/files/afba2400-fedd-405a-91b8-7d89001460b7/view",
+    "photoDownloadUrl": "/api/files/afba2400-fedd-405a-91b8-7d89001460b7/download",
+    "manufacturerLabel": "제조사",
+    "photoThumbDataUrl": "",
+    "maintenanceHistory": [],
+    "photoAttachmentKey": "equipment-photo-main",
+    "photoStorageRelPath": "equipment-assets/equipment-history/배합탱크 10/images/68c5b6cb-3b10-4042-be56-b2134956d2f1.jpg",
+    "_archiveNumber": 68,
+    "_sourceJson": "references/team3-liquid-20261110/source/3팀/배합실/068_배합탱크 10/원본카드.json",
+    "_sourceDir": "references/team3-liquid-20261110/source/3팀/배합실/068_배합탱크 10",
+    "_photoPath": "apps/site/photos/team3-liquid-cards/card-068.jpg",
+    "_photoPanels": {
+      "front": "apps/site/photos/team3-liquid-cards/card-068-front.jpg",
+      "left": "apps/site/photos/team3-liquid-cards/card-068-left.jpg",
+      "right": "apps/site/photos/team3-liquid-cards/card-068-right.jpg",
+      "rear": "apps/site/photos/team3-liquid-cards/card-068-rear.jpg"
+    },
+    "_photoReflowPath": "apps/site/photos/team3-liquid-cards/card-068-reflow.jpg"
+  },
+  {
+    "id": "3-7-1782196778575-964873",
+    "line": "",
+    "name": "배합탱크 7",
+    "note": "",
+    "plan": "",
+    "rate": 0,
+    "room": "배합실",
+    "team": "3팀",
+    "group": "",
+    "owner": "",
+    "status": "비가동중",
+    "process": "",
+    "documents": [],
+    "lastCheck": "",
+    "modelName": "",
+    "nextCheck": "",
+    "photoCrop": null,
+    "photoName": "배합탱크 7 photo.jpg",
+    "detailInfo": [
+      {
+        "label": "설비명",
+        "value": "배합탱크 7"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "가동률",
+        "value": "0%"
+      }
+    ],
+    "ownerLabel": "담당 업체",
+    "production": "",
+    "teamDataKey": "work_team_calendar_team3",
+    "detailGroups": {
+      "equipmentSpecs": []
+    },
+    "manufacturer": "",
+    "photoDataUrl": "",
+    "equipmentCode": "3-7-1782196778575-964873",
+    "operationInfo": [
+      {
+        "label": "설비명",
+        "value": "배합탱크 7"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "실",
+        "value": "배합실"
+      },
+      {
+        "label": "공정",
+        "value": ""
+      },
+      {
+        "label": "가동률",
+        "value": "0"
+      }
+    ],
+    "manufacturedAt": "",
+    "photoDocumentId": "cde5820f-ffca-4fca-ba44-9a7e47f91c02",
+    "photoPreviewUrl": "/api/files/cde5820f-ffca-4fca-ba44-9a7e47f91c02/view",
+    "photoDownloadUrl": "/api/files/cde5820f-ffca-4fca-ba44-9a7e47f91c02/download",
+    "manufacturerLabel": "제조사",
+    "photoThumbDataUrl": "",
+    "maintenanceHistory": [],
+    "photoAttachmentKey": "equipment-photo-main",
+    "photoStorageRelPath": "equipment-assets/equipment-history/배합탱크 7/images/bc43ebe6-b1c9-40fc-bcb2-2717690619f0.jpg",
+    "_archiveNumber": 69,
+    "_sourceJson": "references/team3-liquid-20261110/source/3팀/배합실/069_배합탱크 7/원본카드.json",
+    "_sourceDir": "references/team3-liquid-20261110/source/3팀/배합실/069_배합탱크 7",
+    "_photoPath": "apps/site/photos/team3-liquid-cards/card-069.jpg",
+    "_photoPanels": {
+      "front": "apps/site/photos/team3-liquid-cards/card-069-front.jpg",
+      "left": "apps/site/photos/team3-liquid-cards/card-069-left.jpg",
+      "right": "apps/site/photos/team3-liquid-cards/card-069-right.jpg",
+      "rear": "apps/site/photos/team3-liquid-cards/card-069-rear.jpg"
+    },
+    "_photoReflowPath": "apps/site/photos/team3-liquid-cards/card-069-reflow.jpg"
+  },
+  {
+    "id": "3-9-1782196734500-768887",
+    "line": "",
+    "name": "배합탱크 9",
+    "note": "",
+    "plan": "",
+    "rate": 0,
+    "room": "배합실",
+    "team": "3팀",
+    "group": "",
+    "owner": "",
+    "status": "비가동중",
+    "process": "",
+    "documents": [],
+    "lastCheck": "",
+    "modelName": "",
+    "nextCheck": "",
+    "photoCrop": null,
+    "photoName": "배합탱크 9 photo.jpg",
+    "detailInfo": [
+      {
+        "label": "설비명",
+        "value": "배합탱크 9"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "가동률",
+        "value": "0%"
+      }
+    ],
+    "ownerLabel": "담당 업체",
+    "production": "",
+    "teamDataKey": "work_team_calendar_team3",
+    "detailGroups": {
+      "equipmentSpecs": []
+    },
+    "manufacturer": "",
+    "photoDataUrl": "",
+    "equipmentCode": "3-9-1782196734500-768887",
+    "operationInfo": [
+      {
+        "label": "설비명",
+        "value": "배합탱크 9"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "실",
+        "value": "배합실"
+      },
+      {
+        "label": "공정",
+        "value": ""
+      },
+      {
+        "label": "가동률",
+        "value": "0"
+      }
+    ],
+    "manufacturedAt": "",
+    "photoDocumentId": "b80cffa9-2437-4556-b44f-327551913db6",
+    "photoPreviewUrl": "/api/files/b80cffa9-2437-4556-b44f-327551913db6/view",
+    "photoDownloadUrl": "/api/files/b80cffa9-2437-4556-b44f-327551913db6/download",
+    "manufacturerLabel": "제조사",
+    "photoThumbDataUrl": "",
+    "maintenanceHistory": [],
+    "photoAttachmentKey": "equipment-photo-main",
+    "photoStorageRelPath": "equipment-assets/equipment-history/배합탱크 9/images/77bb8c5e-369e-4455-9187-e18925d32a3b.jpg",
+    "_archiveNumber": 70,
+    "_sourceJson": "references/team3-liquid-20261110/source/3팀/배합실/070_배합탱크 9/원본카드.json",
+    "_sourceDir": "references/team3-liquid-20261110/source/3팀/배합실/070_배합탱크 9",
+    "_photoPath": "apps/site/photos/team3-liquid-cards/card-070.jpg",
+    "_photoPanels": {
+      "front": "apps/site/photos/team3-liquid-cards/card-070-front.jpg",
+      "left": "apps/site/photos/team3-liquid-cards/card-070-left.jpg",
+      "right": "apps/site/photos/team3-liquid-cards/card-070-right.jpg",
+      "rear": "apps/site/photos/team3-liquid-cards/card-070-rear.jpg"
+    },
+    "_photoReflowPath": "apps/site/photos/team3-liquid-cards/card-070-reflow.jpg"
+  },
+  {
+    "id": "3-3-1782196677272-834042",
+    "line": "",
+    "name": "3번 탱크",
+    "note": "",
+    "plan": "",
+    "rate": 0,
+    "room": "배합실",
+    "team": "3팀",
+    "group": "",
+    "owner": "",
+    "status": "비가동중",
+    "process": "",
+    "documents": [],
+    "lastCheck": "",
+    "modelName": "",
+    "nextCheck": "",
+    "photoCrop": null,
+    "photoName": "3번 탱크 photo.jpg",
+    "detailInfo": [
+      {
+        "label": "설비명",
+        "value": "3번 탱크"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "가동률",
+        "value": "0%"
+      }
+    ],
+    "ownerLabel": "담당 업체",
+    "production": "",
+    "teamDataKey": "work_team_calendar_team3",
+    "detailGroups": {
+      "equipmentSpecs": []
+    },
+    "manufacturer": "",
+    "photoDataUrl": "",
+    "equipmentCode": "3-3-1782196677272-834042",
+    "operationInfo": [
+      {
+        "label": "설비명",
+        "value": "3번 탱크"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "실",
+        "value": "배합실"
+      },
+      {
+        "label": "공정",
+        "value": ""
+      },
+      {
+        "label": "가동률",
+        "value": "0"
+      }
+    ],
+    "manufacturedAt": "",
+    "photoDocumentId": "1b187ee2-bde4-4989-ab06-1ae6258700f7",
+    "photoPreviewUrl": "/api/files/1b187ee2-bde4-4989-ab06-1ae6258700f7/view",
+    "photoDownloadUrl": "/api/files/1b187ee2-bde4-4989-ab06-1ae6258700f7/download",
+    "manufacturerLabel": "제조사",
+    "photoThumbDataUrl": "",
+    "maintenanceHistory": [],
+    "photoAttachmentKey": "equipment-photo-main",
+    "photoStorageRelPath": "equipment-assets/equipment-history/3번 탱크/images/1e676c95-e557-41f3-a755-533b4fa26ddb.jpg",
+    "_archiveNumber": 71,
+    "_sourceJson": "references/team3-liquid-20261110/source/3팀/배합실/071_3번 탱크/원본카드.json",
+    "_sourceDir": "references/team3-liquid-20261110/source/3팀/배합실/071_3번 탱크",
+    "_photoPath": "apps/site/photos/team3-liquid-cards/card-071.jpg",
+    "_photoPanels": {
+      "front": "apps/site/photos/team3-liquid-cards/card-071-front.jpg",
+      "left": "apps/site/photos/team3-liquid-cards/card-071-left.jpg",
+      "right": "apps/site/photos/team3-liquid-cards/card-071-right.jpg",
+      "rear": "apps/site/photos/team3-liquid-cards/card-071-rear.jpg"
+    },
+    "_photoReflowPath": "apps/site/photos/team3-liquid-cards/card-071-reflow.jpg"
+  },
+  {
+    "id": "3-4-1782113386242-850761",
+    "line": "",
+    "name": "4번 배합탱크",
+    "note": "",
+    "plan": "",
+    "rate": 0,
+    "room": "배합실",
+    "team": "3팀",
+    "group": "",
+    "owner": "",
+    "status": "비가동중",
+    "process": "",
+    "documents": [],
+    "lastCheck": "",
+    "modelName": "",
+    "nextCheck": "",
+    "photoCrop": null,
+    "photoName": "4번 배합탱크 photo.jpg",
+    "detailInfo": [
+      {
+        "label": "설비명",
+        "value": "4번 배합탱크"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "가동률",
+        "value": "0%"
+      }
+    ],
+    "ownerLabel": "담당 업체",
+    "production": "",
+    "teamDataKey": "work_team_calendar_team3",
+    "detailGroups": {
+      "equipmentSpecs": []
+    },
+    "manufacturer": "",
+    "photoDataUrl": "",
+    "equipmentCode": "3-4-1782113386242-850761",
+    "operationInfo": [
+      {
+        "label": "설비명",
+        "value": "4번 배합탱크"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "실",
+        "value": "배합실"
+      },
+      {
+        "label": "공정",
+        "value": ""
+      },
+      {
+        "label": "가동률",
+        "value": "0"
+      }
+    ],
+    "manufacturedAt": "",
+    "photoDocumentId": "811e268d-75a4-4517-bed6-20343685819b",
+    "photoPreviewUrl": "/api/files/811e268d-75a4-4517-bed6-20343685819b/view",
+    "photoDownloadUrl": "/api/files/811e268d-75a4-4517-bed6-20343685819b/download",
+    "manufacturerLabel": "제조사",
+    "photoThumbDataUrl": "",
+    "maintenanceHistory": [],
+    "photoAttachmentKey": "equipment-photo-main",
+    "photoStorageRelPath": "equipment-assets/equipment-history/4번 배합탱크/images/6e501a54-ba58-400b-81a4-b8d360563e13.jpg",
+    "_archiveNumber": 77,
+    "_sourceJson": "references/team3-liquid-20261110/source/3팀/배합실/077_4번 배합탱크/원본카드.json",
+    "_sourceDir": "references/team3-liquid-20261110/source/3팀/배합실/077_4번 배합탱크",
+    "_photoPath": "apps/site/photos/team3-liquid-cards/card-077.jpg",
+    "_photoPanels": {
+      "front": "apps/site/photos/team3-liquid-cards/card-077-front.jpg",
+      "left": "apps/site/photos/team3-liquid-cards/card-077-left.jpg",
+      "right": "apps/site/photos/team3-liquid-cards/card-077-right.jpg",
+      "rear": "apps/site/photos/team3-liquid-cards/card-077-rear.jpg"
+    },
+    "_photoReflowPath": "apps/site/photos/team3-liquid-cards/card-077-reflow.jpg"
+  },
+  {
+    "id": "3-3-1782113331413-940234",
+    "line": "",
+    "name": "3번 배합탱크",
+    "note": "",
+    "plan": "",
+    "rate": 0,
+    "room": "배합실",
+    "team": "3팀",
+    "group": "",
+    "owner": "",
+    "status": "비가동중",
+    "process": "",
+    "documents": [],
+    "lastCheck": "",
+    "modelName": "",
+    "nextCheck": "",
+    "photoCrop": null,
+    "photoName": "3번 배합탱크 photo.jpg",
+    "detailInfo": [
+      {
+        "label": "설비명",
+        "value": "3번 배합탱크"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "가동률",
+        "value": "0%"
+      }
+    ],
+    "ownerLabel": "담당 업체",
+    "production": "",
+    "teamDataKey": "work_team_calendar_team3",
+    "detailGroups": {
+      "equipmentSpecs": []
+    },
+    "manufacturer": "",
+    "photoDataUrl": "",
+    "equipmentCode": "3-3-1782113331413-940234",
+    "operationInfo": [
+      {
+        "label": "설비명",
+        "value": "3번 배합탱크"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "실",
+        "value": "배합실"
+      },
+      {
+        "label": "공정",
+        "value": ""
+      },
+      {
+        "label": "가동률",
+        "value": "0"
+      }
+    ],
+    "manufacturedAt": "",
+    "photoDocumentId": "b65ec860-875a-4889-965a-577bb1abd97d",
+    "photoPreviewUrl": "/api/files/b65ec860-875a-4889-965a-577bb1abd97d/view",
+    "photoDownloadUrl": "/api/files/b65ec860-875a-4889-965a-577bb1abd97d/download",
+    "manufacturerLabel": "제조사",
+    "photoThumbDataUrl": "",
+    "maintenanceHistory": [],
+    "photoAttachmentKey": "equipment-photo-main",
+    "photoStorageRelPath": "equipment-assets/equipment-history/3번 배합탱크/images/a2720f3d-8d49-4563-a862-d53469000555.jpg",
+    "_archiveNumber": 78,
+    "_sourceJson": "references/team3-liquid-20261110/source/3팀/배합실/078_3번 배합탱크/원본카드.json",
+    "_sourceDir": "references/team3-liquid-20261110/source/3팀/배합실/078_3번 배합탱크",
+    "_photoPath": "apps/site/photos/team3-liquid-cards/card-078.jpg",
+    "_photoPanels": {
+      "front": "apps/site/photos/team3-liquid-cards/card-078-front.jpg",
+      "left": "apps/site/photos/team3-liquid-cards/card-078-left.jpg",
+      "right": "apps/site/photos/team3-liquid-cards/card-078-right.jpg",
+      "rear": "apps/site/photos/team3-liquid-cards/card-078-rear.jpg"
+    },
+    "_photoReflowPath": "apps/site/photos/team3-liquid-cards/card-078-reflow.jpg"
+  },
+  {
+    "id": "3-2-1782113317939-195912",
+    "line": "",
+    "name": "2번 배합탱크",
+    "note": "",
+    "plan": "",
+    "rate": 0,
+    "room": "배합실",
+    "team": "3팀",
+    "group": "",
+    "owner": "",
+    "status": "비가동중",
+    "process": "",
+    "documents": [],
+    "lastCheck": "",
+    "modelName": "",
+    "nextCheck": "",
+    "photoCrop": null,
+    "photoName": "2번 배합탱크 photo.jpg",
+    "detailInfo": [
+      {
+        "label": "설비명",
+        "value": "2번 배합탱크"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "가동률",
+        "value": "0%"
+      }
+    ],
+    "ownerLabel": "담당 업체",
+    "production": "",
+    "teamDataKey": "work_team_calendar_team3",
+    "detailGroups": {
+      "equipmentSpecs": []
+    },
+    "manufacturer": "",
+    "photoDataUrl": "",
+    "equipmentCode": "3-2-1782113317939-195912",
+    "operationInfo": [
+      {
+        "label": "설비명",
+        "value": "2번 배합탱크"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "실",
+        "value": "배합실"
+      },
+      {
+        "label": "공정",
+        "value": ""
+      },
+      {
+        "label": "가동률",
+        "value": "0"
+      }
+    ],
+    "manufacturedAt": "",
+    "photoDocumentId": "1a7416f6-bdb2-4e1b-b46a-01b6ce52608d",
+    "photoPreviewUrl": "/api/files/1a7416f6-bdb2-4e1b-b46a-01b6ce52608d/view",
+    "photoDownloadUrl": "/api/files/1a7416f6-bdb2-4e1b-b46a-01b6ce52608d/download",
+    "manufacturerLabel": "제조사",
+    "photoThumbDataUrl": "",
+    "maintenanceHistory": [],
+    "photoAttachmentKey": "equipment-photo-main",
+    "photoStorageRelPath": "equipment-assets/equipment-history/2번 배합탱크/images/dbf6549d-365c-4522-83c0-ef27b2901b52.jpg",
+    "_archiveNumber": 79,
+    "_sourceJson": "references/team3-liquid-20261110/source/3팀/배합실/079_2번 배합탱크/원본카드.json",
+    "_sourceDir": "references/team3-liquid-20261110/source/3팀/배합실/079_2번 배합탱크",
+    "_photoPath": "apps/site/photos/team3-liquid-cards/card-079.jpg",
+    "_photoPanels": {
+      "front": "apps/site/photos/team3-liquid-cards/card-079-front.jpg",
+      "left": "apps/site/photos/team3-liquid-cards/card-079-left.jpg",
+      "right": "apps/site/photos/team3-liquid-cards/card-079-right.jpg",
+      "rear": "apps/site/photos/team3-liquid-cards/card-079-rear.jpg"
+    },
+    "_photoReflowPath": "apps/site/photos/team3-liquid-cards/card-079-reflow.jpg"
+  },
+  {
+    "id": "3-a-1-4-1782113293708-497275",
+    "line": "",
+    "name": "A라인 1-4",
+    "note": "",
+    "plan": "",
+    "rate": 0,
+    "room": "배합실",
+    "team": "3팀",
+    "group": "",
+    "owner": "",
+    "status": "비가동중",
+    "process": "",
+    "documents": [],
+    "lastCheck": "",
+    "modelName": "",
+    "nextCheck": "",
+    "photoCrop": null,
+    "photoName": "A라인 1-4 photo.jpg",
+    "detailInfo": [
+      {
+        "label": "설비명",
+        "value": "A라인 1-4"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "가동률",
+        "value": "0%"
+      }
+    ],
+    "ownerLabel": "담당 업체",
+    "production": "",
+    "teamDataKey": "work_team_calendar_team3",
+    "detailGroups": {
+      "equipmentSpecs": []
+    },
+    "manufacturer": "",
+    "photoDataUrl": "",
+    "equipmentCode": "3-A-1-4-1782113293708-497275",
+    "operationInfo": [
+      {
+        "label": "설비명",
+        "value": "A라인 1-4"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "실",
+        "value": "배합실"
+      },
+      {
+        "label": "공정",
+        "value": ""
+      },
+      {
+        "label": "가동률",
+        "value": "0"
+      }
+    ],
+    "manufacturedAt": "",
+    "photoDocumentId": "1c35b9c2-130a-4911-8dee-16e21c16e825",
+    "photoPreviewUrl": "/api/files/1c35b9c2-130a-4911-8dee-16e21c16e825/view",
+    "photoDownloadUrl": "/api/files/1c35b9c2-130a-4911-8dee-16e21c16e825/download",
+    "manufacturerLabel": "제조사",
+    "photoThumbDataUrl": "",
+    "maintenanceHistory": [],
+    "photoAttachmentKey": "equipment-photo-main",
+    "photoStorageRelPath": "equipment-assets/equipment-history/A라인 1-4/images/e8896ad6-bd21-4033-8969-f84a337f9fca.jpg",
+    "_archiveNumber": 80,
+    "_sourceJson": "references/team3-liquid-20261110/source/3팀/배합실/080_A라인 1-4/원본카드.json",
+    "_sourceDir": "references/team3-liquid-20261110/source/3팀/배합실/080_A라인 1-4",
+    "_photoPath": "apps/site/photos/team3-liquid-cards/card-080.jpg",
+    "_photoPanels": {
+      "front": "apps/site/photos/team3-liquid-cards/card-080-front.jpg",
+      "left": "apps/site/photos/team3-liquid-cards/card-080-left.jpg",
+      "right": "apps/site/photos/team3-liquid-cards/card-080-right.jpg",
+      "rear": "apps/site/photos/team3-liquid-cards/card-080-rear.jpg"
+    },
+    "_photoReflowPath": "apps/site/photos/team3-liquid-cards/card-080-reflow.jpg"
+  },
+  {
+    "id": "3-a-1-3-1782113275365-831765",
+    "line": "",
+    "name": "A라인 1-3",
+    "note": "",
+    "plan": "",
+    "rate": 0,
+    "room": "배합실",
+    "team": "3팀",
+    "group": "",
+    "owner": "",
+    "status": "비가동중",
+    "process": "",
+    "documents": [],
+    "lastCheck": "",
+    "modelName": "",
+    "nextCheck": "",
+    "photoCrop": null,
+    "photoName": "A라인 1-3 photo.jpg",
+    "detailInfo": [
+      {
+        "label": "설비명",
+        "value": "A라인 1-3"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "가동률",
+        "value": "0%"
+      }
+    ],
+    "ownerLabel": "담당 업체",
+    "production": "",
+    "teamDataKey": "work_team_calendar_team3",
+    "detailGroups": {
+      "equipmentSpecs": []
+    },
+    "manufacturer": "",
+    "photoDataUrl": "",
+    "equipmentCode": "3-A-1-3-1782113275365-831765",
+    "operationInfo": [
+      {
+        "label": "설비명",
+        "value": "A라인 1-3"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "실",
+        "value": "배합실"
+      },
+      {
+        "label": "공정",
+        "value": ""
+      },
+      {
+        "label": "가동률",
+        "value": "0"
+      }
+    ],
+    "manufacturedAt": "",
+    "photoDocumentId": "2d001c02-4d0b-4241-a18a-4af1f81fbe40",
+    "photoPreviewUrl": "/api/files/2d001c02-4d0b-4241-a18a-4af1f81fbe40/view",
+    "photoDownloadUrl": "/api/files/2d001c02-4d0b-4241-a18a-4af1f81fbe40/download",
+    "manufacturerLabel": "제조사",
+    "photoThumbDataUrl": "",
+    "maintenanceHistory": [],
+    "photoAttachmentKey": "equipment-photo-main",
+    "photoStorageRelPath": "equipment-assets/equipment-history/A라인 1-3/images/9709757f-fbdd-451e-a508-49cd49fd25aa.jpg",
+    "_archiveNumber": 81,
+    "_sourceJson": "references/team3-liquid-20261110/source/3팀/배합실/081_A라인 1-3/원본카드.json",
+    "_sourceDir": "references/team3-liquid-20261110/source/3팀/배합실/081_A라인 1-3",
+    "_photoPath": "apps/site/photos/team3-liquid-cards/card-081.jpg",
+    "_photoPanels": {
+      "front": "apps/site/photos/team3-liquid-cards/card-081-front.jpg",
+      "left": "apps/site/photos/team3-liquid-cards/card-081-left.jpg",
+      "right": "apps/site/photos/team3-liquid-cards/card-081-right.jpg",
+      "rear": "apps/site/photos/team3-liquid-cards/card-081-rear.jpg"
+    },
+    "_photoReflowPath": "apps/site/photos/team3-liquid-cards/card-081-reflow.jpg"
+  },
+  {
+    "id": "3-a-1-2-1782112599743-887367",
+    "line": "",
+    "name": "A라인 1-2",
+    "note": "",
+    "plan": "",
+    "rate": 0,
+    "room": "배합실",
+    "team": "3팀",
+    "group": "",
+    "owner": "",
+    "status": "비가동중",
+    "process": "",
+    "documents": [],
+    "lastCheck": "",
+    "modelName": "",
+    "nextCheck": "",
+    "photoCrop": null,
+    "photoName": "A라인 1-2 photo.jpg",
+    "detailInfo": [
+      {
+        "label": "설비명",
+        "value": "A라인 1-2"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "가동률",
+        "value": "0%"
+      }
+    ],
+    "ownerLabel": "담당 업체",
+    "production": "",
+    "teamDataKey": "work_team_calendar_team3",
+    "detailGroups": {
+      "equipmentSpecs": []
+    },
+    "manufacturer": "",
+    "photoDataUrl": "",
+    "equipmentCode": "3-A-1-2-1782112599743-887367",
+    "operationInfo": [
+      {
+        "label": "설비명",
+        "value": "A라인 1-2"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "실",
+        "value": "배합실"
+      },
+      {
+        "label": "공정",
+        "value": ""
+      },
+      {
+        "label": "가동률",
+        "value": "0"
+      }
+    ],
+    "manufacturedAt": "",
+    "photoDocumentId": "97e0167b-bf88-4a19-9784-f0ff4b3025aa",
+    "photoPreviewUrl": "/api/files/97e0167b-bf88-4a19-9784-f0ff4b3025aa/view",
+    "photoDownloadUrl": "/api/files/97e0167b-bf88-4a19-9784-f0ff4b3025aa/download",
+    "manufacturerLabel": "제조사",
+    "photoThumbDataUrl": "",
+    "maintenanceHistory": [],
+    "photoAttachmentKey": "equipment-photo-main",
+    "photoStorageRelPath": "equipment-assets/equipment-history/A라인 1-2/images/e081099b-3ff9-4b23-ab7b-1c3e38b09402.jpg",
+    "_archiveNumber": 82,
+    "_sourceJson": "references/team3-liquid-20261110/source/3팀/배합실/082_A라인 1-2/원본카드.json",
+    "_sourceDir": "references/team3-liquid-20261110/source/3팀/배합실/082_A라인 1-2",
+    "_photoPath": "apps/site/photos/team3-liquid-cards/card-082.jpg",
+    "_photoPanels": {
+      "front": "apps/site/photos/team3-liquid-cards/card-082-front.jpg",
+      "left": "apps/site/photos/team3-liquid-cards/card-082-left.jpg",
+      "right": "apps/site/photos/team3-liquid-cards/card-082-right.jpg",
+      "rear": "apps/site/photos/team3-liquid-cards/card-082-rear.jpg"
+    },
+    "_photoReflowPath": "apps/site/photos/team3-liquid-cards/card-082-reflow.jpg"
+  },
+  {
+    "id": "3-a-1-1-1782112585783-389098",
+    "line": "",
+    "name": "A라인 1-1",
+    "note": "",
+    "plan": "",
+    "rate": 0,
+    "room": "배합실",
+    "team": "3팀",
+    "group": "",
+    "owner": "",
+    "status": "비가동중",
+    "process": "",
+    "documents": [],
+    "lastCheck": "",
+    "modelName": "",
+    "nextCheck": "",
+    "photoCrop": null,
+    "photoName": "A라인 1-1 photo.jpg",
+    "detailInfo": [
+      {
+        "label": "설비명",
+        "value": "A라인 1-1"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "가동률",
+        "value": "0%"
+      }
+    ],
+    "ownerLabel": "담당 업체",
+    "production": "",
+    "teamDataKey": "work_team_calendar_team3",
+    "detailGroups": {
+      "equipmentSpecs": []
+    },
+    "manufacturer": "",
+    "photoDataUrl": "",
+    "equipmentCode": "3-A-1-1-1782112585783-389098",
+    "operationInfo": [
+      {
+        "label": "설비명",
+        "value": "A라인 1-1"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "실",
+        "value": "배합실"
+      },
+      {
+        "label": "공정",
+        "value": ""
+      },
+      {
+        "label": "가동률",
+        "value": "0"
+      }
+    ],
+    "manufacturedAt": "",
+    "photoDocumentId": "3c1c7ac7-f790-4604-aad5-aae17fd86aca",
+    "photoPreviewUrl": "/api/files/3c1c7ac7-f790-4604-aad5-aae17fd86aca/view",
+    "photoDownloadUrl": "/api/files/3c1c7ac7-f790-4604-aad5-aae17fd86aca/download",
+    "manufacturerLabel": "제조사",
+    "photoThumbDataUrl": "",
+    "maintenanceHistory": [],
+    "photoAttachmentKey": "equipment-photo-main",
+    "photoStorageRelPath": "equipment-assets/equipment-history/A라인 1-1/images/4a699152-63a0-4dc4-b2ba-71753aa258b2.jpg",
+    "_archiveNumber": 83,
+    "_sourceJson": "references/team3-liquid-20261110/source/3팀/배합실/083_A라인 1-1/원본카드.json",
+    "_sourceDir": "references/team3-liquid-20261110/source/3팀/배합실/083_A라인 1-1",
+    "_photoPath": "apps/site/photos/team3-liquid-cards/card-083.jpg",
+    "_photoPanels": {
+      "front": "apps/site/photos/team3-liquid-cards/card-083-front.jpg",
+      "left": "apps/site/photos/team3-liquid-cards/card-083-left.jpg",
+      "right": "apps/site/photos/team3-liquid-cards/card-083-right.jpg",
+      "rear": "apps/site/photos/team3-liquid-cards/card-083-rear.jpg"
+    },
+    "_photoReflowPath": "apps/site/photos/team3-liquid-cards/card-083-reflow.jpg"
+  },
+  {
+    "id": "3-1782094726301-535539",
+    "line": "",
+    "name": "호모 믹서탱크",
+    "note": "",
+    "plan": "",
+    "rate": 0,
+    "room": "배합실",
+    "team": "3팀",
+    "group": "",
+    "owner": "",
+    "status": "비가동중",
+    "process": "",
+    "documents": [],
+    "lastCheck": "",
+    "modelName": "",
+    "nextCheck": "",
+    "photoCrop": null,
+    "photoName": "호모 믹서탱크 photo.jpg",
+    "detailInfo": [
+      {
+        "label": "설비명",
+        "value": "호모 믹서탱크"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "가동률",
+        "value": "0%"
+      }
+    ],
+    "ownerLabel": "담당 업체",
+    "production": "",
+    "teamDataKey": "work_team_calendar_team3",
+    "detailGroups": {
+      "equipmentSpecs": []
+    },
+    "manufacturer": "",
+    "photoDataUrl": "",
+    "equipmentCode": "3-1782094726301-535539",
+    "operationInfo": [
+      {
+        "label": "설비명",
+        "value": "호모 믹서탱크"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "실",
+        "value": "배합실"
+      },
+      {
+        "label": "공정",
+        "value": ""
+      },
+      {
+        "label": "가동률",
+        "value": "0"
+      }
+    ],
+    "manufacturedAt": "",
+    "photoDocumentId": "78b975f5-e7a5-4d90-a6a9-c80d792a669b",
+    "photoPreviewUrl": "/api/files/78b975f5-e7a5-4d90-a6a9-c80d792a669b/view",
+    "photoDownloadUrl": "/api/files/78b975f5-e7a5-4d90-a6a9-c80d792a669b/download",
+    "manufacturerLabel": "제조사",
+    "photoThumbDataUrl": "",
+    "maintenanceHistory": [],
+    "photoAttachmentKey": "equipment-photo-main",
+    "photoStorageRelPath": "equipment-assets/equipment-history/호모 믹서탱크/images/4f885ade-4ebe-4f99-8229-7adca1843c43.jpg",
+    "_archiveNumber": 93,
+    "_sourceJson": "references/team3-liquid-20261110/source/3팀/배합실/093_호모 믹서탱크/원본카드.json",
+    "_sourceDir": "references/team3-liquid-20261110/source/3팀/배합실/093_호모 믹서탱크",
+    "_photoPath": "apps/site/photos/team3-liquid-cards/card-093.jpg",
+    "_photoPanels": {
+      "front": "apps/site/photos/team3-liquid-cards/card-093-front.jpg",
+      "left": "apps/site/photos/team3-liquid-cards/card-093-left.jpg",
+      "right": "apps/site/photos/team3-liquid-cards/card-093-right.jpg",
+      "rear": "apps/site/photos/team3-liquid-cards/card-093-rear.jpg"
+    },
+    "_photoReflowPath": "apps/site/photos/team3-liquid-cards/card-093-reflow.jpg"
+  },
+  {
+    "id": "3-1782094717064-376072",
+    "line": "",
+    "name": "펄 진동채",
+    "note": "",
+    "plan": "",
+    "rate": 0,
+    "room": "배합실",
+    "team": "3팀",
+    "group": "",
+    "owner": "",
+    "status": "비가동중",
+    "process": "",
+    "documents": [],
+    "lastCheck": "",
+    "modelName": "",
+    "nextCheck": "",
+    "photoCrop": null,
+    "photoName": "펄 진동채 photo.jpg",
+    "detailInfo": [
+      {
+        "label": "설비명",
+        "value": "펄 진동채"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "가동률",
+        "value": "0%"
+      }
+    ],
+    "ownerLabel": "담당 업체",
+    "production": "",
+    "teamDataKey": "work_team_calendar_team3",
+    "detailGroups": {
+      "equipmentSpecs": []
+    },
+    "manufacturer": "",
+    "photoDataUrl": "",
+    "equipmentCode": "3-1782094717064-376072",
+    "operationInfo": [
+      {
+        "label": "설비명",
+        "value": "펄 진동채"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "실",
+        "value": "배합실"
+      },
+      {
+        "label": "공정",
+        "value": ""
+      },
+      {
+        "label": "가동률",
+        "value": "0"
+      }
+    ],
+    "manufacturedAt": "",
+    "photoDocumentId": "74c6fa79-6d1a-4f39-a44f-77658aa98668",
+    "photoPreviewUrl": "/api/files/74c6fa79-6d1a-4f39-a44f-77658aa98668/view",
+    "photoDownloadUrl": "/api/files/74c6fa79-6d1a-4f39-a44f-77658aa98668/download",
+    "manufacturerLabel": "제조사",
+    "photoThumbDataUrl": "",
+    "maintenanceHistory": [],
+    "photoAttachmentKey": "equipment-photo-main",
+    "photoStorageRelPath": "equipment-assets/equipment-history/펄 진동채/images/591f9bcc-488c-456a-b054-a60e27de7704.jpg",
+    "_archiveNumber": 94,
+    "_sourceJson": "references/team3-liquid-20261110/source/3팀/배합실/094_펄 진동채/원본카드.json",
+    "_sourceDir": "references/team3-liquid-20261110/source/3팀/배합실/094_펄 진동채",
+    "_photoPath": "apps/site/photos/team3-liquid-cards/card-094.jpg",
+    "_photoPanels": {
+      "front": "apps/site/photos/team3-liquid-cards/card-094-front.jpg",
+      "left": "apps/site/photos/team3-liquid-cards/card-094-left.jpg",
+      "right": "apps/site/photos/team3-liquid-cards/card-094-right.jpg",
+      "rear": "apps/site/photos/team3-liquid-cards/card-094-rear.jpg"
+    },
+    "_photoReflowPath": "apps/site/photos/team3-liquid-cards/card-094-reflow.jpg"
+  },
+  {
+    "id": "3-1-1782094673758-624429",
+    "line": "",
+    "name": "살균기 1호기",
+    "note": "",
+    "plan": "",
+    "rate": 0,
+    "room": "배합실",
+    "team": "3팀",
+    "group": "",
+    "owner": "",
+    "status": "비가동중",
+    "process": "",
+    "documents": [],
+    "lastCheck": "",
+    "modelName": "",
+    "nextCheck": "",
+    "photoCrop": null,
+    "photoName": "살균기 1호기 photo.jpg",
+    "detailInfo": [
+      {
+        "label": "설비명",
+        "value": "살균기 1호기"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "가동률",
+        "value": "0%"
+      }
+    ],
+    "ownerLabel": "담당 업체",
+    "production": "",
+    "teamDataKey": "work_team_calendar_team3",
+    "detailGroups": {
+      "equipmentSpecs": []
+    },
+    "manufacturer": "",
+    "photoDataUrl": "",
+    "equipmentCode": "3-1-1782094673758-624429",
+    "operationInfo": [
+      {
+        "label": "설비명",
+        "value": "살균기 1호기"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "실",
+        "value": "배합실"
+      },
+      {
+        "label": "공정",
+        "value": ""
+      },
+      {
+        "label": "가동률",
+        "value": "0"
+      }
+    ],
+    "manufacturedAt": "",
+    "photoDocumentId": "35497856-fc88-45a5-a5de-bb30d56739ff",
+    "photoPreviewUrl": "/api/files/35497856-fc88-45a5-a5de-bb30d56739ff/view",
+    "photoDownloadUrl": "/api/files/35497856-fc88-45a5-a5de-bb30d56739ff/download",
+    "manufacturerLabel": "제조사",
+    "photoThumbDataUrl": "",
+    "maintenanceHistory": [],
+    "photoAttachmentKey": "equipment-photo-main",
+    "photoStorageRelPath": "equipment-assets/equipment-history/살균기 1호기/images/e5d6f04f-909c-49b1-a670-e85d74cb891a.jpg",
+    "_archiveNumber": 95,
+    "_sourceJson": "references/team3-liquid-20261110/source/3팀/배합실/095_살균기 1호기/원본카드.json",
+    "_sourceDir": "references/team3-liquid-20261110/source/3팀/배합실/095_살균기 1호기",
+    "_photoPath": "apps/site/photos/team3-liquid-cards/card-095.jpg",
+    "_photoPanels": {
+      "front": "apps/site/photos/team3-liquid-cards/card-095-front.jpg",
+      "left": "apps/site/photos/team3-liquid-cards/card-095-left.jpg",
+      "right": "apps/site/photos/team3-liquid-cards/card-095-right.jpg",
+      "rear": "apps/site/photos/team3-liquid-cards/card-095-rear.jpg"
+    },
+    "_photoReflowPath": "apps/site/photos/team3-liquid-cards/card-095-reflow.jpg"
+  },
+  {
+    "id": "3-2-1782094705430-393028",
+    "line": "",
+    "name": "살균기 2호기",
+    "note": "",
+    "plan": "",
+    "rate": 0,
+    "room": "배합실",
+    "team": "3팀",
+    "group": "",
+    "owner": "",
+    "status": "비가동중",
+    "process": "",
+    "documents": [],
+    "lastCheck": "",
+    "modelName": "",
+    "nextCheck": "",
+    "photoCrop": null,
+    "photoName": "살균기 2호기 photo.jpg",
+    "detailInfo": [
+      {
+        "label": "설비명",
+        "value": "살균기 2호기"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "가동률",
+        "value": "0%"
+      }
+    ],
+    "ownerLabel": "담당 업체",
+    "production": "",
+    "teamDataKey": "work_team_calendar_team3",
+    "detailGroups": {
+      "equipmentSpecs": []
+    },
+    "manufacturer": "",
+    "photoDataUrl": "",
+    "equipmentCode": "3-2-1782094705430-393028",
+    "operationInfo": [
+      {
+        "label": "설비명",
+        "value": "살균기 2호기"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "실",
+        "value": "배합실"
+      },
+      {
+        "label": "공정",
+        "value": ""
+      },
+      {
+        "label": "가동률",
+        "value": "0"
+      }
+    ],
+    "manufacturedAt": "",
+    "photoDocumentId": "058ee164-f9e2-4824-bb64-bb264c2e7e64",
+    "photoPreviewUrl": "/api/files/058ee164-f9e2-4824-bb64-bb264c2e7e64/view",
+    "photoDownloadUrl": "/api/files/058ee164-f9e2-4824-bb64-bb264c2e7e64/download",
+    "manufacturerLabel": "제조사",
+    "photoThumbDataUrl": "",
+    "maintenanceHistory": [],
+    "photoAttachmentKey": "equipment-photo-main",
+    "photoStorageRelPath": "equipment-assets/equipment-history/살균기 2호기/images/b73a091b-ac3a-4c8b-8a38-60b398c3df8f.jpg",
+    "_archiveNumber": 96,
+    "_sourceJson": "references/team3-liquid-20261110/source/3팀/배합실/096_살균기 2호기/원본카드.json",
+    "_sourceDir": "references/team3-liquid-20261110/source/3팀/배합실/096_살균기 2호기",
+    "_photoPath": "apps/site/photos/team3-liquid-cards/card-096.jpg",
+    "_photoPanels": {
+      "front": "apps/site/photos/team3-liquid-cards/card-096-front.jpg",
+      "left": "apps/site/photos/team3-liquid-cards/card-096-left.jpg",
+      "right": "apps/site/photos/team3-liquid-cards/card-096-right.jpg",
+      "rear": "apps/site/photos/team3-liquid-cards/card-096-rear.jpg"
+    },
+    "_photoReflowPath": "apps/site/photos/team3-liquid-cards/card-096-reflow.jpg"
+  },
+  {
+    "id": "3-3-1781856888910-164968",
+    "line": "",
+    "name": "살균기 3호기",
+    "note": "",
+    "plan": "",
+    "rate": 0,
+    "room": "배합실",
+    "team": "3팀",
+    "group": "",
+    "owner": "",
+    "status": "비가동중",
+    "process": "",
+    "documents": [],
+    "lastCheck": "",
+    "modelName": "",
+    "nextCheck": "",
+    "photoCrop": null,
+    "photoName": "살균기 3호기 photo.jpg",
+    "detailInfo": [
+      {
+        "label": "설비명",
+        "value": "살균기 3호기"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "가동률",
+        "value": "0%"
+      }
+    ],
+    "ownerLabel": "담당 업체",
+    "production": "",
+    "teamDataKey": "work_team_calendar_team3",
+    "detailGroups": {
+      "equipmentSpecs": []
+    },
+    "manufacturer": "",
+    "photoDataUrl": "",
+    "equipmentCode": "3-3-1781856888910-164968",
+    "operationInfo": [
+      {
+        "label": "설비명",
+        "value": "살균기 3호기"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "실",
+        "value": "배합실"
+      },
+      {
+        "label": "공정",
+        "value": ""
+      },
+      {
+        "label": "가동률",
+        "value": "0"
+      }
+    ],
+    "manufacturedAt": "",
+    "photoDocumentId": "5619d4db-b68b-449a-bed1-5ac1a775e66a",
+    "photoPreviewUrl": "/api/files/5619d4db-b68b-449a-bed1-5ac1a775e66a/view",
+    "photoDownloadUrl": "/api/files/5619d4db-b68b-449a-bed1-5ac1a775e66a/download",
+    "manufacturerLabel": "제조사",
+    "photoThumbDataUrl": "",
+    "maintenanceHistory": [],
+    "photoAttachmentKey": "equipment-photo-main",
+    "photoStorageRelPath": "equipment-assets/equipment-history/살균기 3호기/images/99621671-27e4-4ab3-918a-34e659decc64.jpg",
+    "_archiveNumber": 97,
+    "_sourceJson": "references/team3-liquid-20261110/source/3팀/배합실/097_살균기 3호기/원본카드.json",
+    "_sourceDir": "references/team3-liquid-20261110/source/3팀/배합실/097_살균기 3호기",
+    "_photoPath": "apps/site/photos/team3-liquid-cards/card-097.jpg",
+    "_photoPanels": {
+      "front": "apps/site/photos/team3-liquid-cards/card-097-front.jpg",
+      "left": "apps/site/photos/team3-liquid-cards/card-097-left.jpg",
+      "right": "apps/site/photos/team3-liquid-cards/card-097-right.jpg",
+      "rear": "apps/site/photos/team3-liquid-cards/card-097-rear.jpg"
+    },
+    "_photoReflowPath": "apps/site/photos/team3-liquid-cards/card-097-reflow.jpg"
+  },
+  {
+    "id": "3-1781856905782-218717",
+    "line": "",
+    "name": "펄 이송호퍼",
+    "note": "",
+    "plan": "",
+    "rate": 0,
+    "room": "배합실",
+    "team": "3팀",
+    "group": "",
+    "owner": "",
+    "status": "비가동중",
+    "process": "",
+    "documents": [],
+    "lastCheck": "",
+    "modelName": "",
+    "nextCheck": "",
+    "photoCrop": null,
+    "photoName": "펄 이송호퍼 photo.jpg",
+    "detailInfo": [
+      {
+        "label": "설비명",
+        "value": "펄 이송호퍼"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "가동률",
+        "value": "0%"
+      }
+    ],
+    "ownerLabel": "담당 업체",
+    "production": "",
+    "teamDataKey": "work_team_calendar_team3",
+    "detailGroups": {
+      "equipmentSpecs": []
+    },
+    "manufacturer": "",
+    "photoDataUrl": "",
+    "equipmentCode": "3-1781856905782-218717",
+    "operationInfo": [
+      {
+        "label": "설비명",
+        "value": "펄 이송호퍼"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "실",
+        "value": "배합실"
+      },
+      {
+        "label": "공정",
+        "value": ""
+      },
+      {
+        "label": "가동률",
+        "value": "0"
+      }
+    ],
+    "manufacturedAt": "",
+    "photoDocumentId": "aee4f09d-06e8-499a-b2d8-95b83210bad7",
+    "photoPreviewUrl": "/api/files/aee4f09d-06e8-499a-b2d8-95b83210bad7/view",
+    "photoDownloadUrl": "/api/files/aee4f09d-06e8-499a-b2d8-95b83210bad7/download",
+    "manufacturerLabel": "제조사",
+    "photoThumbDataUrl": "",
+    "maintenanceHistory": [],
+    "photoAttachmentKey": "equipment-photo-main",
+    "photoStorageRelPath": "equipment-assets/equipment-history/펄 이송호퍼/images/e490d0db-b6d5-4a53-a190-61aa1c78a59d.jpg",
+    "_archiveNumber": 98,
+    "_sourceJson": "references/team3-liquid-20261110/source/3팀/배합실/098_펄 이송호퍼/원본카드.json",
+    "_sourceDir": "references/team3-liquid-20261110/source/3팀/배합실/098_펄 이송호퍼",
+    "_photoPath": "apps/site/photos/team3-liquid-cards/card-098.jpg",
+    "_photoPanels": {
+      "front": "apps/site/photos/team3-liquid-cards/card-098-front.jpg",
+      "left": "apps/site/photos/team3-liquid-cards/card-098-left.jpg",
+      "right": "apps/site/photos/team3-liquid-cards/card-098-right.jpg",
+      "rear": "apps/site/photos/team3-liquid-cards/card-098-rear.jpg"
+    },
+    "_photoReflowPath": "apps/site/photos/team3-liquid-cards/card-098-reflow.jpg"
+  },
+  {
+    "id": "3-hcpe-5-1781856872079-392380",
+    "line": "",
+    "name": "HCPE - 5 균질기",
+    "note": "",
+    "plan": "",
+    "rate": 0,
+    "room": "배합실",
+    "team": "3팀",
+    "group": "",
+    "owner": "",
+    "status": "비가동중",
+    "process": "",
+    "documents": [],
+    "lastCheck": "",
+    "modelName": "",
+    "nextCheck": "",
+    "photoCrop": null,
+    "photoName": "HCPE - 5 균질기 photo.jpg",
+    "detailInfo": [
+      {
+        "label": "설비명",
+        "value": "HCPE - 5 균질기"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "가동률",
+        "value": "0%"
+      }
+    ],
+    "ownerLabel": "담당 업체",
+    "production": "",
+    "teamDataKey": "work_team_calendar_team3",
+    "detailGroups": {
+      "equipmentSpecs": []
+    },
+    "manufacturer": "",
+    "photoDataUrl": "",
+    "equipmentCode": "3-HCPE-5-1781856872079-392380",
+    "operationInfo": [
+      {
+        "label": "설비명",
+        "value": "HCPE - 5 균질기"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "실",
+        "value": "배합실"
+      },
+      {
+        "label": "공정",
+        "value": ""
+      },
+      {
+        "label": "가동률",
+        "value": "0"
+      }
+    ],
+    "manufacturedAt": "",
+    "photoDocumentId": "bbaf8299-07ff-4d31-ab75-0e1927fefa27",
+    "photoPreviewUrl": "/api/files/bbaf8299-07ff-4d31-ab75-0e1927fefa27/view",
+    "photoDownloadUrl": "/api/files/bbaf8299-07ff-4d31-ab75-0e1927fefa27/download",
+    "manufacturerLabel": "제조사",
+    "photoThumbDataUrl": "",
+    "maintenanceHistory": [],
+    "photoAttachmentKey": "equipment-photo-main",
+    "photoStorageRelPath": "equipment-assets/equipment-history/HCPE - 5 균질기/images/0e95bc04-3002-4fcd-a958-4b9ec13172c1.jpg",
+    "_archiveNumber": 99,
+    "_sourceJson": "references/team3-liquid-20261110/source/3팀/배합실/099_HCPE - 5 균질기/원본카드.json",
+    "_sourceDir": "references/team3-liquid-20261110/source/3팀/배합실/099_HCPE - 5 균질기",
+    "_photoPath": "apps/site/photos/team3-liquid-cards/card-099.jpg",
+    "_photoPanels": {
+      "front": "apps/site/photos/team3-liquid-cards/card-099-front.jpg",
+      "left": "apps/site/photos/team3-liquid-cards/card-099-left.jpg",
+      "right": "apps/site/photos/team3-liquid-cards/card-099-right.jpg",
+      "rear": "apps/site/photos/team3-liquid-cards/card-099-rear.jpg"
+    },
+    "_photoReflowPath": "apps/site/photos/team3-liquid-cards/card-099-reflow.jpg"
+  },
+  {
+    "id": "3-b-1781845732751-372750",
+    "line": "",
+    "name": "B라인 열수탱크",
+    "note": "",
+    "plan": "",
+    "rate": 0,
+    "room": "배합실",
+    "team": "3팀",
+    "group": "",
+    "owner": "",
+    "status": "비가동중",
+    "process": "",
+    "documents": [],
+    "lastCheck": "",
+    "modelName": "",
+    "nextCheck": "",
+    "photoCrop": null,
+    "photoName": "B라인 열수탱크 photo.jpg",
+    "detailInfo": [
+      {
+        "label": "설비명",
+        "value": "B라인 열수탱크"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "가동률",
+        "value": "0%"
+      }
+    ],
+    "ownerLabel": "담당 업체",
+    "production": "",
+    "teamDataKey": "work_team_calendar_team3",
+    "detailGroups": {
+      "equipmentSpecs": []
+    },
+    "manufacturer": "",
+    "photoDataUrl": "",
+    "equipmentCode": "3-B-1781845732751-372750",
+    "operationInfo": [
+      {
+        "label": "설비명",
+        "value": "B라인 열수탱크"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "실",
+        "value": "배합실"
+      },
+      {
+        "label": "공정",
+        "value": ""
+      },
+      {
+        "label": "가동률",
+        "value": "0"
+      }
+    ],
+    "manufacturedAt": "",
+    "photoDocumentId": "0c6d5572-9031-4589-b861-7134fca6f218",
+    "photoPreviewUrl": "/api/files/0c6d5572-9031-4589-b861-7134fca6f218/view",
+    "photoDownloadUrl": "/api/files/0c6d5572-9031-4589-b861-7134fca6f218/download",
+    "manufacturerLabel": "제조사",
+    "photoThumbDataUrl": "",
+    "maintenanceHistory": [],
+    "photoAttachmentKey": "equipment-photo-main",
+    "photoStorageRelPath": "equipment-assets/equipment-history/B라인 열수탱크/images/e1493b05-a81d-4ff7-8c28-ae43ef91396f.jpg",
+    "_archiveNumber": 100,
+    "_sourceJson": "references/team3-liquid-20261110/source/3팀/배합실/100_B라인 열수탱크/원본카드.json",
+    "_sourceDir": "references/team3-liquid-20261110/source/3팀/배합실/100_B라인 열수탱크",
+    "_photoPath": "apps/site/photos/team3-liquid-cards/card-100.jpg",
+    "_photoPanels": {
+      "front": "apps/site/photos/team3-liquid-cards/card-100-front.jpg",
+      "left": "apps/site/photos/team3-liquid-cards/card-100-left.jpg",
+      "right": "apps/site/photos/team3-liquid-cards/card-100-right.jpg",
+      "rear": "apps/site/photos/team3-liquid-cards/card-100-rear.jpg"
+    },
+    "_photoReflowPath": "apps/site/photos/team3-liquid-cards/card-100-reflow.jpg"
+  },
+  {
+    "id": "3-1780971035185-209770",
+    "line": "",
+    "name": "에어 콤프레셔",
+    "note": "",
+    "plan": "",
+    "rate": 0,
+    "room": "보일러실",
+    "team": "3팀",
+    "group": "",
+    "owner": "",
+    "status": "비가동중",
+    "process": "",
+    "documents": [],
+    "lastCheck": "",
+    "modelName": "",
+    "nextCheck": "",
+    "photoCrop": null,
+    "photoName": "에어 콤프레셔 photo.jpg",
+    "detailInfo": [
+      {
+        "label": "설비명",
+        "value": "에어 콤프레셔"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "가동률",
+        "value": "0%"
+      }
+    ],
+    "ownerLabel": "담당 업체",
+    "production": "",
+    "teamDataKey": "work_team_calendar_team3",
+    "detailGroups": {
+      "equipmentSpecs": []
+    },
+    "manufacturer": "",
+    "photoDataUrl": "",
+    "equipmentCode": "3-1780971035185-209770",
+    "operationInfo": [
+      {
+        "label": "설비명",
+        "value": "에어 콤프레셔"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "실",
+        "value": "보일러실"
+      },
+      {
+        "label": "공정",
+        "value": ""
+      },
+      {
+        "label": "가동률",
+        "value": "0"
+      }
+    ],
+    "manufacturedAt": "",
+    "photoDocumentId": "eae3e891-1415-47dd-9e45-ca1f17640089",
+    "photoPreviewUrl": "/api/files/eae3e891-1415-47dd-9e45-ca1f17640089/view",
+    "photoDownloadUrl": "/api/files/eae3e891-1415-47dd-9e45-ca1f17640089/download",
+    "manufacturerLabel": "제조사",
+    "photoThumbDataUrl": "",
+    "maintenanceHistory": [],
+    "photoAttachmentKey": "equipment-photo-main",
+    "photoStorageRelPath": "equipment-assets/equipment-history/에어 콤프레셔/images/a8192691-f20e-44bb-9366-a0368082ff5f.jpg",
+    "_archiveNumber": 101,
+    "_sourceJson": "references/team3-liquid-20261110/source/3팀/보일러실/101_에어 콤프레셔/원본카드.json",
+    "_sourceDir": "references/team3-liquid-20261110/source/3팀/보일러실/101_에어 콤프레셔",
+    "_photoPath": "apps/site/photos/team3-liquid-cards/card-101.jpg",
+    "_photoPanels": {
+      "front": "apps/site/photos/team3-liquid-cards/card-101-front.jpg",
+      "left": "apps/site/photos/team3-liquid-cards/card-101-left.jpg",
+      "right": "apps/site/photos/team3-liquid-cards/card-101-right.jpg",
+      "rear": "apps/site/photos/team3-liquid-cards/card-101-rear.jpg"
+    },
+    "_photoReflowPath": "apps/site/photos/team3-liquid-cards/card-101-reflow.jpg"
+  },
+  {
+    "id": "3-1780970990071-70649",
+    "line": "",
+    "name": "핫멜트",
+    "note": "",
+    "plan": "",
+    "rate": 0,
+    "room": "외포장실",
+    "team": "3팀",
+    "group": "",
+    "owner": "",
+    "status": "비가동중",
+    "process": "",
+    "documents": [],
+    "lastCheck": "",
+    "modelName": "",
+    "nextCheck": "",
+    "photoCrop": null,
+    "photoName": "핫멜트 photo.jpg",
+    "detailInfo": [
+      {
+        "label": "설비명",
+        "value": "핫멜트"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "가동률",
+        "value": "0%"
+      }
+    ],
+    "ownerLabel": "담당 업체",
+    "production": "",
+    "teamDataKey": "work_team_calendar_team3",
+    "detailGroups": {
+      "equipmentSpecs": []
+    },
+    "manufacturer": "",
+    "photoDataUrl": "",
+    "equipmentCode": "3-1780970990071-70649",
+    "operationInfo": [
+      {
+        "label": "설비명",
+        "value": "핫멜트"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "실",
+        "value": "외포장실"
+      },
+      {
+        "label": "공정",
+        "value": ""
+      },
+      {
+        "label": "가동률",
+        "value": "0"
+      }
+    ],
+    "manufacturedAt": "",
+    "photoDocumentId": "3c08f764-73ad-402b-826f-249f0d235e77",
+    "photoPreviewUrl": "/api/files/3c08f764-73ad-402b-826f-249f0d235e77/view",
+    "photoDownloadUrl": "/api/files/3c08f764-73ad-402b-826f-249f0d235e77/download",
+    "manufacturerLabel": "제조사",
+    "photoThumbDataUrl": "",
+    "maintenanceHistory": [],
+    "photoAttachmentKey": "equipment-photo-main",
+    "photoStorageRelPath": "equipment-assets/equipment-history/핫멜트/images/ad7ad14e-52ec-4f85-960d-4bdff9785a7c.jpg",
+    "_archiveNumber": 102,
+    "_sourceJson": "references/team3-liquid-20261110/source/3팀/외포장실/102_핫멜트/원본카드.json",
+    "_sourceDir": "references/team3-liquid-20261110/source/3팀/외포장실/102_핫멜트",
+    "_photoPath": "apps/site/photos/team3-liquid-cards/card-102.jpg",
+    "_photoPanels": {
+      "front": "apps/site/photos/team3-liquid-cards/card-102-front.jpg",
+      "left": "apps/site/photos/team3-liquid-cards/card-102-left.jpg",
+      "right": "apps/site/photos/team3-liquid-cards/card-102-right.jpg",
+      "rear": "apps/site/photos/team3-liquid-cards/card-102-rear.jpg"
+    },
+    "_photoReflowPath": "apps/site/photos/team3-liquid-cards/card-102-reflow.jpg"
+  },
+  {
+    "id": "3-3-1780970943317-952490",
+    "line": "",
+    "name": "보일러 3호기",
+    "note": "",
+    "plan": "",
+    "rate": 0,
+    "room": "보일러실",
+    "team": "3팀",
+    "group": "",
+    "owner": "",
+    "status": "비가동중",
+    "process": "",
+    "documents": [],
+    "lastCheck": "",
+    "modelName": "",
+    "nextCheck": "",
+    "photoCrop": null,
+    "photoName": "보일러 3호기 photo.jpg",
+    "detailInfo": [
+      {
+        "label": "설비명",
+        "value": "보일러 3호기"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "가동률",
+        "value": "0%"
+      }
+    ],
+    "ownerLabel": "담당 업체",
+    "production": "",
+    "teamDataKey": "work_team_calendar_team3",
+    "detailGroups": {
+      "equipmentSpecs": []
+    },
+    "manufacturer": "",
+    "photoDataUrl": "",
+    "equipmentCode": "3-3-1780970943317-952490",
+    "operationInfo": [
+      {
+        "label": "설비명",
+        "value": "보일러 3호기"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "실",
+        "value": "보일러실"
+      },
+      {
+        "label": "공정",
+        "value": ""
+      },
+      {
+        "label": "가동률",
+        "value": "0"
+      }
+    ],
+    "manufacturedAt": "",
+    "photoDocumentId": "c2448fd5-de65-48fd-a7a9-88aee98f784e",
+    "photoPreviewUrl": "/api/files/c2448fd5-de65-48fd-a7a9-88aee98f784e/view",
+    "photoDownloadUrl": "/api/files/c2448fd5-de65-48fd-a7a9-88aee98f784e/download",
+    "manufacturerLabel": "제조사",
+    "photoThumbDataUrl": "",
+    "maintenanceHistory": [],
+    "photoAttachmentKey": "equipment-photo-main",
+    "photoStorageRelPath": "equipment-assets/equipment-history/보일러 3호기/images/a4e6f13d-4d50-4e86-bbf0-29aa7225d1c3.jpg",
+    "_archiveNumber": 103,
+    "_sourceJson": "references/team3-liquid-20261110/source/3팀/보일러실/103_보일러 3호기/원본카드.json",
+    "_sourceDir": "references/team3-liquid-20261110/source/3팀/보일러실/103_보일러 3호기",
+    "_photoPath": "apps/site/photos/team3-liquid-cards/card-103.jpg",
+    "_photoPanels": {
+      "front": "apps/site/photos/team3-liquid-cards/card-103-front.jpg",
+      "left": "apps/site/photos/team3-liquid-cards/card-103-left.jpg",
+      "right": "apps/site/photos/team3-liquid-cards/card-103-right.jpg",
+      "rear": "apps/site/photos/team3-liquid-cards/card-103-rear.jpg"
+    },
+    "_photoReflowPath": "apps/site/photos/team3-liquid-cards/card-103-reflow.jpg"
+  },
+  {
+    "id": "3-1-2-1780970925206-256670",
+    "line": "",
+    "name": "보일러 1,2호기",
+    "note": "",
+    "plan": "",
+    "rate": 0,
+    "room": "보일러실",
+    "team": "3팀",
+    "group": "",
+    "owner": "",
+    "status": "비가동중",
+    "process": "",
+    "documents": [],
+    "lastCheck": "",
+    "modelName": "",
+    "nextCheck": "",
+    "photoCrop": null,
+    "photoName": "보일러 1,2호기 photo.jpg",
+    "detailInfo": [
+      {
+        "label": "설비명",
+        "value": "보일러 1,2호기"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "가동률",
+        "value": "0%"
+      }
+    ],
+    "ownerLabel": "담당 업체",
+    "production": "",
+    "teamDataKey": "work_team_calendar_team3",
+    "detailGroups": {
+      "equipmentSpecs": []
+    },
+    "manufacturer": "",
+    "photoDataUrl": "",
+    "equipmentCode": "3-1-2-1780970925206-256670",
+    "operationInfo": [
+      {
+        "label": "설비명",
+        "value": "보일러 1,2호기"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "실",
+        "value": "보일러실"
+      },
+      {
+        "label": "공정",
+        "value": ""
+      },
+      {
+        "label": "가동률",
+        "value": "0"
+      }
+    ],
+    "manufacturedAt": "",
+    "photoDocumentId": "ec4ba053-b7fb-4082-b838-7d4125c73758",
+    "photoPreviewUrl": "/api/files/ec4ba053-b7fb-4082-b838-7d4125c73758/view",
+    "photoDownloadUrl": "/api/files/ec4ba053-b7fb-4082-b838-7d4125c73758/download",
+    "manufacturerLabel": "제조사",
+    "photoThumbDataUrl": "",
+    "maintenanceHistory": [],
+    "photoAttachmentKey": "equipment-photo-main",
+    "photoStorageRelPath": "equipment-assets/equipment-history/보일러 1,2호기/images/8104b6bd-35e7-4465-9b7b-c97b3bf2707f.jpg",
+    "_archiveNumber": 104,
+    "_sourceJson": "references/team3-liquid-20261110/source/3팀/보일러실/104_보일러 1,2호기/원본카드.json",
+    "_sourceDir": "references/team3-liquid-20261110/source/3팀/보일러실/104_보일러 1,2호기",
+    "_photoPath": "apps/site/photos/team3-liquid-cards/card-104.jpg",
+    "_photoPanels": {
+      "front": "apps/site/photos/team3-liquid-cards/card-104-front.jpg",
+      "left": "apps/site/photos/team3-liquid-cards/card-104-left.jpg",
+      "right": "apps/site/photos/team3-liquid-cards/card-104-right.jpg",
+      "rear": "apps/site/photos/team3-liquid-cards/card-104-rear.jpg"
+    },
+    "_photoReflowPath": "apps/site/photos/team3-liquid-cards/card-104-reflow.jpg"
+  },
+  {
+    "id": "3-1780970830691-178309",
+    "line": "",
+    "name": "티칭 로봇",
+    "note": "",
+    "plan": "",
+    "rate": 0,
+    "room": "외포장실",
+    "team": "3팀",
+    "group": "",
+    "owner": "",
+    "status": "비가동중",
+    "process": "",
+    "documents": [],
+    "lastCheck": "",
+    "modelName": "",
+    "nextCheck": "",
+    "photoCrop": null,
+    "photoName": "티칭 로봇 photo.jpg",
+    "detailInfo": [
+      {
+        "label": "설비명",
+        "value": "티칭 로봇"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "가동률",
+        "value": "0%"
+      }
+    ],
+    "ownerLabel": "담당 업체",
+    "production": "",
+    "teamDataKey": "work_team_calendar_team3",
+    "detailGroups": {
+      "equipmentSpecs": []
+    },
+    "manufacturer": "",
+    "photoDataUrl": "",
+    "equipmentCode": "3-1780970830691-178309",
+    "operationInfo": [
+      {
+        "label": "설비명",
+        "value": "티칭 로봇"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "실",
+        "value": "외포장실"
+      },
+      {
+        "label": "공정",
+        "value": ""
+      },
+      {
+        "label": "가동률",
+        "value": "0"
+      }
+    ],
+    "manufacturedAt": "",
+    "photoDocumentId": "4f98dcb9-4bb9-47a7-9221-adae5067f8bd",
+    "photoPreviewUrl": "/api/files/4f98dcb9-4bb9-47a7-9221-adae5067f8bd/view",
+    "photoDownloadUrl": "/api/files/4f98dcb9-4bb9-47a7-9221-adae5067f8bd/download",
+    "manufacturerLabel": "제조사",
+    "photoThumbDataUrl": "",
+    "maintenanceHistory": [],
+    "photoAttachmentKey": "equipment-photo-main",
+    "photoStorageRelPath": "equipment-assets/equipment-history/티칭 로봇/images/9e18db05-a6ba-47fc-8e1b-479df4b108a6.jpg",
+    "_archiveNumber": 105,
+    "_sourceJson": "references/team3-liquid-20261110/source/3팀/외포장실/105_티칭 로봇/원본카드.json",
+    "_sourceDir": "references/team3-liquid-20261110/source/3팀/외포장실/105_티칭 로봇",
+    "_photoPath": "apps/site/photos/team3-liquid-cards/card-105.jpg",
+    "_photoPanels": {
+      "front": "apps/site/photos/team3-liquid-cards/card-105-front.jpg",
+      "left": "apps/site/photos/team3-liquid-cards/card-105-left.jpg",
+      "right": "apps/site/photos/team3-liquid-cards/card-105-right.jpg",
+      "rear": "apps/site/photos/team3-liquid-cards/card-105-rear.jpg"
+    },
+    "_photoReflowPath": "apps/site/photos/team3-liquid-cards/card-105-reflow.jpg"
+  },
+  {
+    "id": "3-1780970808637-572512",
+    "line": "",
+    "name": "제환기",
+    "note": "",
+    "plan": "",
+    "rate": 0,
+    "room": "제환실",
+    "team": "3팀",
+    "group": "",
+    "owner": "",
+    "status": "비가동중",
+    "process": "",
+    "documents": [],
+    "lastCheck": "",
+    "modelName": "",
+    "nextCheck": "",
+    "photoCrop": null,
+    "photoName": "제환기 photo.jpg",
+    "detailInfo": [
+      {
+        "label": "설비명",
+        "value": "제환기"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "가동률",
+        "value": "0%"
+      }
+    ],
+    "ownerLabel": "담당 업체",
+    "production": "",
+    "teamDataKey": "work_team_calendar_team3",
+    "detailGroups": {
+      "equipmentSpecs": []
+    },
+    "manufacturer": "",
+    "photoDataUrl": "",
+    "equipmentCode": "3-1780970808637-572512",
+    "operationInfo": [
+      {
+        "label": "설비명",
+        "value": "제환기"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "실",
+        "value": "제환실"
+      },
+      {
+        "label": "공정",
+        "value": ""
+      },
+      {
+        "label": "가동률",
+        "value": "0"
+      }
+    ],
+    "manufacturedAt": "",
+    "photoDocumentId": "eaeb6c3c-9859-4549-8e18-fbe9cc20c0f3",
+    "photoPreviewUrl": "/api/files/eaeb6c3c-9859-4549-8e18-fbe9cc20c0f3/view",
+    "photoDownloadUrl": "/api/files/eaeb6c3c-9859-4549-8e18-fbe9cc20c0f3/download",
+    "manufacturerLabel": "제조사",
+    "photoThumbDataUrl": "",
+    "maintenanceHistory": [],
+    "photoAttachmentKey": "equipment-photo-main",
+    "photoStorageRelPath": "equipment-assets/equipment-history/제환기/images/a8d7c622-a495-4c5b-aad2-98bc02b38c47.jpg",
+    "_archiveNumber": 106,
+    "_sourceJson": "references/team3-liquid-20261110/source/3팀/제환실/106_제환기/원본카드.json",
+    "_sourceDir": "references/team3-liquid-20261110/source/3팀/제환실/106_제환기",
+    "_photoPath": "apps/site/photos/team3-liquid-cards/card-106.jpg",
+    "_photoPanels": {
+      "front": "apps/site/photos/team3-liquid-cards/card-106-front.jpg",
+      "left": "apps/site/photos/team3-liquid-cards/card-106-left.jpg",
+      "right": "apps/site/photos/team3-liquid-cards/card-106-right.jpg",
+      "rear": "apps/site/photos/team3-liquid-cards/card-106-rear.jpg"
+    },
+    "_photoReflowPath": "apps/site/photos/team3-liquid-cards/card-106-reflow.jpg"
+  },
+  {
+    "id": "3-1780970787025-24411",
+    "line": "",
+    "name": "반죽기",
+    "note": "",
+    "plan": "",
+    "rate": 0,
+    "room": "제환실",
+    "team": "3팀",
+    "group": "",
+    "owner": "",
+    "status": "비가동중",
+    "process": "",
+    "documents": [],
+    "lastCheck": "",
+    "modelName": "",
+    "nextCheck": "",
+    "photoCrop": null,
+    "photoName": "반죽기 photo.jpg",
+    "detailInfo": [
+      {
+        "label": "설비명",
+        "value": "반죽기"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "가동률",
+        "value": "0%"
+      }
+    ],
+    "ownerLabel": "담당 업체",
+    "production": "",
+    "teamDataKey": "work_team_calendar_team3",
+    "detailGroups": {
+      "equipmentSpecs": []
+    },
+    "manufacturer": "",
+    "photoDataUrl": "",
+    "equipmentCode": "3-1780970787025-24411",
+    "operationInfo": [
+      {
+        "label": "설비명",
+        "value": "반죽기"
+      },
+      {
+        "label": "관리팀",
+        "value": "3팀"
+      },
+      {
+        "label": "실",
+        "value": "제환실"
+      },
+      {
+        "label": "공정",
+        "value": ""
+      },
+      {
+        "label": "가동률",
+        "value": "0"
+      }
+    ],
+    "manufacturedAt": "",
+    "photoDocumentId": "d6260d7c-89cd-4c59-b37a-07d8f1374fb0",
+    "photoPreviewUrl": "/api/files/d6260d7c-89cd-4c59-b37a-07d8f1374fb0/view",
+    "photoDownloadUrl": "/api/files/d6260d7c-89cd-4c59-b37a-07d8f1374fb0/download",
+    "manufacturerLabel": "제조사",
+    "photoThumbDataUrl": "",
+    "maintenanceHistory": [],
+    "photoAttachmentKey": "equipment-photo-main",
+    "photoStorageRelPath": "equipment-assets/equipment-history/반죽기/images/08d3ff28-6323-4534-b6a9-93e83cf49e32.jpg",
+    "_archiveNumber": 107,
+    "_sourceJson": "references/team3-liquid-20261110/source/3팀/제환실/107_반죽기/원본카드.json",
+    "_sourceDir": "references/team3-liquid-20261110/source/3팀/제환실/107_반죽기",
+    "_photoPath": "apps/site/photos/team3-liquid-cards/card-107.jpg",
+    "_photoPanels": {
+      "front": "apps/site/photos/team3-liquid-cards/card-107-front.jpg",
+      "left": "apps/site/photos/team3-liquid-cards/card-107-left.jpg",
+      "right": "apps/site/photos/team3-liquid-cards/card-107-right.jpg",
+      "rear": "apps/site/photos/team3-liquid-cards/card-107-rear.jpg"
+    },
+    "_photoReflowPath": "apps/site/photos/team3-liquid-cards/card-107-reflow.jpg"
+  }
+]

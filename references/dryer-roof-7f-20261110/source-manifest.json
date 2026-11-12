@@ -1,0 +1,48 @@
+{
+  "date": "2026-11-10",
+  "sourceFolder": "건조기실 옥상 ~ 7층",
+  "fileCount": 3,
+  "totalBytes": 762413696,
+  "files": [
+    {
+      "number": 1,
+      "path": "건조기실 옥상 ~ 7층/20261110_132807KST_GPS-VALID_LAT35.3624500_LON129.0305800_H21.1-TN_DIR-AVAILABLE_P-25.8_ACC7.4m_FV-58767a3c-b188-4a60-9b40-0ed3ac69fb89.txt",
+      "bytes": 34402,
+      "sha256": "4e0d7e1b833d300337e9f649b769c456209a7c18049fdb00682c7786cf00bd2e"
+    },
+    {
+      "number": 2,
+      "path": "건조기실 옥상 ~ 7층/20261110_132953KST_GPS-VALID_LAT35.3626717_LON129.0302783_H220.2-TN_DIR-AVAILABLE_P-49.0_ACC2.4m_FV-050dba47-cf26-47c4-a78f-7012f284c151.mp4",
+      "bytes": 761413998,
+      "sha256": "7e70508d612005962a77501c50323f36d6f1e64d1c83dd15753e8cb72ab55b26",
+      "duration": "507.876256",
+      "streams": [
+        {
+          "codec_type": "video",
+          "codec_name": "h264",
+          "width": 1920,
+          "height": 1080,
+          "duration": "507.876256",
+          "r_frame_rate": "30/1",
+          "side_data_list": [
+            {
+              "side_data_type": "Display Matrix",
+              "displaymatrix": "\n00000000:            0       65536           0\n00000001:       -65536           0           0\n00000002:            0           0  1073741824\n",
+              "rotation": -90
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "path": "건조기실 옥상 ~ 7층/20261110_132953KST_GPS-VALID_LAT35.3626717_LON129.0302783_H220.2-TN_DIR-AVAILABLE_P-49.0_ACC2.4m_FV-050dba47-cf26-47c4-a78f-7012f284c151.txt",
+      "bytes": 965296,
+      "sha256": "9986191ef5534144f9ac21b37af4cfbbb257710f4817a9546f0801f922c32df8"
+    }
+  ],
+  "originalsModified": false,
+  "missingCompanions": [
+    "132807 GPS TXT에 대응하는 동명 8.424초 MP4는 이 폴더에 없음."
+  ]
+}

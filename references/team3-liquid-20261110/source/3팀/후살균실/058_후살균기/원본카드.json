@@ -1,0 +1,74 @@
+{
+  "id": "3-1782200936653-362090",
+  "line": "",
+  "name": "후살균기",
+  "note": "",
+  "plan": "",
+  "rate": 0,
+  "room": "후살균실",
+  "team": "3팀",
+  "group": "",
+  "owner": "",
+  "status": "비가동중",
+  "process": "",
+  "documents": [],
+  "lastCheck": "",
+  "modelName": "",
+  "nextCheck": "",
+  "photoCrop": null,
+  "photoName": "후살균기 photo.jpg",
+  "detailInfo": [
+    {
+      "label": "설비명",
+      "value": "후살균기"
+    },
+    {
+      "label": "관리팀",
+      "value": "3팀"
+    },
+    {
+      "label": "가동률",
+      "value": "0%"
+    }
+  ],
+  "ownerLabel": "담당 업체",
+  "production": "",
+  "teamDataKey": "work_team_calendar_team3",
+  "detailGroups": {
+    "equipmentSpecs": []
+  },
+  "manufacturer": "",
+  "photoDataUrl": "",
+  "equipmentCode": "3-1782200936653-362090",
+  "operationInfo": [
+    {
+      "label": "설비명",
+      "value": "후살균기"
+    },
+    {
+      "label": "관리팀",
+      "value": "3팀"
+    },
+    {
+      "label": "실",
+      "value": "후살균실"
+    },
+    {
+      "label": "공정",
+      "value": ""
+    },
+    {
+      "label": "가동률",
+      "value": "0"
+    }
+  ],
+  "manufacturedAt": "",
+  "photoDocumentId": "f97b55fc-bee6-4e0c-bf39-3b13314bfa79",
+  "photoPreviewUrl": "/api/files/f97b55fc-bee6-4e0c-bf39-3b13314bfa79/view",
+  "photoDownloadUrl": "/api/files/f97b55fc-bee6-4e0c-bf39-3b13314bfa79/download",
+  "manufacturerLabel": "제조사",
+  "photoThumbDataUrl": "",
+  "maintenanceHistory": [],
+  "photoAttachmentKey": "equipment-photo-main",
+  "photoStorageRelPath": "equipment-assets/equipment-history/후살균기/images/55cfbbb6-ba55-4ff8-926e-9f3bf620ad17.jpg"
+}

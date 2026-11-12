@@ -1,0 +1,74 @@
+{
+  "id": "3-20rt-2-1782113879963-70446",
+  "line": "",
+  "name": "20RT 공조기 2",
+  "note": "",
+  "plan": "",
+  "rate": 0,
+  "room": "실외기실",
+  "team": "3팀",
+  "group": "",
+  "owner": "",
+  "status": "비가동중",
+  "process": "",
+  "documents": [],
+  "lastCheck": "",
+  "modelName": "",
+  "nextCheck": "",
+  "photoCrop": null,
+  "photoName": "20RT 공조기 2 photo.jpg",
+  "detailInfo": [
+    {
+      "label": "설비명",
+      "value": "20RT 공조기 2"
+    },
+    {
+      "label": "관리팀",
+      "value": "3팀"
+    },
+    {
+      "label": "가동률",
+      "value": "0%"
+    }
+  ],
+  "ownerLabel": "담당 업체",
+  "production": "",
+  "teamDataKey": "work_team_calendar_team3",
+  "detailGroups": {
+    "equipmentSpecs": []
+  },
+  "manufacturer": "",
+  "photoDataUrl": "",
+  "equipmentCode": "3-20RT-2-1782113879963-70446",
+  "operationInfo": [
+    {
+      "label": "설비명",
+      "value": "20RT 공조기 2"
+    },
+    {
+      "label": "관리팀",
+      "value": "3팀"
+    },
+    {
+      "label": "실",
+      "value": "실외기실"
+    },
+    {
+      "label": "공정",
+      "value": ""
+    },
+    {
+      "label": "가동률",
+      "value": "0"
+    }
+  ],
+  "manufacturedAt": "",
+  "photoDocumentId": "0c433dd8-9d52-4c09-9f4c-d365b3760e7d",
+  "photoPreviewUrl": "/api/files/0c433dd8-9d52-4c09-9f4c-d365b3760e7d/view",
+  "photoDownloadUrl": "/api/files/0c433dd8-9d52-4c09-9f4c-d365b3760e7d/download",
+  "manufacturerLabel": "제조사",
+  "photoThumbDataUrl": "",
+  "maintenanceHistory": [],
+  "photoAttachmentKey": "equipment-photo-main",
+  "photoStorageRelPath": "equipment-assets/equipment-history/20RT 공조기 2/images/d6d073c8-f3cf-4ee1-9e04-98bb9edca787.jpg"
+}

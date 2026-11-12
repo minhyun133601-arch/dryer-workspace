@@ -1,0 +1,10 @@
+﻿{
+    "requestedByUser":  true,
+    "scheduledUtc":  "2026-11-03T08:27:34.0618971Z",
+    "delaySeconds":  20,
+    "command":  "shutdown.exe /s /t 0",
+    "forceClose":  false,
+    "status":  "normal_shutdown_requested",
+    "requestUtc":  "2026-11-03T08:27:54.1333688Z",
+    "exitCode":  0
+}

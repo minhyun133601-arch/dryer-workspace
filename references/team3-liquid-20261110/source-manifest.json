@@ -1,0 +1,1122 @@
+{
+  "date": "2026-11-10",
+  "archive": {
+    "path": "2팀 3팀 설비이력카드_2026-11-10-20261110T010039Z-1-001.zip",
+    "bytes": 102210416,
+    "sha256": "bf8a6810e9493c99b02ce7d644f9207982357f4ed52d474e01a424ee58c3db2e"
+  },
+  "scope": "3팀 액상 실내52카드. 실외기실14카드는 기존 references/team3-outdoor-cards-20261110에 보존되므로 중복 추출하지 않음.",
+  "files": [
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/파우치실/065_치어팩 충진기 2호기/원본카드.json",
+      "path": "references/team3-liquid-20261110/source/3팀/파우치실/065_치어팩 충진기 2호기/원본카드.json",
+      "bytes": 1754,
+      "sha256": "b430b56b1f1cbe5ae8f0b7e52b18c4ccac6ca83d3abd1b9672a878a0642ad898",
+      "crc32": "d46ae5d7"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/파우치실/062_파우치 충진기 2호기/설비사진_파우치 충진기 2호기.jpg",
+      "path": "references/team3-liquid-20261110/source/3팀/파우치실/062_파우치 충진기 2호기/설비사진_파우치 충진기 2호기.jpg",
+      "bytes": 220982,
+      "sha256": "80123a9ca4ccdad27f634be6615b41cd95a17c752a302c7452160b7435b6263b",
+      "crc32": "43542c04"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/후살균실/056_파우치 후살균수조/원본카드.json",
+      "path": "references/team3-liquid-20261110/source/3팀/후살균실/056_파우치 후살균수조/원본카드.json",
+      "bytes": 1740,
+      "sha256": "4a4992cce16980ea9269e5aa2e158ceb44e5ea2640a3df3f98e3bd540a4f4b32",
+      "crc32": "d10cabf2"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/후살균실/058_후살균기/설비사진_후살균기.jpg",
+      "path": "references/team3-liquid-20261110/source/3팀/후살균실/058_후살균기/설비사진_후살균기.jpg",
+      "bytes": 194197,
+      "sha256": "c1c0f4731e1cff3d2df860b92932d82735ff520c0c2a8ae99488ca945523a6d1",
+      "crc32": "18b90e82"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/후살균실/058_후살균기/원본카드.json",
+      "path": "references/team3-liquid-20261110/source/3팀/후살균실/058_후살균기/원본카드.json",
+      "bytes": 1675,
+      "sha256": "5ec12dadfc4e403863f24b91be8ddc87df17b306834641bc2f561c4515926ea2",
+      "crc32": "cd7005ea"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/Pet실/046_파스텔 라이저/원본카드.json",
+      "path": "references/team3-liquid-20261110/source/3팀/Pet실/046_파스텔 라이저/원본카드.json",
+      "bytes": 1706,
+      "sha256": "934e787e91020cd084fe5061168f01959fc8265fb9066d5a428b3b083e7c6efc",
+      "crc32": "1e5efacc"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/Pet실/050_병뚜껑 조립기/원본카드.json",
+      "path": "references/team3-liquid-20261110/source/3팀/Pet실/050_병뚜껑 조립기/원본카드.json",
+      "bytes": 1702,
+      "sha256": "69261e908074367abd04b4b3cd91d5ed78eb78c8507d60cdb60c012a02d78977",
+      "crc32": "5738ff61"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/Pet실/043_Pet실 1/원본카드.json",
+      "path": "references/team3-liquid-20261110/source/3팀/Pet실/043_Pet실 1/원본카드.json",
+      "bytes": 1663,
+      "sha256": "98f82f03474f41b1bd07d9653fae9d45a68b61291f6fe0cb74873c3af22c33ca",
+      "crc32": "939f5ecc"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/파우치실/064_치어팩 충진기 3호기/원본카드.json",
+      "path": "references/team3-liquid-20261110/source/3팀/파우치실/064_치어팩 충진기 3호기/원본카드.json",
+      "bytes": 1754,
+      "sha256": "1c88baa648afa4ab4c3a2cffa25a4d707c03fa77aa3eba89c1949f88b1f1ba34",
+      "crc32": "6bc1e2d5"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/파우치실/063_파우치 충진기 1호기/원본카드.json",
+      "path": "references/team3-liquid-20261110/source/3팀/파우치실/063_파우치 충진기 1호기/원본카드.json",
+      "bytes": 1750,
+      "sha256": "7e314b8d85cb3e8326c8fd25cbbf112537bf054412c1d4656103fd3ebbe290d0",
+      "crc32": "333cfc84"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/파우치실/061_파우치 충진기 3호기/설비사진_파우치 충진기 3호기.jpg",
+      "path": "references/team3-liquid-20261110/source/3팀/파우치실/061_파우치 충진기 3호기/설비사진_파우치 충진기 3호기.jpg",
+      "bytes": 202621,
+      "sha256": "b04ca86316b6d201ce84c541fdbbd925af70ae444945c717abb506d1021a559e",
+      "crc32": "7c7fbd30"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/스틱실/049_Hipe 16 스틱 충진기-1/원본카드.json",
+      "path": "references/team3-liquid-20261110/source/3팀/스틱실/049_Hipe 16 스틱 충진기-1/원본카드.json",
+      "bytes": 1759,
+      "sha256": "84738c0832b383bb8ae7efa8789f996911427444513c014d72b685f2a1ec5599",
+      "crc32": "ca45b4b2"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/파우치실/066_치어팩 충진기 1호기/설비이력카드.html",
+      "path": "references/team3-liquid-20261110/source/3팀/파우치실/066_치어팩 충진기 1호기/설비이력카드.html",
+      "bytes": 310404,
+      "sha256": "18dc41e21ab1bde9ed28d6df85d2f72464acb72eae5460cdfe70405b565b5a62",
+      "crc32": "35274872"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/스틱실/060_스틱 냉각기/원본카드.json",
+      "path": "references/team3-liquid-20261110/source/3팀/스틱실/060_스틱 냉각기/원본카드.json",
+      "bytes": 1687,
+      "sha256": "d38813f384e06145771eff013406cdd126cd74bea4c724c29be5687aa25ba053",
+      "crc32": "b6b227ef"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/파우치실/059_치어팩 언로더/설비이력카드.html",
+      "path": "references/team3-liquid-20261110/source/3팀/파우치실/059_치어팩 언로더/설비이력카드.html",
+      "bytes": 295112,
+      "sha256": "633af4c85233a312fc94f86d583423ddb71ded5e54e8ee9cfe382e27009795c8",
+      "crc32": "c6e8aea7"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/파우치실/065_치어팩 충진기 2호기/설비사진_치어팩 충진기 2호기.jpg",
+      "path": "references/team3-liquid-20261110/source/3팀/파우치실/065_치어팩 충진기 2호기/설비사진_치어팩 충진기 2호기.jpg",
+      "bytes": 203238,
+      "sha256": "588821fe43af412102ee20ca18f2cadd4a0b5ff4d473b5b6da657cdf0358e137",
+      "crc32": "53aab064"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/제환실/106_제환기/설비사진_제환기.jpg",
+      "path": "references/team3-liquid-20261110/source/3팀/제환실/106_제환기/설비사진_제환기.jpg",
+      "bytes": 136496,
+      "sha256": "96b78409aaff2a2b4cc9ac7f1480591c68b340dd68609dd38d73b6667ec63e5b",
+      "crc32": "d396ff6b"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/스틱실/049_Hipe 16 스틱 충진기-1/설비사진_Hipe 16 스틱 충진기-1.jpg",
+      "path": "references/team3-liquid-20261110/source/3팀/스틱실/049_Hipe 16 스틱 충진기-1/설비사진_Hipe 16 스틱 충진기-1.jpg",
+      "bytes": 214536,
+      "sha256": "176deb084cf17c441af2c5f7118cdf4673bb4b134e966dfbb084d2213ab11cd8",
+      "crc32": "739be148"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/파우치실/066_치어팩 충진기 1호기/원본카드.json",
+      "path": "references/team3-liquid-20261110/source/3팀/파우치실/066_치어팩 충진기 1호기/원본카드.json",
+      "bytes": 1754,
+      "sha256": "7474626214ccca3d839e418dc7003951ff097cd5b32291260d2db7b0969104e1",
+      "crc32": "44fb1cd0"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/Pet실/044_Pet 라인/원본카드.json",
+      "path": "references/team3-liquid-20261110/source/3팀/Pet실/044_Pet 라인/원본카드.json",
+      "bytes": 1669,
+      "sha256": "0039de0d133fef3a871b20d97f7f96849152c2b004a7114ca0957f56175b86e1",
+      "crc32": "e1a959c3"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/Pet실/044_Pet 라인/설비사진_Pet 라인.jpg",
+      "path": "references/team3-liquid-20261110/source/3팀/Pet실/044_Pet 라인/설비사진_Pet 라인.jpg",
+      "bytes": 196079,
+      "sha256": "be790aef9600b95e76faa78db118ef04841914fc65b457fcb1f51c28d420d3fa",
+      "crc32": "98fb827b"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/파우치실/062_파우치 충진기 2호기/원본카드.json",
+      "path": "references/team3-liquid-20261110/source/3팀/파우치실/062_파우치 충진기 2호기/원본카드.json",
+      "bytes": 1754,
+      "sha256": "4865d0359e1c40e657983c271db9d72e221e1e11ff4e3f7a8f831cbc29ae147e",
+      "crc32": "0d4f1985"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/Pet실/043_Pet실 1/설비이력카드.html",
+      "path": "references/team3-liquid-20261110/source/3팀/Pet실/043_Pet실 1/설비이력카드.html",
+      "bytes": 230190,
+      "sha256": "cee0a3706a3bcc63447ac675e98ee42ea6d25fcf952342dbd6d5d4c364b4aabc",
+      "crc32": "2a824f66"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/파우치실/063_파우치 충진기 1호기/설비사진_파우치 충진기 1호기.jpg",
+      "path": "references/team3-liquid-20261110/source/3팀/파우치실/063_파우치 충진기 1호기/설비사진_파우치 충진기 1호기.jpg",
+      "bytes": 208097,
+      "sha256": "4361a214a989ae64cdf129fe77c1da351588ab5be1ffee6de1981f07f0909e18",
+      "crc32": "fbbb5051"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/후살균실/057_파우치 냉각수조/원본카드.json",
+      "path": "references/team3-liquid-20261110/source/3팀/후살균실/057_파우치 냉각수조/원본카드.json",
+      "bytes": 1725,
+      "sha256": "3f17faef9161e28ec972c8f0f8de94074ced4f98dc9c66137b09c3ed78e04c83",
+      "crc32": "92dffa98"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/파우치실/066_치어팩 충진기 1호기/설비사진_치어팩 충진기 1호기.jpg",
+      "path": "references/team3-liquid-20261110/source/3팀/파우치실/066_치어팩 충진기 1호기/설비사진_치어팩 충진기 1호기.jpg",
+      "bytes": 217696,
+      "sha256": "89981309b9d145e636f3e59c793aad259dfc3ba89a4e95636e31c57cd269bafe",
+      "crc32": "0e3bc574"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/스틱실/048_HIPE 16 스틱 충진기-2/설비사진_HIPE 16 스틱 충진기-2.jpg",
+      "path": "references/team3-liquid-20261110/source/3팀/스틱실/048_HIPE 16 스틱 충진기-2/설비사진_HIPE 16 스틱 충진기-2.jpg",
+      "bytes": 214174,
+      "sha256": "7ea2cb7555213beabeea7efaac5ec95539c68c90042fa77919c85d6556010d84",
+      "crc32": "09f508f1"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/제환실/107_반죽기/설비이력카드.html",
+      "path": "references/team3-liquid-20261110/source/3팀/제환실/107_반죽기/설비이력카드.html",
+      "bytes": 212630,
+      "sha256": "b7e3024b1499b2249ac861e20d1af9a513dc978b89a5e59ff9a3d814a3002fda",
+      "crc32": "a6dff58d"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/배합실/097_살균기 3호기/설비사진_살균기 3호기.jpg",
+      "path": "references/team3-liquid-20261110/source/3팀/배합실/097_살균기 3호기/설비사진_살균기 3호기.jpg",
+      "bytes": 235621,
+      "sha256": "e70fda9f56e61a461d73d5044c3e3e6683c17be0ff393f9958aa26b2a4050a65",
+      "crc32": "030cbac6"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/Pet실/046_파스텔 라이저/설비이력카드.html",
+      "path": "references/team3-liquid-20261110/source/3팀/Pet실/046_파스텔 라이저/설비이력카드.html",
+      "bytes": 194234,
+      "sha256": "1c7200029037980f55cd251322f39b1e069beb5ae31abd4a6d60c8567c24d349",
+      "crc32": "88487859"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/후살균실/058_후살균기/설비이력카드.html",
+      "path": "references/team3-liquid-20261110/source/3팀/후살균실/058_후살균기/설비이력카드.html",
+      "bytes": 278982,
+      "sha256": "6f1b33e6c80c08c0ad0f22d44809faadd69e8251643d86a8eb951a48dd70fa3b",
+      "crc32": "53869d20"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/후살균실/056_파우치 후살균수조/설비사진_파우치 후살균수조.jpg",
+      "path": "references/team3-liquid-20261110/source/3팀/후살균실/056_파우치 후살균수조/설비사진_파우치 후살균수조.jpg",
+      "bytes": 175670,
+      "sha256": "78c2a4f54b92903c1d36a75b163f6b6334b5fde7faee9c6a5d06408e71be7985",
+      "crc32": "9bd5a67d"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/Pet실/047_88파이 자동 충진기/원본카드.json",
+      "path": "references/team3-liquid-20261110/source/3팀/Pet실/047_88파이 자동 충진기/원본카드.json",
+      "bytes": 1742,
+      "sha256": "0f0975d8e89170eb38318080909f475a298204a5be0c3f3b38f9483afbee1423",
+      "crc32": "3ba9ea84"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/Pet실/047_88파이 자동 충진기/설비사진_88파이 자동 충진기.jpg",
+      "path": "references/team3-liquid-20261110/source/3팀/Pet실/047_88파이 자동 충진기/설비사진_88파이 자동 충진기.jpg",
+      "bytes": 187065,
+      "sha256": "ad2e6a442ce61ae660f85053d5d6123767ec60fdc19e1c63469bcb4f515b1a55",
+      "crc32": "4e82e28e"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/배합실/093_호모 믹서탱크/원본카드.json",
+      "path": "references/team3-liquid-20261110/source/3팀/배합실/093_호모 믹서탱크/원본카드.json",
+      "bytes": 1704,
+      "sha256": "c79a9138179bd458dd30f3013d16c699dc539b97d1aa87e68f4f7c29912615e1",
+      "crc32": "301a25f3"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/파우치실/059_치어팩 언로더/설비사진_치어팩 언로더.jpg",
+      "path": "references/team3-liquid-20261110/source/3팀/파우치실/059_치어팩 언로더/설비사진_치어팩 언로더.jpg",
+      "bytes": 206263,
+      "sha256": "d6f1d386619ef39f2db41ffeca6fbd63d8f84ece929629a84ed63dcf3808b964",
+      "crc32": "d866a4e8"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/Pet실/050_병뚜껑 조립기/설비사진_병뚜껑 조립기.jpg",
+      "path": "references/team3-liquid-20261110/source/3팀/Pet실/050_병뚜껑 조립기/설비사진_병뚜껑 조립기.jpg",
+      "bytes": 188797,
+      "sha256": "55645789890ab5e73613b74b5f0d71798d46ceac19a0fc0545063c81b06cff33",
+      "crc32": "fdd0e786"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/파우치실/061_파우치 충진기 3호기/원본카드.json",
+      "path": "references/team3-liquid-20261110/source/3팀/파우치실/061_파우치 충진기 3호기/원본카드.json",
+      "bytes": 1754,
+      "sha256": "0d7f2f453bbcfec9e030a7d0bbdf82084446dedfc651cf0469e2e56d754b8498",
+      "crc32": "630762cf"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/배합실/081_A라인 1-3/설비사진_A라인 1-3.jpg",
+      "path": "references/team3-liquid-20261110/source/3팀/배합실/081_A라인 1-3/설비사진_A라인 1-3.jpg",
+      "bytes": 196161,
+      "sha256": "9a50a701245405cf65481739cd3d992923d783e7298eeb22bf0ecbb5d970de72",
+      "crc32": "9467cfaf"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/후살균실/056_파우치 후살균수조/설비이력카드.html",
+      "path": "references/team3-liquid-20261110/source/3팀/후살균실/056_파우치 후살균수조/설비이력카드.html",
+      "bytes": 254356,
+      "sha256": "3f593aff17b5bb132e0e86878ba3bd0da8ab2e2cab7d17aedea967bccb7b6748",
+      "crc32": "432f46f7"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/파우치실/059_치어팩 언로더/원본카드.json",
+      "path": "references/team3-liquid-20261110/source/3팀/파우치실/059_치어팩 언로더/원본카드.json",
+      "bytes": 1710,
+      "sha256": "5b8fc3e2aee06f1cb84736ca06dbe0619a14f5ab57ebdf5229663d6ec7fc0778",
+      "crc32": "d1ce1e13"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/Pet실/043_Pet실 1/설비사진_Pet실 1.jpg",
+      "path": "references/team3-liquid-20261110/source/3팀/Pet실/043_Pet실 1/설비사진_Pet실 1.jpg",
+      "bytes": 157635,
+      "sha256": "1ee9950f381d7acb39710e0fa448af1cbf71f1bba5fbf84eec73faffd8686eaa",
+      "crc32": "62afd846"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/Pet실/042_28파이 Pet 충진기/설비사진_28파이 Pet 충진기.jpg",
+      "path": "references/team3-liquid-20261110/source/3팀/Pet실/042_28파이 Pet 충진기/설비사진_28파이 Pet 충진기.jpg",
+      "bytes": 178090,
+      "sha256": "a45d79428bf206d75030991d321ac5d62f3c58dd27460002808bd6c7c7a486e7",
+      "crc32": "0dc0da2e"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/후살균실/057_파우치 냉각수조/설비사진_파우치 냉각수조.jpg",
+      "path": "references/team3-liquid-20261110/source/3팀/후살균실/057_파우치 냉각수조/설비사진_파우치 냉각수조.jpg",
+      "bytes": 181463,
+      "sha256": "a3401d46727c6f1c352d431c02cf6926262afc3142104e19b864a64da199bdd3",
+      "crc32": "e230a6fd"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/배합실/098_펄 이송호퍼/원본카드.json",
+      "path": "references/team3-liquid-20261110/source/3팀/배합실/098_펄 이송호퍼/원본카드.json",
+      "bytes": 1689,
+      "sha256": "e337494b05f41c53e1311197ee3e57f1524860ca29ee58b25f5239679a8dbd5e",
+      "crc32": "f598f5e4"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/배합실/096_살균기 2호기/설비사진_살균기 2호기.jpg",
+      "path": "references/team3-liquid-20261110/source/3팀/배합실/096_살균기 2호기/설비사진_살균기 2호기.jpg",
+      "bytes": 216096,
+      "sha256": "f3de812f3c8d7f3f53b7eb822005220352cf9bbd16a6aed4660548d70d5031de",
+      "crc32": "6874162c"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/제환실/107_반죽기/원본카드.json",
+      "path": "references/team3-liquid-20261110/source/3팀/제환실/107_반죽기/원본카드.json",
+      "bytes": 1652,
+      "sha256": "27618e6dcc0a4cdba443c39680b6b3520e616abe356b9e1d26906420ba4f512d",
+      "crc32": "94cdd885"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/파우치실/064_치어팩 충진기 3호기/설비사진_치어팩 충진기 3호기.jpg",
+      "path": "references/team3-liquid-20261110/source/3팀/파우치실/064_치어팩 충진기 3호기/설비사진_치어팩 충진기 3호기.jpg",
+      "bytes": 215348,
+      "sha256": "f5a8a7b1aaab38d2ae6aeeafa338c0cb3f9783ef6eef869630a77d3b53d610fa",
+      "crc32": "6237689f"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/스틱실/060_스틱 냉각기/설비사진_스틱 냉각기.jpg",
+      "path": "references/team3-liquid-20261110/source/3팀/스틱실/060_스틱 냉각기/설비사진_스틱 냉각기.jpg",
+      "bytes": 162878,
+      "sha256": "1aef5e3d4e33b36f7cbe05fecee521fc07e57cb83ff2ef2108e7a1f3e8b7891b",
+      "crc32": "ccb2c921"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/Pet실/042_28파이 Pet 충진기/원본카드.json",
+      "path": "references/team3-liquid-20261110/source/3팀/Pet실/042_28파이 Pet 충진기/원본카드.json",
+      "bytes": 1735,
+      "sha256": "f8387c8af269daa4aab2e09961b020982b2e957101abf3f95360d215ad82e7ef",
+      "crc32": "ab87a629"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/Pet실/047_88파이 자동 충진기/설비이력카드.html",
+      "path": "references/team3-liquid-20261110/source/3팀/Pet실/047_88파이 자동 충진기/설비이력카드.html",
+      "bytes": 269533,
+      "sha256": "bb147a748c56fc3061eb9bd2487b15268e77f56bb5c99efdd4ae91c967fc40e2",
+      "crc32": "a1100690"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/Pet실/046_파스텔 라이저/설비사진_파스텔 라이저.jpg",
+      "path": "references/team3-liquid-20261110/source/3팀/Pet실/046_파스텔 라이저/설비사진_파스텔 라이저.jpg",
+      "bytes": 130615,
+      "sha256": "4f735a68f39e2b5a2945292dd03f171cb39ff56e72f158e4b58752897eb37252",
+      "crc32": "d836e684"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/제환실/107_반죽기/설비사진_반죽기.jpg",
+      "path": "references/team3-liquid-20261110/source/3팀/제환실/107_반죽기/설비사진_반죽기.jpg",
+      "bytes": 144455,
+      "sha256": "2bbf3d792102bb19e40e36c4dcaa34dc12dd1de98dc9daf8a0b55f265d9bf003",
+      "crc32": "6ffbd244"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/후살균실/057_파우치 냉각수조/설비이력카드.html",
+      "path": "references/team3-liquid-20261110/source/3팀/후살균실/057_파우치 냉각수조/설비이력카드.html",
+      "bytes": 262062,
+      "sha256": "2e6142b96526bb09c1852b3e31a721127cce2444b7291dc207b64079b01d7783",
+      "crc32": "e0462e57"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/제환실/106_제환기/원본카드.json",
+      "path": "references/team3-liquid-20261110/source/3팀/제환실/106_제환기/원본카드.json",
+      "bytes": 1654,
+      "sha256": "bd3d39ee2475119fb73b33b79e9fca54e14f2150bcde6ecee9facecc48e91709",
+      "crc32": "fc57eca2"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/Pet실/044_Pet 라인/설비이력카드.html",
+      "path": "references/team3-liquid-20261110/source/3팀/Pet실/044_Pet 라인/설비이력카드.html",
+      "bytes": 281462,
+      "sha256": "11903a5222bb61feeda574d470fd45161344dd55c300e3bb3bf2ac9dbc9571e5",
+      "crc32": "36bfe90e"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/스틱실/048_HIPE 16 스틱 충진기-2/원본카드.json",
+      "path": "references/team3-liquid-20261110/source/3팀/스틱실/048_HIPE 16 스틱 충진기-2/원본카드.json",
+      "bytes": 1755,
+      "sha256": "4ca4df4b80fba30044d8239644c3a4a1d74bdd966f0a0e20701507005887b64c",
+      "crc32": "2453a4e1"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/배합실/098_펄 이송호퍼/설비사진_펄 이송호퍼.jpg",
+      "path": "references/team3-liquid-20261110/source/3팀/배합실/098_펄 이송호퍼/설비사진_펄 이송호퍼.jpg",
+      "bytes": 224913,
+      "sha256": "e96d0c7c2fe69a1f76f11b7af618b6e3899f7ce6f8fe02ddc88e903adbace52f",
+      "crc32": "c7624ae6"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/Pet실/042_28파이 Pet 충진기/설비이력카드.html",
+      "path": "references/team3-liquid-20261110/source/3팀/Pet실/042_28파이 Pet 충진기/설비이력카드.html",
+      "bytes": 257549,
+      "sha256": "2ae12e58da3495ad47637c0780db7b6a43da0117cf5ae5648cd76865198cc0f3",
+      "crc32": "46a51182"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/파우치실/064_치어팩 충진기 3호기/설비이력카드.html",
+      "path": "references/team3-liquid-20261110/source/3팀/파우치실/064_치어팩 충진기 3호기/설비이력카드.html",
+      "bytes": 307272,
+      "sha256": "85c0f89f88f2023dd497d958d9a0c1ab85af025b04cc0bbc304fea4cf0b8c702",
+      "crc32": "7e53439a"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/배합실/100_B라인 열수탱크/원본카드.json",
+      "path": "references/team3-liquid-20261110/source/3팀/배합실/100_B라인 열수탱크/원본카드.json",
+      "bytes": 1713,
+      "sha256": "dc67f3959cadf4108bc6daaf3f096e2054ad1fa4fb5946733596f3a00e7227ab",
+      "crc32": "c85da3b9"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/배합실/081_A라인 1-3/원본카드.json",
+      "path": "references/team3-liquid-20261110/source/3팀/배합실/081_A라인 1-3/원본카드.json",
+      "bytes": 1676,
+      "sha256": "411504cdb4995039d3076ee8a31a2767710f3fcc176344055a17be6d06331e02",
+      "crc32": "678d73ed"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/배합실/099_HCPE - 5 균질기/설비사진_HCPE - 5 균질기.jpg",
+      "path": "references/team3-liquid-20261110/source/3팀/배합실/099_HCPE - 5 균질기/설비사진_HCPE - 5 균질기.jpg",
+      "bytes": 195338,
+      "sha256": "19facd008bb8b6caf60454014d7ff9f1d865cdc28650e42ee34016d6452678a2",
+      "crc32": "ffc08539"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/배합실/097_살균기 3호기/설비이력카드.html",
+      "path": "references/team3-liquid-20261110/source/3팀/배합실/097_살균기 3호기/설비이력카드.html",
+      "bytes": 334235,
+      "sha256": "831b4a5fdf800669f0340f4f5c869221a69e4d1d329bc7f2e1617268d203375b",
+      "crc32": "48db5909"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/Pet실/050_병뚜껑 조립기/설비이력카드.html",
+      "path": "references/team3-liquid-20261110/source/3팀/Pet실/050_병뚜껑 조립기/설비이력카드.html",
+      "bytes": 271808,
+      "sha256": "89f707313f6d6f4abf733cb0931de73d6e3f4863c8d275abbe8cccc7943fc88f",
+      "crc32": "9c01cbd0"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/파우치실/065_치어팩 충진기 2호기/설비이력카드.html",
+      "path": "references/team3-liquid-20261110/source/3팀/파우치실/065_치어팩 충진기 2호기/설비이력카드.html",
+      "bytes": 291124,
+      "sha256": "1249d47bbc7fbcf794f28c838787428f1921c26128599cfd37baecd9ae86dda7",
+      "crc32": "879af057"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/배합실/099_HCPE - 5 균질기/원본카드.json",
+      "path": "references/team3-liquid-20261110/source/3팀/배합실/099_HCPE - 5 균질기/원본카드.json",
+      "bytes": 1713,
+      "sha256": "c503f0c2cc21ee8900acd51d2b8b868b4245bee09ad99254d2e441e5fb0029c2",
+      "crc32": "95c86af2"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/파우치실/062_파우치 충진기 2호기/설비이력카드.html",
+      "path": "references/team3-liquid-20261110/source/3팀/파우치실/062_파우치 충진기 2호기/설비이력카드.html",
+      "bytes": 314784,
+      "sha256": "01e8f855885e9bf8c93e007b6ad3312ead0234d6a6a900fff5fcc617cf54e17a",
+      "crc32": "55d70ee5"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/배합실/097_살균기 3호기/원본카드.json",
+      "path": "references/team3-liquid-20261110/source/3팀/배합실/097_살균기 3호기/원본카드.json",
+      "bytes": 1698,
+      "sha256": "dc97fafe3599ae3cc7621edd71df732e2242accb2a821ff7418c14af734b2879",
+      "crc32": "3b151bae"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/배합실/096_살균기 2호기/원본카드.json",
+      "path": "references/team3-liquid-20261110/source/3팀/배합실/096_살균기 2호기/원본카드.json",
+      "bytes": 1698,
+      "sha256": "cc47546721f66245dfea662c05246c9f6a17bda8971a36267728d9bcb34ecfac",
+      "crc32": "70925fe1"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/제환실/106_제환기/설비이력카드.html",
+      "path": "references/team3-liquid-20261110/source/3팀/제환실/106_제환기/설비이력카드.html",
+      "bytes": 202019,
+      "sha256": "86b5e3d7dc4d26303bce0e50c52165ce4feb3670105384454fb380324b9c856d",
+      "crc32": "4eeb0cf4"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/배합실/098_펄 이송호퍼/설비이력카드.html",
+      "path": "references/team3-liquid-20261110/source/3팀/배합실/098_펄 이송호퍼/설비이력카드.html",
+      "bytes": 319949,
+      "sha256": "058eb36979df981565eba5f4a43e7f4f98a82eb415c4470c3904a44f0a9e705c",
+      "crc32": "80f3b061"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/배합실/082_A라인 1-2/원본카드.json",
+      "path": "references/team3-liquid-20261110/source/3팀/배합실/082_A라인 1-2/원본카드.json",
+      "bytes": 1676,
+      "sha256": "1e9b6f326f5cef14e72e552b38dcac5f89b1a352fe4056145ae3b57a32bd3444",
+      "crc32": "361ef469"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/배합실/100_B라인 열수탱크/설비사진_B라인 열수탱크.jpg",
+      "path": "references/team3-liquid-20261110/source/3팀/배합실/100_B라인 열수탱크/설비사진_B라인 열수탱크.jpg",
+      "bytes": 160539,
+      "sha256": "7c3a39feb96c7693180da35ccbb33756d39e0bd3dbe40f6eb88dd5f7efb0e0f3",
+      "crc32": "cafef021"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/배합실/080_A라인 1-4/설비사진_A라인 1-4.jpg",
+      "path": "references/team3-liquid-20261110/source/3팀/배합실/080_A라인 1-4/설비사진_A라인 1-4.jpg",
+      "bytes": 215523,
+      "sha256": "ba5de6af6fd1a285b38b9449b5ed44f84807c9c6d98531d882f3389eb441fa3f",
+      "crc32": "27d65a2e"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/스틱실/060_스틱 냉각기/설비이력카드.html",
+      "path": "references/team3-liquid-20261110/source/3팀/스틱실/060_스틱 냉각기/설비이력카드.html",
+      "bytes": 237236,
+      "sha256": "dba0d83b0cbf4eeab5a778678986868f4e0e10706973dc9b3243f6eab49fcae2",
+      "crc32": "a87dbeb8"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/배합실/083_A라인 1-1/원본카드.json",
+      "path": "references/team3-liquid-20261110/source/3팀/배합실/083_A라인 1-1/원본카드.json",
+      "bytes": 1676,
+      "sha256": "8f4bfee9fce053b6411eaa88e32519107e73e0d77bebf635b0b90fbfad995e81",
+      "crc32": "bdf5fe2d"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/배합실/082_A라인 1-2/설비이력카드.html",
+      "path": "references/team3-liquid-20261110/source/3팀/배합실/082_A라인 1-2/설비이력카드.html",
+      "bytes": 276961,
+      "sha256": "f4cf1a08c9e31c3a21d8fc64ffebf8bee5b2164e8c41e6b5d75ac9dc19940ab5",
+      "crc32": "7718dbce"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/배합실/094_펄 진동채/설비사진_펄 진동채.jpg",
+      "path": "references/team3-liquid-20261110/source/3팀/배합실/094_펄 진동채/설비사진_펄 진동채.jpg",
+      "bytes": 204288,
+      "sha256": "79108f25f21877ca4018178bf655d3fd58bfd17dcf5180683556e376331c660f",
+      "crc32": "070fdf84"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/배합실/080_A라인 1-4/원본카드.json",
+      "path": "references/team3-liquid-20261110/source/3팀/배합실/080_A라인 1-4/원본카드.json",
+      "bytes": 1676,
+      "sha256": "82508930ec3cd694e2d562f038cd9767b52e5a63c8a8b3b85ab0fc742a968471",
+      "crc32": "f9f02c7c"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/배합실/082_A라인 1-2/설비사진_A라인 1-2.jpg",
+      "path": "references/team3-liquid-20261110/source/3팀/배합실/082_A라인 1-2/설비사진_A라인 1-2.jpg",
+      "bytes": 192695,
+      "sha256": "39933fc5bd62f43f3203bc20e3eb67f602d4c1671de2b88cf6b1c11b56ffd227",
+      "crc32": "6ce3cfa2"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/배합실/095_살균기 1호기/설비사진_살균기 1호기.jpg",
+      "path": "references/team3-liquid-20261110/source/3팀/배합실/095_살균기 1호기/설비사진_살균기 1호기.jpg",
+      "bytes": 256932,
+      "sha256": "3f7c0ca7a31b4816df08bbc03261dbd016fd40251a766db353e334d3b06ad4b7",
+      "crc32": "8d713cb4"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/파우치실/063_파우치 충진기 1호기/설비이력카드.html",
+      "path": "references/team3-liquid-20261110/source/3팀/파우치실/063_파우치 충진기 1호기/설비이력카드.html",
+      "bytes": 297602,
+      "sha256": "787a3d986ec7eb668bf7f4899d2954d8f516fcd17cf9efb38a6ff7c5ca9a1f29",
+      "crc32": "f5e6595e"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/파우치실/061_파우치 충진기 3호기/설비이력카드.html",
+      "path": "references/team3-liquid-20261110/source/3팀/파우치실/061_파우치 충진기 3호기/설비이력카드.html",
+      "bytes": 290304,
+      "sha256": "65344bdb731df3965fd7b63ac032288b8137bc90a7bd01552d24be5cf47c840e",
+      "crc32": "ecbd5326"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/배합실/094_펄 진동채/설비이력카드.html",
+      "path": "references/team3-liquid-20261110/source/3팀/배합실/094_펄 진동채/설비이력카드.html",
+      "bytes": 292431,
+      "sha256": "2bf4edf0a9a328a1a6549a2085f4b34f952111866befa14651bcfb35ee217433",
+      "crc32": "bee79de1"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/스틱실/048_HIPE 16 스틱 충진기-2/설비이력카드.html",
+      "path": "references/team3-liquid-20261110/source/3팀/스틱실/048_HIPE 16 스틱 충진기-2/설비이력카드.html",
+      "bytes": 305685,
+      "sha256": "1875111eeb4af2e873bcdd9f37c8f7f87cdf563eb961f05be6f42d57bc0f3f9f",
+      "crc32": "58bd414f"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/스틱실/049_Hipe 16 스틱 충진기-1/설비이력카드.html",
+      "path": "references/team3-liquid-20261110/source/3팀/스틱실/049_Hipe 16 스틱 충진기-1/설비이력카드.html",
+      "bytes": 306167,
+      "sha256": "cdea616bafee69da627a4fb216d305b1e2931ab829e12dde975e7168db22cfc7",
+      "crc32": "4d4f017f"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/배합실/094_펄 진동채/원본카드.json",
+      "path": "references/team3-liquid-20261110/source/3팀/배합실/094_펄 진동채/원본카드.json",
+      "bytes": 1674,
+      "sha256": "2102396f3756406a23d3aef5dab77d3cd5900dba967a99eb78a327991540cb02",
+      "crc32": "b8df1260"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/배합실/093_호모 믹서탱크/설비사진_호모 믹서탱크.jpg",
+      "path": "references/team3-liquid-20261110/source/3팀/배합실/093_호모 믹서탱크/설비사진_호모 믹서탱크.jpg",
+      "bytes": 238498,
+      "sha256": "f738471bc48236daa671eaa9c9fb5c99c3a430d72cf5b77cf12e4f90b01c26fc",
+      "crc32": "f6a925db"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/배합실/099_HCPE - 5 균질기/설비이력카드.html",
+      "path": "references/team3-liquid-20261110/source/3팀/배합실/099_HCPE - 5 균질기/설비이력카드.html",
+      "bytes": 280524,
+      "sha256": "5f8c1feebac5362b6a5afe9acc4b65577dbbffa2f2b48c104c0c1444a8e3e1a6",
+      "crc32": "7be10b87"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/배합실/100_B라인 열수탱크/설비이력카드.html",
+      "path": "references/team3-liquid-20261110/source/3팀/배합실/100_B라인 열수탱크/설비이력카드.html",
+      "bytes": 234141,
+      "sha256": "0889099df53eb6a55b73712d2aa59c91d232e4ab60f3beb985d9339d32cfa41d",
+      "crc32": "b9759f6e"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/배합실/083_A라인 1-1/설비사진_A라인 1-1.jpg",
+      "path": "references/team3-liquid-20261110/source/3팀/배합실/083_A라인 1-1/설비사진_A라인 1-1.jpg",
+      "bytes": 195415,
+      "sha256": "a1dbcd31b51af0e63712e4705013f35ce67e3f078719471fc9a139b0eddb6ab1",
+      "crc32": "e5ac1c6c"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/배합실/095_살균기 1호기/원본카드.json",
+      "path": "references/team3-liquid-20261110/source/3팀/배합실/095_살균기 1호기/원본카드.json",
+      "bytes": 1698,
+      "sha256": "67abaed65bde5ea58bda7a476e45a29ba2065e00157cba9dbb0103dfcc7d4ad5",
+      "crc32": "79cb915f"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/배합실/081_A라인 1-3/설비이력카드.html",
+      "path": "references/team3-liquid-20261110/source/3팀/배합실/081_A라인 1-3/설비이력카드.html",
+      "bytes": 281581,
+      "sha256": "cf8b569c2dbd06a7db2ca00a504f000b2f88de0ad3a85c047ac7688127e571c7",
+      "crc32": "e5f5fc97"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/배합실/096_살균기 2호기/설비이력카드.html",
+      "path": "references/team3-liquid-20261110/source/3팀/배합실/096_살균기 2호기/설비이력카드.html",
+      "bytes": 308199,
+      "sha256": "103f7a87ca892f4c95114d4f6cbd8ed85479a0de02a157e1595eedb997afaa10",
+      "crc32": "ab5a5d05"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/배합실/083_A라인 1-1/설비이력카드.html",
+      "path": "references/team3-liquid-20261110/source/3팀/배합실/083_A라인 1-1/설비이력카드.html",
+      "bytes": 280589,
+      "sha256": "d97b731a51e3c9551ce8300a8b06c06c657ee100c1f78ecbbbe0a8d5548996fb",
+      "crc32": "74237f03"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/배합실/093_호모 믹서탱크/설비이력카드.html",
+      "path": "references/team3-liquid-20261110/source/3팀/배합실/093_호모 믹서탱크/설비이력카드.html",
+      "bytes": 338083,
+      "sha256": "357f43be369ae0b5e95529f3adb8cd85b163dafb4a34ff1e94b30578cbef9d3c",
+      "crc32": "5ede76a3"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/배합실/080_A라인 1-4/설비이력카드.html",
+      "path": "references/team3-liquid-20261110/source/3팀/배합실/080_A라인 1-4/설비이력카드.html",
+      "bytes": 307397,
+      "sha256": "ca43f5e550bcceca16954bcca41fe8a90649a70de5a7132c3b1d3839a4ddc2c5",
+      "crc32": "df607380"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/배합실/095_살균기 1호기/설비이력카드.html",
+      "path": "references/team3-liquid-20261110/source/3팀/배합실/095_살균기 1호기/설비이력카드.html",
+      "bytes": 362647,
+      "sha256": "7079d1c94557a073db38461d0de1b5d72b58586199e9c525fc7b9eb1a4dc753a",
+      "crc32": "934a881d"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/배합실/070_배합탱크 9/원본카드.json",
+      "path": "references/team3-liquid-20261110/source/3팀/배합실/070_배합탱크 9/원본카드.json",
+      "bytes": 1683,
+      "sha256": "a4152e3a336e12a478fe9a8b3db7727b7f4e70c505e025319d50c830a643ba20",
+      "crc32": "83b3bded"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/배합실/078_3번 배합탱크/원본카드.json",
+      "path": "references/team3-liquid-20261110/source/3팀/배합실/078_3번 배합탱크/원본카드.json",
+      "bytes": 1698,
+      "sha256": "775844299543aa3dba0c8a93b26565fff73934447ec0a2b1d243ff8b69ed853f",
+      "crc32": "8e1ec541"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/배합실/068_배합탱크 10/원본카드.json",
+      "path": "references/team3-liquid-20261110/source/3팀/배합실/068_배합탱크 10/원본카드.json",
+      "bytes": 1690,
+      "sha256": "fa743454c3fac702e1af4efd4c466616eeecdeb0ae5255343e89fcd2f50c7117",
+      "crc32": "e57dfcf7"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/배합실/077_4번 배합탱크/원본카드.json",
+      "path": "references/team3-liquid-20261110/source/3팀/배합실/077_4번 배합탱크/원본카드.json",
+      "bytes": 1698,
+      "sha256": "2a5b0862edfacfcea3afe12c3bb759c2e046d1cad642116e05dd145ee558b85b",
+      "crc32": "2fa9bbca"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/배합실/079_2번 배합탱크/원본카드.json",
+      "path": "references/team3-liquid-20261110/source/3팀/배합실/079_2번 배합탱크/원본카드.json",
+      "bytes": 1698,
+      "sha256": "d4e3df82130b9c6957fc8a2908d37d644924143c82b77cd730b28efac33d0813",
+      "crc32": "0af6a8a7"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/배합실/069_배합탱크 7/설비사진_배합탱크 7.jpg",
+      "path": "references/team3-liquid-20261110/source/3팀/배합실/069_배합탱크 7/설비사진_배합탱크 7.jpg",
+      "bytes": 264193,
+      "sha256": "1cc9d3a6e20a2b1737548ca78276661a01a899ee2b6102e10c5ebeab04b5e6e1",
+      "crc32": "273ccd78"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/배합실/071_3번 탱크/원본카드.json",
+      "path": "references/team3-liquid-20261110/source/3팀/배합실/071_3번 탱크/원본카드.json",
+      "bytes": 1668,
+      "sha256": "ca4c55c81f430244e2dfa299a118ad7014702b0d02d6d2845ffadc5efacf4481",
+      "crc32": "34cedab0"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/배합실/069_배합탱크 7/원본카드.json",
+      "path": "references/team3-liquid-20261110/source/3팀/배합실/069_배합탱크 7/원본카드.json",
+      "bytes": 1683,
+      "sha256": "5d2ce2fe7bfe204d90add95c638102bec3d2fe6cd7491ee1f2e465c3a3bc2d09",
+      "crc32": "6ffe1801"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/배합실/078_3번 배합탱크/설비이력카드.html",
+      "path": "references/team3-liquid-20261110/source/3팀/배합실/078_3번 배합탱크/설비이력카드.html",
+      "bytes": 216267,
+      "sha256": "9c78c578a6bd607be8f4350ed26435ef5b3d12d90c057819273bd99c4c6f2f0b",
+      "crc32": "b9169c55"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/배합실/071_3번 탱크/설비사진_3번 탱크.jpg",
+      "path": "references/team3-liquid-20261110/source/3팀/배합실/071_3번 탱크/설비사진_3번 탱크.jpg",
+      "bytes": 223847,
+      "sha256": "c9dc6f2a966a7e77f34f15bea1a32982bd30cfed0a6d93ecf08e115eaad75343",
+      "crc32": "68a17249"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/배합실/078_3번 배합탱크/설비사진_3번 배합탱크.jpg",
+      "path": "references/team3-liquid-20261110/source/3팀/배합실/078_3번 배합탱크/설비사진_3번 배합탱크.jpg",
+      "bytes": 147147,
+      "sha256": "75b64dc627d8c25860deb278d6d9d876611f756bd7c8a9c9e071da21fb49b7a6",
+      "crc32": "678634ae"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/배합실/070_배합탱크 9/설비사진_배합탱크 9.jpg",
+      "path": "references/team3-liquid-20261110/source/3팀/배합실/070_배합탱크 9/설비사진_배합탱크 9.jpg",
+      "bytes": 255850,
+      "sha256": "784d082cfa4486993911ddd8782aa0e5c1b32781d23cf77cdcc69afd7737d76b",
+      "crc32": "3e845fbc"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/배합실/077_4번 배합탱크/설비이력카드.html",
+      "path": "references/team3-liquid-20261110/source/3팀/배합실/077_4번 배합탱크/설비이력카드.html",
+      "bytes": 261395,
+      "sha256": "731d74f56a0ba4c1c9720dc918cd8e7688565d13418c414929e357a389905690",
+      "crc32": "6f3f8cf9"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/배합실/079_2번 배합탱크/설비이력카드.html",
+      "path": "references/team3-liquid-20261110/source/3팀/배합실/079_2번 배합탱크/설비이력카드.html",
+      "bytes": 239967,
+      "sha256": "162aa0ebb41cd543574d67adf2d2382e1ee8ebe2af125866859f7fcb14564326",
+      "crc32": "446a816b"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/배합실/067_믹서탱크/원본카드.json",
+      "path": "references/team3-liquid-20261110/source/3팀/배합실/067_믹서탱크/원본카드.json",
+      "bytes": 1667,
+      "sha256": "dfce82064ccbf48896252a0e4b2cec3e458878de422c3de923b53f589e1847ad",
+      "crc32": "29bcaab1"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/배합실/077_4번 배합탱크/설비사진_4번 배합탱크.jpg",
+      "path": "references/team3-liquid-20261110/source/3팀/배합실/077_4번 배합탱크/설비사진_4번 배합탱크.jpg",
+      "bytes": 180993,
+      "sha256": "1e8290ef367e5c245c4afcee1e24be0254f8d8498e85d765f94eca3b323641ac",
+      "crc32": "bcc2fa51"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/배합실/071_3번 탱크/설비이력카드.html",
+      "path": "references/team3-liquid-20261110/source/3팀/배합실/071_3번 탱크/설비이력카드.html",
+      "bytes": 318499,
+      "sha256": "b82a59629065473c6e98c94d723dc464a5f752374f78ebad775c378d9e876352",
+      "crc32": "75227370"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/배합실/067_믹서탱크/설비사진_믹서탱크.jpg",
+      "path": "references/team3-liquid-20261110/source/3팀/배합실/067_믹서탱크/설비사진_믹서탱크.jpg",
+      "bytes": 209676,
+      "sha256": "6de79a4ac461372943494f515bdc29b0bbeed8a4190469a20ef792e01ac9f841",
+      "crc32": "4c7991c2"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/배합실/079_2번 배합탱크/설비사진_2번 배합탱크.jpg",
+      "path": "references/team3-liquid-20261110/source/3팀/배합실/079_2번 배합탱크/설비사진_2번 배합탱크.jpg",
+      "bytes": 164921,
+      "sha256": "f7d95da8c9c4edf5328bbd8a6cd9c5178873915802f0804ebd84aa698b3e5bb9",
+      "crc32": "47d6b537"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/배합실/068_배합탱크 10/설비사진_배합탱크 10.jpg",
+      "path": "references/team3-liquid-20261110/source/3팀/배합실/068_배합탱크 10/설비사진_배합탱크 10.jpg",
+      "bytes": 242511,
+      "sha256": "0c8713be84fcce2f8aa83ac571eb5f5c7bc642ab22a6cb2b4bbb743c625053d1",
+      "crc32": "b4d8dfc6"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/배합실/070_배합탱크 9/설비이력카드.html",
+      "path": "references/team3-liquid-20261110/source/3팀/배합실/070_배합탱크 9/설비이력카드.html",
+      "bytes": 361189,
+      "sha256": "26dd6c43c13514a3db5de30b19c5ce28f36f61e1bca77d7e088608d21182b9ab",
+      "crc32": "f374f34e"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/외포장실/054_3팀용 제함기 1호기/원본카드.json",
+      "path": "references/team3-liquid-20261110/source/3팀/외포장실/054_3팀용 제함기 1호기/원본카드.json",
+      "bytes": 1728,
+      "sha256": "25eb1f33bc4eaf6e44263168e61ce1eddd3e36802466e330a3a67abedcb882ec",
+      "crc32": "83c40146"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/외포장실/105_티칭 로봇/원본카드.json",
+      "path": "references/team3-liquid-20261110/source/3팀/외포장실/105_티칭 로봇/원본카드.json",
+      "bytes": 1680,
+      "sha256": "3c45beeca2e4fbe6730baac185a3d18a3ef8da8db7d94f5160df95891015f592",
+      "crc32": "af04df8e"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/외포장실/102_핫멜트/원본카드.json",
+      "path": "references/team3-liquid-20261110/source/3팀/외포장실/102_핫멜트/원본카드.json",
+      "bytes": 1658,
+      "sha256": "2844deadd9c7e51205f9883ba2dc66cbd2a38610b12cf1ff9a426adbb5954d75",
+      "crc32": "de4fbc7d"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/배합실/067_믹서탱크/설비이력카드.html",
+      "path": "references/team3-liquid-20261110/source/3팀/배합실/067_믹서탱크/설비이력카드.html",
+      "bytes": 299608,
+      "sha256": "096367f39af2125497b09c6877eb575a89ab07798cf9c67423b6c8544158a5e2",
+      "crc32": "656db693"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/배합실/068_배합탱크 10/설비이력카드.html",
+      "path": "references/team3-liquid-20261110/source/3팀/배합실/068_배합탱크 10/설비이력카드.html",
+      "bytes": 343406,
+      "sha256": "5f133a94474e210b09cab80770ff2f98eb74102b888e3e90cb60c6866cf8c979",
+      "crc32": "601f2ef1"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/외포장실/052_병 라인 중량 선별기/원본카드.json",
+      "path": "references/team3-liquid-20261110/source/3팀/외포장실/052_병 라인 중량 선별기/원본카드.json",
+      "bytes": 1714,
+      "sha256": "dcfb5b8e4b72cfaa98ec3a9e218447a5cd778302243bf3472570ed9936e7e7e2",
+      "crc32": "4962d8b9"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/배합실/069_배합탱크 7/설비이력카드.html",
+      "path": "references/team3-liquid-20261110/source/3팀/배합실/069_배합탱크 7/설비이력카드.html",
+      "bytes": 372313,
+      "sha256": "1f2589853c70aefa41a0670e21b055b51bd0835a38814628aa7d712b4f04fcab",
+      "crc32": "fd889643"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/외포장실/102_핫멜트/설비사진_핫멜트.jpg",
+      "path": "references/team3-liquid-20261110/source/3팀/외포장실/102_핫멜트/설비사진_핫멜트.jpg",
+      "bytes": 159208,
+      "sha256": "64dd239f779b1a292071f118fb924455f60095ce35262a7cbb0bf61063310cde",
+      "crc32": "b0983bd0"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/외포장실/045_38파이 라벨러/원본카드.json",
+      "path": "references/team3-liquid-20261110/source/3팀/외포장실/045_38파이 라벨러/원본카드.json",
+      "bytes": 1709,
+      "sha256": "8b5076d09958b51ddd2ae00d5170b4d00dc646eb12211b2a5768233e27f10167",
+      "crc32": "de688733"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/보일러실/101_에어 콤프레셔/원본카드.json",
+      "path": "references/team3-liquid-20261110/source/3팀/보일러실/101_에어 콤프레셔/원본카드.json",
+      "bytes": 1710,
+      "sha256": "36b8e6061ae17aea1832b0ab15d1f30e067f97265440729e3bf4c183965700d1",
+      "crc32": "fecbaa12"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/보일러실/101_에어 콤프레셔/설비사진_에어 콤프레셔.jpg",
+      "path": "references/team3-liquid-20261110/source/3팀/보일러실/101_에어 콤프레셔/설비사진_에어 콤프레셔.jpg",
+      "bytes": 121952,
+      "sha256": "aec2eb2ad3c508868f7685844d2f02ff0426fbefc27536f40267a71443e2a3e4",
+      "crc32": "c07eca89"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/외포장실/052_병 라인 중량 선별기/설비이력카드.html",
+      "path": "references/team3-liquid-20261110/source/3팀/외포장실/052_병 라인 중량 선별기/설비이력카드.html",
+      "bytes": 223288,
+      "sha256": "dea538447a762799926d8a74d873ceefc5e18402aec4d794a4ad0e66b282b59d",
+      "crc32": "13182490"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/외포장실/105_티칭 로봇/설비사진_티칭 로봇.jpg",
+      "path": "references/team3-liquid-20261110/source/3팀/외포장실/105_티칭 로봇/설비사진_티칭 로봇.jpg",
+      "bytes": 171741,
+      "sha256": "3e10d778c6c2b30d7fb88c9ed433425030e50c4f91f7d4b20a16f7edf52a0c34",
+      "crc32": "467b8ff3"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/외포장실/105_티칭 로봇/설비이력카드.html",
+      "path": "references/team3-liquid-20261110/source/3팀/외포장실/105_티칭 로봇/설비이력카드.html",
+      "bytes": 249044,
+      "sha256": "0680f6acb5f6518c4d42d129e9be5f019bd397a0019bd302b591e98e1d52a503",
+      "crc32": "f5a8eb7f"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/외포장실/055_10입 자동 포장기/원본카드.json",
+      "path": "references/team3-liquid-20261110/source/3팀/외포장실/055_10입 자동 포장기/원본카드.json",
+      "bytes": 1731,
+      "sha256": "2c5f87131f0b02b99782e93e600fe29f42d0aa6837d1786f4389bde4d55bdfa8",
+      "crc32": "016d258d"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/보일러실/103_보일러 3호기/원본카드.json",
+      "path": "references/team3-liquid-20261110/source/3팀/보일러실/103_보일러 3호기/원본카드.json",
+      "bytes": 1704,
+      "sha256": "9e013651d4a4ab53c28ab6074e6b00a97028e97827ede32f4e202eb9218dcbad",
+      "crc32": "b2f2841f"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/보일러실/051_연수기/설비사진_연수기.jpg",
+      "path": "references/team3-liquid-20261110/source/3팀/보일러실/051_연수기/설비사진_연수기.jpg",
+      "bytes": 157154,
+      "sha256": "61877d85cdaf4ba912e29e8712d06c819542594706f31ca13415b8ea61d67c48",
+      "crc32": "1aed41e9"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/보일러실/103_보일러 3호기/설비사진_보일러 3호기.jpg",
+      "path": "references/team3-liquid-20261110/source/3팀/보일러실/103_보일러 3호기/설비사진_보일러 3호기.jpg",
+      "bytes": 165383,
+      "sha256": "369d166b38eac99a6d11adfc37e5c18498da266382b9df1f2ad17c7514955997",
+      "crc32": "508549fe"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/외포장실/054_3팀용 제함기 1호기/설비사진_3팀용 제함기 1호기.jpg",
+      "path": "references/team3-liquid-20261110/source/3팀/외포장실/054_3팀용 제함기 1호기/설비사진_3팀용 제함기 1호기.jpg",
+      "bytes": 200925,
+      "sha256": "47b94a195f1fb4b38527c79d3642293ec421f8f9331a0ecb5c101b3664650d31",
+      "crc32": "1e9eda93"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/보일러실/104_보일러 1,2호기/원본카드.json",
+      "path": "references/team3-liquid-20261110/source/3팀/보일러실/104_보일러 1,2호기/원본카드.json",
+      "bytes": 1718,
+      "sha256": "81427fb184a6cd365df7fca61ed68b6cc7a7e2579d9cbfb6744df2a22212f279",
+      "crc32": "f76899be"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/외포장실/053_카토너/설비사진_카토너.jpg",
+      "path": "references/team3-liquid-20261110/source/3팀/외포장실/053_카토너/설비사진_카토너.jpg",
+      "bytes": 204685,
+      "sha256": "4a800ad90438d888764d21643acf9dd739e908062a6726b71a1dbd012ad93593",
+      "crc32": "4e1f8c92"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/보일러실/104_보일러 1,2호기/설비사진_보일러 1,2호기.jpg",
+      "path": "references/team3-liquid-20261110/source/3팀/보일러실/104_보일러 1,2호기/설비사진_보일러 1,2호기.jpg",
+      "bytes": 169219,
+      "sha256": "3e3a9cddfc0f8cc80c24e0e77632ea63d9d4bce69c74de48fa7ea9359d9535a7",
+      "crc32": "cc5ce6e6"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/외포장실/053_카토너/원본카드.json",
+      "path": "references/team3-liquid-20261110/source/3팀/외포장실/053_카토너/원본카드.json",
+      "bytes": 1660,
+      "sha256": "97cc5ee1f1930c61609c83b7af4345429a99444baa36469fb2c4ed40a90f9b77",
+      "crc32": "618909a2"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/외포장실/052_병 라인 중량 선별기/설비사진_병 라인 중량 선별기.jpg",
+      "path": "references/team3-liquid-20261110/source/3팀/외포장실/052_병 라인 중량 선별기/설비사진_병 라인 중량 선별기.jpg",
+      "bytes": 152359,
+      "sha256": "994677baca3770c0400436284d959c4f18b9ab82b30a71c8429fd4c32d38766e",
+      "crc32": "92897b96"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/외포장실/045_38파이 라벨러/설비사진_38파이 라벨러.jpg",
+      "path": "references/team3-liquid-20261110/source/3팀/외포장실/045_38파이 라벨러/설비사진_38파이 라벨러.jpg",
+      "bytes": 161465,
+      "sha256": "a230618a61bb93cb62f925d4d8bf0c269462d81cbe5f4333e4eab5f26c3b68e1",
+      "crc32": "53e72bda"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/외포장실/055_10입 자동 포장기/설비사진_10입 자동 포장기.jpg",
+      "path": "references/team3-liquid-20261110/source/3팀/외포장실/055_10입 자동 포장기/설비사진_10입 자동 포장기.jpg",
+      "bytes": 193459,
+      "sha256": "4143b870bb8af046e3b5800f0af7abdd0900850a8050b355481dc3c9e3ec5962",
+      "crc32": "b6cee4a0"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/외포장실/102_핫멜트/설비이력카드.html",
+      "path": "references/team3-liquid-20261110/source/3팀/외포장실/102_핫멜트/설비이력카드.html",
+      "bytes": 232311,
+      "sha256": "71e0d4800009f39e19a17dae4f4db3b8997520db8d526e833b70e6b7e7f855bc",
+      "crc32": "fdf72938"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/보일러실/051_연수기/원본카드.json",
+      "path": "references/team3-liquid-20261110/source/3팀/보일러실/051_연수기/원본카드.json",
+      "bytes": 1660,
+      "sha256": "461d2d17b1598624f4be68db7b7ed3606dd102e291f2aaa5dc8866c117743434",
+      "crc32": "bda5bdf6"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/외포장실/054_3팀용 제함기 1호기/설비이력카드.html",
+      "path": "references/team3-liquid-20261110/source/3팀/외포장실/054_3팀용 제함기 1호기/설비이력카드.html",
+      "bytes": 288026,
+      "sha256": "f9bba6f8a2c441aeda2ce01c40d07735269626729964ddeb0af4493d3e92e0b3",
+      "crc32": "8d279ebe"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/보일러실/103_보일러 3호기/설비이력카드.html",
+      "path": "references/team3-liquid-20261110/source/3팀/보일러실/103_보일러 3호기/설비이력카드.html",
+      "bytes": 240592,
+      "sha256": "fea5fb9f136927600fdd3a7d4fe40917f5154e1c8b06b9b20506ea0a4357ffe8",
+      "crc32": "6fb8e7e4"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/외포장실/055_10입 자동 포장기/설비이력카드.html",
+      "path": "references/team3-liquid-20261110/source/3팀/외포장실/055_10입 자동 포장기/설비이력카드.html",
+      "bytes": 278057,
+      "sha256": "768944a33a99062c12472aa1da9107b22c1fb17a6ce059c399ae969f2368fbcc",
+      "crc32": "1a386743"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/외포장실/045_38파이 라벨러/설비이력카드.html",
+      "path": "references/team3-liquid-20261110/source/3팀/외포장실/045_38파이 라벨러/설비이력카드.html",
+      "bytes": 235372,
+      "sha256": "bd23839fdc463d0a9304cee4abc9dd8589bf6fd089157cc5c9f9ec2e033a7a42",
+      "crc32": "6668be6f"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/외포장실/053_카토너/설비이력카드.html",
+      "path": "references/team3-liquid-20261110/source/3팀/외포장실/053_카토너/설비이력카드.html",
+      "bytes": 292948,
+      "sha256": "3533c5c37a635a2f3670c933c5423cf2ffffb30e966788016da35e0a8714d124",
+      "crc32": "2e68e27c"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/보일러실/104_보일러 1,2호기/설비이력카드.html",
+      "path": "references/team3-liquid-20261110/source/3팀/보일러실/104_보일러 1,2호기/설비이력카드.html",
+      "bytes": 245720,
+      "sha256": "7dd5c41a7343c8e83bcf450bfd7ad5c4b0a83ffa8b71a8f60dc5f300c02e1665",
+      "crc32": "c0c99fe5"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/보일러실/101_에어 콤프레셔/설비이력카드.html",
+      "path": "references/team3-liquid-20261110/source/3팀/보일러실/101_에어 콤프레셔/설비이력카드.html",
+      "bytes": 182696,
+      "sha256": "84538dfd8fa0f97225f73c8494383166adb648f17d4c31a85cfa9474e120539b",
+      "crc32": "f89fdfeb"
+    },
+    {
+      "archiveMember": "2팀 3팀 설비이력카드_2026-11-10/3팀/보일러실/051_연수기/설비이력카드.html",
+      "path": "references/team3-liquid-20261110/source/3팀/보일러실/051_연수기/설비이력카드.html",
+      "bytes": 229572,
+      "sha256": "f333295bfe9fe3e292ac5ffd69916036a30ce6a0f59f42d7c9875482f79dee44",
+      "crc32": "92bd4768"
+    }
+  ],
+  "fileCount": 156,
+  "bytes": 24501166,
+  "cardCount": 52,
+  "roomCounts": {
+    "Pet실": 6,
+    "외포장실": 7,
+    "스틱실": 3,
+    "보일러실": 4,
+    "후살균실": 3,
+    "파우치실": 7,
+    "배합실": 20,
+    "제환실": 2
+  },
+  "originalsModified": false,
+  "limits": [
+    "이력카드의 가동률/비가동 표시는 저장된 기록이며 현재 운전상태가 아님.",
+    "사진의 FRONT/LEFT/RIGHT/REAR는 카드 촬영 방향이며 공장 방위와 자동 대응하지 않음.",
+    "3팀 스틱실 HIPE16 충진기는 액상 내부 카드이며 2팀9동 스틱1~8과 별개."
+  ]
+}

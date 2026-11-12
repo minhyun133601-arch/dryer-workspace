@@ -1,0 +1,74 @@
+{
+  "id": "3-hcpe-5-1781856872079-392380",
+  "line": "",
+  "name": "HCPE - 5 균질기",
+  "note": "",
+  "plan": "",
+  "rate": 0,
+  "room": "배합실",
+  "team": "3팀",
+  "group": "",
+  "owner": "",
+  "status": "비가동중",
+  "process": "",
+  "documents": [],
+  "lastCheck": "",
+  "modelName": "",
+  "nextCheck": "",
+  "photoCrop": null,
+  "photoName": "HCPE - 5 균질기 photo.jpg",
+  "detailInfo": [
+    {
+      "label": "설비명",
+      "value": "HCPE - 5 균질기"
+    },
+    {
+      "label": "관리팀",
+      "value": "3팀"
+    },
+    {
+      "label": "가동률",
+      "value": "0%"
+    }
+  ],
+  "ownerLabel": "담당 업체",
+  "production": "",
+  "teamDataKey": "work_team_calendar_team3",
+  "detailGroups": {
+    "equipmentSpecs": []
+  },
+  "manufacturer": "",
+  "photoDataUrl": "",
+  "equipmentCode": "3-HCPE-5-1781856872079-392380",
+  "operationInfo": [
+    {
+      "label": "설비명",
+      "value": "HCPE - 5 균질기"
+    },
+    {
+      "label": "관리팀",
+      "value": "3팀"
+    },
+    {
+      "label": "실",
+      "value": "배합실"
+    },
+    {
+      "label": "공정",
+      "value": ""
+    },
+    {
+      "label": "가동률",
+      "value": "0"
+    }
+  ],
+  "manufacturedAt": "",
+  "photoDocumentId": "bbaf8299-07ff-4d31-ab75-0e1927fefa27",
+  "photoPreviewUrl": "/api/files/bbaf8299-07ff-4d31-ab75-0e1927fefa27/view",
+  "photoDownloadUrl": "/api/files/bbaf8299-07ff-4d31-ab75-0e1927fefa27/download",
+  "manufacturerLabel": "제조사",
+  "photoThumbDataUrl": "",
+  "maintenanceHistory": [],
+  "photoAttachmentKey": "equipment-photo-main",
+  "photoStorageRelPath": "equipment-assets/equipment-history/HCPE - 5 균질기/images/0e95bc04-3002-4fcd-a958-4b9ec13172c1.jpg"
+}

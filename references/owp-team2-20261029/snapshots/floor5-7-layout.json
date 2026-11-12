@@ -1,0 +1,189 @@
+{
+  "sourceFile": "video57.js",
+  "scene": "2팀 5~7층",
+  "snapshot_at": "2026-10-29T14:15:24.138097+09:00",
+  "layout": [
+    {
+      "element": "div",
+      "className": "Light",
+      "style": {
+        "position": "absolute",
+        "top": 0,
+        "left": 0,
+        "zoom": "100%"
+      }
+    },
+    {
+      "element": "div",
+      "className": "clock"
+    },
+    {
+      "element": "div",
+      "className": "OP-VAL-DRYER_V600CV labelvalue_1_glass"
+    },
+    {
+      "element": "div",
+      "className": "GuageChart"
+    },
+    {
+      "element": "div",
+      "className": "valpos"
+    },
+    {
+      "element": "div",
+      "className": "sensornm"
+    },
+    {
+      "element": "div",
+      "className": "val g"
+    },
+    {
+      "element": "div",
+      "className": "unit"
+    },
+    {
+      "element": "div",
+      "className": "OP-VAL-DRYER_E101PV labelvalue_1_glass"
+    },
+    {
+      "element": "div",
+      "className": "GuageChart"
+    },
+    {
+      "element": "div",
+      "className": "valpos"
+    },
+    {
+      "element": "div",
+      "className": "sensornm"
+    },
+    {
+      "element": "div",
+      "className": "val g"
+    },
+    {
+      "element": "div",
+      "className": "unit"
+    },
+    {
+      "element": "div",
+      "className": "OP-VAL-DRYER_E107PV labelvalue_1_glass"
+    },
+    {
+      "element": "div",
+      "className": "GuageChart"
+    },
+    {
+      "element": "div",
+      "className": "valpos"
+    },
+    {
+      "element": "div",
+      "className": "sensornm"
+    },
+    {
+      "element": "div",
+      "className": "val g"
+    },
+    {
+      "element": "div",
+      "className": "unit"
+    },
+    {
+      "element": "div",
+      "className": "OP-VAL-DRYER_X100PV labelvalue_1_glass"
+    },
+    {
+      "element": "div",
+      "className": "GuageChart"
+    },
+    {
+      "element": "div",
+      "className": "valpos"
+    },
+    {
+      "element": "div",
+      "className": "sensornm"
+    },
+    {
+      "element": "div",
+      "className": "val g"
+    },
+    {
+      "element": "div",
+      "className": "unit"
+    },
+    {
+      "element": "div",
+      "className": "OP-VAL-DRYER_E100CV labelvalue_1_glass"
+    },
+    {
+      "element": "div",
+      "className": "GuageChart"
+    },
+    {
+      "element": "div",
+      "className": "valpos"
+    },
+    {
+      "element": "div",
+      "className": "sensornm"
+    },
+    {
+      "element": "div",
+      "className": "val g"
+    },
+    {
+      "element": "div",
+      "className": "unit"
+    },
+    {
+      "element": "div",
+      "className": "OP-VAL-DRYER_E200PV labelvalue_1_glass"
+    },
+    {
+      "element": "div",
+      "className": "GuageChart"
+    },
+    {
+      "element": "div",
+      "className": "valpos"
+    },
+    {
+      "element": "div",
+      "className": "sensornm"
+    },
+    {
+      "element": "div",
+      "className": "val g"
+    },
+    {
+      "element": "div",
+      "className": "unit"
+    },
+    {
+      "element": "div",
+      "className": "OP-VAL-DRYER_E100PV labelvalue_1_glass"
+    },
+    {
+      "element": "div",
+      "className": "GuageChart"
+    },
+    {
+      "element": "div",
+      "className": "valpos"
+    },
+    {
+      "element": "div",
+      "className": "sensornm"
+    },
+    {
+      "element": "div",
+      "className": "val g"
+    },
+    {
+      "element": "div",
+      "className": "unit"
+    }
+  ]
+}

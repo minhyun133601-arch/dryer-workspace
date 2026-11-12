@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><base href="/apps/site/"><title>출입문 부착·통로 검토</title><link rel="icon" href="/workspace/icon.svg"><style>html,body{margin:0;width:100%;height:100%;overflow:hidden}canvas{display:block;width:100%;height:100%}output{position:absolute;top:10px;left:10px;max-width:450px;background:#ffffffe8;padding:8px;border-radius:5px;font:13px/1.5 sans-serif;pointer-events:none}</style></head><body><canvas id="review"></canvas><output id="caption">문 주변 기하 검토</output><script type="module">
+import * as THREE from '/apps/shared/vendor/three.module.js';
+import { createFacilityScene } from '/apps/site/scene.js';
+import { EQUIPMENT } from '/apps/site/building-data.js';
+import { CAMPUS_EQUIPMENT } from '/apps/site/campus-data.js';
+import { PACKAGING_EQUIPMENT } from '/apps/site/packaging-data.js';
+import { OUTDOOR_EQUIPMENT } from '/apps/site/outdoor-data.js';
+const canvas=document.getElementById('review');
+const scene=createFacilityScene(canvas,{equipment:[...EQUIPMENT,...CAMPUS_EQUIPMENT,...PACKAGING_EQUIPMENT,...OUTDOOR_EQUIPMENT],floor:'campus'});
+window.reviewScene=scene;
+window.THREE=THREE;
+window.inspectPoint=(point,eye,caption='')=>{
+  scene.setActive(false);
+  const camera=new THREE.PerspectiveCamera(45,canvas.clientWidth/canvas.clientHeight,.025,3000);
+  camera.position.set(...eye);camera.lookAt(...point);camera.updateMatrixWorld(true);
+  scene.scene.updateMatrixWorld(true);scene.renderer.render(scene.scene,camera);
+  document.getElementById('caption').textContent=caption;
+};
+window.inspectObject=(name,{area='campus',level=1,direction=[1,.45,1],distance=9,offset=[0,0,0],caption=name}={})=>{
+  scene.setFloor(area);if(area==='packaging')scene.setPackagingLevel(level);
+  scene.setView('perspective');scene.setActive(false);scene.scene.updateMatrixWorld(true);
+  const object=scene.scene.getObjectByName(name);if(!object)throw Error('No object '+name);
+  const bounds=new THREE.Box3().setFromObject(object),point=bounds.getCenter(new THREE.Vector3()).add(new THREE.Vector3(...offset));
+  const eye=point.clone().add(new THREE.Vector3(...direction).normalize().multiplyScalar(distance));
+  window.inspectPoint(point.toArray(),eye.toArray(),caption);
+  return {min:bounds.min.toArray(),max:bounds.max.toArray(),eye:eye.toArray(),point:point.toArray()};
+};
+const entry=scene.proximityDoors.getPassages().find(door=>door.portal?.area==='packaging');
+window.inspectPoint([entry.point[0],entry.point[1]+1.4,entry.point[2]],[entry.point[0]-6,entry.point[1]+2.4,entry.point[2]+4],'2팀 뒷문 · 문 앞 접근 공간');
+window.reviewReady=true;
+</script></body></html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#172a2a">
+  <meta name="description" content="희창유업 공장과 설비의 외형·배치를 실제 영상과 현장 자료로 재현하는 통합 3D 모델링 작업실">
+  <title>희창유업 3D 모델링 작업실</title>
+  <link rel="icon" href="workspace/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="workspace/styles.css">
+  <script type="module" src="workspace/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#workspace-main">본문으로 바로가기</a>
+  <header class="workspace-header">
+    <a class="workspace-brand" href="#/home" aria-label="희창유업 3D 모델링 프로젝트 홈">
+      <img src="workspace/icon.svg" width="34" height="34" alt="">
+      <span><strong>희창유업 3D</strong><small>공장·설비 모델링 작업실</small></span>
+    </a>
+    <nav id="workspace-nav" aria-label="설비 메뉴">
+      <a href="#/home" data-route="home" aria-current="page">전체 보기</a>
+    </nav>
+    <span class="workspace-caption"><i></i>설비 탐색</span>
+  </header>
+  <main id="workspace-main" tabindex="-1">
+    <section id="home-view" class="home-view" aria-labelledby="home-title">
+      <div class="home-intro">
+        <p class="eyebrow">HEECHANG 3D WORKSPACE <span>01</span></p>
+        <h1 id="home-title">희창유업의 현장을<br>3D 모델로<span>.</span></h1>
+        <p class="intro-copy">공장 전경에서 건물·설비의 배치까지.<br>현장 영상·사진·도면과 비교하며 모델을 보완합니다.</p>
+      </div>
+      <div class="section-title"><h2>모델링 작업 공간</h2><span id="module-count"></span></div>
+      <div id="module-cards" class="module-cards"></div>
+      <div class="home-note"><span class="note-mark" aria-hidden="true">↔</span><p>현장 모델과 근거자료를 함께 확인하세요.<br><a href="#/drawings">도면 근거자료 열기 ↗</a></p></div>
+      <footer class="home-footer"><span>희창유업 3D 모델링 프로젝트</span><span>공장 전경 · 건물 · 설비 · 구조</span></footer>
+    </section>
+    <div id="module-views" class="module-views" hidden></div>
+    <div id="module-loading" class="module-loading" role="status" hidden><span class="spinner" aria-hidden="true"></span><span id="loading-label">화면을 준비하고 있습니다.</span></div>
+    <section id="module-error" class="module-error" role="alert" hidden>
+      <h1>화면을 불러오지 못했습니다.</h1><p id="error-message"></p>
+      <button id="retry-module" type="button">다시 불러오기</button><a href="#/home">전체 보기로 돌아가기</a>
+    </section>
+  </main>
+  <noscript>이 워크스페이스를 사용하려면 브라우저에서 JavaScript를 켜 주세요.</noscript>
+  <script>
+    // Classic fallback remains readable when the browser blocks file:// modules.
+    if (location.protocol === 'file:') {
+      document.getElementById('home-view').hidden = true;
+      document.getElementById('module-error').hidden = false;
+      document.getElementById('error-message').textContent = '폴더의 「프로젝트 실행.cmd」를 더블클릭하면 워크스페이스가 열립니다.';
+      document.getElementById('retry-module').hidden = true;
+    }
+  </script>
+</body>
+</html>

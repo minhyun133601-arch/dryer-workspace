@@ -1,0 +1,20 @@
+{
+  "name": "dryer-workspace",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "희창유업 공장·설비 3D 모델링과 도면 검토 작업실",
+  "scripts": {
+    "start": "node tooling/launch.mjs",
+    "dev": "node tooling/launch.mjs",
+    "serve": "node tooling/serve.mjs",
+    "check": "node tooling/check.mjs",
+    "assets:check": "node tooling/check-assets.mjs",
+    "assets:index": "node tooling/index-assets.mjs",
+    "export:site": "node tooling/export-site.mjs",
+    "export:share": "node tooling/export-share.mjs",
+    "export:presentation": "node tooling/export-site.mjs --profile dryer",
+    "test": "node tooling/test.mjs"
+  },
+  "engines": { "node": ">=20" }
+}

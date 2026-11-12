@@ -1,0 +1,121 @@
+{
+  "workspace": "C:\\Users\\user\\Desktop\\근거 자료",
+  "deleteFiles": [
+    {
+      "source": "관리자료/이전캡처/2025-12-05 생산2팀)생산 설비 중 V-MIXER(2기) 매각 처리의 件 공무환경팀-202512-보고서-4/문서 원본 백업.zip",
+      "size": 1265237,
+      "sha256": "5a32c5f77433a1102eb7146a173bd5afa77eded4cfd2990d83c8cecc2e4d647b",
+      "reason": "같은 V-MIXER 문서의 이전 캡처. 두 ZIP의 모든 본문·첨부 payload SHA256 동일, 최신 캡처 보존."
+    },
+    {
+      "source": "관리자료/이전캡처/2025-12-05 생산2팀)생산 설비 중 V-MIXER(2기) 매각 처리의 件 공무환경팀-202512-보고서-4/보고서 본문.jpg",
+      "size": 140660,
+      "sha256": "d03f8d2eaebaeb03bb123220f485caf196a45d8a67ae5f7a98eec0de78968006",
+      "reason": "같은 V-MIXER 문서의 이전 캡처. 두 ZIP의 모든 본문·첨부 payload SHA256 동일, 최신 캡처 보존."
+    },
+    {
+      "source": "관리자료/이전캡처/2025-12-05 생산2팀)생산 설비 중 V-MIXER(2기) 매각 처리의 件 공무환경팀-202512-보고서-4/보고서 본문.pdf",
+      "size": 144568,
+      "sha256": "a62011bbe9abcc0a1d31c9be011252be7c37cf0107a2cd412b53e21b35b986d7",
+      "reason": "같은 V-MIXER 문서의 이전 캡처. 두 ZIP의 모든 본문·첨부 payload SHA256 동일, 최신 캡처 보존."
+    },
+    {
+      "source": "관리자료/이전캡처/2025-12-05 생산2팀)생산 설비 중 V-MIXER(2기) 매각 처리의 件 공무환경팀-202512-보고서-4/보고서 정보.txt",
+      "size": 3308,
+      "sha256": "be6b74e7383295c6e9d9c8abd07e669efc3d50a3e33bd06ea99fda1c688903e6",
+      "reason": "같은 V-MIXER 문서의 이전 캡처. 두 ZIP의 모든 본문·첨부 payload SHA256 동일, 최신 캡처 보존."
+    },
+    {
+      "source": "관리자료/이전캡처/2025-12-05 생산2팀)생산 설비 중 V-MIXER(2기) 매각 처리의 件 공무환경팀-202512-보고서-4/첨부파일/V-MIXER  철거 견적서.xlsx",
+      "size": 39817,
+      "sha256": "0cf4e8ea27eb3dee951fb1de50c01dcfc0870aaeaf2ec21192934353662c7588",
+      "reason": "같은 V-MIXER 문서의 이전 캡처. 두 ZIP의 모든 본문·첨부 payload SHA256 동일, 최신 캡처 보존."
+    },
+    {
+      "source": "관리자료/이전캡처/2025-12-05 생산2팀)생산 설비 중 V-MIXER(2기) 매각 처리의 件 공무환경팀-202512-보고서-4/첨부파일/V-MIXER계약서.docx",
+      "size": 16612,
+      "sha256": "054b6b3bf7dbaeae9a5cf04706c61d53943883cdb07497dd6ab9980938acab69",
+      "reason": "같은 V-MIXER 문서의 이전 캡처. 두 ZIP의 모든 본문·첨부 payload SHA256 동일, 최신 캡처 보존."
+    },
+    {
+      "source": "관리자료/이전캡처/2025-12-05 생산2팀)생산 설비 중 V-MIXER(2기) 매각 처리의 件 공무환경팀-202512-보고서-4/첨부파일/V-MIXER철거 관련.pptx",
+      "size": 750845,
+      "sha256": "4a2bed5f908f54dfd59a52629042e48c2e4d2acbf9ac509be298cbc4a4418d28",
+      "reason": "같은 V-MIXER 문서의 이전 캡처. 두 ZIP의 모든 본문·첨부 payload SHA256 동일, 최신 캡처 보존."
+    },
+    {
+      "source": "관리자료/이전캡처/2025-12-05 생산2팀)생산 설비 중 V-MIXER(2기) 매각 처리의 件 공무환경팀-202512-보고서-4/첨부파일/사업자 등록증.png",
+      "size": 148094,
+      "sha256": "6c3c1e541a7ce3774a2b9fe9d80d5073dd362b835f4796490b79c78e127dde45",
+      "reason": "같은 V-MIXER 문서의 이전 캡처. 두 ZIP의 모든 본문·첨부 payload SHA256 동일, 최신 캡처 보존."
+    },
+    {
+      "source": "관리자료/이전캡처/2025-12-05 생산2팀)생산 설비 중 V-MIXER(2기) 매각 처리의 件 공무환경팀-202512-보고서-4/첨부파일/설치관견 근거(기안지).pdf",
+      "size": 258652,
+      "sha256": "967db9dfb8323186b52364360865597539dbdaefaafff4494419239517c51519",
+      "reason": "같은 V-MIXER 문서의 이전 캡처. 두 ZIP의 모든 본문·첨부 payload SHA256 동일, 최신 캡처 보존."
+    },
+    {
+      "source": "_work_organize/before-links.xlsx",
+      "size": 316650,
+      "sha256": "2594802a2bfdb988153c3fa675006410f9c6481e6f4161ae5a3c81fd884683b4",
+      "reason": "원문 링크 수정 검증을 마친 임시 복사본"
+    },
+    {
+      "source": "_work_organize/rebased-links.xlsx",
+      "size": 314064,
+      "sha256": "7e20d4e38ea12f399625ca22407c1d3a733c73ed295936c727d637fcab4a6f6d",
+      "reason": "원문 링크 수정 검증을 마친 임시 복사본"
+    }
+  ],
+  "emptyCandidates": [
+    "관리자료/이전캡처/2025-12-05 생산2팀)생산 설비 중 V-MIXER(2기) 매각 처리의 件 공무환경팀-202512-보고서-4/첨부파일",
+    "관리자료/이전캡처/2025-12-05 생산2팀)생산 설비 중 V-MIXER(2기) 매각 처리의 件 공무환경팀-202512-보고서-4",
+    "관리자료/수집·검토/_work_heat_exchanger/visual_sources",
+    "관리자료/이전작업/_work/year_bridge/powerpoint_renders",
+    "관리자료/이전작업/_work/deck_build/powerpoint_renders",
+    "관리자료/이전작업/_work/hub_pdf_qa/2026-2027-summary",
+    "관리자료/이전작업/_work/deck_build/powerpoint_final",
+    "관리자료/수집·검토/_work_2025/final_exports_build",
+    "관리자료/수집·검토/_work_heat_exchanger/3d_assets",
+    "관리자료/이전작업/_work/deck_build/powerpoint_v2",
+    "관리자료/이전작업/_work/deck_build/powerpoint_v4",
+    "관리자료/수집·검토/_work_approvals/__pycache__",
+    "관리자료/이전작업/outputs/2026_2027_투자실적_추진계획",
+    "관리자료/이전작업/_work/hub_pdf_qa/2027-plan",
+    "관리자료/이전작업/_work/deck_build/previous",
+    "관리자료/이전작업/_work/hub_pdf_qa/2026-kpi",
+    "관리자료/이전작업/_work/year_bridge/renders",
+    "관리자료/수집·검토/_work_approvals/xlsx_qa",
+    "관리자료/이전작업/_work/deck_build/renders",
+    "관리자료/수집·검토/_work_2025/__pycache__",
+    "관리자료/이전작업/outputs/2027_투자효과_정량보강",
+    "관리자료/이전작업/_work/plan_render/plan",
+    "관리자료/수집·검토/_work_heat_exchanger",
+    "관리자료/이전작업/outputs/2027_KPI_투자근거",
+    "관리자료/이전작업/_work/plan_render/kpi",
+    "관리자료/이전작업/_work/xlsx_previews",
+    "관리자료/이전작업/_work/deck_assets",
+    "관리자료/이전작업/_work/plan_render",
+    "관리자료/이전작업/_work/year_bridge",
+    "관리자료/수집·검토/_work_approvals",
+    "관리자료/이전작업/_work/deck_build",
+    "관리자료/이전작업/_work/hub_pdf_qa",
+    "관리자료/이전작업/_work/early_ocr",
+    "관리자료/이전작업/_work/late_ocr",
+    "관리자료/이전작업/_work/tessdata",
+    "관리자료/수집·검토/_work_2025",
+    "2026년 기안서 자료/문서별 폴더",
+    "관리자료/이전작업/outputs",
+    "2025년 자료/문서별 폴더",
+    "관리자료/이전작업/_work",
+    "관리자료/이전작업/화면검토",
+    "2026년 기안서 자료",
+    "기안·보고 금액총괄",
+    "관리자료/수집·검토",
+    "관리자료/이전작업",
+    "관리자료/이전캡처",
+    "2025년 자료",
+    "보고서별 폴더"
+  ]
+}

@@ -1,0 +1,251 @@
+{
+  "source": "1팀 2파트 출입구 - 1.5층 - 3층\\20261112_145442KST_GPS-VALID_LAT35.3631133_LON129.0300967_H153.0-TN_DIR-AVAILABLE_P-21.2_ACC2.6m_FV-7459fd4f-decc-45cb-974d-d90fc6bca7f5.mp4",
+  "duration_seconds": 724.804311,
+  "step_seconds": 1.0,
+  "samples": [
+    {
+      "seconds": 414.0,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0414.00s.jpg"
+    },
+    {
+      "seconds": 415.0,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0415.00s.jpg"
+    },
+    {
+      "seconds": 416.0,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0416.00s.jpg"
+    },
+    {
+      "seconds": 417.0,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0417.00s.jpg"
+    },
+    {
+      "seconds": 418.0,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0418.00s.jpg"
+    },
+    {
+      "seconds": 419.0,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0419.00s.jpg"
+    },
+    {
+      "seconds": 420.0,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0420.00s.jpg"
+    },
+    {
+      "seconds": 421.0,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0421.00s.jpg"
+    },
+    {
+      "seconds": 422.0,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0422.00s.jpg"
+    },
+    {
+      "seconds": 423.0,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0423.00s.jpg"
+    },
+    {
+      "seconds": 424.0,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0424.00s.jpg"
+    },
+    {
+      "seconds": 425.0,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0425.00s.jpg"
+    },
+    {
+      "seconds": 426.0,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0426.00s.jpg"
+    },
+    {
+      "seconds": 427.0,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0427.00s.jpg"
+    },
+    {
+      "seconds": 428.0,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0428.00s.jpg"
+    },
+    {
+      "seconds": 429.0,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0429.00s.jpg"
+    },
+    {
+      "seconds": 430.0,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0430.00s.jpg"
+    },
+    {
+      "seconds": 431.0,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0431.00s.jpg"
+    },
+    {
+      "seconds": 432.0,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0432.00s.jpg"
+    },
+    {
+      "seconds": 433.0,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0433.00s.jpg"
+    },
+    {
+      "seconds": 434.0,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0434.00s.jpg"
+    },
+    {
+      "seconds": 435.0,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0435.00s.jpg"
+    },
+    {
+      "seconds": 436.0,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0436.00s.jpg"
+    },
+    {
+      "seconds": 437.0,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0437.00s.jpg"
+    },
+    {
+      "seconds": 438.0,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0438.00s.jpg"
+    },
+    {
+      "seconds": 439.0,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0439.00s.jpg"
+    },
+    {
+      "seconds": 440.0,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0440.00s.jpg"
+    },
+    {
+      "seconds": 441.0,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0441.00s.jpg"
+    },
+    {
+      "seconds": 442.0,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0442.00s.jpg"
+    },
+    {
+      "seconds": 443.0,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0443.00s.jpg"
+    },
+    {
+      "seconds": 444.0,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0444.00s.jpg"
+    },
+    {
+      "seconds": 445.0,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0445.00s.jpg"
+    },
+    {
+      "seconds": 446.0,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0446.00s.jpg"
+    },
+    {
+      "seconds": 447.0,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0447.00s.jpg"
+    },
+    {
+      "seconds": 448.0,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0448.00s.jpg"
+    },
+    {
+      "seconds": 449.0,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0449.00s.jpg"
+    },
+    {
+      "seconds": 450.0,
+      "file": "workspace\\dryer-entrance-mezzanine-20261112\\frames\\frame-0450.00s.jpg"
+    }
+  ],
+  "probe": {
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+        "profile": "High",
+        "codec_type": "video",
+        "codec_tag_string": "avc1",
+        "codec_tag": "0x31637661",
+        "mime_codec_string": "avc1.640028",
+        "width": 1920,
+        "height": 1080,
+        "coded_width": 1920,
+        "coded_height": 1080,
+        "has_b_frames": 0,
+        "pix_fmt": "yuv420p",
+        "level": 40,
+        "color_range": "tv",
+        "color_space": "bt709",
+        "color_transfer": "bt709",
+        "color_primaries": "bt709",
+        "chroma_location": "left",
+        "field_order": "progressive",
+        "is_avc": "true",
+        "nal_length_size": "4",
+        "id": "0x1",
+        "r_frame_rate": "30/1",
+        "avg_frame_rate": "488655000/16308097",
+        "time_base": "1/90000",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 65232388,
+        "duration": "724.804311",
+        "bit_rate": "11989350",
+        "bits_per_raw_sample": "8",
+        "nb_frames": "21718",
+        "extradata_size": 36,
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "creation_time": "2026-11-12T06:06:46.000000Z",
+          "language": "eng",
+          "handler_name": "VideoHandle"
+        },
+        "side_data_list": [
+          {
+            "side_data_type": "Display Matrix",
+            "displaymatrix": "\n00000000:            0       65536           0\n00000001:       -65536           0           0\n00000002:            0           0  1073741824\n",
+            "rotation": -90
+          }
+        ]
+      }
+    ],
+    "format": {
+      "filename": "C:\\Users\\user\\Desktop\\프로젝트\\1팀 2파트 출입구 - 1.5층 - 3층\\20261112_145442KST_GPS-VALID_LAT35.3631133_LON129.0300967_H153.0-TN_DIR-AVAILABLE_P-21.2_ACC2.6m_FV-7459fd4f-decc-45cb-974d-d90fc6bca7f5.mp4",
+      "nb_streams": 1,
+      "nb_programs": 0,
+      "nb_stream_groups": 0,
+      "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+      "format_long_name": "QuickTime / MOV",
+      "start_time": "0.000000",
+      "duration": "724.804311",
+      "size": "1086386547",
+      "bit_rate": "11990950",
+      "probe_score": 100,
+      "tags": {
+        "major_brand": "mp42",
+        "minor_version": "0",
+        "compatible_brands": "isommp42",
+        "creation_time": "2026-11-12T06:06:46.000000Z",
+        "com.android.version": "16"
+      }
+    }
+  },
+  "method": "Timestamped visual review; auto-rotated video frames. Original untouched. GPS is camera metadata, never room geometry.",
+  "drawing_policy": "Photographed drawings are reference-only; current visible room sequence and explicit user corrections govern reconstruction."
+}

@@ -1,0 +1,74 @@
+{
+  "id": "3-4-1782113831419-67585",
+  "line": "",
+  "name": "배합실 냉각기 유니트 4",
+  "note": "",
+  "plan": "",
+  "rate": 0,
+  "room": "실외기실",
+  "team": "3팀",
+  "group": "",
+  "owner": "",
+  "status": "비가동중",
+  "process": "",
+  "documents": [],
+  "lastCheck": "",
+  "modelName": "",
+  "nextCheck": "",
+  "photoCrop": null,
+  "photoName": "배합실 냉각기 유니트 4 photo.jpg",
+  "detailInfo": [
+    {
+      "label": "설비명",
+      "value": "배합실 냉각기 유니트 4"
+    },
+    {
+      "label": "관리팀",
+      "value": "3팀"
+    },
+    {
+      "label": "가동률",
+      "value": "0%"
+    }
+  ],
+  "ownerLabel": "담당 업체",
+  "production": "",
+  "teamDataKey": "work_team_calendar_team3",
+  "detailGroups": {
+    "equipmentSpecs": []
+  },
+  "manufacturer": "",
+  "photoDataUrl": "",
+  "equipmentCode": "3-4-1782113831419-67585",
+  "operationInfo": [
+    {
+      "label": "설비명",
+      "value": "배합실 냉각기 유니트 4"
+    },
+    {
+      "label": "관리팀",
+      "value": "3팀"
+    },
+    {
+      "label": "실",
+      "value": "실외기실"
+    },
+    {
+      "label": "공정",
+      "value": ""
+    },
+    {
+      "label": "가동률",
+      "value": "0"
+    }
+  ],
+  "manufacturedAt": "",
+  "photoDocumentId": "40cd9148-0473-48b3-a62f-f593dd7ce931",
+  "photoPreviewUrl": "/api/files/40cd9148-0473-48b3-a62f-f593dd7ce931/view",
+  "photoDownloadUrl": "/api/files/40cd9148-0473-48b3-a62f-f593dd7ce931/download",
+  "manufacturerLabel": "제조사",
+  "photoThumbDataUrl": "",
+  "maintenanceHistory": [],
+  "photoAttachmentKey": "equipment-photo-main",
+  "photoStorageRelPath": "equipment-assets/equipment-history/배합실 냉각기 유니트 4/images/a79dc389-fa80-41c8-92d0-702249a50875.jpg"
+}

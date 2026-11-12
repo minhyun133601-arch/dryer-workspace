@@ -1,0 +1,17 @@
+import * as THREE from '../../../apps/shared/vendor/three.module.js';
+import { writeFileSync } from 'node:fs';
+import { REAR_PACKAGING_SURVEY } from '../../../apps/site/rear-survey-data.js';
+import { buildRearStairDetails } from '../../../apps/site/rear-stair-models.js';
+const materials=new Set(),geometries=new Set(),root=new THREE.Group();
+const s={materials,geometries,textures:new Set(),_material(color){const m=new THREE.MeshBasicMaterial({color});materials.add(m);return m;},_group(parent,p=[0,0,0]){const g=new THREE.Group();g.position.set(...p);parent.add(g);return g;},_mesh(geo,mat,parent,p=[0,0,0]){geometries.add(geo);const m=new THREE.Mesh(geo,mat);m.position.set(...p);parent.add(m);return m;},_part(parent){return this._group(parent);}};
+buildRearStairDetails(s,root,{rearSurvey:REAR_PACKAGING_SURVEY});root.updateMatrixWorld(true);
+const entry=root.getObjectByName('rear-survey-team2-stair-glass-entry'),rack=root.getObjectByName('rear-survey-rear-hvac-steel-platform');
+const clearance=new THREE.Box3(new THREE.Vector3(6.55,.1,-2.9),new THREE.Vector3(9.05,2.6,-.4));
+const overlaps=[];
+rack.traverse(node=>{if(!node.isMesh)return;const b=new THREE.Box3().setFromObject(node);if(b.intersectsBox(clearance))overlaps.push(node.name);});
+const normal=new THREE.Vector3(0,0,1).transformDirection(entry.matrixWorld);
+const nearestGroundEnvelopeMaxX=Math.max(...rack.children.filter(x=>x.userData.observedHvacLevel==='ground').map(x=>new THREE.Box3().setFromObject(x).max.x));
+const result={entryPosition:entry.position.toArray(),outwardNormal:normal.toArray(),rackPosition:rack.position.toArray(),placementAdjustment:REAR_PACKAGING_SURVEY.features.find(x=>x.id==='rear-hvac-steel-platform').placementAdjustment,frontApproachBounds:{min:clearance.min.toArray(),max:clearance.max.toArray()},rackObstructions:overlaps,nearestGroundEnvelopeMaxX,doorFaceGap:entry.position.x-nearestGroundEnvelopeMaxX};
+console.log(JSON.stringify(result,null,2));writeFileSync(new URL('./entry-clearance.json',import.meta.url),JSON.stringify(result,null,2)+'\n','utf8');
+if(overlaps.length)process.exitCode=1;
+for(const g of geometries)g.dispose();for(const m of materials)m.dispose();

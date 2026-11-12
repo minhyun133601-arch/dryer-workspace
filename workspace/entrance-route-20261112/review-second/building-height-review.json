@@ -1,0 +1,76 @@
+{
+  "date": "2026-11-12",
+  "target": "campus-packaging-building / 현재 2팀 스틱·소포장동 9동",
+  "reviewedVideoSeconds": [260,263.5,264,266,268,270,275.5,276,277,278,280,286],
+  "primaryDrawing": {
+    "path": "references/stick-packaging-3f/재설계-기준장면/도면/04_9동_주단면도_A-11_층고_창높이_지붕.png",
+    "sheet": "A-11",
+    "dateAsPrinted": "07.11",
+    "originalPdfSha256": "a916647d98da42e492055d2ba73508d83f2e4e827d61ecd46d61030ae615e1ec",
+    "readDirectly": true
+  },
+  "supportingDrawings": [
+    "references/stick-packaging-3f/재설계-기준장면/도면/05_9동_입면도_A-09_A-10_창띠위치.png",
+    "references/stick-packaging-3f/재설계-기준장면/도면/06_9동_3층평면도_A-07_플랫폼치수_칸막이3m.png"
+  ],
+  "drawingDimensionsMetresRelativeToGL": {
+    "firstFloor": 0.1,
+    "secondFloor": 6.1,
+    "thirdFloor": 12.25,
+    "eave": 18.25,
+    "ridge": 19.61
+  },
+  "existingInteriorModelDatumFirstFloorZero": {
+    "floorLevels": [0, 6, 12.15],
+    "eaveHeight": 18.15,
+    "ridgeHeight": 19.51,
+    "thirdFloorToEave": 6,
+    "ridgeRise": 1.36,
+    "secondFloorWindowSill": 7,
+    "secondFloorWindowCenter": 7.75,
+    "thirdFloorWindowSill": 13.15,
+    "thirdFloorWindowCenter": 13.9,
+    "windowHeight": 1.5
+  },
+  "confirmedPlanDimensions": {
+    "mainWidth": 31.35,
+    "mainDepth": 30.4,
+    "sideStairProjection": 3.45,
+    "stairAndLiftProjection": 3.15,
+    "recommendation": "주 본체 가로·세로는 도면값 유지. 새 영상의 원근 비례로 임의 확대하지 않음"
+  },
+  "roof": {
+    "profile": "M형 두 박공",
+    "crossSectionDirection": "도면Y축30.4m / 실내 모델Z축",
+    "ridgeZ": [-7.6, 7.6],
+    "ridgeDirection": "모델X축",
+    "eaveAndCenterValleyHeight": 18.15,
+    "ridgeHeight": 19.51,
+    "drawingConflict": "경사1.5:10표기와반경간7.6m에서계산한상승1.14m는명시된1.36m와불일치. 직접높이치수1.36m우선"
+  },
+  "previousCampusErrors": {
+    "eaveHeight": 13.3,
+    "singleGableRise": 2.2,
+    "totalHeight": 15.5,
+    "thirdFloorClearanceUnderEave": 1.15,
+    "rearWindowCenters": [4.95, 7.05],
+    "reason": "도면으로이미등록된3층바닥12.15m와외관13.3m가서로맞지않음. 신규상향영상은높은3층창과처마까지확인되어외관높이보정이필요"
+  },
+  "childOwnedCorrections": {
+    "returnMassHeight": 18.15,
+    "rearWindowCenters": [7.75, 13.9],
+    "rearWindowHeight": 1.5,
+    "rainPipeHeight": 18,
+    "exhaustHoodBase": 17.3,
+    "exhaustHoodTop": 18.15,
+    "exhaustRiserFromTo": [0.8, 17.3],
+    "doorAndRackHeightPreserved": "입구문2.5m·처마2.9m·실외기가대3.4m를건물높이에비례해늘리지않음"
+  },
+  "limitations": [
+    "도면의작성일·층고는현재준공최종개정또는실측확정을뜻하지않음",
+    "고각·광각촬영영상의픽셀비율을직접미터치수로전환하지않음",
+    "새리턴매스의가로외곽/벽두께/문앞이격은사용자확인과모델접근여유조정에따른근사",
+    "별도7층건조실의낮은서쪽계단매스13.3m와현재2팀3층건물높이를혼동하지않음"
+  ],
+  "verification": {"featureTests": 21, "passed": 21, "doorApproachIntersections": 0, "doorFaceGap": 3.375}
+}

@@ -1,0 +1,21 @@
+{
+  "reviewDate": "2026-11-12",
+  "scope": "Read-only cross-check of building9 / current stick-small-packaging Team2 outer envelope",
+  "sources": [
+    {"sheet":"A-11","title":"9동 주단면도","printedDate":"07.11","path":"근거 자료/건물3D 후보도면/02_동별건축/미확정/9동 단면도__a916647d98da.pdf","sha256":"a916647d98da42e492055d2ba73508d83f2e4e827d61ecd46d61030ae615e1ec","reviewImage":"근거 자료/도면검토앱/cache/a916647d98da42e492055d2ba73508d83f2e4e827d61ecd46d61030ae615e1ec/page-001.png"},
+    {"sheet":"A-09/A-10","title":"9동 정면도·우측면도/배면도·좌측면도","printedDate":"07.11","path":"근거 자료/건물3D 후보도면/02_동별건축/미확정/9동 입면도__e27e79d777b0.pdf","sha256":"e27e79d777b09d9dbdf30019a4f7df80a539e4ad78cc7f3be56768546d6c1e4a"},
+    {"sheet":"A-07","title":"9동3층평면도","path":"근거 자료/건물3D 후보도면/02_동별건축/미확정/9동 3층 평면도__5e277bc0ef93.pdf","sha256":"5e277bc0ef93126be48afa878cd5938a60c93a64caae7cabb529770708cdde1f"}
+  ],
+  "readDimensionsMetres": {
+    "bodyOuterX":31.35,"bodyOuterPlanY":30.4,"axisX":30.75,"axisPlanY":29.8,"outerWallThickness":0.3,
+    "leftStairProjection":3.45,"frontStairLiftProjection":3.15,"bboxWithProjections":[34.8,33.55],
+    "firstFloorAbsoluteElevation":0.1,"secondFloorAbsoluteElevation":6.1,"thirdFloorAbsoluteElevation":12.25,
+    "storeyRise1to2":6,"storeyRise2to3":6.15,"thirdFloorToEaves":6,"eavesToRidge":1.36,
+    "eavesAboveFirstFloor":18.15,"ridgeAboveFirstFloor":19.51,"eavesAboveGround":18.25,"ridgeAboveGround":19.61
+  },
+  "roof": {"type":"two adjacent shallow gables with a central valley","crossSectionAxis":"planY0..Y6, corresponding to modelZ if existing local plan frame is retained","spanAcrossTwoGables":30.4,"nominalSpanEach":15.2,"ridgeDirection":"planX / modelX, parallel to the31.35m width","roofRiseEach":1.36,"caution":"A-11 is an older architectural design drawing; final present-day roof revision is not independently certified."},
+  "recommendedModel": {"mainWidth":31.35,"mainDepth":30.4,"floorElevationsRelativeToFirstFloor":[0,6,12.15],"wallHeightWhenBaseIsFirstFloor":18.15,"roofRise":1.36,"wallHeightWhenBaseIsGround":18.25,"roundingNote":"18.3m is a practical rounding of the ground-to-eaves value, but18.15m is internally consistent with the current normalized floor-elevation array."},
+  "currentMismatch": "Current campus wall height13.3m and single2.2m gable leave only1.15m of wall above the third-floor slab at12.15m. The architectural section instead provides6m from third-floor to eaves. Both the current overall height and the single-gable direction conflict with A-11/A-09/A-10.",
+  "stairMass": {"drawing":"The9dong side stair/lift projection and vertical glazing span all3floors on A-10, so any confirmed9dong stair envelope should connect to the18.15m eaves datum.","existingLowWestTowerShaft":"REAR_TOWER_SURVEY.low-west-stair-bay currently belongs to the7floor dryer parent and is13.3m high. A-11 alone does not establish that this particular photographed shaft is9dong; confirm in the new exterior video before changing its height."},
+  "limitations":["Do not use mobile GPS altitude to determine floor or roof heights.","31.35x30.40 excludes stair/lift projections; do not inflate the entire rectangular building to34.8x33.55.","The3m partition detail on A-07 is not the full third-storey ceiling height."]
+}

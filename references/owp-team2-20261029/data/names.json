@@ -1,0 +1,74 @@
+{
+  "team2": {
+    "equipment": [],
+    "sensors": [],
+    "note": "원본 고정 라벨 기준. 2팀 전체는 별도 설비명 오버레이가 없으며 영상에 포함된 실명·구역명은 설비명과 구분한다."
+  },
+  "floor1": {
+    "equipment": ["ICA1", "ICA2", "ICA3", "XRAY1", "XRAY2", "XRAY3", "금속검출기", "용해탱크", "혼합B", "혼합A", "오일탱크", "열수탱크", "S-1", "지대", "박스", "적재"],
+    "sensors": [
+      {"name":"전체 수량","tag":"ICA1_Total_Count","unit":"EA","equipment":"ICA1"},
+      {"name":"불량 수량","tag":"ICA1_Ng_Count","unit":"EA","equipment":"ICA1"},
+      {"name":"전체 수량","tag":"ICA2_Total_Count","unit":"EA","equipment":"ICA2"},
+      {"name":"불량 수량","tag":"ICA2_Ng_Count","unit":"EA","equipment":"ICA2"},
+      {"name":"전체 수량","tag":"ICA3_Total_Count","unit":"EA","equipment":"ICA3"},
+      {"name":"불량 수량","tag":"ICA3_Ng_Count","unit":"EA","equipment":"ICA3"},
+      {"name":"NG수량","tag":"ICA1_Xray_Ng_Count","unit":"EA","equipment":"XRAY1"},
+      {"name":"NG수량","tag":"ICA2_Xray_Ng_Count","unit":"EA","equipment":"XRAY2"},
+      {"name":"NG수량","tag":"ICA3_Xray_Ng_Count","unit":"EA","equipment":"XRAY3"},
+      {"name":"NG수량","tag":"WEIGHT3_Ng_Count","unit":"EA","equipment":"금속검출기"},
+      {"name":"온도","tag":"PREPROCESS_Melt_Temp","unit":"°C","equipment":"용해탱크"},
+      {"name":"무게","tag":"PREPROCESS_Melt_Weight","unit":null,"equipment":"용해탱크"},
+      {"name":"온도","tag":"PREPROCESS_MixB_Pasteur_Temp","unit":"°C","equipment":"혼합B"},
+      {"name":"무게","tag":"PREPROCESS_MixB_Weight","unit":null,"equipment":"혼합B"},
+      {"name":"온도","tag":"PREPROCESS_MixA_Pasteur_Temp","unit":"°C","equipment":"혼합A"},
+      {"name":"무게","tag":"PREPROCESS_MixA_Weight","unit":null,"equipment":"혼합A"},
+      {"name":"온도","tag":"PREPROCESS_MixA_OilTank_Temp","unit":"°C","equipment":"오일탱크"},
+      {"name":"온도","tag":"PREPROCESS_MixB_Pasteur_Temp","unit":"°C","equipment":"열수탱크"},
+      {"name":"온도","tag":"PREPROCESS_MixB_Pasteur_Temp","unit":"°C","equipment":"S-1"},
+      {"name":"전체수량","tag":"WEIGHT3_Total_Count","unit":"EA","equipment":"지대"},
+      {"name":"전체수량","tag":null,"unit":"EA","equipment":"박스","source_class":"OP-VAL-WEIGHT2"},
+      {"name":"전체수량","tag":null,"unit":"EA","equipment":"박스","source_class":"OP-VAL-WEIGHT3"},
+      {"name":"랩핑","tag":null,"unit":"EA","equipment":"적재"}
+    ],
+    "note": "원본 고정 라벨 기준. 설비명 17개 표시 위치(고유명 16개, 박스 2곳). 태그는 JSX 바인딩에서 _Value를 생략한 이름이며 저장 응답에 모두 존재한다는 뜻은 아니다. tag=null인 박스2/박스3/적재는 각각 ceil(o/2), o, o+ceil(o/2)-15이고 o=ICA2_Total_Count+ICA3_Total_Count-ICA3_Xray_Ng_Count. 열수탱크·S-1의 혼합B 태그 반복은 원본 그대로."
+  },
+  "floor3": {
+    "equipment": ["균질기"],
+    "sensors": [
+      {"name":"(1) CCP-1B 원액온도","tag":"DRYER_E403PV","unit":"℃"},
+      {"name":"(2) 홀딩시간","tag":"DRYER_HOLDING_TIME","unit":"sec"},
+      {"name":"(3) 노즐원액 압력","tag":"DRYER_E209PV","unit":"bar"},
+      {"name":"(4) 살균기 온도(통과전)","tag":"DRYER_E401PV","unit":"℃"},
+      {"name":"(5) 탱크 온도","tag":"DRYER_E319PV","unit":"%"},
+      {"name":"1차 압력 출력값","tag":"DRYER_E207PV","unit":"bar","equipment":"균질기","popup":true},
+      {"name":"1차 압력 셋팅값","tag":"DRYER_E207CV","unit":"%","equipment":"균질기","popup":true},
+      {"name":"2차 압력 출력값","tag":"DRYER_E208PV","unit":"bar","equipment":"균질기","popup":true},
+      {"name":"2차 압력 셋팅값","tag":"DRYER_E208CV","unit":"%","equipment":"균질기","popup":true},
+      {"name":"원액공급압력","tag":"DRYER_E210PV","unit":"bar","equipment":"균질기","popup":true},
+      {"name":"살균 후 온도","tag":"DRYER_E106PV","unit":"℃","equipment":"균질기","popup":true}
+    ],
+    "note": "원본 고정 라벨 기준. 균질기는 기본 숨김 팝업의 제목이며 제목 원문은 균질기(출력값,셋팅값) 및 균질기. 팝업 센서는 popup=true. 탱크 온도/%는 원본 표기이며 데이터 SENSORNM S2 탱크 잔량과 구분한다."
+  },
+  "floor4": {
+    "equipment": [],
+    "sensors": [
+      {"name":"V/F진공","tag":"DRYER_E201PV","unit":"mmWG"},
+      {"name":"화인리턴","tag":"DRYER_E206PV","unit":"mmWG"}
+    ],
+    "note": "원본 고정 계기 라벨 기준. 별도 .name 설비명 표제는 없다. V/F진공 뒤에는 원본에서 _USL 상태값을 추가하는 바인딩도 있다."
+  },
+  "floor5-7": {
+    "equipment": [],
+    "sensors": [
+      {"name":"메인송풍량","tag":"DRYER_V600CV","unit":"%"},
+      {"name":"챔버출구온도","tag":"DRYER_E101PV","unit":"℃"},
+      {"name":"V/F출구온도","tag":"DRYER_E107PV","unit":"℃"},
+      {"name":"SSA","tag":"DRYER_X100PV","unit":"kg/h"},
+      {"name":"가스량","tag":"DRYER_E100CV","unit":"%"},
+      {"name":"챔버진공값","tag":"DRYER_E200PV","unit":"kg/h"},
+      {"name":"챔버입구온도","tag":"DRYER_E100PV","unit":"℃"}
+    ],
+    "note": "원본 고정 계기 라벨 기준. 별도 .name 설비명 표제는 없다. SSA 및 챔버진공값의 kg/h 단위를 포함하여 원문을 유지했다. 영상 형태에서 기계명을 추정해 추가하지 않았다."
+  }
+}

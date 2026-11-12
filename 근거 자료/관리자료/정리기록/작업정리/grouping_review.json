@@ -1,0 +1,2075 @@
+{
+  "readOnlyReview": true,
+  "sourceFilesChanged": false,
+  "canonicalCaptureFolderCount": 172,
+  "registryDocumentCount": 171,
+  "uniqueRegisteredCaptureFolders": 171,
+  "missingRegisteredFolders": [],
+  "duplicatePhysicalCaptures": [
+    {
+      "docId": "329459",
+      "docNo": "공무환경팀-202512-보고서-4",
+      "extraFolder": "보고서별 폴더/2025-12-05 생산2팀)생산 설비 중 V-MIXER(2기) 매각 처리의 件 공무환경팀-202512-보고서-4",
+      "canonicalFolder": "2025년 자료/문서별 폴더/2025-12-05 생산2팀)생산 설비 중 V-MIXER(2기) 매각 처리의 件 공무환경팀-202512-보고서-4",
+      "newGroupedFolder": "사업자료/2025-12-05 생산2팀)생산 설비 중 V-MIXER(2기) 매각 처리",
+      "byteIdenticalExtractedFiles": [
+        {
+          "source": "보고서별 폴더/2025-12-05 생산2팀)생산 설비 중 V-MIXER(2기) 매각 처리의 件 공무환경팀-202512-보고서-4/보고서 본문.jpg",
+          "canonical": "2025년 자료/문서별 폴더/2025-12-05 생산2팀)생산 설비 중 V-MIXER(2기) 매각 처리의 件 공무환경팀-202512-보고서-4/문서 본문.jpg",
+          "sha256": "d03f8d2eaebaeb03bb123220f485caf196a45d8a67ae5f7a98eec0de78968006",
+          "size": 140660
+        },
+        {
+          "source": "보고서별 폴더/2025-12-05 생산2팀)생산 설비 중 V-MIXER(2기) 매각 처리의 件 공무환경팀-202512-보고서-4/첨부파일/V-MIXER  철거 견적서.xlsx",
+          "canonical": "2025년 자료/문서별 폴더/2025-12-05 생산2팀)생산 설비 중 V-MIXER(2기) 매각 처리의 件 공무환경팀-202512-보고서-4/첨부파일/V-MIXER 철거 견적서.xlsx",
+          "sha256": "0cf4e8ea27eb3dee951fb1de50c01dcfc0870aaeaf2ec21192934353662c7588",
+          "size": 39817
+        },
+        {
+          "source": "보고서별 폴더/2025-12-05 생산2팀)생산 설비 중 V-MIXER(2기) 매각 처리의 件 공무환경팀-202512-보고서-4/첨부파일/V-MIXER계약서.docx",
+          "canonical": "2025년 자료/문서별 폴더/2025-12-05 생산2팀)생산 설비 중 V-MIXER(2기) 매각 처리의 件 공무환경팀-202512-보고서-4/첨부파일/V-MIXER계약서.docx",
+          "sha256": "054b6b3bf7dbaeae9a5cf04706c61d53943883cdb07497dd6ab9980938acab69",
+          "size": 16612
+        },
+        {
+          "source": "보고서별 폴더/2025-12-05 생산2팀)생산 설비 중 V-MIXER(2기) 매각 처리의 件 공무환경팀-202512-보고서-4/첨부파일/V-MIXER철거 관련.pptx",
+          "canonical": "2025년 자료/문서별 폴더/2025-12-05 생산2팀)생산 설비 중 V-MIXER(2기) 매각 처리의 件 공무환경팀-202512-보고서-4/첨부파일/V-MIXER철거 관련.pptx",
+          "sha256": "4a2bed5f908f54dfd59a52629042e48c2e4d2acbf9ac509be298cbc4a4418d28",
+          "size": 750845
+        },
+        {
+          "source": "보고서별 폴더/2025-12-05 생산2팀)생산 설비 중 V-MIXER(2기) 매각 처리의 件 공무환경팀-202512-보고서-4/첨부파일/사업자 등록증.png",
+          "canonical": "2025년 자료/문서별 폴더/2025-12-05 생산2팀)생산 설비 중 V-MIXER(2기) 매각 처리의 件 공무환경팀-202512-보고서-4/첨부파일/사업자 등록증.png",
+          "sha256": "6c3c1e541a7ce3774a2b9fe9d80d5073dd362b835f4796490b79c78e127dde45",
+          "size": 148094
+        },
+        {
+          "source": "보고서별 폴더/2025-12-05 생산2팀)생산 설비 중 V-MIXER(2기) 매각 처리의 件 공무환경팀-202512-보고서-4/첨부파일/설치관견 근거(기안지).pdf",
+          "canonical": "2025년 자료/문서별 폴더/2025-12-05 생산2팀)생산 설비 중 V-MIXER(2기) 매각 처리의 件 공무환경팀-202512-보고서-4/첨부파일/설치관견 근거(기안지).pdf",
+          "sha256": "967db9dfb8323186b52364360865597539dbdaefaafff4494419239517c51519",
+          "size": 258652
+        }
+      ],
+      "zipPayloadIdentical": true,
+      "zipPayloadFiles": 6,
+      "zipPayloadVerification": "Read both ZIPs before root regrouping and compared SHA256 of every uncompressed non-directory entry. All six payload sizes and hashes matched; only container bytes differed.",
+      "bodyPdfEmbeddedImagesIdentical": true,
+      "bodyPdfEmbeddedJpegSHA256": "d03f8d2eaebaeb03bb123220f485caf196a45d8a67ae5f7a98eec0de78968006",
+      "bodyPdfComparison": {
+        "canonical": {
+          "format": "PDF 1.3",
+          "pages": 1,
+          "pageWidth": 595.280029296875,
+          "pageHeight": 1074.8367919921875,
+          "producer": "pypdf"
+        },
+        "extra": {
+          "format": "PDF 1.7",
+          "pages": 1,
+          "pageWidth": 595.2755737304688,
+          "pageHeight": 1055.4945068359375,
+          "creator": "Groupware report archive"
+        },
+        "interpretation": "Two derived PDF wrappers embed exactly the same original JPEG. Different PDF hashes and page scaling do not represent additional document content."
+      },
+      "conclusion": "Keep one 329459 source folder. Five original attachments and source JPG are byte-identical; ZIP payloads are identical and PDF content is the same JPEG. No unique underlying original is lost by removing the extra capture after link rebasing."
+    }
+  ],
+  "dateRecovery": [
+    {
+      "docId": "311810",
+      "docNo": "공무환경팀-202507-물품구매서(09)-5",
+      "title": "공무환경팀  생산2팀 100마력 냉동식 드라이어 구매의件(2025-06-24)",
+      "registryDate": "",
+      "recoveredDate": "2025-06-24",
+      "basis": "본문 1. 작성일자",
+      "note": "Use the explicitly stated 작성일자. Approval/submission stamps and document-number month may differ."
+    },
+    {
+      "docId": "306011",
+      "docNo": "공무환경팀-202505-물품구매서(09)-48",
+      "title": "공무환경팀  생산3팀 제환실 급속냉동기 압축기 예비품 구매 설치의件(2025-05-19)",
+      "registryDate": "",
+      "recoveredDate": "2025-05-19",
+      "basis": "본문 1. 작성일자",
+      "note": "Use the explicitly stated 작성일자. Approval/submission stamps and document-number month may differ."
+    },
+    {
+      "docId": "329247",
+      "docNo": "공무환경팀-202512-물품구매서(09)-15",
+      "title": "공무환경팀  생산3팀(액상) 외부 냉동창고 소모품 교체 및 개선 작업 진행의 件(2025-12-02)(스타글로발/생산3팀)",
+      "registryDate": "",
+      "recoveredDate": "2025-12-02",
+      "basis": "본문 1. 작성일자",
+      "note": "Use the explicitly stated 작성일자. Approval/submission stamps and document-number month may differ."
+    }
+  ],
+  "unresolvedDateDocIds": [],
+  "grouping": {
+    "financialProjects": 98,
+    "orphanReferenceDocIds": [
+      "281425"
+    ],
+    "businessFolders": 99,
+    "anchorDocuments": 99,
+    "relatedDocumentChildFolders": 72,
+    "documentsAcrossGroups": 171,
+    "parentNameCollisions": [],
+    "childNameCollisions": [],
+    "sameParentAndChildTitle": [
+      {
+        "projectId": "P349839",
+        "anchorDocId": "349839",
+        "childDocId": "349854",
+        "name": "2026-05-15 북정)복지관 옥상 물탱크 설치 공사의 件"
+      }
+    ],
+    "relatedDocumentDatesEarlierThanAnchor": [
+      {
+        "projectId": "P306011",
+        "anchorDocId": "309490",
+        "anchorDate": "2025-06-19",
+        "childDocId": "306011",
+        "childDate": "2025-05-19"
+      },
+      {
+        "projectId": "P311810",
+        "anchorDocId": "313963",
+        "anchorDate": "2025-07-21",
+        "childDocId": "311810",
+        "childDate": "2025-06-24"
+      },
+      {
+        "projectId": "P329247",
+        "anchorDocId": "332579",
+        "anchorDate": "2026-01-05",
+        "childDocId": "329247",
+        "childDate": "2025-12-02"
+      },
+      {
+        "projectId": "P365099",
+        "anchorDocId": "365187",
+        "anchorDate": "2026-09-15",
+        "childDocId": "365099",
+        "childDate": "2026-09-14"
+      }
+    ],
+    "groups": [
+      {
+        "projectId": "P277955",
+        "title": "생산2팀)소포장 외포장실 자동화라인 설치 관련 고철 처리의 件",
+        "anchorDocId": "277955",
+        "anchorDate": "2024-08-30",
+        "anchorTitle": "(생산2팀 1Part) 소포장 외포장실 자동화라인 설치 건",
+        "parentUsingBusinessTitle": "2024-08-30 생산2팀)소포장 외포장실 자동화라인 설치 관련 고철 처리의 件",
+        "parentUsingAnchorTitle": "2024-08-30 (생산2팀 1Part) 소포장 외포장실 자동화라인 설치 건",
+        "docIds": [
+          "277955",
+          "293157"
+        ],
+        "children": [
+          {
+            "docId": "293157",
+            "date": "2025-02-05",
+            "dateBasis": "registry date",
+            "folderName": "2025-02-05 생산2팀)소포장 외포장실 자동화라인 설치 관련 고철 처리의 件"
+          }
+        ]
+      },
+      {
+        "projectId": "P279247",
+        "title": "생산2팀1파트 스틱 원료배합부 근로환경개선 작업 완료보고서",
+        "anchorDocId": "279247",
+        "anchorDate": "2024-09-13",
+        "anchorTitle": "생산2팀 1파트 스틱파트 원료 배합부 근로환경개선 진행의 件",
+        "parentUsingBusinessTitle": "2024-09-13 생산2팀1파트 스틱 원료배합부 근로환경개선 작업 완료보고서",
+        "parentUsingAnchorTitle": "2024-09-13 생산2팀 1파트 스틱파트 원료 배합부 근로환경개선 진행의 件",
+        "docIds": [
+          "279247",
+          "292646"
+        ],
+        "children": [
+          {
+            "docId": "292646",
+            "date": "2025-01-24",
+            "dateBasis": "registry date",
+            "folderName": "2025-01-24 생산2팀1파트 스틱 원료배합부 근로환경개선 작업 완료보고서"
+          }
+        ]
+      },
+      {
+        "projectId": "reference-281425",
+        "title": "2025년 생산3팀(액상) 생산 Capa 증대 및 자동화 Project",
+        "anchorDocId": "281425",
+        "anchorDate": "2024-10-11",
+        "anchorTitle": "2025년 생산3팀(액상) 생산 Capa 증대 및 자동화 Project",
+        "parentUsingBusinessTitle": "2024-10-11 2025년 생산3팀(액상) 생산 Capa 증대 및 자동화 Project",
+        "parentUsingAnchorTitle": "2024-10-11 2025년 생산3팀(액상) 생산 Capa 증대 및 자동화 Project",
+        "docIds": [
+          "281425"
+        ],
+        "children": []
+      },
+      {
+        "projectId": "P281884",
+        "title": "생산1팀 2파트 옥외 야경유배관 노후로 이중자켓배관 보수 공사 완료보고서",
+        "anchorDocId": "281884",
+        "anchorDate": "2024-10-17",
+        "anchorTitle": "생산 1팀 2파트 옥외 야경유 이중자켓배관 노후로 인한 배관보수 공사件",
+        "parentUsingBusinessTitle": "2024-10-17 생산1팀 2파트 옥외 야경유배관 노후로 이중자켓배관 보수 공사 완료보고서",
+        "parentUsingAnchorTitle": "2024-10-17 생산 1팀 2파트 옥외 야경유 이중자켓배관 노후로 인한 배관보수 공사件",
+        "docIds": [
+          "281884",
+          "290657"
+        ],
+        "children": [
+          {
+            "docId": "290657",
+            "date": "2025-01-03",
+            "dateBasis": "registry date",
+            "folderName": "2025-01-03 생산1팀 2파트 옥외 야경유배관 노후로 이중자켓배관 보수 공사 완료보고서"
+          }
+        ]
+      },
+      {
+        "projectId": "P286142",
+        "title": "생산2팀)스틱포장기 라운드컷팅 개조 공사  교체 부분  고철 처리의 件",
+        "anchorDocId": "286142",
+        "anchorDate": "2024-11-25",
+        "anchorTitle": "스틱 포장기 오버홀 및 Stick Round Cutter제작 설치 건",
+        "parentUsingBusinessTitle": "2024-11-25 생산2팀)스틱포장기 라운드컷팅 개조 공사 교체 부분 고철 처리의 件",
+        "parentUsingAnchorTitle": "2024-11-25 스틱 포장기 오버홀 및 Stick Round Cutter제작 설치 건",
+        "docIds": [
+          "286142",
+          "295910"
+        ],
+        "children": [
+          {
+            "docId": "295910",
+            "date": "2025-02-25",
+            "dateBasis": "registry date",
+            "folderName": "2025-02-25 생산2팀)스틱포장기 라운드컷팅 개조 공사 교체 부분 고철 처리의 件"
+          }
+        ]
+      },
+      {
+        "projectId": "P286897",
+        "title": "희창3공장)물류센터 신규 사업 관련 Heating 배관  설치 공사 완료의  件",
+        "anchorDocId": "286897",
+        "anchorDate": "2024-11-30",
+        "anchorTitle": "희창3공장)물류센터 신규 사업 관련 스팀 배관 설치  공사의  件",
+        "parentUsingBusinessTitle": "2024-11-30 희창3공장)물류센터 신규 사업 관련 Heating 배관 설치 공사 완료의 件",
+        "parentUsingAnchorTitle": "2024-11-30 희창3공장)물류센터 신규 사업 관련 스팀 배관 설치 공사의 件",
+        "docIds": [
+          "286897",
+          "290866"
+        ],
+        "children": [
+          {
+            "docId": "290866",
+            "date": "2025-01-06",
+            "dateBasis": "registry date",
+            "folderName": "2025-01-06 희창3공장)물류센터 신규 사업 관련 Heating 배관 설치 공사 완료의 件"
+          }
+        ]
+      },
+      {
+        "projectId": "P287091",
+        "title": "북정)구 건물 2층 옥상 방수(복지관 외2개동)작업 완료 보고의  件",
+        "anchorDocId": "287091",
+        "anchorDate": "2024-12-03",
+        "anchorTitle": "북정공장) 구 건물 2층  옥상 방수(복지관 외2개동)작업의 件",
+        "parentUsingBusinessTitle": "2024-12-03 북정)구 건물 2층 옥상 방수(복지관 외2개동)작업 완료 보고의 件",
+        "parentUsingAnchorTitle": "2024-12-03 북정공장) 구 건물 2층 옥상 방수(복지관 외2개동)작업의 件",
+        "docIds": [
+          "287091",
+          "291144"
+        ],
+        "children": [
+          {
+            "docId": "291144",
+            "date": "2025-01-08",
+            "dateBasis": "registry date",
+            "folderName": "2025-01-08 북정)구 건물 2층 옥상 방수(복지관 외2개동)작업 완료 보고의 件"
+          }
+        ]
+      },
+      {
+        "projectId": "P288615",
+        "title": "북정공장)굴뚝 및 2층 슬라브 건물 철거 공사 완료 보고의  件",
+        "anchorDocId": "288615",
+        "anchorDate": "2024-12-16",
+        "anchorTitle": "북정공장)굴뚝 및 2층 슬라브 건물 철거 공사의  件",
+        "parentUsingBusinessTitle": "2024-12-16 북정공장)굴뚝 및 2층 슬라브 건물 철거 공사 완료 보고의 件",
+        "parentUsingAnchorTitle": "2024-12-16 북정공장)굴뚝 및 2층 슬라브 건물 철거 공사의 件",
+        "docIds": [
+          "288615",
+          "291240"
+        ],
+        "children": [
+          {
+            "docId": "291240",
+            "date": "2025-01-09",
+            "dateBasis": "registry date",
+            "folderName": "2025-01-09 북정공장)굴뚝 및 2층 슬라브 건물 철거 공사 완료 보고의 件"
+          }
+        ]
+      },
+      {
+        "projectId": "P290185",
+        "title": "유산, 북정 수질오염물질 전항목 시험 분석 완료 보고의 件",
+        "anchorDocId": "290185",
+        "anchorDate": "2024-12-30",
+        "anchorTitle": "유산, 북정 수질오염물질 전항목 시험 분석 의뢰 件",
+        "parentUsingBusinessTitle": "2024-12-30 유산, 북정 수질오염물질 전항목 시험 분석 완료 보고의 件",
+        "parentUsingAnchorTitle": "2024-12-30 유산, 북정 수질오염물질 전항목 시험 분석 의뢰 件",
+        "docIds": [
+          "290185",
+          "292371"
+        ],
+        "children": [
+          {
+            "docId": "292371",
+            "date": "2025-01-22",
+            "dateBasis": "registry date",
+            "folderName": "2025-01-22 유산, 북정 수질오염물질 전항목 시험 분석 완료 보고의 件"
+          }
+        ]
+      },
+      {
+        "projectId": "P291786",
+        "title": "생산3팀)액상 대용량 로타리 1열 포장기 매각 처리의 件",
+        "anchorDocId": "291786",
+        "anchorDate": "2025-01-15",
+        "anchorTitle": "생산3팀)액상 대용량 로타리 1열 포장기 매각 처리의 件",
+        "parentUsingBusinessTitle": "2025-01-15 생산3팀)액상 대용량 로타리 1열 포장기 매각 처리의 件",
+        "parentUsingAnchorTitle": "2025-01-15 생산3팀)액상 대용량 로타리 1열 포장기 매각 처리의 件",
+        "docIds": [
+          "291786"
+        ],
+        "children": []
+      },
+      {
+        "projectId": "P292145",
+        "title": "생산3팀 액상100RT 냉동기 일체형 증발기 내부 수리",
+        "anchorDocId": "292145",
+        "anchorDate": "2025-01-20",
+        "anchorTitle": "생산3팀)액상 100RT 냉동기중  일체형 증발기 내부 수리의  件",
+        "parentUsingBusinessTitle": "2025-01-20 생산3팀 액상100RT 냉동기 일체형 증발기 내부 수리",
+        "parentUsingAnchorTitle": "2025-01-20 생산3팀)액상 100RT 냉동기중 일체형 증발기 내부 수리의 件",
+        "docIds": [
+          "292145",
+          "294576"
+        ],
+        "children": [
+          {
+            "docId": "294576",
+            "date": "2025-02-12",
+            "dateBasis": "registry date",
+            "folderName": "2025-02-12 생산3팀)액상 100 RT 냉동기중 일체형 증발기 수리 완료 의 件"
+          }
+        ]
+      },
+      {
+        "projectId": "P292525",
+        "title": "생산3팀 제환기 #1·#2 구동부 개조·보수",
+        "anchorDocId": "292525",
+        "anchorDate": "2025-01-23",
+        "anchorTitle": "생산3팀(액상팀) 제환 설비 개선 보수 진행의件",
+        "parentUsingBusinessTitle": "2025-01-23 생산3팀 제환기 #1·#2 구동부 개조·보수",
+        "parentUsingAnchorTitle": "2025-01-23 생산3팀(액상팀) 제환 설비 개선 보수 진행의件",
+        "docIds": [
+          "292525",
+          "294529"
+        ],
+        "children": [
+          {
+            "docId": "294529",
+            "date": "2025-02-12",
+            "dateBasis": "registry date",
+            "folderName": "2025-02-12 생산3팀 제환설비 개선 및 보수 완료보고의 件"
+          }
+        ]
+      },
+      {
+        "projectId": "P293459",
+        "title": "생산3팀 액상 증설 유틸리티 기기 설치(150HP 컴프레서 제외)",
+        "anchorDocId": "293459",
+        "anchorDate": "2025-02-06",
+        "anchorTitle": "생산3팀(액상) 설비 증설로 인한 유틸리티 증설건",
+        "parentUsingBusinessTitle": "2025-02-06 생산3팀 액상 증설 유틸리티 기기 설치(150HP 컴프레서 제외)",
+        "parentUsingAnchorTitle": "2025-02-06 생산3팀(액상) 설비 증설로 인한 유틸리티 증설건",
+        "docIds": [
+          "293459",
+          "304207"
+        ],
+        "children": [
+          {
+            "docId": "304207",
+            "date": "2025-05-02",
+            "dateBasis": "registry date",
+            "folderName": "2025-05-02 생산3팀(액상) 설비 증설로 인한 유틸리티 설비 공사 완료보고서"
+          }
+        ]
+      },
+      {
+        "projectId": "P295207",
+        "title": "북정 저당18톤 탱크 제작설치",
+        "anchorDocId": "295207",
+        "anchorDate": "2025-02-18",
+        "anchorTitle": "(생산1팀 1Part) 저당탱크 제작 설치공사의 건",
+        "parentUsingBusinessTitle": "2025-02-18 북정 저당18톤 탱크 제작설치",
+        "parentUsingAnchorTitle": "2025-02-18 (생산1팀 1Part) 저당탱크 제작 설치공사의 건",
+        "docIds": [
+          "295207"
+        ],
+        "children": []
+      },
+      {
+        "projectId": "P296063",
+        "title": "MSD 청정실 상부 CIP드레인 배관 교체",
+        "anchorDocId": "296063",
+        "anchorDate": "2025-02-26",
+        "anchorTitle": "(생산1팀 1Part) MSD청정실 상부 CIP드레인 배관 교체 공사 건",
+        "parentUsingBusinessTitle": "2025-02-26 MSD 청정실 상부 CIP드레인 배관 교체",
+        "parentUsingAnchorTitle": "2025-02-26 (생산1팀 1Part) MSD청정실 상부 CIP드레인 배관 교체 공사 건",
+        "docIds": [
+          "296063",
+          "298420"
+        ],
+        "children": [
+          {
+            "docId": "298420",
+            "date": "2025-03-18",
+            "dateBasis": "registry date",
+            "folderName": "2025-03-18 생산1팀(1Part) MSD청정실 상부 CIP드레인 배관 교체 공사 - 완료보고서"
+          }
+        ]
+      },
+      {
+        "projectId": "P297402",
+        "title": "SD/MSD 싸이클론 로터리밸브·디버터밸브 교체",
+        "anchorDocId": "297402",
+        "anchorDate": "2025-03-11",
+        "anchorTitle": "(생산1팀 1Part) SD/MSD 건조기 싸이클론 로터리밸브 및 디버터 밸브 교체 공사",
+        "parentUsingBusinessTitle": "2025-03-11 SD MSD 싸이클론 로터리밸브·디버터밸브 교체",
+        "parentUsingAnchorTitle": "2025-03-11 (생산1팀 1Part) SD MSD 건조기 싸이클론 로터리밸브 및 디버터 밸브 교체 공사",
+        "docIds": [
+          "297402",
+          "317299"
+        ],
+        "children": [
+          {
+            "docId": "317299",
+            "date": "2025-08-22",
+            "dateBasis": "registry date",
+            "folderName": "2025-08-22 (생산1팀 1Part) SD MSD 건조기 로터리밸브 및 디버터 밸브 교체 공사 건"
+          }
+        ]
+      },
+      {
+        "projectId": "P297395",
+        "title": "건조실 AIR유틸리티·CIP 노후설비 보수",
+        "anchorDocId": "297395",
+        "anchorDate": "2025-03-11",
+        "anchorTitle": "(생산1팀 1Part) 건조실 노후 AIR유틸리티 설비 및 CIP 설비 보수 공사",
+        "parentUsingBusinessTitle": "2025-03-11 건조실 AIR유틸리티·CIP 노후설비 보수",
+        "parentUsingAnchorTitle": "2025-03-11 (생산1팀 1Part) 건조실 노후 AIR유틸리티 설비 및 CIP 설비 보수 공사",
+        "docIds": [
+          "297395",
+          "309089"
+        ],
+        "children": [
+          {
+            "docId": "309089",
+            "date": "2025-06-16",
+            "dateBasis": "registry date",
+            "folderName": "2025-06-16 (생산1팀 1Part) 건조실 노후 AIR유틸리티 설비 및 CIP 설비 보수 공사 건"
+          }
+        ]
+      },
+      {
+        "projectId": "P297724",
+        "title": "유산 폐수처리장 위탁관리(2025.04~2026.03)",
+        "anchorDocId": "297724",
+        "anchorDate": "2025-03-13",
+        "anchorTitle": "유산 폐수처리장 위탁관리 업체 선정의 件",
+        "parentUsingBusinessTitle": "2025-03-13 유산 폐수처리장 위탁관리(2025.04~2026.03)",
+        "parentUsingAnchorTitle": "2025-03-13 유산 폐수처리장 위탁관리 업체 선정의 件",
+        "docIds": [
+          "297724"
+        ],
+        "children": []
+      },
+      {
+        "projectId": "P297969",
+        "title": "청정실 덕트 수정·외포장실 팬스 이설",
+        "anchorDocId": "297969",
+        "anchorDate": "2025-03-14",
+        "anchorTitle": "생산 1팀 2파트 청정실 덕트 수정작업 및 외포장실 팬스 이설 작업의 件",
+        "parentUsingBusinessTitle": "2025-03-14 청정실 덕트 수정·외포장실 팬스 이설",
+        "parentUsingAnchorTitle": "2025-03-14 생산 1팀 2파트 청정실 덕트 수정작업 및 외포장실 팬스 이설 작업의 件",
+        "docIds": [
+          "297969",
+          "305350"
+        ],
+        "children": [
+          {
+            "docId": "305350",
+            "date": "2025-05-12",
+            "dateBasis": "registry date",
+            "folderName": "2025-05-12 생산 1팀 2파트 청정실 덕트 수정작업 및 외포장실 팬스 이설 작업 완료보고의 件"
+          }
+        ]
+      },
+      {
+        "projectId": "P299308",
+        "title": "생산2팀9동 지붕 덧판·방수 보수",
+        "anchorDocId": "299308",
+        "anchorDate": "2025-03-26",
+        "anchorTitle": "생산 2팀(9동) 건물 노후 지붕 보수 개선 작업의 件",
+        "parentUsingBusinessTitle": "2025-03-26 생산2팀9동 지붕 덧판·방수 보수",
+        "parentUsingAnchorTitle": "2025-03-26 생산 2팀(9동) 건물 노후 지붕 보수 개선 작업의 件",
+        "docIds": [
+          "299308",
+          "302695"
+        ],
+        "children": [
+          {
+            "docId": "302695",
+            "date": "2025-04-21",
+            "dateBasis": "registry date",
+            "folderName": "2025-04-21 생산2팀(9동) 건물 노후 지붕 보수 공사 완료의 件"
+          }
+        ]
+      },
+      {
+        "projectId": "P299514",
+        "title": "유산 건조CAPA 증대를 위한 파우더믹서·관련설비",
+        "anchorDocId": "299514",
+        "anchorDate": "2025-03-27",
+        "anchorTitle": "생산1팀2파트 건조 Capa 증대를 위한 파우더믹서 / 관련설비 투자의 건",
+        "parentUsingBusinessTitle": "2025-03-27 유산 건조CAPA 증대를 위한 파우더믹서·관련설비",
+        "parentUsingAnchorTitle": "2025-03-27 생산1팀2파트 건조 Capa 증대를 위한 파우더믹서 관련설비 투자의 건",
+        "docIds": [
+          "299514"
+        ],
+        "children": []
+      },
+      {
+        "projectId": "P300546",
+        "title": "생산3팀)액상 자동화 설비 관련 부대설비(건축 외) 완료 의 件",
+        "anchorDocId": "300546",
+        "anchorDate": "2025-04-03",
+        "anchorTitle": "생산3팀)액상 자동화 설비 관련 부대설비(건축 외) 완료 의 件",
+        "parentUsingBusinessTitle": "2025-04-03 생산3팀)액상 자동화 설비 관련 부대설비(건축 외) 완료 의 件",
+        "parentUsingAnchorTitle": "2025-04-03 생산3팀)액상 자동화 설비 관련 부대설비(건축 외) 완료 의 件",
+        "docIds": [
+          "300546"
+        ],
+        "children": []
+      },
+      {
+        "projectId": "P301631",
+        "title": "유산·북정3개사업장 대기자가측정 연간계약(모리아 최초선정)",
+        "anchorDocId": "301631",
+        "anchorDate": "2025-04-10",
+        "anchorTitle": "유산, 북정 대기자가측정 2025년도 업체 변경 및 계약의 件",
+        "parentUsingBusinessTitle": "2025-04-10 유산·북정3개사업장 대기자가측정 연간계약(모리아 최초선정)",
+        "parentUsingAnchorTitle": "2025-04-10 유산, 북정 대기자가측정 2025년도 업체 변경 및 계약의 件",
+        "docIds": [
+          "301631"
+        ],
+        "children": []
+      },
+      {
+        "projectId": "P302104",
+        "title": "생산3팀(액상) 설비 증설로 인한 유틸리티1차 배관 공사件",
+        "anchorDocId": "302104",
+        "anchorDate": "2025-04-15",
+        "anchorTitle": "생산3팀(액상) 설비 증설로 인한 유틸리티1차 배관 공사件",
+        "parentUsingBusinessTitle": "2025-04-15 생산3팀(액상) 설비 증설로 인한 유틸리티1차 배관 공사件",
+        "parentUsingAnchorTitle": "2025-04-15 생산3팀(액상) 설비 증설로 인한 유틸리티1차 배관 공사件",
+        "docIds": [
+          "302104"
+        ],
+        "children": []
+      },
+      {
+        "projectId": "P302881",
+        "title": "옥외 팜유2대·저감미당3대 탱크 스팀밸브·배관개조",
+        "anchorDocId": "302881",
+        "anchorDate": "2025-04-22",
+        "anchorTitle": "생산1팀 2파트 옥외 팜유,저감미당탱크 스팀밸브 및 배관 개조 공사件",
+        "parentUsingBusinessTitle": "2025-04-22 옥외 팜유2대·저감미당3대 탱크 스팀밸브·배관개조",
+        "parentUsingAnchorTitle": "2025-04-22 생산1팀 2파트 옥외 팜유,저감미당탱크 스팀밸브 및 배관 개조 공사件",
+        "docIds": [
+          "302881",
+          "313156"
+        ],
+        "children": [
+          {
+            "docId": "313156",
+            "date": "2025-07-11",
+            "dateBasis": "registry date",
+            "folderName": "2025-07-11 생산 1팀 2파트 옥외 팜유,저감미당탱크 스팀밸브 개선 공사"
+          }
+        ]
+      },
+      {
+        "projectId": "P303334",
+        "title": "액상 배합실 스피드도어2곳·위생전실 건축",
+        "anchorDocId": "303334",
+        "anchorDate": "2025-04-25",
+        "anchorTitle": "생산3팀)배합실 출입구 스피드도어 설치(2곳) 및 공간 건축 공사의  件",
+        "parentUsingBusinessTitle": "2025-04-25 액상 배합실 스피드도어2곳·위생전실 건축",
+        "parentUsingAnchorTitle": "2025-04-25 생산3팀)배합실 출입구 스피드도어 설치(2곳) 및 공간 건축 공사의 件",
+        "docIds": [
+          "303334",
+          "308032"
+        ],
+        "children": [
+          {
+            "docId": "308032",
+            "date": "2025-06-09",
+            "dateBasis": "registry date",
+            "folderName": "2025-06-09 생산3팀)배합실 출입구 스피드도어(2곳)설치 및 공간 건축 공사 완료 의 件"
+          }
+        ]
+      },
+      {
+        "projectId": "P306157",
+        "title": "에이치씨글로벌 대기오염물질 총량관리사업장 설치허가 결과 보고의 件",
+        "anchorDocId": "306157",
+        "anchorDate": "2025-05-21",
+        "anchorTitle": "에이치씨글로벌 대기오염물질 총량관리사업장 설치허가 결과 보고의 件",
+        "parentUsingBusinessTitle": "2025-05-21 에이치씨글로벌 대기오염물질 총량관리사업장 설치허가 결과 보고의 件",
+        "parentUsingAnchorTitle": "2025-05-21 에이치씨글로벌 대기오염물질 총량관리사업장 설치허가 결과 보고의 件",
+        "docIds": [
+          "306157"
+        ],
+        "children": []
+      },
+      {
+        "projectId": "P306011",
+        "title": "생산3팀 급속냉동기 압축기 교체 완료의件",
+        "anchorDocId": "309490",
+        "anchorDate": "2025-06-19",
+        "anchorTitle": "생산3팀 급속냉동기 압축기 교체 완료의件",
+        "parentUsingBusinessTitle": "2025-06-19 생산3팀 급속냉동기 압축기 교체 완료의件",
+        "parentUsingAnchorTitle": "2025-06-19 생산3팀 급속냉동기 압축기 교체 완료의件",
+        "docIds": [
+          "306011",
+          "309490"
+        ],
+        "children": [
+          {
+            "docId": "306011",
+            "date": "2025-05-19",
+            "dateBasis": "본문 1. 작성일자",
+            "folderName": "2025-05-19 공무환경팀 생산3팀 제환실 급속냉동기 압축기 예비품 구매 설치의件(2025-05-19)"
+          }
+        ]
+      },
+      {
+        "projectId": "P310936",
+        "title": "희창3공장 승강기 유지관리 재계약",
+        "anchorDocId": "310936",
+        "anchorDate": "2025-06-24",
+        "anchorTitle": "물류센터(희창3공장) 승강기  유지 관리 계약 변경의 件",
+        "parentUsingBusinessTitle": "2025-06-24 희창3공장 승강기 유지관리 재계약",
+        "parentUsingAnchorTitle": "2025-06-24 물류센터(희창3공장) 승강기 유지 관리 계약 변경의 件",
+        "docIds": [
+          "310936"
+        ],
+        "children": []
+      },
+      {
+        "projectId": "P312218",
+        "title": "생산1팀1파트) 옥외 저장 탱크 교체에 따른 환경 정리작업(고철처리) 완료 보고의  件",
+        "anchorDocId": "312218",
+        "anchorDate": "2025-07-04",
+        "anchorTitle": "생산1팀1파트) 옥외 저장 탱크 교체에 따른 환경 정리작업(고철처리) 완료 보고의  件",
+        "parentUsingBusinessTitle": "2025-07-04 생산1팀1파트) 옥외 저장 탱크 교체에 따른 환경 정리작업(고철처리) 완료 보고의 件",
+        "parentUsingAnchorTitle": "2025-07-04 생산1팀1파트) 옥외 저장 탱크 교체에 따른 환경 정리작업(고철처리) 완료 보고의 件",
+        "docIds": [
+          "312218"
+        ],
+        "children": []
+      },
+      {
+        "projectId": "P312840",
+        "title": "스틱7·8호기 내포장실 집진덕트 설치",
+        "anchorDocId": "312840",
+        "anchorDate": "2025-07-09",
+        "anchorTitle": "생산 2팀 내포장실 덕트 설치 작업 및 환경인허가 변경의 件",
+        "parentUsingBusinessTitle": "2025-07-09 스틱7·8호기 내포장실 집진덕트 설치",
+        "parentUsingAnchorTitle": "2025-07-09 생산 2팀 내포장실 덕트 설치 작업 및 환경인허가 변경의 件",
+        "docIds": [
+          "312840",
+          "321044"
+        ],
+        "children": [
+          {
+            "docId": "321044",
+            "date": "2025-09-26",
+            "dateBasis": "registry date",
+            "folderName": "2025-09-26 생산2팀 내포장실 덕트 설치 작업 완료보고의 件"
+          }
+        ]
+      },
+      {
+        "projectId": "P313718",
+        "title": "파우더믹스 설치 공간 확보 철거공사",
+        "anchorDocId": "313718",
+        "anchorDate": "2025-07-17",
+        "anchorTitle": "생산1팀2파트) 건조 증대를 위한 파우더믹스 설치 공간 확보 공사  件",
+        "parentUsingBusinessTitle": "2025-07-17 파우더믹스 설치 공간 확보 철거공사",
+        "parentUsingAnchorTitle": "2025-07-17 생산1팀2파트) 건조 증대를 위한 파우더믹스 설치 공간 확보 공사 件",
+        "docIds": [
+          "313718",
+          "315954"
+        ],
+        "children": [
+          {
+            "docId": "315954",
+            "date": "2025-08-11",
+            "dateBasis": "registry date",
+            "folderName": "2025-08-11 생산1팀2파트)건조 증대를 위한 파우더믹스 설치 공간 확보 완료 의 件"
+          }
+        ]
+      },
+      {
+        "projectId": "P311810",
+        "title": "100마력 냉동식 드라이어 신품 교체 완료의件",
+        "anchorDocId": "313963",
+        "anchorDate": "2025-07-21",
+        "anchorTitle": "100마력 냉동식 드라이어 신품 교체 완료의件",
+        "parentUsingBusinessTitle": "2025-07-21 100마력 냉동식 드라이어 신품 교체 완료의件",
+        "parentUsingAnchorTitle": "2025-07-21 100마력 냉동식 드라이어 신품 교체 완료의件",
+        "docIds": [
+          "311810",
+          "313963"
+        ],
+        "children": [
+          {
+            "docId": "311810",
+            "date": "2025-06-24",
+            "dateBasis": "본문 1. 작성일자",
+            "folderName": "2025-06-24 공무환경팀 생산2팀 100마력 냉동식 드라이어 구매의件(2025-06-24)"
+          }
+        ]
+      },
+      {
+        "projectId": "P314851",
+        "title": "생산1팀2파트 배합실 통합 구분 스피드도어2곳",
+        "anchorDocId": "314851",
+        "anchorDate": "2025-08-04",
+        "anchorTitle": "생산1팀2파트) 건조 증대를 위한 배합실 통합 구분 관리 스피드 도어 설치(2곳)의  件",
+        "parentUsingBusinessTitle": "2025-08-04 생산1팀2파트 배합실 통합 구분 스피드도어2곳",
+        "parentUsingAnchorTitle": "2025-08-04 생산1팀2파트) 건조 증대를 위한 배합실 통합 구분 관리 스피드 도어 설치(2곳)의 件",
+        "docIds": [
+          "314851",
+          "316682"
+        ],
+        "children": [
+          {
+            "docId": "316682",
+            "date": "2025-08-18",
+            "dateBasis": "registry date",
+            "folderName": "2025-08-18 생산1팀2파트 거존 증대를 위한 배합실 통합 관리 스피드도어 설치(2곳) 완료 의 件"
+          }
+        ]
+      },
+      {
+        "projectId": "P314959",
+        "title": "양산시청 수질관리과 처분통지서의 件",
+        "anchorDocId": "314959",
+        "anchorDate": "2025-08-05",
+        "anchorTitle": "양산시청 수질관리과 처분통지서의 件",
+        "parentUsingBusinessTitle": "2025-08-05 양산시청 수질관리과 처분통지서의 件",
+        "parentUsingAnchorTitle": "2025-08-05 양산시청 수질관리과 처분통지서의 件",
+        "docIds": [
+          "314959"
+        ],
+        "children": []
+      },
+      {
+        "projectId": "P314960",
+        "title": "지대충진기 계량호퍼 오버홀",
+        "anchorDocId": "314960",
+        "anchorDate": "2025-08-05",
+        "anchorTitle": "생산1팀2파트 지대 충진기 계량기호퍼OVERHAUL건",
+        "parentUsingBusinessTitle": "2025-08-05 지대충진기 계량호퍼 오버홀",
+        "parentUsingAnchorTitle": "2025-08-05 생산1팀2파트 지대 충진기 계량기호퍼OVERHAUL건",
+        "docIds": [
+          "314960",
+          "320686"
+        ],
+        "children": [
+          {
+            "docId": "320686",
+            "date": "2025-09-24",
+            "dateBasis": "registry date",
+            "folderName": "2025-09-24 생산1팀 2파트 지대충진기 계량기호퍼OVERHAUL 건"
+          }
+        ]
+      },
+      {
+        "projectId": "P315174",
+        "title": "액상 폐수 이송배관 부분교체",
+        "anchorDocId": "315174",
+        "anchorDate": "2025-08-06",
+        "anchorTitle": "유산공장 액상 폐수 이송 배관 부분 교체 작업의 件",
+        "parentUsingBusinessTitle": "2025-08-06 액상 폐수 이송배관 부분교체",
+        "parentUsingAnchorTitle": "2025-08-06 유산공장 액상 폐수 이송 배관 부분 교체 작업의 件",
+        "docIds": [
+          "315174",
+          "319469",
+          "319591"
+        ],
+        "children": [
+          {
+            "docId": "319469",
+            "date": "2025-09-09",
+            "dateBasis": "registry date",
+            "folderName": "2025-09-09 생산3팀)액상 폐수 이송 배관 부분 교체에 따른 고철 처리 정산의 件"
+          },
+          {
+            "docId": "319591",
+            "date": "2025-09-10",
+            "dateBasis": "registry date",
+            "folderName": "2025-09-10 생산3팀 액상 폐수 이송 배관 부분 교체작업 완료보고의 件"
+          }
+        ]
+      },
+      {
+        "projectId": "P317317",
+        "title": "북정 SD싸이클론·CIP열수탱크 안전발판·배관개선",
+        "anchorDocId": "317317",
+        "anchorDate": "2025-08-24",
+        "anchorTitle": "생산1팀1파트)SD사이크론 및 CIP열수탱크 위험 요소 제거 개선의  件",
+        "parentUsingBusinessTitle": "2025-08-24 북정 SD싸이클론·CIP열수탱크 안전발판·배관개선",
+        "parentUsingAnchorTitle": "2025-08-24 생산1팀1파트)SD사이크론 및 CIP열수탱크 위험 요소 제거 개선의 件",
+        "docIds": [
+          "317317",
+          "322648"
+        ],
+        "children": [
+          {
+            "docId": "322648",
+            "date": "2025-10-14",
+            "dateBasis": "registry date",
+            "folderName": "2025-10-14 북정)SD사이크론 및 CIP열수 탱크 위험 요소 제거 개선 공사 완료 의 件"
+          }
+        ]
+      },
+      {
+        "projectId": "P317615",
+        "title": "냉동기 정비 및 효율 증가 개선 결과 보고서",
+        "anchorDocId": "317615",
+        "anchorDate": "2025-08-26",
+        "anchorTitle": "냉동기 정비 및 효율 증가 개선 결과 보고서",
+        "parentUsingBusinessTitle": "2025-08-26 냉동기 정비 및 효율 증가 개선 결과 보고서",
+        "parentUsingAnchorTitle": "2025-08-26 냉동기 정비 및 효율 증가 개선 결과 보고서",
+        "docIds": [
+          "317615"
+        ],
+        "children": []
+      },
+      {
+        "projectId": "P320119",
+        "title": "북정SD4층 경계면 우수배관 교체",
+        "anchorDocId": "320119",
+        "anchorDate": "2025-09-17",
+        "anchorTitle": "생산1팀1파트)SD4층 경계면 우수 배관  교체 공사의  件",
+        "parentUsingBusinessTitle": "2025-09-17 북정SD4층 경계면 우수배관 교체",
+        "parentUsingAnchorTitle": "2025-09-17 생산1팀1파트)SD4층 경계면 우수 배관 교체 공사의 件",
+        "docIds": [
+          "320119",
+          "322987"
+        ],
+        "children": [
+          {
+            "docId": "322987",
+            "date": "2025-10-16",
+            "dateBasis": "registry date",
+            "folderName": "2025-10-16 북정)SD4층 경계면 우수 배관 교체 공사 완료 의 件"
+          }
+        ]
+      },
+      {
+        "projectId": "P320774",
+        "title": "북정 대기자가측정 모리아→에이스 변경",
+        "anchorDocId": "320774",
+        "anchorDate": "2025-09-24",
+        "anchorTitle": "북정 대기자가측정 업체 변경의 件",
+        "parentUsingBusinessTitle": "2025-09-24 북정 대기자가측정 모리아→에이스 변경",
+        "parentUsingAnchorTitle": "2025-09-24 북정 대기자가측정 업체 변경의 件",
+        "docIds": [
+          "320774"
+        ],
+        "children": []
+      },
+      {
+        "projectId": "P325189",
+        "title": "생산2팀 부자재 출입로 변경·스피드도어 설치",
+        "anchorDocId": "325189",
+        "anchorDate": "2025-11-04",
+        "anchorTitle": "생산2팀 부자재 출입로 환경 개선 진행의 件",
+        "parentUsingBusinessTitle": "2025-11-04 생산2팀 부자재 출입로 변경·스피드도어 설치",
+        "parentUsingAnchorTitle": "2025-11-04 생산2팀 부자재 출입로 환경 개선 진행의 件",
+        "docIds": [
+          "325189",
+          "330893"
+        ],
+        "children": [
+          {
+            "docId": "330893",
+            "date": "2025-12-17",
+            "dateBasis": "registry date",
+            "folderName": "2025-12-17 생산 2팀 부자재 출입로 개선 작업 완료 보고"
+          }
+        ]
+      },
+      {
+        "projectId": "P325285",
+        "title": "액상 제환기 #1·#2 구동부 순차 수리",
+        "anchorDocId": "325285",
+        "anchorDate": "2025-11-04",
+        "anchorTitle": "액상 제환기 수리 件",
+        "parentUsingBusinessTitle": "2025-11-04 액상 제환기 #1·#2 구동부 순차 수리",
+        "parentUsingAnchorTitle": "2025-11-04 액상 제환기 수리 件",
+        "docIds": [
+          "325285",
+          "327071",
+          "328668"
+        ],
+        "children": [
+          {
+            "docId": "327071",
+            "date": "2025-11-17",
+            "dateBasis": "registry date",
+            "folderName": "2025-11-17 제환기#2호기 수리 완료건"
+          },
+          {
+            "docId": "328668",
+            "date": "2025-12-02",
+            "dateBasis": "registry date",
+            "folderName": "2025-12-02 생산3팀(액상) 제환기#1호기 수리 완료건"
+          }
+        ]
+      },
+      {
+        "projectId": "P326885",
+        "title": "북정 대기자가측정 에이스→승보 업무이관(동일연간비)",
+        "anchorDocId": "326885",
+        "anchorDate": "2025-11-14",
+        "anchorTitle": "북정 대기자가측정 업체 변경의 件",
+        "parentUsingBusinessTitle": "2025-11-14 북정 대기자가측정 에이스→승보 업무이관(동일연간비)",
+        "parentUsingAnchorTitle": "2025-11-14 북정 대기자가측정 업체 변경의 件",
+        "docIds": [
+          "326885"
+        ],
+        "children": []
+      },
+      {
+        "projectId": "P328708",
+        "title": "100HP 인버터형 컴프레서 구매·중앙제어·이설",
+        "anchorDocId": "328708",
+        "anchorDate": "2025-12-02",
+        "anchorTitle": "HC글로벌 인버터형 컴프레셔(100Hp) 구매 및 설치의 件",
+        "parentUsingBusinessTitle": "2025-12-02 100HP 인버터형 컴프레서 구매·중앙제어·이설",
+        "parentUsingAnchorTitle": "2025-12-02 HC글로벌 인버터형 컴프레셔(100Hp) 구매 및 설치의 件",
+        "docIds": [
+          "328708",
+          "335612",
+          "345264"
+        ],
+        "children": [
+          {
+            "docId": "335612",
+            "date": "2026-01-29",
+            "dateBasis": "registry date",
+            "folderName": "2026-01-29 희창)100마력 인버터형 콤퓨레셔 설치에 따른 고철 처리의 件"
+          },
+          {
+            "docId": "345264",
+            "date": "2026-04-13",
+            "dateBasis": "registry date",
+            "folderName": "2026-04-13 HC글로벌 인버터형 컴프레서(100Hp) 구매 및 설치 완료 결과보고"
+          }
+        ]
+      },
+      {
+        "projectId": "P329459",
+        "title": "생산2팀)생산 설비 중 V-MIXER(2기) 매각 처리의  件",
+        "anchorDocId": "329459",
+        "anchorDate": "2025-12-05",
+        "anchorTitle": "생산2팀)생산 설비 중 V-MIXER(2기) 매각 처리의  件",
+        "parentUsingBusinessTitle": "2025-12-05 생산2팀)생산 설비 중 V-MIXER(2기) 매각 처리의 件",
+        "parentUsingAnchorTitle": "2025-12-05 생산2팀)생산 설비 중 V-MIXER(2기) 매각 처리의 件",
+        "docIds": [
+          "329459"
+        ],
+        "children": []
+      },
+      {
+        "projectId": "P331631",
+        "title": "(생산1팀 1Part) SD건조기 배풍기 모터 소손으로 모터 교체/시운전 건",
+        "anchorDocId": "331631",
+        "anchorDate": "2025-12-24",
+        "anchorTitle": "(생산1팀 1Part) SD건조기 배풍기 모터 소손으로 모터 교체/시운전 건",
+        "parentUsingBusinessTitle": "2025-12-24 (생산1팀 1Part) SD건조기 배풍기 모터 소손으로 모터 교체 시운전 건",
+        "parentUsingAnchorTitle": "2025-12-24 (생산1팀 1Part) SD건조기 배풍기 모터 소손으로 모터 교체 시운전 건",
+        "docIds": [
+          "331631"
+        ],
+        "children": []
+      },
+      {
+        "projectId": "P329247",
+        "title": "생산3팀외부냉동창고 소모품교체·이코노마이저",
+        "anchorDocId": "332579",
+        "anchorDate": "2026-01-05",
+        "anchorTitle": "생산3팀(액상) 외부 냉동창고 점검 및 전력비 절감 개선 결과 보고서",
+        "parentUsingBusinessTitle": "2026-01-05 생산3팀외부냉동창고 소모품교체·이코노마이저",
+        "parentUsingAnchorTitle": "2026-01-05 생산3팀(액상) 외부 냉동창고 점검 및 전력비 절감 개선 결과 보고서",
+        "docIds": [
+          "329247",
+          "332579"
+        ],
+        "children": [
+          {
+            "docId": "329247",
+            "date": "2025-12-02",
+            "dateBasis": "본문 1. 작성일자",
+            "folderName": "2025-12-02 공무환경팀 생산3팀(액상) 외부 냉동창고 소모품 교체 및 개선 작업 진행의 件(2025-12-02)(스타글로발 생산3팀)"
+          }
+        ]
+      },
+      {
+        "projectId": "P334197",
+        "title": "생산2팀 스틱파트 질소발생기 소모품 교체",
+        "anchorDocId": "334197",
+        "anchorDate": "2026-01-15",
+        "anchorTitle": "생산2팀 스틱파트 질소발생기 소모품 교체 진행의 件",
+        "parentUsingBusinessTitle": "2026-01-15 생산2팀 스틱파트 질소발생기 소모품 교체",
+        "parentUsingAnchorTitle": "2026-01-15 생산2팀 스틱파트 질소발생기 소모품 교체 진행의 件",
+        "docIds": [
+          "334197",
+          "338327"
+        ],
+        "children": [
+          {
+            "docId": "338327",
+            "date": "2026-02-20",
+            "dateBasis": "registry date",
+            "folderName": "2026-02-20 생산2팀 스틱파트 질소발생기 소모품 교체 완료 보고의 件"
+          }
+        ]
+      },
+      {
+        "projectId": "P334242",
+        "title": "생산3팀 제환실 폐수집수조 교체",
+        "anchorDocId": "334242",
+        "anchorDate": "2026-01-15",
+        "anchorTitle": "생산3팀 제환실 폐수집수조 교체 공사의 件",
+        "parentUsingBusinessTitle": "2026-01-15 생산3팀 제환실 폐수집수조 교체",
+        "parentUsingAnchorTitle": "2026-01-15 생산3팀 제환실 폐수집수조 교체 공사의 件",
+        "docIds": [
+          "334242",
+          "334952"
+        ],
+        "children": [
+          {
+            "docId": "334952",
+            "date": "2026-01-22",
+            "dateBasis": "registry date",
+            "folderName": "2026-01-22 생산3팀 제환실 폐수집수조 교체 공사의件 완료보고"
+          }
+        ]
+      },
+      {
+        "projectId": "P334740",
+        "title": "MSD 건조기 챔버 크랙 보수",
+        "anchorDocId": "334740",
+        "anchorDate": "2026-01-21",
+        "anchorTitle": "(생산1팀 1Part) MSD건조기 챔버 크랙 보수 공사",
+        "parentUsingBusinessTitle": "2026-01-21 MSD 건조기 챔버 크랙 보수",
+        "parentUsingAnchorTitle": "2026-01-21 (생산1팀 1Part) MSD건조기 챔버 크랙 보수 공사",
+        "docIds": [
+          "334740",
+          "338950"
+        ],
+        "children": [
+          {
+            "docId": "338950",
+            "date": "2026-02-25",
+            "dateBasis": "registry date",
+            "folderName": "2026-02-25 (생산1팀 1Part) MSD건조기 챔버 크랙 보수 공사 (완료보고서)"
+          }
+        ]
+      },
+      {
+        "projectId": "P334757",
+        "title": "유산 건조기 열교환기(폐열회수 장치) 설치",
+        "anchorDocId": "334757",
+        "anchorDate": "2026-01-21",
+        "anchorTitle": "유산)건조기 열교환기(폐열회수 장치) 설치 의 件",
+        "parentUsingBusinessTitle": "2026-01-21 유산 건조기 열교환기(폐열회수 장치) 설치",
+        "parentUsingAnchorTitle": "2026-01-21 유산)건조기 열교환기(폐열회수 장치) 설치 의 件",
+        "docIds": [
+          "334757"
+        ],
+        "children": []
+      },
+      {
+        "projectId": "P335116",
+        "title": "건조실 자동·간이 CIP탱크 스팀배관 교체/자동제어",
+        "anchorDocId": "335116",
+        "anchorDate": "2026-01-26",
+        "anchorTitle": "생산1팀2파트 건조실 CIP탱크 스팀배관 노후 교체 및 간이CIP탱크 스팀배관 교체 공사건",
+        "parentUsingBusinessTitle": "2026-01-26 건조실 자동·간이 CIP탱크 스팀배관 교체 자동제어",
+        "parentUsingAnchorTitle": "2026-01-26 생산1팀2파트 건조실 CIP탱크 스팀배관 노후 교체 및 간이CIP탱크 스팀배관 교체 공사건",
+        "docIds": [
+          "335116",
+          "342409"
+        ],
+        "children": [
+          {
+            "docId": "342409",
+            "date": "2026-03-24",
+            "dateBasis": "registry date",
+            "folderName": "2026-03-24 생산1팀2파트 CIP탱크,간이CIP탱크 스팀배관 교체 공사 완료"
+          }
+        ]
+      },
+      {
+        "projectId": "P335681",
+        "title": "조제실 저당3·4번 탱크 교반기 오버홀",
+        "anchorDocId": "335681",
+        "anchorDate": "2026-01-30",
+        "anchorTitle": "(생산1팀 1Part) 조제실 저당 3,4번 탱크 교반기 오버 홀 수리 공사",
+        "parentUsingBusinessTitle": "2026-01-30 조제실 저당3·4번 탱크 교반기 오버홀",
+        "parentUsingAnchorTitle": "2026-01-30 (생산1팀 1Part) 조제실 저당 3,4번 탱크 교반기 오버 홀 수리 공사",
+        "docIds": [
+          "335681",
+          "344855"
+        ],
+        "children": [
+          {
+            "docId": "344855",
+            "date": "2026-04-10",
+            "dateBasis": "registry date",
+            "folderName": "2026-04-10 (생산1팀 1Part) 조제실 저당 3,4번 탱크 교반기 오버 홀 수리 건 (완료보고서)"
+          }
+        ]
+      },
+      {
+        "projectId": "P337158",
+        "title": "북정 MSD 콘 고정계단·데크 확장",
+        "anchorDocId": "337158",
+        "anchorDate": "2026-02-09",
+        "anchorTitle": "생산1팀1파트 MSD 콘 계단 및 데크확장 공사의 건",
+        "parentUsingBusinessTitle": "2026-02-09 북정 MSD 콘 고정계단·데크 확장",
+        "parentUsingAnchorTitle": "2026-02-09 생산1팀1파트 MSD 콘 계단 및 데크확장 공사의 건",
+        "docIds": [
+          "337158",
+          "342910"
+        ],
+        "children": [
+          {
+            "docId": "342910",
+            "date": "2026-03-30",
+            "dateBasis": "registry date",
+            "folderName": "2026-03-30 생산1팀1파트 MSD 콘 계단 및 안전데크 확장공사 건"
+          }
+        ]
+      },
+      {
+        "projectId": "P338295",
+        "title": "유산3톤 보일러 연도·공기예열기 교체",
+        "anchorDocId": "338295",
+        "anchorDate": "2026-02-20",
+        "anchorTitle": "유산공장 3톤 보일러 연도 및 공기예열기 노후교체 공사",
+        "parentUsingBusinessTitle": "2026-02-20 유산3톤 보일러 연도·공기예열기 교체",
+        "parentUsingAnchorTitle": "2026-02-20 유산공장 3톤 보일러 연도 및 공기예열기 노후교체 공사",
+        "docIds": [
+          "338295",
+          "349027",
+          "350175"
+        ],
+        "children": [
+          {
+            "docId": "349027",
+            "date": "2026-05-12",
+            "dateBasis": "registry date",
+            "folderName": "2026-05-12 유산)3톤 보일러 부속 장치(공기예열기) 교체 고철 처리의 件"
+          },
+          {
+            "docId": "350175",
+            "date": "2026-05-19",
+            "dateBasis": "registry date",
+            "folderName": "2026-05-19 유산공장 3톤 보일러 연도 및 공기예열기 노후교체 완료보고서"
+          }
+        ]
+      },
+      {
+        "projectId": "P338442",
+        "title": "북정 SD 내포장실 헤드미싱기 교체",
+        "anchorDocId": "338442",
+        "anchorDate": "2026-02-21",
+        "anchorTitle": "생산1팀1P SD 내포장실 헤드미싱기 교체 건",
+        "parentUsingBusinessTitle": "2026-02-21 북정 SD 내포장실 헤드미싱기 교체",
+        "parentUsingAnchorTitle": "2026-02-21 생산1팀1P SD 내포장실 헤드미싱기 교체 건",
+        "docIds": [
+          "338442",
+          "340201"
+        ],
+        "children": [
+          {
+            "docId": "340201",
+            "date": "2026-03-07",
+            "dateBasis": "registry date",
+            "folderName": "2026-03-07 생산1팀1파트 SD 내포장실 미싱기 교체의 건"
+          }
+        ]
+      },
+      {
+        "projectId": "P338732",
+        "title": "건조실·조제실 조명등 교체",
+        "anchorDocId": "338732",
+        "anchorDate": "2026-02-24",
+        "anchorTitle": "(생산1팀 1Part) 건조실 및 조제실 조명등 교체 공사 건",
+        "parentUsingBusinessTitle": "2026-02-24 건조실·조제실 조명등 교체",
+        "parentUsingAnchorTitle": "2026-02-24 (생산1팀 1Part) 건조실 및 조제실 조명등 교체 공사 건",
+        "docIds": [
+          "338732",
+          "341080"
+        ],
+        "children": [
+          {
+            "docId": "341080",
+            "date": "2026-03-13",
+            "dateBasis": "registry date",
+            "folderName": "2026-03-13 생산1팀 1파트 건조실 및 조제실 조명등 교체 공사 건 (완료보고서)"
+          }
+        ]
+      },
+      {
+        "projectId": "P338764",
+        "title": "외포장 적재로봇 신규 Hand 및 예비부품",
+        "anchorDocId": "338764",
+        "anchorDate": "2026-02-24",
+        "anchorTitle": "(생산1팀 1Part) 외포장실 적재 로봇 신규 Hand 교체 및 예비부품 구매 건",
+        "parentUsingBusinessTitle": "2026-02-24 외포장 적재로봇 신규 Hand 및 예비부품",
+        "parentUsingAnchorTitle": "2026-02-24 (생산1팀 1Part) 외포장실 적재 로봇 신규 Hand 교체 및 예비부품 구매 건",
+        "docIds": [
+          "338764",
+          "355273"
+        ],
+        "children": [
+          {
+            "docId": "355273",
+            "date": "2026-06-26",
+            "dateBasis": "registry date",
+            "folderName": "2026-06-26 (생산1팀 1Part) 외포장실 적재 로봇 신규 Hand 교체 및 예비부품 구매 건 (완료보고서)"
+          }
+        ]
+      },
+      {
+        "projectId": "P338686",
+        "title": "유산4동 옥상 소방용수 겸용 SMC물탱크 개선",
+        "anchorDocId": "338686",
+        "anchorDate": "2026-02-24",
+        "anchorTitle": "유산)생산1팀2파트(4동) 옥상 소방용수 겸용 SMC 물탱크 개선 공사의  件",
+        "parentUsingBusinessTitle": "2026-02-24 유산4동 옥상 소방용수 겸용 SMC물탱크 개선",
+        "parentUsingAnchorTitle": "2026-02-24 유산)생산1팀2파트(4동) 옥상 소방용수 겸용 SMC 물탱크 개선 공사의 件",
+        "docIds": [
+          "338686",
+          "341963"
+        ],
+        "children": [
+          {
+            "docId": "341963",
+            "date": "2026-03-20",
+            "dateBasis": "registry date",
+            "folderName": "2026-03-20 유산)4동 옥상 소방용수 겸용 SMC물탱크 개선 공사 완료 의 件"
+          }
+        ]
+      },
+      {
+        "projectId": "P338944",
+        "title": "폐수장 AIR 공급배관 및 콤프레셔 전기증설",
+        "anchorDocId": "338944",
+        "anchorDate": "2026-02-25",
+        "anchorTitle": "(생산1팀 1Part) 폐수장 에어 공급 배관 설치 및 콤프레셔 전기 증설 공사 건",
+        "parentUsingBusinessTitle": "2026-02-25 폐수장 AIR 공급배관 및 콤프레셔 전기증설",
+        "parentUsingAnchorTitle": "2026-02-25 (생산1팀 1Part) 폐수장 에어 공급 배관 설치 및 콤프레셔 전기 증설 공사 건",
+        "docIds": [
+          "338944",
+          "344092"
+        ],
+        "children": [
+          {
+            "docId": "344092",
+            "date": "2026-04-06",
+            "dateBasis": "registry date",
+            "folderName": "2026-04-06 (생산1팀 1Part) 폐수장 에어 공급 배관 설치 및 콤프레셔 전기 증설 공사 건 (완료보고서)"
+          }
+        ]
+      },
+      {
+        "projectId": "P339007",
+        "title": "옥외 팜유2번 탱크 교반기 오버홀",
+        "anchorDocId": "339007",
+        "anchorDate": "2026-02-26",
+        "anchorTitle": "유산)생산1팀 2파트 옥외 팜유(2번)탱크 교반기 OVERHAUL 작업의건",
+        "parentUsingBusinessTitle": "2026-02-26 옥외 팜유2번 탱크 교반기 오버홀",
+        "parentUsingAnchorTitle": "2026-02-26 유산)생산1팀 2파트 옥외 팜유(2번)탱크 교반기 OVERHAUL 작업의건",
+        "docIds": [
+          "339007",
+          "344851"
+        ],
+        "children": [
+          {
+            "docId": "344851",
+            "date": "2026-04-09",
+            "dateBasis": "registry date",
+            "folderName": "2026-04-09 생산 1팀 2파트 옥외팜유(2번)탱크 교반기 OVERHAU"
+          }
+        ]
+      },
+      {
+        "projectId": "P340150",
+        "title": "생산2팀 소포장 원료호퍼 교반기2대 오버홀·개조",
+        "anchorDocId": "340150",
+        "anchorDate": "2026-03-06",
+        "anchorTitle": "생산2팀 소포장 원료 호퍼 교반기 오버홀 및 개조 공사 진행의 件",
+        "parentUsingBusinessTitle": "2026-03-06 생산2팀 소포장 원료호퍼 교반기2대 오버홀·개조",
+        "parentUsingAnchorTitle": "2026-03-06 생산2팀 소포장 원료 호퍼 교반기 오버홀 및 개조 공사 진행의 件",
+        "docIds": [
+          "340150",
+          "353102"
+        ],
+        "children": [
+          {
+            "docId": "353102",
+            "date": "2026-06-10",
+            "dateBasis": "registry date",
+            "folderName": "2026-06-10 생산2팀 원료호퍼교반기 개조 및 보수 공사 결과 보고의 件"
+          }
+        ]
+      },
+      {
+        "projectId": "P341336",
+        "title": "MSD 내포장실 누름컨베어 보수",
+        "anchorDocId": "341336",
+        "anchorDate": "2026-03-17",
+        "anchorTitle": "(생산1팀 1Part) MSD 내포장실 누름컨베어 보수 작업 건 (기안서)",
+        "parentUsingBusinessTitle": "2026-03-17 MSD 내포장실 누름컨베어 보수",
+        "parentUsingAnchorTitle": "2026-03-17 (생산1팀 1Part) MSD 내포장실 누름컨베어 보수 작업 건 (기안서)",
+        "docIds": [
+          "341336",
+          "346063"
+        ],
+        "children": [
+          {
+            "docId": "346063",
+            "date": "2026-04-17",
+            "dateBasis": "registry date",
+            "folderName": "2026-04-17 (생산1팀 1Part) MSD 내포장실 누름컨베어 보수 작업 (완료보고서)"
+          }
+        ]
+      },
+      {
+        "projectId": "P341519",
+        "title": "잔여 원부자재 폐기",
+        "anchorDocId": "341519",
+        "anchorDate": "2026-03-18",
+        "anchorTitle": "희창)투썸 잔여 원부자재 폐기 처리의 件",
+        "parentUsingBusinessTitle": "2026-03-18 잔여 원부자재 폐기",
+        "parentUsingAnchorTitle": "2026-03-18 희창)투썸 잔여 원부자재 폐기 처리의 件",
+        "docIds": [
+          "341519"
+        ],
+        "children": []
+      },
+      {
+        "projectId": "P341851",
+        "title": "MSD 카제인 고속믹서 보수",
+        "anchorDocId": "341851",
+        "anchorDate": "2026-03-20",
+        "anchorTitle": "조제실 MSD카제인 고속믹서기 보수 건 (고장발생보고서)",
+        "parentUsingBusinessTitle": "2026-03-20 MSD 카제인 고속믹서 보수",
+        "parentUsingAnchorTitle": "2026-03-20 조제실 MSD카제인 고속믹서기 보수 건 (고장발생보고서)",
+        "docIds": [
+          "341851"
+        ],
+        "children": []
+      },
+      {
+        "projectId": "P342386",
+        "title": "유산 폐수처리장 방류조 FRP코팅",
+        "anchorDocId": "342386",
+        "anchorDate": "2026-03-24",
+        "anchorTitle": "유산)폐수처리장 방류조 FRP 코팅 작업의  件",
+        "parentUsingBusinessTitle": "2026-03-24 유산 폐수처리장 방류조 FRP코팅",
+        "parentUsingAnchorTitle": "2026-03-24 유산)폐수처리장 방류조 FRP 코팅 작업의 件",
+        "docIds": [
+          "342386",
+          "343652"
+        ],
+        "children": [
+          {
+            "docId": "343652",
+            "date": "2026-04-02",
+            "dateBasis": "registry date",
+            "folderName": "2026-04-02 유산)폐수처리장 방류조 FRP 작업 완료 의 件"
+          }
+        ]
+      },
+      {
+        "projectId": "P342539",
+        "title": "물류 대기품 보관창고 스피드도어 설치",
+        "anchorDocId": "342539",
+        "anchorDate": "2026-03-25",
+        "anchorTitle": "(생산1팀 1Part) 물류 대기품 보관 창고 스피드 도어 설치 건",
+        "parentUsingBusinessTitle": "2026-03-25 물류 대기품 보관창고 스피드도어 설치",
+        "parentUsingAnchorTitle": "2026-03-25 (생산1팀 1Part) 물류 대기품 보관 창고 스피드 도어 설치 건",
+        "docIds": [
+          "342539",
+          "349765"
+        ],
+        "children": [
+          {
+            "docId": "349765",
+            "date": "2026-05-15",
+            "dateBasis": "registry date",
+            "folderName": "2026-05-15 (생산1팀 1Part) 물류 대기품 보관 창고 스피드 도어 설치 건"
+          }
+        ]
+      },
+      {
+        "projectId": "P342563",
+        "title": "유산 폐수처리장 위탁관리 재계약",
+        "anchorDocId": "342563",
+        "anchorDate": "2026-03-25",
+        "anchorTitle": "유산 폐수처리장 위탁관리 재계약의 件",
+        "parentUsingBusinessTitle": "2026-03-25 유산 폐수처리장 위탁관리 재계약",
+        "parentUsingAnchorTitle": "2026-03-25 유산 폐수처리장 위탁관리 재계약의 件",
+        "docIds": [
+          "342563"
+        ],
+        "children": []
+      },
+      {
+        "projectId": "P342628",
+        "title": "생산1팀2파트 적재로봇 안전장치 설치",
+        "anchorDocId": "342628",
+        "anchorDate": "2026-03-26",
+        "anchorTitle": "생산1팀2파트 적재로봇 내 안전장치 설치건",
+        "parentUsingBusinessTitle": "2026-03-26 생산1팀2파트 적재로봇 안전장치 설치",
+        "parentUsingAnchorTitle": "2026-03-26 생산1팀2파트 적재로봇 내 안전장치 설치건",
+        "docIds": [
+          "342628",
+          "351069"
+        ],
+        "children": [
+          {
+            "docId": "351069",
+            "date": "2026-05-27",
+            "dateBasis": "registry date",
+            "folderName": "2026-05-27 생산1팀2파트 적재로봇내 안전장치 설치 완료보고서"
+          }
+        ]
+      },
+      {
+        "projectId": "P345016",
+        "title": "유산·북정 폐수오니 처리/운반 단가 재계약",
+        "anchorDocId": "345016",
+        "anchorDate": "2026-04-10",
+        "anchorTitle": "유산, 북정 폐수처리오니 업체 재계약(갱신)의 件",
+        "parentUsingBusinessTitle": "2026-04-10 유산·북정 폐수오니 처리 운반 단가 재계약",
+        "parentUsingAnchorTitle": "2026-04-10 유산, 북정 폐수처리오니 업체 재계약(갱신)의 件",
+        "docIds": [
+          "345016"
+        ],
+        "children": []
+      },
+      {
+        "projectId": "P347442",
+        "title": "카제인 탱크 철거·정산",
+        "anchorDocId": "347442",
+        "anchorDate": "2026-04-29",
+        "anchorTitle": "유산)생산1팀 건조기 배합실 카제인 탱크 철거 비용 정산의 件",
+        "parentUsingBusinessTitle": "2026-04-29 카제인 탱크 철거·정산",
+        "parentUsingAnchorTitle": "2026-04-29 유산)생산1팀 건조기 배합실 카제인 탱크 철거 비용 정산의 件",
+        "docIds": [
+          "347442"
+        ],
+        "children": []
+      },
+      {
+        "projectId": "P348826",
+        "title": "SD 충진라인 자동화",
+        "anchorDocId": "348826",
+        "anchorDate": "2026-05-11",
+        "anchorTitle": "생산1팀1파트 SD 내포장실 지대충진라인 개조의 건",
+        "parentUsingBusinessTitle": "2026-05-11 SD 충진라인 자동화",
+        "parentUsingAnchorTitle": "2026-05-11 생산1팀1파트 SD 내포장실 지대충진라인 개조의 건",
+        "docIds": [
+          "348826"
+        ],
+        "children": []
+      },
+      {
+        "projectId": "P349496",
+        "title": "액상 냉동창고 증발기#2 및 냉방기 압축기 교체",
+        "anchorDocId": "349496",
+        "anchorDate": "2026-05-13",
+        "anchorTitle": "생산3팀(액상) 유틸리티 설비 교체 및 유지보수 진행의 件",
+        "parentUsingBusinessTitle": "2026-05-13 액상 냉동창고 증발기#2 및 냉방기 압축기 교체",
+        "parentUsingAnchorTitle": "2026-05-13 생산3팀(액상) 유틸리티 설비 교체 및 유지보수 진행의 件",
+        "docIds": [
+          "349496"
+        ],
+        "children": []
+      },
+      {
+        "projectId": "P349544",
+        "title": "생산1팀1파트 물류창고 전기증설·조명",
+        "anchorDocId": "349544",
+        "anchorDate": "2026-05-14",
+        "anchorTitle": "생산1팀 1파트 물류 창고 전기 증설 및 조명등 공사",
+        "parentUsingBusinessTitle": "2026-05-14 생산1팀1파트 물류창고 전기증설·조명",
+        "parentUsingAnchorTitle": "2026-05-14 생산1팀 1파트 물류 창고 전기 증설 및 조명등 공사",
+        "docIds": [
+          "349544",
+          "351698"
+        ],
+        "children": [
+          {
+            "docId": "351698",
+            "date": "2026-06-01",
+            "dateBasis": "registry date",
+            "folderName": "2026-06-01 생산1팀 1파트 물류 창고 전기 증설 및 조명등 공사 (완료보고서)"
+          }
+        ]
+      },
+      {
+        "projectId": "P349833",
+        "title": "건조기 배기 스택 연장",
+        "anchorDocId": "349833",
+        "anchorDate": "2026-05-15",
+        "anchorTitle": "유산 공장 건조기 STACK 연장 설치의 件",
+        "parentUsingBusinessTitle": "2026-05-15 건조기 배기 스택 연장",
+        "parentUsingAnchorTitle": "2026-05-15 유산 공장 건조기 STACK 연장 설치의 件",
+        "docIds": [
+          "349833"
+        ],
+        "children": []
+      },
+      {
+        "projectId": "P349839",
+        "title": "북정 복지관 옥상 물탱크 설치",
+        "anchorDocId": "349839",
+        "anchorDate": "2026-05-15",
+        "anchorTitle": "북정)복지관 옥상 물탱크 설치 공사의  件",
+        "parentUsingBusinessTitle": "2026-05-15 북정 복지관 옥상 물탱크 설치",
+        "parentUsingAnchorTitle": "2026-05-15 북정)복지관 옥상 물탱크 설치 공사의 件",
+        "docIds": [
+          "349839",
+          "349854",
+          "352428"
+        ],
+        "children": [
+          {
+            "docId": "349854",
+            "date": "2026-05-15",
+            "dateBasis": "registry date",
+            "folderName": "2026-05-15 북정)복지관 옥상 물탱크 설치 공사의 件"
+          },
+          {
+            "docId": "352428",
+            "date": "2026-06-05",
+            "dateBasis": "registry date",
+            "folderName": "2026-06-05 북정)복지관 옥상 물탱크 설치 공사 완료의 件"
+          }
+        ]
+      },
+      {
+        "projectId": "P350475",
+        "title": "북정 MSD 건조기 에어햄머 및 제어판넬 교체",
+        "anchorDocId": "350475",
+        "anchorDate": "2026-05-21",
+        "anchorTitle": "(생산1팀 1Part) 건조기 챔버 및 싸이클론 에어햄머 보수 작업 건",
+        "parentUsingBusinessTitle": "2026-05-21 북정 MSD 건조기 에어햄머 및 제어판넬 교체",
+        "parentUsingAnchorTitle": "2026-05-21 (생산1팀 1Part) 건조기 챔버 및 싸이클론 에어햄머 보수 작업 건",
+        "docIds": [
+          "350475",
+          "356179"
+        ],
+        "children": [
+          {
+            "docId": "356179",
+            "date": "2026-07-03",
+            "dateBasis": "registry date",
+            "folderName": "2026-07-03 (생산1팀 1Part) 건조기 챔버 및 싸이클론 에어햄머 보수 작업 (완료보고서)"
+          }
+        ]
+      },
+      {
+        "projectId": "P351976",
+        "title": "생산2팀 위생전실 및 층별 위생실 리모델링",
+        "anchorDocId": "351976",
+        "anchorDate": "2026-06-02",
+        "anchorTitle": "생산2팀) 위생전실 및 1,2,3층 위생실 개선(리모델링) 공사의 件",
+        "parentUsingBusinessTitle": "2026-06-02 생산2팀 위생전실 및 층별 위생실 리모델링",
+        "parentUsingAnchorTitle": "2026-06-02 생산2팀) 위생전실 및 1,2,3층 위생실 개선(리모델링) 공사의 件",
+        "docIds": [
+          "351976",
+          "364607"
+        ],
+        "children": [
+          {
+            "docId": "364607",
+            "date": "2026-09-09",
+            "dateBasis": "registry date",
+            "folderName": "2026-09-09 생산2팀)위생전실 및 1,2,3층 위생실 개선(리모델링)공사 완료 보고의 件"
+          }
+        ]
+      },
+      {
+        "projectId": "P352895",
+        "title": "북정 SD·MSD 균질기 부분보수",
+        "anchorDocId": "352895",
+        "anchorDate": "2026-06-09",
+        "anchorTitle": "(생산1팀 1Part) 건조실 SD 및 MSD 균질기 부분 보수 작업 건",
+        "parentUsingBusinessTitle": "2026-06-09 북정 SD·MSD 균질기 부분보수",
+        "parentUsingAnchorTitle": "2026-06-09 (생산1팀 1Part) 건조실 SD 및 MSD 균질기 부분 보수 작업 건",
+        "docIds": [
+          "352895",
+          "364481"
+        ],
+        "children": [
+          {
+            "docId": "364481",
+            "date": "2026-09-09",
+            "dateBasis": "registry date",
+            "folderName": "2026-09-09 (생산1팀 1Part) 건조실 SD 및 MSD 균질기 부분 보수 작업 건 (완료보고서)"
+          }
+        ]
+      },
+      {
+        "projectId": "P352841",
+        "title": "생산1팀2파트 조제실 열수탱크 스팀코일 설치",
+        "anchorDocId": "352841",
+        "anchorDate": "2026-06-09",
+        "anchorTitle": "생산1팀2파트 조제실 열수탱크 스팀배관 코일설치 공사",
+        "parentUsingBusinessTitle": "2026-06-09 생산1팀2파트 조제실 열수탱크 스팀코일 설치",
+        "parentUsingAnchorTitle": "2026-06-09 생산1팀2파트 조제실 열수탱크 스팀배관 코일설치 공사",
+        "docIds": [
+          "352841",
+          "358207"
+        ],
+        "children": [
+          {
+            "docId": "358207",
+            "date": "2026-07-20",
+            "dateBasis": "registry date",
+            "folderName": "2026-07-20 생산1팀2파트 조제실 열수탱크 스팀배관 코일설치 공사 완료보고서"
+          }
+        ]
+      },
+      {
+        "projectId": "P354631",
+        "title": "북정 MSD 싸이클론 리턴브로와 교체",
+        "anchorDocId": "354631",
+        "anchorDate": "2026-06-22",
+        "anchorTitle": "(생산1팀 1Part) MSD건조기 싸이클론 리턴브로와 교체 공사",
+        "parentUsingBusinessTitle": "2026-06-22 북정 MSD 싸이클론 리턴브로와 교체",
+        "parentUsingAnchorTitle": "2026-06-22 (생산1팀 1Part) MSD건조기 싸이클론 리턴브로와 교체 공사",
+        "docIds": [
+          "354631",
+          "365789"
+        ],
+        "children": [
+          {
+            "docId": "365789",
+            "date": "2026-09-18",
+            "dateBasis": "registry date",
+            "folderName": "2026-09-18 (생산1팀 1Part) MSD건조기 싸이클론 리턴브로와 교체 공사 (완료보고서)"
+          }
+        ]
+      },
+      {
+        "projectId": "P357325",
+        "title": "압축기 모니터링 구축",
+        "anchorDocId": "357325",
+        "anchorDate": "2026-07-09",
+        "anchorTitle": "통합 모니터링 운영체계 구축 관련 장비 구매 설치 보고",
+        "parentUsingBusinessTitle": "2026-07-09 압축기 모니터링 구축",
+        "parentUsingAnchorTitle": "2026-07-09 통합 모니터링 운영체계 구축 관련 장비 구매 설치 보고",
+        "docIds": [
+          "357325"
+        ],
+        "children": []
+      },
+      {
+        "projectId": "P357804",
+        "title": "북정 폐수 침전조 웨어 FRP 보수",
+        "anchorDocId": "357804",
+        "anchorDate": "2026-07-14",
+        "anchorTitle": "북정)폐수장 침전조(12.5㎥)웰류웨어 FRP코팅 개선 공사의  件",
+        "parentUsingBusinessTitle": "2026-07-14 북정 폐수 침전조 웨어 FRP 보수",
+        "parentUsingAnchorTitle": "2026-07-14 북정)폐수장 침전조(12.5㎥)웰류웨어 FRP코팅 개선 공사의 件",
+        "docIds": [
+          "357804",
+          "362172"
+        ],
+        "children": [
+          {
+            "docId": "362172",
+            "date": "2026-08-21",
+            "dateBasis": "registry date",
+            "folderName": "2026-08-21 북정)폐수처리장 침전조 웰류웨어 FRP 작업 완료 의 件"
+          }
+        ]
+      },
+      {
+        "projectId": "P357993",
+        "title": "북정 조제실 1차 내부 환경개선",
+        "anchorDocId": "357993",
+        "anchorDate": "2026-07-15",
+        "anchorTitle": "북정)조제실 내부 환경 개선 공사의 件",
+        "parentUsingBusinessTitle": "2026-07-15 북정 조제실 1차 내부 환경개선",
+        "parentUsingAnchorTitle": "2026-07-15 북정)조제실 내부 환경 개선 공사의 件",
+        "docIds": [
+          "357993",
+          "364608"
+        ],
+        "children": [
+          {
+            "docId": "364608",
+            "date": "2026-09-09",
+            "dateBasis": "registry date",
+            "folderName": "2026-09-09 북정)조제실 내부 환경 개선 완료 보고의 件"
+          }
+        ]
+      },
+      {
+        "projectId": "P357896",
+        "title": "유산 최종침전조64㎥ FRP 코팅",
+        "anchorDocId": "357896",
+        "anchorDate": "2026-07-15",
+        "anchorTitle": "유산)폐수장 최종침전조(64㎥) 탱크 FRP 코팅 공사의  件",
+        "parentUsingBusinessTitle": "2026-07-15 유산 최종침전조64㎥ FRP 코팅",
+        "parentUsingAnchorTitle": "2026-07-15 유산)폐수장 최종침전조(64㎥) 탱크 FRP 코팅 공사의 件",
+        "docIds": [
+          "357896",
+          "362819"
+        ],
+        "children": [
+          {
+            "docId": "362819",
+            "date": "2026-08-27",
+            "dateBasis": "registry date",
+            "folderName": "2026-08-27 유산)폐수처리장 최종침전조(64㎥)FRP코팅 공사 완료 보고 의 件"
+          }
+        ]
+      },
+      {
+        "projectId": "P358268",
+        "title": "액상 배합실 A라인 스팀배관 개선",
+        "anchorDocId": "358268",
+        "anchorDate": "2026-07-20",
+        "anchorTitle": "액상 배합실 A라인 스팀배관 개선 공사",
+        "parentUsingBusinessTitle": "2026-07-20 액상 배합실 A라인 스팀배관 개선",
+        "parentUsingAnchorTitle": "2026-07-20 액상 배합실 A라인 스팀배관 개선 공사",
+        "docIds": [
+          "358268",
+          "361542"
+        ],
+        "children": [
+          {
+            "docId": "361542",
+            "date": "2026-08-18",
+            "dateBasis": "registry date",
+            "folderName": "2026-08-18 액상 배합실 A라인 스팀배관 개선 공사 완료보고서"
+          }
+        ]
+      },
+      {
+        "projectId": "P358704",
+        "title": "폐수 pH 중화장치 효과 검증",
+        "anchorDocId": "358704",
+        "anchorDate": "2026-07-23",
+        "anchorTitle": "유산 폐수처리장 집수조 약품 중화장치 설치의 件",
+        "parentUsingBusinessTitle": "2026-07-23 폐수 pH 중화장치 효과 검증",
+        "parentUsingAnchorTitle": "2026-07-23 유산 폐수처리장 집수조 약품 중화장치 설치의 件",
+        "docIds": [
+          "358704"
+        ],
+        "children": []
+      },
+      {
+        "projectId": "P359192",
+        "title": "생산2팀 여성휴게실 리모델링",
+        "anchorDocId": "359192",
+        "anchorDate": "2026-07-27",
+        "anchorTitle": "생산2팀) 여성 휴게실 환경 개선(리모델링) 공사의 件",
+        "parentUsingBusinessTitle": "2026-07-27 생산2팀 여성휴게실 리모델링",
+        "parentUsingAnchorTitle": "2026-07-27 생산2팀) 여성 휴게실 환경 개선(리모델링) 공사의 件",
+        "docIds": [
+          "359192",
+          "362595"
+        ],
+        "children": [
+          {
+            "docId": "362595",
+            "date": "2026-08-26",
+            "dateBasis": "registry date",
+            "folderName": "2026-08-26 생산2팀)여성 휴게실 환경개선(리모델링)작업 완료 보고 의 件"
+          }
+        ]
+      },
+      {
+        "projectId": "P361725",
+        "title": "액상 칠러 이코노마이저 설치",
+        "anchorDocId": "361725",
+        "anchorDate": "2026-08-19",
+        "anchorTitle": "액상 100RT,40RT 칠러 이코노마이져 구매 및 설치공사 완료",
+        "parentUsingBusinessTitle": "2026-08-19 액상 칠러 이코노마이저 설치",
+        "parentUsingAnchorTitle": "2026-08-19 액상 100RT,40RT 칠러 이코노마이져 구매 및 설치공사 완료",
+        "docIds": [
+          "361725"
+        ],
+        "children": []
+      },
+      {
+        "projectId": "P362142",
+        "title": "북정 혐기성 소화조 정상화",
+        "anchorDocId": "362142",
+        "anchorDate": "2026-08-21",
+        "anchorTitle": "북정) 폐수처리장 정상화 작업의 件",
+        "parentUsingBusinessTitle": "2026-08-21 북정 혐기성 소화조 정상화",
+        "parentUsingAnchorTitle": "2026-08-21 북정) 폐수처리장 정상화 작업의 件",
+        "docIds": [
+          "362142"
+        ],
+        "children": []
+      },
+      {
+        "projectId": "P362780",
+        "title": "북정 대기자가측정 모리아산업기술 업체변경",
+        "anchorDocId": "362780",
+        "anchorDate": "2026-08-27",
+        "anchorTitle": "북정 대기자가측정 업체 변경의 件",
+        "parentUsingBusinessTitle": "2026-08-27 북정 대기자가측정 모리아산업기술 업체변경",
+        "parentUsingAnchorTitle": "2026-08-27 북정 대기자가측정 업체 변경의 件",
+        "docIds": [
+          "362780"
+        ],
+        "children": []
+      },
+      {
+        "projectId": "P362866",
+        "title": "유산9동 계단통로 픽스유리창 썬팅",
+        "anchorDocId": "362866",
+        "anchorDate": "2026-08-28",
+        "anchorTitle": "유산)9동 계단 통로 픽스유리창 썬팅 작업의 件",
+        "parentUsingBusinessTitle": "2026-08-28 유산9동 계단통로 픽스유리창 썬팅",
+        "parentUsingAnchorTitle": "2026-08-28 유산)9동 계단 통로 픽스유리창 썬팅 작업의 件",
+        "docIds": [
+          "362866",
+          "363564"
+        ],
+        "children": [
+          {
+            "docId": "363564",
+            "date": "2026-09-03",
+            "dateBasis": "registry date",
+            "folderName": "2026-09-03 유산)9동 계단 통로 썬팅 작업 완료 보고 의 件"
+          }
+        ]
+      },
+      {
+        "projectId": "P363374",
+        "title": "생산2팀 소포장 지대 컨베이어 통합개선",
+        "anchorDocId": "363374",
+        "anchorDate": "2026-09-02",
+        "anchorTitle": "생산 2팀 소포장 지대 라인 이송 컨베이어 개선 진행의 件",
+        "parentUsingBusinessTitle": "2026-09-02 생산2팀 소포장 지대 컨베이어 통합개선",
+        "parentUsingAnchorTitle": "2026-09-02 생산 2팀 소포장 지대 라인 이송 컨베이어 개선 진행의 件",
+        "docIds": [
+          "363374",
+          "369289"
+        ],
+        "children": [
+          {
+            "docId": "369289",
+            "date": "2026-10-20",
+            "dateBasis": "registry date",
+            "folderName": "2026-10-20 생산2팀 소포장 컨베이어 유지보수 효율 개선 결과보고"
+          }
+        ]
+      },
+      {
+        "projectId": "P365056",
+        "title": "북정 레시틴 공급용 고점도 에어피스톤펌프 구매",
+        "anchorDocId": "365056",
+        "anchorDate": "2026-09-14",
+        "anchorTitle": "생산1팀 1파트 레시틴 공급용 고점도 에어 피스톤 펌프 구매의 건",
+        "parentUsingBusinessTitle": "2026-09-14 북정 레시틴 공급용 고점도 에어피스톤펌프 구매",
+        "parentUsingAnchorTitle": "2026-09-14 생산1팀 1파트 레시틴 공급용 고점도 에어 피스톤 펌프 구매의 건",
+        "docIds": [
+          "365056"
+        ],
+        "children": []
+      },
+      {
+        "projectId": "P365099",
+        "title": "유산 균질기 감속기 긴급수리 및 Rossi 신품 교체",
+        "anchorDocId": "365187",
+        "anchorDate": "2026-09-15",
+        "anchorTitle": "유산공장 건조기 균질기 감속기 구매건",
+        "parentUsingBusinessTitle": "2026-09-15 유산 균질기 감속기 긴급수리 및 Rossi 신품 교체",
+        "parentUsingAnchorTitle": "2026-09-15 유산공장 건조기 균질기 감속기 구매건",
+        "docIds": [
+          "365187",
+          "365099",
+          "367289"
+        ],
+        "children": [
+          {
+            "docId": "365099",
+            "date": "2026-09-14",
+            "dateBasis": "registry date",
+            "folderName": "2026-09-14 유산공장 건조기 균질기 감속기 고장 수리 완료 보고"
+          },
+          {
+            "docId": "367289",
+            "date": "2026-10-05",
+            "dateBasis": "registry date",
+            "folderName": "2026-10-05 유산공장 건조기 균질기 감속기 수입 후 설치 작업 완료보고서"
+          }
+        ]
+      },
+      {
+        "projectId": "P367530",
+        "title": "북정 폐수장 앞 파렛트 투입구 침하보수",
+        "anchorDocId": "367530",
+        "anchorDate": "2026-10-06",
+        "anchorTitle": "북정)폐수장 앞 파렛트 투입구 지반 침하 개선 공사 의 件",
+        "parentUsingBusinessTitle": "2026-10-06 북정 폐수장 앞 파렛트 투입구 침하보수",
+        "parentUsingAnchorTitle": "2026-10-06 북정)폐수장 앞 파렛트 투입구 지반 침하 개선 공사 의 件",
+        "docIds": [
+          "367530"
+        ],
+        "children": []
+      },
+      {
+        "projectId": "P367905",
+        "title": "북정 SD 이산화규소 인양투입구 확장",
+        "anchorDocId": "367905",
+        "anchorDate": "2026-10-08",
+        "anchorTitle": "북정)SD 이산화규소 재료 투입구 개선 공사의  件",
+        "parentUsingBusinessTitle": "2026-10-08 북정 SD 이산화규소 인양투입구 확장",
+        "parentUsingAnchorTitle": "2026-10-08 북정)SD 이산화규소 재료 투입구 개선 공사의 件",
+        "docIds": [
+          "367905",
+          "370648"
+        ],
+        "children": [
+          {
+            "docId": "370648",
+            "date": "2026-11-01",
+            "dateBasis": "registry date",
+            "folderName": "2026-11-01 북정)SD이산화규소 재료 투입구 개선 공사 완료의 件"
+          }
+        ]
+      },
+      {
+        "projectId": "P368381",
+        "title": "생산2팀9동 입구 환경개선",
+        "anchorDocId": "368381",
+        "anchorDate": "2026-10-13",
+        "anchorTitle": "생산2팀) 입구 환경 개선 공사의 件",
+        "parentUsingBusinessTitle": "2026-10-13 생산2팀9동 입구 환경개선",
+        "parentUsingAnchorTitle": "2026-10-13 생산2팀) 입구 환경 개선 공사의 件",
+        "docIds": [
+          "368381",
+          "369401"
+        ],
+        "children": [
+          {
+            "docId": "369401",
+            "date": "2026-10-21",
+            "dateBasis": "registry date",
+            "folderName": "2026-10-21 생산2팀) 입구 환경 개선 완료 보고의 件"
+          }
+        ]
+      }
+    ]
+  },
+  "pathLengthRisk": {
+    "untrimmedTargetFilesOver259": 0,
+    "longestTarget": 0,
+    "examples": [],
+    "recommendation": "Prefer the concise audited business title for parents and trim child display titles when needed; keep full titles/docNo in metadata. Preview final full paths including attachment basenames before moving.",
+    "actualNewLayoutFilesOver259": 0,
+    "actualNewLayoutMaxLength": 194,
+    "actualNewLayoutExamples": []
+  },
+  "filesOutsideRegisteredCaptureFolders": [],
+  "otherOriginalRootPresentations": [
+    {
+      "path": "(공무환경팀) 10월 KPI 20261102.pptx",
+      "size": 651762,
+      "role": "original planning/KPI presentation; preserve separately from 99 approval/report businesses"
+    },
+    {
+      "path": "1.27년 OO팀 KPI 및 중점추진과제 보고(1차 심의회).pptx",
+      "size": 648995,
+      "role": "original planning/KPI presentation; preserve separately from 99 approval/report businesses"
+    },
+    {
+      "path": "27년 고정투자자산관련 총합본 20261014 rev03.pptx",
+      "size": 14247566,
+      "role": "original planning/KPI presentation; preserve separately from 99 approval/report businesses"
+    }
+  ],
+  "rootAndFinancialIndexes": [
+    "기안·보고 금액총괄/자료총괄.html"
+  ],
+  "groupingCautions": [
+    "Do not union every reference link: umbrella proposal 281425 remains a separate reference folder; separate utility/building/pipe contracts are not its duplicate amount.",
+    "The granulator #1/#2 and gearbox emergency/new-purchase groups contain distinct costs. Concise business titles that cover all components are clearer than the anchor proposal title alone.",
+    "A report may precede the later purchase proposal in a same-incident group; preserve its true date rather than shifting it to the anchor date.",
+    "Different document IDs may share date/title. Resolve actual sibling name collisions with a short numeric suffix and preserve docNo in metadata, not in the display folder name.",
+    "No duplicate or original file was deleted, renamed or moved in this review."
+  ],
+  "captureCountBasis": {
+    "phase": "pre-move inventory",
+    "folderCounts": {
+      "2025년 자료/문서별 폴더": 78,
+      "2026년 기안서 자료/문서별 폴더": 45,
+      "보고서별 폴더": 49
+    },
+    "explanation": "Root began the authorized physical regrouping during this read-only audit. Old capture paths became empty as expected; reconciled against action_plan destination paths."
+  },
+  "postMoveReconciliation": {
+    "basis": "Root action_plan.json inspected read-only",
+    "plannedGroupsIncludingRootPPTs": 102,
+    "documentGroups": 99,
+    "standaloneOriginalPPTGroups": 3,
+    "registryDocuments": 171,
+    "uniqueDocumentIds": 171,
+    "destinationDocumentFoldersPresent": 171,
+    "bodyPdfPathsPresent": 171,
+    "attachmentFilesPresent": 533,
+    "oldSourceFoldersMayBeEmptyAfterAuthorizedMove": true
+  }
+}

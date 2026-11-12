@@ -1,0 +1,3192 @@
+{
+  "started_at": "2026-11-04T15:04:06",
+  "completed_at": "2026-11-04T15:04:14",
+  "desktop": "C:\\Users\\user\\Desktop",
+  "excluded_project": "C:\\Users\\user\\Desktop\\프로젝트",
+  "measurement": "logical file sizes from local metadata only; reparse/symlink not followed; no file contents read; no source changes/deletions",
+  "total_logical_bytes": 45317006637,
+  "total_file_count": 75267,
+  "folders": [
+    {
+      "folder": "C:\\Users\\user\\Desktop\\.tmp.driveupload",
+      "name": ".tmp.driveupload",
+      "logical_bytes": 25849329557,
+      "file_count": 4203,
+      "subdirectory_count": 0,
+      "classification": "active Google Drive staging/cache; not a cleanup recommendation",
+      "top15_files": [
+        {
+          "path": "C:\\Users\\user\\Desktop\\.tmp.driveupload\\2960386",
+          "relative": ".tmp.driveupload\\2960386",
+          "bytes": 1061227384,
+          "created_at": "2026-11-04T13:51:24",
+          "modified_at": "2026-11-04T13:52:00",
+          "suffix": ""
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\.tmp.driveupload\\2963812",
+          "relative": ".tmp.driveupload\\2963812",
+          "bytes": 1048840044,
+          "created_at": "2026-11-04T13:56:41",
+          "modified_at": "2026-11-04T13:57:24",
+          "suffix": ""
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\.tmp.driveupload\\2964864",
+          "relative": ".tmp.driveupload\\2964864",
+          "bytes": 1039899431,
+          "created_at": "2026-11-04T14:05:49",
+          "modified_at": "2026-11-04T14:06:28",
+          "suffix": ""
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\.tmp.driveupload\\2964896",
+          "relative": ".tmp.driveupload\\2964896",
+          "bytes": 1004947721,
+          "created_at": "2026-11-04T14:07:22",
+          "modified_at": "2026-11-04T14:07:56",
+          "suffix": ""
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\.tmp.driveupload\\2964716",
+          "relative": ".tmp.driveupload\\2964716",
+          "bytes": 995947920,
+          "created_at": "2026-11-04T14:01:50",
+          "modified_at": "2026-11-04T14:02:35",
+          "suffix": ""
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\.tmp.driveupload\\2958472",
+          "relative": ".tmp.driveupload\\2958472",
+          "bytes": 902745893,
+          "created_at": "2026-11-04T13:36:47",
+          "modified_at": "2026-11-04T13:37:17",
+          "suffix": ""
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\.tmp.driveupload\\2964210",
+          "relative": ".tmp.driveupload\\2964210",
+          "bytes": 858737846,
+          "created_at": "2026-11-04T13:58:36",
+          "modified_at": "2026-11-04T13:59:12",
+          "suffix": ""
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\.tmp.driveupload\\2959711",
+          "relative": ".tmp.driveupload\\2959711",
+          "bytes": 727359919,
+          "created_at": "2026-11-04T13:49:48",
+          "modified_at": "2026-11-04T13:50:23",
+          "suffix": ""
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\.tmp.driveupload\\2964718",
+          "relative": ".tmp.driveupload\\2964718",
+          "bytes": 721371824,
+          "created_at": "2026-11-04T14:01:50",
+          "modified_at": "2026-11-04T14:02:16",
+          "suffix": ""
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\.tmp.driveupload\\2958632",
+          "relative": ".tmp.driveupload\\2958632",
+          "bytes": 678174220,
+          "created_at": "2026-11-04T13:40:03",
+          "modified_at": "2026-11-04T13:40:31",
+          "suffix": ""
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\.tmp.driveupload\\2962761",
+          "relative": ".tmp.driveupload\\2962761",
+          "bytes": 661145408,
+          "created_at": "2026-11-04T13:55:20",
+          "modified_at": "2026-11-04T13:55:51",
+          "suffix": ""
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\.tmp.driveupload\\2963587",
+          "relative": ".tmp.driveupload\\2963587",
+          "bytes": 246499542,
+          "created_at": "2026-11-04T13:55:58",
+          "modified_at": "2026-11-04T13:56:08",
+          "suffix": ""
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\.tmp.driveupload\\2959001",
+          "relative": ".tmp.driveupload\\2959001",
+          "bytes": 219743617,
+          "created_at": "2026-11-04T13:42:44",
+          "modified_at": "2026-11-04T13:42:51",
+          "suffix": ""
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\.tmp.driveupload\\2964876",
+          "relative": ".tmp.driveupload\\2964876",
+          "bytes": 118505984,
+          "created_at": "2026-11-04T14:06:31",
+          "modified_at": "2026-11-04T14:07:38",
+          "suffix": ""
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\.tmp.driveupload\\2964874",
+          "relative": ".tmp.driveupload\\2964874",
+          "bytes": 118505984,
+          "created_at": "2026-11-04T14:06:20",
+          "modified_at": "2006-10-13T19:38:48",
+          "suffix": ""
+        }
+      ],
+      "skipped_reparse": [],
+      "errors": []
+    },
+    {
+      "folder": "C:\\Users\\user\\Desktop\\진행중",
+      "name": "진행중",
+      "logical_bytes": 15449008718,
+      "file_count": 68580,
+      "subdirectory_count": 9678,
+      "classification": "user work/original evidence; preserve unless individually reviewed",
+      "top15_files": [
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\target\\debug\\deps\\hancad_desktop_lib.lib",
+          "relative": "진행중\\간이캐드\\target\\debug\\deps\\hancad_desktop_lib.lib",
+          "bytes": 744989512,
+          "created_at": "2026-10-27T13:49:45",
+          "modified_at": "2026-10-27T13:49:45",
+          "suffix": ".lib"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\target\\debug\\hancad_desktop_lib.lib",
+          "relative": "진행중\\간이캐드\\target\\debug\\hancad_desktop_lib.lib",
+          "bytes": 720662642,
+          "created_at": "2026-10-19T16:35:03",
+          "modified_at": "2026-10-20T11:29:50",
+          "suffix": ".lib"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\target\\debug\\deps\\libhancad_desktop_lib.rlib",
+          "relative": "진행중\\간이캐드\\target\\debug\\deps\\libhancad_desktop_lib.rlib",
+          "bytes": 326621582,
+          "created_at": "2026-10-27T13:49:48",
+          "modified_at": "2026-10-27T13:49:48",
+          "suffix": ".rlib"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\target\\debug\\libhancad_desktop_lib.rlib",
+          "relative": "진행중\\간이캐드\\target\\debug\\libhancad_desktop_lib.rlib",
+          "bytes": 301888214,
+          "created_at": "2026-10-20T11:29:52",
+          "modified_at": "2026-10-20T11:29:53",
+          "suffix": ".rlib"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\target\\release\\deps\\libhancad_desktop_lib.rlib",
+          "relative": "진행중\\간이캐드\\target\\release\\deps\\libhancad_desktop_lib.rlib",
+          "bytes": 154175460,
+          "created_at": "2026-10-27T14:25:39",
+          "modified_at": "2026-10-27T14:25:40",
+          "suffix": ".rlib"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\target\\release\\deps\\hancad_desktop_lib.lib",
+          "relative": "진행중\\간이캐드\\target\\release\\deps\\hancad_desktop_lib.lib",
+          "bytes": 146806046,
+          "created_at": "2026-10-27T14:25:35",
+          "modified_at": "2026-10-27T14:25:36",
+          "suffix": ".lib"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\target\\debug\\deps\\libwindows-33c063f4c505c349.rlib",
+          "relative": "진행중\\간이캐드\\target\\debug\\deps\\libwindows-33c063f4c505c349.rlib",
+          "bytes": 123016754,
+          "created_at": "2026-10-19T08:44:11",
+          "modified_at": "2026-10-19T08:44:11",
+          "suffix": ".rlib"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\target\\debug\\hancad_desktop.pdb",
+          "relative": "진행중\\간이캐드\\target\\debug\\hancad_desktop.pdb",
+          "bytes": 116707328,
+          "created_at": "2026-10-20T11:29:56",
+          "modified_at": "2026-10-20T11:29:57",
+          "suffix": ".pdb"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\target\\debug\\deps\\hancad_desktop.pdb",
+          "relative": "진행중\\간이캐드\\target\\debug\\deps\\hancad_desktop.pdb",
+          "bytes": 116707328,
+          "created_at": "2026-10-20T11:29:56",
+          "modified_at": "2026-10-20T11:29:57",
+          "suffix": ".pdb"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\target\\release\\deps\\libwindows-d476348923d567b5.rlib",
+          "relative": "진행중\\간이캐드\\target\\release\\deps\\libwindows-d476348923d567b5.rlib",
+          "bytes": 101959306,
+          "created_at": "2026-10-19T08:45:54",
+          "modified_at": "2026-10-19T08:45:54",
+          "suffix": ".rlib"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\test-corpus\\phase09-private\\private.dxf",
+          "relative": "진행중\\간이캐드\\test-corpus\\phase09-private\\private.dxf",
+          "bytes": 101908573,
+          "created_at": "2026-10-20T11:46:46",
+          "modified_at": "2026-10-20T11:50:12",
+          "suffix": ".dxf"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\test-artifacts\\phase14-real-dwg\\2026-10-27T04-55-01-684Z\\private-dxf-2\\source-dxf\\drawing.dxf",
+          "relative": "진행중\\간이캐드\\test-artifacts\\phase14-real-dwg\\2026-10-27T04-55-01-684Z\\private-dxf-2\\source-dxf\\drawing.dxf",
+          "bytes": 101908573,
+          "created_at": "2026-10-27T13:57:07",
+          "modified_at": "2026-10-20T11:50:12",
+          "suffix": ".dxf"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\test-artifacts\\phase14-real-dwg\\2026-10-27T04-55-01-684Z\\private-dxf-2\\native-dxf\\drawing.dxf",
+          "relative": "진행중\\간이캐드\\test-artifacts\\phase14-real-dwg\\2026-10-27T04-55-01-684Z\\private-dxf-2\\native-dxf\\drawing.dxf",
+          "bytes": 101908573,
+          "created_at": "2026-10-27T13:58:16",
+          "modified_at": "2026-10-27T13:58:16",
+          "suffix": ".dxf"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\test-artifacts\\phase14-real-dwg\\2026-10-27T04-55-01-684Z\\private-dwg-1\\source-dxf\\drawing.dxf",
+          "relative": "진행중\\간이캐드\\test-artifacts\\phase14-real-dwg\\2026-10-27T04-55-01-684Z\\private-dwg-1\\source-dxf\\drawing.dxf",
+          "bytes": 101908573,
+          "created_at": "2026-10-27T13:55:05",
+          "modified_at": "2026-10-27T13:55:08",
+          "suffix": ".dxf"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\test-artifacts\\phase14-real-dwg\\2026-10-27T04-55-01-684Z\\private-dwg-1\\native-dxf\\drawing.dxf",
+          "relative": "진행중\\간이캐드\\test-artifacts\\phase14-real-dwg\\2026-10-27T04-55-01-684Z\\private-dwg-1\\native-dxf\\drawing.dxf",
+          "bytes": 101908573,
+          "created_at": "2026-10-27T13:56:18",
+          "modified_at": "2026-10-27T13:56:18",
+          "suffix": ".dxf"
+        }
+      ],
+      "skipped_reparse": [
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\test-artifacts\\phase12-stress-baseline\\packages\\render\\node_modules",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\packages\\ui\\node_modules\\@hancad\\legacy-bridge",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\packages\\sysvars\\node_modules\\@hancad\\db",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\packages\\render\\node_modules\\@hancad\\blocks",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\packages\\render\\node_modules\\@hancad\\db",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\packages\\render\\node_modules\\@hancad\\dimensions",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\packages\\render\\node_modules\\@hancad\\fonts",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\packages\\render\\node_modules\\@hancad\\geom",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\packages\\render\\node_modules\\@hancad\\hatch",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\packages\\render\\node_modules\\@hancad\\legacy-bridge",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\packages\\plot\\node_modules\\@hancad\\db",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\packages\\plot\\node_modules\\@hancad\\geom",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\packages\\legacy-bridge\\node_modules\\@hancad\\dimensions",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\packages\\legacy-bridge\\node_modules\\@hancad\\geom",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\packages\\layouts\\node_modules\\@hancad\\blocks",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\packages\\layouts\\node_modules\\@hancad\\db",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\packages\\layouts\\node_modules\\@hancad\\geom",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\packages\\layouts\\node_modules\\@hancad\\plot",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\packages\\io-pdf\\node_modules\\pdfjs-dist",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\packages\\io-pdf\\node_modules\\@hancad\\fonts",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\packages\\io-pdf\\node_modules\\@hancad\\legacy-bridge",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\packages\\io-dwg\\node_modules\\@mlightcad\\libredwg-web",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\packages\\hatch\\node_modules\\@hancad\\db",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\packages\\hatch\\node_modules\\@hancad\\geom",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\packages\\fonts\\node_modules\\fontkit",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\packages\\fonts\\node_modules\\@types\\fontkit",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\packages\\draft\\node_modules\\@hancad\\db",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\packages\\draft\\node_modules\\@hancad\\geom",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\packages\\draft\\node_modules\\@hancad\\hatch",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\packages\\draft\\node_modules\\@hancad\\legacy-bridge",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\packages\\commands\\node_modules\\@hancad\\db",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\packages\\commands\\node_modules\\@hancad\\draft",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\packages\\commands\\node_modules\\@hancad\\editor",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\packages\\commands\\node_modules\\@hancad\\input",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\packages\\commands\\node_modules\\@hancad\\sysvars",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\packages\\blocks\\node_modules\\@hancad\\db",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\packages\\blocks\\node_modules\\@hancad\\geom",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\packages\\blocks\\node_modules\\@hancad\\hatch",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\eslint",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\globals",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\prettier",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\react",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\react-dom",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\typescript",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\typescript-eslint",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\vite",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\vitest",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\@vitejs\\plugin-react",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\@types\\node",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\@types\\react",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\@types\\react-dom",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\@tauri-apps\\api",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\@tauri-apps\\cli",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\@tauri-apps\\plugin-window-state",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\@playwright\\test",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\which@2.0.2\\node_modules\\isexe",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\vitest@5.0.4_@types+node@26_4f7d05f3115d9af838e88dd2d2b3e3f7\\node_modules\\chai",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\vitest@5.0.4_@types+node@26_4f7d05f3115d9af838e88dd2d2b3e3f7\\node_modules\\es-module-lexer",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\vitest@5.0.4_@types+node@26_4f7d05f3115d9af838e88dd2d2b3e3f7\\node_modules\\expect-type",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\vitest@5.0.4_@types+node@26_4f7d05f3115d9af838e88dd2d2b3e3f7\\node_modules\\magic-string",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\vitest@5.0.4_@types+node@26_4f7d05f3115d9af838e88dd2d2b3e3f7\\node_modules\\obug",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\vitest@5.0.4_@types+node@26_4f7d05f3115d9af838e88dd2d2b3e3f7\\node_modules\\picomatch",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\vitest@5.0.4_@types+node@26_4f7d05f3115d9af838e88dd2d2b3e3f7\\node_modules\\std-env",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\vitest@5.0.4_@types+node@26_4f7d05f3115d9af838e88dd2d2b3e3f7\\node_modules\\tinybench",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\vitest@5.0.4_@types+node@26_4f7d05f3115d9af838e88dd2d2b3e3f7\\node_modules\\tinyexec",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\vitest@5.0.4_@types+node@26_4f7d05f3115d9af838e88dd2d2b3e3f7\\node_modules\\tinyglobby",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\vitest@5.0.4_@types+node@26_4f7d05f3115d9af838e88dd2d2b3e3f7\\node_modules\\vite",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\vitest@5.0.4_@types+node@26_4f7d05f3115d9af838e88dd2d2b3e3f7\\node_modules\\why-is-node-running",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\vitest@5.0.4_@types+node@26_4f7d05f3115d9af838e88dd2d2b3e3f7\\node_modules\\@vitest\\mocker",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\vitest@5.0.4_@types+node@26_4f7d05f3115d9af838e88dd2d2b3e3f7\\node_modules\\@types\\chai",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\vitest@5.0.4_@types+node@26_4f7d05f3115d9af838e88dd2d2b3e3f7\\node_modules\\@types\\node",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\vite@8.3.4_@types+node@26.6.5\\node_modules\\lightningcss",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\vite@8.3.4_@types+node@26.6.5\\node_modules\\picomatch",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\vite@8.3.4_@types+node@26.6.5\\node_modules\\postcss",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\vite@8.3.4_@types+node@26.6.5\\node_modules\\rolldown",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\vite@8.3.4_@types+node@26.6.5\\node_modules\\tinyglobby",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\vite@8.3.4_@types+node@26.6.5\\node_modules\\@types\\node",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\utif2@4.1.0\\node_modules\\pako",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\uri-js@4.4.1\\node_modules\\punycode",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\unicode-trie@2.0.0\\node_modules\\pako",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\unicode-trie@2.0.0\\node_modules\\tiny-inflate",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\unicode-properties@1.4.1\\node_modules\\base64-js",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\unicode-properties@1.4.1\\node_modules\\unicode-trie",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\typescript-eslint@8.71.2_eslint@10.12.0_typescript@6.0.3\\node_modules\\eslint",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\typescript-eslint@8.71.2_eslint@10.12.0_typescript@6.0.3\\node_modules\\typescript",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\typescript-eslint@8.71.2_eslint@10.12.0_typescript@6.0.3\\node_modules\\@typescript-eslint\\eslint-plugin",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\typescript-eslint@8.71.2_eslint@10.12.0_typescript@6.0.3\\node_modules\\@typescript-eslint\\parser",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\typescript-eslint@8.71.2_eslint@10.12.0_typescript@6.0.3\\node_modules\\@typescript-eslint\\typescript-estree",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\typescript-eslint@8.71.2_eslint@10.12.0_typescript@6.0.3\\node_modules\\@typescript-eslint\\utils",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\type-check@0.4.0\\node_modules\\prelude-ls",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\ts-api-utils@2.5.0_typescript@6.0.3\\node_modules\\typescript",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\tinyglobby@0.2.17\\node_modules\\fdir",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\tinyglobby@0.2.17\\node_modules\\picomatch",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\shebang-command@2.0.0\\node_modules\\shebang-regex",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\rolldown@1.2.13\\node_modules\\@rolldown\\binding-win32-x64-msvc",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\rolldown@1.2.13\\node_modules\\@rolldown\\pluginutils",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\rolldown@1.2.13\\node_modules\\@oxc-project\\types",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\react-dom@19.3.0_react@19.3.0\\node_modules\\react",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\react-dom@19.3.0_react@19.3.0\\node_modules\\scheduler",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\qified@0.10.1\\node_modules\\hookified",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\postcss@8.5.30\\node_modules\\nanoid",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\postcss@8.5.30\\node_modules\\picocolors",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\postcss@8.5.30\\node_modules\\source-map-js",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\playwright@1.64.0\\node_modules\\playwright-core",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\pdfjs-dist@6.4.299\\node_modules\\@napi-rs\\canvas",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\p-locate@5.0.0\\node_modules\\p-limit",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\p-limit@3.1.0\\node_modules\\yocto-queue",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\optionator@0.9.4\\node_modules\\deep-is",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\optionator@0.9.4\\node_modules\\fast-levenshtein",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\optionator@0.9.4\\node_modules\\levn",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\optionator@0.9.4\\node_modules\\prelude-ls",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\optionator@0.9.4\\node_modules\\type-check",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\optionator@0.9.4\\node_modules\\word-wrap",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\acorn",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\acorn-jsx",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\ajv",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\assertion-error",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\balanced-match",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\base64-js",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\brace-expansion",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\brotli",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\cacheable",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\chai",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\clone",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\cross-spawn",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\csstype",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\debug",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\deep-is",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\detect-libc",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\dfa",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\es-module-lexer",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\escape-string-regexp",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\eslint-scope",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\eslint-visitor-keys",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\espree",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\esquery",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\esrecurse",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\estraverse",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\estree-walker",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\esutils",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\expect-type",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\fast-deep-equal",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\fast-json-stable-stringify",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\fast-levenshtein",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\fdir",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\file-entry-cache",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\find-up",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\flat-cache",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\flatted",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\fontkit",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\glob-parent",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\hashery",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\hookified",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\ignore",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\imurmurhash",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\is-extglob",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\is-glob",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\isexe",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\json-schema-traverse",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\json-stable-stringify-without-jsonify",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\keyv",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\levn",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\lightningcss",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\lightningcss-win32-x64-msvc",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\locate-path",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\magic-string",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\minimatch",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\ms",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\nanoid",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\natural-compare",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\obug",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\optionator",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\p-limit",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\p-locate",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\pako",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\path-exists",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\path-key",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\pdfjs-dist",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\picocolors",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\picomatch",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\playwright",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\playwright-core",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\postcss",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\prelude-ls",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\punycode",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\qified",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\restructure",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\rolldown",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\scheduler",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\semver",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\shebang-command",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\shebang-regex",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\source-map-js",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\std-env",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\tiny-inflate",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\tinybench",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\tinyexec",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\tinyglobby",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\ts-api-utils",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\tslib",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\type-check",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\undici-types",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\unicode-properties",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\unicode-trie",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\uri-js",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\utif2",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\which",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\why-is-node-running",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\word-wrap",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\yocto-queue",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@vitest\\mocker",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@vitest\\spy",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@typescript-eslint\\eslint-plugin",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@typescript-eslint\\parser",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@typescript-eslint\\project-service",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@typescript-eslint\\scope-manager",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@typescript-eslint\\tsconfig-utils",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@typescript-eslint\\type-utils",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@typescript-eslint\\types",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@typescript-eslint\\typescript-estree",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@typescript-eslint\\utils",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@typescript-eslint\\visitor-keys",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@types\\chai",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@types\\deep-eql",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@types\\esrecurse",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@types\\estree",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@types\\fontkit",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@types\\json-schema",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@tauri-apps\\cli-win32-x64-msvc",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@swc\\helpers",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@rolldown\\binding-win32-x64-msvc",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@rolldown\\pluginutils",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@oxc-project\\types",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@napi-rs\\canvas",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@napi-rs\\canvas-win32-x64-msvc",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@mlightcad\\libredwg-web",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@keyv\\bigmap",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@keyv\\serialize",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@jridgewell\\resolve-uri",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@jridgewell\\sourcemap-codec",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@jridgewell\\trace-mapping",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@humanwhocodes\\module-importer",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@humanwhocodes\\retry",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@humanfs\\core",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@humanfs\\node",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@humanfs\\types",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@hancad\\blocks",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@hancad\\commands",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@hancad\\db",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@hancad\\desktop",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@hancad\\dimensions",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@hancad\\draft",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@hancad\\editor",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@hancad\\fonts",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@hancad\\geom",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@hancad\\hatch",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@hancad\\input",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@hancad\\io-dwg",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@hancad\\io-dxf",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@hancad\\io-pdf",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@hancad\\kernel3d",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@hancad\\layouts",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@hancad\\legacy-bridge",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@hancad\\lisp",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@hancad\\plot",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@hancad\\render",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@hancad\\sysvars",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@hancad\\ui",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@hancad\\web",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@eslint-community\\eslint-utils",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@eslint-community\\regexpp",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@eslint\\config-array",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@eslint\\config-helpers",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@eslint\\core",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@eslint\\object-schema",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@eslint\\plugin-kit",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@cacheable\\memory",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\node_modules\\@cacheable\\utils",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\minimatch@10.2.6\\node_modules\\brace-expansion",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\magic-string@1.4.3\\node_modules\\@jridgewell\\sourcemap-codec",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\locate-path@6.0.0\\node_modules\\p-locate",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\lightningcss@1.33.0\\node_modules\\detect-libc",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\lightningcss@1.33.0\\node_modules\\lightningcss-win32-x64-msvc",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\levn@0.4.1\\node_modules\\prelude-ls",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\levn@0.4.1\\node_modules\\type-check",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\keyv@5.6.0\\node_modules\\@keyv\\serialize",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\is-glob@4.0.3\\node_modules\\is-extglob",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\hashery@1.5.1\\node_modules\\hookified",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\glob-parent@6.0.2\\node_modules\\is-glob",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\fontkit@2.0.4\\node_modules\\brotli",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\fontkit@2.0.4\\node_modules\\clone",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\fontkit@2.0.4\\node_modules\\dfa",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\fontkit@2.0.4\\node_modules\\fast-deep-equal",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\fontkit@2.0.4\\node_modules\\restructure",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\fontkit@2.0.4\\node_modules\\tiny-inflate",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\fontkit@2.0.4\\node_modules\\unicode-properties",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\fontkit@2.0.4\\node_modules\\unicode-trie",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\fontkit@2.0.4\\node_modules\\@swc\\helpers",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\flat-cache@6.1.23\\node_modules\\cacheable",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\flat-cache@6.1.23\\node_modules\\flatted",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\flat-cache@6.1.23\\node_modules\\hookified",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\find-up@5.0.0\\node_modules\\locate-path",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\find-up@5.0.0\\node_modules\\path-exists",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\file-entry-cache@11.1.5\\node_modules\\flat-cache",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\fdir@6.5.0_picomatch@4.0.7\\node_modules\\picomatch",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\estree-walker@3.0.3\\node_modules\\@types\\estree",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\esrecurse@4.3.0\\node_modules\\estraverse",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\esquery@1.7.0\\node_modules\\estraverse",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\espree@11.2.0\\node_modules\\acorn",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\espree@11.2.0\\node_modules\\acorn-jsx",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\espree@11.2.0\\node_modules\\eslint-visitor-keys",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\eslint@10.12.0\\node_modules\\ajv",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\eslint@10.12.0\\node_modules\\cross-spawn",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\eslint@10.12.0\\node_modules\\debug",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\eslint@10.12.0\\node_modules\\escape-string-regexp",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\eslint@10.12.0\\node_modules\\eslint-scope",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\eslint@10.12.0\\node_modules\\eslint-visitor-keys",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\eslint@10.12.0\\node_modules\\espree",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\eslint@10.12.0\\node_modules\\esquery",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\eslint@10.12.0\\node_modules\\esutils",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\eslint@10.12.0\\node_modules\\fast-deep-equal",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\eslint@10.12.0\\node_modules\\file-entry-cache",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\eslint@10.12.0\\node_modules\\find-up",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\eslint@10.12.0\\node_modules\\glob-parent",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\eslint@10.12.0\\node_modules\\ignore",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\eslint@10.12.0\\node_modules\\imurmurhash",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\eslint@10.12.0\\node_modules\\is-glob",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\eslint@10.12.0\\node_modules\\json-stable-stringify-without-jsonify",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\eslint@10.12.0\\node_modules\\minimatch",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\eslint@10.12.0\\node_modules\\natural-compare",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\eslint@10.12.0\\node_modules\\optionator",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\eslint@10.12.0\\node_modules\\@types\\estree",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\eslint@10.12.0\\node_modules\\@humanwhocodes\\module-importer",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\eslint@10.12.0\\node_modules\\@humanwhocodes\\retry",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\eslint@10.12.0\\node_modules\\@humanfs\\node",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\eslint@10.12.0\\node_modules\\@eslint-community\\eslint-utils",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\eslint@10.12.0\\node_modules\\@eslint-community\\regexpp",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\eslint@10.12.0\\node_modules\\@eslint\\config-array",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\eslint@10.12.0\\node_modules\\@eslint\\config-helpers",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\eslint@10.12.0\\node_modules\\@eslint\\core",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\eslint@10.12.0\\node_modules\\@eslint\\plugin-kit",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\eslint-scope@9.1.2\\node_modules\\esrecurse",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\eslint-scope@9.1.2\\node_modules\\estraverse",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\eslint-scope@9.1.2\\node_modules\\@types\\esrecurse",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\eslint-scope@9.1.2\\node_modules\\@types\\estree",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\debug@4.4.3\\node_modules\\ms",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\cross-spawn@7.0.6\\node_modules\\path-key",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\cross-spawn@7.0.6\\node_modules\\shebang-command",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\cross-spawn@7.0.6\\node_modules\\which",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\cacheable@2.5.0\\node_modules\\hookified",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\cacheable@2.5.0\\node_modules\\keyv",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\cacheable@2.5.0\\node_modules\\qified",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\cacheable@2.5.0\\node_modules\\@cacheable\\memory",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\cacheable@2.5.0\\node_modules\\@cacheable\\utils",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\brotli@1.3.3\\node_modules\\base64-js",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\brace-expansion@5.0.12\\node_modules\\balanced-match",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\ajv@6.15.0\\node_modules\\fast-deep-equal",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\ajv@6.15.0\\node_modules\\fast-json-stable-stringify",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\ajv@6.15.0\\node_modules\\json-schema-traverse",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\ajv@6.15.0\\node_modules\\uri-js",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\acorn-jsx@5.3.2_acorn@8.19.0\\node_modules\\acorn",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@vitest+mocker@5.0.4_vite@8.3.4_@types+node@26.6.5_\\node_modules\\estree-walker",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@vitest+mocker@5.0.4_vite@8.3.4_@types+node@26.6.5_\\node_modules\\magic-string",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@vitest+mocker@5.0.4_vite@8.3.4_@types+node@26.6.5_\\node_modules\\vite",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@vitest+mocker@5.0.4_vite@8.3.4_@types+node@26.6.5_\\node_modules\\@vitest\\spy",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@vitest+mocker@5.0.4_vite@8.3.4_@types+node@26.6.5_\\node_modules\\@jridgewell\\trace-mapping",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@vitejs+plugin-react@6.1.2_vite@8.3.4_@types+node@26.6.5_\\node_modules\\vite",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@vitejs+plugin-react@6.1.2_vite@8.3.4_@types+node@26.6.5_\\node_modules\\@rolldown\\pluginutils",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@typescript-eslint+visitor-keys@8.71.2\\node_modules\\eslint-visitor-keys",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@typescript-eslint+visitor-keys@8.71.2\\node_modules\\@typescript-eslint\\types",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@typescript-eslint+utils@8._0ccd7815a2f0d13351eae29a6bf257ba\\node_modules\\eslint",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@typescript-eslint+utils@8._0ccd7815a2f0d13351eae29a6bf257ba\\node_modules\\typescript",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@typescript-eslint+utils@8._0ccd7815a2f0d13351eae29a6bf257ba\\node_modules\\@typescript-eslint\\scope-manager",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@typescript-eslint+utils@8._0ccd7815a2f0d13351eae29a6bf257ba\\node_modules\\@typescript-eslint\\types",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@typescript-eslint+utils@8._0ccd7815a2f0d13351eae29a6bf257ba\\node_modules\\@typescript-eslint\\typescript-estree",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@typescript-eslint+utils@8._0ccd7815a2f0d13351eae29a6bf257ba\\node_modules\\@eslint-community\\eslint-utils",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@typescript-eslint+typescript-estree@8.71.2_typescript@6.0.3\\node_modules\\debug",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@typescript-eslint+typescript-estree@8.71.2_typescript@6.0.3\\node_modules\\minimatch",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@typescript-eslint+typescript-estree@8.71.2_typescript@6.0.3\\node_modules\\semver",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@typescript-eslint+typescript-estree@8.71.2_typescript@6.0.3\\node_modules\\tinyglobby",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@typescript-eslint+typescript-estree@8.71.2_typescript@6.0.3\\node_modules\\ts-api-utils",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@typescript-eslint+typescript-estree@8.71.2_typescript@6.0.3\\node_modules\\typescript",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@typescript-eslint+typescript-estree@8.71.2_typescript@6.0.3\\node_modules\\@typescript-eslint\\project-service",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@typescript-eslint+typescript-estree@8.71.2_typescript@6.0.3\\node_modules\\@typescript-eslint\\tsconfig-utils",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@typescript-eslint+typescript-estree@8.71.2_typescript@6.0.3\\node_modules\\@typescript-eslint\\types",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@typescript-eslint+typescript-estree@8.71.2_typescript@6.0.3\\node_modules\\@typescript-eslint\\visitor-keys",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@typescript-eslint+type-uti_23e05f38497580b7791f56d4c18ceb55\\node_modules\\debug",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@typescript-eslint+type-uti_23e05f38497580b7791f56d4c18ceb55\\node_modules\\eslint",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@typescript-eslint+type-uti_23e05f38497580b7791f56d4c18ceb55\\node_modules\\ts-api-utils",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@typescript-eslint+type-uti_23e05f38497580b7791f56d4c18ceb55\\node_modules\\typescript",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@typescript-eslint+type-uti_23e05f38497580b7791f56d4c18ceb55\\node_modules\\@typescript-eslint\\types",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@typescript-eslint+type-uti_23e05f38497580b7791f56d4c18ceb55\\node_modules\\@typescript-eslint\\typescript-estree",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@typescript-eslint+type-uti_23e05f38497580b7791f56d4c18ceb55\\node_modules\\@typescript-eslint\\utils",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@typescript-eslint+tsconfig-utils@8.71.2_typescript@6.0.3\\node_modules\\typescript",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@typescript-eslint+scope-manager@8.71.2\\node_modules\\@typescript-eslint\\types",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@typescript-eslint+scope-manager@8.71.2\\node_modules\\@typescript-eslint\\visitor-keys",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@typescript-eslint+project-service@8.71.2_typescript@6.0.3\\node_modules\\debug",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@typescript-eslint+project-service@8.71.2_typescript@6.0.3\\node_modules\\typescript",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@typescript-eslint+project-service@8.71.2_typescript@6.0.3\\node_modules\\@typescript-eslint\\tsconfig-utils",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@typescript-eslint+project-service@8.71.2_typescript@6.0.3\\node_modules\\@typescript-eslint\\types",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@typescript-eslint+parser@8_e3b1861394bbf1e695fed6209653e94a\\node_modules\\debug",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@typescript-eslint+parser@8_e3b1861394bbf1e695fed6209653e94a\\node_modules\\eslint",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@typescript-eslint+parser@8_e3b1861394bbf1e695fed6209653e94a\\node_modules\\typescript",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@typescript-eslint+parser@8_e3b1861394bbf1e695fed6209653e94a\\node_modules\\@typescript-eslint\\scope-manager",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@typescript-eslint+parser@8_e3b1861394bbf1e695fed6209653e94a\\node_modules\\@typescript-eslint\\types",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@typescript-eslint+parser@8_e3b1861394bbf1e695fed6209653e94a\\node_modules\\@typescript-eslint\\typescript-estree",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@typescript-eslint+parser@8_e3b1861394bbf1e695fed6209653e94a\\node_modules\\@typescript-eslint\\visitor-keys",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@typescript-eslint+eslint-p_48977ac878e72fdc2c90983f8386a66c\\node_modules\\eslint",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@typescript-eslint+eslint-p_48977ac878e72fdc2c90983f8386a66c\\node_modules\\ignore",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@typescript-eslint+eslint-p_48977ac878e72fdc2c90983f8386a66c\\node_modules\\natural-compare",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@typescript-eslint+eslint-p_48977ac878e72fdc2c90983f8386a66c\\node_modules\\ts-api-utils",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@typescript-eslint+eslint-p_48977ac878e72fdc2c90983f8386a66c\\node_modules\\typescript",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@typescript-eslint+eslint-p_48977ac878e72fdc2c90983f8386a66c\\node_modules\\@typescript-eslint\\parser",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@typescript-eslint+eslint-p_48977ac878e72fdc2c90983f8386a66c\\node_modules\\@typescript-eslint\\scope-manager",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@typescript-eslint+eslint-p_48977ac878e72fdc2c90983f8386a66c\\node_modules\\@typescript-eslint\\type-utils",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@typescript-eslint+eslint-p_48977ac878e72fdc2c90983f8386a66c\\node_modules\\@typescript-eslint\\utils",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@typescript-eslint+eslint-p_48977ac878e72fdc2c90983f8386a66c\\node_modules\\@typescript-eslint\\visitor-keys",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@typescript-eslint+eslint-p_48977ac878e72fdc2c90983f8386a66c\\node_modules\\@eslint-community\\regexpp",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@types+react@19.3.0\\node_modules\\csstype",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@types+react-dom@19.3.0_@types+react@19.3.0\\node_modules\\@types\\react",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@types+node@26.6.5\\node_modules\\undici-types",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@types+fontkit@2.0.9\\node_modules\\@types\\node",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@types+chai@5.2.3\\node_modules\\assertion-error",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@types+chai@5.2.3\\node_modules\\@types\\deep-eql",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@tauri-apps+plugin-window-state@2.5.0\\node_modules\\@tauri-apps\\api",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@tauri-apps+cli@2.12.2\\node_modules\\@tauri-apps\\cli-win32-x64-msvc",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@swc+helpers@0.5.23\\node_modules\\tslib",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@playwright+test@1.64.0\\node_modules\\playwright",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@napi-rs+canvas@1.0.13\\node_modules\\@napi-rs\\canvas-win32-x64-msvc",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@keyv+bigmap@1.3.1_keyv@5.6.0\\node_modules\\hashery",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@keyv+bigmap@1.3.1_keyv@5.6.0\\node_modules\\hookified",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@keyv+bigmap@1.3.1_keyv@5.6.0\\node_modules\\keyv",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@jridgewell+trace-mapping@0.3.31\\node_modules\\@jridgewell\\resolve-uri",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@jridgewell+trace-mapping@0.3.31\\node_modules\\@jridgewell\\sourcemap-codec",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@humanfs+node@0.16.8\\node_modules\\@humanwhocodes\\retry",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@humanfs+node@0.16.8\\node_modules\\@humanfs\\core",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@humanfs+node@0.16.8\\node_modules\\@humanfs\\types",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@humanfs+core@0.19.2\\node_modules\\@humanfs\\types",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@eslint-community+eslint-utils@4.10.1_eslint@10.12.0\\node_modules\\eslint",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@eslint-community+eslint-utils@4.10.1_eslint@10.12.0\\node_modules\\eslint-visitor-keys",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@eslint+plugin-kit@0.7.3\\node_modules\\levn",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@eslint+plugin-kit@0.7.3\\node_modules\\@eslint\\core",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@eslint+core@1.2.1\\node_modules\\@types\\json-schema",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@eslint+config-helpers@0.7.0\\node_modules\\@eslint\\core",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@eslint+config-array@0.23.5\\node_modules\\debug",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@eslint+config-array@0.23.5\\node_modules\\minimatch",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@eslint+config-array@0.23.5\\node_modules\\@eslint\\object-schema",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@cacheable+utils@2.5.0\\node_modules\\hashery",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@cacheable+utils@2.5.0\\node_modules\\keyv",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@cacheable+memory@2.2.0\\node_modules\\hookified",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@cacheable+memory@2.2.0\\node_modules\\keyv",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@cacheable+memory@2.2.0\\node_modules\\@keyv\\bigmap",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules\\.pnpm\\@cacheable+memory@2.2.0\\node_modules\\@cacheable\\utils",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\apps\\web\\node_modules\\react",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\apps\\web\\node_modules\\react-dom",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\apps\\web\\node_modules\\utif2",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\apps\\web\\node_modules\\@tauri-apps\\api",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\apps\\web\\node_modules\\@hancad\\blocks",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\apps\\web\\node_modules\\@hancad\\commands",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\apps\\web\\node_modules\\@hancad\\db",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\apps\\web\\node_modules\\@hancad\\dimensions",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\apps\\web\\node_modules\\@hancad\\draft",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\apps\\web\\node_modules\\@hancad\\fonts",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\apps\\web\\node_modules\\@hancad\\geom",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\apps\\web\\node_modules\\@hancad\\hatch",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\apps\\web\\node_modules\\@hancad\\input",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\apps\\web\\node_modules\\@hancad\\io-dwg",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\apps\\web\\node_modules\\@hancad\\io-dxf",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\apps\\web\\node_modules\\@hancad\\io-pdf",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\apps\\web\\node_modules\\@hancad\\layouts",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\apps\\web\\node_modules\\@hancad\\legacy-bridge",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\apps\\web\\node_modules\\@hancad\\plot",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\apps\\web\\node_modules\\@hancad\\render",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\apps\\web\\node_modules\\@hancad\\sysvars",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\apps\\web\\node_modules\\@hancad\\ui",
+          "reason": "reparse/symlink not followed"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "folder": "C:\\Users\\user\\Desktop\\팀 보고서",
+      "name": "팀 보고서",
+      "logical_bytes": 2327435072,
+      "file_count": 1193,
+      "subdirectory_count": 76,
+      "classification": "user work/original evidence; preserve unless individually reviewed",
+      "top15_files": [
+        {
+          "path": "C:\\Users\\user\\Desktop\\팀 보고서\\자산 투자 효과성\\_편집작업_20260930\\reorder_32_to_18\\review.pptx",
+          "relative": "팀 보고서\\자산 투자 효과성\\_편집작업_20260930\\reorder_32_to_18\\review.pptx",
+          "bytes": 79081982,
+          "created_at": "2026-09-30T13:26:26",
+          "modified_at": "2026-09-30T13:26:26",
+          "suffix": ".pptx"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\팀 보고서\\자산 투자 효과성\\_편집작업_20260930\\final_ai.pptx",
+          "relative": "팀 보고서\\자산 투자 효과성\\_편집작업_20260930\\final_ai.pptx",
+          "bytes": 79081980,
+          "created_at": "2026-09-30T11:04:23",
+          "modified_at": "2026-09-30T13:26:32",
+          "suffix": ".pptx"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\팀 보고서\\자산 투자 효과성\\_편집작업_20260930\\before_format_32_33\\27년 고정투자자산관련_총합본_최종_AI재생성_수정본.pptx",
+          "relative": "팀 보고서\\자산 투자 효과성\\_편집작업_20260930\\before_format_32_33\\27년 고정투자자산관련_총합본_최종_AI재생성_수정본.pptx",
+          "bytes": 79081642,
+          "created_at": "2026-09-30T13:19:26",
+          "modified_at": "2026-09-30T13:14:17",
+          "suffix": ".pptx"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\팀 보고서\\자산 투자 효과성\\_편집작업_20260930\\before_reorder_32_to_18\\27년 고정투자자산관련_총합본_최종_AI재생성_수정본.pptx",
+          "relative": "팀 보고서\\자산 투자 효과성\\_편집작업_20260930\\before_reorder_32_to_18\\27년 고정투자자산관련_총합본_최종_AI재생성_수정본.pptx",
+          "bytes": 79080649,
+          "created_at": "2026-09-30T13:26:23",
+          "modified_at": "2026-09-30T13:26:23",
+          "suffix": ".pptx"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\팀 보고서\\자산 투자 효과성\\_편집작업_20260930\\format_32_33\\review.pptx",
+          "relative": "팀 보고서\\자산 투자 효과성\\_편집작업_20260930\\format_32_33\\review.pptx",
+          "bytes": 78795801,
+          "created_at": "2026-09-30T13:19:26",
+          "modified_at": "2026-09-30T13:21:03",
+          "suffix": ".pptx"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\팀 보고서\\자산 투자 효과성\\_편집작업_20260930\\before_boiler_merge\\27년 고정투자자산관련_총합본_최종_AI재생성_수정본.pptx",
+          "relative": "팀 보고서\\자산 투자 효과성\\_편집작업_20260930\\before_boiler_merge\\27년 고정투자자산관련_총합본_최종_AI재생성_수정본.pptx",
+          "bytes": 68660563,
+          "created_at": "2026-09-30T11:34:44",
+          "modified_at": "2026-09-30T11:27:02",
+          "suffix": ".pptx"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\팀 보고서\\자산 투자 효과성\\_편집작업_20260930\\boiler_merge\\ai.pptx",
+          "relative": "팀 보고서\\자산 투자 효과성\\_편집작업_20260930\\boiler_merge\\ai.pptx",
+          "bytes": 68654183,
+          "created_at": "2026-09-30T11:34:44",
+          "modified_at": "2026-09-30T11:34:46",
+          "suffix": ".pptx"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\팀 보고서\\자산 투자 효과성\\_편집작업_20260930\\before_toc_facilities_merge\\27년 고정투자자산관련_총합본_최종_AI재생성_수정본.pptx",
+          "relative": "팀 보고서\\자산 투자 효과성\\_편집작업_20260930\\before_toc_facilities_merge\\27년 고정투자자산관련_총합본_최종_AI재생성_수정본.pptx",
+          "bytes": 68654183,
+          "created_at": "2026-09-30T11:38:33",
+          "modified_at": "2026-09-30T11:34:46",
+          "suffix": ".pptx"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\팀 보고서\\자산 투자 효과성\\_편집작업_20260930\\toc_facilities_merge\\ai.pptx",
+          "relative": "팀 보고서\\자산 투자 효과성\\_편집작업_20260930\\toc_facilities_merge\\ai.pptx",
+          "bytes": 68654142,
+          "created_at": "2026-09-30T11:38:34",
+          "modified_at": "2026-09-30T11:38:36",
+          "suffix": ".pptx"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\팀 보고서\\자산 투자 효과성\\_편집작업_20260930\\before_photo_alignment\\27년 고정투자자산관련_총합본_최종_AI재생성_수정본.pptx",
+          "relative": "팀 보고서\\자산 투자 효과성\\_편집작업_20260930\\before_photo_alignment\\27년 고정투자자산관련_총합본_최종_AI재생성_수정본.pptx",
+          "bytes": 68654142,
+          "created_at": "2026-09-30T12:28:17",
+          "modified_at": "2026-09-30T11:38:36",
+          "suffix": ".pptx"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\팀 보고서\\자산 투자 효과성\\_편집작업_20260930\\photo_alignment\\ai.pptx",
+          "relative": "팀 보고서\\자산 투자 효과성\\_편집작업_20260930\\photo_alignment\\ai.pptx",
+          "bytes": 68653977,
+          "created_at": "2026-09-30T12:28:18",
+          "modified_at": "2026-09-30T12:30:06",
+          "suffix": ".pptx"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\팀 보고서\\자산 투자 효과성\\_편집작업_20260930\\before_restrained_revision\\27년 고정투자자산관련_총합본_최종_AI재생성.pptx",
+          "relative": "팀 보고서\\자산 투자 효과성\\_편집작업_20260930\\before_restrained_revision\\27년 고정투자자산관련_총합본_최종_AI재생성.pptx",
+          "bytes": 48690985,
+          "created_at": "2026-09-30T11:21:59",
+          "modified_at": "2026-09-30T11:13:59",
+          "suffix": ".pptx"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\팀 보고서\\자산 투자 효과성\\.codex_work\\rev03_classification\\before.pptx",
+          "relative": "팀 보고서\\자산 투자 효과성\\.codex_work\\rev03_classification\\before.pptx",
+          "bytes": 47509383,
+          "created_at": "2026-10-07T17:57:54",
+          "modified_at": "2026-10-07T16:37:54",
+          "suffix": ".pptx"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\팀 보고서\\안전\\2027_안전개선_근거자료\\2027_안전개선_목표수립_근거보고서.html",
+          "relative": "팀 보고서\\안전\\2027_안전개선_근거자료\\2027_안전개선_목표수립_근거보고서.html",
+          "bytes": 45133515,
+          "created_at": "2026-11-03T11:03:07",
+          "modified_at": "2026-11-03T11:07:54",
+          "suffix": ".html"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\팀 보고서\\안전\\2027_안전개선_근거자료_전체.zip",
+          "relative": "팀 보고서\\안전\\2027_안전개선_근거자료_전체.zip",
+          "bytes": 29228112,
+          "created_at": "2026-11-03T11:08:19",
+          "modified_at": "2026-11-03T11:08:20",
+          "suffix": ".zip"
+        }
+      ],
+      "skipped_reparse": [],
+      "errors": []
+    },
+    {
+      "folder": "C:\\Users\\user\\Desktop\\김민현",
+      "name": "김민현",
+      "logical_bytes": 1219543709,
+      "file_count": 308,
+      "subdirectory_count": 30,
+      "classification": "user work/original evidence; preserve unless individually reviewed",
+      "top15_files": [
+        {
+          "path": "C:\\Users\\user\\Desktop\\김민현\\책\\물리 법칙의 특성.zip",
+          "relative": "김민현\\책\\물리 법칙의 특성.zip",
+          "bytes": 160851313,
+          "created_at": "2026-09-03T08:28:50",
+          "modified_at": "2026-09-03T08:29:04",
+          "suffix": ".zip"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\김민현\\책\\소유냐 존재냐.pdf",
+          "relative": "김민현\\책\\소유냐 존재냐.pdf",
+          "bytes": 124756056,
+          "created_at": "2026-07-05T07:35:17",
+          "modified_at": "2026-07-05T08:23:09",
+          "suffix": ".pdf"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\김민현\\책\\턴어라운드.zip",
+          "relative": "김민현\\책\\턴어라운드.zip",
+          "bytes": 119642432,
+          "created_at": "2026-10-14T08:35:13",
+          "modified_at": "2026-10-14T08:35:24",
+          "suffix": ".zip"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\김민현\\보고서\\승강기 자산 투자\\06_슬라이드수정안_2026-10-07\\27년 고정투자자산관련 총합본 20261007_15p수정전.pptx",
+          "relative": "김민현\\보고서\\승강기 자산 투자\\06_슬라이드수정안_2026-10-07\\27년 고정투자자산관련 총합본 20261007_15p수정전.pptx",
+          "bytes": 51345162,
+          "created_at": "2026-10-07T11:32:13",
+          "modified_at": "2026-10-07T11:31:00",
+          "suffix": ".pptx"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\김민현\\보고서\\승강기 자산 투자\\06_슬라이드수정안_2026-10-07\\27년 고정투자자산관련 총합본 20261007_승강기수정안.pptx",
+          "relative": "김민현\\보고서\\승강기 자산 투자\\06_슬라이드수정안_2026-10-07\\27년 고정투자자산관련 총합본 20261007_승강기수정안.pptx",
+          "bytes": 51341484,
+          "created_at": "2026-10-07T11:31:01",
+          "modified_at": "2026-10-07T11:33:23",
+          "suffix": ".pptx"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\김민현\\보고서\\승강기 자산 투자\\07_14p안전장치_양식수정_2026-10-07\\14p_수정확인.pptx",
+          "relative": "김민현\\보고서\\승강기 자산 투자\\07_14p안전장치_양식수정_2026-10-07\\14p_수정확인.pptx",
+          "bytes": 47507579,
+          "created_at": "2026-10-07T14:19:32",
+          "modified_at": "2026-10-07T14:20:25",
+          "suffix": ".pptx"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\김민현\\보고서\\승강기 자산 투자\\07_14p안전장치_양식수정_2026-10-07\\수정직전_최신자료.pptx",
+          "relative": "김민현\\보고서\\승강기 자산 투자\\07_14p안전장치_양식수정_2026-10-07\\수정직전_최신자료.pptx",
+          "bytes": 47507085,
+          "created_at": "2026-10-07T14:20:31",
+          "modified_at": "2026-10-07T14:20:32",
+          "suffix": ".pptx"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\김민현\\보고서\\승강기 자산 투자\\07_14p안전장치_양식수정_2026-10-07\\수정전_현재자료.pptx",
+          "relative": "김민현\\보고서\\승강기 자산 투자\\07_14p안전장치_양식수정_2026-10-07\\수정전_현재자료.pptx",
+          "bytes": 47506085,
+          "created_at": "2026-10-07T14:15:50",
+          "modified_at": "2026-10-07T14:15:51",
+          "suffix": ".pptx"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\김민현\\보고서\\냉동기 기안서\\압축기 메뉴얼.pdf",
+          "relative": "김민현\\보고서\\냉동기 기안서\\압축기 메뉴얼.pdf",
+          "bytes": 26269107,
+          "created_at": "2026-07-18T15:20:13",
+          "modified_at": "2026-07-18T15:20:13",
+          "suffix": ".pdf"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\김민현\\보고서\\승강기 자산 투자\\02_원본양식\\27년 자산 투자 효과성(필요성) - 공무 환경팀(김민규).xlsx",
+          "relative": "김민현\\보고서\\승강기 자산 투자\\02_원본양식\\27년 자산 투자 효과성(필요성) - 공무 환경팀(김민규).xlsx",
+          "bytes": 18547530,
+          "created_at": "2026-09-30T09:56:42",
+          "modified_at": "2026-09-22T16:47:47",
+          "suffix": ".xlsx"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\김민현\\보고서\\승강기 자산 투자\\08_6p내용수정_2026-10-08\\6p_좌측사진_우측표_수정확인.pptx",
+          "relative": "김민현\\보고서\\승강기 자산 투자\\08_6p내용수정_2026-10-08\\6p_좌측사진_우측표_수정확인.pptx",
+          "bytes": 17543432,
+          "created_at": "2026-10-08T16:48:21",
+          "modified_at": "2026-10-08T16:51:24",
+          "suffix": ".pptx"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\김민현\\보고서\\승강기 자산 투자\\08_6p내용수정_2026-10-08\\6p_수정확인.pptx",
+          "relative": "김민현\\보고서\\승강기 자산 투자\\08_6p내용수정_2026-10-08\\6p_수정확인.pptx",
+          "bytes": 15297248,
+          "created_at": "2026-10-08T16:38:52",
+          "modified_at": "2026-10-08T16:40:18",
+          "suffix": ".pptx"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\김민현\\메뉴얼,책임자\\코렐라인의 선물.html",
+          "relative": "김민현\\메뉴얼,책임자\\코렐라인의 선물.html",
+          "bytes": 14937363,
+          "created_at": "2026-10-26T13:55:06",
+          "modified_at": "2026-10-26T14:00:24",
+          "suffix": ".html"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\김민현\\보고서\\승강기 자산 투자\\08_6p내용수정_2026-10-08\\좌측사진_우측표_수정직전_최신자료.pptx",
+          "relative": "김민현\\보고서\\승강기 자산 투자\\08_6p내용수정_2026-10-08\\좌측사진_우측표_수정직전_최신자료.pptx",
+          "bytes": 12666066,
+          "created_at": "2026-10-08T16:53:18",
+          "modified_at": "2026-10-08T16:53:18",
+          "suffix": ".pptx"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\김민현\\보고서\\승강기 자산 투자\\08_6p내용수정_2026-10-08\\재수정전_현재자료.pptx",
+          "relative": "김민현\\보고서\\승강기 자산 투자\\08_6p내용수정_2026-10-08\\재수정전_현재자료.pptx",
+          "bytes": 12666063,
+          "created_at": "2026-10-08T16:45:46",
+          "modified_at": "2026-10-08T16:45:46",
+          "suffix": ".pptx"
+        }
+      ],
+      "skipped_reparse": [],
+      "errors": []
+    },
+    {
+      "folder": "C:\\Users\\user\\Desktop\\턴어라운드",
+      "name": "턴어라운드",
+      "logical_bytes": 422120440,
+      "file_count": 637,
+      "subdirectory_count": 37,
+      "classification": "user work/original evidence; preserve unless individually reviewed",
+      "top15_files": [
+        {
+          "path": "C:\\Users\\user\\Desktop\\턴어라운드\\사자성어\\tmp\\pdfs\\poppler.zip",
+          "relative": "턴어라운드\\사자성어\\tmp\\pdfs\\poppler.zip",
+          "bytes": 43709956,
+          "created_at": "2026-10-22T14:35:43",
+          "modified_at": "2026-10-22T14:35:58",
+          "suffix": ".zip"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\턴어라운드\\사자성어\\tmp\\pdfs\\poppler\\poppler-26.09.0\\Library\\bin\\icudt78.dll",
+          "relative": "턴어라운드\\사자성어\\tmp\\pdfs\\poppler\\poppler-26.09.0\\Library\\bin\\icudt78.dll",
+          "bytes": 33110528,
+          "created_at": "2026-10-22T14:36:00",
+          "modified_at": "2026-09-15T15:50:38",
+          "suffix": ".dll"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\턴어라운드\\사자성어\\한주한성어_4컷만화_A4_5장.pdf",
+          "relative": "턴어라운드\\사자성어\\한주한성어_4컷만화_A4_5장.pdf",
+          "bytes": 19720498,
+          "created_at": "2026-10-22T09:39:44",
+          "modified_at": "2026-10-22T14:36:16",
+          "suffix": ".pdf"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\턴어라운드\\사자성어\\output\\pdf\\한주한성어_4컷만화_A4_5장.pdf",
+          "relative": "턴어라운드\\사자성어\\output\\pdf\\한주한성어_4컷만화_A4_5장.pdf",
+          "bytes": 19720498,
+          "created_at": "2026-10-22T14:35:44",
+          "modified_at": "2026-10-22T14:36:16",
+          "suffix": ".pdf"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\턴어라운드\\사자성어\\tmp\\pdfs\\poppler\\poppler-26.09.0\\Library\\lib\\poppler.lib",
+          "relative": "턴어라운드\\사자성어\\tmp\\pdfs\\poppler\\poppler-26.09.0\\Library\\lib\\poppler.lib",
+          "bytes": 17037826,
+          "created_at": "2026-10-22T14:36:01",
+          "modified_at": "2026-09-08T02:34:08",
+          "suffix": ".lib"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\턴어라운드\\분류\\00_표지_차례_서문_등장인물.pdf",
+          "relative": "턴어라운드\\분류\\00_표지_차례_서문_등장인물.pdf",
+          "bytes": 13221181,
+          "created_at": "2026-10-14T08:45:37",
+          "modified_at": "2026-10-14T08:45:37",
+          "suffix": ".pdf"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\턴어라운드\\분류\\08과_원문.pdf",
+          "relative": "턴어라운드\\분류\\08과_원문.pdf",
+          "bytes": 8476708,
+          "created_at": "2026-10-14T08:45:38",
+          "modified_at": "2026-10-14T08:45:38",
+          "suffix": ".pdf"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\턴어라운드\\분류\\21과_원문.pdf",
+          "relative": "턴어라운드\\분류\\21과_원문.pdf",
+          "bytes": 8171904,
+          "created_at": "2026-10-14T08:45:38",
+          "modified_at": "2026-10-14T08:45:38",
+          "suffix": ".pdf"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\턴어라운드\\분류\\30_감사의글_후기_용어해설_기타.pdf",
+          "relative": "턴어라운드\\분류\\30_감사의글_후기_용어해설_기타.pdf",
+          "bytes": 8060708,
+          "created_at": "2026-10-14T08:45:38",
+          "modified_at": "2026-10-14T08:45:38",
+          "suffix": ".pdf"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\턴어라운드\\분류\\16과_원문.pdf",
+          "relative": "턴어라운드\\분류\\16과_원문.pdf",
+          "bytes": 7515181,
+          "created_at": "2026-10-14T08:45:38",
+          "modified_at": "2026-10-14T08:45:38",
+          "suffix": ".pdf"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\턴어라운드\\사자성어\\tmp\\pdfs\\poppler\\poppler-26.09.0\\Library\\bin\\libcrypto-3-x64.dll",
+          "relative": "턴어라운드\\사자성어\\tmp\\pdfs\\poppler\\poppler-26.09.0\\Library\\bin\\libcrypto-3-x64.dll",
+          "bytes": 7434240,
+          "created_at": "2026-10-22T14:36:00",
+          "modified_at": "2026-09-15T15:50:40",
+          "suffix": ".dll"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\턴어라운드\\분류\\01과_원문.pdf",
+          "relative": "턴어라운드\\분류\\01과_원문.pdf",
+          "bytes": 7417115,
+          "created_at": "2026-10-14T08:45:37",
+          "modified_at": "2026-10-14T08:45:37",
+          "suffix": ".pdf"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\턴어라운드\\사자성어\\tmp\\pdfs\\poppler\\poppler-26.09.0\\Library\\bin\\poppler.dll",
+          "relative": "턴어라운드\\사자성어\\tmp\\pdfs\\poppler\\poppler-26.09.0\\Library\\bin\\poppler.dll",
+          "bytes": 6739968,
+          "created_at": "2026-10-22T14:36:00",
+          "modified_at": "2026-09-15T15:50:40",
+          "suffix": ".dll"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\턴어라운드\\분류\\19과_원문.pdf",
+          "relative": "턴어라운드\\분류\\19과_원문.pdf",
+          "bytes": 5730560,
+          "created_at": "2026-10-14T08:45:38",
+          "modified_at": "2026-10-14T08:45:38",
+          "suffix": ".pdf"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\턴어라운드\\분류\\10과_원문.pdf",
+          "relative": "턴어라운드\\분류\\10과_원문.pdf",
+          "bytes": 5582612,
+          "created_at": "2026-10-14T08:45:38",
+          "modified_at": "2026-10-14T08:45:38",
+          "suffix": ".pdf"
+        }
+      ],
+      "skipped_reparse": [],
+      "errors": []
+    },
+    {
+      "folder": "C:\\Users\\user\\Desktop\\업무용",
+      "name": "업무용",
+      "logical_bytes": 21443605,
+      "file_count": 203,
+      "subdirectory_count": 41,
+      "classification": "user work/original evidence; preserve unless individually reviewed",
+      "top15_files": [
+        {
+          "path": "C:\\Users\\user\\Desktop\\업무용\\business-tool.html",
+          "relative": "업무용\\business-tool.html",
+          "bytes": 11017581,
+          "created_at": "2026-10-21T14:17:31",
+          "modified_at": "2026-10-21T16:31:17",
+          "suffix": ".html"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\업무용\\src\\assets\\code-of-conduct-2026.png",
+          "relative": "업무용\\src\\assets\\code-of-conduct-2026.png",
+          "bytes": 5096014,
+          "created_at": "2026-10-14T10:42:02",
+          "modified_at": "2026-03-04T14:55:32",
+          "suffix": ".png"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\업무용\\src\\features\\document-extractor\\vendor\\pdfjs\\cmaps.js",
+          "relative": "업무용\\src\\features\\document-extractor\\vendor\\pdfjs\\cmaps.js",
+          "bytes": 1558285,
+          "created_at": "2026-10-21T14:04:22",
+          "modified_at": "2026-10-20T12:44:32",
+          "suffix": ".js"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\업무용\\src\\features\\document-extractor\\vendor\\pdfjs\\pdf.worker.min.js",
+          "relative": "업무용\\src\\features\\document-extractor\\vendor\\pdfjs\\pdf.worker.min.js",
+          "bytes": 1087212,
+          "created_at": "2026-10-21T14:04:22",
+          "modified_at": "2026-10-20T12:44:16",
+          "suffix": ".js"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\업무용\\src\\features\\document-extractor\\vendor\\pdfjs\\pdf.min.js",
+          "relative": "업무용\\src\\features\\document-extractor\\vendor\\pdfjs\\pdf.min.js",
+          "bytes": 320004,
+          "created_at": "2026-10-21T14:04:22",
+          "modified_at": "2026-10-20T12:44:16",
+          "suffix": ".js"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\업무용\\scripts\\smoke-application.mjs",
+          "relative": "업무용\\scripts\\smoke-application.mjs",
+          "bytes": 218355,
+          "created_at": "2026-07-24T16:40:21",
+          "modified_at": "2026-10-21T15:04:09",
+          "suffix": ".mjs"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\업무용\\src\\features\\document-extractor\\vendor\\jszip\\jszip.min.js",
+          "relative": "업무용\\src\\features\\document-extractor\\vendor\\jszip\\jszip.min.js",
+          "bytes": 97630,
+          "created_at": "2026-10-21T14:04:22",
+          "modified_at": "2026-10-20T12:44:16",
+          "suffix": ".js"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\업무용\\src\\features\\overtime\\styles.css",
+          "relative": "업무용\\src\\features\\overtime\\styles.css",
+          "bytes": 76762,
+          "created_at": "2026-07-23T14:50:33",
+          "modified_at": "2026-10-15T13:30:08",
+          "suffix": ".css"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\업무용\\src\\features\\work-management\\workbook\\data.js",
+          "relative": "업무용\\src\\features\\work-management\\workbook\\data.js",
+          "bytes": 67060,
+          "created_at": "2026-07-16T13:04:08",
+          "modified_at": "2026-07-23T16:18:50",
+          "suffix": ".js"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\업무용\\scripts\\__pycache__\\smoke-employee-and-print.cpython-312.pyc",
+          "relative": "업무용\\scripts\\__pycache__\\smoke-employee-and-print.cpython-312.pyc",
+          "bytes": 64640,
+          "created_at": "2026-10-21T16:31:16",
+          "modified_at": "2026-10-21T16:31:16",
+          "suffix": ".pyc"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\업무용\\test\\fixtures\\overtime-2026-01-09.json",
+          "relative": "업무용\\test\\fixtures\\overtime-2026-01-09.json",
+          "bytes": 55845,
+          "created_at": "2026-10-08T15:04:32",
+          "modified_at": "2026-10-08T15:07:05",
+          "suffix": ".json"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\업무용\\src\\features\\overtime\\receipt-controller.js",
+          "relative": "업무용\\src\\features\\overtime\\receipt-controller.js",
+          "bytes": 55804,
+          "created_at": "2026-08-20T12:00:11",
+          "modified_at": "2026-10-08T15:07:36",
+          "suffix": ".js"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\업무용\\scripts\\__pycache__\\smoke-document-extractor.cpython-312.pyc",
+          "relative": "업무용\\scripts\\__pycache__\\smoke-document-extractor.cpython-312.pyc",
+          "bytes": 55359,
+          "created_at": "2026-10-21T14:16:20",
+          "modified_at": "2026-10-21T14:16:20",
+          "suffix": ".pyc"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\업무용\\src\\features\\overtime\\view-model.js",
+          "relative": "업무용\\src\\features\\overtime\\view-model.js",
+          "bytes": 54364,
+          "created_at": "2026-07-23T15:14:30",
+          "modified_at": "2026-10-21T14:48:00",
+          "suffix": ".js"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\업무용\\src\\features\\document-extractor\\vendor\\pako\\pako.min.js",
+          "relative": "업무용\\src\\features\\document-extractor\\vendor\\pako\\pako.min.js",
+          "bytes": 46859,
+          "created_at": "2026-10-21T14:04:22",
+          "modified_at": "2026-10-20T12:44:16",
+          "suffix": ".js"
+        }
+      ],
+      "skipped_reparse": [],
+      "errors": []
+    },
+    {
+      "folder": "C:\\Users\\user\\Desktop\\.tmp.drivedownload",
+      "name": ".tmp.drivedownload",
+      "logical_bytes": 16781163,
+      "file_count": 2,
+      "subdirectory_count": 0,
+      "classification": "active Google Drive staging/cache; not a cleanup recommendation",
+      "top15_files": [
+        {
+          "path": "C:\\Users\\user\\Desktop\\.tmp.drivedownload\\2955080.1793764164611722",
+          "relative": ".tmp.drivedownload\\2955080.1793764164611722",
+          "bytes": 12586859,
+          "created_at": "2026-11-04T12:49:24",
+          "modified_at": "2026-11-04T12:49:28",
+          "suffix": ".1793764164611722"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\.tmp.drivedownload\\2958400.1793766949298510",
+          "relative": ".tmp.drivedownload\\2958400.1793766949298510",
+          "bytes": 4194304,
+          "created_at": "2026-11-04T13:35:49",
+          "modified_at": "2026-11-04T13:35:52",
+          "suffix": ".1793766949298510"
+        }
+      ],
+      "skipped_reparse": [],
+      "errors": []
+    },
+    {
+      "folder": "C:\\Users\\user\\Desktop\\근거 자료",
+      "name": "근거 자료",
+      "logical_bytes": 9257689,
+      "file_count": 122,
+      "subdirectory_count": 22,
+      "classification": "user work/original evidence; preserve unless individually reviewed",
+      "top15_files": [
+        {
+          "path": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\정리기록\\작업정리\\dedup_audit.json",
+          "relative": "근거 자료\\관리자료\\정리기록\\작업정리\\dedup_audit.json",
+          "bytes": 1049423,
+          "created_at": "2026-11-03T16:21:45",
+          "modified_at": "2026-11-03T16:23:57",
+          "suffix": ".json"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\이전작업\\2027_KPI_투자이행_근거보고서.pptx",
+          "relative": "근거 자료\\관리자료\\이전작업\\2027_KPI_투자이행_근거보고서.pptx",
+          "bytes": 1011570,
+          "created_at": "2026-11-03T08:22:45",
+          "modified_at": "2026-11-03T08:26:30",
+          "suffix": ".pptx"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\정리기록\\작업정리\\action_plan.json",
+          "relative": "근거 자료\\관리자료\\정리기록\\작업정리\\action_plan.json",
+          "bytes": 876315,
+          "created_at": "2026-11-03T16:25:36",
+          "modified_at": "2026-11-03T16:30:06",
+          "suffix": ".json"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_2025\\audit_b_312218.png",
+          "relative": "근거 자료\\관리자료\\수집·검토\\_work_2025\\audit_b_312218.png",
+          "bytes": 470656,
+          "created_at": "2026-11-03T12:55:03",
+          "modified_at": "2026-11-03T12:55:04",
+          "suffix": ".png"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_2025\\multiyear_final_data.json",
+          "relative": "근거 자료\\관리자료\\수집·검토\\_work_2025\\multiyear_final_data.json",
+          "bytes": 465217,
+          "created_at": "2026-11-03T13:02:59",
+          "modified_at": "2026-11-03T16:33:45",
+          "suffix": ".json"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_2025\\organizer_final_snapshot.json",
+          "relative": "근거 자료\\관리자료\\수집·검토\\_work_2025\\organizer_final_snapshot.json",
+          "bytes": 418886,
+          "created_at": "2026-11-03T12:23:07",
+          "modified_at": "2026-11-03T16:33:45",
+          "suffix": ".json"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_2025\\download_manifest.json",
+          "relative": "근거 자료\\관리자료\\수집·검토\\_work_2025\\download_manifest.json",
+          "bytes": 418886,
+          "created_at": "2026-11-03T12:22:22",
+          "modified_at": "2026-11-03T16:33:44",
+          "suffix": ".json"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_2025\\organizer_snapshot.json",
+          "relative": "근거 자료\\관리자료\\수집·검토\\_work_2025\\organizer_snapshot.json",
+          "bytes": 418799,
+          "created_at": "2026-11-03T12:10:30",
+          "modified_at": "2026-11-03T16:33:45",
+          "suffix": ".json"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_2025\\pdf_sample_review.png",
+          "relative": "근거 자료\\관리자료\\수집·검토\\_work_2025\\pdf_sample_review.png",
+          "bytes": 416615,
+          "created_at": "2026-11-03T12:14:37",
+          "modified_at": "2026-11-03T12:14:38",
+          "suffix": ".png"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\이전작업\\outputs\\2026_2027_투자실적_추진계획\\2026실적_2027투자계획_통합근거.pptx",
+          "relative": "근거 자료\\관리자료\\이전작업\\outputs\\2026_2027_투자실적_추진계획\\2026실적_2027투자계획_통합근거.pptx",
+          "bytes": 226436,
+          "created_at": "2026-11-03T09:35:40",
+          "modified_at": "2026-11-03T09:35:32",
+          "suffix": ".pptx"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\이전작업\\outputs\\2027_투자효과_정량보강\\2027_투자효과_미실행손실_정량보강.xlsx.inspect.ndjson",
+          "relative": "근거 자료\\관리자료\\이전작업\\outputs\\2027_투자효과_정량보강\\2027_투자효과_미실행손실_정량보강.xlsx.inspect.ndjson",
+          "bytes": 201602,
+          "created_at": "2026-11-03T09:19:36",
+          "modified_at": "2026-11-03T09:21:55",
+          "suffix": ".ndjson"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\정리기록\\이전수집목록\\2025년 자료\\자료목록.html",
+          "relative": "근거 자료\\관리자료\\정리기록\\이전수집목록\\2025년 자료\\자료목록.html",
+          "bytes": 195630,
+          "created_at": "2026-11-03T12:24:06",
+          "modified_at": "2026-11-03T12:25:17",
+          "suffix": ".html"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\이전작업\\_work\\investment_plan.json",
+          "relative": "근거 자료\\관리자료\\이전작업\\_work\\investment_plan.json",
+          "bytes": 168540,
+          "created_at": "2026-11-03T08:16:54",
+          "modified_at": "2026-11-03T08:16:54",
+          "suffix": ".json"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\이전작업\\_work\\reports_late_ocr.json",
+          "relative": "근거 자료\\관리자료\\이전작업\\_work\\reports_late_ocr.json",
+          "bytes": 167694,
+          "created_at": "2026-11-03T08:14:25",
+          "modified_at": "2026-11-03T08:14:25",
+          "suffix": ".json"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\이전작업\\_work\\reports_late_ocr.txt",
+          "relative": "근거 자료\\관리자료\\이전작업\\_work\\reports_late_ocr.txt",
+          "bytes": 154825,
+          "created_at": "2026-11-03T08:14:25",
+          "modified_at": "2026-11-03T08:14:25",
+          "suffix": ".txt"
+        }
+      ],
+      "skipped_reparse": [
+        {
+          "path": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\이전작업\\_work\\node_modules",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\node_modules",
+          "reason": "reparse/symlink not followed"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_2025\\final_exports_build\\node_modules",
+          "reason": "reparse/symlink not followed"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "folder": "C:\\Users\\user\\Desktop\\화면지킴",
+      "name": "화면지킴",
+      "logical_bytes": 46435,
+      "file_count": 5,
+      "subdirectory_count": 1,
+      "classification": "utility/other; confirm current use before selecting",
+      "top15_files": [
+        {
+          "path": "C:\\Users\\user\\Desktop\\화면지킴\\Program.cs",
+          "relative": "화면지킴\\Program.cs",
+          "bytes": 23067,
+          "created_at": "2026-07-28T12:51:40",
+          "modified_at": "2026-07-28T12:56:17",
+          "suffix": ".cs"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\화면지킴\\배포\\화면지킴.exe",
+          "relative": "화면지킴\\배포\\화면지킴.exe",
+          "bytes": 18944,
+          "created_at": "2026-07-28T12:52:51",
+          "modified_at": "2026-07-28T12:57:30",
+          "suffix": ".exe"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\화면지킴\\README.md",
+          "relative": "화면지킴\\README.md",
+          "bytes": 1955,
+          "created_at": "2026-07-28T12:51:40",
+          "modified_at": "2026-07-28T12:57:24",
+          "suffix": ".md"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\화면지킴\\build.ps1",
+          "relative": "화면지킴\\build.ps1",
+          "bytes": 1591,
+          "created_at": "2026-07-28T12:51:40",
+          "modified_at": "2026-07-28T12:52:49",
+          "suffix": ".ps1"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\화면지킴\\app.manifest",
+          "relative": "화면지킴\\app.manifest",
+          "bytes": 878,
+          "created_at": "2026-07-28T12:51:40",
+          "modified_at": "2026-07-28T12:57:24",
+          "suffix": ".manifest"
+        }
+      ],
+      "skipped_reparse": [],
+      "errors": []
+    },
+    {
+      "folder": "C:\\Users\\user\\Desktop\\핑측정",
+      "name": "핑측정",
+      "logical_bytes": 9968,
+      "file_count": 2,
+      "subdirectory_count": 1,
+      "classification": "utility/other; confirm current use before selecting",
+      "top15_files": [
+        {
+          "path": "C:\\Users\\user\\Desktop\\핑측정\\CaptureConsole.ps1",
+          "relative": "핑측정\\CaptureConsole.ps1",
+          "bytes": 8843,
+          "created_at": "2026-07-14T16:38:12",
+          "modified_at": "2026-07-14T16:48:13",
+          "suffix": ".ps1"
+        },
+        {
+          "path": "C:\\Users\\user\\Desktop\\핑측정\\PingTool_192.168.1.188.cmd",
+          "relative": "핑측정\\PingTool_192.168.1.188.cmd",
+          "bytes": 1125,
+          "created_at": "2026-07-14T16:36:44",
+          "modified_at": "2026-07-14T16:48:13",
+          "suffix": ".cmd"
+        }
+      ],
+      "skipped_reparse": [],
+      "errors": []
+    },
+    {
+      "folder": "C:\\Users\\user\\Desktop\\다운로드",
+      "name": "다운로드",
+      "logical_bytes": 174,
+      "file_count": 1,
+      "subdirectory_count": 0,
+      "classification": "downloads; inspect archives/installers and retained source before selecting",
+      "top15_files": [
+        {
+          "path": "C:\\Users\\user\\Desktop\\다운로드\\desktop.ini",
+          "relative": "다운로드\\desktop.ini",
+          "bytes": 174,
+          "created_at": "2026-04-08T13:16:02",
+          "modified_at": "2026-04-08T13:16:18",
+          "suffix": ".ini"
+        }
+      ],
+      "skipped_reparse": [],
+      "errors": []
+    }
+  ],
+  "desktop_root_files": [
+    {
+      "path": "C:\\Users\\user\\Desktop\\27년 공무환경팀 중점추진과제.pptx",
+      "relative": "27년 공무환경팀 중점추진과제.pptx",
+      "bytes": 1964765,
+      "created_at": "2026-11-04T10:24:19",
+      "modified_at": "2026-11-04T15:00:25",
+      "suffix": ".pptx"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\사원전화명부(2026.09.28).xlsx",
+      "relative": "사원전화명부(2026.09.28).xlsx",
+      "bytes": 46924,
+      "created_at": "2026-09-28T16:06:03",
+      "modified_at": "2026-09-28T16:06:03",
+      "suffix": ".xlsx"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\새 Microsoft Excel 워크시트.xlsx",
+      "relative": "새 Microsoft Excel 워크시트.xlsx",
+      "bytes": 9250,
+      "created_at": "2026-11-04T11:23:12",
+      "modified_at": "2026-11-04T11:24:05",
+      "suffix": ".xlsx"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\Chrome 원격 데스크톱.lnk",
+      "relative": "Chrome 원격 데스크톱.lnk",
+      "bytes": 2669,
+      "created_at": "2026-05-14T10:45:39",
+      "modified_at": "2026-05-14T10:45:39",
+      "suffix": ".lnk"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\스크린샷.lnk",
+      "relative": "스크린샷.lnk",
+      "bytes": 1542,
+      "created_at": "2026-04-09T10:37:01",
+      "modified_at": "2026-04-09T10:37:01",
+      "suffix": ".lnk"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\카카오톡 받은파일.lnk",
+      "relative": "카카오톡 받은파일.lnk",
+      "bytes": 1506,
+      "created_at": "2026-04-09T10:37:01",
+      "modified_at": "2026-04-09T10:37:01",
+      "suffix": ".lnk"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\고클린.lnk",
+      "relative": "고클린.lnk",
+      "bytes": 1064,
+      "created_at": "2026-04-08T13:20:08",
+      "modified_at": "2026-04-08T13:20:08",
+      "suffix": ".lnk"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\HC_Login - 바로 가기.lnk",
+      "relative": "HC_Login - 바로 가기.lnk",
+      "bytes": 824,
+      "created_at": "2024-10-02T07:33:27",
+      "modified_at": "2024-10-02T07:33:27",
+      "suffix": ".lnk"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\다운로드 - 바로 가기.lnk",
+      "relative": "다운로드 - 바로 가기.lnk",
+      "bytes": 705,
+      "created_at": "2026-05-08T12:07:00",
+      "modified_at": "2026-05-08T12:07:00",
+      "suffix": ".lnk"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\생산팀(192.168.1.188) (Z) - 바로 가기.lnk",
+      "relative": "생산팀(192.168.1.188) (Z) - 바로 가기.lnk",
+      "bytes": 576,
+      "created_at": "2026-04-08T10:59:29",
+      "modified_at": "2026-04-08T10:59:29",
+      "suffix": ".lnk"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\desktop.ini",
+      "relative": "desktop.ini",
+      "bytes": 282,
+      "created_at": "2024-10-02T07:10:47",
+      "modified_at": "2026-04-14T07:25:23",
+      "suffix": ".ini"
+    }
+  ],
+  "top15_files": [
+    {
+      "path": "C:\\Users\\user\\Desktop\\.tmp.driveupload\\2960386",
+      "relative": ".tmp.driveupload\\2960386",
+      "bytes": 1061227384,
+      "created_at": "2026-11-04T13:51:24",
+      "modified_at": "2026-11-04T13:52:00",
+      "suffix": ""
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\.tmp.driveupload\\2963812",
+      "relative": ".tmp.driveupload\\2963812",
+      "bytes": 1048840044,
+      "created_at": "2026-11-04T13:56:41",
+      "modified_at": "2026-11-04T13:57:24",
+      "suffix": ""
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\.tmp.driveupload\\2964864",
+      "relative": ".tmp.driveupload\\2964864",
+      "bytes": 1039899431,
+      "created_at": "2026-11-04T14:05:49",
+      "modified_at": "2026-11-04T14:06:28",
+      "suffix": ""
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\.tmp.driveupload\\2964896",
+      "relative": ".tmp.driveupload\\2964896",
+      "bytes": 1004947721,
+      "created_at": "2026-11-04T14:07:22",
+      "modified_at": "2026-11-04T14:07:56",
+      "suffix": ""
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\.tmp.driveupload\\2964716",
+      "relative": ".tmp.driveupload\\2964716",
+      "bytes": 995947920,
+      "created_at": "2026-11-04T14:01:50",
+      "modified_at": "2026-11-04T14:02:35",
+      "suffix": ""
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\.tmp.driveupload\\2958472",
+      "relative": ".tmp.driveupload\\2958472",
+      "bytes": 902745893,
+      "created_at": "2026-11-04T13:36:47",
+      "modified_at": "2026-11-04T13:37:17",
+      "suffix": ""
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\.tmp.driveupload\\2964210",
+      "relative": ".tmp.driveupload\\2964210",
+      "bytes": 858737846,
+      "created_at": "2026-11-04T13:58:36",
+      "modified_at": "2026-11-04T13:59:12",
+      "suffix": ""
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\target\\debug\\deps\\hancad_desktop_lib.lib",
+      "relative": "진행중\\간이캐드\\target\\debug\\deps\\hancad_desktop_lib.lib",
+      "bytes": 744989512,
+      "created_at": "2026-10-27T13:49:45",
+      "modified_at": "2026-10-27T13:49:45",
+      "suffix": ".lib"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\.tmp.driveupload\\2959711",
+      "relative": ".tmp.driveupload\\2959711",
+      "bytes": 727359919,
+      "created_at": "2026-11-04T13:49:48",
+      "modified_at": "2026-11-04T13:50:23",
+      "suffix": ""
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\.tmp.driveupload\\2964718",
+      "relative": ".tmp.driveupload\\2964718",
+      "bytes": 721371824,
+      "created_at": "2026-11-04T14:01:50",
+      "modified_at": "2026-11-04T14:02:16",
+      "suffix": ""
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\target\\debug\\hancad_desktop_lib.lib",
+      "relative": "진행중\\간이캐드\\target\\debug\\hancad_desktop_lib.lib",
+      "bytes": 720662642,
+      "created_at": "2026-10-19T16:35:03",
+      "modified_at": "2026-10-20T11:29:50",
+      "suffix": ".lib"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\.tmp.driveupload\\2958632",
+      "relative": ".tmp.driveupload\\2958632",
+      "bytes": 678174220,
+      "created_at": "2026-11-04T13:40:03",
+      "modified_at": "2026-11-04T13:40:31",
+      "suffix": ""
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\.tmp.driveupload\\2962761",
+      "relative": ".tmp.driveupload\\2962761",
+      "bytes": 661145408,
+      "created_at": "2026-11-04T13:55:20",
+      "modified_at": "2026-11-04T13:55:51",
+      "suffix": ""
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\target\\debug\\deps\\libhancad_desktop_lib.rlib",
+      "relative": "진행중\\간이캐드\\target\\debug\\deps\\libhancad_desktop_lib.rlib",
+      "bytes": 326621582,
+      "created_at": "2026-10-27T13:49:48",
+      "modified_at": "2026-10-27T13:49:48",
+      "suffix": ".rlib"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\target\\debug\\libhancad_desktop_lib.rlib",
+      "relative": "진행중\\간이캐드\\target\\debug\\libhancad_desktop_lib.rlib",
+      "bytes": 301888214,
+      "created_at": "2026-10-20T11:29:52",
+      "modified_at": "2026-10-20T11:29:53",
+      "suffix": ".rlib"
+    }
+  ],
+  "skipped_root_reparse": [],
+  "root_errors": [],
+  "free_C_bytes": 9391722496
+}

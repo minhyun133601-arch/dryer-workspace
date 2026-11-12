@@ -1,0 +1,105 @@
+// Original drawings: references/chiller-20261110/source/chiller-technical-drawings-and-certificates-20261110.pdf pp.14–18. Field photographs: 냉동기, 2026-11-10.
+export const CHILLER_INFO = {
+  name: '100RT 공랭식 스크루 냉동기', model: 'SCSA100AS1', maker: '신성엔지니어링',
+  dimensions: '4,140 × 1,900 × 2,200 mm', drawing: 'SC010606 · 2011.02.23',
+  basis: '제작도 외형·수량 기반 3D',
+  note: '도면 치수로 외형을 구성하고 사진으로 외관을 대조했습니다. 분해 방향·간격은 관찰용이며 실제 정비 순서가 아닙니다. 가려진 연결관의 3D 경로는 개략입니다.',
+};
+
+export const CHILLER_ASSETS = {
+  "sheet001": "./assets/drawings/chiller/page-001-condenser-capacity-calculation.jpg",
+  "sheet002": "./assets/drawings/chiller/page-002-liquid-receiver-dimensions.jpg",
+  "sheet003": "./assets/drawings/chiller/page-003-receiver-pressure-vessel-certificate.jpg",
+  "sheet004": "./assets/drawings/chiller/page-004-shell-and-tube-evaporator-detail.jpg",
+  "sheet005": "./assets/drawings/chiller/page-005-water-chiller-catalog.jpg",
+  "sheet006": "./assets/drawings/chiller/page-006-safety-valve-section.jpg",
+  "sheet007": "./assets/drawings/chiller/page-007-safety-valve-test-certificate-1.jpg",
+  "sheet008": "./assets/drawings/chiller/page-008-safety-valve-test-certificate-2.jpg",
+  "sheet009": "./assets/drawings/chiller/page-009-electrical-control-circuit-1.jpg",
+  "sheet010": "./assets/drawings/chiller/page-010-electrical-control-circuit-2.jpg",
+  "sheet011": "./assets/drawings/chiller/page-011-electrical-control-circuit-3.jpg",
+  "sheet012": "./assets/drawings/chiller/page-012-historical-refrigeration-location.jpg",
+  "sheet013": "./assets/drawings/chiller/page-013-chiller-pump-tank-layout.jpg",
+  "sheet014": "./assets/drawings/chiller/page-014-chiller-general-arrangement-and-bom.jpg",
+  "sheet015": "./assets/drawings/chiller/page-015-refrigerant-circuit.jpg",
+  "sheet016": "./assets/drawings/chiller/page-016-compressor-50asc-dimensions.jpg",
+  "sheet017": "./assets/drawings/chiller/page-017-compressor-section-and-capacity-control.jpg",
+  "sheet018": "./assets/drawings/chiller/page-018-capacity-control-modification.jpg",
+  "sheet019": "./assets/drawings/chiller/page-019-compressor-series-dimensions.jpg",
+  "sheet020": "./assets/drawings/chiller/page-020-compressor-performance.jpg",
+  "sheet021": "./assets/drawings/chiller/page-021-condenser-coil-detail.jpg",
+  "sheet022": "./assets/drawings/chiller/page-022-condenser-coil-specifications.jpg",
+  "cutaway": "./assets/drawings/chiller/hitachi-compressor-cutaway.jpg",
+  "dimensions": "./assets/drawings/chiller/hitachi-compressor-dimensions.jpg"
+};
+export const CHILLER_PARTS = [
+  { id: 'frame', name: '공통 베이스·철골 프레임', drawing: '23 · COMMON BASE FRAME ×1', photos: [27, 37, 38], text: '제작도 외곽 4,140 × 1,900 mm와 기둥·공통 베이스를 반영했습니다. 부식·도장 상태는 현장 사진을 참고했습니다.' },
+  { id: 'coil-bank', name: 'V형 응축 코일', drawing: '02 · CONDENSER ×1 ASS’Y', photos: [27, 28, 31], text: '상부 두 구간의 V형 핀 코일입니다. 외형도와 SC010007B 코일 도면의 3열·42단 구조를 대조했습니다.' },
+  { id: 'fans', name: '상부 팬·모터 8조', drawing: '06·07 · FAN ×8 / FAN MOTOR ×8', photos: [27, 31, 53], text: '제작도 평면의 2열 ×4개 배열을 따릅니다. 사진에서 가려진 팬은 제작도 수량을 기준으로 표현했습니다.' },
+  { id: 'compressor-1', name: '스크루 압축기 · 기존품', drawing: '01 · COMPRESSOR ×2 / 50ASC-H', photos: [1, 2, 6, 9], text: 'HITACHI 기존 압축기의 리브 외함·원형 플랜지·단자함을 사진과 대조했습니다. 도면 지정은 50ASC-H이며, 현장 기존품의 모델 각인은 판독하지 못했습니다.' },
+  { id: 'compressor-2', name: '스크루 압축기 · 신형품', drawing: '01 · COMPRESSOR ×2 / 50ASC-H', photos: [21, 25, 26, 27], text: '현장 명판 50ASC-H, 37 kW, 2025-2 표기를 확인했습니다. 압축기 외형 874 ×595 mm와 볼트·단자함을 제작도 및 명판에 맞췄습니다. 이 수치는 압축기 부품 기준입니다.' },
+  { id: 'receiver', name: '액 리시버 2기', drawing: '10 · RECEIVER ×2', photos: [46, 47, 48, 49], text: '회로별 액 리시버 2기는 제작도 수량입니다. 사진에서는 DREAM AIR LIQUID RECEIVER 명판이 있는 1기를 직접 확인했습니다. 오일 분리기로 표시하지 않습니다.' },
+  { id: 'insulated-vessel', name: '보온 증발기 · COOLER', drawing: '03 · EVAPORATOR ×1', photos: [14, 19, 37, 50], text: '중앙 수평 보온 용기를 제작도·냉매 회로의 공통 COOLER와 대조했습니다. 검은 보온 외피, 백색 끝판과 플랜지를 사진으로 보완했습니다.' },
+  { id: 'insulated-pipes', name: '흡입·냉수 보온 배관', drawing: 'SC010609 · CHILLED WATER IN / OUT', photos: [8, 19, 28, 49, 50], text: '큰 검은 보온관과 백색 보온 연결부를 반영했습니다. 제작도 냉수 입출구는 ANSI 150 lbs 5인치(125DN) 플랜지입니다. 가려진 배관의 실제 경로는 현장 확인이 필요합니다.' },
+  { id: 'copper-valves', name: '냉매 동관·밸브류', drawing: '04·11–19 · 밸브·필터·사이트글라스', photos: [39, 42, 43, 45, 51, 52], text: '두 냉매 회로의 액관, 팽창밸브, 차단·전자밸브, 필터와 사이트글라스 관계를 회로도로 확인합니다. 3D 소구경 배관은 사진에 보이는 경로 중심의 개략입니다.' },
+  { id: 'controls', name: '제어·동력함', drawing: '05 · CONTROL & POWER BOX ×1', photos: [31, 32, 33, 34], text: '측면 백색 전기함과 전면 조작부를 사진으로 대조했습니다. 도면의 전기 제어회로는 별도 도면 화면에서 볼 수 있습니다.' },
+  { id: 'instruments', name: '압력계·압력 스위치', drawing: '20·21·22 · HP / LP / SWITCH BOX', photos: [11, 12, 29, 30, 35], text: '고압계 2·저압계 2·압력 스위치함 2는 제작도 부품표 수량입니다. 전면 계기·모세관의 외형은 현장 사진을 반영했습니다.' },
+  { id: 'guards', name: '보호 격자·외함', drawing: '08·09 · PROTECTOR (1) ×10 / (2) ×3', photos: [27, 28, 38, 53, 64, 65], text: '사진의 크림색 수평 안전 격자와 외함을 분리해 내부 기계실을 볼 수 있게 했습니다. 보호판의 세부 판 분할은 개략입니다.' },
+  { id: 'cables', name: '전선·보호관', drawing: '현장 사진 보완', photos: [3, 9, 22, 33, 36, 66, 67], text: '압축기 단자함으로 연결되는 검은 보호관·케이블을 재현했습니다. 실제 결선·가려진 전선 경로를 뜻하지 않습니다.' },
+];
+
+export const CHILLER_BOM = [
+  ['01', 'Compressor', '스크루 압축기', 2, '50ASC-H', 'compressor-2'],
+  ['02', 'Condenser', '응축기 조립체', 1, 'ASS’Y', 'coil-bank'],
+  ['03', 'Evaporator', '증발기', 1, 'ASS’Y', 'insulated-vessel'],
+  ['04', 'Expansion Valve', '팽창밸브', 2, '1-1/8″ ×1-1/8″', 'copper-valves'],
+  ['05', 'Control & Power Box', '제어·동력함', 1, 'ASS’Y', 'controls'],
+  ['06', 'Fan', '팬', 8, 'ASS’Y', 'fans'],
+  ['07', 'Fan Motor', '팬 모터', 8, 'ASS’Y', 'fans'],
+  ['08', 'Protector (1)', '보호판 (1)', 10, 'SC010011', 'guards'],
+  ['09', 'Protector (2)', '보호판 (2)', 3, 'SC010012', 'guards'],
+  ['10', 'Receiver', '액 리시버', 2, 'ASS’Y', 'receiver'],
+  ['11', 'Service Valve', '서비스 밸브', 4, '1-1/8″', 'copper-valves'],
+  ['12', 'Safety Stop Valve', '안전 차단밸브', 2, '25A', 'copper-valves'],
+  ['13', 'Check Valve', '체크밸브', 2, '2-1/8″', 'copper-valves'],
+  ['14', 'Shut off Valve', '차단밸브', 2, '2-1/8″', 'copper-valves'],
+  ['15', 'Filter Drier', '필터 드라이어', 2, '1-1/8″', 'copper-valves'],
+  ['16', 'Sight Glass', '사이트글라스', 2, '7/8″', 'copper-valves'],
+  ['17', 'Solenoid Valve', '전자밸브', 2, '1-1/8″', 'copper-valves'],
+  ['18', 'Liquid Injection Sol. V/V', '액분사 전자밸브', 2, '3/8″', 'copper-valves'],
+  ['19', 'Capillary Tube', '모세관', 2, 'I.D. 4.0 mm · L 1,000 mm', 'copper-valves'],
+  ['20', 'High Pressure Gauge', '고압계', 2, 'ASS’Y', 'instruments'],
+  ['21', 'Low Pressure Gauge', '저압계', 2, 'ASS’Y', 'instruments'],
+  ['22', 'Pressure Switch Box', '압력 스위치함', 2, 'ASS’Y', 'instruments'],
+  ['23', 'Common Base Frame', '공통 베이스', 1, 'ASS’Y', 'frame'],
+];
+
+export const CHILLER_SHEETS = [
+  { page: 14, name: '냉동기 외형·23종 부품표', code: 'SC010606 · SCSA100AS1 · 2011.02.23', text: '4,140 ×1,900 ×2,200 mm · 압축기 2대 · 팬 8조 · 액 리시버 2기. 3D 외곽과 수량의 기준입니다.' },
+  { page: 15, name: '냉매 회로', code: 'SC010609 · SCSA100AS1 · 2011.02.23', text: '좌우 독립 냉매 2회로와 중앙 공통 COOLER, 냉수 입출구를 표시한 원도면입니다. 선의 위치는 계통 관계이며 현장 배관의 실제 공간 경로와 다릅니다.' },
+  { page: 16, name: '50ASC 압축기 외형', code: '317T71062 · MODEL 50ASC', text: '압축기 길이 874 mm·폭 595 mm의 제조사 외형도입니다. 현장 신형 50ASC-H 명판과 계열을 대조했습니다.' },
+  { page: 17, name: '압축기 내부·용량제어', code: 'HITACHI SPN200808 · Jul. 2008 · 1/2', text: '스크루 압축기 절개와 슬라이드 밸브·피스톤 로드 관계를 보여주는 제조사 자료입니다. 현장 개별 압축기의 정비 상태를 뜻하지 않습니다.' },
+  { page: 18, name: '용량제어 변경부 상세', code: 'HITACHI SPN200808 · 2/2', text: '2007년 9월 생산부터의 부시·O링·피스톤 로드 변경 자료입니다. 현장 기존품의 변경 적용 여부는 확인되지 않았습니다.' },
+  { page: 13, name: '냉동기·펌프·탱크 배치', code: 'SR-STORAGE TANK', text: '9,200 mm는 냉동기·펌프·탱크 전체 공통 베이스의 길이입니다. 실외기실 전체 길이를 뜻하지 않습니다.' },
+  { page: 2, name: '액 리시버 외형', code: 'LIQUID RECEIVER', text: '리시버 외형 치수 도면입니다. 현재 명판·용기 방향은 현장 사진과 함께 확인합니다.' },
+  { page: 4, name: '증발기 상세', code: 'EVAPORATOR', text: '수평 쉘·튜브 증발기의 외형·단면 도면입니다. 내부 튜브의 실제 상태는 현장 사진에 보이지 않습니다.' },
+  { page: 21, name: '응축 코일 상세', code: 'SC010007B · COIL, COND. 50HP-R', text: '응축 코일 제작도입니다. 3 ROW ×42 STEPS와 유효 폭 1,715 mm를 확인할 수 있습니다.' },
+  { page: 9, name: '전기 제어회로 1', code: 'CONTROL CIRCUIT', text: '원본 전기 회로 자료입니다. 현재 결선과의 일치 여부는 별도 현장 확인이 필요합니다.' },
+  { page: 10, name: '전기 제어회로 2', code: 'CONTROL CIRCUIT', text: '원본 전기 제어회로를 확대해서 볼 수 있습니다.' },
+  { page: 11, name: '전기 제어회로 3', code: 'CONTROL CIRCUIT', text: '원본 전기 제어회로를 확대해서 볼 수 있습니다.' },
+  { page: 12, name: '과거 공장 내 냉동시설 위치', code: '냉동기 위치 평면도 · 48.08RT 표기', text: '과거 배치도의 48.08RT 시설 표기입니다. 현재 100RT 냉동기 및 실외기실 전체 위치·용량으로 치환하지 않았습니다.' },
+  { page: 1, name: '응축기 냉동능력 계산서', code: '공랭식 응축기', text: '전열면적·계산 냉동능력 자료입니다. 계산 용량과 설비 등록 용량을 구분합니다.' },
+  { page: 3, name: '액 리시버 압력용기 성적서', code: 'DREAM AIR · DRV-250', text: '리시버 압력용기 자료입니다. 성적서 묶음 수량 10개는 이 냉동기의 설치 대수가 아닙니다.' },
+  { page: 5, name: '수냉각기 제품 자료', code: 'DHED · WATER CHILLER', text: '쉘앤튜브 수냉각기 제품군 자료입니다. 현장 개체의 명판 자료와 구분합니다.' },
+  { page: 6, name: '안전밸브 조립 단면', code: 'A-SAN · GC320174', text: '안전밸브의 스프링·시트·조정기구 단면입니다. 압축기 내부 도면과 별개입니다.' },
+  { page: 7, name: '안전변 시험성적서 1', code: 'A-SAN', text: '원본 안전변 시험성적서입니다. 수기 시험일의 일부는 판독되지 않았습니다.' },
+  { page: 8, name: '안전변 시험성적서 2', code: 'A-SAN', text: '원본 안전변 시험성적서입니다.' },
+  { page: 19, name: '압축기 계열 치수표', code: 'HITACHI · DIMENSIONAL DATA', text: '압축기 모델별 치수표입니다. 현장 신형 압축기는 50ASC-H 명판을 대조했습니다.' },
+  { page: 20, name: '압축기 성능표', code: 'HITACHI · GENERAL DATA / PERFORMANCE', text: '여러 모델·운전 조건의 성능표입니다. 현재 설비 운전 성능을 측정한 값이 아닙니다.' },
+  { page: 22, name: '응축 코일 제품 자료', code: 'FIN SPECIFICATION / TRANSFER AREA', text: '핀 규격과 전열면적 자료입니다. 해당 원도면의 코일 계산과 함께 참고합니다.' },
+];
+
+export function chillerAsset(key) {
+  const source = CHILLER_ASSETS[key];
+  return source && !source.startsWith('data:') && location.pathname.includes('/site/share/') ? `.${source}` : source;
+}

@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-10",
+  "removedFrom": [
+    "local viewer",
+    "shared viewer",
+    "3D labels and markers",
+    "offline export"
+  ],
+  "sourceFilesPreserved": 4,
+  "shared": {
+    "bytes": 5417640,
+    "sha256": "2475c4fd6ecb6c9d0d74c9f80ba1ede13f37fd6ce51bc6c6c766f3d1d231fc03",
+    "equipmentDocumentFeature": false
+  },
+  "testsPassed": 115,
+  "browser": {
+    "localDesktopAndMobile": true,
+    "sharedDesktopAndMobileOffline": true,
+    "documentControls": 0,
+    "automaticPdfDialogs": 0
+  }
+}

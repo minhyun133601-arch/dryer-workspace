@@ -1,0 +1,437 @@
+{
+  "schema": "chiller-component-evidence-v1",
+  "date": "2026-11-10",
+  "target": {
+    "card": 87,
+    "registeredName": "100RT 칠러",
+    "currentSceneEquipment": "outdoor-process-chiller",
+    "fieldPhotoFolder": "냉동기",
+    "fieldPhotoCount": 67,
+    "providedDrawingSource": "Image_20261110_0001.pdf"
+  },
+  "evidenceLevels": {
+    "A": "실물 사진·영상·실물 명판에서 직접 확인",
+    "B": "같은 압축기 계열의 제조사 공식 그림/치수 참고. 현장 전체 제작도는 아님",
+    "C": "사진 외형·접속관으로 추정한 기능 또는 가려진 위치의 근사",
+    "U": "본 자료에서 확인하지 못함",
+    "D": "추가 제공된 원제작도/부품도/계통도/제조사 서비스 문서의 직접 표기. 과거 설계이며 현장 정비 후 상태와 구분."
+  },
+  "identity": {
+    "match": "카드087 동일 현장 장비로 판단",
+    "confidence": "high",
+    "basis": [
+      "상부 V형 코일과 가는 백색 안전 격자, 하부 개방 기계부가 카드087 및 원본 영상84/114초와 일치",
+      "연녹색 스크루 외함, 리브·볼트·상부 단자함, 백색 제어함, 검은 보온관이 일치",
+      "옆 녹색 수직 펌프 2대·원뿔 덮개·백색 U헤더·성형 패널 물탱크 관계가 카드087 및 영상60초와 일치"
+    ],
+    "notCard089": "카드089는 상부 장방형 코일과 하부 4도어를 가진 별도 밀폐 외함이다. 67장 내부 사진을 40RT 장비의 확정 내부 구조로 전용하지 않음.",
+    "card089Conflict": "등록명 40RT 칠러와 photoName/equipmentCode의 60RT 문자열이 다름. 실물 용량·형식 명판을 확인하지 못했으므로 40RT는 카드명으로만 표시.",
+    "makerScope": "사진의 SHINSUNG ENG 외함 표기와 추가 제공된 p14/p15 원제작도 SHINSUNG ENGINEERING / SCSA100AS1이 형상·압축기 계열과 부합한다. 압축기 HITACHI 및 액 리시버 DREAM AIR는 부품 제작사다. 전체 냉동기 현장 제조번호는 확인하지 못함."
+  },
+  "components": [
+    {
+      "id": "frame-and-grilles",
+      "name": "크림색 철골 프레임·안전 격자·기계실",
+      "level": "A",
+      "photos": [
+        27,
+        28,
+        31,
+        37,
+        38,
+        39,
+        53,
+        64,
+        65
+      ],
+      "observed": "직사각 강재 프레임, 백색 수평 격자, 상부 코일 아래 열린 기계 구역, 녹과 박리 흔적",
+      "modelUse": "격자/상부 프레임/하부 베이스를 별도 분리 가능 그룹으로 제작",
+      "limits": "전체 외곽 치수와 격자 정확 피치는 미실측",
+      "drawingEvidence": {
+        "level": "D",
+        "pages": [
+          14
+        ],
+        "overallDimensionsMm": [
+          4140,
+          2200,
+          1900
+        ],
+        "note": "폭/높이/깊이는 원제작도 표기. 현재 현물 외곽을 재측량한 값은 아님."
+      }
+    },
+    {
+      "id": "compressor-older",
+      "name": "기존 HITACHI 스크루 압축기",
+      "level": "A",
+      "photos": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9,
+        13
+      ],
+      "observed": "HITACHI SCREW COMPRESSOR 및 Hitachi Appliances, Inc. 명판, 원통 모터 외함·볼트 이음·상부 단자함·대형 검은 보온관",
+      "quantity": "해당 촬영 위치에서 1대. 아래 신형과 합쳐 현장 압축기 최소 2대 직접 확인",
+      "manufacturer": "Hitachi Appliances, Inc. (부품 명판)",
+      "modelReading": null,
+      "limits": "구형 모델·제조일·출력의 각인 문자는 그림자와 해상도로 확정 불가. 신형 모델과 같다고 단정하지 않음",
+      "originalDesign": {
+        "level": "D",
+        "page": 14,
+        "model": "50ASC-H",
+        "quantity": 2,
+        "limit": "원설계 모델을 구형 현물 명판의 불명확한 각인 대신 확정값으로 쓰지 않음."
+      }
+    },
+    {
+      "id": "compressor-newer",
+      "name": "신형 HITACHI 스크루 압축기",
+      "level": "A",
+      "photos": [
+        21,
+        22,
+        24,
+        25,
+        26,
+        27
+      ],
+      "observed": "연녹청색 원통 모터부, 외함 이음부 큰 육각 볼트, 리브 끝부, 상부 회녹색 직사각 단자함, 검은 전선 보호관",
+      "manufacturer": "Hitachi-Johnson Controls Air Conditioning, Inc. (부품 명판)",
+      "modelReading": "50ASC-H",
+      "modelConfidence": "high: 사진025 문자·37kW·440kg와 제조사50ASC계열 치수/중량표를 함께 대조. 구형 모델은 별도 미확정.",
+      "nameplate": {
+        "motorKw": 37,
+        "mainPowerReading": "380 / 380 V - 60Hz",
+        "subPowerReading": "220 V - 60Hz",
+        "weightKgReading": 440,
+        "dateReading": "2025-2",
+        "country": "MADE IN JAPAN"
+      },
+      "limits": "압축기 부품 명판 수치이며 전체 냉동기 정격·용량·설치일이 아님. 냉매 선택 스탬프는 뚜렷하지 않아 R22/R407C/R134a 중 현 충전 냉매를 확정하지 않음"
+    },
+    {
+      "id": "compressor-family-internals",
+      "name": "모터·스크루 로터·내장 오일분리부 참고 구조",
+      "level": "B",
+      "source": "hitachi-asc-official-2015",
+      "pages": [
+        2,
+        3
+      ],
+      "observed": "ASC 계열의 내부 절개와 외형도에 로터·모터·내장 사이클론 오일분리부·흡입/토출 및 이코노마이저 주입부가 표시됨",
+      "modelUse": "p16 외형·포트 및 p17/18 모터/로터/슬라이드밸브/로드 단면을 우선한다. 공식2015 ASC 자료는 내장 오일분리 구조의 보조 자료로 사용한다.",
+      "limits": "내부 형식은 제조사 원문으로 뒷받침되지만 현장2025 생산품 개별 revision과 정확 로터/베어링 가공치는 미확인. p6은 압축기가 아닌 안전밸브 단면이다.",
+      "providedDrawingEvidence": {
+        "level": "D",
+        "pages": [
+          16,
+          17,
+          18
+        ],
+        "drawingNumbers": [
+          "317T71062",
+          "SPN200808"
+        ],
+        "note": "p16 MODEL50ASC 외형과 p17/18 적용모델50ASC-H를 현물 신형 명판과 대조. p17은 변경 전 단면, p18은2007년9월 생산 이후 변경 내용이다."
+      }
+    },
+    {
+      "id": "upper-finned-coils",
+      "name": "상부 V형 공랭 코일",
+      "level": "A",
+      "sources": [
+        "card-087-photo",
+        "outdoor-video-nov9"
+      ],
+      "videoSeconds": [
+        84,
+        114
+      ],
+      "observed": "여러 경사 코일 면과 관 U벤드·백색 끝판·안전 격자가 직접 보임",
+      "functionLevel": "D",
+      "function": "공랭식 응축기",
+      "limits": "상부 팬8은 원제작도 수량이며 사진만으로 모든 현물 팬을 독립 확인한 것은 아님. p21은 SCSA050/100/150/200AS1 계열 공통 상세와 revision을 포함한다.",
+      "drawingEvidence": {
+        "level": "D",
+        "pages": [
+          14,
+          15,
+          21
+        ],
+        "fanQuantity": 8,
+        "fanMotorQuantity": 8,
+        "condenserAssemblyQuantity": 1,
+        "coilDetailDrawing": "SC010007B"
+      }
+    },
+    {
+      "id": "liquid-receiver",
+      "name": "수직 액 리시버",
+      "level": "A",
+      "photos": [
+        39,
+        45,
+        48,
+        60,
+        64
+      ],
+      "observed": "흰색 원통 압력용기·돔형 상하단·작은 다리/하부 받침·측면 명판·접속관",
+      "nameplate": {
+        "title": "LIQUID RECEIVER",
+        "manufacturer": "DREAM AIR CO., LTD",
+        "modelReading": "DRV-250",
+        "modelConfidence": "medium-high",
+        "refrigerantTextReading": "R-22",
+        "dateReading": "2011.01"
+      },
+      "modelUse": "사진 형태를 수직 액 리시버로 명시 가능",
+      "limits": "액 리시버 기능은 현장 명판으로 직접 확인. 도면2대와 외형·형식이 부합하지만 현재 용기별 일련번호 대응은 미확정. R22는 원설계/용기 명판 표기이며 현장 현재 충전 냉매의 독립 검증값은 아님.",
+      "drawingEvidence": {
+        "level": "D",
+        "pages": [
+          2,
+          3,
+          14,
+          15
+        ],
+        "quantityInAssembly": 2,
+        "bodyDiameterMm": 318.5,
+        "bodyHeightMm": 570,
+        "volumeLitresPerVessel": 36.96,
+        "certificateModel": "DRV-250",
+        "certificateManufacturer": "드림에어(주)",
+        "note": "p3 성적서 수량10은 제조/검사 묶음으로 현장 설치10대가 아님. 사진 명판 날짜 판독과 성적서 날짜를 개별 용기 일련번호 없이 강제 동일시하지 않음."
+      }
+    },
+    {
+      "id": "insulated-horizontal-vessel",
+      "name": "보온 수평 원통용기",
+      "level": "A",
+      "photos": [
+        45,
+        46,
+        47,
+        49,
+        50,
+        51,
+        52,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        61,
+        62,
+        67
+      ],
+      "observed": "긴 수평 원통, 검정/회색 보온재와 백색 마감, 원형 단부, 큰 보온 접속관·플랜지·하부 브래킷",
+      "function": "증발기(원제작도 대조)",
+      "functionLevel": "D",
+      "modelUse": "p14/p15의 증발기와 현장 보온 수평통 위치를 대조하고 p4 튜브 다발 상세를 원제작 참고로 표현한다.",
+      "limits": "현장 통 내부는 개방 촬영되지 않아 정확 튜브 수·현재 정비 후 구조는 미확인. p4 부품 상세와p14조립체의 규격 적용범위를 구분한다.",
+      "drawingEvidence": {
+        "level": "D",
+        "pages": [
+          4,
+          14,
+          15
+        ],
+        "assemblyQuantity": 1,
+        "function": "Evaporator / COOLER",
+        "detailDimensionsMm": {
+          "diameter": 406,
+          "length": 1900
+        },
+        "note": "p4 쉘앤튜브 상세에 튜브 다발이 직접 보임. 그 표의33.25RT×1과p14전체냉동기명목100RT는 작성범위를 구분하고 현물 내경/튜브 수를 사진으로 검증한 것으로 보지 않음."
+      }
+    },
+    {
+      "id": "diaphragm-valve",
+      "name": "원판 헤드형 밸브·가는 연결관",
+      "level": "A",
+      "photos": [
+        46,
+        47,
+        49,
+        62,
+        66,
+        67
+      ],
+      "observed": "원판형 상부 캡, 수직 밸브 몸통, 측면 굵은 관, 가는 동관/모세관 형태의 연결",
+      "function": "팽창밸브(TXV) 추정",
+      "functionLevel": "C",
+      "modelUse": "보이는 외형만 대표 형상으로 구현하고 기능/제조사/모델 미확정 표시",
+      "limits": "밸브 명판과 감온통 종단·정확 연결 계통은 보이지 않음. 특정 Danfoss/스포란 모델로 단정 불가",
+      "drawingEvidence": {
+        "level": "D",
+        "pages": [
+          14,
+          15
+        ],
+        "expansionValveQuantity": 2,
+        "note": "팽창밸브2대의 계통상 존재는 원제작도 명시. 사진 원판형 밸브의 개별 부품번호 대조는 미확정."
+      }
+    },
+    {
+      "id": "oil-system",
+      "name": "오일 계통",
+      "level": "B",
+      "source": "hitachi-asc-official-2015",
+      "pages": [
+        2,
+        3
+      ],
+      "observed": "공식 ASC 자료의 내장 오일분리 구조를 참고할 수 있음",
+      "fieldStatus": "독립 외장 오일분리 탱크·오일펌프·오일냉각기를 현장 사진에서 명칭까지 확인하지 못함",
+      "modelUse": "내장 오일 영역 참고 수준. 흰 수직 리시버를 오일 탱크로 바꾸지 않음",
+      "limits": "오일 종류·현 충전량·배관 유동 방향은 미확정",
+      "providedDrawingEvidence": {
+        "level": "D",
+        "pages": [
+          16,
+          15
+        ],
+        "note": "p16 Oil Heater/Oil Sight Glass 표기 및 p15 OH oil-heater 심볼. 독립 외장 오일 탱크의 존재는 확인되지 않음."
+      }
+    },
+    {
+      "id": "controls-instruments",
+      "name": "제어함·단자함·압력계·전선",
+      "level": "A",
+      "photos": [
+        4,
+        7,
+        8,
+        19,
+        20,
+        21,
+        22,
+        25,
+        26
+      ],
+      "sources": [
+        "card-087-photo"
+      ],
+      "observed": "전체 제어반 외함, 압축기 상부 접속함, 백색 보조함, 원형 고/저압 계기, 전선 보호관",
+      "limits": "닫힌 현장 제어반 내부 배치와 현재 개조/정비 후 결선은 확인하지 못함. 과거 공통 전기도를 현장 현재 운전값으로 사용하지 않음.",
+      "drawingEvidence": {
+        "level": "D",
+        "pages": [
+          9,
+          10,
+          11,
+          14
+        ],
+        "drawingNumbers": [
+          "SCSA0073",
+          "SCSA0071",
+          "SCSA0072"
+        ],
+        "note": "80/100/120RT 공통 원전기 도면과 조립 부품표. 도면의 회로는 설명할 수 있으나 현재 현장 결선 그대로라고 단정하지 않음."
+      }
+    },
+    {
+      "id": "economizer-marking",
+      "name": "이코노마이저 관련 표기",
+      "level": "A",
+      "photos": [
+        4,
+        6,
+        22,
+        25,
+        26
+      ],
+      "observed": "상부 단자함에 26.08.07 이코노마이저 스티커. 한 압축기에 26.07.18 정비완료/380V 스티커",
+      "modelUse": "현장 표기 존재를 설명하고 공식 ASC 포트 위치와 참고 대조",
+      "limits": "스티커만으로 설치 공사의 전체 범위·성능 개선량·배관 경로를 확정하지 않음. 제어함 속 장치를 이코노마이저라고 표시하지 않음"
+    },
+    {
+      "id": "pumps-and-water-lines",
+      "name": "옆 펌프 2대·흰 U헤더·패널 물탱크",
+      "level": "A",
+      "photos": [
+        39,
+        40,
+        41,
+        42,
+        43,
+        44
+      ],
+      "videoSeconds": [
+        60
+      ],
+      "observed": "녹색 수직 모터 2대, 은색 원뿔 덮개, 백색 큰 보온 헤더, 밸브 핸들, 조립식 패널 물탱크",
+      "modelUse": "100RT 냉동기 옆 별도 순환수 설비로 유지",
+      "limits": "압축기/증발기 부품으로 합치거나 회전 펌프 내부 임펠러 형식을 단정하지 않음. 이미 별도 설비 선택 그룹이면 중복 추가 금지"
+    },
+    {
+      "id": "safety-valve",
+      "name": "안전·차단 밸브",
+      "level": "D",
+      "pages": [
+        6,
+        7,
+        8,
+        14,
+        15
+      ],
+      "drawingNumber": "GC320174",
+      "observed": "A-SAN 안전밸브 스프링·시트·케이싱 단면 및 시험성적서. p14 조립표에 안전·차단밸브2개.",
+      "limits": "p6에는32A,조립표에는25A가 보여 세부 형식은 동일 개체로 강제하지 않음. 이 단면을 압축기 내부로 표시하지 않음."
+    }
+  ],
+  "spatialRecommendations": {
+    "level": "D/C",
+    "drawingPages": [
+      14,
+      15,
+      16
+    ],
+    "basisPhotos": [
+      37,
+      38,
+      39,
+      49,
+      50,
+      56,
+      62,
+      65
+    ],
+    "suggestion": "추가 원제작도 p14의 정면/끝면을 사진보다 우선하여 내부 부품 축과 위치를 재검토한다. p14 정면 압축기 형상은 p16 측면 형상과 대응하여 각 장축이 본체폭4140 방향으로 보인다.",
+    "limits": "기존 사진만으로 제안한 각 압축기 장축Z 가정은 원제작도 재검토 전 확정으로 사용하지 않음. 원설계와 현장 정비 변경은 구분한다."
+  },
+  "notConfirmed": [
+    "현장 냉동기 개별 제조번호·현재 개조 후 실측 외곽",
+    "구형 압축기 명판의 실제 모델/출력/제조일",
+    "40RT 카드089 내부 구조와 실제 정격 용량",
+    "현장 증발기 개방 내부 사진·현재 튜브 수/상태",
+    "현재 팬 회전 방향·현재 운전 상태",
+    "현재 냉매 충전 종류/충전량·실제 압력",
+    "현재 제어반 내부 결선·센서/밸브 운영 상태",
+    "p12 과거48.08RT도형과 현100RT 장비 개별 일련번호 대응 및 전체110m 장비열 정합"
+  ],
+  "sourceManifest": "references/chiller-20261110/source-manifest.json",
+  "photographedPaperReport": {
+    "level": "A",
+    "photo": 7,
+    "titleReading": "압축기 파손 점검 보고서",
+    "dateReading": "2026.07.17로 판독",
+    "otherVisibleText": "100RT 냉동기 및 1호기/2호기 표기, 압축기 외관·분해 사진",
+    "inspectionImage": "tmp/chiller-20261110/photo-007-paper-upright.jpg",
+    "limits": "사진에 일부 페이지만 비스듬히 찍힌 인쇄물이다. 원문 문서 파일/전체 보고서가 없으며 파손 원인·교체 확정 범위·내부 치수는 판독하지 못함. 과거 기록을 현재 상태로 전용하지 않음."
+  },
+  "drawingManifest": "references/chiller-20261110/drawing-manifest.json",
+  "updates": [
+    {
+      "date": "2026-11-10",
+      "source": "Image_20261110_0001.pdf",
+      "change": "추가 원제작도에 따라 기존 기능 추정을 보강했다. 제조사·팬8·리시버2·증발기·원전기/냉매회로·50ASC 단면 근거를 추가하고 p6초기분류 오류를 안전밸브로 정정했다."
+    }
+  ]
+}

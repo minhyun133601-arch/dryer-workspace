@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-11",
+  "request": "조제실 탱크 하부 재현 보완 및 인접 보일러실 내부 공개",
+  "observations": [
+    {"seconds": [393,399], "features": ["하부 원형 덮개", "중앙 배출부·위생 클램프·T관", "금속 플렉시블 연결관", "센서 헤드·보호 전선", "구멍 난 수직 보호판"]},
+    {"seconds": [387,411,429], "features": ["붉은 보온 헤더·금속 밴드", "낮은 스테인리스 관 두 단", "파란 공압관", "밸브 외함·배관 지지대"]},
+    {"seconds": [435,471,472], "features": ["투입함 아래 Fristam 펌프의 아치형 스테인리스 덮개·스키드"], "identity": "동일 펌프의 반복 촬영이며 황색 커플링 보호대 펌프와 구별"}
+  ],
+  "preserved": ["주 탱크 몸통 6기", "작업대 러그로 지지되는 매달린 탱크", "바닥에서 약 1m 위 곡면 저부", "기존 보일러실·전경·문·화장실·소독실 배치"],
+  "lowerDetails": {"assemblies": 3, "sharedVisibleRuns": 4, "newVesselsAdded": 0, "hiddenConnectionsConfirmed": false, "tankNameToLowerFittingMapping": "영상 구간과 행 위치를 대조한 개략 대응"},
+  "boilerView": {"id": "f1-boiler-room", "samePhysicalRoomAs": "campus-boiler-room", "position": [30.3,0.3,-8.5], "approximateBounds": {"minX":26.2,"maxX":34.4,"minZ":-13.4,"maxZ":-3.6}, "boilerCount":2,"greenInlinePumpCount":2,"geometryFit":"기존 확인 모델을 균일 축소하여 비율 보존", "openInDefaultCutaway":true},
+  "navigation": ["조제실 · 1층 내부", "탱크 하부 보기", "보일러실 내부"],
+  "layoutMigration": {"revision":"preparation-complete-20261111","exactLegacyDefaultsOnly":true,"intentionalMovesPreserved":true},
+  "limitations": ["설비 치수와 방·배관 위치는 실측값이 아닌 영상·도면 비례 복원", "가려진 공정 연결과 압력 용기 내부는 미확정"],
+  "verification": {"fullTestsPassed":300,"fullTestsFailed":0,"syntaxAndLocalPathsPassed":true,"existingProfileAndFreshProfileBrowserChecked":true,"sharedViewerBrowserErrors":0,"standaloneExportBytes":25768630,"screenshots":["tmp/preparation-final-lower.png","tmp/preparation-fresh-boiler.png","tmp/preparation-share-lower-final.png","tmp/preparation-share-boiler-final.png"],"debugHookRemoved":true}
+}

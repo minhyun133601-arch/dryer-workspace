@@ -1,0 +1,74 @@
+{
+  "id": "3-pet-1782201240668-3025",
+  "line": "",
+  "name": "병뚜껑 조립기",
+  "note": "",
+  "plan": "",
+  "rate": 0,
+  "room": "Pet실",
+  "team": "3팀",
+  "group": "",
+  "owner": "",
+  "status": "비가동중",
+  "process": "",
+  "documents": [],
+  "lastCheck": "",
+  "modelName": "",
+  "nextCheck": "",
+  "photoCrop": null,
+  "photoName": "병뚜껑 조립기 photo.jpg",
+  "detailInfo": [
+    {
+      "label": "설비명",
+      "value": "병뚜껑 조립기"
+    },
+    {
+      "label": "관리팀",
+      "value": "3팀"
+    },
+    {
+      "label": "가동률",
+      "value": "0%"
+    }
+  ],
+  "ownerLabel": "담당 업체",
+  "production": "",
+  "teamDataKey": "work_team_calendar_team3",
+  "detailGroups": {
+    "equipmentSpecs": []
+  },
+  "manufacturer": "",
+  "photoDataUrl": "",
+  "equipmentCode": "3-PET-1782201240668-3025",
+  "operationInfo": [
+    {
+      "label": "설비명",
+      "value": "병뚜껑 조립기"
+    },
+    {
+      "label": "관리팀",
+      "value": "3팀"
+    },
+    {
+      "label": "실",
+      "value": "Pet실"
+    },
+    {
+      "label": "공정",
+      "value": ""
+    },
+    {
+      "label": "가동률",
+      "value": "0"
+    }
+  ],
+  "manufacturedAt": "",
+  "photoDocumentId": "e9729aed-062f-42ea-aa82-a220c5b16edf",
+  "photoPreviewUrl": "/api/files/e9729aed-062f-42ea-aa82-a220c5b16edf/view",
+  "photoDownloadUrl": "/api/files/e9729aed-062f-42ea-aa82-a220c5b16edf/download",
+  "manufacturerLabel": "제조사",
+  "photoThumbDataUrl": "",
+  "maintenanceHistory": [],
+  "photoAttachmentKey": "equipment-photo-main",
+  "photoStorageRelPath": "equipment-assets/equipment-history/병뚜껑 조립기/images/d4fb4615-0ee8-48ee-a334-debfec1e6cb3.jpg"
+}

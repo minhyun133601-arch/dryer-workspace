@@ -1,0 +1,47 @@
+{
+  "date": "2026-11-10",
+  "campusModels": 7,
+  "outdoorModels": 22,
+  "packagingModels": 83,
+  "existingDetailedModelDataUnchanged": true,
+  "area": {
+    "id": "campus-outdoor-area",
+    "name": "실외기실 · 액상 옆",
+    "type": "campus-outdoor-area",
+    "tag": "실외기실",
+    "floor": "campus",
+    "position": [
+      -83,
+      0,
+      -42
+    ],
+    "rotation": 0,
+    "width": 6,
+    "depth": 36,
+    "height": 6.4,
+    "labelHeight": 8,
+    "parts": [
+      "옥외 설비 기초·통로",
+      "냉각탑·공조기·칠러 외관",
+      "블록 담장·상부 배관"
+    ],
+    "roomLink": "outdoor"
+  },
+  "checks": {
+    "javascriptFiles": 43,
+    "testsPassed": 116,
+    "testsFailed": 0
+  },
+  "browser": {
+    "actualCanvasClickWithLabelsOff": true,
+    "localDesktopLabelAndList": true,
+    "localMobile": true,
+    "sharedDesktop": true,
+    "sharedMobileOffline": true,
+    "consoleErrors": 0
+  },
+  "share": {
+    "bytes": 5421573,
+    "sha256": "4b4553d309bc8ab52f8afebb9bcbca1a7a461d544b36e6186ad1818098c5af50"
+  }
+}

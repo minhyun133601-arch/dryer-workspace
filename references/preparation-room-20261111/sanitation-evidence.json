@@ -1,0 +1,71 @@
+{
+  "date": "2026-11-11",
+  "sourcePattern": "조제실/20261111_135935*.mp4",
+  "reviewedRangesSeconds": [[140, 177], [477, 522]],
+  "nativeFrameSamplingSeconds": 1,
+  "additionalHalfSecondFrames": [495.5, 497.5, 499.5, 501.5, 503.5, 505.5, 506.5, 508.5, 510.5, 511.5, 512.5, 513.5],
+  "frames": "tmp/preparation-review-20261111/sanitation-review/ and clip-001/second-half/exit-review/",
+  "directObservations": [
+    {
+      "timesSeconds": [140, 141, 146, 148, 159, 161],
+      "feature": "sanitation-workroom-door",
+      "observed": "A gray-framed full-height pale mosaic/frosted-pattern leaf, round metal knob and metal threshold. Camera opens it, enters the small support/work room, closes it, then opens the same leaf from its plain-looking inner face and exits. The square pattern is represented as frosted glazing; no actual through-holes in a steel sheet are established.",
+      "confidence": "direct-appearance-and-continuous-door-operation"
+    },
+    {
+      "timesSeconds": [147, 151, 152, 153, 154, 156],
+      "feature": "small-sanitation-preparation-workroom",
+      "observed": "Green floor, cream panel walls, yellow-covered rear window, wall-mounted white air conditioner, plastic-covered work table/display, round brown seat on a five-spoke base, and one stainless cabinet with a dark rounded-rectangle glazed front, interior wire shelves, top control strip and side handle. A separate PC/office corner was filmed through glazing at 87 seconds.",
+      "confidence": "direct-visible-objects",
+      "limit": "The cabinet resembles the filmed sterilizing/drying cabinet, but model number, operating state and exact room sign are not securely transcribed. The PC glazing's west-side placement is a reconstructed fit to the adjacent process-facing support-room doors, not a measured wall survey."
+    },
+    {
+      "timesSeconds": [164, 165, 166, 167, 168, 169, 170, 171, 172],
+      "feature": "first-air-shower-visit",
+      "observed": "Camera stands at the process-side stainless air-shower entrance and looks toward the far oval-pattern glazed leaf and the exterior entrance beyond it. It does not traverse the air shower on this first visit; it backs away past the adjacent mosaic-door wall and returns to the tank/platform area.",
+      "confidence": "continuous-one-second-sequence",
+      "correction": "Earlier shorthand implying a first traverse at approximately 160 seconds is withdrawn."
+    },
+    {
+      "timesSeconds": [165, 170, 480, 481, 482, 483, 484],
+      "feature": "same-air-shower-chamber",
+      "observed": "Both visits show the same chamber from the same process-to-entrance direction: polished stainless side panels, circular louvered nozzles arranged in three columns and three levels per side, dark rectangular return regions, metal floor grating, four round ceiling apertures and two rectangular ceiling lights. The far door has an elongated oval clear region, pale frosted border/checker motif and a long pull handle. A nearer process-side glazed leaf is held open.",
+      "confidence": "matching-distinctive-door-pattern-and-chamber-details",
+      "limit": "Visible layout is reproduced; nozzle/fan dimensions and exact chamber length are estimated. The chamber is not duplicated into two separate air showers."
+    },
+    {
+      "timesSeconds": [485, 486, 487, 491, 492, 495.5, 497.5],
+      "feature": "hygiene-vestibule-sightline",
+      "observed": "After traversing the chamber and opening its far leaf, the exterior double glass entrance is directly ahead. Looking outward toward that entrance, the green stair and its brown handrail are on the right, lockers sit beneath the stair, and two broad cylindrical stainless handwash basins are on the left. The basins have concave bowls, tall arched taps, a reflective metal backsplash, wall dispensers and posted handwashing instructions. A violet-lit wall grille is visible by the stair. Gray raised clean-side floor surrounds a lower green shoe-change pocket with loose shoes/slippers.",
+      "confidence": "direct-post-traverse-pan-and-reverse-look",
+      "limit": "The violet grille's precise function is not assigned from color alone. Small personal locker names are not transcribed."
+    },
+    {
+      "timesSeconds": [497.5, 498, 499.5, 500, 501.5, 502, 503, 504, 505.5, 506],
+      "feature": "washroom-corridor-and-door-face",
+      "observed": "Camera turns from the handwash/stair vestibule into a narrow green-floor corridor. The first open washroom doorway is on the left of that corridor; a closed upper-glazed/lower-paneled support door appears farther along the same side, with a colored quality/cost/delivery board at the corridor end. Camera looks through the washroom side door at ivory tile walls, decorative border, beige tile floor, two visible white urinals and three brown curved-top dividers, a wall dispenser and a blue-lined bin; then returns to the vestibule. The washroom leaf has upper frosted glass, lower pale grooved panel, round knob and a clear threshold with brown slippers.",
+      "confidence": "continuous-side-door-turn-and-return",
+      "limit": "The farther closed support room is not named or given an invented interior."
+    },
+    {
+      "timesSeconds": [506, 508.5, 509, 510, 510.5, 511.5, 512.5, 513.5, 514, 518, 519, 521],
+      "feature": "single-outer-controlled-double-entry",
+      "observed": "The camera returns beside the green stair, operates the prominent electronic lock on the double glass exterior entrance and passes outside. Subsequent close frosted-glass views are the moving entrance leaf. Exterior shows the same gray-framed double glass beneath the concrete canopy. No additional duplicate locked double entrance inside the hall is established.",
+      "confidence": "continuous-unlock-and-exit",
+      "limit": "Air-shower inlet/outlet leaves and the exterior controlled double entry are distinct door stages; the same outer leaf must not be counted twice."
+    }
+  ],
+  "registration": {
+    "sourcePriority": "Current continuous video and entrance sightlines precede historical room names and provisional model coordinates.",
+    "entryFacingInward": "From the 1팀2파트 entrance facing west into the building: air shower straight ahead, green stairs/lockers to the left (south/+Z), handwash and the short washroom corridor to the right (north/-Z).",
+    "airShowerBounds": { "minX": 28.2, "maxX": 31.4, "minZ": 16.9, "maxZ": 18.3 },
+    "airShowerCenterLineZ": 17.6,
+    "handwashCenters": [[31.95, 16.55], [32.75, 16.55]],
+    "entryCorridorBounds": { "minX": 33.3, "maxX": 34.4, "minZ": 12, "maxZ": 17.6 },
+    "washroomBounds": { "minX": 30.5, "maxX": 33.3, "minZ": 13, "maxZ": 16.2 },
+    "washroomEastDoor": { "position": [33.3, 15.2], "normal": "x", "width": 0.9 },
+    "outerEntry": { "position": [34.3, 17.6], "normal": "x", "width": 2.6 },
+    "recommendedPersonStart": { "position": [33.7, 0.3, 17.6], "yaw": -1.5707963267948966 },
+    "coordinateLimit": "All meter coordinates are a conservative video-to-plan reconstruction. Side/door relationships and the aligned exterior-entry sightline are directly supported; dimensions are not surveyed."
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "id": "3-a-1-4-1782113293708-497275",
+  "line": "",
+  "name": "A라인 1-4",
+  "note": "",
+  "plan": "",
+  "rate": 0,
+  "room": "배합실",
+  "team": "3팀",
+  "group": "",
+  "owner": "",
+  "status": "비가동중",
+  "process": "",
+  "documents": [],
+  "lastCheck": "",
+  "modelName": "",
+  "nextCheck": "",
+  "photoCrop": null,
+  "photoName": "A라인 1-4 photo.jpg",
+  "detailInfo": [
+    {
+      "label": "설비명",
+      "value": "A라인 1-4"
+    },
+    {
+      "label": "관리팀",
+      "value": "3팀"
+    },
+    {
+      "label": "가동률",
+      "value": "0%"
+    }
+  ],
+  "ownerLabel": "담당 업체",
+  "production": "",
+  "teamDataKey": "work_team_calendar_team3",
+  "detailGroups": {
+    "equipmentSpecs": []
+  },
+  "manufacturer": "",
+  "photoDataUrl": "",
+  "equipmentCode": "3-A-1-4-1782113293708-497275",
+  "operationInfo": [
+    {
+      "label": "설비명",
+      "value": "A라인 1-4"
+    },
+    {
+      "label": "관리팀",
+      "value": "3팀"
+    },
+    {
+      "label": "실",
+      "value": "배합실"
+    },
+    {
+      "label": "공정",
+      "value": ""
+    },
+    {
+      "label": "가동률",
+      "value": "0"
+    }
+  ],
+  "manufacturedAt": "",
+  "photoDocumentId": "1c35b9c2-130a-4911-8dee-16e21c16e825",
+  "photoPreviewUrl": "/api/files/1c35b9c2-130a-4911-8dee-16e21c16e825/view",
+  "photoDownloadUrl": "/api/files/1c35b9c2-130a-4911-8dee-16e21c16e825/download",
+  "manufacturerLabel": "제조사",
+  "photoThumbDataUrl": "",
+  "maintenanceHistory": [],
+  "photoAttachmentKey": "equipment-photo-main",
+  "photoStorageRelPath": "equipment-assets/equipment-history/A라인 1-4/images/e8896ad6-bd21-4033-8969-f84a337f9fca.jpg"
+}

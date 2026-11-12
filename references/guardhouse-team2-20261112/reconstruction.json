@@ -1,0 +1,24 @@
+{
+  "date": "2026-11-12",
+  "sourceManifest": "source-manifest.json",
+  "scope": "경비실에서 2팀 입구까지 연속 동선·상부 촬영·문 개방 대조",
+  "reviews": {
+    "front": "workspace/entrance-route-20261112/review-first/observations.json",
+    "rear": "workspace/entrance-route-20261112/review-second/observations.md",
+    "tankRegistration": "workspace/entrance-route-20261112/review-first/tank-position-review/conclusions.json",
+    "buildingDrawing": "workspace/entrance-route-20261112/review-first/packaging-envelope-review.json",
+    "doorClearance": "workspace/entrance-route-20261112/review-second/entry-clearance.json"
+  },
+  "sampling": {"wholeVideoStepSeconds":2,"elevatorStepSeconds":0.25,"rearDoorStepSeconds":0.5,"gpsObservations":291},
+  "placement": {
+    "guardhouse": {"previous":[71,0,57.5],"current":[61,0,57.5],"basis":"기존 항공사진 저장 변환으로 지붕 중심X60.6 확인, 영상 시작폰위치와 대조"},
+    "entranceLaneX":72,"sideParkingX":82.5,
+    "leftTurn": {"cameraPathX":[42,66],"cameraPathZ":-28,"annexFrontPreviousZ":-21,"annexFrontCurrentZ":-30,"annexRearZ":-66,"basisSeconds":[68,80,96,106,112,126,130]},
+    "tankBank": {"position":[60,0,-83.5],"count":8,"moved":false,"basisSeconds":[172,180,186],"basis":"앞탱크X64.5/69와 연속 시야·항공 실루엣 일치. 전체왼쪽이동은 옆 주차장·사무실 침범"},
+    "wastewaterCenter":[25,0,53.5],"wastewaterBuilding10Anchor":[25,0,57]
+  },
+  "team2Door": {"localToRearAccess":[9.1,0,-1.65],"normal":[-1,0,0],"mounting":"긴 실외기 후면벽과 직각인 돌출 매스의 서쪽 리턴면","basisSeconds":[263.5,269.5,273.5,281.5,284],"rackShiftX":-1.5,"shiftAuthority":"사용자 요청: 입구 앞 실외기 이격","nearestEquipmentGapMetres":3.375,"clearApproachWidthMetres":2.5,"exactDimensionsMeasured":false},
+  "elevator": {"buttonPressSeconds":[232.25,233],"openingStartSeconds":234.5,"visibleInteriorSeconds":[237,237.25,237.75],"motion":"left-telescopic","observedInterior":["은색 판넬 벽","검정 체크철판 바닥","문턱 평행 레일","가로 조명"],"unseenSafetyGateAdded":false,"modelCabinDepthApproximate":true},
+  "team2Envelope": {"source":"9동 A-07 평면·A-11 단면","bodyMetres":[31.35,30.4],"floorDatumsMetres":[0,6,12.15],"eaveMetres":18.15,"ridgeRiseMetres":1.36,"ridgeMetres":19.51,"roof":"Z축에 박공2개; 용마루X축","rearWindowCentersMetres":[7.75,13.9],"groundVsFloorOffsetMetres":0.1,"note":"앱은1층바닥0기준. GL+0.1은별도로더하지않음. 도면경사비와직접치수차이는직접표기높이1.36우선"},
+  "limits": ["폰 GPS는 카메라 위치·방향 참고이며 설비 벽체 실측값이 아님","외관 재질·미세 치수·간격은 영상 비례 근사","위치 변경은 원본 도면·연속 동선·항공사진을 함께 대조, 직접 편집한 배치는 보존"]
+}

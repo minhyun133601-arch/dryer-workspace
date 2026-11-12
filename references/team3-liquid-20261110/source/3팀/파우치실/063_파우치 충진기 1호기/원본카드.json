@@ -1,0 +1,74 @@
+{
+  "id": "3-1-1782200579857-7535",
+  "line": "",
+  "name": "파우치 충진기 1호기",
+  "note": "",
+  "plan": "",
+  "rate": 0,
+  "room": "파우치실",
+  "team": "3팀",
+  "group": "",
+  "owner": "",
+  "status": "비가동중",
+  "process": "",
+  "documents": [],
+  "lastCheck": "",
+  "modelName": "",
+  "nextCheck": "",
+  "photoCrop": null,
+  "photoName": "파우치 충진기 1호기 photo.jpg",
+  "detailInfo": [
+    {
+      "label": "설비명",
+      "value": "파우치 충진기 1호기"
+    },
+    {
+      "label": "관리팀",
+      "value": "3팀"
+    },
+    {
+      "label": "가동률",
+      "value": "0%"
+    }
+  ],
+  "ownerLabel": "담당 업체",
+  "production": "",
+  "teamDataKey": "work_team_calendar_team3",
+  "detailGroups": {
+    "equipmentSpecs": []
+  },
+  "manufacturer": "",
+  "photoDataUrl": "",
+  "equipmentCode": "3-1-1782200579857-7535",
+  "operationInfo": [
+    {
+      "label": "설비명",
+      "value": "파우치 충진기 1호기"
+    },
+    {
+      "label": "관리팀",
+      "value": "3팀"
+    },
+    {
+      "label": "실",
+      "value": "파우치실"
+    },
+    {
+      "label": "공정",
+      "value": ""
+    },
+    {
+      "label": "가동률",
+      "value": "0"
+    }
+  ],
+  "manufacturedAt": "",
+  "photoDocumentId": "dce38485-b1d5-4a07-8e96-02effcbfeba7",
+  "photoPreviewUrl": "/api/files/dce38485-b1d5-4a07-8e96-02effcbfeba7/view",
+  "photoDownloadUrl": "/api/files/dce38485-b1d5-4a07-8e96-02effcbfeba7/download",
+  "manufacturerLabel": "제조사",
+  "photoThumbDataUrl": "",
+  "maintenanceHistory": [],
+  "photoAttachmentKey": "equipment-photo-main",
+  "photoStorageRelPath": "equipment-assets/equipment-history/파우치 충진기 1호기/images/3e8ba5a0-17ca-41c6-87f2-ea1cbc5ed2df.jpg"
+}

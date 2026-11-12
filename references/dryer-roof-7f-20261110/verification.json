@@ -1,0 +1,34 @@
+{
+  "date": "2026-11-10",
+  "originals": [
+    {
+      "path": "건조기실 옥상 ~ 7층/20261110_132807KST_GPS-VALID_LAT35.3624500_LON129.0305800_H21.1-TN_DIR-AVAILABLE_P-25.8_ACC7.4m_FV-58767a3c-b188-4a60-9b40-0ed3ac69fb89.txt",
+      "bytes": 34402,
+      "sha256": "4e0d7e1b833d300337e9f649b769c456209a7c18049fdb00682c7786cf00bd2e",
+      "unchanged": true
+    },
+    {
+      "path": "건조기실 옥상 ~ 7층/20261110_132953KST_GPS-VALID_LAT35.3626717_LON129.0302783_H220.2-TN_DIR-AVAILABLE_P-49.0_ACC2.4m_FV-050dba47-cf26-47c4-a78f-7012f284c151.mp4",
+      "bytes": 761413998,
+      "sha256": "7e70508d612005962a77501c50323f36d6f1e64d1c83dd15753e8cb72ab55b26",
+      "unchanged": true
+    },
+    {
+      "path": "건조기실 옥상 ~ 7층/20261110_132953KST_GPS-VALID_LAT35.3626717_LON129.0302783_H220.2-TN_DIR-AVAILABLE_P-49.0_ACC2.4m_FV-050dba47-cf26-47c4-a78f-7012f284c151.txt",
+      "bytes": 965296,
+      "sha256": "9986191ef5534144f9ac21b37af4cfbbb257710f4817a9546f0801f922c32df8",
+      "unchanged": true
+    }
+  ],
+  "allOriginalHashesUnchanged": true,
+  "webFrameCount": 60,
+  "supplementalCropCount": 1,
+  "webBytesIncludingCrop": 6956403,
+  "offlineCount": 12,
+  "offlineBytes": 458150,
+  "allDerivedImagesDecodeAndMatchManifestHashes": true,
+  "checkedDerivedImageCount": 73,
+  "scope": "Final source and derived-image verification; model validation is in implementation-verification.json",
+  "offlineBudgetBytes": 520000,
+  "offlineWithinReviewedBudget": true
+}

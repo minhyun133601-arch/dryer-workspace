@@ -1,0 +1,464 @@
+{
+  "schemaVersion": 1,
+  "reviewDate": "2026-11-10",
+  "scope": {
+    "team": "3팀",
+    "room": "실외기실",
+    "cardNumbers": [
+      72,
+      73,
+      74,
+      75,
+      76,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92
+    ],
+    "excludedIndoorNumbers": [
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83
+    ],
+    "sourcePolicy": "ZIP의 3팀/실외기실만 사용한다. 077~083 배합실 카드 및 다른 건물·팀의 자료를 연결하지 않는다."
+  },
+  "summary": {
+    "sourceCardCount": 14,
+    "existingDirectBindings": 9,
+    "newVideoMatchedBindings": 2,
+    "mappedCardCount": 11,
+    "unplacedGalleryCardNumbers": [
+      72,
+      73,
+      90
+    ],
+    "selectedEquipmentGroups": 22,
+    "cardCountIsNotNewEquipmentCount": true
+  },
+  "method": {
+    "reviewedCardViews": [
+      "front",
+      "left",
+      "right",
+      "rear"
+    ],
+    "reviewedContactSheets": [
+      "tmp/team3-outdoor-cards-20261110/contact-072-075.jpg",
+      "tmp/team3-outdoor-cards-20261110/contact-076-086.jpg",
+      "tmp/team3-outdoor-cards-20261110/contact-087-090.jpg",
+      "tmp/team3-outdoor-cards-20261110/contact-091-092.jpg"
+    ],
+    "comparisonSources": [
+      "apps/site/outdoor-data.js",
+      "apps/site/outdoor-card-data.js",
+      "workspace/outdoor-survey/review-pass2.md",
+      "workspace/outdoor-video-20261102/review.md",
+      "workspace/outdoor-video-20261109/review.md"
+    ],
+    "visualReview": "카드 14개의 합성 사진 네 방향과 관련 기존 현장 사진·영상 캡처를 직접 대조했다. 사진상 형상·표찰 대응을 판정하며 실측 정합을 뜻하지 않는다.",
+    "modelRenderStatus": "최신 11모델의 비교시트 3장을 직접 확인했다. 084/085 AHU 본체1.9의 낮고 긴 비례, 사각/원형 관찰창, 상부2덕트 및 지지프레임 두 발의 지붕 접속을 최종 재렌더에서 확인하여 해당 핵심 flag를 resolved로 닫았다. SS는 짙은 녹회색에서 밝은 회백색 면으로 개선됐다. 열린 중대 형상 flag는 없으나 반사·조명·카메라·치수는 근사이며 완벽한 사진 정합 판정은 아니다.",
+    "modelComparisonIndex": "tmp/team3-outdoor-cards-20261110/qa/visual-compare-index.json",
+    "finalOpenMajorShapeFlags": 0
+  },
+  "mappings": [
+    {
+      "number": 72,
+      "equipmentId": null,
+      "status": "unplaced",
+      "shapeFeatures": "상부 검은 코일 3구획, 하부 백색 문 2구획, 좁은 측면의 직립 캐비닛.",
+      "reason": "현재 영상에서 번호를 확인한 위치가 없어 미배치한다. 창 아래 낮은 외함 2대 및 노출 청색 코일·팬 2개 그룹과 직접 대응시키지 않는다.",
+      "evidence": [],
+      "geometryCardScope": false,
+      "cardName": "20RT 공조기 2",
+      "sourceCardId": "3-20rt-2-1782113879963-70446",
+      "sourceJson": "references/team3-outdoor-cards-20261110/source/3팀/실외기실/072_20RT 공조기 2/원본카드.json",
+      "cardPhoto": "apps/site/photos/team3-outdoor-cards/card-072.jpg",
+      "sourceOperationMetadata": {
+        "status": "비가동중",
+        "rate": 0,
+        "useForLiveOperationalState": false
+      }
+    },
+    {
+      "number": 73,
+      "equipmentId": null,
+      "status": "unplaced",
+      "shapeFeatures": "상부 검은 코일 3구획, 하부 백색 문 2구획, 후면 코일과 측면 패널이 있는 직립 캐비닛.",
+      "reason": "072와 동형이지만 두 번호의 상대 위치·방향을 확정할 근거가 부족해 미배치한다.",
+      "evidence": [],
+      "geometryCardScope": false,
+      "cardName": "20RT 공조기 1",
+      "sourceCardId": "3-20rt-1-1782113867970-64030",
+      "sourceJson": "references/team3-outdoor-cards-20261110/source/3팀/실외기실/073_20RT 공조기 1/원본카드.json",
+      "cardPhoto": "apps/site/photos/team3-outdoor-cards/card-073.jpg",
+      "sourceOperationMetadata": {
+        "status": "비가동중",
+        "rate": 0,
+        "useForLiveOperationalState": false
+      }
+    },
+    {
+      "number": 74,
+      "equipmentId": "outdoor-unit-3",
+      "status": "existing-direct",
+      "shapeFeatures": "백색 외함, 상부 촘촘한 사각 격자 2열, 상부 원형 팬, 측면 점검 패널과 하부 받침.",
+      "reason": "현장 유니트 4 표찰 및 외함을 대조했다. 기존 ID의 숫자 3을 유니트 번호로 읽지 않는다.",
+      "evidence": [
+        "apps/site/photos/outdoor/20261030_150714-092.jpg",
+        "apps/site/photos/outdoor/20261030_150726-099.jpg"
+      ],
+      "geometryCardScope": true,
+      "cardName": "배합실 냉각기 유니트 4",
+      "sourceCardId": "3-4-1782113831419-67585",
+      "sourceJson": "references/team3-outdoor-cards-20261110/source/3팀/실외기실/074_배합실 냉각기 유니트 4/원본카드.json",
+      "cardPhoto": "apps/site/photos/team3-outdoor-cards/card-074.jpg",
+      "sourceOperationMetadata": {
+        "status": "비가동중",
+        "rate": 0,
+        "useForLiveOperationalState": false
+      }
+    },
+    {
+      "number": 75,
+      "equipmentId": "outdoor-unit-1",
+      "status": "existing-direct",
+      "shapeFeatures": "백색 외함, 상부 사각 격자 2열, 상부 팬, 하부 점검문·통풍 슬롯·받침.",
+      "reason": "현장 유니트 2 표찰 및 외함을 대조했다. 기존 ID의 숫자 1을 유니트 번호로 읽지 않는다.",
+      "evidence": [
+        "apps/site/photos/outdoor/20261030_150521-017.jpg",
+        "apps/site/photos/outdoor/20261030_150524-019.jpg"
+      ],
+      "geometryCardScope": true,
+      "cardName": "배합실 냉각기 유니트 2",
+      "sourceCardId": "3-2-1782113817377-424440",
+      "sourceJson": "references/team3-outdoor-cards-20261110/source/3팀/실외기실/075_배합실 냉각기 유니트 2/원본카드.json",
+      "cardPhoto": "apps/site/photos/team3-outdoor-cards/card-075.jpg",
+      "sourceOperationMetadata": {
+        "status": "비가동중",
+        "rate": 0,
+        "useForLiveOperationalState": false
+      }
+    },
+    {
+      "number": 76,
+      "equipmentId": "outdoor-unit-2",
+      "status": "existing-direct",
+      "shapeFeatures": "정면과 후면의 격자·패널 구성 차이, 상부 팬, 좁은 측면 명판, 하부 받침.",
+      "reason": "현장 유니트 1 표찰 및 외함을 대조했다. 기존 ID의 숫자 2를 유니트 번호로 읽지 않는다.",
+      "evidence": [
+        "apps/site/photos/outdoor/20261030_150550-030.jpg",
+        "apps/site/photos/outdoor/20261030_150553-033.jpg"
+      ],
+      "geometryCardScope": true,
+      "cardName": "배합실 냉각기 유니트 1",
+      "sourceCardId": "3-1-1782113802984-441224",
+      "sourceJson": "references/team3-outdoor-cards-20261110/source/3팀/실외기실/076_배합실 냉각기 유니트 1/원본카드.json",
+      "cardPhoto": "apps/site/photos/team3-outdoor-cards/card-076.jpg",
+      "sourceOperationMetadata": {
+        "status": "비가동중",
+        "rate": 0,
+        "useForLiveOperationalState": false
+      }
+    },
+    {
+      "number": 84,
+      "equipmentId": "outdoor-ahu",
+      "status": "existing-direct",
+      "shapeFeatures": "크림색 패널 외함, 검정 가스켓의 사각 관찰창, AIR HANDLING UNIT 명판, 경사 흡입 후드와 상부 덕트.",
+      "reason": "기존 치어팩 스틱실 공조기와 같은 대상이다. 기존 이력 PDF 연결을 유지하고 설비를 중복 추가하지 않는다.",
+      "evidence": [
+        "apps/site/photos/outdoor-video/20261102_130440-113s.jpg",
+        "apps/site/photos/outdoor-video/20261102_130440-128s.jpg"
+      ],
+      "geometryCardScope": true,
+      "cardName": "치어팩 스틱실 공조기",
+      "sourceCardId": "3-1782110272096-950362",
+      "sourceJson": "references/team3-outdoor-cards-20261110/source/3팀/실외기실/084_치어팩 스틱실 공조기/원본카드.json",
+      "cardPhoto": "apps/site/photos/team3-outdoor-cards/card-084.jpg",
+      "sourceOperationMetadata": {
+        "status": "비가동중",
+        "rate": 0,
+        "useForLiveOperationalState": false
+      }
+    },
+    {
+      "number": 85,
+      "equipmentId": "outdoor-pet-ahu",
+      "status": "new-video-matched",
+      "shapeFeatures": "크림색 패널 외함, 원형 관찰창, 긴 정면 점검문, 상부 큰 덕트·후드.",
+      "reason": "영상 72초 PET/파우치 공조기 표찰과 일치하며 사각 관찰창의 084와 별도 대상이다. 카드 좌측 사진의 전경 팬 2개는 기존 응축기 관찰 그룹을 참고한다.",
+      "evidence": [
+        "apps/site/photos/outdoor-video/20261102_130440-072s.jpg",
+        "apps/site/photos/outdoor-video/20261102_130440-063s.jpg"
+      ],
+      "geometryCardScope": true,
+      "cardName": "PET 파우치 공조기",
+      "sourceCardId": "3-pet-1782110231083-672874",
+      "sourceJson": "references/team3-outdoor-cards-20261110/source/3팀/실외기실/085_PET 파우치 공조기/원본카드.json",
+      "cardPhoto": "apps/site/photos/team3-outdoor-cards/card-085.jpg",
+      "sourceOperationMetadata": {
+        "status": "비가동중",
+        "rate": 0,
+        "useForLiveOperationalState": false
+      }
+    },
+    {
+      "number": 86,
+      "equipmentId": "outdoor-100rt",
+      "status": "existing-direct",
+      "shapeFeatures": "2층 철골, 상부 사각 냉각탑, 하부 세로 보강판 물탱크, 난간·사다리·측면 배관 뱅크.",
+      "reason": "기존 복합 관찰 그룹에 대응한다. 카드 제목의 물탱크와 위쪽 냉각탑을 별도 새 그룹으로 중복하지 않는다.",
+      "evidence": [
+        "apps/site/photos/outdoor/20261030_150454-004.jpg",
+        "apps/site/photos/outdoor/20261030_150434-000.jpg"
+      ],
+      "geometryCardScope": true,
+      "cardName": "100RT 쿨링타워 물탱크",
+      "sourceCardId": "3-100rt-1782110215315-567884",
+      "sourceJson": "references/team3-outdoor-cards-20261110/source/3팀/실외기실/086_100RT 쿨링타워 물탱크/원본카드.json",
+      "cardPhoto": "apps/site/photos/team3-outdoor-cards/card-086.jpg",
+      "sourceOperationMetadata": {
+        "status": "비가동중",
+        "rate": 0,
+        "useForLiveOperationalState": false
+      }
+    },
+    {
+      "number": 87,
+      "equipmentId": "outdoor-process-chiller",
+      "status": "existing-direct",
+      "shapeFeatures": "상부 V형 열교환 코일, 흰색 격자·외곽 프레임, 하부 열린 기계부와 보온관, SHINSUNG ENG 표시 조작 외함.",
+      "reason": "영상의 100RT 칠러 컨트롤 판넬 표찰과 일치한다. 진입부 086 냉각탑·물탱크와 다른 위치의 설비다.",
+      "evidence": [
+        "apps/site/photos/outdoor-video/20261109_133757-028s.jpg",
+        "apps/site/photos/outdoor-video/20261109_133757-042s.jpg",
+        "apps/site/photos/outdoor-video/20261109_133757-084s.jpg"
+      ],
+      "geometryCardScope": true,
+      "cardName": "100RT 칠러",
+      "sourceCardId": "3-100rt-1782110190952-419769",
+      "sourceJson": "references/team3-outdoor-cards-20261110/source/3팀/실외기실/087_100RT 칠러/원본카드.json",
+      "cardPhoto": "apps/site/photos/team3-outdoor-cards/card-087.jpg",
+      "sourceOperationMetadata": {
+        "status": "비가동중",
+        "rate": 0,
+        "useForLiveOperationalState": false
+      }
+    },
+    {
+      "number": 88,
+      "equipmentId": "outdoor-end-panel-tank",
+      "status": "existing-direct",
+      "shapeFeatures": "2단의 큰 볼록 성형 SS 패널, 상부 보온관·파란 핸드휠, 하부 접속부; 인접 원뿔 덮개 펌프 2대.",
+      "reason": "현장 후반 패널 탱크의 패널·관·펌프 인접 관계와 대조했다. 펌프 2대는 기존 outdoor-pump-skid 그룹이므로 탱크에 또 생성하지 않는다.",
+      "evidence": [
+        "apps/site/photos/outdoor-video/20261109_133757-132s.jpg",
+        "apps/site/photos/outdoor-video/20261109_133757-120s.jpg"
+      ],
+      "geometryCardScope": true,
+      "cardName": "100RT 물탱크",
+      "sourceCardId": "3-100rt-1782110136394-74936",
+      "sourceJson": "references/team3-outdoor-cards-20261110/source/3팀/실외기실/088_100RT 물탱크/원본카드.json",
+      "cardPhoto": "apps/site/photos/team3-outdoor-cards/card-088.jpg",
+      "sourceOperationMetadata": {
+        "status": "비가동중",
+        "rate": 0,
+        "useForLiveOperationalState": false
+      }
+    },
+    {
+      "number": 89,
+      "equipmentId": "outdoor-chiller-40",
+      "status": "new-video-matched",
+      "shapeFeatures": "긴 백색 외함, 상부 검은 코일 4구획, 하부 점검문 4구획, 왼쪽 원형 계기 3개, 높은 각관 받침.",
+      "reason": "영상 216초 전경 캐비닛과 대응한다. 같은 장면 뒤편 창 아래 낮은 백색 외함 2대(outdoor-end-units)와 분리한다.",
+      "evidence": [
+        "apps/site/photos/outdoor-video/20261109_133757-216s.jpg"
+      ],
+      "geometryCardScope": true,
+      "cardName": "40RT 칠러",
+      "sourceCardId": "3-60rt-1782110126437-135961",
+      "sourceJson": "references/team3-outdoor-cards-20261110/source/3팀/실외기실/089_40RT 칠러/원본카드.json",
+      "cardPhoto": "apps/site/photos/team3-outdoor-cards/card-089.jpg",
+      "sourceOperationMetadata": {
+        "status": "비가동중",
+        "rate": 0,
+        "useForLiveOperationalState": false
+      }
+    },
+    {
+      "number": 90,
+      "equipmentId": null,
+      "status": "unplaced",
+      "shapeFeatures": "2단의 볼록 성형 SS 패널, 외부 노출 수직 금속관, 카드에서 보이는 원뿔 덮개 녹색 펌프.",
+      "reason": "기존 초반 water-1과 패널 분할이 다르며 직접 대응 근거가 없다. 088과 같은 패널형이라는 이유로 합치거나 새 위치를 확정하지 않는다.",
+      "evidence": [],
+      "geometryCardScope": false,
+      "cardName": "40RT 물탱크",
+      "sourceCardId": "3-60rt-1782110116275-855520",
+      "sourceJson": "references/team3-outdoor-cards-20261110/source/3팀/실외기실/090_40RT 물탱크/원본카드.json",
+      "cardPhoto": "apps/site/photos/team3-outdoor-cards/card-090.jpg",
+      "sourceOperationMetadata": {
+        "status": "비가동중",
+        "rate": 0,
+        "useForLiveOperationalState": false
+      }
+    },
+    {
+      "number": 91,
+      "equipmentId": "outdoor-water-2",
+      "status": "existing-direct",
+      "shapeFeatures": "상부 작은 성형 패널과 하부 큰 패널, 측면 사다리, 상부 보온 배관, 20RT 쿨링타워 물탱크 표찰.",
+      "reason": "기존 초반 20RT 물탱크와 표찰·외형을 대조했다. 뒤편 092 외함과 별도 대상이다.",
+      "evidence": [
+        "apps/site/photos/outdoor/20261030_150638-065.jpg",
+        "apps/site/photos/outdoor/20261030_150642-070.jpg"
+      ],
+      "geometryCardScope": true,
+      "cardName": "20RT 쿨링타워 물탱크",
+      "sourceCardId": "3-20rt-1782110105159-887273",
+      "sourceJson": "references/team3-outdoor-cards-20261110/source/3팀/실외기실/091_20RT 쿨링타워 물탱크/원본카드.json",
+      "cardPhoto": "apps/site/photos/team3-outdoor-cards/card-091.jpg",
+      "sourceOperationMetadata": {
+        "status": "비가동중",
+        "rate": 0,
+        "useForLiveOperationalState": false
+      }
+    },
+    {
+      "number": 92,
+      "equipmentId": "outdoor-cooling-20",
+      "status": "existing-direct",
+      "shapeFeatures": "왼쪽 상부 녹슨 갈색 격자, 아래 원형 계기 3개, 오른쪽 흰 격자·문, 측면 굵은 보온 곡관.",
+      "reason": "같은 캐비닛의 측면 20RT 쿨링타워 표찰과 정면 20RT 컨트롤판넬 표찰을 하나의 대상으로 유지한다. 원형 고가 냉각탑 및 089 칠러와 별도 대상이다.",
+      "evidence": [
+        "apps/site/photos/outdoor/20261030_150656-079.jpg",
+        "apps/site/photos/outdoor/20261030_150659-083.jpg",
+        "apps/site/photos/outdoor/20261030_150704-085.jpg"
+      ],
+      "geometryCardScope": true,
+      "cardName": "20RT 쿨링타워",
+      "sourceCardId": "3-20rt-1782110088776-647812",
+      "sourceJson": "references/team3-outdoor-cards-20261110/source/3팀/실외기실/092_20RT 쿨링타워/원본카드.json",
+      "cardPhoto": "apps/site/photos/team3-outdoor-cards/card-092.jpg",
+      "sourceOperationMetadata": {
+        "status": "비가동중",
+        "rate": 0,
+        "useForLiveOperationalState": false
+      }
+    }
+  ],
+  "placement": {
+    "coordinateSystem": "outdoor-data.js 로컬 along/across 편집 좌표. 미터 단위를 사용하는 모델 값이나 장비 모서리 실측 좌표가 아니다.",
+    "basis": "영상의 촬영 순서·인접 관계와 카드 사진의 주변 장비를 참고한 근사 구획. 카메라 GPS를 장비 좌표로 전용하지 않는다.",
+    "adjustments": [
+      {
+        "equipmentId": "outdoor-pet-ahu",
+        "along": 37,
+        "across": -1.5,
+        "new": true,
+        "basis": "영상 72초의 PET 표찰과 카드 085 좌측 전경 응축기 팬의 인접 관계"
+      },
+      {
+        "equipmentId": "outdoor-condensers",
+        "along": 36.75,
+        "across": 0.5,
+        "previousAlong": 36,
+        "previousAcross": -1.15,
+        "previousPositionPreserved": true
+      },
+      {
+        "equipmentId": "outdoor-ahu",
+        "along": 42,
+        "across": -0.95,
+        "previousAlong": 40.4,
+        "previousAcross": -0.95,
+        "previousPositionPreserved": true
+      },
+      {
+        "equipmentId": "outdoor-split-unit",
+        "along": 45.7,
+        "across": -2,
+        "previousAlong": 43.7,
+        "previousAcross": -2,
+        "previousPositionPreserved": true
+      },
+      {
+        "equipmentId": "outdoor-chiller-40",
+        "along": 76.25,
+        "across": -0.95,
+        "new": true,
+        "basis": "기존 탱크 끝 펜스 along74 뒤로 조정하여 고정 펜스와 본체 간섭을 줄임. 영상 216초의 전경 큰 캐비닛과 뒤편 낮은 외함의 순서는 유지하며 실측 위치로 확정하지 않음."
+      },
+      {
+        "equipmentId": "outdoor-end-units",
+        "along": 81.0,
+        "across": -1.4,
+        "previousAlong": 80,
+        "previousAcross": -1.4,
+        "previousPositionPreserved": true,
+        "basis": "40RT 칠러를 탱크 끝 펜스 뒤 along76.25로 조정한 뒤 두 외함과의 본체 간섭을 줄이기 위해 이동한 모델 배치 근사. 기존 위치는 previousPosition으로 보존."
+      }
+    ],
+    "dimensionAdjustments": [
+      {
+        "equipmentId": "outdoor-pet-ahu",
+        "depth": 2.1,
+        "previousDepth": 2.3,
+        "basis": "카드 측면 비례를 참고한 모델 깊이 근사. 뒤쪽 고정 배관과의 여유를 확보하도록 2.3에서 2.1로 조정하며 실측 치수가 아님."
+      }
+    ],
+    "gridClearanceNote": "PET/응축기 인접 구획은 0.25 격자에서 뒤쪽 고정 배관과 앞쪽 팬 2개 사이 여유를 고려한 모델 근사다. PET 깊이 2.1은 유지한다."
+  },
+  "namingConflicts": [
+    {
+      "number": 89,
+      "currentDisplayCapacity": "40RT",
+      "legacyPhotoNameAndCodeCapacity": "60RT",
+      "policy": "현재 카드 설비명을 표시하고 원본 photoName·equipmentCode·저장 경로의 60RT 잔존을 함께 기록한다. 새 60RT 장비를 추가하거나 실측 정격으로 확정하지 않는다."
+    },
+    {
+      "number": 90,
+      "currentDisplayCapacity": "40RT",
+      "legacyPhotoNameAndCodeCapacity": "60RT",
+      "policy": "현재 카드 설비명을 표시하고 원본 photoName·equipmentCode·저장 경로의 60RT 잔존을 함께 기록한다. 새 60RT 장비를 추가하거나 실측 정격으로 확정하지 않는다."
+    }
+  ],
+  "limitations": [
+    "제조사·모델명·제조일·세부 사양은 대부분 공란이다. 보이지 않는 내부 기능, 압축기 독립 대수, 가려진 덕트와 배관 연결을 만들어 확정하지 않는다.",
+    "100RT·40RT·20RT는 현재 카드 설비명/표찰에서 인용한 식별 정보다. 탱크 체적이나 검증된 정격 성능으로 전용하지 않는다.",
+    "카드 status의 비가동중 및 rate 0은 원본 메타데이터다. 현 시점 운전·고장·안전·정비 판단이나 3D 가동 애니메이션의 확정 근거로 사용하지 않는다.",
+    "사진·영상은 치수와 장비 간 정확한 간격을 제공하지 않는다. GPS는 촬영 카메라 기준이며 장비 모서리 좌표·지반 경사·확정 배관계통을 제공하지 않는다.",
+    "072·073·090은 갤러리에서 볼 수 있으나 위치를 꾸며 배치하지 않는다. 기존 미확정 원형 고가 냉각탑·물탱크·황색 사다리 외함도 명칭을 억지로 연결하지 않는다.",
+    "동일 장비의 반대 면, 같은 캐비닛의 두 표찰, 펌프와 탱크의 인접 사진을 이유로 선택 그룹을 중복 추가하지 않는다.",
+    "이번 문서의 geometryCardScope는 11카드에 따른 외형 보강 범위를 가리킨다. 최신 렌더에 모든 세부가 정확하게 반영되었다는 판정은 별도 검토가 필요하다."
+  ],
+  "unboundExistingEquipmentIds": [
+    "outdoor-towers",
+    "outdoor-water-1",
+    "outdoor-pump-pit",
+    "outdoor-vessel",
+    "outdoor-condensers",
+    "outdoor-split-unit",
+    "outdoor-pump-skid",
+    "outdoor-end-units",
+    "outdoor-end-sump",
+    "outdoor-blue-tank",
+    "outdoor-stainless-vessel"
+  ],
+  "sourceIntegrity": {
+    "sourceManifest": "references/team3-outdoor-cards-20261110/source-manifest.json",
+    "photoManifest": "references/team3-outdoor-cards-20261110/photo-manifest.json",
+    "sourceOriginalsModified": false,
+    "reviewVerifiedSourceFileHashes": 44
+  }
+}

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f6f2">
+  <meta name="description" content="희창유업 공장 전경과 건조실·스틱·소포장·실외기실의 건물·설비를 영상과 현장 자료로 재현하는 3D 모델링 작업실입니다.">
+  <title>희창유업 3D 모델링 작업실</title>
+  <link rel="icon" href="../shared/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./layout-editor.css">
+  <link rel="stylesheet" href="./furnace-detail.css">
+  <link rel="stylesheet" href="./chiller-detail.css">
+  <link rel="stylesheet" href="./liquid-detail.css">
+  <link rel="stylesheet" href="./dryer-upper-reference.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#site-canvas">3D 현장으로 바로가기</a>
+  <header class="site-header">
+    <a class="brand" href="../../index.html#/site" data-module="site" aria-label="희창유업 3D 모델링 홈"><span class="brand-symbol" data-icon="site"></span><span>HEECHANG<span class="brand-light">3D</span><small>희창유업 모델링 작업실</small></span></a>
+    <div class="header-path">현장 기록 <span>/</span> <strong>공간과 설비</strong></div>
+    <button class="subtle-button" id="guide-button"><span data-icon="info"></span>사용 안내</button>
+  </header>
+
+  <main>
+    <section class="intro" aria-labelledby="page-title">
+      <div><p class="eyebrow"><i></i> HEECHANG · FACTORY MODELING</p><h1 id="page-title">희창유업 3D 모델링<span>.</span></h1></div>
+      <p>공장 전경과 건조실·스틱·소포장·액상·실외기실,<br>건물과 설비를 선택하고 실제 영상과 비교하세요.</p>
+      <span class="approximation-badge"><i></i>영상·사진·도면 기반 외형 재현</span>
+    </section>
+
+    <section class="floor-bar" aria-label="공간과 층 탐색"><div class="area-selector" role="group" aria-label="공간 선택"><button data-area="campus" aria-pressed="true">공장 전경 <small>건물과 지붕</small></button><button data-area="dryer" aria-pressed="false">건조실 <small>현장 설비</small></button><button data-area="packaging" aria-pressed="false">스틱·소포장 <small>1·2·3층</small></button><button id="liquid-open" type="button" data-area="liquid" aria-pressed="false">액상 <small>3팀 실내 설비</small></button><button data-area="outdoor" aria-pressed="false">실외기실 <small>옥외 설비</small></button></div><div id="floor-selector" class="floor-selector" role="group" aria-label="층 선택"></div><div id="packaging-floor-selector" class="floor-selector packaging-floor-selector" role="group" aria-label="스틱·소포장 층 선택" hidden></div><div class="detail-open-actions" aria-label="설비 상세 보기"><button id="rear-survey-open" class="furnace-open" type="button" hidden>건물 뒤편 · 2팀 출입구 <span aria-hidden="true">↗</span></button><button id="preparation-open" class="furnace-open" type="button" hidden>조제실 · 1층 내부 <span aria-hidden="true">↗</span></button><button id="preparation-lower-open" class="furnace-open" type="button" hidden>탱크 하부 보기 <span aria-hidden="true">↗</span></button><button id="boiler-open" class="furnace-open" type="button" hidden>보일러실 내부 <span aria-hidden="true">↗</span></button><button id="wastewater-open" class="furnace-open" type="button" hidden>폐수처리장 내부 <span aria-hidden="true">↗</span></button><button id="valve-room-open" class="furnace-open" type="button" hidden>탱크 밸브실 내부 <span aria-hidden="true">↗</span></button><button id="furnace-open" class="furnace-open" type="button" hidden disabled>버너 · 도면·정비자료 <span aria-hidden="true">↗</span></button><button id="elevator-room-open" class="furnace-open" type="button" hidden>엘리베이터실 내부 <span aria-hidden="true">↗</span></button><button id="upper-photos-open" class="furnace-open" type="button" hidden>옥상·상부 현장사진 <span aria-hidden="true">↗</span></button><button id="chiller-open" class="furnace-open" type="button" hidden disabled>100RT 냉동기 · 구조·분해도 <span aria-hidden="true">↗</span></button></div><p id="floor-summary">건조실과 스틱·소포장동을 누르면 내부 공간으로 들어갑니다.</p></section>
+
+    <section id="main-workspace" class="workspace" aria-label="현장 3D 탐색 도구">
+      <aside class="equipment-sidebar" aria-labelledby="equipment-heading">
+        <div class="sidebar-heading"><h2 id="equipment-heading">설비 목록</h2><span id="equipment-count">00</span></div>
+        <button class="overview-button active" id="overview-button" aria-pressed="true"><span data-icon="site"></span><span><span id="overview-name">건물 전체</span><strong>OVERVIEW</strong></span><span class="list-arrow">↗</span></button>
+        <p class="list-caption">설비를 선택해 살펴보세요</p>
+        <div class="equipment-list" id="equipment-list" role="group" aria-label="설비 선택"></div>
+        <div class="sidebar-footer"><span data-icon="pin"></span><p>건물·설비를 누르면 이름과 참고 영상이 표시됩니다.<br>선택 후 이동해 배치를 보완할 수 있습니다.</p></div>
+      </aside>
+
+      <div class="scene-column">
+        <div class="scene-toolbar"><span class="scene-heading"><i></i><strong id="scene-heading">현장 전체</strong></span><div class="view-selector" role="group" aria-label="관찰 시점"><button data-view="perspective" aria-pressed="true">입체</button><button data-view="top" aria-pressed="false">평면</button><button data-view="aisle" aria-pressed="false">통로</button><button data-view="person" aria-pressed="false">사람 시점</button><button id="person-reset-overview" class="person-reset-overview" data-person-reset type="button" title="현재 구역에서 사람만 출발 위치로 이동">사람 원위치</button></div></div>
+        <div class="scene-viewport" id="scene-viewport">
+          <canvas id="site-canvas" tabindex="0" aria-label="희창유업 공장 전경과 설비 3D. 건물·설비를 눌러 살펴보고 더블클릭 또는 두 번 탭한 지점을 확대합니다. 드래그로 회전하고 평면에서는 이동합니다. 사람 시점에서는 위·아래 방향키로 걷고 왼쪽·오른쪽 방향키로 방향을 바꾸며 화면을 끌어 둘러봅니다. Escape로 입체 시점에 돌아갑니다. 휠은 커서 지점 확대·축소, 우클릭·가운데 버튼·Shift 드래그는 화면 이동입니다. 두 손가락으로 이동·확대하고 R 또는 시점 초기화 버튼으로 복귀합니다."></canvas>
+          <div id="person-controls" class="person-navigation" aria-label="사람 이동 도구" hidden>
+            <div class="person-help"><strong>사람 시점</strong><p>↑↓ 걷기 · ←→ 방향 전환<br>Shift 빠르게 · F 문 열기/닫기<br><span data-person-rule>계단 오르내리기 · 눈높이 1.65m</span><br>화면 드래그로 둘러보기 · Esc 입체</p><div class="person-door-settings"><label class="person-auto-door"><input id="auto-doors-toggle" type="checkbox"> 자동 문열기</label><button id="person-door-action" type="button" disabled>문 열기 · F</button><span id="person-door-hint" role="status" aria-live="polite">문 앞에서 F</span><label class="person-view-scale" for="person-view-scale">시야 배율 <output id="person-view-scale-output">100%</output><input id="person-view-scale" type="range" min="75" max="125" value="100" step="5" aria-label="사람 시점 시야 배율"></label></div><button id="person-reset" data-person-reset type="button">사람 원위치</button></div>
+            <div class="person-direction-pad" role="group" aria-label="사람 걷기와 방향 전환"><button type="button" data-person-action="forward" aria-label="사람 앞으로 걷기">↑</button><button type="button" data-person-action="left" aria-label="사람 왼쪽으로 방향 전환">←</button><button type="button" data-person-action="backward" aria-label="사람 뒤로 걷기">↓</button><button type="button" data-person-action="right" aria-label="사람 오른쪽으로 방향 전환">→</button></div>
+          </div>
+          <div id="scene-loading" class="scene-loading"><span class="spinner"></span><strong>현장을 준비하고 있습니다.</strong></div>
+          <div class="viewport-caption"><span id="scene-mode-label">전체 배치</span><span>개략 모델</span></div>
+          <div id="survey-legend" class="survey-legend" hidden><i></i><span>점: 촬영 위치 · 원: GPS 보고 정확도 반경<br>평면 보기: 위쪽이 북쪽</span></div>
+          <div class="viewport-tools" role="group" aria-label="화면 조작"><button id="zoom-in" class="icon-button" aria-label="현장 확대" title="확대"><span data-icon="plus"></span></button><button id="zoom-out" class="icon-button" aria-label="현장 축소" title="축소"><span data-icon="minus"></span></button><span class="tool-divider"></span><button id="reset-view" class="icon-button" aria-label="시점 초기화" title="시점 초기화 (R)"><span data-icon="reset"></span></button><button id="fullscreen-button" class="icon-button" aria-label="3D 화면 전체 화면으로 보기" title="전체 화면"><span data-icon="expand"></span></button><button id="snapshot-button" class="icon-button" aria-label="현재 3D 화면을 PNG로 저장" title="화면 저장"><span data-icon="download"></span></button></div>
+          <div class="viewport-hint"><span data-icon="mouse"></span><span>두 번 눌러 확대 <b>·</b> 우클릭 이동 <b>·</b> 휠 줌</span></div>
+          <div id="scene-error" class="scene-error" hidden><span data-icon="info"></span><strong>3D 화면을 불러오지 못했습니다.</strong><p id="scene-error-message">브라우저의 하드웨어 가속을 켜고 새로고침해 주세요.<br>설비 목록과 참고 사진은 계속 살펴볼 수 있습니다.</p><button id="reload-button">다시 불러오기</button></div>
+        </div>
+        <div id="outdoor-navigation" class="outdoor-navigation" hidden><button id="outdoor-back" type="button" aria-label="통로 뒤로 이동">←</button><label for="outdoor-progress">통로 이동</label><span>진입부</span><input id="outdoor-progress" type="range" min="0" max="100" step="1" value="0" aria-label="실외기실 통로 위치"><span>끝 구역</span><button id="outdoor-forward" type="button" aria-label="통로 앞으로 이동">→</button></div>
+        <div class="display-bar" aria-label="표시 옵션"><span class="display-caption">표시</span><label><input type="checkbox" id="labels-toggle"><span class="checkbox-mark"></span>전체 이름표</label><label><input type="checkbox" id="structure-toggle" checked><span class="checkbox-mark"></span>건물 구조</label><label id="partitions-option" hidden><input type="checkbox" id="partitions-toggle"><span class="checkbox-mark"></span>칸막이 전체</label><label><input type="checkbox" id="ducts-toggle" checked><span class="checkbox-mark"></span>배관·덕트</label><label id="packaging-cargo-option" hidden><input type="checkbox" id="packaging-cargo-toggle"><span class="checkbox-mark"></span>적재물 표시</label><label id="survey-option" hidden><input type="checkbox" id="survey-toggle"><span class="checkbox-mark"></span>촬영 좌표</label><button id="clear-selection" class="subtle-button" hidden>선택 해제<span data-icon="close"></span></button></div>
+        <div id="layout-editor"></div>
+      </div>
+
+      <aside class="detail-panel" aria-labelledby="detail-name">
+        <div class="detail-heading"><span class="detail-kicker" id="detail-tag">OVERVIEW</span><span class="detail-count" id="detail-index">SITE</span><h2 id="detail-name">현장 전체</h2><span class="detail-confidence" id="detail-confidence">사진 기반 개략 배치</span></div>
+        <div class="detail-body" id="detail-body">
+          <p class="detail-summary" id="detail-summary">설비를 선택하면 외형과 위치를 확인하고 남겨 둔 도면·3팀 설비이력카드를 볼 수 있습니다.</p>
+          <button class="reference-photo" id="reference-photo-button" hidden aria-label="도면·설비이력카드 크게 보기"><img id="reference-photo" alt="도면·설비이력카드" decoding="async"><span><span data-icon="image"></span><span id="reference-caption">도면·설비이력카드</span><span data-icon="expand"></span></span></button>
+          <div class="photo-thumbnails" id="photo-thumbnails" role="group" aria-label="도면·설비이력카드 선택"></div>
+          <div id="photo-info" class="photo-info" hidden><div class="photo-inline-nav"><button id="previous-photo-inline" aria-label="이전 현장 사진">←</button><span id="photo-inline-position"></span><button id="next-photo-inline" aria-label="다음 현장 사진">→</button></div><p id="photo-location"></p><small>카메라의 촬영 위치 · 설비 좌표와 다릅니다</small></div>
+          <div class="selected-controls" id="selected-controls" hidden><button class="focus-button" id="focus-equipment"><span data-icon="focus"></span>가까이 보기<span>↗</span></button><button class="focus-button" id="campus-interior-toggle" type="button" aria-pressed="false" hidden>내부 보기</button><button class="focus-button" id="move-equipment" aria-describedby="layout-move-help" disabled>설비 이동</button><label class="isolation-row" for="isolation-toggle"><span>선택 설비만 보기</span><input type="checkbox" id="isolation-toggle" role="switch"><i class="switch-track"></i></label><div class="explosion-control"><label for="explosion-input">주요 구조 분리<output id="explosion-output" for="explosion-input">0%</output></label><input id="explosion-input" type="range" min="0" max="100" step="1" value="0" aria-valuetext="조립 상태"><p>외형과 주요 부위의 관계를 보여주는 개략 분해도입니다.</p></div></div>
+          <section class="detail-section"><h3 id="details-heading">관찰 가이드</h3><ul id="detail-notes"></ul></section>
+          <section class="detail-section" id="parts-section" hidden><h3>주요 구성</h3><ol class="parts-list" id="parts-list"></ol></section>
+          <div class="connected-actions"><a href="../../index.html#/motor" data-module="motor"><span data-icon="motor"></span><span>모터 분해도<strong>내부 부품 자세히 보기</strong></span><span>↗</span></a><a href="../../index.html#/panel" data-module="panel"><span data-icon="panel"></span><span>제어판 부품맵<strong>사진과 부품 정보 보기</strong></span><span>↗</span></a></div>
+        </div>
+      </aside>
+    </section>
+    <section id="liquid-workspace" class="liquid-workspace" aria-label="3팀 액상 3D 탐색" hidden></section>
+    <footer class="site-footer"><p id="site-note">사진·영상 기반 개략 배치 · 실제 치수와 가려진 연결은 현장 확인이 필요합니다.</p><span>FIELD RECORD <b>2026.11.09</b></span></footer>
+  </main>
+
+  <dialog id="photo-dialog" class="photo-dialog" aria-labelledby="photo-dialog-title"><div class="dialog-header"><div><p>REFERENCE</p><h2 id="photo-dialog-title">도면·설비이력카드</h2></div><button class="icon-button close-dialog" aria-label="참고 사진 닫기"><span data-icon="close"></span></button></div><img id="photo-dialog-image" alt="선택한 설비의 참고 사진"><div class="photo-navigation"><button id="previous-photo" class="subtle-button">← 이전</button><span id="photo-position"></span><button id="next-photo" class="subtle-button">다음 →</button></div></dialog>
+  <dialog id="guide-dialog" class="guide-dialog" aria-labelledby="guide-title"><div class="dialog-header"><div><p>QUICK GUIDE</p><h2 id="guide-title">현장을 둘러보는 방법</h2></div><button class="icon-button close-dialog" aria-label="사용 안내 닫기"><span data-icon="close"></span></button></div><ol><li><strong>원하는 지점을 확대하세요.</strong><p>더블클릭하거나 두 번 탭하면 그 지점이 확대됩니다. 휠은 커서 위치를 중심으로 확대·축소합니다.</p></li><li><strong>화면을 자유롭게 이동하세요.</strong><p>드래그로 회전하고 평면에서는 이동합니다. 우클릭·가운데 버튼·Shift 드래그로 화면을 이동하세요. 모바일은 두 손가락으로 이동·확대합니다.</p></li><li><strong>사람 눈높이로 걸어 보세요.</strong><p>‘사람 시점’을 누르면 배치한 사람의 눈높이에서 봅니다. ↑↓로 앞뒤로 걷고 ←→로 방향을 바꾸세요. Shift를 함께 누르면 더 빠르게 걷습니다. 벽을 통과해 자유롭게 이동하며, 계단과 작업발판에서는 높이를 따라 오르내립니다. 관찰 시점 옆의 사람 원위치로 출발 위치에 돌아갈 수 있습니다. 화면을 끌면 시선을 돌릴 수 있고, 화면의 화살표 버튼도 사용할 수 있습니다. Esc로 입체 시점에 돌아갑니다.</p></li><li><strong>설비와 구조를 살펴보세요.</strong><p>공장 전경 탭 아래 보조 메뉴에서 ‘보일러실 내부’와 ‘탱크 밸브실 내부’를 열 수 있습니다. 3D 모델이나 목록을 눌러 선택하고 ‘가까이 보기’로 설비를 맞춰 봅니다. ‘선택 설비만 보기’와 ‘주요 구조 분리’로 외형을 살펴보세요. R 또는 시점 초기화 버튼으로 원래 시점에 돌아갑니다.</p></li></ol><p class="guide-note">배치는 현장 사진에 따른 추정이며, 분해도는 외형과 주요 부위의 관계를 설명하는 개략 표현입니다.</p></dialog>
+  <div class="toast" id="toast" role="status" hidden></div>
+  <script>
+    if (location.protocol === 'file:') {
+      document.getElementById('scene-loading').hidden = true;
+      document.getElementById('scene-error').hidden = false;
+      document.getElementById('scene-error-message').textContent = '폴더의 「프로젝트 실행.cmd」를 더블클릭하면 현장 3D 화면을 열 수 있습니다.';
+      document.getElementById('reload-button').hidden = true;
+    }
+  </script>
+  <noscript><p class="no-script">이 화면을 사용하려면 브라우저의 JavaScript를 켜 주세요.</p></noscript>
+</body>
+</html>

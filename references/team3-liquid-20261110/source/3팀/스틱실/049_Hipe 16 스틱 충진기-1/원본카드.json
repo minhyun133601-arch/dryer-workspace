@@ -1,0 +1,74 @@
+{
+  "id": "3-hipe-16-1-1782201375691-128165",
+  "line": "",
+  "name": "Hipe 16 스틱 충진기-1",
+  "note": "",
+  "plan": "",
+  "rate": 0,
+  "room": "스틱실",
+  "team": "3팀",
+  "group": "",
+  "owner": "",
+  "status": "비가동중",
+  "process": "",
+  "documents": [],
+  "lastCheck": "",
+  "modelName": "",
+  "nextCheck": "",
+  "photoCrop": null,
+  "photoName": "Hipe 16 스틱 충진기-1 photo.jpg",
+  "detailInfo": [
+    {
+      "label": "설비명",
+      "value": "Hipe 16 스틱 충진기-1"
+    },
+    {
+      "label": "관리팀",
+      "value": "3팀"
+    },
+    {
+      "label": "가동률",
+      "value": "0%"
+    }
+  ],
+  "ownerLabel": "담당 업체",
+  "production": "",
+  "teamDataKey": "work_team_calendar_team3",
+  "detailGroups": {
+    "equipmentSpecs": []
+  },
+  "manufacturer": "",
+  "photoDataUrl": "",
+  "equipmentCode": "3-HIPE-16-1-1782201375691-128165",
+  "operationInfo": [
+    {
+      "label": "설비명",
+      "value": "Hipe 16 스틱 충진기-1"
+    },
+    {
+      "label": "관리팀",
+      "value": "3팀"
+    },
+    {
+      "label": "실",
+      "value": "스틱실"
+    },
+    {
+      "label": "공정",
+      "value": ""
+    },
+    {
+      "label": "가동률",
+      "value": "0"
+    }
+  ],
+  "manufacturedAt": "",
+  "photoDocumentId": "e6f55539-000d-4cbd-ac7b-bf3afc3f32ef",
+  "photoPreviewUrl": "/api/files/e6f55539-000d-4cbd-ac7b-bf3afc3f32ef/view",
+  "photoDownloadUrl": "/api/files/e6f55539-000d-4cbd-ac7b-bf3afc3f32ef/download",
+  "manufacturerLabel": "제조사",
+  "photoThumbDataUrl": "",
+  "maintenanceHistory": [],
+  "photoAttachmentKey": "equipment-photo-main",
+  "photoStorageRelPath": "equipment-assets/equipment-history/Hipe 16 스틱 충진기-1/images/dbd64631-230a-448f-be3b-9d54afaf351a.jpg"
+}

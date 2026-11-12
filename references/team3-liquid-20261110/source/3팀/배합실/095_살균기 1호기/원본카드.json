@@ -1,0 +1,74 @@
+{
+  "id": "3-1-1782094673758-624429",
+  "line": "",
+  "name": "살균기 1호기",
+  "note": "",
+  "plan": "",
+  "rate": 0,
+  "room": "배합실",
+  "team": "3팀",
+  "group": "",
+  "owner": "",
+  "status": "비가동중",
+  "process": "",
+  "documents": [],
+  "lastCheck": "",
+  "modelName": "",
+  "nextCheck": "",
+  "photoCrop": null,
+  "photoName": "살균기 1호기 photo.jpg",
+  "detailInfo": [
+    {
+      "label": "설비명",
+      "value": "살균기 1호기"
+    },
+    {
+      "label": "관리팀",
+      "value": "3팀"
+    },
+    {
+      "label": "가동률",
+      "value": "0%"
+    }
+  ],
+  "ownerLabel": "담당 업체",
+  "production": "",
+  "teamDataKey": "work_team_calendar_team3",
+  "detailGroups": {
+    "equipmentSpecs": []
+  },
+  "manufacturer": "",
+  "photoDataUrl": "",
+  "equipmentCode": "3-1-1782094673758-624429",
+  "operationInfo": [
+    {
+      "label": "설비명",
+      "value": "살균기 1호기"
+    },
+    {
+      "label": "관리팀",
+      "value": "3팀"
+    },
+    {
+      "label": "실",
+      "value": "배합실"
+    },
+    {
+      "label": "공정",
+      "value": ""
+    },
+    {
+      "label": "가동률",
+      "value": "0"
+    }
+  ],
+  "manufacturedAt": "",
+  "photoDocumentId": "35497856-fc88-45a5-a5de-bb30d56739ff",
+  "photoPreviewUrl": "/api/files/35497856-fc88-45a5-a5de-bb30d56739ff/view",
+  "photoDownloadUrl": "/api/files/35497856-fc88-45a5-a5de-bb30d56739ff/download",
+  "manufacturerLabel": "제조사",
+  "photoThumbDataUrl": "",
+  "maintenanceHistory": [],
+  "photoAttachmentKey": "equipment-photo-main",
+  "photoStorageRelPath": "equipment-assets/equipment-history/살균기 1호기/images/e5d6f04f-909c-49b1-a670-e85d74cb891a.jpg"
+}

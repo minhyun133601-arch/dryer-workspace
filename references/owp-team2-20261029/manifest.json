@@ -1,0 +1,229 @@
+{
+  "source_page": "http://192.168.2.113/pages/C101000",
+  "archived_at": "2026-10-29T14:13:54.351434+09:00",
+  "animation_format": "WebM; no SWF referenced by monitoring scene",
+  "scenes": [
+    {
+      "id": "team2",
+      "label": "2팀 전체",
+      "radio_value": "1",
+      "video": "originals/assets/models/heechang_0529.webm",
+      "width": 1920,
+      "height": 1080,
+      "duration_seconds": 10.833,
+      "codec": "vp8",
+      "stable_frame_seconds": 6
+    },
+    {
+      "id": "floor1",
+      "label": "2팀 1층",
+      "radio_value": "2",
+      "video": "originals/assets/models/heechang_0425_1F.webm",
+      "width": 1920,
+      "height": 1080,
+      "duration_seconds": 11.833,
+      "codec": "vp8",
+      "stable_frame_seconds": 6
+    },
+    {
+      "id": "floor3",
+      "label": "2팀 3층",
+      "radio_value": "3",
+      "video": "originals/assets/models/heechang_0428_3FCloseup.webm",
+      "width": 1920,
+      "height": 1080,
+      "duration_seconds": 9.8,
+      "codec": "vp8",
+      "stable_frame_seconds": 6
+    },
+    {
+      "id": "floor4",
+      "label": "2팀 4층",
+      "radio_value": "34",
+      "video": "originals/assets/models/heechang_0428_3F4F.webm",
+      "width": 1920,
+      "height": 1080,
+      "duration_seconds": 9.833,
+      "codec": "vp8",
+      "stable_frame_seconds": 6
+    },
+    {
+      "id": "floor5-7",
+      "label": "2팀 5~7층",
+      "radio_value": "57",
+      "video": "originals/assets/models/heechang_0428_5F7F.webm",
+      "width": 1920,
+      "height": 1080,
+      "duration_seconds": 9.833,
+      "codec": "vp8",
+      "stable_frame_seconds": 6
+    }
+  ],
+  "resources": [
+    {
+      "url": "http://192.168.2.113/assets/models/d.png",
+      "file": "originals/assets/models/d.png",
+      "bytes": 69884,
+      "sha256": "055562e966e8b6c53a84723761288f6b9c29cabd5837c0e160ecb77d707040b4",
+      "content_type": "image/png"
+    },
+    {
+      "url": "http://192.168.2.113/assets/models/error.svg",
+      "file": "originals/assets/models/error.svg",
+      "bytes": 214559,
+      "sha256": "a836fdaa9af043a6e1ca2fcd30477fdd975668ed466fa19b098d01980557f243",
+      "content_type": "image/svg+xml"
+    },
+    {
+      "url": "http://192.168.2.113/assets/models/glassclock.png",
+      "file": "originals/assets/models/glassclock.png",
+      "bytes": 289715,
+      "sha256": "824e7a50224c1e82f6132b6f1ad267cf8f08ac7ebed586ef03059a7afd8d8f29",
+      "content_type": "image/png"
+    },
+    {
+      "url": "http://192.168.2.113/assets/models/guage2.svg",
+      "file": "originals/assets/models/guage2.svg",
+      "bytes": 10218,
+      "sha256": "2990940e16e5ac823d458df22a50c37aae7508cf9e649f88d392914e4e3868f4",
+      "content_type": "image/svg+xml"
+    },
+    {
+      "url": "http://192.168.2.113/assets/models/heechang_0425_1F.webm",
+      "file": "originals/assets/models/heechang_0425_1F.webm",
+      "bytes": 6144657,
+      "sha256": "e40d44e66c043d005063f659ad32036659bf29361d986455a868b6cd994a8d41",
+      "content_type": "video/webm"
+    },
+    {
+      "url": "http://192.168.2.113/assets/models/heechang_0428_3F4F.webm",
+      "file": "originals/assets/models/heechang_0428_3F4F.webm",
+      "bytes": 4006989,
+      "sha256": "e6c55cdf077f3d16b2da1ccd5113471efd29ebb9566e51fd255768a2d57b1565",
+      "content_type": "video/webm"
+    },
+    {
+      "url": "http://192.168.2.113/assets/models/heechang_0428_3FCloseup.webm",
+      "file": "originals/assets/models/heechang_0428_3FCloseup.webm",
+      "bytes": 2719829,
+      "sha256": "312ef264587b86540c31f4e257ddf161abd77a9ac7f424d9eb9f66f44e627cb9",
+      "content_type": "video/webm"
+    },
+    {
+      "url": "http://192.168.2.113/assets/models/heechang_0428_5F7F.webm",
+      "file": "originals/assets/models/heechang_0428_5F7F.webm",
+      "bytes": 4219906,
+      "sha256": "5c93c6b4dd7e1f85d41e31cd3ed8d79966fde3c8cb93717728e256b155b8e942",
+      "content_type": "video/webm"
+    },
+    {
+      "url": "http://192.168.2.113/assets/models/heechang_0516_intro.webm",
+      "file": "originals/assets/models/heechang_0516_intro.webm",
+      "bytes": 4341112,
+      "sha256": "1b4b4215ad5492f921d4c9967da4c845be25dcd4e479a8296a93df679faff13e",
+      "content_type": "video/webm"
+    },
+    {
+      "url": "http://192.168.2.113/assets/models/heechang_0529.webm",
+      "file": "originals/assets/models/heechang_0529.webm",
+      "bytes": 6753466,
+      "sha256": "88d210d5a34aae21770b25c0b9be5b9d322b87dfda0536fc20d0ca026e95362d",
+      "content_type": "video/webm"
+    },
+    {
+      "url": "http://192.168.2.113/assets/models/ica1.png",
+      "file": "originals/assets/models/ica1.png",
+      "bytes": 51535,
+      "sha256": "d48ed91efd4d11dfffb25165c446024489741aba8e5518de89b12f02ae43e034",
+      "content_type": "image/png"
+    },
+    {
+      "url": "http://192.168.2.113/assets/models/ica2.png",
+      "file": "originals/assets/models/ica2.png",
+      "bytes": 51497,
+      "sha256": "05f29f741b985709803ab4f105f542f5afe7b18f696e11ed201ecf9b5a26ace3",
+      "content_type": "image/png"
+    },
+    {
+      "url": "http://192.168.2.113/assets/models/labelvalue_1_g.svg",
+      "file": "originals/assets/models/labelvalue_1_g.svg",
+      "bytes": 4718,
+      "sha256": "3d13e5b367ad22ad140d4a38b070be1005ca376b80c3b939544db48014663072",
+      "content_type": "image/svg+xml"
+    },
+    {
+      "url": "http://192.168.2.113/assets/models/labelvalue_1_r.svg",
+      "file": "originals/assets/models/labelvalue_1_r.svg",
+      "bytes": 4736,
+      "sha256": "0eea05110a6989b5f65aaf1a9ad168c6b1a99d84b74f6ad7f6165a7bfc7c88d2",
+      "content_type": "image/svg+xml"
+    },
+    {
+      "url": "http://192.168.2.113/assets/models/labelvalue_2_g.svg",
+      "file": "originals/assets/models/labelvalue_2_g.svg",
+      "bytes": 4698,
+      "sha256": "0c2a2f926581966348eef64ebc38c651afa093d902754f4d36dc6e85e0e0dc7a",
+      "content_type": "image/svg+xml"
+    },
+    {
+      "url": "http://192.168.2.113/assets/models/n01100.svg",
+      "file": "originals/assets/models/n01100.svg",
+      "bytes": 8102,
+      "sha256": "78f6277964fe527270ccc4a73bed79e2c2916b132cfef9561477de4ecfd426ad",
+      "content_type": "image/svg+xml"
+    },
+    {
+      "url": "http://192.168.2.113/assets/models/n02100.svg",
+      "file": "originals/assets/models/n02100.svg",
+      "bytes": 8704,
+      "sha256": "8747e30f925c5d072ca88d651b05ed145fd6b31ec8e6afcc621d1fe77b7b8654",
+      "content_type": "image/svg+xml"
+    },
+    {
+      "url": "http://192.168.2.113/assets/models/n03100.svg",
+      "file": "originals/assets/models/n03100.svg",
+      "bytes": 8543,
+      "sha256": "0f0601a808eb8030ecf24ab2b14caeb33348df1f747ca691f624074da8bc472e",
+      "content_type": "image/svg+xml"
+    },
+    {
+      "url": "http://192.168.2.113/assets/models/n04100.svg",
+      "file": "originals/assets/models/n04100.svg",
+      "bytes": 8320,
+      "sha256": "da8017da8a10e7ca2c85606f9764bb97300a0147172a01f17e7a0ddfd3db2cf8",
+      "content_type": "image/svg+xml"
+    },
+    {
+      "url": "http://192.168.2.113/assets/models/n05100.svg",
+      "file": "originals/assets/models/n05100.svg",
+      "bytes": 8192,
+      "sha256": "7a16ae5b21a4b318f4038b2a7264cccfee7ee633e2ed06ad0f72cff2d603479e",
+      "content_type": "image/svg+xml"
+    },
+    {
+      "url": "http://192.168.2.113/assets/models/n06100.svg",
+      "file": "originals/assets/models/n06100.svg",
+      "bytes": 8729,
+      "sha256": "54e3b65e745e65209a8cd463989ab7205ffecd2e65880995917cb8f5628f6573",
+      "content_type": "image/svg+xml"
+    },
+    {
+      "url": "http://192.168.2.113/assets/models/pr/100.png",
+      "file": "originals/assets/models/pr/100.png",
+      "bytes": 11173,
+      "sha256": "bf99b61146cfc7ed04bc435306182ca9a936177e7891b83e746e32b8c23a8f85",
+      "content_type": "image/png"
+    }
+  ],
+  "unavailable": [
+    {
+      "url": "http://192.168.2.113/assets/images/lights/g.png",
+      "reason": "Unexpected HTML for resource: /assets/images/lights/g.png"
+    },
+    {
+      "url": "http://192.168.2.113/assets/images/lights/y.png",
+      "reason": "Unexpected HTML for resource: /assets/images/lights/y.png"
+    }
+  ],
+  "image_note": "PNG exports are frames decoded from original WebM, not logged-in live UI screenshots."
+}

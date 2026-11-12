@@ -1,0 +1,72 @@
+{
+  "date": "2026-11-10",
+  "pathBase": "프로젝트 루트 상대 경로",
+  "sources": [
+    {
+      "id": "utility-plan-2022",
+      "sourcePath": "근거 자료/건물3D 후보도면/04_검토필요/미확정/유틸리티전체평면도__2f107870770e.pdf",
+      "sha256": "2f107870770e0c68cf88d4a82583941e27bf6e4ac69eafd43b82bd3bba4a94e7",
+      "previewPath": "근거 자료/도면검토앱/cache/2f107870770e0c68cf88d4a82583941e27bf6e4ac69eafd43b82bd3bba4a94e7/page-001.png",
+      "previewPage": 1,
+      "dateScope": {
+        "printedDate": "2022-05-03",
+        "basis": "표제 날짜 직접 판독은 prompt_audit가 확인",
+        "limit": "과거 도면이며 현재 준공 실측을 뜻하지 않음"
+      }
+    },
+    {
+      "id": "equipment-layout-2022-family",
+      "sourcePath": "근거 자료/건물3D 후보도면/04_검토필요/미확정/장비배치도__6a5f2b29c507.pdf",
+      "sha256": "6a5f2b29c50789ddaedb7920367ce9f85798546452e658756cc506d18c9026cb",
+      "previewPath": "근거 자료/도면검토앱/cache/6a5f2b29c50789ddaedb7920367ce9f85798546452e658756cc506d18c9026cb/page-001.png",
+      "previewPage": 1,
+      "dateScope": {
+        "scope": "2022 유틸리티 도면과 함께 대조하는 액상 장비배치도",
+        "printedDate": "2022-05-03",
+        "printedDateIndependentlyVerifiedHere": true,
+        "basis": "장비 배치도 전체 페이지 표제 날짜 직접 판독",
+        "limit": "과거 도면이며 현재 준공 실측을 뜻하지 않음"
+      }
+    },
+    {
+      "id": "utility-installation-attachment-2025",
+      "sourcePath": "근거 자료/건물3D 후보도면/04_검토필요/미확정/액상 유틸리티배관 현장 설치도__e64f426897f9.pptx",
+      "sha256": "e64f426897f9dc554ed8126a0eb96349aac461aa899e5641bea681ccb9524e52",
+      "previewPath": "근거 자료/도면검토앱/cache/e64f426897f9dc554ed8126a0eb96349aac461aa899e5641bea681ccb9524e52/page-001.png",
+      "previewPage": 1,
+      "dateScope": {
+        "sourceFolderDate": "2025-04-15",
+        "pptCreatedUtc": "2024-02-15T02:35:53Z",
+        "pptModifiedUtc": "2025-04-14T04:24:08Z",
+        "pptLastPrintedUtc": "2025-02-06T05:41:12Z",
+        "limit": "2025 공사 첨부 1슬라이드. 바탕 작성일 2022와 2025 설치 완료·실측은 확인하지 못함"
+      }
+    },
+    {
+      "id": "liquid-haccp-hvac",
+      "sourcePath": "근거 자료/건물3D 후보도면/03_층별·생산팀평면/미확정/액상haccp평면도면 자료__5a6aede3f73b.xlsx",
+      "sha256": "5a6aede3f73b609dba52a775dacd5bd13db268974241a4d7e70ff5d19729e0ba",
+      "previewPath": "근거 자료/도면검토앱/cache/5a6aede3f73b609dba52a775dacd5bd13db268974241a4d7e70ff5d19729e0ba/page-011.png",
+      "previewPage": 11,
+      "dateScope": {
+        "scope": "2017년 보관 수정시각의 액상 HACCP 자료",
+        "printedHvacDateVerified": false,
+        "limit": "공조 시트 독립 작성일과 현재 카드의 개별 장비 동일성은 미확정"
+      },
+      "sheet": "공조설비"
+    },
+    {
+      "id": "liquid-haccp-piping",
+      "sourcePath": "근거 자료/건물3D 후보도면/03_층별·생산팀평면/미확정/액상haccp평면도면 자료__5a6aede3f73b.xlsx",
+      "sha256": "5a6aede3f73b609dba52a775dacd5bd13db268974241a4d7e70ff5d19729e0ba",
+      "previewPath": "근거 자료/도면검토앱/cache/5a6aede3f73b609dba52a775dacd5bd13db268974241a4d7e70ff5d19729e0ba/page-009.png",
+      "previewPage": 9,
+      "dateScope": {
+        "printedRevision": "17.07.20",
+        "basis": "배관도 LINE CHANGE 표제 직접 판독",
+        "limit": "계통도이며 현재 100RT/40RT 실외기 평면 배치의 확인값은 아님"
+      },
+      "sheet": "배관도"
+    }
+  ]
+}

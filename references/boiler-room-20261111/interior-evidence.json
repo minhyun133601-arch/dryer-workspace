@@ -1,0 +1,101 @@
+{
+  "date": "2026-11-11",
+  "sourceClip": "002",
+  "sourceFilename": "20261111_133938KST_GPS-VALID_LAT35.3626950_LON129.0304300_H179.9-TN_DIR-AVAILABLE_P-75.3_ACC3.4m_FV-bf5c6063-2b5f-4f2b-a997-297fbd0fa1db.mp4",
+  "durationSeconds": 241.023956,
+  "sourceDimensions": [1920, 1080],
+  "displayRotationDegrees": -90,
+  "displayDimensions": [1080, 1920],
+  "audioRecorded": false,
+  "review": {
+    "coarseSamplingSeconds": 5,
+    "contactSheets": "tmp/boiler-review-20261111/clip-002/contact-01.jpg through contact-04.jpg",
+    "contactTimeLimit": "fps-filter contact labels are nominal five-second bins; their selected frames can lie near the bin midpoint. Exact evidence below uses separately extracted native frames at the stated seek times.",
+    "nativeFrames": "tmp/boiler-review-20261111/clip-002/native/",
+    "photoManifest": "references/boiler-room-20261111/interior-photo-manifest.json"
+  },
+  "identity": {
+    "confidence": "direct-door-plate",
+    "nativeTimeSeconds": 9,
+    "doorPlateText": "1팀 2파트 보일러실 (3ton/h 노통연관, 1.5ton/h 관류형 각 1대)",
+    "roomSideSign": "보일러실",
+    "managementDepartment": "공무환경팀",
+    "managementDepartmentLimit": "The boiler safety-management plate names the department; it does not locate that department's office. Office/workshop position is reviewed against clip001.",
+    "boilerCount": 2,
+    "boilerCountBasis": "The door plate explicitly states one of each type. The room contains one large horizontal round-body unit and one compact upright unit; repeated views of the large boiler are not additional units.",
+    "notMatchedTo": ["liquid-card-101", "liquid-card-103", "liquid-card-104"],
+    "notMatchedReason": "Those are 3팀 보일러실 cards. This door directly identifies a 1팀 2파트 room. Neither individual identity nor a physical connection is demonstrated."
+  },
+  "observations": [
+    {
+      "feature": "entrance",
+      "nativeTimesSeconds": [6, 7, 9],
+      "observed": "Pale corrugated exterior cladding, light-gray perforated steel door in a deep gray frame, round knob; small perpendicular 보일러실 sign, blue-edged restricted-access plate and white boiler management plate.",
+      "confidence": "direct-video"
+    },
+    {
+      "feature": "room-shell-and-roof",
+      "nativeTimesSeconds": [32, 35, 45],
+      "observed": "High off-white panel walls with green floor skirting; pitched translucent blue-tinted roof glazing in a white-painted steel grid, triangulated steel braces, high glazing, suspended circular light; large insulated silver flue bends under the roof and rises through it.",
+      "confidence": "direct-video",
+      "dimensionLimit": "No room dimensions are measured. Approximate display proportions only: room width about 6–8 model units, depth 8–11, eaves around 4.8–5.5 and ridge around 6.0–6.5; exterior registration must come from clip001."
+    },
+    {
+      "feature": "main-fire-tube-boiler",
+      "nativeTimesSeconds": [43, 45, 140, 145, 160, 170],
+      "observed": "One large horizontal cylindrical shell with rounded/arched insulated jacket, dark front face, purple-gray front burner, tall pale-green front control cabinet, top service walkway/handrail and ladder, upper gauges and valves, side sight-column-like assembly and lower blue services. Camera passes along its side and around both ends.",
+      "labelAt160Seconds": "동양 보일러; model text appears DBHI-SS 300 but the fine characters are not fully sharp.",
+      "confidence": "direct-video-and-door-type",
+      "count": 1,
+      "limit": "Do not create two large boilers from different views of this same shell; no internal combustion tubes or flame are filmed."
+    },
+    {
+      "feature": "compact-once-through-boiler",
+      "nativeTimesSeconds": [47, 52, 55],
+      "observed": "A separate narrow upright pale boiler casing with blue top/control region, adjacent exposed valves and pressure gauge, tall silver exhaust/flue and small red handwheel near its rise. It stands toward the rear/service side of the large boiler bank, next to treatment containers and pipework.",
+      "confidence": "direct-video-and-door-type",
+      "count": 1,
+      "limit": "The door gives type and nominal capacity. No numbered 3팀 card identity is assigned."
+    },
+    {
+      "feature": "blower-and-service-vessels",
+      "nativeTimesSeconds": [52, 108, 195, 200],
+      "observed": "Blue motor and circular blower with bright yellow perforated guard near the large boiler's rear enclosure; pale upright cylindrical treatment vessels, white dosing container on a small spill tray, blue/white lidded containers and exposed service connections.",
+      "confidence": "direct-video",
+      "limit": "The large sloped green enclosure and yellow blower are not evidence of a third boiler. The operating function of every auxiliary vessel is not established."
+    },
+    {
+      "feature": "two-installed-inline-pumps",
+      "nativeTimesSeconds": [202.5],
+      "observed": "Two green compact inline circulation pump motors, black end caps, each installed on a vertical insulated pipe against the wall; a low insulated manifold with worn wrapping and a yellow return bend runs below.",
+      "confidence": "direct-video",
+      "count": 2,
+      "photoFilename": "apps/site/photos/boiler-room/clip-002-202s.jpg",
+      "photoTimeLimit": "Filename rounds down the separately extracted 202.5-second frame."
+    },
+    {
+      "feature": "visible-service-routes",
+      "nativeTimesSeconds": [32, 45, 108, 140, 170, 185, 220, 225],
+      "observed": "Parallel blue, yellow/orange and gray pipe runs along the walls; large silver insulated upper flue/pipe, lower blue floor mains, bolted flanges, red/black handwheels and wall cabinets. A yellow service manifold with meter/regulator is filmed on the wall.",
+      "confidence": "direct-visible-runs",
+      "limit": "Only visible route segments are modeled; hidden destinations, fluid identity from color alone, diameters, pressures and actual operating state are not inferred."
+    },
+    {
+      "feature": "stored-workshop-parts",
+      "nativeTimesSeconds": [18, 40, 47, 225],
+      "observed": "Red/yellow shelves with spare motors and pump parts, loose gray motors, wheeled equipment with wound cables and storage containers occupy the entrance-side area and wall. Several blue/gray motor-pump-like bodies sit below a yellow wall manifold without clearly visible individual service connections.",
+      "confidence": "direct-video",
+      "limit": "Loose/stored parts are not counted as independently installed boilers, compressors or operating pumps."
+    }
+  ],
+  "spatialLimits": [
+    "Interior camera route demonstrates an aisle around the large boiler, but not a measured room plan or exact azimuth.",
+    "First valid GPS fix is a phone estimate near the entrance. Indoor fixes and WGS84 altitude are not equipment positions or floor elevations.",
+    "No separate 공무환경팀 office or electrical-room entrance appears after entering in this clip; those positions require clip001 and the user's clarification."
+  ],
+  "modelBrief": {
+    "units": ["one horizontal 3ton/h fire-tube boiler", "one compact upright 1.5ton/h once-through boiler"],
+    "majorVisibleAccessories": ["front tall control cabinet", "burner and blower with yellow guard", "upper gauges and sight column", "top walkway and ladder", "silver flue and wall pipe runs", "two green inline pumps", "generic treatment vessels and dosing tray"],
+    "omitUnseen": ["internal fire tubes and flame", "unfilmed machine internals", "a third boiler", "new operating machines inferred only from stored spare parts", "3팀 boiler card identities"]
+  }
+}

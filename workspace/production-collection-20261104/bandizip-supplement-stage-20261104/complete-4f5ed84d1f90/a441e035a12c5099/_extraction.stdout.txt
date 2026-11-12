@@ -1,0 +1,5 @@
+bz 7.36(Beta,x64) - Bandizip console tool. Copyright(C) 2023 Bandisoft
+Extracting archive: Z:\1. 공장장\신사업17년\커피로스터\태환자동화 커피로스터\CR-25 30kg 커피로스터.egg
+25kg Model 노즐식 외형도.pdf
+커피25배치도 (제연기불포함).pdf
+커피25배치도 (제연기포함).pdf

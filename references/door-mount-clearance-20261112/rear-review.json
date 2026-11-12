@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-12",
+  "scope": "Rear tower doors, Team-2 return entry, nearby HVAC and wall attachments",
+  "evidence": [
+    "workspace/entrance-route-20261112/review-second/native/frame-204s.jpg",
+    "workspace/entrance-route-20261112/review-second/native/frame-224s.jpg",
+    "workspace/entrance-route-20261112/review-second/native/frame-250s.jpg",
+    "workspace/entrance-route-20261112/review-second/native/frame-270s.jpg",
+    "workspace/entrance-route-20261112/review-second/native/frame-282s.jpg",
+    "workspace/entrance-route-20261112/review-second/native/frame-286s.jpg"
+  ],
+  "changes": [
+    {"item":"freight air curtain and control panels","problem":"hardware floated 160-200mm ahead of the annex wall","correction":"rear faces registered to wall plane; air curtain rear flush, small controls 10-12mm mounting gap","wallPlaneWorldZ":-17},
+    {"item":"two small canopy condensers","problem":"support feet sank into canopy finish by 85/125mm","correction":"support feet now touch actual finish top","finishedRoofHeights":[3.405,3.895],"condenserBaseHeights":[3.485,3.975]},
+    {"item":"two wall-mounted HVAC condensers","problem":"31cm wall gap with four ground-style feet and no attachment","correction":"120mm wall clearance, steel wall plates, L-arms, diagonal braces, vibration pads"},
+    {"item":"Team-2 entrance canopy","problem":"porch side columns ended 105mm below canopy","correction":"columns reach canopy underside2.9m; supporting lintel added above2.7m; door opening and approach retained"},
+    {"item":"yellow stair door","problem":"insulated mains overlapped about half of doorway; adjacent housing also overlapped pipes","correction":"pipes moved to x-1.95/width3m and housing to x1.3 in unused wall span; low guards stop beside housing; housing elbow stops outside wall","basis":"250s frame shows pipes beside the yellow doorway and clear front"},
+    {"item":"upper exhaust hood and lower rectangular external service cover","problem":"a continuous invented16.5m riser crossed the upper window","correction":"lower cover ends at13.0m below upper window13.15m sill; middle window split by an opaque service pier; standoff brackets added; hood remains separate","connectionConfirmed":false},
+    {"item":"rear rain pipe","problem":"pipe body overlapped projecting window frames","correction":"X retained, Z moved from-0.16 to-0.30; body clears frames by about40mm; clips extend to actual wall"}
+  ],
+  "preserved": ["door/equipment IDs", "2-team entry position/yaw", "4 upper +7 ground +2 wall rack units", "freight cabin and opening animation", "3.375m nearest rack-to-door gap", "registered section/storey dimensions"],
+  "validation": {"command":"node --test tests/rear-stair-models.test.mjs tests/entrance-route.test.mjs tests/door-access.test.mjs","passed":18,"failed":0,"log":"workspace/door-mount-clearance-20261112/rear/tests.log"},
+  "limitations":"Mounting gaps, utility positions, support details and cover dimensions are reasonable model proportions, not measurements or structural design. The lower cover's function/connection is unconfirmed.",
+  "changedFiles":["apps/site/rear-stair-models.js","apps/site/rear-survey-data.js","tests/rear-stair-models.test.mjs"],
+  "backup":".backups/door-mount-clearance-20261112"
+}

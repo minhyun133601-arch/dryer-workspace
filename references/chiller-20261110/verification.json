@@ -1,0 +1,101 @@
+{
+  "phase": "chiller-and-full-length-outdoor-completed-before-liquid-extension",
+  "date": "2026-11-10",
+  "tests": {
+    "pass": 145,
+    "fail": 0,
+    "log": "tmp/chiller-20261110/full-tests.txt",
+    "confirmed": true
+  },
+  "syntaxScripts": 47,
+  "offlineExport": {
+    "path": "exports/건조기-통합-공유.html",
+    "bytes": 21887475,
+    "sha256": "fdfae456967682d14364ce5132ae27344ac0436723135356e880b779fbeacd66",
+    "note": "Will be rebuilt with the additional team3 liquid room; this is the completed chiller checkpoint."
+  },
+  "visualQA": {
+    "desktop": "tmp/chiller-20261110/detail-overview.png",
+    "assembled": "tmp/chiller-20261110/detail-assembled.png",
+    "drawing": "tmp/chiller-20261110/drawing.png",
+    "mobile": "tmp/chiller-20261110/mobile.png",
+    "campus": "tmp/chiller-20261110/campus-final.png",
+    "runtimeErrors": 0,
+    "offlineDataImagesChecked": true
+  },
+  "dimensionsMetres": {
+    "x": 4.14,
+    "z": 1.9,
+    "y": 2.2
+  },
+  "assemblyCount": 13,
+  "fanCount": 8,
+  "compressorCount": 2,
+  "receiverCount": 2,
+  "pressureGaugeCount": 4,
+  "pressureSwitchBoxCount": 2,
+  "photoCount": 67,
+  "drawingPageCount": 22,
+  "sourceFiles": [
+    {
+      "path": "apps/site/chiller-model.js",
+      "bytes": 26384,
+      "sha256": "67beb92d0cefe19e8767bd2ed63a79d58ea74a6e48fe3902e232c1024d115c77"
+    },
+    {
+      "path": "apps/site/chiller-data.js",
+      "bytes": 11847,
+      "sha256": "dfff2385cfa31288afa0ad71ebbf341ec5d556515b927eb3ca39d2b6dbc6bc6d"
+    },
+    {
+      "path": "apps/site/chiller-detail.js",
+      "bytes": 15446,
+      "sha256": "346c3461d67462076967cef193752dd360e8e95bdd9eb67b437ed6b7fcf0ec28"
+    },
+    {
+      "path": "apps/site/detail-camera.js",
+      "bytes": 6075,
+      "sha256": "b28593a57c40881df3fe8b187e4fc57c1e3fde3f6ba67f2730dec5a0965d421a"
+    },
+    {
+      "path": "apps/site/chiller-detail.css",
+      "bytes": 7319,
+      "sha256": "ee9512c4d29a3488aa163da22bc650bf421134bedca5d730e048702f8d0a174d"
+    },
+    {
+      "path": "apps/site/campus-data.js",
+      "bytes": 13703,
+      "sha256": "57f0f8a1950f312549d88750cf5987a019e42cf021d4b634890e486f4337ca70"
+    },
+    {
+      "path": "apps/site/campus-models.js",
+      "bytes": 45589,
+      "sha256": "48f75a65c6802d580f94a4e6932ddbf4c956854de0ebac45f77d96df6963f9a3"
+    },
+    {
+      "path": "apps/site/outdoor-models.js",
+      "bytes": 80177,
+      "sha256": "d081ab6d438d63a07275893a7877e041a54a4106fc67df0211dc516741d361aa"
+    },
+    {
+      "path": "apps/site/outdoor-data.js",
+      "bytes": 27758,
+      "sha256": "569b11d9bc880127edd51ad783647da13d12932ff53a3c492b8ebe356d7baaed"
+    },
+    {
+      "path": "apps/site/layout-editor.js",
+      "bytes": 21021,
+      "sha256": "4d80492791fdfbf65719d339960c9f92afa963b453194b54cc0819f8854f7792"
+    },
+    {
+      "path": "apps/site/scene.js",
+      "bytes": 94483,
+      "sha256": "a853f5f1e53d16de91cfbebdaa9d9f55db6d0e8a58b7e9ee57542ae5364cf36b"
+    },
+    {
+      "path": "tooling/export-site.mjs",
+      "bytes": 17130,
+      "sha256": "1476d166fb127007c87542f6767b54535c62f4079e030ab5cadf636e292ee52e"
+    }
+  ]
+}

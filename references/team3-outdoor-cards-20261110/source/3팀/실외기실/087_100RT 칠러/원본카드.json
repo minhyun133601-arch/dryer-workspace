@@ -1,0 +1,74 @@
+{
+  "id": "3-100rt-1782110190952-419769",
+  "line": "",
+  "name": "100RT 칠러",
+  "note": "",
+  "plan": "",
+  "rate": 0,
+  "room": "실외기실",
+  "team": "3팀",
+  "group": "",
+  "owner": "",
+  "status": "비가동중",
+  "process": "",
+  "documents": [],
+  "lastCheck": "",
+  "modelName": "",
+  "nextCheck": "",
+  "photoCrop": null,
+  "photoName": "100RT 칠러 photo.jpg",
+  "detailInfo": [
+    {
+      "label": "설비명",
+      "value": "100RT 칠러"
+    },
+    {
+      "label": "관리팀",
+      "value": "3팀"
+    },
+    {
+      "label": "가동률",
+      "value": "0%"
+    }
+  ],
+  "ownerLabel": "담당 업체",
+  "production": "",
+  "teamDataKey": "work_team_calendar_team3",
+  "detailGroups": {
+    "equipmentSpecs": []
+  },
+  "manufacturer": "",
+  "photoDataUrl": "",
+  "equipmentCode": "3-100RT-1782110190952-419769",
+  "operationInfo": [
+    {
+      "label": "설비명",
+      "value": "100RT 칠러"
+    },
+    {
+      "label": "관리팀",
+      "value": "3팀"
+    },
+    {
+      "label": "실",
+      "value": "실외기실"
+    },
+    {
+      "label": "공정",
+      "value": ""
+    },
+    {
+      "label": "가동률",
+      "value": "0"
+    }
+  ],
+  "manufacturedAt": "",
+  "photoDocumentId": "43655f67-ad9c-4824-b60d-948dd17d7a2a",
+  "photoPreviewUrl": "/api/files/43655f67-ad9c-4824-b60d-948dd17d7a2a/view",
+  "photoDownloadUrl": "/api/files/43655f67-ad9c-4824-b60d-948dd17d7a2a/download",
+  "manufacturerLabel": "제조사",
+  "photoThumbDataUrl": "",
+  "maintenanceHistory": [],
+  "photoAttachmentKey": "equipment-photo-main",
+  "photoStorageRelPath": "equipment-assets/equipment-history/100RT 칠러/images/9b512266-4838-492d-ad86-8ef7dc865fa1.jpg"
+}

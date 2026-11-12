@@ -1,0 +1,2303 @@
+{
+  "date": "2026-11-12",
+  "scope": "Current 1-team part-2 entrance, the original dryer mezzanine called 1.5F, first-floor factory overlooked from it, and the reduced third-floor hall.",
+  "sources": [
+    {
+      "path": "1팀 2파트 출입구 - 1.5층 - 3층/20261112_145442KST_GPS-VALID_LAT35.3631133_LON129.0300967_H153.0-TN_DIR-AVAILABLE_P-21.2_ACC2.6m_FV-7459fd4f-decc-45cb-974d-d90fc6bca7f5.mp4",
+      "bytes": 1086386547,
+      "sha256": "d1d93a353cc6d7afea5821bd8f67068283d90aaa543ba4adb6f58bdadf89b5b9",
+      "originalUnmodified": true
+    },
+    {
+      "path": "1팀 2파트 출입구 - 1.5층 - 3층/20261112_145442KST_GPS-VALID_LAT35.3631133_LON129.0300967_H153.0-TN_DIR-AVAILABLE_P-21.2_ACC2.6m_FV-7459fd4f-decc-45cb-974d-d90fc6bca7f5.txt",
+      "bytes": 1382438,
+      "sha256": "a547dbb7fab3c9bc32b1513167a335a73995efeed482391b68c66a7bac62bf93",
+      "originalUnmodified": true
+    }
+  ],
+  "videoReview": {
+    "durationSeconds": 724.804311,
+    "durationLabel": "12m 4.804311s",
+    "rotationDegrees": -90,
+    "overviewIndex": "workspace/dryer-entrance-mezzanine-20261112/overview/index.json",
+    "sampleCount": 121,
+    "stepSeconds": 6,
+    "sampleRangeSeconds": [
+      0,
+      720
+    ],
+    "denserPanels": [
+      {
+        "index": "workspace/dryer-entrance-mezzanine-20261112/entry-review/index.json",
+        "samples": 100,
+        "stepSeconds": 2,
+        "rangeSeconds": [
+          0,
+          198
+        ]
+      },
+      {
+        "index": "workspace/dryer-entrance-mezzanine-20261112/op-detail/index.json",
+        "samples": 45,
+        "stepSeconds": 2,
+        "rangeSeconds": [
+          288,
+          376
+        ]
+      },
+      {
+        "index": "workspace/dryer-entrance-mezzanine-20261112/stair-to-third/index.json",
+        "samples": 37,
+        "stepSeconds": 1,
+        "rangeSeconds": [
+          414,
+          450
+        ]
+      },
+      {
+        "index": "workspace/dryer-entrance-mezzanine-20261112/third-cip-deck/index.json",
+        "samples": 25,
+        "stepSeconds": 2,
+        "rangeSeconds": [
+          674,
+          722
+        ]
+      },
+      {
+        "index": "workspace/dryer-entrance-mezzanine-20261112/third-cones/index.json",
+        "samples": 28,
+        "stepSeconds": 2,
+        "rangeSeconds": [
+          500,
+          554
+        ]
+      },
+      {
+        "index": "workspace/dryer-entrance-mezzanine-20261112/third-service/index.json",
+        "samples": 22,
+        "stepSeconds": 3,
+        "rangeSeconds": [
+          590,
+          653
+        ]
+      },
+      {
+        "index": "workspace/dryer-entrance-mezzanine-20261112/third-through-door/index.json",
+        "samples": 33,
+        "stepSeconds": 1,
+        "rangeSeconds": [
+          558,
+          590
+        ]
+      }
+    ],
+    "method": "Entire continuous recording reviewed through timestamped overview contact sheets, individual native frames and denser feature panels. This is visual sampling, not a claim that each encoded frame was manually inspected."
+  },
+  "evidencePolicy": {
+    "priority": [
+      "Explicit user floor naming and first-floor-overlook corrections",
+      "Continuous current video, visible openings, readable room signs and equipment shapes",
+      "Historical plans retained only as contextual references"
+    ],
+    "photographedPlans": "reference-only; plans may have changed while recording and do not establish current partitions, room use or equipment installation",
+    "phoneMetadata": "GPS, altitude, compass direction and elapsed walking time are not indoor dimensions or surveyed positions",
+    "originalFiles": "Unmodified source video and metadata text remain in the supplied source folder. Access digits, personal locker labels and identities are not reproduced.",
+    "unreadableOperatingValues": "No invented readings, setpoints or live operating state are displayed; unreadable displays remain dark or anonymous.",
+    "gitStorage": "Unmodified original video/phone metadata remain local. Large original video, CAD/reference originals and generated exports are excluded from Git; source listings, provenance/hashes, evidence records and regeneration tools are retained."
+  },
+  "evidenceNotes": [
+    {
+      "path": "references/dryer-entrance-mezzanine-20261112/entry-notes.json",
+      "sha256": "45e2a09f2c25ff9f2493f741d6b58d784fe1829ee2c601eb5a81242de11e2961"
+    },
+    {
+      "path": "references/dryer-entrance-mezzanine-20261112/second-half-notes.json",
+      "sha256": "9f8f13ff301398d55bfb2e1eb44b3ed16f319e46545aa766f8d42791ebc249a3"
+    },
+    {
+      "path": "references/dryer-entrance-mezzanine-20261112/green-overlook-detailed-review.json",
+      "bytes": 8116,
+      "sha256": "2775740b331181b7f9a2abdc4a9bbc70239ceadace5d76ebeffa2c876ec706f7",
+      "phase": "native-resolution-detail"
+    },
+    {
+      "path": "references/dryer-entrance-mezzanine-20261112/third-floor-native-review.json",
+      "bytes": 13797,
+      "sha256": "04a3e0c802d5193647d4a1ce6c210c0c1251c3b1371274f5b681f699cf7c92d4",
+      "phase": "native-resolution-detail"
+    }
+  ],
+  "drawingReferences": [
+    {
+      "seconds": 122,
+      "path": "references/dryer-entrance-mezzanine-20261112/drawing-references/reference-only-122s-evacuation-board.jpg",
+      "title": "피난안내도",
+      "role": "reference-only",
+      "sha256": "50bedc9b0a2a4a6a725ead53ffbae91df201823f964b25dc22eda21886ae65bb"
+    },
+    {
+      "seconds": 134,
+      "path": "references/dryer-entrance-mezzanine-20261112/drawing-references/reference-only-134s-lighting-layout.jpg",
+      "title": "1층 형광등 배치도 · 세부 제목 일부 미판독",
+      "role": "reference-only",
+      "sha256": "14d1fa6e8c4bb0bd8dac2fa67bf5bcea4a7c42bbe4b9c84318e3723d67f6cc2e"
+    },
+    {
+      "seconds": 138,
+      "path": "references/dryer-entrance-mezzanine-20261112/drawing-references/reference-only-138s-service-layout.jpg",
+      "title": "소화 설비 배치도 4동 1층",
+      "role": "reference-only",
+      "sha256": "1213cd4ba0246ea0253fb202fe65fa3f7c980ec53e02e84c06bdb781738d4112"
+    }
+  ],
+  "observedFacts": {
+    "firstFloor": "Native-resolution overlook distinguishes three stainless guarded packing cubicles: one tall rectangular V-shaped twin-outlet hopper and two compact round dosers, notched machinery landings joined by a rear catwalk, and a four-hoop caged ladder. The green zone contains two distinct blue/cream articulated arms visible together, at least three alignment lanes, compact guarded case-packing forms, short transfers and a brown curved conveyor. Six open round HVAC jets and a lower cabinet, a floor fan and two wrapped corrugated bundles are context. Unverified X-ray curtains were removed; historical IDs do not establish equipment technology or OEM.",
+    "mezzanine": "User-confirmed 1.5F naming; one entered dressing room, OP room, green observation corridor, actual internal/exterior windows and safety bars, continuous lower-hall views and connected two-flight stairs. The dressing-room threshold/approach stays on solid slab beside the stair opening. No second dressing room or gender assignment is inferred.",
+    "thirdFloor": "The indoor footprint is reduced from 3F upward. Two-row yellow exterior windows, lower stainless wall protection, flush drains, three visible IBCs, supported overhead utility/spiral duct runs, the narrow yellow storage-door pane and the actual closed roller shutter are distinguished. Two cone hoppers have differing inlet forms including a wide white flexible coupling, visible lower flange/valve/manifold details and a shared pierced service deck. CIP includes at least two visible tank tops, bolted motor flanges, attached open manhole lids, checker plate outside deck holes and three dark display faces. Local service decks are not additional building floors."
+  },
+  "modelRegistration": {
+    "measuredDimensions": false,
+    "geographicAxesConfirmed": false,
+    "basis": "Visible route topology and relative shapes fitted within the pre-existing model envelope; historical dimensions/elevations remain reference proportions and are not a new current survey.",
+    "floorData": [
+      {
+        "internalId": 1,
+        "displayLevel": 1,
+        "name": "1층 · 충전·외포장·조제실",
+        "elevation": 0.3,
+        "bounds": {
+          "minX": -8.6,
+          "maxX": 34.4,
+          "minZ": -13.4,
+          "maxZ": 21.6
+        },
+        "slabs": [
+          {
+            "minX": -8.6,
+            "maxX": 34.4,
+            "minZ": -13.4,
+            "maxZ": 21.6
+          }
+        ],
+        "voids": [],
+        "roomCoordinates": [
+          {
+            "id": "factory",
+            "name": "공장",
+            "bounds": {
+              "minX": -8.6,
+              "maxX": 16.4,
+              "minZ": -6.7,
+              "maxZ": 21.6
+            },
+            "positionBasis": "plan-proportion"
+          },
+          {
+            "id": "filling-zone",
+            "name": "충전구역",
+            "bounds": {
+              "minX": 13.6,
+              "maxX": 16.4,
+              "minZ": -13.4,
+              "maxZ": -6.7
+            },
+            "positionBasis": "plan-proportion"
+          },
+          {
+            "id": "observed-enclosed-packing",
+            "name": "충전·포장 설비 구역",
+            "bounds": {
+              "minX": -8.4,
+              "maxX": 8.4,
+              "minZ": -6.5,
+              "maxZ": 2.9999999999999982
+            },
+            "positionBasis": "20261112-overlook-344-354; approximate-registration"
+          },
+          {
+            "id": "boiler",
+            "name": "보일러실",
+            "bounds": {
+              "minX": 26.199999999999996,
+              "maxX": 34.4,
+              "minZ": -13.4,
+              "maxZ": -3.5999999999999996
+            },
+            "positionBasis": "boiler-room-video-and-floor1-plan"
+          },
+          {
+            "id": "preparation",
+            "name": "원료계량창고",
+            "bounds": {
+              "minX": 19.200000000000003,
+              "maxX": 28.199999999999996,
+              "minZ": -3.5999999999999996,
+              "maxZ": 4.6
+            },
+            "positionBasis": "current-room-plan-and-video"
+          },
+          {
+            "id": "raw-storage",
+            "name": "일일원료보관창고",
+            "bounds": {
+              "minX": 28.199999999999996,
+              "maxX": 34.4,
+              "minZ": -3.5999999999999996,
+              "maxZ": 4.6
+            },
+            "positionBasis": "current-room-plan-and-video"
+          },
+          {
+            "id": "dispensing",
+            "name": "조제실",
+            "bounds": {
+              "minX": 16.4,
+              "maxX": 34.4,
+              "minZ": 4.6,
+              "maxZ": 14.799999999999999
+            },
+            "positionBasis": "current-room-plan-and-video"
+          },
+          {
+            "id": "office",
+            "name": "사무·소독 준비실",
+            "bounds": {
+              "minX": 25,
+              "maxX": 28.199999999999996,
+              "minZ": 18.4,
+              "maxZ": 21.6
+            },
+            "positionBasis": "video-87-146-159-current-use"
+          },
+          {
+            "id": "cip",
+            "name": "CIP·세척 설비실",
+            "bounds": {
+              "minX": 21.6,
+              "maxX": 25,
+              "minZ": 18.4,
+              "maxZ": 21.6
+            },
+            "positionBasis": "video-111-139-and-room-plan"
+          },
+          {
+            "id": "air-shower",
+            "name": "소독실·에어샤워",
+            "bounds": {
+              "minX": 28.199999999999996,
+              "maxX": 31.4,
+              "minZ": 16.9,
+              "maxZ": 18.299999999999997
+            },
+            "positionBasis": "video-165-170-and-481-486-direct-entry-sightline"
+          },
+          {
+            "id": "hygiene",
+            "name": "위생 전실·신발장",
+            "bounds": {
+              "minX": 31.4,
+              "maxX": 34.4,
+              "minZ": 16.200000000000003,
+              "maxZ": 21.6
+            },
+            "positionBasis": "video-486-501-entry-facing-left-stair-right-sinks"
+          },
+          {
+            "id": "entry-corridor",
+            "name": "현관 옆 복도",
+            "bounds": {
+              "minX": 33.3,
+              "maxX": 34.4,
+              "minZ": 11.999999999999998,
+              "maxZ": 16.9
+            },
+            "positionBasis": "video-497-505-northbound-corridor"
+          },
+          {
+            "id": "toilet",
+            "name": "화장실",
+            "bounds": {
+              "minX": 30.5,
+              "maxX": 33.3,
+              "minZ": 12.999999999999998,
+              "maxZ": 16.200000000000003
+            },
+            "positionBasis": "video-499-505-west-door-off-east-corridor"
+          }
+        ],
+        "routeSurvey": {
+          "source": "dryer-entrance-mezzanine-20261112",
+          "sourceTimes": [
+            0,
+            18,
+            38,
+            54,
+            72,
+            84,
+            102,
+            112,
+            142,
+            150,
+            198,
+            216,
+            234,
+            252,
+            282,
+            344,
+            348,
+            354
+          ],
+          "drawingPolicy": "reference-only",
+          "observedStairIds": [
+            "southeast-stair"
+          ],
+          "observations": [
+            "외부 미닫이문과 별도의 잠금 유리문",
+            "세면대·신발장·화장실",
+            "녹색 2런 계단과 황색 창의 중간참",
+            "관찰창 아래 청색 바닥의 유리 외함 포장기 3기와 상부 작업대",
+            "녹색 외포장 구역의 롤러 이송·합류부와 청색 로봇"
+          ],
+          "overlookFactory": {
+            "blueFloor": {
+              "minX": -8.4,
+              "maxX": 8.4,
+              "minZ": -6.5,
+              "maxZ": 3
+            },
+            "sourceTimes": [
+              234,
+              252,
+              282,
+              344,
+              348,
+              354
+            ],
+            "dimensionsMeasured": false,
+            "registration": "observed-relative-zones; coordinates-estimated"
+          }
+        },
+        "openings": [
+          {
+            "side": "west",
+            "offset": 28.5,
+            "width": 2.2,
+            "height": 3,
+            "label": "제품 출구"
+          },
+          {
+            "side": "south",
+            "offset": 12,
+            "width": 4,
+            "height": 3,
+            "label": "출입구 · 위치 도면 비례"
+          },
+          {
+            "side": "east",
+            "offset": 14,
+            "width": 3,
+            "height": 3,
+            "label": "원료 출입구",
+            "doorKind": "custom"
+          },
+          {
+            "side": "east",
+            "offset": 31,
+            "width": 2.6,
+            "height": 2.65,
+            "label": "1팀 2파트 출입구",
+            "doorKind": "custom"
+          },
+          {
+            "side": "east",
+            "offset": 33.4,
+            "width": 1.1,
+            "sill": 0.65,
+            "height": 2.4,
+            "doorKind": "none",
+            "label": "계단 황색창"
+          },
+          {
+            "side": "south",
+            "offset": 32.6,
+            "width": 1.1,
+            "center": [
+              24,
+              21.6
+            ],
+            "height": 2.2,
+            "doorKind": "none",
+            "label": "1.5층 외벽창",
+            "sill": 3.9
+          },
+          {
+            "side": "south",
+            "offset": 20.6,
+            "width": 1.1,
+            "center": [
+              12,
+              21.6
+            ],
+            "height": 2.2,
+            "doorKind": "none",
+            "label": "1.5층 외벽창",
+            "sill": 3.9
+          },
+          {
+            "side": "south",
+            "offset": 8.6,
+            "width": 1.1,
+            "center": [
+              0,
+              21.6
+            ],
+            "height": 2.2,
+            "doorKind": "none",
+            "label": "1.5층 외벽창",
+            "sill": 3.9
+          },
+          {
+            "side": "west",
+            "offset": 28.9,
+            "width": 1.1,
+            "center": [
+              -8.6,
+              15.5
+            ],
+            "height": 2.2,
+            "doorKind": "none",
+            "label": "1.5층 외벽창",
+            "sill": 3.9
+          },
+          {
+            "side": "west",
+            "offset": 20.4,
+            "width": 1.1,
+            "center": [
+              -8.6,
+              7
+            ],
+            "height": 2.2,
+            "doorKind": "none",
+            "label": "1.5층 외벽창",
+            "sill": 3.9
+          },
+          {
+            "side": "west",
+            "offset": 12.4,
+            "width": 1.1,
+            "center": [
+              -8.6,
+              -1
+            ],
+            "height": 2.2,
+            "doorKind": "none",
+            "label": "1.5층 외벽창",
+            "sill": 3.9
+          },
+          {
+            "side": "north",
+            "offset": 19.6,
+            "width": 3.1,
+            "sill": 3.6,
+            "height": 3.25,
+            "doorKind": "none",
+            "label": "3층 연결 계단 세로창"
+          }
+        ]
+      },
+      {
+        "internalId": 2,
+        "displayLevel": 1.5,
+        "name": "1.5층 · 탈의실·OP실·관찰 통로",
+        "elevation": 3.8,
+        "bounds": {
+          "minX": -8.6,
+          "maxX": 34.4,
+          "minZ": -13.4,
+          "maxZ": 21.6
+        },
+        "slabs": [
+          {
+            "minX": -8.6,
+            "maxX": 34.4,
+            "minZ": -13.4,
+            "maxZ": 21.6
+          }
+        ],
+        "voids": [
+          {
+            "minX": -5.3,
+            "maxX": 13.500000000000002,
+            "minZ": -13.25,
+            "maxZ": -6.9
+          },
+          {
+            "minX": -7.5,
+            "maxX": 13.500000000000002,
+            "minZ": -6.5,
+            "maxZ": 2.9000000000000004
+          },
+          {
+            "minX": 0.8000000000000007,
+            "maxX": 13.500000000000002,
+            "minZ": 3.299999999999999,
+            "maxZ": 18.299999999999997
+          },
+          {
+            "minX": -5.3,
+            "maxX": 0.5,
+            "minZ": 13.6,
+            "maxZ": 18.299999999999997
+          },
+          {
+            "minX": 22.299999999999997,
+            "maxX": 34.25,
+            "minZ": -13.25,
+            "maxZ": -3.8000000000000007
+          },
+          {
+            "minX": 16.6,
+            "maxX": 34.25,
+            "minZ": -3.4000000000000004,
+            "maxZ": 4.4
+          },
+          {
+            "minX": 16.6,
+            "maxX": 28,
+            "minZ": 4.799999999999999,
+            "maxZ": 18.299999999999997
+          },
+          {
+            "minX": 29.3,
+            "maxX": 34.2,
+            "minZ": 18.45,
+            "maxZ": 21.5
+          }
+        ],
+        "roomCoordinates": [
+          {
+            "id": "west-dry-walkway",
+            "name": "생산 관찰 통로",
+            "bounds": {
+              "minX": -8.6,
+              "maxX": -5.3999999999999995,
+              "minZ": -6.7,
+              "maxZ": 18.4
+            },
+            "positionBasis": "current-continuous-walk"
+          },
+          {
+            "id": "op",
+            "name": "OP실",
+            "bounds": {
+              "minX": -5.3999999999999995,
+              "maxX": 0.7000000000000011,
+              "minZ": 3.0999999999999996,
+              "maxZ": 13.4
+            },
+            "positionBasis": "current-video-room-use; approximate-registration"
+          },
+          {
+            "id": "dressing",
+            "name": "탈의실 · 탈의장",
+            "bounds": {
+              "minX": 28.299999999999997,
+              "maxX": 32.6,
+              "minZ": 13.999999999999998,
+              "maxZ": 17.700000000000003
+            },
+            "positionBasis": "current-video-room-use; approximate-registration"
+          }
+        ],
+        "routeSurvey": {
+          "source": "dryer-entrance-mezzanine-20261112",
+          "sourceTimes": [
+            150,
+            162,
+            174,
+            198,
+            216,
+            222,
+            246,
+            282,
+            298,
+            314,
+            330,
+            348,
+            376,
+            414
+          ],
+          "drawingPolicy": "reference-only",
+          "topology": [
+            "입구 계단 상부",
+            "탈의실",
+            "조제실 관찰창",
+            "외포장 관찰 통로",
+            "OP실",
+            "3층 계단"
+          ],
+          "route": [
+            [
+              28.8,
+              19.3
+            ],
+            [
+              28.8,
+              18.075
+            ],
+            [
+              30.4,
+              18.075
+            ],
+            [
+              27.5,
+              19.4
+            ],
+            [
+              16,
+              19.4
+            ],
+            [
+              0,
+              19.4
+            ],
+            [
+              -7,
+              16
+            ],
+            [
+              -7,
+              9
+            ],
+            [
+              -8,
+              2.5
+            ],
+            [
+              -8,
+              -7.5
+            ],
+            [
+              10.3,
+              -7.5
+            ]
+          ],
+          "dimensionsMeasured": false,
+          "axesConfirmed": false,
+          "observedStairIds": [
+            "northeast-stair"
+          ],
+          "exteriorWindows": [
+            {
+              "side": "south",
+              "offset": 32.6,
+              "width": 1.1,
+              "center": [
+                24,
+                21.6
+              ],
+              "height": 2.2,
+              "doorKind": "none",
+              "label": "1.5층 외벽창"
+            },
+            {
+              "side": "south",
+              "offset": 20.6,
+              "width": 1.1,
+              "center": [
+                12,
+                21.6
+              ],
+              "height": 2.2,
+              "doorKind": "none",
+              "label": "1.5층 외벽창"
+            },
+            {
+              "side": "south",
+              "offset": 8.6,
+              "width": 1.1,
+              "center": [
+                0,
+                21.6
+              ],
+              "height": 2.2,
+              "doorKind": "none",
+              "label": "1.5층 외벽창"
+            },
+            {
+              "side": "west",
+              "offset": 28.9,
+              "width": 1.1,
+              "center": [
+                -8.6,
+                15.5
+              ],
+              "height": 2.2,
+              "doorKind": "none",
+              "label": "1.5층 외벽창"
+            },
+            {
+              "side": "west",
+              "offset": 20.4,
+              "width": 1.1,
+              "center": [
+                -8.6,
+                7
+              ],
+              "height": 2.2,
+              "doorKind": "none",
+              "label": "1.5층 외벽창"
+            },
+            {
+              "side": "west",
+              "offset": 12.4,
+              "width": 1.1,
+              "center": [
+                -8.6,
+                -1
+              ],
+              "height": 2.2,
+              "doorKind": "none",
+              "label": "1.5층 외벽창"
+            }
+          ],
+          "dressingRoom": {
+            "bounds": {
+              "minX": 28.299999999999997,
+              "maxX": 32.6,
+              "minZ": 13.999999999999998,
+              "maxZ": 17.700000000000003
+            },
+            "door": [
+              30.4,
+              17.7
+            ],
+            "width": 0.95,
+            "sourceTimes": [
+              162,
+              168,
+              174,
+              180
+            ],
+            "genderConfirmed": false
+          },
+          "opRoom": {
+            "bounds": {
+              "minX": -5.3999999999999995,
+              "maxX": 0.7000000000000011,
+              "minZ": 3.0999999999999996,
+              "maxZ": 13.4
+            },
+            "door": [
+              -5.4,
+              9.1
+            ],
+            "width": 1.05,
+            "sourceTimes": [
+              298,
+              304,
+              314,
+              330,
+              348,
+              362
+            ]
+          }
+        },
+        "slabPatches": [
+          {
+            "minX": 5,
+            "maxX": 13.4,
+            "minZ": -13.4,
+            "maxZ": -10
+          },
+          {
+            "minX": -5.4,
+            "maxX": 13.4,
+            "minZ": -8.4,
+            "maxZ": -6.7
+          }
+        ],
+        "openings": [
+          {
+            "side": "south",
+            "offset": 32.6,
+            "width": 1.1,
+            "center": [
+              24,
+              21.6
+            ],
+            "height": 2.2,
+            "doorKind": "none",
+            "label": "1.5층 외벽창",
+            "sill": 0.4
+          },
+          {
+            "side": "south",
+            "offset": 20.6,
+            "width": 1.1,
+            "center": [
+              12,
+              21.6
+            ],
+            "height": 2.2,
+            "doorKind": "none",
+            "label": "1.5층 외벽창",
+            "sill": 0.4
+          },
+          {
+            "side": "south",
+            "offset": 8.6,
+            "width": 1.1,
+            "center": [
+              0,
+              21.6
+            ],
+            "height": 2.2,
+            "doorKind": "none",
+            "label": "1.5층 외벽창",
+            "sill": 0.4
+          },
+          {
+            "side": "west",
+            "offset": 28.9,
+            "width": 1.1,
+            "center": [
+              -8.6,
+              15.5
+            ],
+            "height": 2.2,
+            "doorKind": "none",
+            "label": "1.5층 외벽창",
+            "sill": 0.4
+          },
+          {
+            "side": "west",
+            "offset": 20.4,
+            "width": 1.1,
+            "center": [
+              -8.6,
+              7
+            ],
+            "height": 2.2,
+            "doorKind": "none",
+            "label": "1.5층 외벽창",
+            "sill": 0.4
+          },
+          {
+            "side": "west",
+            "offset": 12.4,
+            "width": 1.1,
+            "center": [
+              -8.6,
+              -1
+            ],
+            "height": 2.2,
+            "doorKind": "none",
+            "label": "1.5층 외벽창",
+            "sill": 0.4
+          },
+          {
+            "side": "north",
+            "offset": 19.6,
+            "width": 3.1,
+            "sill": 0.1,
+            "height": 3.25,
+            "doorKind": "none",
+            "label": "3층 연결 계단 세로창"
+          }
+        ]
+      },
+      {
+        "internalId": 3,
+        "displayLevel": 3,
+        "name": "3층 · 축소된 설비 홀",
+        "elevation": 7.3,
+        "bounds": {
+          "minX": -8.6,
+          "maxX": 34.4,
+          "minZ": -13.4,
+          "maxZ": 21.6
+        },
+        "slabs": [
+          {
+            "minX": -8.6,
+            "maxX": 8.6,
+            "minZ": -13.4,
+            "maxZ": 13.4
+          },
+          {
+            "minX": 8.6,
+            "maxX": 13.4,
+            "minZ": -13.4,
+            "maxZ": -6.7
+          }
+        ],
+        "voids": [],
+        "roomCoordinates": [
+          {
+            "id": "factory",
+            "name": "3층 설비 홀",
+            "bounds": {
+              "minX": -8.6,
+              "maxX": 8.6,
+              "minZ": -6.7,
+              "maxZ": 13.4
+            },
+            "positionBasis": "current-video; reduced-envelope-proportion"
+          }
+        ],
+        "routeSurvey": {
+          "source": "dryer-entrance-mezzanine-20261112",
+          "sourceTimes": [
+            440,
+            450,
+            466,
+            502,
+            520,
+            538,
+            554,
+            586,
+            612,
+            648,
+            686,
+            704,
+            724
+          ],
+          "drawingPolicy": "reference-only",
+          "smallerFloorPlateConfirmed": true,
+          "dimensionsMeasured": false,
+          "axesConfirmed": false,
+          "glazedEnclosure": {
+            "minX": 2.5,
+            "maxX": 6.8,
+            "minZ": -10.1,
+            "maxZ": -5.2
+          },
+          "exteriorWindowBands": [
+            {
+              "side": "west",
+              "offset": 11.9,
+              "width": 8.6,
+              "sill": 1,
+              "height": 0.9,
+              "doorKind": "none",
+              "label": "3층 2단 황색창",
+              "sourceTimes": [
+                502,
+                590,
+                593,
+                617
+              ],
+              "spacingMeasured": false
+            },
+            {
+              "side": "west",
+              "offset": 11.9,
+              "width": 8.6,
+              "sill": 2.05,
+              "height": 0.9,
+              "doorKind": "none",
+              "label": "3층 2단 황색창",
+              "sourceTimes": [
+                502,
+                590,
+                593,
+                617
+              ],
+              "spacingMeasured": false
+            },
+            {
+              "side": "west",
+              "offset": 20.85,
+              "width": 8.1,
+              "sill": 1,
+              "height": 0.9,
+              "doorKind": "none",
+              "label": "3층 2단 황색창",
+              "sourceTimes": [
+                502,
+                590,
+                593,
+                617
+              ],
+              "spacingMeasured": false
+            },
+            {
+              "side": "west",
+              "offset": 20.85,
+              "width": 8.1,
+              "sill": 2.05,
+              "height": 0.9,
+              "doorKind": "none",
+              "label": "3층 2단 황색창",
+              "sourceTimes": [
+                502,
+                590,
+                593,
+                617
+              ],
+              "spacingMeasured": false
+            },
+            {
+              "side": "east",
+              "offset": 13.6,
+              "width": 5.199999999999999,
+              "sill": 1,
+              "height": 0.9,
+              "doorKind": "none",
+              "label": "3층 2단 황색창",
+              "sourceTimes": [
+                502,
+                590,
+                593,
+                617
+              ],
+              "spacingMeasured": false
+            },
+            {
+              "side": "east",
+              "offset": 13.6,
+              "width": 5.199999999999999,
+              "sill": 2.05,
+              "height": 0.9,
+              "doorKind": "none",
+              "label": "3층 2단 황색창",
+              "sourceTimes": [
+                502,
+                590,
+                593,
+                617
+              ],
+              "spacingMeasured": false
+            },
+            {
+              "side": "east",
+              "offset": 20.85,
+              "width": 8.1,
+              "sill": 1,
+              "height": 0.9,
+              "doorKind": "none",
+              "label": "3층 2단 황색창",
+              "sourceTimes": [
+                502,
+                590,
+                593,
+                617
+              ],
+              "spacingMeasured": false
+            },
+            {
+              "side": "east",
+              "offset": 20.85,
+              "width": 8.1,
+              "sill": 2.05,
+              "height": 0.9,
+              "doorKind": "none",
+              "label": "3층 2단 황색창",
+              "sourceTimes": [
+                502,
+                590,
+                593,
+                617
+              ],
+              "spacingMeasured": false
+            }
+          ],
+          "ibcRow": [
+            [
+              -5.8,
+              -10.5
+            ],
+            [
+              -3.9,
+              -10.5
+            ],
+            [
+              -2,
+              -10.5
+            ]
+          ],
+          "drainSegments": [
+            {
+              "a": [
+                1.4,
+                -4.5
+              ],
+              "b": [
+                1.4,
+                10.5
+              ],
+              "width": 0.18
+            },
+            {
+              "a": [
+                -6,
+                10.7
+              ],
+              "b": [
+                1.4,
+                10.7
+              ],
+              "width": 0.18
+            }
+          ],
+          "shutter": {
+            "position": [
+              3.3,
+              13.4
+            ],
+            "width": 2.3,
+            "height": 2.7,
+            "sourceTimes": [
+              567
+            ],
+            "interiorUnconfirmed": true
+          },
+          "route": [
+            [
+              7.7,
+              -7.65
+            ],
+            [
+              7.7,
+              -3.4
+            ],
+            [
+              0.8,
+              -3.4
+            ],
+            [
+              0.8,
+              3
+            ],
+            [
+              1,
+              10.6
+            ],
+            [
+              -3.5,
+              10.6
+            ]
+          ]
+        },
+        "slabOpenings": [
+          {
+            "bounds": {
+              "minX": 8.6,
+              "maxX": 13.4,
+              "minZ": -13.4,
+              "maxZ": -6.7
+            },
+            "holes": [
+              {
+                "minX": 9,
+                "maxX": 13.1,
+                "minZ": -13.15,
+                "maxZ": -8.1
+              }
+            ]
+          }
+        ],
+        "openings": [
+          {
+            "side": "east",
+            "offset": 5.75,
+            "width": 1.2,
+            "height": 2.3,
+            "label": "3층 계단 출입문",
+            "doorStyle": "perforated"
+          },
+          {
+            "side": "west",
+            "offset": 11.9,
+            "width": 8.6,
+            "sill": 1,
+            "height": 0.9,
+            "doorKind": "none",
+            "label": "3층 2단 황색창",
+            "sourceTimes": [
+              502,
+              590,
+              593,
+              617
+            ],
+            "spacingMeasured": false
+          },
+          {
+            "side": "west",
+            "offset": 11.9,
+            "width": 8.6,
+            "sill": 2.05,
+            "height": 0.9,
+            "doorKind": "none",
+            "label": "3층 2단 황색창",
+            "sourceTimes": [
+              502,
+              590,
+              593,
+              617
+            ],
+            "spacingMeasured": false
+          },
+          {
+            "side": "west",
+            "offset": 20.85,
+            "width": 8.1,
+            "sill": 1,
+            "height": 0.9,
+            "doorKind": "none",
+            "label": "3층 2단 황색창",
+            "sourceTimes": [
+              502,
+              590,
+              593,
+              617
+            ],
+            "spacingMeasured": false
+          },
+          {
+            "side": "west",
+            "offset": 20.85,
+            "width": 8.1,
+            "sill": 2.05,
+            "height": 0.9,
+            "doorKind": "none",
+            "label": "3층 2단 황색창",
+            "sourceTimes": [
+              502,
+              590,
+              593,
+              617
+            ],
+            "spacingMeasured": false
+          },
+          {
+            "side": "east",
+            "offset": 13.6,
+            "width": 5.199999999999999,
+            "sill": 1,
+            "height": 0.9,
+            "doorKind": "none",
+            "label": "3층 2단 황색창",
+            "sourceTimes": [
+              502,
+              590,
+              593,
+              617
+            ],
+            "spacingMeasured": false
+          },
+          {
+            "side": "east",
+            "offset": 13.6,
+            "width": 5.199999999999999,
+            "sill": 2.05,
+            "height": 0.9,
+            "doorKind": "none",
+            "label": "3층 2단 황색창",
+            "sourceTimes": [
+              502,
+              590,
+              593,
+              617
+            ],
+            "spacingMeasured": false
+          },
+          {
+            "side": "east",
+            "offset": 20.85,
+            "width": 8.1,
+            "sill": 1,
+            "height": 0.9,
+            "doorKind": "none",
+            "label": "3층 2단 황색창",
+            "sourceTimes": [
+              502,
+              590,
+              593,
+              617
+            ],
+            "spacingMeasured": false
+          },
+          {
+            "side": "east",
+            "offset": 20.85,
+            "width": 8.1,
+            "sill": 2.05,
+            "height": 0.9,
+            "doorKind": "none",
+            "label": "3층 2단 황색창",
+            "sourceTimes": [
+              502,
+              590,
+              593,
+              617
+            ],
+            "spacingMeasured": false
+          },
+          {
+            "side": "south",
+            "offset": 11.9,
+            "width": 2.3,
+            "height": 2.7,
+            "doorKind": "custom",
+            "label": "3층 회색 셔터"
+          }
+        ]
+      }
+    ],
+    "thirdFloorReducedFootprintObserved": true,
+    "historicalRoofCisternsAndCompressorRoom": "archived as drawing references; not asserted as current installations",
+    "dressingApproachCorrection": {
+      "door": [
+        30.4,
+        17.7
+      ],
+      "corridorApproachZ": 18.075,
+      "reason": "Keep the room door approach on solid mezzanine slab beside the southeast stair opening."
+    }
+  },
+  "modelEquipment": [
+    {
+      "id": "f1-ica-1",
+      "floor": 1,
+      "name": "1층 관찰 포장기 A",
+      "position": [
+        -5.5,
+        0.3,
+        -2.5
+      ],
+      "rotation": 0,
+      "dryerRoute": {
+        "kind": "overlook-packing-cubicle",
+        "source": "dryer-entrance-mezzanine-video-20261112",
+        "sourceTimes": [
+          338,
+          342,
+          344,
+          346,
+          348,
+          350,
+          352,
+          354,
+          390,
+          396,
+          402
+        ],
+        "observedCounts": {
+          "minimumVisibleRoofedCubicles": 3,
+          "serialNumberConfirmed": false,
+          "sharedPlatformOwner": "f1-ica-1",
+          "feedVariant": "rectangular-twin-outlet-v-hopper",
+          "cabinetVariant": "open-mechanism-and-side-cabinet",
+          "platformTopology": "recessed machinery landings joined by rear catwalk",
+          "nativeResolutionReview": true
+        },
+        "nominalDimensionsMeasured": false,
+        "positionBasis": "mezzanine-overlook-relative-topology-in-1f-envelope",
+        "currentOemOrHistoricalIdentityConfirmed": false
+      },
+      "placementRevision": "dryer-route-1f-20261112"
+    },
+    {
+      "id": "f1-ica-2",
+      "floor": 1,
+      "name": "1층 관찰 포장기 B",
+      "position": [
+        0,
+        0.3,
+        -2.5
+      ],
+      "rotation": 0,
+      "dryerRoute": {
+        "kind": "overlook-packing-cubicle",
+        "source": "dryer-entrance-mezzanine-video-20261112",
+        "sourceTimes": [
+          338,
+          342,
+          344,
+          346,
+          348,
+          350,
+          352,
+          354,
+          390,
+          396,
+          402
+        ],
+        "observedCounts": {
+          "minimumVisibleRoofedCubicles": 3,
+          "serialNumberConfirmed": false,
+          "sharedPlatformOwner": "f1-ica-1",
+          "feedVariant": "compact-round-doser",
+          "cabinetVariant": "stepped-roof-side-cabinet",
+          "platformTopology": "recessed machinery landings joined by rear catwalk",
+          "nativeResolutionReview": true
+        },
+        "nominalDimensionsMeasured": false,
+        "positionBasis": "mezzanine-overlook-relative-topology-in-1f-envelope",
+        "currentOemOrHistoricalIdentityConfirmed": false
+      },
+      "placementRevision": "dryer-route-1f-20261112"
+    },
+    {
+      "id": "f1-ica-3",
+      "floor": 1,
+      "name": "1층 관찰 포장기 C",
+      "position": [
+        5,
+        0.3,
+        -2.5
+      ],
+      "rotation": 0,
+      "dryerRoute": {
+        "kind": "overlook-packing-cubicle",
+        "source": "dryer-entrance-mezzanine-video-20261112",
+        "sourceTimes": [
+          338,
+          342,
+          344,
+          346,
+          348,
+          350,
+          352,
+          354,
+          390,
+          396,
+          402
+        ],
+        "observedCounts": {
+          "minimumVisibleRoofedCubicles": 3,
+          "serialNumberConfirmed": false,
+          "sharedPlatformOwner": "f1-ica-1",
+          "feedVariant": "compact-round-doser",
+          "cabinetVariant": "front-upper-screen",
+          "platformTopology": "recessed machinery landings joined by rear catwalk",
+          "nativeResolutionReview": true
+        },
+        "nominalDimensionsMeasured": false,
+        "positionBasis": "mezzanine-overlook-relative-topology-in-1f-envelope",
+        "currentOemOrHistoricalIdentityConfirmed": false
+      },
+      "placementRevision": "dryer-route-1f-20261112"
+    },
+    {
+      "id": "f1-xray-1",
+      "floor": 1,
+      "name": "1층 포장 배출·검사부 A",
+      "position": [
+        -5.5,
+        0.3,
+        1.05
+      ],
+      "rotation": 0,
+      "dryerRoute": {
+        "kind": "overlook-inspection",
+        "source": "dryer-entrance-mezzanine-video-20261112",
+        "sourceTimes": [
+          344,
+          348,
+          350,
+          354,
+          390
+        ],
+        "observedCounts": {
+          "inspectionTechnologyConfirmed": false
+        },
+        "nominalDimensionsMeasured": false,
+        "positionBasis": "mezzanine-overlook-relative-topology-in-1f-envelope",
+        "currentOemOrHistoricalIdentityConfirmed": false
+      },
+      "placementRevision": "dryer-route-1f-20261112"
+    },
+    {
+      "id": "f1-xray-2",
+      "floor": 1,
+      "name": "1층 포장 배출·검사부 B",
+      "position": [
+        0,
+        0.3,
+        1.05
+      ],
+      "rotation": 0,
+      "dryerRoute": {
+        "kind": "overlook-inspection",
+        "source": "dryer-entrance-mezzanine-video-20261112",
+        "sourceTimes": [
+          344,
+          348,
+          350,
+          354,
+          390
+        ],
+        "observedCounts": {
+          "inspectionTechnologyConfirmed": false
+        },
+        "nominalDimensionsMeasured": false,
+        "positionBasis": "mezzanine-overlook-relative-topology-in-1f-envelope",
+        "currentOemOrHistoricalIdentityConfirmed": false
+      },
+      "placementRevision": "dryer-route-1f-20261112"
+    },
+    {
+      "id": "f1-xray-3",
+      "floor": 1,
+      "name": "1층 포장 배출·검사부 C",
+      "position": [
+        5,
+        0.3,
+        1.05
+      ],
+      "rotation": 0,
+      "dryerRoute": {
+        "kind": "overlook-inspection",
+        "source": "dryer-entrance-mezzanine-video-20261112",
+        "sourceTimes": [
+          344,
+          348,
+          350,
+          354,
+          390
+        ],
+        "observedCounts": {
+          "inspectionTechnologyConfirmed": false
+        },
+        "nominalDimensionsMeasured": false,
+        "positionBasis": "mezzanine-overlook-relative-topology-in-1f-envelope",
+        "currentOemOrHistoricalIdentityConfirmed": false
+      },
+      "placementRevision": "dryer-route-1f-20261112"
+    },
+    {
+      "id": "f1-conveyor-a",
+      "floor": 1,
+      "name": "1층 외포장 합류 롤러열",
+      "position": [
+        -2.1,
+        0.3,
+        14.5
+      ],
+      "rotation": 1.5707963267948966,
+      "dryerRoute": {
+        "kind": "overlook-roller-collector",
+        "source": "dryer-entrance-mezzanine-video-20261112",
+        "sourceTimes": [
+          234,
+          252,
+          264,
+          270,
+          282
+        ],
+        "observedCounts": {
+          "hiddenBlueToGreenConnectionConfirmed": false
+        },
+        "nominalDimensionsMeasured": false,
+        "positionBasis": "mezzanine-overlook-relative-topology-in-1f-envelope",
+        "currentOemOrHistoricalIdentityConfirmed": false
+      },
+      "placementRevision": null
+    },
+    {
+      "id": "f1-conveyor-b",
+      "floor": 1,
+      "name": "1층 외포장 곡선·되돌림 롤러",
+      "position": [
+        6.7,
+        0.3,
+        12.2
+      ],
+      "rotation": 0,
+      "dryerRoute": {
+        "kind": "overlook-roller-return",
+        "source": "dryer-entrance-mezzanine-video-20261112",
+        "sourceTimes": [
+          252,
+          264,
+          270,
+          282
+        ],
+        "observedCounts": {
+          "observedCurvedReturn": true
+        },
+        "nominalDimensionsMeasured": false,
+        "positionBasis": "mezzanine-overlook-relative-topology-in-1f-envelope",
+        "currentOemOrHistoricalIdentityConfirmed": false
+      },
+      "placementRevision": "dryer-overlook-native-20261112"
+    },
+    {
+      "id": "f1-palletizer",
+      "floor": 1,
+      "name": "1층 관절형 이송암 2기·정렬 구역",
+      "position": [
+        10.8,
+        0.3,
+        13.7
+      ],
+      "rotation": 0,
+      "dryerRoute": {
+        "kind": "overlook-articulated-arm",
+        "source": "dryer-entrance-mezzanine-video-20261112",
+        "sourceTimes": [
+          252,
+          270,
+          282
+        ],
+        "observedCounts": {
+          "minimumSimultaneouslyVisibleArms": 2,
+          "blueBaseAndArticulatedArm": true,
+          "separateCreamArm": true,
+          "minimumParallelAlignmentLanes": 3,
+          "operatingEnvelopeConfirmed": false
+        },
+        "nominalDimensionsMeasured": false,
+        "positionBasis": "mezzanine-overlook-relative-topology-in-1f-envelope",
+        "currentOemOrHistoricalIdentityConfirmed": false
+      },
+      "placementRevision": "dryer-overlook-native-20261112"
+    },
+    {
+      "id": "f3-sterilizer",
+      "floor": 3,
+      "name": "3층 스테인리스 판형·펌프 설비",
+      "position": [
+        -5.9,
+        7.3,
+        -4.8
+      ],
+      "rotation": 0,
+      "dryerRoute": {
+        "kind": "third-service-skid",
+        "source": "dryer-entrance-mezzanine-video-20261112",
+        "sourceTimes": [
+          575,
+          579,
+          586,
+          590,
+          593,
+          596
+        ],
+        "observedCounts": {},
+        "nominalDimensionsMeasured": false,
+        "positionBasis": "continuous-video-relative-topology-in-reduced-3f-envelope",
+        "currentOemOrHistoricalIdentityConfirmed": false
+      },
+      "placementRevision": null
+    },
+    {
+      "id": "f3-homogenizer",
+      "floor": 3,
+      "name": "3층 구동 프레임·제어함",
+      "position": [
+        -5.9,
+        7.3,
+        -0.2
+      ],
+      "rotation": 0,
+      "dryerRoute": {
+        "kind": "third-drive-frame",
+        "source": "dryer-entrance-mezzanine-video-20261112",
+        "sourceTimes": [
+          588,
+          605,
+          608,
+          614,
+          714
+        ],
+        "observedCounts": {},
+        "nominalDimensionsMeasured": false,
+        "positionBasis": "continuous-video-relative-topology-in-reduced-3f-envelope",
+        "currentOemOrHistoricalIdentityConfirmed": false
+      },
+      "placementRevision": "dryer-route-3f-20261112"
+    },
+    {
+      "id": "f3-balance-tank",
+      "floor": 3,
+      "name": "3층 원통형 스테인리스 탱크",
+      "position": [
+        -6.8,
+        7.3,
+        4
+      ],
+      "rotation": 0,
+      "dryerRoute": {
+        "kind": "third-cylinder",
+        "source": "dryer-entrance-mezzanine-video-20261112",
+        "sourceTimes": [
+          589,
+          590,
+          599,
+          600
+        ],
+        "observedCounts": {
+          "visibleStandaloneTanks": 1
+        },
+        "nominalDimensionsMeasured": false,
+        "positionBasis": "continuous-video-relative-topology-in-reduced-3f-envelope",
+        "currentOemOrHistoricalIdentityConfirmed": false
+      },
+      "placementRevision": null
+    },
+    {
+      "id": "f3-feed-tank",
+      "floor": 3,
+      "name": "3층 CIP·탱크 점검대",
+      "position": [
+        -2.3,
+        7.3,
+        4.4
+      ],
+      "rotation": 0,
+      "dryerRoute": {
+        "kind": "third-cip-deck",
+        "source": "dryer-entrance-mezzanine-video-20261112",
+        "sourceTimes": [
+          626,
+          648,
+          686,
+          692,
+          702,
+          706,
+          708,
+          714,
+          720
+        ],
+        "observedCounts": {
+          "minimumVisibleTankTops": 2,
+          "totalTankCountConfirmed": false,
+          "readableLabels": [
+            "CIP탱크(산)"
+          ]
+        },
+        "nominalDimensionsMeasured": false,
+        "positionBasis": "continuous-video-relative-topology-in-reduced-3f-envelope",
+        "currentOemOrHistoricalIdentityConfirmed": false
+      },
+      "placementRevision": null
+    },
+    {
+      "id": "f3-holding",
+      "floor": 3,
+      "name": "3층 원추 호퍼 2기·이송부",
+      "position": [
+        5.5,
+        7.3,
+        1.1
+      ],
+      "rotation": 0,
+      "dryerRoute": {
+        "kind": "third-cone-bank",
+        "source": "dryer-entrance-mezzanine-video-20261112",
+        "sourceTimes": [
+          502,
+          508,
+          514,
+          516,
+          520,
+          538,
+          540,
+          548,
+          554,
+          563
+        ],
+        "observedCounts": {
+          "conicalHoppers": 2,
+          "verticalMotorHousings": 2,
+          "coveredTransferTroughs": 3
+        },
+        "nominalDimensionsMeasured": false,
+        "positionBasis": "continuous-video-relative-topology-in-reduced-3f-envelope",
+        "currentOemOrHistoricalIdentityConfirmed": false
+      },
+      "placementRevision": null
+    }
+  ],
+  "compatibility": {
+    "legacyMezzanineInternalId": 2,
+    "displayName": "1.5F",
+    "canonicalUrl": "?floor=2",
+    "acceptedAlias": "?floor=1.5",
+    "packagingBuildingSecondFloor": "unchanged and distinct",
+    "existingEquipmentIds": "preserved",
+    "manualLayoutEditsAndExplicitImports": "preserved; one-time repairs match only exact revision-qualified prior default positions and rotations",
+    "floor1CorrectionRevision": "dryer-route-1f-20261112",
+    "floor3CorrectionRevision": "dryer-route-3f-20261112",
+    "nativeOverlookCorrectionRevision": "dryer-overlook-native-20261112"
+  },
+  "validation": {
+    "fullTests": {
+      "command": "npm test",
+      "passed": 440,
+      "failed": 0,
+      "skipped": 0,
+      "durationSeconds": 21.5931762,
+      "log": "workspace/dryer-entrance-mezzanine-20261112/final-completion-tests.log",
+      "reportedBy": "final_model_qa agent",
+      "stage": "final-native-resolution-detail",
+      "scopeNote": "Complete repository suite after the final native geometry and the five added third-floor context tests. Earlier test-authoring failure and successful rerun are preserved in the same log."
+    },
+    "syntaxAndAssets": {
+      "command": "npm run check",
+      "javascriptFiles": 87,
+      "status": "passed",
+      "checks": [
+        "JavaScript syntax",
+        "Local module/HTML/CSS paths",
+        "Asset lists, images, references and required files"
+      ],
+      "log": "workspace/dryer-entrance-mezzanine-20261112/final-completion-tests.log",
+      "reportedBy": "final_model_qa agent",
+      "stage": "final-native-resolution-detail"
+    },
+    "targetedTests": {
+      "command": "node --test tests/dryer-controller.test.mjs tests/dryer-presentation.test.mjs tests/share-export.test.mjs tests/layout-editor.test.mjs",
+      "passed": 56,
+      "failed": 0,
+      "durationSeconds": 13.2530903,
+      "checks": [
+        "Legacy and alias floor links, readable display/download names",
+        "Real scene construction in the dryer-only offline bundle",
+        "Full and hosted bundles retain every observed equipment configuration and per-item correction stamp",
+        "Exact legacy defaults repair once; manual moves, turns, stamps and explicit imports remain intentional"
+      ]
+    },
+    "walkAndContextChecks": [
+      "Actual southeast stair from 1F to 1.5F and northeast stair from 1.5F to 3F support both flights, return landings and stationary upper landings",
+      "Selected 1.5F and whole-building person views retain connected lower-floor support",
+      "Perspective/aisle mezzanine views include the real first-floor hall; plan view removes the lower context",
+      "Obstacle caches are keyed by actual walking height",
+      "Independent campus, packaging, wastewater and upper dryer context tests passed"
+    ],
+    "liveAppChecks": {
+      "floorAliasAndFloor1Button": "passed in actual local app browser",
+      "screenshots": [
+        {
+          "path": "workspace/dryer-entrance-mezzanine-20261112/1f-layout-after.png",
+          "bytes": 523221,
+          "reviewedBy": "root agent",
+          "status": "created and visually reviewed in the live browser task",
+          "phase": "historical-stage-1"
+        },
+        {
+          "path": "workspace/dryer-entrance-mezzanine-20261112/1f-blue-overlook-after.png",
+          "bytes": 622742,
+          "reviewedBy": "root agent",
+          "status": "created and visually reviewed in the live browser task",
+          "phase": "historical-stage-1"
+        },
+        {
+          "path": "workspace/dryer-entrance-mezzanine-20261112/1f-green-overlook-after.png",
+          "bytes": 582329,
+          "reviewedBy": "root agent",
+          "status": "created and visually reviewed in the live browser task",
+          "phase": "historical-stage-1"
+        },
+        {
+          "path": "workspace/dryer-entrance-mezzanine-20261112/dressing-after.png",
+          "bytes": 550682,
+          "reviewedBy": "root agent",
+          "status": "created and visually reviewed in the live browser task",
+          "phase": "historical-stage-1"
+        },
+        {
+          "path": "workspace/dryer-entrance-mezzanine-20261112/op-room-after.png",
+          "bytes": 753349,
+          "reviewedBy": "root agent",
+          "status": "created and visually reviewed in the live browser task",
+          "phase": "historical-stage-1"
+        },
+        {
+          "path": "workspace/dryer-entrance-mezzanine-20261112/3f-layout-after.png",
+          "bytes": 185935,
+          "reviewedBy": "root agent",
+          "status": "created and visually reviewed in the live browser task",
+          "phase": "historical-stage-1"
+        },
+        {
+          "path": "workspace/dryer-entrance-mezzanine-20261112/1f-app-after.png",
+          "bytes": 250323,
+          "reviewedBy": "root agent",
+          "status": "created and visually reviewed in the live browser task",
+          "phase": "historical-stage-1"
+        }
+      ],
+      "reviewedBy": "root agent"
+    },
+    "nativeLiveAppChecks": {
+      "reviewedBy": "root agent",
+      "status": "created and visually reviewed in actual local app",
+      "screenshots": [
+        {
+          "path": "workspace/dryer-entrance-mezzanine-20261112/1f-layout-native-after.png",
+          "bytes": 568546,
+          "reviewedBy": "root agent",
+          "status": "visually reviewed"
+        },
+        {
+          "path": "workspace/dryer-entrance-mezzanine-20261112/1f-blue-native-after.png",
+          "bytes": 681477,
+          "reviewedBy": "root agent",
+          "status": "visually reviewed"
+        },
+        {
+          "path": "workspace/dryer-entrance-mezzanine-20261112/1f-twin-feed-native-after.png",
+          "bytes": 387430,
+          "reviewedBy": "root agent",
+          "status": "visually reviewed"
+        },
+        {
+          "path": "workspace/dryer-entrance-mezzanine-20261112/1f-green-native-after.png",
+          "bytes": 734826,
+          "reviewedBy": "root agent",
+          "status": "visually reviewed"
+        },
+        {
+          "path": "workspace/dryer-entrance-mezzanine-20261112/1f-transfer-native-overview-after.png",
+          "bytes": 582249,
+          "reviewedBy": "root agent",
+          "status": "visually reviewed"
+        },
+        {
+          "path": "workspace/dryer-entrance-mezzanine-20261112/3f-layout-native-after.png",
+          "bytes": 211012,
+          "reviewedBy": "root agent",
+          "status": "visually reviewed"
+        },
+        {
+          "path": "workspace/dryer-entrance-mezzanine-20261112/3f-cones-native-after.png",
+          "bytes": 377459,
+          "reviewedBy": "root agent",
+          "status": "visually reviewed"
+        },
+        {
+          "path": "workspace/dryer-entrance-mezzanine-20261112/3f-cip-native-after.png",
+          "bytes": 405612,
+          "reviewedBy": "root agent",
+          "status": "visually reviewed"
+        }
+      ]
+    },
+    "currentPhase": {
+      "name": "final-native-resolution-detail",
+      "status": "complete and validated",
+      "fullTestsPassed": 440,
+      "fullTestsFailed": 0,
+      "syntaxAndAssets": "passed",
+      "nativeScreenshotsReviewed": 8,
+      "offlinePresentationScreenshotsReviewed": 2,
+      "offlineFullWorkspaceScreenshotsReviewed": 1
+    },
+    "nativeContextRegression": {
+      "file": "tests/dryer-third-context-native.test.mjs",
+      "passed": 5,
+      "failed": 0,
+      "checks": [
+        "True openings for both stacked yellow window rows",
+        "Three caged IBCs",
+        "Horizontal flush drain grates",
+        "Ceiling hanger attachment, registered hall bounds and central aisle",
+        "Narrow door pane and closed unknown-destination shutter"
+      ]
+    },
+    "finalOfflinePresentation": {
+      "artifactProfile": "dryer-presentation",
+      "reviewedBy": "root agent",
+      "status": "passed in actual local browser",
+      "checks": [
+        "Standalone HTML loads",
+        "1.5F alias resolves",
+        "1.5F to 3F floor transition works",
+        "Browser console errors: 0"
+      ],
+      "screenshots": [
+        {
+          "path": "workspace/dryer-entrance-mezzanine-20261112/presentation-1p5-final.png",
+          "bytes": 223493,
+          "reviewedBy": "root agent",
+          "status": "visually reviewed"
+        },
+        {
+          "path": "workspace/dryer-entrance-mezzanine-20261112/presentation-3f-final.png",
+          "bytes": 86753,
+          "reviewedBy": "root agent",
+          "status": "visually reviewed"
+        }
+      ]
+    },
+    "finalOfflineFullWorkspace": {
+      "artifactProfile": "full-workspace",
+      "reviewedBy": "root agent",
+      "status": "passed in actual local browser",
+      "checks": [
+        "Integrated standalone HTML iframe executes",
+        "1.5F floor selection works",
+        "Browser console errors: 0"
+      ],
+      "screenshots": [
+        {
+          "path": "workspace/dryer-entrance-mezzanine-20261112/share-runtime-final.png",
+          "bytes": 231188,
+          "reviewedBy": "root agent",
+          "status": "visually reviewed"
+        }
+      ]
+    }
+  },
+  "exports": [
+    {
+      "path": "exports/건조기-통합-공유.html",
+      "profile": "full-workspace",
+      "bytes": 17710802,
+      "sha256": "c66e6fbc85e4c031437e3da0251526a6f5d11caa61f28c8ad33338df77b0d6b5",
+      "equipmentCount": 47,
+      "videoShapeConfigurations": 14,
+      "dressingDoorVerified": [
+        30.4,
+        17.7
+      ],
+      "approachStripVerifiedZ": 18.075,
+      "northStairWindowVerified": true,
+      "stage": "final-native-detail-validated",
+      "regeneratedAfterNativeDetail": true,
+      "verifiedBy": "root live-app review and final_records hash comparison",
+      "gitTracked": false
+    },
+    {
+      "path": "exports/건조실-발표용.html",
+      "profile": "dryer-presentation",
+      "bytes": 4582015,
+      "sha256": "9f4147c8444eaae830bfc6a4e7fa11894c3023acc7357a6145c77e52c5f9c005",
+      "equipmentCount": 46,
+      "videoShapeConfigurations": 14,
+      "dressingDoorVerified": [
+        30.4,
+        17.7
+      ],
+      "approachStripVerifiedZ": 18.075,
+      "northStairWindowVerified": true,
+      "stage": "final-native-detail-validated",
+      "regeneratedAfterNativeDetail": true,
+      "verifiedBy": "root live-app review and final_records hash comparison",
+      "gitTracked": false
+    }
+  ],
+  "publication": {
+    "onlineDeploymentPerformed": false,
+    "outputs": "Final regenerated standalone full-workspace and dryer-presentation HTML files; no online deployment performed.",
+    "git": {
+      "repository": "minhyun133601-arch/dryer-workspace",
+      "url": "https://github.com/minhyun133601-arch/dryer-workspace",
+      "visibility": "private",
+      "status": "repository created; commit/push result recorded separately",
+      "originalVideoIncluded": false,
+      "largeCadAndReferenceOriginalsIncluded": false,
+      "generatedExportsIncluded": false,
+      "storedContent": "Code, validation, evidence records and standalone-artifact regeneration tools",
+      "localCompletionReceipt": "tmp/push-completion-20261112.json"
+    }
+  },
+  "backup": {
+    "root": ".backups/dryer-entrance-mezzanine-20261112",
+    "files": [
+      ".backups/dryer-entrance-mezzanine-20261112/apps/site/app.js",
+      ".backups/dryer-entrance-mezzanine-20261112/apps/site/asset-catalog.js",
+      ".backups/dryer-entrance-mezzanine-20261112/apps/site/building-data.js",
+      ".backups/dryer-entrance-mezzanine-20261112/apps/site/campus-data.js",
+      ".backups/dryer-entrance-mezzanine-20261112/apps/site/campus-rear-models.js",
+      ".backups/dryer-entrance-mezzanine-20261112/apps/site/dryer-building-data.js",
+      ".backups/dryer-entrance-mezzanine-20261112/apps/site/dryer-building-envelope.js",
+      ".backups/dryer-entrance-mezzanine-20261112/apps/site/dryer-lower-registration.js",
+      ".backups/dryer-entrance-mezzanine-20261112/apps/site/dryer-process-models.js",
+      ".backups/dryer-entrance-mezzanine-20261112/apps/site/layout-editor.js",
+      ".backups/dryer-entrance-mezzanine-20261112/apps/site/preparation-environment.js",
+      ".backups/dryer-entrance-mezzanine-20261112/apps/site/scene.js",
+      ".backups/dryer-entrance-mezzanine-20261112/apps/site/share/app.js",
+      ".backups/dryer-entrance-mezzanine-20261112/apps/site/share/dryer-app.js",
+      ".backups/dryer-entrance-mezzanine-20261112/apps/site/share/index.html",
+      ".backups/dryer-entrance-mezzanine-20261112/docs/asset-index.csv",
+      ".backups/dryer-entrance-mezzanine-20261112/docs/site.md",
+      ".backups/dryer-entrance-mezzanine-20261112/tests/dryer-controller.test.mjs",
+      ".backups/dryer-entrance-mezzanine-20261112/tests/dryer-presentation.test.mjs",
+      ".backups/dryer-entrance-mezzanine-20261112/tests/dryer-process-models.test.mjs",
+      ".backups/dryer-entrance-mezzanine-20261112/tests/dryer-upper-scene.test.mjs",
+      ".backups/dryer-entrance-mezzanine-20261112/tests/entrance-route.test.mjs",
+      ".backups/dryer-entrance-mezzanine-20261112/tests/layout-editor.test.mjs",
+      ".backups/dryer-entrance-mezzanine-20261112/tests/person-view.test.mjs",
+      ".backups/dryer-entrance-mezzanine-20261112/tests/preparation-environment.test.mjs",
+      ".backups/dryer-entrance-mezzanine-20261112/tests/share-export.test.mjs",
+      ".backups/dryer-entrance-mezzanine-20261112/tooling/export-dryer-presentation.mjs",
+      ".backups/dryer-entrance-mezzanine-20261112/tooling/export-site.mjs"
+    ]
+  },
+  "newModelSource": "apps/site/dryer-route-environment.js",
+  "status": "native-detail-complete-and-validated",
+  "furtherDetailedReviewInProgress": false,
+  "finalValidationPending": false,
+  "phaseHistory": {
+    "stage1": {
+      "status": "historical-validated-baseline",
+      "description": "Before the final native-resolution detail pass; preserved for comparison, not the latest model state.",
+      "fullTests": {
+        "command": "npm test",
+        "passed": 419,
+        "failed": 0,
+        "durationSeconds": 23.2905064,
+        "log": "workspace/dryer-entrance-mezzanine-20261112/full-tests-final.log",
+        "reportedBy": "root agent",
+        "scopeNote": "Geometry and behavior suite; the subsequent floor-1 name/summary-only text edit passed the root site/controller subset.",
+        "stage": "stage-1 baseline before the additional meticulous 1F-first and 3F detail pass"
+      },
+      "syntaxAndAssets": {
+        "command": "npm run check",
+        "javascriptFiles": 87,
+        "status": "passed",
+        "reportedBy": "root agent"
+      },
+      "targetedTests": {
+        "command": "node --test tests/dryer-controller.test.mjs tests/dryer-presentation.test.mjs tests/share-export.test.mjs tests/layout-editor.test.mjs",
+        "passed": 56,
+        "failed": 0,
+        "durationSeconds": 13.2530903,
+        "checks": [
+          "Legacy and alias floor links, readable display/download names",
+          "Real scene construction in the dryer-only offline bundle",
+          "Full and hosted bundles retain every observed equipment configuration and per-item correction stamp",
+          "Exact legacy defaults repair once; manual moves, turns, stamps and explicit imports remain intentional"
+        ]
+      },
+      "screenshots": [
+        {
+          "path": "workspace/dryer-entrance-mezzanine-20261112/1f-layout-after.png",
+          "bytes": 523221,
+          "reviewedBy": "root agent",
+          "status": "created and visually reviewed in the live browser task"
+        },
+        {
+          "path": "workspace/dryer-entrance-mezzanine-20261112/1f-blue-overlook-after.png",
+          "bytes": 622742,
+          "reviewedBy": "root agent",
+          "status": "created and visually reviewed in the live browser task"
+        },
+        {
+          "path": "workspace/dryer-entrance-mezzanine-20261112/1f-green-overlook-after.png",
+          "bytes": 582329,
+          "reviewedBy": "root agent",
+          "status": "created and visually reviewed in the live browser task"
+        },
+        {
+          "path": "workspace/dryer-entrance-mezzanine-20261112/dressing-after.png",
+          "bytes": 550682,
+          "reviewedBy": "root agent",
+          "status": "created and visually reviewed in the live browser task"
+        },
+        {
+          "path": "workspace/dryer-entrance-mezzanine-20261112/op-room-after.png",
+          "bytes": 753349,
+          "reviewedBy": "root agent",
+          "status": "created and visually reviewed in the live browser task"
+        },
+        {
+          "path": "workspace/dryer-entrance-mezzanine-20261112/3f-layout-after.png",
+          "bytes": 185935,
+          "reviewedBy": "root agent",
+          "status": "created and visually reviewed in the live browser task"
+        },
+        {
+          "path": "workspace/dryer-entrance-mezzanine-20261112/1f-app-after.png",
+          "bytes": 250323,
+          "reviewedBy": "root agent",
+          "status": "created and visually reviewed in the live browser task"
+        }
+      ],
+      "exports": [
+        {
+          "path": "exports/건조기-통합-공유.html",
+          "profile": "full-workspace",
+          "bytes": 17662678,
+          "sha256": "d11b2b43a545131e14db1d644c83ef3c279a8d0214db95fce35487e51c8b3ba3",
+          "equipmentCount": 47,
+          "videoShapeConfigurations": 14,
+          "dressingDoorVerified": [
+            30.4,
+            17.7
+          ],
+          "approachStripVerifiedZ": 18.075,
+          "northStairWindowVerified": true,
+          "stage": "stage-1 baseline; final regeneration awaits the next detail pass"
+        },
+        {
+          "path": "exports/건조실-발표용.html",
+          "profile": "dryer-presentation",
+          "bytes": 4535263,
+          "sha256": "1a4595d97d61593c026dcd689fb67803aef419addd57501a9acd5f262e95b3cc",
+          "equipmentCount": 46,
+          "videoShapeConfigurations": 14,
+          "dressingDoorVerified": [
+            30.4,
+            17.7
+          ],
+          "approachStripVerifiedZ": 18.075,
+          "northStairWindowVerified": true,
+          "stage": "stage-1 baseline; final regeneration awaits the next detail pass"
+        }
+      ],
+      "exportBackup": ".backups/dryer-native-detail-stage1-20261112/"
+    }
+  },
+  "nativeDetailReview": {
+    "phase": "final-native-resolution-detail",
+    "implementationStatus": "complete; full-suite, syntax/assets, live screenshots and regenerated offline presentation verified",
+    "nativeImageSize": [
+      1080,
+      1920
+    ],
+    "nativeExtractFolder": "workspace/dryer-entrance-mezzanine-20261112/native",
+    "storedNativeImageCount": 51,
+    "method": "48 primary original-resolution timestamp extracts plus supplementary detail frames; motion-blurred 480s adds no reliable new geometry. Full route is covered by the existing 6-second overview and denser panels, not every encoded frame manually inspected.",
+    "evidenceRecords": [
+      "references/dryer-entrance-mezzanine-20261112/green-overlook-detailed-review.json",
+      "references/dryer-entrance-mezzanine-20261112/third-floor-native-review.json"
+    ],
+    "corrections": {
+      "firstFloorBlue": [
+        "One tall rectangular V/twin-outlet feed and two round dosers instead of three identical hoppers",
+        "Notched platform/three machinery landings/rear catwalk, six braces and four-hoop ladder",
+        "Different cubicle roofs/guards/control forms and vented cabinet; no unverified X-ray curtain tunnel"
+      ],
+      "firstFloorGreen": [
+        "Two separate blue/cream arms and three alignment lanes",
+        "Compact guarded case-packers, short angled merges, brown radial curve and side guards",
+        "Column, internal-divider and fence clearances; no invented hidden blue-to-green connection"
+      ],
+      "firstFloorContext": [
+        "Six hollow HVAC jet outlets and separate lower cabinet",
+        "Floor fan and two wrapped corrugated bundles"
+      ],
+      "mezzanine": [
+        "1.5F display naming with stable internal ID 2",
+        "One observed dressing room, OP room and windows with first-floor overlook",
+        "Continuous southeast and northeast stair links; solid dressing threshold approach"
+      ],
+      "thirdFloorContext": [
+        "Reduced tower floor distinct from lower roof areas",
+        "True stacked window openings with two yellow rows and lower stainless wall protection",
+        "Flush drains, three IBCs and visible supported overhead services",
+        "Narrow yellow door pane, real perforated stair door and closed shutter with unknown destination"
+      ],
+      "thirdFloorEquipment": [
+        "Two differing cone feeds including white flexible coupling, flange outlets and manifolds",
+        "CIP bolted motor flanges, attached hinged open lids, checker relief and three dark displays",
+        "Tank/deck holes stay open and local equipment decks are not new storeys"
+      ]
+    },
+    "limits": [
+      "Proportional registration and inherited historical dimensions, not current measured dimensions",
+      "Photographed plans reference-only; phone GPS/altitude/compass are not indoor geometry",
+      "Hidden connections, machine OEM/function, IBC contents and door/shutter destinations remain unconfirmed",
+      "No fabricated access digits, personal identities or unreadable operating readings"
+    ]
+  },
+  "completionRecord": "docs/work-completion-20261112.md"
+}

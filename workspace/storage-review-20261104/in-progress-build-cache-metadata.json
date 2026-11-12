@@ -1,0 +1,252 @@
+{
+  "root": "C:\\Users\\user\\Desktop\\진행중",
+  "subfolders": [
+    {
+      "name": "간이캐드",
+      "logical_bytes": 15413352103,
+      "file_count": 68209
+    },
+    {
+      "name": "tmp",
+      "logical_bytes": 35616946,
+      "file_count": 368
+    },
+    {
+      "name": ".playwright-mcp",
+      "logical_bytes": 39669,
+      "file_count": 3
+    }
+  ],
+  "development_cache_candidates": [
+    {
+      "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\target",
+      "name": "target",
+      "logical_bytes": 8867769725,
+      "file_count": 11722,
+      "regeneration_metadata": {
+        "Cargo.toml_exists": true,
+        "package.json_exists": true,
+        "package_lock_exists": true
+      },
+      "classification": "regenerable development output/dependencies; user work project; confirm current use and accept rebuild/reinstall before deletion"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\node_modules",
+      "name": "node_modules",
+      "logical_bytes": 272172616,
+      "file_count": 7054,
+      "regeneration_metadata": {
+        "Cargo.toml_exists": true,
+        "package.json_exists": true,
+        "package_lock_exists": true
+      },
+      "classification": "regenerable development output/dependencies; user work project; confirm current use and accept rebuild/reinstall before deletion"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\apps\\web\\node_modules",
+      "name": "node_modules",
+      "logical_bytes": 7653504,
+      "file_count": 24,
+      "regeneration_metadata": {
+        "Cargo.toml_exists": false,
+        "package.json_exists": true,
+        "package_lock_exists": false
+      },
+      "classification": "regenerable development output/dependencies; user work project; confirm current use and accept rebuild/reinstall before deletion"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\.tools\\pdf-qa\\PIL\\__pycache__",
+      "name": "__pycache__",
+      "logical_bytes": 1381401,
+      "file_count": 97,
+      "regeneration_metadata": {
+        "Cargo.toml_exists": false,
+        "package.json_exists": false,
+        "package_lock_exists": false
+      },
+      "classification": "regenerable development output/dependencies; user work project; confirm current use and accept rebuild/reinstall before deletion"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\.tools\\pdf-qa\\pypdf\\_codecs\\__pycache__",
+      "name": "__pycache__",
+      "logical_bytes": 997207,
+      "file_count": 8,
+      "regeneration_metadata": {
+        "Cargo.toml_exists": false,
+        "package.json_exists": false,
+        "package_lock_exists": false
+      },
+      "classification": "regenerable development output/dependencies; user work project; confirm current use and accept rebuild/reinstall before deletion"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\.tools\\pdf-qa\\pypdf\\__pycache__",
+      "name": "__pycache__",
+      "logical_bytes": 658053,
+      "file_count": 19,
+      "regeneration_metadata": {
+        "Cargo.toml_exists": false,
+        "package.json_exists": false,
+        "package_lock_exists": false
+      },
+      "classification": "regenerable development output/dependencies; user work project; confirm current use and accept rebuild/reinstall before deletion"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\.tools\\pdf-qa\\pypdf\\generic\\__pycache__",
+      "name": "__pycache__",
+      "logical_bytes": 310385,
+      "file_count": 15,
+      "regeneration_metadata": {
+        "Cargo.toml_exists": false,
+        "package.json_exists": false,
+        "package_lock_exists": false
+      },
+      "classification": "regenerable development output/dependencies; user work project; confirm current use and accept rebuild/reinstall before deletion"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\.tools\\pdf-qa\\pypdfium2\\_helpers\\__pycache__",
+      "name": "__pycache__",
+      "logical_bytes": 173777,
+      "file_count": 11,
+      "regeneration_metadata": {
+        "Cargo.toml_exists": false,
+        "package.json_exists": false,
+        "package_lock_exists": false
+      },
+      "classification": "regenerable development output/dependencies; user work project; confirm current use and accept rebuild/reinstall before deletion"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\.tools\\pdf-qa\\pypdfium2_raw\\__pycache__",
+      "name": "__pycache__",
+      "logical_bytes": 114066,
+      "file_count": 3,
+      "regeneration_metadata": {
+        "Cargo.toml_exists": false,
+        "package.json_exists": false,
+        "package_lock_exists": false
+      },
+      "classification": "regenerable development output/dependencies; user work project; confirm current use and accept rebuild/reinstall before deletion"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\.tools\\pdf-qa\\pypdfium2_cli\\__pycache__",
+      "name": "__pycache__",
+      "logical_bytes": 83203,
+      "file_count": 17,
+      "regeneration_metadata": {
+        "Cargo.toml_exists": false,
+        "package.json_exists": false,
+        "package_lock_exists": false
+      },
+      "classification": "regenerable development output/dependencies; user work project; confirm current use and accept rebuild/reinstall before deletion"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\.tools\\pdf-qa\\pypdf\\_text_extraction\\_layout_mode\\__pycache__",
+      "name": "__pycache__",
+      "logical_bytes": 40652,
+      "file_count": 4,
+      "regeneration_metadata": {
+        "Cargo.toml_exists": false,
+        "package.json_exists": false,
+        "package_lock_exists": false
+      },
+      "classification": "regenerable development output/dependencies; user work project; confirm current use and accept rebuild/reinstall before deletion"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\.tools\\pdf-qa\\pypdf\\_text_extraction\\__pycache__",
+      "name": "__pycache__",
+      "logical_bytes": 28332,
+      "file_count": 2,
+      "regeneration_metadata": {
+        "Cargo.toml_exists": false,
+        "package.json_exists": false,
+        "package_lock_exists": false
+      },
+      "classification": "regenerable development output/dependencies; user work project; confirm current use and accept rebuild/reinstall before deletion"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\.tools\\pdf-qa\\pypdfium2\\internal\\__pycache__",
+      "name": "__pycache__",
+      "logical_bytes": 23474,
+      "file_count": 4,
+      "regeneration_metadata": {
+        "Cargo.toml_exists": false,
+        "package.json_exists": false,
+        "package_lock_exists": false
+      },
+      "classification": "regenerable development output/dependencies; user work project; confirm current use and accept rebuild/reinstall before deletion"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\.tools\\pdf-qa\\pypdf\\annotations\\__pycache__",
+      "name": "__pycache__",
+      "logical_bytes": 22090,
+      "file_count": 4,
+      "regeneration_metadata": {
+        "Cargo.toml_exists": false,
+        "package.json_exists": false,
+        "package_lock_exists": false
+      },
+      "classification": "regenerable development output/dependencies; user work project; confirm current use and accept rebuild/reinstall before deletion"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\.tools\\pdf-qa\\pypdf\\_crypt_providers\\__pycache__",
+      "name": "__pycache__",
+      "logical_bytes": 20417,
+      "file_count": 5,
+      "regeneration_metadata": {
+        "Cargo.toml_exists": false,
+        "package.json_exists": false,
+        "package_lock_exists": false
+      },
+      "classification": "regenerable development output/dependencies; user work project; confirm current use and accept rebuild/reinstall before deletion"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\.tools\\pdf-qa\\pypdf\\actions\\__pycache__",
+      "name": "__pycache__",
+      "logical_bytes": 9074,
+      "file_count": 2,
+      "regeneration_metadata": {
+        "Cargo.toml_exists": false,
+        "package.json_exists": false,
+        "package_lock_exists": false
+      },
+      "classification": "regenerable development output/dependencies; user work project; confirm current use and accept rebuild/reinstall before deletion"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\.tools\\pdf-qa\\pypdfium2\\__pycache__",
+      "name": "__pycache__",
+      "logical_bytes": 7825,
+      "file_count": 6,
+      "regeneration_metadata": {
+        "Cargo.toml_exists": false,
+        "package.json_exists": false,
+        "package_lock_exists": false
+      },
+      "classification": "regenerable development output/dependencies; user work project; confirm current use and accept rebuild/reinstall before deletion"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\.tools\\pdf-qa\\pypdfium2_cfg\\_shared\\__pycache__",
+      "name": "__pycache__",
+      "logical_bytes": 6669,
+      "file_count": 2,
+      "regeneration_metadata": {
+        "Cargo.toml_exists": false,
+        "package.json_exists": false,
+        "package_lock_exists": false
+      },
+      "classification": "regenerable development output/dependencies; user work project; confirm current use and accept rebuild/reinstall before deletion"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\.tools\\pdf-qa\\pypdfium2_cfg\\__pycache__",
+      "name": "__pycache__",
+      "logical_bytes": 1627,
+      "file_count": 2,
+      "regeneration_metadata": {
+        "Cargo.toml_exists": false,
+        "package.json_exists": false,
+        "package_lock_exists": false
+      },
+      "classification": "regenerable development output/dependencies; user work project; confirm current use and accept rebuild/reinstall before deletion"
+    }
+  ],
+  "skipped_reparse": 475,
+  "measurement": "read-only local metadata; excludes all reparse links; logical sizes are not a guaranteed reclaimed-space estimate"
+}

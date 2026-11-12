@@ -1,0 +1,36 @@
+node_modules/
+.backups/
+.playwright-mcp/
+exports/
+*.log
+tmp/workspace-server.json
+tmp/workspace-server.json.*.tmp
+
+# Local deployments, process state and generated files.
+/sites/
+/tmp/
+__pycache__/
+*.py[cod]
+*.lnk
+.env
+.env.*
+!.env.example
+
+# Raw video and large CAD originals remain available locally.
+*.mp4
+*.mov
+*.mkv
+*.avi
+*.webm
+/근거 자료/건물3D 후보도면/*
+!/근거 자료/건물3D 후보도면/00_*
+
+# Regenerable previews and private local access/process settings.
+/근거 자료/도면검토앱/cache/
+/근거 자료/도면검토앱/data/access.json
+/근거 자료/도면검토앱/data/server.json
+*.sqlite3-wal
+*.sqlite3-shm
+
+# Preserve the final, reviewed verification record.
+!workspace/dryer-entrance-mezzanine-20261112/final-completion-tests.log

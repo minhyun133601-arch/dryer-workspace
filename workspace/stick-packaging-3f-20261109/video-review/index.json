@@ -1,0 +1,985 @@
+{
+  "source": "좌표\\20261109_144753KST_GPS-VALID_LAT35.3623483_LON129.0303950_H214.1-TN_DIR-AVAILABLE_P-65.3_ACC37.5m_FV-c54af9f3-48dc-45ba-982d-b856cbecf21b.mp4",
+  "duration_seconds": 1102.886922,
+  "samples": [
+    {
+      "seconds": 0,
+      "file": "frames/frame-0000s.jpg"
+    },
+    {
+      "seconds": 5,
+      "file": "frames/frame-0005s.jpg"
+    },
+    {
+      "seconds": 10,
+      "file": "frames/frame-0010s.jpg"
+    },
+    {
+      "seconds": 15,
+      "file": "frames/frame-0015s.jpg"
+    },
+    {
+      "seconds": 20,
+      "file": "frames/frame-0020s.jpg"
+    },
+    {
+      "seconds": 25,
+      "file": "frames/frame-0025s.jpg"
+    },
+    {
+      "seconds": 30,
+      "file": "frames/frame-0030s.jpg"
+    },
+    {
+      "seconds": 35,
+      "file": "frames/frame-0035s.jpg"
+    },
+    {
+      "seconds": 40,
+      "file": "frames/frame-0040s.jpg"
+    },
+    {
+      "seconds": 45,
+      "file": "frames/frame-0045s.jpg"
+    },
+    {
+      "seconds": 50,
+      "file": "frames/frame-0050s.jpg"
+    },
+    {
+      "seconds": 55,
+      "file": "frames/frame-0055s.jpg"
+    },
+    {
+      "seconds": 60,
+      "file": "frames/frame-0060s.jpg"
+    },
+    {
+      "seconds": 65,
+      "file": "frames/frame-0065s.jpg"
+    },
+    {
+      "seconds": 70,
+      "file": "frames/frame-0070s.jpg"
+    },
+    {
+      "seconds": 75,
+      "file": "frames/frame-0075s.jpg"
+    },
+    {
+      "seconds": 80,
+      "file": "frames/frame-0080s.jpg"
+    },
+    {
+      "seconds": 85,
+      "file": "frames/frame-0085s.jpg"
+    },
+    {
+      "seconds": 90,
+      "file": "frames/frame-0090s.jpg"
+    },
+    {
+      "seconds": 95,
+      "file": "frames/frame-0095s.jpg"
+    },
+    {
+      "seconds": 100,
+      "file": "frames/frame-0100s.jpg"
+    },
+    {
+      "seconds": 105,
+      "file": "frames/frame-0105s.jpg"
+    },
+    {
+      "seconds": 110,
+      "file": "frames/frame-0110s.jpg"
+    },
+    {
+      "seconds": 115,
+      "file": "frames/frame-0115s.jpg"
+    },
+    {
+      "seconds": 120,
+      "file": "frames/frame-0120s.jpg"
+    },
+    {
+      "seconds": 125,
+      "file": "frames/frame-0125s.jpg"
+    },
+    {
+      "seconds": 130,
+      "file": "frames/frame-0130s.jpg"
+    },
+    {
+      "seconds": 135,
+      "file": "frames/frame-0135s.jpg"
+    },
+    {
+      "seconds": 140,
+      "file": "frames/frame-0140s.jpg"
+    },
+    {
+      "seconds": 145,
+      "file": "frames/frame-0145s.jpg"
+    },
+    {
+      "seconds": 150,
+      "file": "frames/frame-0150s.jpg"
+    },
+    {
+      "seconds": 155,
+      "file": "frames/frame-0155s.jpg"
+    },
+    {
+      "seconds": 160,
+      "file": "frames/frame-0160s.jpg"
+    },
+    {
+      "seconds": 165,
+      "file": "frames/frame-0165s.jpg"
+    },
+    {
+      "seconds": 170,
+      "file": "frames/frame-0170s.jpg"
+    },
+    {
+      "seconds": 175,
+      "file": "frames/frame-0175s.jpg"
+    },
+    {
+      "seconds": 180,
+      "file": "frames/frame-0180s.jpg"
+    },
+    {
+      "seconds": 185,
+      "file": "frames/frame-0185s.jpg"
+    },
+    {
+      "seconds": 190,
+      "file": "frames/frame-0190s.jpg"
+    },
+    {
+      "seconds": 195,
+      "file": "frames/frame-0195s.jpg"
+    },
+    {
+      "seconds": 200,
+      "file": "frames/frame-0200s.jpg"
+    },
+    {
+      "seconds": 205,
+      "file": "frames/frame-0205s.jpg"
+    },
+    {
+      "seconds": 210,
+      "file": "frames/frame-0210s.jpg"
+    },
+    {
+      "seconds": 215,
+      "file": "frames/frame-0215s.jpg"
+    },
+    {
+      "seconds": 220,
+      "file": "frames/frame-0220s.jpg"
+    },
+    {
+      "seconds": 225,
+      "file": "frames/frame-0225s.jpg"
+    },
+    {
+      "seconds": 230,
+      "file": "frames/frame-0230s.jpg"
+    },
+    {
+      "seconds": 235,
+      "file": "frames/frame-0235s.jpg"
+    },
+    {
+      "seconds": 240,
+      "file": "frames/frame-0240s.jpg"
+    },
+    {
+      "seconds": 245,
+      "file": "frames/frame-0245s.jpg"
+    },
+    {
+      "seconds": 250,
+      "file": "frames/frame-0250s.jpg"
+    },
+    {
+      "seconds": 255,
+      "file": "frames/frame-0255s.jpg"
+    },
+    {
+      "seconds": 260,
+      "file": "frames/frame-0260s.jpg"
+    },
+    {
+      "seconds": 265,
+      "file": "frames/frame-0265s.jpg"
+    },
+    {
+      "seconds": 270,
+      "file": "frames/frame-0270s.jpg"
+    },
+    {
+      "seconds": 275,
+      "file": "frames/frame-0275s.jpg"
+    },
+    {
+      "seconds": 280,
+      "file": "frames/frame-0280s.jpg"
+    },
+    {
+      "seconds": 285,
+      "file": "frames/frame-0285s.jpg"
+    },
+    {
+      "seconds": 290,
+      "file": "frames/frame-0290s.jpg"
+    },
+    {
+      "seconds": 295,
+      "file": "frames/frame-0295s.jpg"
+    },
+    {
+      "seconds": 300,
+      "file": "frames/frame-0300s.jpg"
+    },
+    {
+      "seconds": 305,
+      "file": "frames/frame-0305s.jpg"
+    },
+    {
+      "seconds": 310,
+      "file": "frames/frame-0310s.jpg"
+    },
+    {
+      "seconds": 315,
+      "file": "frames/frame-0315s.jpg"
+    },
+    {
+      "seconds": 320,
+      "file": "frames/frame-0320s.jpg"
+    },
+    {
+      "seconds": 325,
+      "file": "frames/frame-0325s.jpg"
+    },
+    {
+      "seconds": 330,
+      "file": "frames/frame-0330s.jpg"
+    },
+    {
+      "seconds": 335,
+      "file": "frames/frame-0335s.jpg"
+    },
+    {
+      "seconds": 340,
+      "file": "frames/frame-0340s.jpg"
+    },
+    {
+      "seconds": 345,
+      "file": "frames/frame-0345s.jpg"
+    },
+    {
+      "seconds": 350,
+      "file": "frames/frame-0350s.jpg"
+    },
+    {
+      "seconds": 355,
+      "file": "frames/frame-0355s.jpg"
+    },
+    {
+      "seconds": 360,
+      "file": "frames/frame-0360s.jpg"
+    },
+    {
+      "seconds": 365,
+      "file": "frames/frame-0365s.jpg"
+    },
+    {
+      "seconds": 370,
+      "file": "frames/frame-0370s.jpg"
+    },
+    {
+      "seconds": 375,
+      "file": "frames/frame-0375s.jpg"
+    },
+    {
+      "seconds": 380,
+      "file": "frames/frame-0380s.jpg"
+    },
+    {
+      "seconds": 385,
+      "file": "frames/frame-0385s.jpg"
+    },
+    {
+      "seconds": 390,
+      "file": "frames/frame-0390s.jpg"
+    },
+    {
+      "seconds": 395,
+      "file": "frames/frame-0395s.jpg"
+    },
+    {
+      "seconds": 400,
+      "file": "frames/frame-0400s.jpg"
+    },
+    {
+      "seconds": 405,
+      "file": "frames/frame-0405s.jpg"
+    },
+    {
+      "seconds": 410,
+      "file": "frames/frame-0410s.jpg"
+    },
+    {
+      "seconds": 415,
+      "file": "frames/frame-0415s.jpg"
+    },
+    {
+      "seconds": 420,
+      "file": "frames/frame-0420s.jpg"
+    },
+    {
+      "seconds": 425,
+      "file": "frames/frame-0425s.jpg"
+    },
+    {
+      "seconds": 430,
+      "file": "frames/frame-0430s.jpg"
+    },
+    {
+      "seconds": 435,
+      "file": "frames/frame-0435s.jpg"
+    },
+    {
+      "seconds": 440,
+      "file": "frames/frame-0440s.jpg"
+    },
+    {
+      "seconds": 445,
+      "file": "frames/frame-0445s.jpg"
+    },
+    {
+      "seconds": 450,
+      "file": "frames/frame-0450s.jpg"
+    },
+    {
+      "seconds": 455,
+      "file": "frames/frame-0455s.jpg"
+    },
+    {
+      "seconds": 460,
+      "file": "frames/frame-0460s.jpg"
+    },
+    {
+      "seconds": 465,
+      "file": "frames/frame-0465s.jpg"
+    },
+    {
+      "seconds": 470,
+      "file": "frames/frame-0470s.jpg"
+    },
+    {
+      "seconds": 475,
+      "file": "frames/frame-0475s.jpg"
+    },
+    {
+      "seconds": 480,
+      "file": "frames/frame-0480s.jpg"
+    },
+    {
+      "seconds": 485,
+      "file": "frames/frame-0485s.jpg"
+    },
+    {
+      "seconds": 490,
+      "file": "frames/frame-0490s.jpg"
+    },
+    {
+      "seconds": 495,
+      "file": "frames/frame-0495s.jpg"
+    },
+    {
+      "seconds": 500,
+      "file": "frames/frame-0500s.jpg"
+    },
+    {
+      "seconds": 505,
+      "file": "frames/frame-0505s.jpg"
+    },
+    {
+      "seconds": 510,
+      "file": "frames/frame-0510s.jpg"
+    },
+    {
+      "seconds": 515,
+      "file": "frames/frame-0515s.jpg"
+    },
+    {
+      "seconds": 520,
+      "file": "frames/frame-0520s.jpg"
+    },
+    {
+      "seconds": 525,
+      "file": "frames/frame-0525s.jpg"
+    },
+    {
+      "seconds": 530,
+      "file": "frames/frame-0530s.jpg"
+    },
+    {
+      "seconds": 535,
+      "file": "frames/frame-0535s.jpg"
+    },
+    {
+      "seconds": 540,
+      "file": "frames/frame-0540s.jpg"
+    },
+    {
+      "seconds": 545,
+      "file": "frames/frame-0545s.jpg"
+    },
+    {
+      "seconds": 550,
+      "file": "frames/frame-0550s.jpg"
+    },
+    {
+      "seconds": 555,
+      "file": "frames/frame-0555s.jpg"
+    },
+    {
+      "seconds": 560,
+      "file": "frames/frame-0560s.jpg"
+    },
+    {
+      "seconds": 565,
+      "file": "frames/frame-0565s.jpg"
+    },
+    {
+      "seconds": 570,
+      "file": "frames/frame-0570s.jpg"
+    },
+    {
+      "seconds": 575,
+      "file": "frames/frame-0575s.jpg"
+    },
+    {
+      "seconds": 580,
+      "file": "frames/frame-0580s.jpg"
+    },
+    {
+      "seconds": 585,
+      "file": "frames/frame-0585s.jpg"
+    },
+    {
+      "seconds": 590,
+      "file": "frames/frame-0590s.jpg"
+    },
+    {
+      "seconds": 595,
+      "file": "frames/frame-0595s.jpg"
+    },
+    {
+      "seconds": 600,
+      "file": "frames/frame-0600s.jpg"
+    },
+    {
+      "seconds": 605,
+      "file": "frames/frame-0605s.jpg"
+    },
+    {
+      "seconds": 610,
+      "file": "frames/frame-0610s.jpg"
+    },
+    {
+      "seconds": 615,
+      "file": "frames/frame-0615s.jpg"
+    },
+    {
+      "seconds": 620,
+      "file": "frames/frame-0620s.jpg"
+    },
+    {
+      "seconds": 625,
+      "file": "frames/frame-0625s.jpg"
+    },
+    {
+      "seconds": 630,
+      "file": "frames/frame-0630s.jpg"
+    },
+    {
+      "seconds": 635,
+      "file": "frames/frame-0635s.jpg"
+    },
+    {
+      "seconds": 640,
+      "file": "frames/frame-0640s.jpg"
+    },
+    {
+      "seconds": 645,
+      "file": "frames/frame-0645s.jpg"
+    },
+    {
+      "seconds": 650,
+      "file": "frames/frame-0650s.jpg"
+    },
+    {
+      "seconds": 655,
+      "file": "frames/frame-0655s.jpg"
+    },
+    {
+      "seconds": 660,
+      "file": "frames/frame-0660s.jpg"
+    },
+    {
+      "seconds": 665,
+      "file": "frames/frame-0665s.jpg"
+    },
+    {
+      "seconds": 670,
+      "file": "frames/frame-0670s.jpg"
+    },
+    {
+      "seconds": 675,
+      "file": "frames/frame-0675s.jpg"
+    },
+    {
+      "seconds": 680,
+      "file": "frames/frame-0680s.jpg"
+    },
+    {
+      "seconds": 685,
+      "file": "frames/frame-0685s.jpg"
+    },
+    {
+      "seconds": 690,
+      "file": "frames/frame-0690s.jpg"
+    },
+    {
+      "seconds": 695,
+      "file": "frames/frame-0695s.jpg"
+    },
+    {
+      "seconds": 700,
+      "file": "frames/frame-0700s.jpg"
+    },
+    {
+      "seconds": 705,
+      "file": "frames/frame-0705s.jpg"
+    },
+    {
+      "seconds": 710,
+      "file": "frames/frame-0710s.jpg"
+    },
+    {
+      "seconds": 715,
+      "file": "frames/frame-0715s.jpg"
+    },
+    {
+      "seconds": 720,
+      "file": "frames/frame-0720s.jpg"
+    },
+    {
+      "seconds": 725,
+      "file": "frames/frame-0725s.jpg"
+    },
+    {
+      "seconds": 730,
+      "file": "frames/frame-0730s.jpg"
+    },
+    {
+      "seconds": 735,
+      "file": "frames/frame-0735s.jpg"
+    },
+    {
+      "seconds": 740,
+      "file": "frames/frame-0740s.jpg"
+    },
+    {
+      "seconds": 745,
+      "file": "frames/frame-0745s.jpg"
+    },
+    {
+      "seconds": 750,
+      "file": "frames/frame-0750s.jpg"
+    },
+    {
+      "seconds": 755,
+      "file": "frames/frame-0755s.jpg"
+    },
+    {
+      "seconds": 760,
+      "file": "frames/frame-0760s.jpg"
+    },
+    {
+      "seconds": 765,
+      "file": "frames/frame-0765s.jpg"
+    },
+    {
+      "seconds": 770,
+      "file": "frames/frame-0770s.jpg"
+    },
+    {
+      "seconds": 775,
+      "file": "frames/frame-0775s.jpg"
+    },
+    {
+      "seconds": 780,
+      "file": "frames/frame-0780s.jpg"
+    },
+    {
+      "seconds": 785,
+      "file": "frames/frame-0785s.jpg"
+    },
+    {
+      "seconds": 790,
+      "file": "frames/frame-0790s.jpg"
+    },
+    {
+      "seconds": 795,
+      "file": "frames/frame-0795s.jpg"
+    },
+    {
+      "seconds": 800,
+      "file": "frames/frame-0800s.jpg"
+    },
+    {
+      "seconds": 805,
+      "file": "frames/frame-0805s.jpg"
+    },
+    {
+      "seconds": 810,
+      "file": "frames/frame-0810s.jpg"
+    },
+    {
+      "seconds": 815,
+      "file": "frames/frame-0815s.jpg"
+    },
+    {
+      "seconds": 820,
+      "file": "frames/frame-0820s.jpg"
+    },
+    {
+      "seconds": 825,
+      "file": "frames/frame-0825s.jpg"
+    },
+    {
+      "seconds": 830,
+      "file": "frames/frame-0830s.jpg"
+    },
+    {
+      "seconds": 835,
+      "file": "frames/frame-0835s.jpg"
+    },
+    {
+      "seconds": 840,
+      "file": "frames/frame-0840s.jpg"
+    },
+    {
+      "seconds": 845,
+      "file": "frames/frame-0845s.jpg"
+    },
+    {
+      "seconds": 850,
+      "file": "frames/frame-0850s.jpg"
+    },
+    {
+      "seconds": 855,
+      "file": "frames/frame-0855s.jpg"
+    },
+    {
+      "seconds": 860,
+      "file": "frames/frame-0860s.jpg"
+    },
+    {
+      "seconds": 865,
+      "file": "frames/frame-0865s.jpg"
+    },
+    {
+      "seconds": 870,
+      "file": "frames/frame-0870s.jpg"
+    },
+    {
+      "seconds": 875,
+      "file": "frames/frame-0875s.jpg"
+    },
+    {
+      "seconds": 880,
+      "file": "frames/frame-0880s.jpg"
+    },
+    {
+      "seconds": 885,
+      "file": "frames/frame-0885s.jpg"
+    },
+    {
+      "seconds": 890,
+      "file": "frames/frame-0890s.jpg"
+    },
+    {
+      "seconds": 895,
+      "file": "frames/frame-0895s.jpg"
+    },
+    {
+      "seconds": 900,
+      "file": "frames/frame-0900s.jpg"
+    },
+    {
+      "seconds": 905,
+      "file": "frames/frame-0905s.jpg"
+    },
+    {
+      "seconds": 910,
+      "file": "frames/frame-0910s.jpg"
+    },
+    {
+      "seconds": 915,
+      "file": "frames/frame-0915s.jpg"
+    },
+    {
+      "seconds": 920,
+      "file": "frames/frame-0920s.jpg"
+    },
+    {
+      "seconds": 925,
+      "file": "frames/frame-0925s.jpg"
+    },
+    {
+      "seconds": 930,
+      "file": "frames/frame-0930s.jpg"
+    },
+    {
+      "seconds": 935,
+      "file": "frames/frame-0935s.jpg"
+    },
+    {
+      "seconds": 940,
+      "file": "frames/frame-0940s.jpg"
+    },
+    {
+      "seconds": 945,
+      "file": "frames/frame-0945s.jpg"
+    },
+    {
+      "seconds": 950,
+      "file": "frames/frame-0950s.jpg"
+    },
+    {
+      "seconds": 955,
+      "file": "frames/frame-0955s.jpg"
+    },
+    {
+      "seconds": 960,
+      "file": "frames/frame-0960s.jpg"
+    },
+    {
+      "seconds": 965,
+      "file": "frames/frame-0965s.jpg"
+    },
+    {
+      "seconds": 970,
+      "file": "frames/frame-0970s.jpg"
+    },
+    {
+      "seconds": 975,
+      "file": "frames/frame-0975s.jpg"
+    },
+    {
+      "seconds": 980,
+      "file": "frames/frame-0980s.jpg"
+    },
+    {
+      "seconds": 985,
+      "file": "frames/frame-0985s.jpg"
+    },
+    {
+      "seconds": 990,
+      "file": "frames/frame-0990s.jpg"
+    },
+    {
+      "seconds": 995,
+      "file": "frames/frame-0995s.jpg"
+    },
+    {
+      "seconds": 1000,
+      "file": "frames/frame-1000s.jpg"
+    },
+    {
+      "seconds": 1005,
+      "file": "frames/frame-1005s.jpg"
+    },
+    {
+      "seconds": 1010,
+      "file": "frames/frame-1010s.jpg"
+    },
+    {
+      "seconds": 1015,
+      "file": "frames/frame-1015s.jpg"
+    },
+    {
+      "seconds": 1020,
+      "file": "frames/frame-1020s.jpg"
+    },
+    {
+      "seconds": 1025,
+      "file": "frames/frame-1025s.jpg"
+    },
+    {
+      "seconds": 1030,
+      "file": "frames/frame-1030s.jpg"
+    },
+    {
+      "seconds": 1035,
+      "file": "frames/frame-1035s.jpg"
+    },
+    {
+      "seconds": 1040,
+      "file": "frames/frame-1040s.jpg"
+    },
+    {
+      "seconds": 1045,
+      "file": "frames/frame-1045s.jpg"
+    },
+    {
+      "seconds": 1050,
+      "file": "frames/frame-1050s.jpg"
+    },
+    {
+      "seconds": 1055,
+      "file": "frames/frame-1055s.jpg"
+    },
+    {
+      "seconds": 1060,
+      "file": "frames/frame-1060s.jpg"
+    },
+    {
+      "seconds": 1065,
+      "file": "frames/frame-1065s.jpg"
+    },
+    {
+      "seconds": 1070,
+      "file": "frames/frame-1070s.jpg"
+    },
+    {
+      "seconds": 1075,
+      "file": "frames/frame-1075s.jpg"
+    },
+    {
+      "seconds": 1080,
+      "file": "frames/frame-1080s.jpg"
+    },
+    {
+      "seconds": 1085,
+      "file": "frames/frame-1085s.jpg"
+    },
+    {
+      "seconds": 1090,
+      "file": "frames/frame-1090s.jpg"
+    },
+    {
+      "seconds": 1095,
+      "file": "frames/frame-1095s.jpg"
+    },
+    {
+      "seconds": 1100,
+      "file": "frames/frame-1100s.jpg"
+    }
+  ],
+  "probe": {
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+        "profile": "High",
+        "codec_type": "video",
+        "codec_tag_string": "avc1",
+        "codec_tag": "0x31637661",
+        "mime_codec_string": "avc1.640028",
+        "width": 1920,
+        "height": 1080,
+        "coded_width": 1920,
+        "coded_height": 1080,
+        "has_b_frames": 0,
+        "pix_fmt": "yuv420p",
+        "level": 40,
+        "color_range": "tv",
+        "color_space": "bt709",
+        "color_transfer": "bt709",
+        "color_primaries": "bt709",
+        "chroma_location": "left",
+        "field_order": "progressive",
+        "is_avc": "true",
+        "nal_length_size": "4",
+        "id": "0x1",
+        "r_frame_rate": "30/1",
+        "avg_frame_rate": "2011649322/67204487",
+        "time_base": "1/90000",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 99259823,
+        "duration": "1102.886922",
+        "bit_rate": "11976888",
+        "bits_per_raw_sample": "8",
+        "nb_frames": "33013",
+        "extradata_size": 36,
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "creation_time": "2026-11-09T06:06:16.000000Z",
+          "language": "eng",
+          "handler_name": "VideoHandle"
+        },
+        "side_data_list": [
+          {
+            "side_data_type": "Display Matrix",
+            "displaymatrix": "\n00000000:            0       65536           0\n00000001:       -65536           0           0\n00000002:            0           0  1073741824\n",
+            "rotation": -90
+          }
+        ]
+      }
+    ],
+    "format": {
+      "filename": "C:\\Users\\user\\Desktop\\프로젝트\\좌표\\20261109_144753KST_GPS-VALID_LAT35.3623483_LON129.0303950_H214.1-TN_DIR-AVAILABLE_P-65.3_ACC37.5m_FV-c54af9f3-48dc-45ba-982d-b856cbecf21b.mp4",
+      "nb_streams": 1,
+      "nb_programs": 0,
+      "nb_stream_groups": 0,
+      "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+      "format_long_name": "QuickTime / MOV",
+      "start_time": "0.000000",
+      "duration": "1102.886922",
+      "size": "1651365116",
+      "bit_rate": "11978490",
+      "probe_score": 100,
+      "tags": {
+        "major_brand": "mp42",
+        "minor_version": "0",
+        "compatible_brands": "isommp42",
+        "creation_time": "2026-11-09T06:06:16.000000Z",
+        "com.android.version": "16"
+      }
+    }
+  },
+  "method": "ffmpeg accurate input seek, sampled every 5 seconds; review thumbnails only; original untouched"
+}

@@ -1,0 +1,225 @@
+{
+  "date": "2026-11-10",
+  "scope": "LPG2기와 별개인 스테인리스 저장탱크 뱅크의 최소 유닛 분리",
+  "confirmedMinimumDistinctPhysicalTanks": 4,
+  "exactTotalTanks": null,
+  "notAnExactTotal": true,
+  "baselineFrame": "tmp/campus-rear-side-20261110/clip-002/native/frame-064s.jpg",
+  "annotatedFrame": "tmp/campus-rear-side-20261110/tank-bank-minimum-4-annotated.jpg",
+  "coordinateConvention": "좌/우·전경/후경은 002064 영상의 카메라 시야 기준이다. 캠퍼스 X/Z나 촬영GPS에서 탱크 모서리를 만든 값이 아니다.",
+  "units": [
+    {
+      "auditUnitId": "S64-LF",
+      "viewRelativeLocation": "camera-left / foreground",
+      "source": {
+        "clipId": "002",
+        "seconds": 64,
+        "nativeFrame": "tmp/campus-rear-side-20261110/clip-002/native/frame-064s.jpg",
+        "outlineRegionXYXY": [
+          0.0,
+          0.0,
+          0.3519,
+          0.6562
+        ]
+      },
+      "distinguishingEvidence": "같은 프레임에서 독립 원통 외곽·볼록한 하부와 각 용기에서 나오는 분기관이 다른 몸체와 분리돼 보임.",
+      "confirmedProductName": null,
+      "dimensions": null,
+      "worldPosition": null,
+      "countRole": "최소 실물 대수에 1회 포함. 다른 클립의 비슷한 몸체를 별도로 추가하지 않음."
+    },
+    {
+      "auditUnitId": "S64-LB",
+      "viewRelativeLocation": "camera-left / background",
+      "source": {
+        "clipId": "002",
+        "seconds": 64,
+        "nativeFrame": "tmp/campus-rear-side-20261110/clip-002/native/frame-064s.jpg",
+        "outlineRegionXYXY": [
+          0.2593,
+          0.1615,
+          0.5093,
+          0.5833
+        ]
+      },
+      "distinguishingEvidence": "같은 프레임에서 독립 원통 외곽·볼록한 하부와 각 용기에서 나오는 분기관이 다른 몸체와 분리돼 보임.",
+      "confirmedProductName": null,
+      "dimensions": null,
+      "worldPosition": null,
+      "countRole": "최소 실물 대수에 1회 포함. 다른 클립의 비슷한 몸체를 별도로 추가하지 않음."
+    },
+    {
+      "auditUnitId": "S64-RF",
+      "viewRelativeLocation": "camera-right / foreground",
+      "source": {
+        "clipId": "002",
+        "seconds": 64,
+        "nativeFrame": "tmp/campus-rear-side-20261110/clip-002/native/frame-064s.jpg",
+        "outlineRegionXYXY": [
+          0.8009,
+          0.0,
+          0.9981,
+          0.7604
+        ]
+      },
+      "distinguishingEvidence": "같은 프레임에서 독립 원통 외곽·볼록한 하부와 각 용기에서 나오는 분기관이 다른 몸체와 분리돼 보임.",
+      "confirmedProductName": null,
+      "dimensions": null,
+      "worldPosition": null,
+      "countRole": "최소 실물 대수에 1회 포함. 다른 클립의 비슷한 몸체를 별도로 추가하지 않음."
+    },
+    {
+      "auditUnitId": "S64-RB",
+      "viewRelativeLocation": "camera-right / background",
+      "source": {
+        "clipId": "002",
+        "seconds": 64,
+        "nativeFrame": "tmp/campus-rear-side-20261110/clip-002/native/frame-064s.jpg",
+        "outlineRegionXYXY": [
+          0.5185,
+          0.1146,
+          0.7963,
+          0.5885
+        ]
+      },
+      "distinguishingEvidence": "같은 프레임에서 독립 원통 외곽·볼록한 하부와 각 용기에서 나오는 분기관이 다른 몸체와 분리돼 보임.",
+      "confirmedProductName": null,
+      "dimensions": null,
+      "worldPosition": null,
+      "countRole": "최소 실물 대수에 1회 포함. 다른 클립의 비슷한 몸체를 별도로 추가하지 않음."
+    }
+  ],
+  "arrayEvidence": "중앙 서비스 통로 양쪽에서 전경/후경의 독립 원통 4몸체를 최소 분리. 정확한 열 수·축간격·전체 총수는 미확정.",
+  "crossViewMatching": [
+    {
+      "a": {
+        "clipId": "001",
+        "seconds": 448,
+        "region": "오른쪽 큰 원통·흰색처럼 밝은 상부면"
+      },
+      "b": {
+        "clipId": "002",
+        "seconds": 72,
+        "region": "표찰 있는 큰 원통의 상부 난간·맨홀"
+      },
+      "assessment": "상부 원형 난간·맨홀과 공통 보행교량 관계가 맞아 같은 전경 유닛 재등장 가능성이 높음. 정확한 슬롯 등록은 미확정.",
+      "countAsAdditional": false
+    },
+    {
+      "a": {
+        "clipId": "001",
+        "seconds": 432,
+        "region": "상부모터·난간·탱크 사이 bridge"
+      },
+      "b": {
+        "clipId": "002",
+        "seconds": 64,
+        "region": "중앙 통로 상부 공통 bridge·난간"
+      },
+      "assessment": "동일 뱅크의 공통 구조로 정합되지만 상부 구동부 하나를 별도 탱크로 세거나 전체 대수를 늘리는 근거로 쓰지 않음.",
+      "countAsAdditional": false
+    },
+    {
+      "a": {
+        "clipId": "001",
+        "seconds": 416,
+        "region": "낮은 경계벽 뒤 원통 외벽들"
+      },
+      "b": {
+        "clipId": "002",
+        "seconds": 16,
+        "region": "계단 옆 원통 하부·분기관"
+      },
+      "assessment": "같은 뱅크의 외곽/근접 재촬영으로 취급. 반사와 시야 전환으로 전 슬롯 직접 대응은 미확정.",
+      "countAsAdditional": false
+    },
+    {
+      "a": {
+        "clipId": "002",
+        "seconds": 40,
+        "region": "탱크 사이 공통 바닥관·독립 분기관"
+      },
+      "b": {
+        "clipId": "002",
+        "seconds": 48,
+        "region": "표찰 숫자2처럼 보이는 원통"
+      },
+      "assessment": "통로와 공통관의 연속 근접 촬영. 048 표찰 글자·슬롯은 미확정이며 별도의 추가 탱크 수량 근거로 쓰지 않음.",
+      "countAsAdditional": false
+    },
+    {
+      "a": {
+        "clipId": "003",
+        "seconds": 20,
+        "region": "고정 금속계단·보행면"
+      },
+      "b": {
+        "clipId": "002",
+        "seconds": 104,
+        "region": "금속 계단 근접"
+      },
+      "assessment": "같은 서비스 접근 구조를 재촬영한 것으로 보임. 계단/펌프/주변 원통을 새 유닛으로 중복 계수하지 않음.",
+      "countAsAdditional": false
+    }
+  ],
+  "knownLabelAttachments": [
+    {
+      "label": "팜유",
+      "source": {
+        "clipId": "002",
+        "seconds": 144,
+        "nativeFrame": "tmp/campus-rear-side-20261110/clip-002/native/frame-144s.jpg",
+        "region": "사진 중앙에서 오른쪽으로 치우친 뒷 원통 상단의 흰/녹색 표찰"
+      },
+      "labelReadingConfidence": "direct-clear",
+      "belongsToThisVisibleCylinder": true,
+      "matchedAuditUnitId": null,
+      "slotCandidate": "S64-RB일 가능성은 있으나 이동·시야 전환 때문에 확정하지 않음.",
+      "countAsAdditional": false,
+      "reason": "팜유는 특정 사진의 실제 원통에 부착된 명칭이다. 최소4유닛 중 어느 슬롯인지 확정 안 된 상태에서 팜유 탱크를 별도 5번째로 추가하지 않음."
+    }
+  ],
+  "uncertainLabels": [
+    {
+      "clipId": "002",
+      "seconds": 72,
+      "source": "tmp/campus-rear-side-20261110/clip-002/native/frame-072s.jpg",
+      "status": "숫자1이 포함된 한글 명칭 표찰은 보이나 정확 글자 판독은 보류. 기기명 확정·다른 원료명과 동일시하지 않음."
+    },
+    {
+      "clipId": "002",
+      "seconds": 48,
+      "source": "tmp/campus-rear-side-20261110/clip-002/native/frame-048s.jpg",
+      "status": "끝 숫자2처럼 보이는 표찰. 글자·호기 전체를 확정하지 않음."
+    }
+  ],
+  "whiteAppearanceQualification": "002072와001448의 큰 밝은 상부는 흰 건물·하늘 반사가 강한 스테인리스 면일 수 있다. 흰 도장 별도 탱크·추가 외함을 확정하지 않는다.",
+  "independentReview": "모델 담당도 002064 원본 크기 프레임의 양옆 전경/후경 독립 원통 하부·분기관을 별도로 대조해 최소4기에는 동의. 정확총수·완전 호기 매칭은 미확정.",
+  "implementationBoundary": "4개는 확인 가능한 하한이며 실측 총수·정확한2×2평면배치를 확정한 값이 아니다. 보이지 않는 추가 몸체를6~8개로 채우거나 미판독 표찰을 임의로 등록하지 않는다.",
+  "update20261111": {
+    "modelPosition": [
+      60,
+      0,
+      -83.5
+    ],
+    "bundSize": [
+      22,
+      14
+    ],
+    "modelledVessels": 6,
+    "basis": "002 64초 최소 4기 분리 근거는 유지. 001 2:44 도로 쪽 두 기(야경유 1·2), 001 7:19-7:27 두 줄 사이 통로, 표찰 저감미당 3·팜유를 더해 두 줄 6기로 근사.",
+    "slots": {
+      "T-R1": "야경유 1 (도로 쪽 첫째, 001 164s 왼쪽)",
+      "T-R2": "야경유 2 (도로 쪽 둘째, 001 164s 오른쪽)",
+      "T-R3": "표찰 미확정",
+      "T-S1": "표찰 미확정",
+      "T-S2": "표찰 미확정",
+      "T-S3": "표찰 미확정"
+    },
+    "labelsReadWithoutSlot": [
+      "저감미당 3 (002 47s)",
+      "팜유 (002 144s)"
+    ],
+    "exactTotalTanks": null
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "basis": "user correction after rear/stair reconstruction on 2026-11-11",
+  "confirmed": [
+    "The green barrier runs only across the front of the tank area.",
+    "The empty space beside the stair is an open parking area, not an enclosed empty containment compartment."
+  ],
+  "modelRegistration": {
+    "tankBankId": "campus-process-tank-bank",
+    "tankBoundsLocal": {"minX":-3.8,"maxX":11,"minZ":-7,"maxZ":7},
+    "openParkingBoundsLocal": {"minX":-11,"maxX":-3.8,"minZ":-7,"maxZ":7},
+    "greenWallSide": "+z",
+    "stairCrossesTankSideBoundary": "-x",
+    "measuredDimensions": false
+  },
+  "changes": [
+    "Removed front, west and rear enclosure from the former empty western compartment.",
+    "Restricted the front green wall to the tank footprint and retained the stair-side tank boundary.",
+    "Kept the eight tank bodies and the blue valve room/stair poses unchanged.",
+    "Marked the adjacent open surface as parking; no assumed capacity, painted bays or parked vehicles were added."
+  ]
+}

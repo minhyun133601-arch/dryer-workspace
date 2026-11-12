@@ -1,0 +1,74 @@
+{
+  "id": "3-1782200441882-56403",
+  "line": "",
+  "name": "믹서탱크",
+  "note": "",
+  "plan": "",
+  "rate": 0,
+  "room": "배합실",
+  "team": "3팀",
+  "group": "",
+  "owner": "",
+  "status": "비가동중",
+  "process": "",
+  "documents": [],
+  "lastCheck": "",
+  "modelName": "",
+  "nextCheck": "",
+  "photoCrop": null,
+  "photoName": "믹서탱크 photo.jpg",
+  "detailInfo": [
+    {
+      "label": "설비명",
+      "value": "믹서탱크"
+    },
+    {
+      "label": "관리팀",
+      "value": "3팀"
+    },
+    {
+      "label": "가동률",
+      "value": "0%"
+    }
+  ],
+  "ownerLabel": "담당 업체",
+  "production": "",
+  "teamDataKey": "work_team_calendar_team3",
+  "detailGroups": {
+    "equipmentSpecs": []
+  },
+  "manufacturer": "",
+  "photoDataUrl": "",
+  "equipmentCode": "3-1782200441882-56403",
+  "operationInfo": [
+    {
+      "label": "설비명",
+      "value": "믹서탱크"
+    },
+    {
+      "label": "관리팀",
+      "value": "3팀"
+    },
+    {
+      "label": "실",
+      "value": "배합실"
+    },
+    {
+      "label": "공정",
+      "value": ""
+    },
+    {
+      "label": "가동률",
+      "value": "0"
+    }
+  ],
+  "manufacturedAt": "",
+  "photoDocumentId": "e96a2126-051f-464f-929a-f4d63d670fca",
+  "photoPreviewUrl": "/api/files/e96a2126-051f-464f-929a-f4d63d670fca/view",
+  "photoDownloadUrl": "/api/files/e96a2126-051f-464f-929a-f4d63d670fca/download",
+  "manufacturerLabel": "제조사",
+  "photoThumbDataUrl": "",
+  "maintenanceHistory": [],
+  "photoAttachmentKey": "equipment-photo-main",
+  "photoStorageRelPath": "equipment-assets/equipment-history/믹서탱크/images/d4bf5450-6571-4f13-9afc-b607f046c368.jpg"
+}

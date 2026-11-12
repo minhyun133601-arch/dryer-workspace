@@ -1,0 +1,1088 @@
+{
+  "date": "2026-11-10",
+  "identity": "현재 3팀=액상. 2팀9동스틱소포장과 별도. 3팀 스틱실 카드도 액상 내부 설비.",
+  "cardCount": 52,
+  "sourceFileCount": 156,
+  "grouping": "52는 이력카드 수이며 부속품이나 사진 속 배경 기계까지 포함한 현장 물리 대수는 아님.",
+  "roomCounts": {
+    "Pet실": 6,
+    "외포장실": 7,
+    "스틱실": 3,
+    "보일러실": 4,
+    "후살균실": 3,
+    "파우치실": 7,
+    "배합실": 20,
+    "제환실": 2
+  },
+  "missingFields": {
+    "manufacturer": 52,
+    "modelName": 52,
+    "manufacturedAt": 52,
+    "group": 52,
+    "line": 52,
+    "process": 52,
+    "documents": 52,
+    "maintenanceHistory": 52
+  },
+  "allFourDirectionPhotosAvailable": true,
+  "originalMetadataModified": false,
+  "currentOperationState": "저장된 status/rate를 현재 운전 상태로 해석하지 않음.",
+  "cards": [
+    {
+      "archiveNumber": 42,
+      "name": "28파이 Pet 충진기",
+      "room": "Pet실",
+      "category": "enclosed-bottle-filler",
+      "categoryBasis": "사진 직접 판독에 따른 파생 분류. 원본 category 필드가 아님.",
+      "photoObserved": "큰 SS 밀폐 캐비닛, 검은 세로 관찰창 문 여러 장, 측면 컨베이어/배관",
+      "warnings": [],
+      "manufacturerFromCard": "",
+      "modelFromCard": "",
+      "sourceJson": "references/team3-liquid-20261110/source/3팀/Pet실/042_28파이 Pet 충진기/원본카드.json",
+      "photoPath": "apps/site/photos/team3-liquid-cards/card-042.jpg",
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-042-reflow.jpg",
+      "photoPanels": {
+        "front": "apps/site/photos/team3-liquid-cards/card-042-front.jpg",
+        "left": "apps/site/photos/team3-liquid-cards/card-042-left.jpg",
+        "right": "apps/site/photos/team3-liquid-cards/card-042-right.jpg",
+        "rear": "apps/site/photos/team3-liquid-cards/card-042-rear.jpg"
+      }
+    },
+    {
+      "archiveNumber": 43,
+      "name": "Pet실 1",
+      "room": "Pet실",
+      "category": "small-round-tank",
+      "categoryBasis": "사진 직접 판독에 따른 파생 분류. 원본 category 필드가 아님.",
+      "photoObserved": "뚜껑 달린 작은 SS 수직 원통, 옆 직사각 6버튼 조작함, 하부 케이블·짧은 다리",
+      "warnings": [
+        "카드명 Pet실1은 일반명이며 사진상 소형 원통 탱크. 전체 Pet 라인을 추가 생성하지 않음."
+      ],
+      "manufacturerFromCard": "",
+      "modelFromCard": "",
+      "sourceJson": "references/team3-liquid-20261110/source/3팀/Pet실/043_Pet실 1/원본카드.json",
+      "photoPath": "apps/site/photos/team3-liquid-cards/card-043.jpg",
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-043-reflow.jpg",
+      "photoPanels": {
+        "front": "apps/site/photos/team3-liquid-cards/card-043-front.jpg",
+        "left": "apps/site/photos/team3-liquid-cards/card-043-left.jpg",
+        "right": "apps/site/photos/team3-liquid-cards/card-043-right.jpg",
+        "rear": "apps/site/photos/team3-liquid-cards/card-043-rear.jpg"
+      }
+    },
+    {
+      "archiveNumber": 44,
+      "name": "Pet 라인",
+      "room": "Pet실",
+      "category": "open-bottle-line",
+      "categoryBasis": "사진 직접 판독에 따른 파생 분류. 원본 category 필드가 아님.",
+      "photoObserved": "노출 다노즐 충전 베드, 원형/곡선 병 컨베이어, 상부 작은 제어화면",
+      "warnings": [],
+      "manufacturerFromCard": "",
+      "modelFromCard": "",
+      "sourceJson": "references/team3-liquid-20261110/source/3팀/Pet실/044_Pet 라인/원본카드.json",
+      "photoPath": "apps/site/photos/team3-liquid-cards/card-044.jpg",
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-044-reflow.jpg",
+      "photoPanels": {
+        "front": "apps/site/photos/team3-liquid-cards/card-044-front.jpg",
+        "left": "apps/site/photos/team3-liquid-cards/card-044-left.jpg",
+        "right": "apps/site/photos/team3-liquid-cards/card-044-right.jpg",
+        "rear": "apps/site/photos/team3-liquid-cards/card-044-rear.jpg"
+      }
+    },
+    {
+      "archiveNumber": 45,
+      "name": "38파이 라벨러",
+      "room": "외포장실",
+      "category": "bottle-labeller",
+      "categoryBasis": "사진 직접 판독에 따른 파생 분류. 원본 category 필드가 아님.",
+      "photoObserved": "SS 벨트 베드와 라벨 장치, 병 이송 레일·측면 모터",
+      "warnings": [],
+      "manufacturerFromCard": "",
+      "modelFromCard": "",
+      "sourceJson": "references/team3-liquid-20261110/source/3팀/외포장실/045_38파이 라벨러/원본카드.json",
+      "photoPath": "apps/site/photos/team3-liquid-cards/card-045.jpg",
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-045-reflow.jpg",
+      "photoPanels": {
+        "front": "apps/site/photos/team3-liquid-cards/card-045-front.jpg",
+        "left": "apps/site/photos/team3-liquid-cards/card-045-left.jpg",
+        "right": "apps/site/photos/team3-liquid-cards/card-045-right.jpg",
+        "rear": "apps/site/photos/team3-liquid-cards/card-045-rear.jpg"
+      }
+    },
+    {
+      "archiveNumber": 46,
+      "name": "파스텔 라이저",
+      "room": "Pet실",
+      "category": "pasteurizer-tunnel",
+      "categoryBasis": "사진 직접 판독에 따른 파생 분류. 원본 category 필드가 아님.",
+      "photoObserved": "긴 사각 터널, 얇은 상단 관찰창 띠, 상부 블로워, 옆 녹색 펌프·배관",
+      "warnings": [],
+      "manufacturerFromCard": "",
+      "modelFromCard": "",
+      "sourceJson": "references/team3-liquid-20261110/source/3팀/Pet실/046_파스텔 라이저/원본카드.json",
+      "photoPath": "apps/site/photos/team3-liquid-cards/card-046.jpg",
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-046-reflow.jpg",
+      "photoPanels": {
+        "front": "apps/site/photos/team3-liquid-cards/card-046-front.jpg",
+        "left": "apps/site/photos/team3-liquid-cards/card-046-left.jpg",
+        "right": "apps/site/photos/team3-liquid-cards/card-046-right.jpg",
+        "rear": "apps/site/photos/team3-liquid-cards/card-046-rear.jpg"
+      }
+    },
+    {
+      "archiveNumber": 47,
+      "name": "88파이 자동 충진기",
+      "room": "Pet실",
+      "category": "open-bottle-filler",
+      "categoryBasis": "사진 직접 판독에 따른 파생 분류. 원본 category 필드가 아님.",
+      "photoObserved": "상부 사각 호퍼, 노출 다노즐 충전부, SS 받침 베드와 측면 호스",
+      "warnings": [],
+      "manufacturerFromCard": "",
+      "modelFromCard": "",
+      "sourceJson": "references/team3-liquid-20261110/source/3팀/Pet실/047_88파이 자동 충진기/원본카드.json",
+      "photoPath": "apps/site/photos/team3-liquid-cards/card-047.jpg",
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-047-reflow.jpg",
+      "photoPanels": {
+        "front": "apps/site/photos/team3-liquid-cards/card-047-front.jpg",
+        "left": "apps/site/photos/team3-liquid-cards/card-047-left.jpg",
+        "right": "apps/site/photos/team3-liquid-cards/card-047-right.jpg",
+        "rear": "apps/site/photos/team3-liquid-cards/card-047-rear.jpg"
+      }
+    },
+    {
+      "archiveNumber": 48,
+      "name": "HIPE 16 스틱 충진기-2",
+      "room": "스틱실",
+      "category": "multi-lane-stick-filler",
+      "categoryBasis": "사진 직접 판독에 따른 파생 분류. 원본 category 필드가 아님.",
+      "photoObserved": "상부 다수 배관·필름/충전 프레임, 전면 SS 기계부와 측면 제어함",
+      "warnings": [
+        "카드명 HIPE16과 사진 SP303/SOLPAC 표기가 함께 존재. 모델명 원본 필드는 공란이며 자동 통합하지 않음."
+      ],
+      "manufacturerFromCard": "",
+      "modelFromCard": "",
+      "sourceJson": "references/team3-liquid-20261110/source/3팀/스틱실/048_HIPE 16 스틱 충진기-2/원본카드.json",
+      "photoPath": "apps/site/photos/team3-liquid-cards/card-048.jpg",
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-048-reflow.jpg",
+      "photoPanels": {
+        "front": "apps/site/photos/team3-liquid-cards/card-048-front.jpg",
+        "left": "apps/site/photos/team3-liquid-cards/card-048-left.jpg",
+        "right": "apps/site/photos/team3-liquid-cards/card-048-right.jpg",
+        "rear": "apps/site/photos/team3-liquid-cards/card-048-rear.jpg"
+      }
+    },
+    {
+      "archiveNumber": 49,
+      "name": "Hipe 16 스틱 충진기-1",
+      "room": "스틱실",
+      "category": "multi-lane-stick-filler",
+      "categoryBasis": "사진 직접 판독에 따른 파생 분류. 원본 category 필드가 아님.",
+      "photoObserved": "높은 SS 필름·충전 프레임, 상부 헤더, 옆 계단·작업대, 전면 창",
+      "warnings": [
+        "카드명 Hipe16과 사진 SP303/SOLPAC 표기가 함께 존재."
+      ],
+      "manufacturerFromCard": "",
+      "modelFromCard": "",
+      "sourceJson": "references/team3-liquid-20261110/source/3팀/스틱실/049_Hipe 16 스틱 충진기-1/원본카드.json",
+      "photoPath": "apps/site/photos/team3-liquid-cards/card-049.jpg",
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-049-reflow.jpg",
+      "photoPanels": {
+        "front": "apps/site/photos/team3-liquid-cards/card-049-front.jpg",
+        "left": "apps/site/photos/team3-liquid-cards/card-049-left.jpg",
+        "right": "apps/site/photos/team3-liquid-cards/card-049-right.jpg",
+        "rear": "apps/site/photos/team3-liquid-cards/card-049-rear.jpg"
+      }
+    },
+    {
+      "archiveNumber": 50,
+      "name": "병뚜껑 조립기",
+      "room": "Pet실",
+      "category": "cap-elevator",
+      "categoryBasis": "사진 직접 판독에 따른 파생 분류. 원본 category 필드가 아님.",
+      "photoObserved": "높은 청색 수직 엘리베이터와 SS 지지 프레임/하부 공급부",
+      "warnings": [],
+      "manufacturerFromCard": "",
+      "modelFromCard": "",
+      "sourceJson": "references/team3-liquid-20261110/source/3팀/Pet실/050_병뚜껑 조립기/원본카드.json",
+      "photoPath": "apps/site/photos/team3-liquid-cards/card-050.jpg",
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-050-reflow.jpg",
+      "photoPanels": {
+        "front": "apps/site/photos/team3-liquid-cards/card-050-front.jpg",
+        "left": "apps/site/photos/team3-liquid-cards/card-050-left.jpg",
+        "right": "apps/site/photos/team3-liquid-cards/card-050-right.jpg",
+        "rear": "apps/site/photos/team3-liquid-cards/card-050-rear.jpg"
+      }
+    },
+    {
+      "archiveNumber": 51,
+      "name": "연수기",
+      "room": "보일러실",
+      "category": "water-softener",
+      "categoryBasis": "사진 직접 판독에 따른 파생 분류. 원본 category 필드가 아님.",
+      "photoObserved": "청색 수직 수지 탱크와 옆 청색 브라인 통, 상부 밸브·벽 배관",
+      "warnings": [],
+      "manufacturerFromCard": "",
+      "modelFromCard": "",
+      "sourceJson": "references/team3-liquid-20261110/source/3팀/보일러실/051_연수기/원본카드.json",
+      "photoPath": "apps/site/photos/team3-liquid-cards/card-051.jpg",
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-051-reflow.jpg",
+      "photoPanels": {
+        "front": "apps/site/photos/team3-liquid-cards/card-051-front.jpg",
+        "left": "apps/site/photos/team3-liquid-cards/card-051-left.jpg",
+        "right": "apps/site/photos/team3-liquid-cards/card-051-right.jpg",
+        "rear": "apps/site/photos/team3-liquid-cards/card-051-rear.jpg"
+      }
+    },
+    {
+      "archiveNumber": 52,
+      "name": "병 라인 중량 선별기",
+      "room": "외포장실",
+      "category": "checkweigher",
+      "categoryBasis": "사진 직접 판독에 따른 파생 분류. 원본 category 필드가 아님.",
+      "photoObserved": "좁은 벨트·SS 저울 베드·독립 화면. 뒤 주황 테이핑 장치는 인접 배경일 수 있음",
+      "warnings": [
+        "사진 뒤에 주황색 테이핑/제함형 기구가 포함된다. 다른 카드의 주대상을 이 카드에 중복 모델링하지 않음."
+      ],
+      "manufacturerFromCard": "",
+      "modelFromCard": "",
+      "sourceJson": "references/team3-liquid-20261110/source/3팀/외포장실/052_병 라인 중량 선별기/원본카드.json",
+      "photoPath": "apps/site/photos/team3-liquid-cards/card-052.jpg",
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-052-reflow.jpg",
+      "photoPanels": {
+        "front": "apps/site/photos/team3-liquid-cards/card-052-front.jpg",
+        "left": "apps/site/photos/team3-liquid-cards/card-052-left.jpg",
+        "right": "apps/site/photos/team3-liquid-cards/card-052-right.jpg",
+        "rear": "apps/site/photos/team3-liquid-cards/card-052-rear.jpg"
+      }
+    },
+    {
+      "archiveNumber": 53,
+      "name": "카토너",
+      "room": "외포장실",
+      "category": "cartoner",
+      "categoryBasis": "사진 직접 판독에 따른 파생 분류. 원본 category 필드가 아님.",
+      "photoObserved": "큰 투명 보호 캐비닛, 내부 박스 조립 기구, 앞뒤 벨트 이송",
+      "warnings": [],
+      "manufacturerFromCard": "",
+      "modelFromCard": "",
+      "sourceJson": "references/team3-liquid-20261110/source/3팀/외포장실/053_카토너/원본카드.json",
+      "photoPath": "apps/site/photos/team3-liquid-cards/card-053.jpg",
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-053-reflow.jpg",
+      "photoPanels": {
+        "front": "apps/site/photos/team3-liquid-cards/card-053-front.jpg",
+        "left": "apps/site/photos/team3-liquid-cards/card-053-left.jpg",
+        "right": "apps/site/photos/team3-liquid-cards/card-053-right.jpg",
+        "rear": "apps/site/photos/team3-liquid-cards/card-053-rear.jpg"
+      }
+    },
+    {
+      "archiveNumber": 54,
+      "name": "3팀용 제함기 1호기",
+      "room": "외포장실",
+      "category": "carton-erector",
+      "categoryBasis": "사진 직접 판독에 따른 파생 분류. 원본 category 필드가 아님.",
+      "photoObserved": "주황 박스 성형/테이핑 프레임과 롤러·벨트, 위 긴 사각 가이드",
+      "warnings": [],
+      "manufacturerFromCard": "",
+      "modelFromCard": "",
+      "sourceJson": "references/team3-liquid-20261110/source/3팀/외포장실/054_3팀용 제함기 1호기/원본카드.json",
+      "photoPath": "apps/site/photos/team3-liquid-cards/card-054.jpg",
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-054-reflow.jpg",
+      "photoPanels": {
+        "front": "apps/site/photos/team3-liquid-cards/card-054-front.jpg",
+        "left": "apps/site/photos/team3-liquid-cards/card-054-left.jpg",
+        "right": "apps/site/photos/team3-liquid-cards/card-054-right.jpg",
+        "rear": "apps/site/photos/team3-liquid-cards/card-054-rear.jpg"
+      }
+    },
+    {
+      "archiveNumber": 55,
+      "name": "10입 자동 포장기",
+      "room": "외포장실",
+      "category": "multipacker",
+      "categoryBasis": "사진 직접 판독에 따른 파생 분류. 원본 category 필드가 아님.",
+      "photoObserved": "SS 베드/투명 캐비닛, 여러 노즐·기구와 포장재 공급, 옆 모니터",
+      "warnings": [],
+      "manufacturerFromCard": "",
+      "modelFromCard": "",
+      "sourceJson": "references/team3-liquid-20261110/source/3팀/외포장실/055_10입 자동 포장기/원본카드.json",
+      "photoPath": "apps/site/photos/team3-liquid-cards/card-055.jpg",
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-055-reflow.jpg",
+      "photoPanels": {
+        "front": "apps/site/photos/team3-liquid-cards/card-055-front.jpg",
+        "left": "apps/site/photos/team3-liquid-cards/card-055-left.jpg",
+        "right": "apps/site/photos/team3-liquid-cards/card-055-right.jpg",
+        "rear": "apps/site/photos/team3-liquid-cards/card-055-rear.jpg"
+      }
+    },
+    {
+      "archiveNumber": 56,
+      "name": "파우치 후살균수조",
+      "room": "후살균실",
+      "category": "post-sterilization-bath",
+      "categoryBasis": "사진 직접 판독에 따른 파생 분류. 원본 category 필드가 아님.",
+      "photoObserved": "긴 SS 후살균 수조, 메시 벨트·상부 배기덕트, 측면 청색 감속기",
+      "warnings": [],
+      "manufacturerFromCard": "",
+      "modelFromCard": "",
+      "sourceJson": "references/team3-liquid-20261110/source/3팀/후살균실/056_파우치 후살균수조/원본카드.json",
+      "photoPath": "apps/site/photos/team3-liquid-cards/card-056.jpg",
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-056-reflow.jpg",
+      "photoPanels": {
+        "front": "apps/site/photos/team3-liquid-cards/card-056-front.jpg",
+        "left": "apps/site/photos/team3-liquid-cards/card-056-left.jpg",
+        "right": "apps/site/photos/team3-liquid-cards/card-056-right.jpg",
+        "rear": "apps/site/photos/team3-liquid-cards/card-056-rear.jpg"
+      }
+    },
+    {
+      "archiveNumber": 57,
+      "name": "파우치 냉각수조",
+      "room": "후살균실",
+      "category": "cooling-bath",
+      "categoryBasis": "사진 직접 판독에 따른 파생 분류. 원본 category 필드가 아님.",
+      "photoObserved": "긴 열린 SS 수조, 메시 이송부·상부 다노즐/배관, 측면 모터",
+      "warnings": [],
+      "manufacturerFromCard": "",
+      "modelFromCard": "",
+      "sourceJson": "references/team3-liquid-20261110/source/3팀/후살균실/057_파우치 냉각수조/원본카드.json",
+      "photoPath": "apps/site/photos/team3-liquid-cards/card-057.jpg",
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-057-reflow.jpg",
+      "photoPanels": {
+        "front": "apps/site/photos/team3-liquid-cards/card-057-front.jpg",
+        "left": "apps/site/photos/team3-liquid-cards/card-057-left.jpg",
+        "right": "apps/site/photos/team3-liquid-cards/card-057-right.jpg",
+        "rear": "apps/site/photos/team3-liquid-cards/card-057-rear.jpg"
+      }
+    },
+    {
+      "archiveNumber": 58,
+      "name": "후살균기",
+      "room": "후살균실",
+      "category": "enclosed-post-sterilizer",
+      "categoryBasis": "사진 직접 판독에 따른 파생 분류. 원본 category 필드가 아님.",
+      "photoObserved": "큰 높이의 SS 밀폐 터널/챔버, 상부 팬 열과 전면 점검문, 배관",
+      "warnings": [],
+      "manufacturerFromCard": "",
+      "modelFromCard": "",
+      "sourceJson": "references/team3-liquid-20261110/source/3팀/후살균실/058_후살균기/원본카드.json",
+      "photoPath": "apps/site/photos/team3-liquid-cards/card-058.jpg",
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-058-reflow.jpg",
+      "photoPanels": {
+        "front": "apps/site/photos/team3-liquid-cards/card-058-front.jpg",
+        "left": "apps/site/photos/team3-liquid-cards/card-058-left.jpg",
+        "right": "apps/site/photos/team3-liquid-cards/card-058-right.jpg",
+        "rear": "apps/site/photos/team3-liquid-cards/card-058-rear.jpg"
+      }
+    },
+    {
+      "archiveNumber": 59,
+      "name": "치어팩 언로더",
+      "room": "파우치실",
+      "category": "cheerpack-unloader",
+      "categoryBasis": "사진 직접 판독에 따른 파생 분류. 원본 category 필드가 아님.",
+      "photoObserved": "SS 베드와 노출 상부 기구, 두 곡선 흰 이송부, 옆 제어화면",
+      "warnings": [],
+      "manufacturerFromCard": "",
+      "modelFromCard": "",
+      "sourceJson": "references/team3-liquid-20261110/source/3팀/파우치실/059_치어팩 언로더/원본카드.json",
+      "photoPath": "apps/site/photos/team3-liquid-cards/card-059.jpg",
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-059-reflow.jpg",
+      "photoPanels": {
+        "front": "apps/site/photos/team3-liquid-cards/card-059-front.jpg",
+        "left": "apps/site/photos/team3-liquid-cards/card-059-left.jpg",
+        "right": "apps/site/photos/team3-liquid-cards/card-059-right.jpg",
+        "rear": "apps/site/photos/team3-liquid-cards/card-059-rear.jpg"
+      }
+    },
+    {
+      "archiveNumber": 60,
+      "name": "스틱 냉각기",
+      "room": "스틱실",
+      "category": "stick-cooling-bath",
+      "categoryBasis": "사진 직접 판독에 따른 파생 분류. 원본 category 필드가 아님.",
+      "photoObserved": "낮고 긴 열린 SS 수조, 상부 얕은 롤러/레일, 한쪽 경사 배출판",
+      "warnings": [],
+      "manufacturerFromCard": "",
+      "modelFromCard": "",
+      "sourceJson": "references/team3-liquid-20261110/source/3팀/스틱실/060_스틱 냉각기/원본카드.json",
+      "photoPath": "apps/site/photos/team3-liquid-cards/card-060.jpg",
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-060-reflow.jpg",
+      "photoPanels": {
+        "front": "apps/site/photos/team3-liquid-cards/card-060-front.jpg",
+        "left": "apps/site/photos/team3-liquid-cards/card-060-left.jpg",
+        "right": "apps/site/photos/team3-liquid-cards/card-060-right.jpg",
+        "rear": "apps/site/photos/team3-liquid-cards/card-060-rear.jpg"
+      }
+    },
+    {
+      "archiveNumber": 61,
+      "name": "파우치 충진기 3호기",
+      "room": "파우치실",
+      "category": "pouch-filler",
+      "categoryBasis": "사진 직접 판독에 따른 파생 분류. 원본 category 필드가 아님.",
+      "photoObserved": "노출 원형 충전 기구와 상부 공급 용기, SS 베드·제어면",
+      "warnings": [],
+      "manufacturerFromCard": "",
+      "modelFromCard": "",
+      "sourceJson": "references/team3-liquid-20261110/source/3팀/파우치실/061_파우치 충진기 3호기/원본카드.json",
+      "photoPath": "apps/site/photos/team3-liquid-cards/card-061.jpg",
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-061-reflow.jpg",
+      "photoPanels": {
+        "front": "apps/site/photos/team3-liquid-cards/card-061-front.jpg",
+        "left": "apps/site/photos/team3-liquid-cards/card-061-left.jpg",
+        "right": "apps/site/photos/team3-liquid-cards/card-061-right.jpg",
+        "rear": "apps/site/photos/team3-liquid-cards/card-061-rear.jpg"
+      }
+    },
+    {
+      "archiveNumber": 62,
+      "name": "파우치 충진기 2호기",
+      "room": "파우치실",
+      "category": "pouch-filler",
+      "categoryBasis": "사진 직접 판독에 따른 파생 분류. 원본 category 필드가 아님.",
+      "photoObserved": "노출 충전·실링 프레임, 청색 프레임 부속, 상부 배관과 옆 컨베이어",
+      "warnings": [],
+      "manufacturerFromCard": "",
+      "modelFromCard": "",
+      "sourceJson": "references/team3-liquid-20261110/source/3팀/파우치실/062_파우치 충진기 2호기/원본카드.json",
+      "photoPath": "apps/site/photos/team3-liquid-cards/card-062.jpg",
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-062-reflow.jpg",
+      "photoPanels": {
+        "front": "apps/site/photos/team3-liquid-cards/card-062-front.jpg",
+        "left": "apps/site/photos/team3-liquid-cards/card-062-left.jpg",
+        "right": "apps/site/photos/team3-liquid-cards/card-062-right.jpg",
+        "rear": "apps/site/photos/team3-liquid-cards/card-062-rear.jpg"
+      }
+    },
+    {
+      "archiveNumber": 63,
+      "name": "파우치 충진기 1호기",
+      "room": "파우치실",
+      "category": "pouch-filler",
+      "categoryBasis": "사진 직접 판독에 따른 파생 분류. 원본 category 필드가 아님.",
+      "photoObserved": "노출 충전/포장 기구, SS 하부 베드, 청색 기둥과 옆 조작면",
+      "warnings": [],
+      "manufacturerFromCard": "",
+      "modelFromCard": "",
+      "sourceJson": "references/team3-liquid-20261110/source/3팀/파우치실/063_파우치 충진기 1호기/원본카드.json",
+      "photoPath": "apps/site/photos/team3-liquid-cards/card-063.jpg",
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-063-reflow.jpg",
+      "photoPanels": {
+        "front": "apps/site/photos/team3-liquid-cards/card-063-front.jpg",
+        "left": "apps/site/photos/team3-liquid-cards/card-063-left.jpg",
+        "right": "apps/site/photos/team3-liquid-cards/card-063-right.jpg",
+        "rear": "apps/site/photos/team3-liquid-cards/card-063-rear.jpg"
+      }
+    },
+    {
+      "archiveNumber": 64,
+      "name": "치어팩 충진기 3호기",
+      "room": "파우치실",
+      "category": "cheerpack-filler",
+      "categoryBasis": "사진 직접 판독에 따른 파생 분류. 원본 category 필드가 아님.",
+      "photoObserved": "투명 사각 회전 충전 구역, SS 베드와 상부 사각 공급/제어부",
+      "warnings": [],
+      "manufacturerFromCard": "",
+      "modelFromCard": "",
+      "sourceJson": "references/team3-liquid-20261110/source/3팀/파우치실/064_치어팩 충진기 3호기/원본카드.json",
+      "photoPath": "apps/site/photos/team3-liquid-cards/card-064.jpg",
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-064-reflow.jpg",
+      "photoPanels": {
+        "front": "apps/site/photos/team3-liquid-cards/card-064-front.jpg",
+        "left": "apps/site/photos/team3-liquid-cards/card-064-left.jpg",
+        "right": "apps/site/photos/team3-liquid-cards/card-064-right.jpg",
+        "rear": "apps/site/photos/team3-liquid-cards/card-064-rear.jpg"
+      }
+    },
+    {
+      "archiveNumber": 65,
+      "name": "치어팩 충진기 2호기",
+      "room": "파우치실",
+      "category": "cheerpack-filler",
+      "categoryBasis": "사진 직접 판독에 따른 파생 분류. 원본 category 필드가 아님.",
+      "photoObserved": "회전 충전부, 주황 JUPACK 띠, 높은 경사 엘리베이터/금속 계단",
+      "warnings": [],
+      "manufacturerFromCard": "",
+      "modelFromCard": "",
+      "sourceJson": "references/team3-liquid-20261110/source/3팀/파우치실/065_치어팩 충진기 2호기/원본카드.json",
+      "photoPath": "apps/site/photos/team3-liquid-cards/card-065.jpg",
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-065-reflow.jpg",
+      "photoPanels": {
+        "front": "apps/site/photos/team3-liquid-cards/card-065-front.jpg",
+        "left": "apps/site/photos/team3-liquid-cards/card-065-left.jpg",
+        "right": "apps/site/photos/team3-liquid-cards/card-065-right.jpg",
+        "rear": "apps/site/photos/team3-liquid-cards/card-065-rear.jpg"
+      }
+    },
+    {
+      "archiveNumber": 66,
+      "name": "치어팩 충진기 1호기",
+      "room": "파우치실",
+      "category": "cheerpack-filler",
+      "categoryBasis": "사진 직접 판독에 따른 파생 분류. 원본 category 필드가 아님.",
+      "photoObserved": "회전 충전부, 주황 JUPACK 띠, 상부 뚜껑/공급 승강부와 계단",
+      "warnings": [],
+      "manufacturerFromCard": "",
+      "modelFromCard": "",
+      "sourceJson": "references/team3-liquid-20261110/source/3팀/파우치실/066_치어팩 충진기 1호기/원본카드.json",
+      "photoPath": "apps/site/photos/team3-liquid-cards/card-066.jpg",
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-066-reflow.jpg",
+      "photoPanels": {
+        "front": "apps/site/photos/team3-liquid-cards/card-066-front.jpg",
+        "left": "apps/site/photos/team3-liquid-cards/card-066-left.jpg",
+        "right": "apps/site/photos/team3-liquid-cards/card-066-right.jpg",
+        "rear": "apps/site/photos/team3-liquid-cards/card-066-rear.jpg"
+      }
+    },
+    {
+      "archiveNumber": 67,
+      "name": "믹서탱크",
+      "room": "배합실",
+      "category": "mixer-tank",
+      "categoryBasis": "사진 직접 판독에 따른 파생 분류. 원본 category 필드가 아님.",
+      "photoObserved": "SS 수직 원통, 높은 회녹색 원통 모터/상부 교반축, 4다리·측면 원형 포트",
+      "warnings": [],
+      "manufacturerFromCard": "",
+      "modelFromCard": "",
+      "sourceJson": "references/team3-liquid-20261110/source/3팀/배합실/067_믹서탱크/원본카드.json",
+      "photoPath": "apps/site/photos/team3-liquid-cards/card-067.jpg",
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-067-reflow.jpg",
+      "photoPanels": {
+        "front": "apps/site/photos/team3-liquid-cards/card-067-front.jpg",
+        "left": "apps/site/photos/team3-liquid-cards/card-067-left.jpg",
+        "right": "apps/site/photos/team3-liquid-cards/card-067-right.jpg",
+        "rear": "apps/site/photos/team3-liquid-cards/card-067-rear.jpg"
+      }
+    },
+    {
+      "archiveNumber": 68,
+      "name": "배합탱크 10",
+      "room": "배합실",
+      "category": "mixing-vessel",
+      "categoryBasis": "사진 직접 판독에 따른 파생 분류. 원본 category 필드가 아님.",
+      "photoObserved": "낮은 반구형 SS 상부, 청색 수평 감속모터, 원형 맨홀·둘레 플랫폼",
+      "warnings": [],
+      "manufacturerFromCard": "",
+      "modelFromCard": "",
+      "sourceJson": "references/team3-liquid-20261110/source/3팀/배합실/068_배합탱크 10/원본카드.json",
+      "photoPath": "apps/site/photos/team3-liquid-cards/card-068.jpg",
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-068-reflow.jpg",
+      "photoPanels": {
+        "front": "apps/site/photos/team3-liquid-cards/card-068-front.jpg",
+        "left": "apps/site/photos/team3-liquid-cards/card-068-left.jpg",
+        "right": "apps/site/photos/team3-liquid-cards/card-068-right.jpg",
+        "rear": "apps/site/photos/team3-liquid-cards/card-068-rear.jpg"
+      }
+    },
+    {
+      "archiveNumber": 69,
+      "name": "배합탱크 7",
+      "room": "배합실",
+      "category": "mixing-vessel",
+      "categoryBasis": "사진 직접 판독에 따른 파생 분류. 원본 category 필드가 아님.",
+      "photoObserved": "반구형 SS 상부와 회색 수직 교반 모터, 원형 작은 점검구·둘레 난간",
+      "warnings": [],
+      "manufacturerFromCard": "",
+      "modelFromCard": "",
+      "sourceJson": "references/team3-liquid-20261110/source/3팀/배합실/069_배합탱크 7/원본카드.json",
+      "photoPath": "apps/site/photos/team3-liquid-cards/card-069.jpg",
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-069-reflow.jpg",
+      "photoPanels": {
+        "front": "apps/site/photos/team3-liquid-cards/card-069-front.jpg",
+        "left": "apps/site/photos/team3-liquid-cards/card-069-left.jpg",
+        "right": "apps/site/photos/team3-liquid-cards/card-069-right.jpg",
+        "rear": "apps/site/photos/team3-liquid-cards/card-069-rear.jpg"
+      }
+    },
+    {
+      "archiveNumber": 70,
+      "name": "배합탱크 9",
+      "room": "배합실",
+      "category": "mixing-vessel",
+      "categoryBasis": "사진 직접 판독에 따른 파생 분류. 원본 category 필드가 아님.",
+      "photoObserved": "반구형 SS 상부, 청색 수평 감속모터, 원형 맨홀·굵은 연결 배관",
+      "warnings": [],
+      "manufacturerFromCard": "",
+      "modelFromCard": "",
+      "sourceJson": "references/team3-liquid-20261110/source/3팀/배합실/070_배합탱크 9/원본카드.json",
+      "photoPath": "apps/site/photos/team3-liquid-cards/card-070.jpg",
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-070-reflow.jpg",
+      "photoPanels": {
+        "front": "apps/site/photos/team3-liquid-cards/card-070-front.jpg",
+        "left": "apps/site/photos/team3-liquid-cards/card-070-left.jpg",
+        "right": "apps/site/photos/team3-liquid-cards/card-070-right.jpg",
+        "rear": "apps/site/photos/team3-liquid-cards/card-070-rear.jpg"
+      }
+    },
+    {
+      "archiveNumber": 71,
+      "name": "3번 탱크",
+      "room": "배합실",
+      "category": "mixing-vessel",
+      "categoryBasis": "사진 직접 판독에 따른 파생 분류. 원본 category 필드가 아님.",
+      "photoObserved": "SS 돔형 상부, 높은 중앙 원통과 검은 옆 모터, 기울어진 원형 맨홀",
+      "warnings": [],
+      "manufacturerFromCard": "",
+      "modelFromCard": "",
+      "sourceJson": "references/team3-liquid-20261110/source/3팀/배합실/071_3번 탱크/원본카드.json",
+      "photoPath": "apps/site/photos/team3-liquid-cards/card-071.jpg",
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-071-reflow.jpg",
+      "photoPanels": {
+        "front": "apps/site/photos/team3-liquid-cards/card-071-front.jpg",
+        "left": "apps/site/photos/team3-liquid-cards/card-071-left.jpg",
+        "right": "apps/site/photos/team3-liquid-cards/card-071-right.jpg",
+        "rear": "apps/site/photos/team3-liquid-cards/card-071-rear.jpg"
+      }
+    },
+    {
+      "archiveNumber": 77,
+      "name": "4번 배합탱크",
+      "room": "배합실",
+      "category": "tall-process-tank",
+      "categoryBasis": "사진 직접 판독에 따른 파생 분류. 원본 category 필드가 아님.",
+      "photoObserved": "플랫폼 아래 높은 SS 원통, 전면 원형 맨홀, 다리·바닥 배출 배관",
+      "warnings": [
+        "카드명 4번 배합탱크, 사진 전면 표찰 2번탱크. 별도 라인/과거 표찰 가능성 미해결."
+      ],
+      "manufacturerFromCard": "",
+      "modelFromCard": "",
+      "sourceJson": "references/team3-liquid-20261110/source/3팀/배합실/077_4번 배합탱크/원본카드.json",
+      "photoPath": "apps/site/photos/team3-liquid-cards/card-077.jpg",
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-077-reflow.jpg",
+      "photoPanels": {
+        "front": "apps/site/photos/team3-liquid-cards/card-077-front.jpg",
+        "left": "apps/site/photos/team3-liquid-cards/card-077-left.jpg",
+        "right": "apps/site/photos/team3-liquid-cards/card-077-right.jpg",
+        "rear": "apps/site/photos/team3-liquid-cards/card-077-rear.jpg"
+      }
+    },
+    {
+      "archiveNumber": 78,
+      "name": "3번 배합탱크",
+      "room": "배합실",
+      "category": "tall-process-tank",
+      "categoryBasis": "사진 직접 판독에 따른 파생 분류. 원본 category 필드가 아님.",
+      "photoObserved": "플랫폼 아래 SS 원통, 전면 작은 원형 맨홀, 긴 지지 다리·측면 호스",
+      "warnings": [
+        "카드명 3번 배합탱크, 사진 전면 표찰 1번탱크. 번호를 임의로 수정하지 않음."
+      ],
+      "manufacturerFromCard": "",
+      "modelFromCard": "",
+      "sourceJson": "references/team3-liquid-20261110/source/3팀/배합실/078_3번 배합탱크/원본카드.json",
+      "photoPath": "apps/site/photos/team3-liquid-cards/card-078.jpg",
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-078-reflow.jpg",
+      "photoPanels": {
+        "front": "apps/site/photos/team3-liquid-cards/card-078-front.jpg",
+        "left": "apps/site/photos/team3-liquid-cards/card-078-left.jpg",
+        "right": "apps/site/photos/team3-liquid-cards/card-078-right.jpg",
+        "rear": "apps/site/photos/team3-liquid-cards/card-078-rear.jpg"
+      }
+    },
+    {
+      "archiveNumber": 79,
+      "name": "2번 배합탱크",
+      "room": "배합실",
+      "category": "tall-process-tank",
+      "categoryBasis": "사진 직접 판독에 따른 파생 분류. 원본 category 필드가 아님.",
+      "photoObserved": "플랫폼 아래 SS 원통, 전면 큰 볼트 플랜지 맨홀, 둘레 다리·측면 배관",
+      "warnings": [],
+      "manufacturerFromCard": "",
+      "modelFromCard": "",
+      "sourceJson": "references/team3-liquid-20261110/source/3팀/배합실/079_2번 배합탱크/원본카드.json",
+      "photoPath": "apps/site/photos/team3-liquid-cards/card-079.jpg",
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-079-reflow.jpg",
+      "photoPanels": {
+        "front": "apps/site/photos/team3-liquid-cards/card-079-front.jpg",
+        "left": "apps/site/photos/team3-liquid-cards/card-079-left.jpg",
+        "right": "apps/site/photos/team3-liquid-cards/card-079-right.jpg",
+        "rear": "apps/site/photos/team3-liquid-cards/card-079-rear.jpg"
+      }
+    },
+    {
+      "archiveNumber": 80,
+      "name": "A라인 1-4",
+      "room": "배합실",
+      "category": "mixer-vessel",
+      "categoryBasis": "사진 직접 판독에 따른 파생 분류. 원본 category 필드가 아님.",
+      "photoObserved": "작은 SS 돔형 용기, 청색 수직 모터와 높은 교반축, 하부 배출구",
+      "warnings": [],
+      "manufacturerFromCard": "",
+      "modelFromCard": "",
+      "sourceJson": "references/team3-liquid-20261110/source/3팀/배합실/080_A라인 1-4/원본카드.json",
+      "photoPath": "apps/site/photos/team3-liquid-cards/card-080.jpg",
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-080-reflow.jpg",
+      "photoPanels": {
+        "front": "apps/site/photos/team3-liquid-cards/card-080-front.jpg",
+        "left": "apps/site/photos/team3-liquid-cards/card-080-left.jpg",
+        "right": "apps/site/photos/team3-liquid-cards/card-080-right.jpg",
+        "rear": "apps/site/photos/team3-liquid-cards/card-080-rear.jpg"
+      }
+    },
+    {
+      "archiveNumber": 81,
+      "name": "A라인 1-3",
+      "room": "배합실",
+      "category": "mixer-vessel",
+      "categoryBasis": "사진 직접 판독에 따른 파생 분류. 원본 category 필드가 아님.",
+      "photoObserved": "SS 돔형 상부, 청회색 수직 모터·교반축, 기울어진 원형 맨홀",
+      "warnings": [],
+      "manufacturerFromCard": "",
+      "modelFromCard": "",
+      "sourceJson": "references/team3-liquid-20261110/source/3팀/배합실/081_A라인 1-3/원본카드.json",
+      "photoPath": "apps/site/photos/team3-liquid-cards/card-081.jpg",
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-081-reflow.jpg",
+      "photoPanels": {
+        "front": "apps/site/photos/team3-liquid-cards/card-081-front.jpg",
+        "left": "apps/site/photos/team3-liquid-cards/card-081-left.jpg",
+        "right": "apps/site/photos/team3-liquid-cards/card-081-right.jpg",
+        "rear": "apps/site/photos/team3-liquid-cards/card-081-rear.jpg"
+      }
+    },
+    {
+      "archiveNumber": 82,
+      "name": "A라인 1-2",
+      "room": "배합실",
+      "category": "mixer-vessel",
+      "categoryBasis": "사진 직접 판독에 따른 파생 분류. 원본 category 필드가 아님.",
+      "photoObserved": "SS 돔형 상부, 연회색 수직 감속모터와 교반축, 여러 포트·배관",
+      "warnings": [],
+      "manufacturerFromCard": "",
+      "modelFromCard": "",
+      "sourceJson": "references/team3-liquid-20261110/source/3팀/배합실/082_A라인 1-2/원본카드.json",
+      "photoPath": "apps/site/photos/team3-liquid-cards/card-082.jpg",
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-082-reflow.jpg",
+      "photoPanels": {
+        "front": "apps/site/photos/team3-liquid-cards/card-082-front.jpg",
+        "left": "apps/site/photos/team3-liquid-cards/card-082-left.jpg",
+        "right": "apps/site/photos/team3-liquid-cards/card-082-right.jpg",
+        "rear": "apps/site/photos/team3-liquid-cards/card-082-rear.jpg"
+      }
+    },
+    {
+      "archiveNumber": 83,
+      "name": "A라인 1-1",
+      "room": "배합실",
+      "category": "mixer-vessel",
+      "categoryBasis": "사진 직접 판독에 따른 파생 분류. 원본 category 필드가 아님.",
+      "photoObserved": "평평한 뚜껑/분할 덮개, 청색 수직 모터, 높은 중앙 교반축",
+      "warnings": [],
+      "manufacturerFromCard": "",
+      "modelFromCard": "",
+      "sourceJson": "references/team3-liquid-20261110/source/3팀/배합실/083_A라인 1-1/원본카드.json",
+      "photoPath": "apps/site/photos/team3-liquid-cards/card-083.jpg",
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-083-reflow.jpg",
+      "photoPanels": {
+        "front": "apps/site/photos/team3-liquid-cards/card-083-front.jpg",
+        "left": "apps/site/photos/team3-liquid-cards/card-083-left.jpg",
+        "right": "apps/site/photos/team3-liquid-cards/card-083-right.jpg",
+        "rear": "apps/site/photos/team3-liquid-cards/card-083-rear.jpg"
+      }
+    },
+    {
+      "archiveNumber": 93,
+      "name": "호모 믹서탱크",
+      "room": "배합실",
+      "category": "homo-mixer-tank",
+      "categoryBasis": "사진 직접 판독에 따른 파생 분류. 원본 category 필드가 아님.",
+      "photoObserved": "SS 돔형 원통, 긴 중앙 투입/상승 원통과 검은 옆 감속모터, 원형 맨홀",
+      "warnings": [],
+      "manufacturerFromCard": "",
+      "modelFromCard": "",
+      "sourceJson": "references/team3-liquid-20261110/source/3팀/배합실/093_호모 믹서탱크/원본카드.json",
+      "photoPath": "apps/site/photos/team3-liquid-cards/card-093.jpg",
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-093-reflow.jpg",
+      "photoPanels": {
+        "front": "apps/site/photos/team3-liquid-cards/card-093-front.jpg",
+        "left": "apps/site/photos/team3-liquid-cards/card-093-left.jpg",
+        "right": "apps/site/photos/team3-liquid-cards/card-093-right.jpg",
+        "rear": "apps/site/photos/team3-liquid-cards/card-093-rear.jpg"
+      }
+    },
+    {
+      "archiveNumber": 94,
+      "name": "펄 진동채",
+      "room": "배합실",
+      "category": "multi-deck-sieve",
+      "categoryBasis": "사진 직접 판독에 따른 파생 분류. 원본 category 필드가 아님.",
+      "photoObserved": "다층 원형 SS 체, 옆으로 돌출된 여러 배출구, 회색 하부 원통 베이스",
+      "warnings": [],
+      "manufacturerFromCard": "",
+      "modelFromCard": "",
+      "sourceJson": "references/team3-liquid-20261110/source/3팀/배합실/094_펄 진동채/원본카드.json",
+      "photoPath": "apps/site/photos/team3-liquid-cards/card-094.jpg",
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-094-reflow.jpg",
+      "photoPanels": {
+        "front": "apps/site/photos/team3-liquid-cards/card-094-front.jpg",
+        "left": "apps/site/photos/team3-liquid-cards/card-094-left.jpg",
+        "right": "apps/site/photos/team3-liquid-cards/card-094-right.jpg",
+        "rear": "apps/site/photos/team3-liquid-cards/card-094-rear.jpg"
+      }
+    },
+    {
+      "archiveNumber": 95,
+      "name": "살균기 1호기",
+      "room": "배합실",
+      "category": "tubular-sterilizer",
+      "categoryBasis": "사진 직접 판독에 따른 파생 분류. 원본 category 필드가 아님.",
+      "photoObserved": "여러 단 수평 SS 관과 U벤드, 옆 높은 제어반, 펌프·중간 원통부",
+      "warnings": [
+        "주 배관 표찰 액상살균기1호기와 제어함 HCPE-4 HTST살균기③ 표기가 함께 보인다. 제어함 표기만으로 카드 호기를 바꾸지 않음."
+      ],
+      "manufacturerFromCard": "",
+      "modelFromCard": "",
+      "sourceJson": "references/team3-liquid-20261110/source/3팀/배합실/095_살균기 1호기/원본카드.json",
+      "photoPath": "apps/site/photos/team3-liquid-cards/card-095.jpg",
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-095-reflow.jpg",
+      "photoPanels": {
+        "front": "apps/site/photos/team3-liquid-cards/card-095-front.jpg",
+        "left": "apps/site/photos/team3-liquid-cards/card-095-left.jpg",
+        "right": "apps/site/photos/team3-liquid-cards/card-095-right.jpg",
+        "rear": "apps/site/photos/team3-liquid-cards/card-095-rear.jpg"
+      }
+    },
+    {
+      "archiveNumber": 96,
+      "name": "살균기 2호기",
+      "room": "배합실",
+      "category": "tubular-sterilizer",
+      "categoryBasis": "사진 직접 판독에 따른 파생 분류. 원본 category 필드가 아님.",
+      "photoObserved": "수평 튜브 열·적색 보온관, 한쪽 수직 원통/펌프, SS 스키드와 제어함",
+      "warnings": [],
+      "manufacturerFromCard": "",
+      "modelFromCard": "",
+      "sourceJson": "references/team3-liquid-20261110/source/3팀/배합실/096_살균기 2호기/원본카드.json",
+      "photoPath": "apps/site/photos/team3-liquid-cards/card-096.jpg",
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-096-reflow.jpg",
+      "photoPanels": {
+        "front": "apps/site/photos/team3-liquid-cards/card-096-front.jpg",
+        "left": "apps/site/photos/team3-liquid-cards/card-096-left.jpg",
+        "right": "apps/site/photos/team3-liquid-cards/card-096-right.jpg",
+        "rear": "apps/site/photos/team3-liquid-cards/card-096-rear.jpg"
+      }
+    },
+    {
+      "archiveNumber": 97,
+      "name": "살균기 3호기",
+      "room": "배합실",
+      "category": "tubular-sterilizer",
+      "categoryBasis": "사진 직접 판독에 따른 파생 분류. 원본 category 필드가 아님.",
+      "photoObserved": "높은 SS 관열/U벤드 프레임, 옆 수직 용기·작은 펌프와 계기",
+      "warnings": [],
+      "manufacturerFromCard": "",
+      "modelFromCard": "",
+      "sourceJson": "references/team3-liquid-20261110/source/3팀/배합실/097_살균기 3호기/원본카드.json",
+      "photoPath": "apps/site/photos/team3-liquid-cards/card-097.jpg",
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-097-reflow.jpg",
+      "photoPanels": {
+        "front": "apps/site/photos/team3-liquid-cards/card-097-front.jpg",
+        "left": "apps/site/photos/team3-liquid-cards/card-097-left.jpg",
+        "right": "apps/site/photos/team3-liquid-cards/card-097-right.jpg",
+        "rear": "apps/site/photos/team3-liquid-cards/card-097-rear.jpg"
+      }
+    },
+    {
+      "archiveNumber": 98,
+      "name": "펄 이송호퍼",
+      "room": "배합실",
+      "category": "transfer-hopper",
+      "categoryBasis": "사진 직접 판독에 따른 파생 분류. 원본 category 필드가 아님.",
+      "photoObserved": "작은 SS 원통 용기, 옆 낮은 긴 SS 펌프/이송부, 사각 바닥 프레임",
+      "warnings": [],
+      "manufacturerFromCard": "",
+      "modelFromCard": "",
+      "sourceJson": "references/team3-liquid-20261110/source/3팀/배합실/098_펄 이송호퍼/원본카드.json",
+      "photoPath": "apps/site/photos/team3-liquid-cards/card-098.jpg",
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-098-reflow.jpg",
+      "photoPanels": {
+        "front": "apps/site/photos/team3-liquid-cards/card-098-front.jpg",
+        "left": "apps/site/photos/team3-liquid-cards/card-098-left.jpg",
+        "right": "apps/site/photos/team3-liquid-cards/card-098-right.jpg",
+        "rear": "apps/site/photos/team3-liquid-cards/card-098-rear.jpg"
+      }
+    },
+    {
+      "archiveNumber": 99,
+      "name": "HCPE - 5 균질기",
+      "room": "배합실",
+      "category": "homogenizer",
+      "categoryBasis": "사진 직접 판독에 따른 파생 분류. 원본 category 필드가 아님.",
+      "photoObserved": "낮은 SS 사각 몸체, 전면 여러 수평 돌출 헤드·상부 압력계, 옆 보온 호스",
+      "warnings": [],
+      "manufacturerFromCard": "",
+      "modelFromCard": "",
+      "sourceJson": "references/team3-liquid-20261110/source/3팀/배합실/099_HCPE - 5 균질기/원본카드.json",
+      "photoPath": "apps/site/photos/team3-liquid-cards/card-099.jpg",
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-099-reflow.jpg",
+      "photoPanels": {
+        "front": "apps/site/photos/team3-liquid-cards/card-099-front.jpg",
+        "left": "apps/site/photos/team3-liquid-cards/card-099-left.jpg",
+        "right": "apps/site/photos/team3-liquid-cards/card-099-right.jpg",
+        "rear": "apps/site/photos/team3-liquid-cards/card-099-rear.jpg"
+      }
+    },
+    {
+      "archiveNumber": 100,
+      "name": "B라인 열수탱크",
+      "room": "배합실",
+      "category": "rectangular-hot-water-tank",
+      "categoryBasis": "사진 직접 판독에 따른 파생 분류. 원본 category 필드가 아님.",
+      "photoObserved": "SS 사각 탱크와 상부 덮개, 측면 계기·아래 배출관, 사각 받침",
+      "warnings": [],
+      "manufacturerFromCard": "",
+      "modelFromCard": "",
+      "sourceJson": "references/team3-liquid-20261110/source/3팀/배합실/100_B라인 열수탱크/원본카드.json",
+      "photoPath": "apps/site/photos/team3-liquid-cards/card-100.jpg",
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-100-reflow.jpg",
+      "photoPanels": {
+        "front": "apps/site/photos/team3-liquid-cards/card-100-front.jpg",
+        "left": "apps/site/photos/team3-liquid-cards/card-100-left.jpg",
+        "right": "apps/site/photos/team3-liquid-cards/card-100-right.jpg",
+        "rear": "apps/site/photos/team3-liquid-cards/card-100-rear.jpg"
+      }
+    },
+    {
+      "archiveNumber": 101,
+      "name": "에어 콤프레셔",
+      "room": "보일러실",
+      "category": "air-compressor",
+      "categoryBasis": "사진 직접 판독에 따른 파생 분류. 원본 category 필드가 아님.",
+      "photoObserved": "회흑색 높은 밀폐 캐비닛, 청록색 세로 띠, 전면 화면·후면 그릴",
+      "warnings": [],
+      "manufacturerFromCard": "",
+      "modelFromCard": "",
+      "sourceJson": "references/team3-liquid-20261110/source/3팀/보일러실/101_에어 콤프레셔/원본카드.json",
+      "photoPath": "apps/site/photos/team3-liquid-cards/card-101.jpg",
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-101-reflow.jpg",
+      "photoPanels": {
+        "front": "apps/site/photos/team3-liquid-cards/card-101-front.jpg",
+        "left": "apps/site/photos/team3-liquid-cards/card-101-left.jpg",
+        "right": "apps/site/photos/team3-liquid-cards/card-101-right.jpg",
+        "rear": "apps/site/photos/team3-liquid-cards/card-101-rear.jpg"
+      }
+    },
+    {
+      "archiveNumber": 102,
+      "name": "핫멜트",
+      "room": "외포장실",
+      "category": "hot-melt-unit",
+      "categoryBasis": "사진 직접 판독에 따른 파생 분류. 원본 category 필드가 아님.",
+      "photoObserved": "청색 둥근 모서리 사각 외함, 상부 작은 청색 덮개, 하부 여러 호스·SS 받침",
+      "warnings": [],
+      "manufacturerFromCard": "",
+      "modelFromCard": "",
+      "sourceJson": "references/team3-liquid-20261110/source/3팀/외포장실/102_핫멜트/원본카드.json",
+      "photoPath": "apps/site/photos/team3-liquid-cards/card-102.jpg",
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-102-reflow.jpg",
+      "photoPanels": {
+        "front": "apps/site/photos/team3-liquid-cards/card-102-front.jpg",
+        "left": "apps/site/photos/team3-liquid-cards/card-102-left.jpg",
+        "right": "apps/site/photos/team3-liquid-cards/card-102-right.jpg",
+        "rear": "apps/site/photos/team3-liquid-cards/card-102-rear.jpg"
+      }
+    },
+    {
+      "archiveNumber": 103,
+      "name": "보일러 3호기",
+      "room": "보일러실",
+      "category": "cabinet-boiler",
+      "categoryBasis": "사진 직접 판독에 따른 파생 분류. 원본 category 필드가 아님.",
+      "photoObserved": "높은 SS 직사각 외함, 옆 가스/증기 배관과 하부 청색 펌프·버너부",
+      "warnings": [],
+      "manufacturerFromCard": "",
+      "modelFromCard": "",
+      "sourceJson": "references/team3-liquid-20261110/source/3팀/보일러실/103_보일러 3호기/원본카드.json",
+      "photoPath": "apps/site/photos/team3-liquid-cards/card-103.jpg",
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-103-reflow.jpg",
+      "photoPanels": {
+        "front": "apps/site/photos/team3-liquid-cards/card-103-front.jpg",
+        "left": "apps/site/photos/team3-liquid-cards/card-103-left.jpg",
+        "right": "apps/site/photos/team3-liquid-cards/card-103-right.jpg",
+        "rear": "apps/site/photos/team3-liquid-cards/card-103-rear.jpg"
+      }
+    },
+    {
+      "archiveNumber": 104,
+      "name": "보일러 1,2호기",
+      "room": "보일러실",
+      "category": "cylindrical-boiler",
+      "categoryBasis": "사진 직접 판독에 따른 파생 분류. 원본 category 필드가 아님.",
+      "photoObserved": "큰 수직 은색 원통·검은 상단, 옆 청색 블로워/펌프, 앞 높은 제어함",
+      "warnings": [
+        "보일러1,2호기라는 하나의 카드에 한 원통 보일러의 4면 사진이 있다. 실제 두 개체 독립사진/배치 확인 없이 2대로 복제하지 않음."
+      ],
+      "manufacturerFromCard": "",
+      "modelFromCard": "",
+      "sourceJson": "references/team3-liquid-20261110/source/3팀/보일러실/104_보일러 1,2호기/원본카드.json",
+      "photoPath": "apps/site/photos/team3-liquid-cards/card-104.jpg",
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-104-reflow.jpg",
+      "photoPanels": {
+        "front": "apps/site/photos/team3-liquid-cards/card-104-front.jpg",
+        "left": "apps/site/photos/team3-liquid-cards/card-104-left.jpg",
+        "right": "apps/site/photos/team3-liquid-cards/card-104-right.jpg",
+        "rear": "apps/site/photos/team3-liquid-cards/card-104-rear.jpg"
+      }
+    },
+    {
+      "archiveNumber": 105,
+      "name": "티칭 로봇",
+      "room": "외포장실",
+      "category": "delta-robot",
+      "categoryBasis": "사진 직접 판독에 따른 파생 분류. 원본 category 필드가 아님.",
+      "photoObserved": "투명 SS 보호 캐비닛/주황 기둥, 상부 원형 구동체와 검은 3쌍 병렬 링크",
+      "warnings": [],
+      "manufacturerFromCard": "",
+      "modelFromCard": "",
+      "sourceJson": "references/team3-liquid-20261110/source/3팀/외포장실/105_티칭 로봇/원본카드.json",
+      "photoPath": "apps/site/photos/team3-liquid-cards/card-105.jpg",
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-105-reflow.jpg",
+      "photoPanels": {
+        "front": "apps/site/photos/team3-liquid-cards/card-105-front.jpg",
+        "left": "apps/site/photos/team3-liquid-cards/card-105-left.jpg",
+        "right": "apps/site/photos/team3-liquid-cards/card-105-right.jpg",
+        "rear": "apps/site/photos/team3-liquid-cards/card-105-rear.jpg"
+      }
+    },
+    {
+      "archiveNumber": 106,
+      "name": "제환기",
+      "room": "제환실",
+      "category": "pelletizer",
+      "categoryBasis": "사진 직접 판독에 따른 파생 분류. 원본 category 필드가 아님.",
+      "photoObserved": "낮은 SS 직사각 베드와 한쪽 큰 사각 호퍼, 독립 세로 조작함·캐스터",
+      "warnings": [],
+      "manufacturerFromCard": "",
+      "modelFromCard": "",
+      "sourceJson": "references/team3-liquid-20261110/source/3팀/제환실/106_제환기/원본카드.json",
+      "photoPath": "apps/site/photos/team3-liquid-cards/card-106.jpg",
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-106-reflow.jpg",
+      "photoPanels": {
+        "front": "apps/site/photos/team3-liquid-cards/card-106-front.jpg",
+        "left": "apps/site/photos/team3-liquid-cards/card-106-left.jpg",
+        "right": "apps/site/photos/team3-liquid-cards/card-106-right.jpg",
+        "rear": "apps/site/photos/team3-liquid-cards/card-106-rear.jpg"
+      }
+    },
+    {
+      "archiveNumber": 107,
+      "name": "반죽기",
+      "room": "제환실",
+      "category": "bowl-kneader",
+      "categoryBasis": "사진 직접 판독에 따른 파생 분류. 원본 category 필드가 아님.",
+      "photoObserved": "흰 수직 베드와 옆 매달린 SS 볼/금속 덮개, 상부 사각 구동부·캐스터",
+      "warnings": [],
+      "manufacturerFromCard": "",
+      "modelFromCard": "",
+      "sourceJson": "references/team3-liquid-20261110/source/3팀/제환실/107_반죽기/원본카드.json",
+      "photoPath": "apps/site/photos/team3-liquid-cards/card-107.jpg",
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-107-reflow.jpg",
+      "photoPanels": {
+        "front": "apps/site/photos/team3-liquid-cards/card-107-front.jpg",
+        "left": "apps/site/photos/team3-liquid-cards/card-107-left.jpg",
+        "right": "apps/site/photos/team3-liquid-cards/card-107-right.jpg",
+        "rear": "apps/site/photos/team3-liquid-cards/card-107-rear.jpg"
+      }
+    }
+  ]
+}

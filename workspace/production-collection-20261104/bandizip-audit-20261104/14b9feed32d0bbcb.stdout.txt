@@ -1,0 +1,14 @@
+bz 7.36(Beta,x64) - Bandizip console tool. Copyright(C) 2023 Bandisoft
+Listing archive: Z:\@ 공무환경팀 ! 김민규\works\메뉴얼(PLC&HMI&공무설비)\PLC\SIEMENS\통신\SIMATIC_NET_산업용이더넷_NCM_S7입문서.alz
+Archive format: Alz
+
+      Date  Time    Attr         Size     CompSize Name                     
+------------------- ---- ------------ ------------ -------------------------
+2002-02-21 19:00:00 A__R       179652       158935 1장-각단계의_개요.pdf
+2002-02-21 19:11:00 A__R       445111       366221 2장-EthernetCP용_STEP7샘플_PROJECT_ETHERNET.pdf
+2002-02-21 19:12:00 A__R       708685       547351 3장-S7스테이션간_SEND_RECEIVE_인터페이스에서의_통신.pdf
+2002-02-21 19:08:00 A__R       554446       421275 4장-S7과_S5스테이션간_SEND_RECEIVE_인터페이스통신.pdf
+2002-02-21 19:19:00 A__R       753799       690870 서문-목차.pdf
+2002-02-21 18:54:00 A__R       187685       153733 참조문서.pdf
+------------------- ---- ------------ ------------ -------------------------
+2007-03-27 22:47:54           2829378      2338385 6 files, 0 folders       

@@ -1,0 +1,1468 @@
+{
+  "schema_version": 1,
+  "capture_source": "Android_Camera2_MediaRecorder_MP4",
+  "coordinate_reference": "WGS84_EPSG4326_phone_location_no_local_origin",
+  "audio_recorded": false,
+  "duration_ms": 272956,
+  "video_dimensions_px": [
+    1920,
+    1080
+  ],
+  "orientation_hint_degrees": 90,
+  "display_rotation_degrees": 0,
+  "requested_frame_rate_fps": 30,
+  "requested_video_bitrate_bps": 12000000,
+  "wall_time_utc": "2026-11-09T04:37:57.735146Z",
+  "wall_time_relation": "wall clock observed at first recording capture-start callback; not exposure UTC",
+  "first_recorder_camera_sensor_timestamp_ns": 177204152466000,
+  "first_frame_elapsed_realtime_ns": 177204152466000,
+  "first_frame_callback_observed_elapsed_realtime_ns": 177204182766344,
+  "recorder_start_observed_elapsed_realtime_ns": 177203999715883,
+  "stop_observed_elapsed_realtime_ns": 177477210159591,
+  "first_encoded_sample_presentation_time_us": 0,
+  "timeline_alignment": "estimated_camera_recording_frame",
+  "timeline_alignment_limit": "MediaRecorder does not identify the source frame of its first encoded sample; not frame-exact or hardware-validated",
+  "stop_reason": "user_stopped",
+  "interrupted": false,
+  "recorder_stop_error": false,
+  "recorder_stop_error_type": null,
+  "source_frame_results_received": 8188,
+  "source_capture_failures": 0,
+  "recorder_buffer_losses": 0,
+  "first_observation": {
+    "geolocation": {
+      "status": "valid",
+      "crs": "EPSG:4326",
+      "datum": "WGS84",
+      "position_is_estimate": true,
+      "latitude_degrees": 35.36197166666667,
+      "longitude_degrees": 129.03123833333333,
+      "altitude_m": 119.4,
+      "altitude_reference": "WGS84_ellipsoid",
+      "horizontal_accuracy_m": 2.4000000953674316,
+      "horizontal_accuracy_confidence": 0.68,
+      "vertical_accuracy_m": 15.300000190734863,
+      "age_ms": 888,
+      "fix_time_utc": "2026-11-09T04:37:56.813Z",
+      "fix_elapsed_realtime_ns": 177203264044267,
+      "provider": "gps",
+      "is_mock": false,
+      "observed_elapsed_realtime_ns": 177204152466000,
+      "freshness_limit_ms": 10000
+    },
+    "camera_direction": {
+      "status": "available",
+      "reference": "true_north",
+      "heading_degrees": 24.702253380169736,
+      "magnetic_heading_degrees": 33.44168762241827,
+      "pitch_degrees": -23.870722410732025,
+      "declination_degrees": -8.739434242248535,
+      "declination_source": "Android_GeomagneticField_model",
+      "sensor_accuracy": 3,
+      "age_ms": 7,
+      "sensor_elapsed_realtime_ns": 177204144501971,
+      "observed_elapsed_realtime_ns": 177204152466000,
+      "freshness_limit_ms": 1000,
+      "sensor_type": "TYPE_ROTATION_VECTOR",
+      "camera_axis": "device_negative_z_rear_camera",
+      "pitch_convention": "positive_up_from_horizontal",
+      "heading_undefined_near_vertical": false
+    },
+    "last_received_gps_reference": {
+      "status": "valid",
+      "crs": "EPSG:4326",
+      "datum": "WGS84",
+      "position_is_estimate": true,
+      "latitude_degrees": 35.36197166666667,
+      "longitude_degrees": 129.03123833333333,
+      "altitude_m": 119.4,
+      "altitude_reference": "WGS84_ellipsoid",
+      "horizontal_accuracy_m": 2.4000000953674316,
+      "horizontal_accuracy_confidence": 0.68,
+      "vertical_accuracy_m": 15.300000190734863,
+      "age_ms": 888,
+      "fix_time_utc": "2026-11-09T04:37:56.813Z",
+      "fix_elapsed_realtime_ns": 177203264044267,
+      "provider": "gps",
+      "is_mock": false,
+      "observed_elapsed_realtime_ns": 177204152466000,
+      "freshness_limit_ms": 10000,
+      "role": "last_received_reference_not_current_position",
+      "current_position": false
+    }
+  },
+  "camera": {
+    "id": "0",
+    "lens_facing": "BACK",
+    "sensor_orientation_degrees": 90,
+    "sensor_timestamp_source": "REALTIME_elapsedRealtimeNanos",
+    "sensor_timestamp_source_raw": 1,
+    "sensor_active_array_rect_px": [
+      0,
+      0,
+      4000,
+      3000
+    ],
+    "sensor_pre_correction_active_array_rect_px": [
+      0,
+      0,
+      4000,
+      3000
+    ],
+    "sensor_pixel_array_dimensions_px": [
+      4000,
+      3000
+    ],
+    "sensor_physical_dimensions_mm": [
+      6.400000095367432,
+      4.800000190734863
+    ],
+    "available_focal_lengths_mm": [
+      4.650000095367432
+    ],
+    "lens_intrinsic_calibration_fx_fy_cx_cy_skew": [
+      2906.249755859375,
+      2906.25,
+      2000,
+      1500,
+      0
+    ],
+    "lens_distortion": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "preview_buffer_dimensions_px": [
+      1920,
+      1080
+    ],
+    "zoom_control": "CONTROL_ZOOM_RATIO",
+    "supported_zoom_ratio_range": [
+      1,
+      4
+    ]
+  },
+  "first_camera_result": {
+    "sensor_timestamp_ns": 177204152466000,
+    "sensor_exposure_time_ns": 8337000,
+    "sensor_frame_duration_ns": 33350000,
+    "sensor_sensitivity_iso": 55,
+    "scaler_crop_region_px": [
+      0,
+      0,
+      4000,
+      3000
+    ],
+    "zoom_ratio": 1,
+    "lens_focal_length_mm": 4.65,
+    "lens_focus_distance_diopters": 0,
+    "lens_aperture": 1.8,
+    "lens_intrinsic_calibration_fx_fy_cx_cy_skew": null,
+    "lens_distortion": null,
+    "jpeg_orientation_degrees": 0,
+    "autofocus_state": 6,
+    "autoexposure_state": 1
+  },
+  "last_camera_result": {
+    "sensor_timestamp_ns": 177477041564000,
+    "sensor_exposure_time_ns": 8337000,
+    "sensor_frame_duration_ns": 33350000,
+    "sensor_sensitivity_iso": 50,
+    "scaler_crop_region_px": [
+      0,
+      0,
+      4000,
+      3000
+    ],
+    "zoom_ratio": 2.5546846,
+    "lens_focal_length_mm": 4.65,
+    "lens_focus_distance_diopters": 0,
+    "lens_aperture": 1.8,
+    "lens_intrinsic_calibration_fx_fy_cx_cy_skew": null,
+    "lens_distortion": null,
+    "jpeg_orientation_degrees": 0,
+    "autofocus_state": 1,
+    "autoexposure_state": 1
+  },
+  "camera_zoom_changes": [
+    {
+      "sensor_timestamp_ns": 177204152466000,
+      "zoom_ratio": 1,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177472479925000,
+      "zoom_ratio": 1.4090314,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177472513203000,
+      "zoom_ratio": 1.5315315,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177472546490000,
+      "zoom_ratio": 1.7738448,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177472579795000,
+      "zoom_ratio": 1.9368168,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177472613096000,
+      "zoom_ratio": 2.0221393,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177472646405000,
+      "zoom_ratio": 2.1736295,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177472679665000,
+      "zoom_ratio": 2.2249212,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177472712925000,
+      "zoom_ratio": 2.3054185,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177472746203000,
+      "zoom_ratio": 2.3388565,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177472779472000,
+      "zoom_ratio": 2.4332645,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177472812750000,
+      "zoom_ratio": 2.5678957,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177472846055000,
+      "zoom_ratio": 2.656987,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177472879351000,
+      "zoom_ratio": 2.702496,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177472912629000,
+      "zoom_ratio": 2.8099742,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177472945898000,
+      "zoom_ratio": 2.826224,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177472979192000,
+      "zoom_ratio": 2.8537652,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177473012499000,
+      "zoom_ratio": 2.86872,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177473045804000,
+      "zoom_ratio": 2.896722,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177473079109000,
+      "zoom_ratio": 2.9439454,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177473112405000,
+      "zoom_ratio": 3.0258257,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177473145710000,
+      "zoom_ratio": 3.117844,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177473179015000,
+      "zoom_ratio": 3.2846928,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177473212347000,
+      "zoom_ratio": 3.4578059,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177473245679000,
+      "zoom_ratio": 3.5654747,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177473279011000,
+      "zoom_ratio": 3.661321,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177473312343000,
+      "zoom_ratio": 3.6727042,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177473345675000,
+      "zoom_ratio": 3.682814,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177473379007000,
+      "zoom_ratio": 3.6907773,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177473412339000,
+      "zoom_ratio": 3.6903856,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177473445698000,
+      "zoom_ratio": 3.69527,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177473645573000,
+      "zoom_ratio": 3.394767,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177473678842000,
+      "zoom_ratio": 3.1128795,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177473712111000,
+      "zoom_ratio": 2.7478974,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177473745353000,
+      "zoom_ratio": 2.4907112,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177473778622000,
+      "zoom_ratio": 2.3577042,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177473811881000,
+      "zoom_ratio": 2.2482762,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177473845151000,
+      "zoom_ratio": 2.1781554,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177473878411000,
+      "zoom_ratio": 2.140191,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177473911680000,
+      "zoom_ratio": 2.1375988,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177473944940000,
+      "zoom_ratio": 2.1265218,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177473978194000,
+      "zoom_ratio": 2.1132748,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177474011460000,
+      "zoom_ratio": 2.1034136,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177474044756000,
+      "zoom_ratio": 2.1002636,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177474078016000,
+      "zoom_ratio": 2.0898583,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177474111312000,
+      "zoom_ratio": 2.0866501,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177474144608000,
+      "zoom_ratio": 2.0757596,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177474177904000,
+      "zoom_ratio": 2.0622754,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177474211200000,
+      "zoom_ratio": 2.0500631,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177474244486000,
+      "zoom_ratio": 2.043359,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177474344375000,
+      "zoom_ratio": 2.0449963,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177474410958000,
+      "zoom_ratio": 2.0456939,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177474444254000,
+      "zoom_ratio": 2.047115,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177474477541000,
+      "zoom_ratio": 2.047427,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177474510873000,
+      "zoom_ratio": 2.049161,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177474544205000,
+      "zoom_ratio": 2.054386,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177474577537000,
+      "zoom_ratio": 2.0812676,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177474610869000,
+      "zoom_ratio": 2.1578712,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177474644201000,
+      "zoom_ratio": 2.2498124,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177474677614000,
+      "zoom_ratio": 2.4003448,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177474711027000,
+      "zoom_ratio": 2.5181005,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177474744431000,
+      "zoom_ratio": 2.6023045,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177474777880000,
+      "zoom_ratio": 2.698598,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177474811320000,
+      "zoom_ratio": 2.7960174,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177474844760000,
+      "zoom_ratio": 2.9136772,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177474878236000,
+      "zoom_ratio": 2.9246552,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177474911667000,
+      "zoom_ratio": 2.9726753,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177474945143000,
+      "zoom_ratio": 3.0162609,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177474978601000,
+      "zoom_ratio": 3.0272405,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177475012059000,
+      "zoom_ratio": 3.0405846,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177475045517000,
+      "zoom_ratio": 3.0617185,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177475078966000,
+      "zoom_ratio": 3.077634,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177475112415000,
+      "zoom_ratio": 3.0798318,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177475145837000,
+      "zoom_ratio": 3.0826972,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177475179259000,
+      "zoom_ratio": 3.0869288,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177475212681000,
+      "zoom_ratio": 3.0942562,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177475246103000,
+      "zoom_ratio": 3.1176982,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177475279507000,
+      "zoom_ratio": 3.143982,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177475312920000,
+      "zoom_ratio": 3.1595953,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177475346320000,
+      "zoom_ratio": 3.1790311,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177475379737000,
+      "zoom_ratio": 3.1992397,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177475413114000,
+      "zoom_ratio": 3.210196,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177475446473000,
+      "zoom_ratio": 3.2157714,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177475479823000,
+      "zoom_ratio": 3.218564,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177475513182000,
+      "zoom_ratio": 3.2240543,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177475546514000,
+      "zoom_ratio": 3.2553174,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177475579873000,
+      "zoom_ratio": 3.2625227,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177475613313000,
+      "zoom_ratio": 3.2697206,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177475646735000,
+      "zoom_ratio": 3.3520267,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177475713525000,
+      "zoom_ratio": 3.3377361,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177475746920000,
+      "zoom_ratio": 3.3486605,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177475813611000,
+      "zoom_ratio": 3.3586662,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177475846817000,
+      "zoom_ratio": 3.3666334,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177475879996000,
+      "zoom_ratio": 3.371732,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177475913238000,
+      "zoom_ratio": 3.373392,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177475946525000,
+      "zoom_ratio": 3.3829143,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177476046467000,
+      "zoom_ratio": 3.3815649,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177476079799000,
+      "zoom_ratio": 3.3842814,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177476113131000,
+      "zoom_ratio": 3.3840814,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177476146463000,
+      "zoom_ratio": 3.3865032,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177476179795000,
+      "zoom_ratio": 3.3791833,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177476213127000,
+      "zoom_ratio": 3.2026548,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177476246414000,
+      "zoom_ratio": 2.9196198,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177476279674000,
+      "zoom_ratio": 2.820504,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177476312826000,
+      "zoom_ratio": 2.73023,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177476345762000,
+      "zoom_ratio": 2.6961033,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177476378581000,
+      "zoom_ratio": 2.6740332,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177476411400000,
+      "zoom_ratio": 2.6387694,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    },
+    {
+      "sensor_timestamp_ns": 177476444210000,
+      "zoom_ratio": 2.5546846,
+      "scaler_crop_region_px": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "lens_focal_length_mm": 4.65
+    }
+  ],
+  "camera_zoom_changes_limit": 8192,
+  "camera_zoom_changes_dropped": 0,
+  "pixel_annotation": "none; clean hardware encoded video",
+  "gps_track_write_failed": false,
+  "kind": "gps_video",
+  "video_code": "FV-32ca5218-af17-4d68-a395-de3573150cd8",
+  "timeline_unavailable_reason": null,
+  "timeline_note": "GPS observations use their own clocks. Camera recording-frame origin is estimated; first encoded MP4 frame alignment is not hardware-validated.",
+  "track_file": "현장기록\/영상_133757_f633fa89.gps.jsonl",
+  "track_csv": "현장기록\/영상_133757_f633fa89.gps.csv",
+  "track_js": "현장기록\/영상_133757_f633fa89.gps.js",
+  "subtitle_file": "현장기록\/영상_133757_f633fa89.srt",
+  "initial_observation": {
+    "geolocation": {
+      "status": "valid",
+      "crs": "EPSG:4326",
+      "datum": "WGS84",
+      "position_is_estimate": true,
+      "latitude_degrees": 35.36197166666667,
+      "longitude_degrees": 129.03123833333333,
+      "altitude_m": 119.4,
+      "altitude_reference": "WGS84_ellipsoid",
+      "horizontal_accuracy_m": 2.4000000953674316,
+      "horizontal_accuracy_confidence": 0.68,
+      "vertical_accuracy_m": 15.300000190734863,
+      "age_ms": 888,
+      "fix_time_utc": "2026-11-09T04:37:56.813Z",
+      "fix_elapsed_realtime_ns": 177203264044267,
+      "provider": "gps",
+      "is_mock": false,
+      "observed_elapsed_realtime_ns": 177204152466000,
+      "freshness_limit_ms": 10000
+    },
+    "camera_direction": {
+      "status": "available",
+      "reference": "true_north",
+      "heading_degrees": 24.702253380169736,
+      "magnetic_heading_degrees": 33.44168762241827,
+      "pitch_degrees": -23.870722410732025,
+      "declination_degrees": -8.739434242248535,
+      "declination_source": "Android_GeomagneticField_model",
+      "sensor_accuracy": 3,
+      "age_ms": 7,
+      "sensor_elapsed_realtime_ns": 177204144501971,
+      "observed_elapsed_realtime_ns": 177204152466000,
+      "freshness_limit_ms": 1000,
+      "sensor_type": "TYPE_ROTATION_VECTOR",
+      "camera_axis": "device_negative_z_rear_camera",
+      "pitch_convention": "positive_up_from_horizontal",
+      "heading_undefined_near_vertical": false
+    },
+    "last_received_gps_reference": {
+      "status": "valid",
+      "crs": "EPSG:4326",
+      "datum": "WGS84",
+      "position_is_estimate": true,
+      "latitude_degrees": 35.36197166666667,
+      "longitude_degrees": 129.03123833333333,
+      "altitude_m": 119.4,
+      "altitude_reference": "WGS84_ellipsoid",
+      "horizontal_accuracy_m": 2.4000000953674316,
+      "horizontal_accuracy_confidence": 0.68,
+      "vertical_accuracy_m": 15.300000190734863,
+      "age_ms": 888,
+      "fix_time_utc": "2026-11-09T04:37:56.813Z",
+      "fix_elapsed_realtime_ns": 177203264044267,
+      "provider": "gps",
+      "is_mock": false,
+      "observed_elapsed_realtime_ns": 177204152466000,
+      "freshness_limit_ms": 10000,
+      "role": "last_received_reference_not_current_position",
+      "current_position": false
+    }
+  },
+  "sample_count": 276,
+  "saved_at_utc": "2026-11-09T04:42:31.146259Z",
+  "gallery_filename": "20261109_133757KST_GPS-VALID_LAT35.3619717_LON129.0312383_H24.7-TN_DIR-AVAILABLE_P-23.9_ACC2.4m_FV-32ca5218-af17-4d68-a395-de3573150cd8.mp4",
+  "video": "현장기록\/영상_133757_f633fa89.mp4"
+}

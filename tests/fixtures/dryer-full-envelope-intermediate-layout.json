@@ -1,0 +1,230 @@
+{
+  "catalogRevision": "dryer-full-envelope-20261110",
+  "items": [
+    {
+      "id": "f1-ica-1",
+      "position": [
+        -7.5,
+        0.3,
+        -2.75
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "f1-ica-2",
+      "position": [
+        -4,
+        0.3,
+        -2.75
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "f1-ica-3",
+      "position": [
+        1,
+        0.3,
+        -2.75
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "f1-xray-1",
+      "position": [
+        -7.25,
+        0.3,
+        1.5
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "f1-xray-2",
+      "position": [
+        -4,
+        0.3,
+        1.5
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "f1-xray-3",
+      "position": [
+        1,
+        0.3,
+        1.5
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "f1-mix-a",
+      "position": [
+        -7,
+        0.3,
+        -8
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "f1-mix-b",
+      "position": [
+        -3.75,
+        0.3,
+        -8
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "f1-melting",
+      "position": [
+        1.25,
+        0.3,
+        -8
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "f1-oil-water",
+      "position": [
+        25.5,
+        0.3,
+        3.25
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "f1-s1",
+      "position": [
+        8.75,
+        0.3,
+        -1.75
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "f1-conveyor-a",
+      "position": [
+        -2.75,
+        0.3,
+        6
+      ],
+      "rotation": 1.5707963267948966
+    },
+    {
+      "id": "f1-conveyor-b",
+      "position": [
+        5.5,
+        0.3,
+        5.5
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "f1-palletizer",
+      "position": [
+        10,
+        0.3,
+        6.75
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "f3-sterilizer",
+      "position": [
+        -6,
+        7.3,
+        -4.75
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "f3-homogenizer",
+      "position": [
+        -0.5,
+        7.3,
+        -3.5
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "f3-balance-tank",
+      "position": [
+        -6.75,
+        7.3,
+        4
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "f3-feed-tank",
+      "position": [
+        -2.25,
+        7.3,
+        4.5
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "f3-holding",
+      "position": [
+        6,
+        7.3,
+        1
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "f4-fluid-bed",
+      "position": [
+        -4.75,
+        13.3,
+        -1.75
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "f4-fine-return",
+      "position": [
+        6,
+        13.3,
+        -3
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "f4-transfer-bin",
+      "position": [
+        6,
+        13.3,
+        4.5
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "f5-dryer-cone",
+      "position": [
+        -1,
+        20.2,
+        7.5
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "f5-powder-recovery",
+      "position": [
+        -3.5,
+        20.2,
+        -5.25
+      ],
+      "rotation": 0
+    },
+    {
+      "id": "f5-extraction",
+      "position": [
+        0.5,
+        20.2,
+        6
+      ],
+      "rotation": 0
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "date": "2026-11-12",
+  "request": "사람 이동속도 더 빠르게 / 출입 가능한 문 개폐 / 도면 기준으로 현실적인 보행 배율 검토",
+  "coordinatePolicy": {
+    "buildingModelUnitsPerMetre": 1,
+    "globalModelScaleApplied": 1,
+    "decision": "도면 치수와 일치하는 방·층·출입구를 일괄 축소하지 않고 미터 기준을 유지",
+    "reason": "2팀·액상·건조실은 도면 치수로 등록돼 있다. 전체 축소는 문과 사람, 층고·계단 상승량의 일관성을 깨뜨린다. 건물 간 등록 좌표와 장비 외형의 근사 여부는 별도로 보존한다."
+  },
+  "person": {
+    "heightMetres": 1.75,
+    "eyeHeightMetres": 1.65,
+    "bodyRadiusMetres": 0.3,
+    "modelHelmetTopMetres": 1.75,
+    "maximumReachableRiserMetres": 0.32,
+    "normalInspectionSpeedMetresPerSecond": 6,
+    "fastInspectionSpeedMetresPerSecond": 12,
+    "previousInspectionSpeeds": [4, 8],
+    "speedFactor": 1.5,
+    "speedInterpretation": "사용자 요청에 따른 빠른 탐색 속도이며 실제 사람의 평상시 보행속도를 뜻하지 않음",
+    "maximumHorizontalGroundSampleSpacingMetres": 0.06,
+    "movementChange": "프레임 시간과 실제 이동거리 중 더 세밀한 기준으로 나눠 좁은 계단을 빠르게 지나도 여러 단을 한 번에 건너뛰지 않음",
+    "camera": {
+      "previousVerticalFovDegrees":65,
+      "currentDefaultVerticalFovDegrees":70,
+      "viewScalePercent":{"minimum":75,"maximum":125,"default":100},
+      "nearClipMetres":0.04,
+      "note":"시야 배율은 카메라 투영만 바꾸며 건물의 미터 축척을 바꾸지 않는다. 눈높이는 바닥 기준 1.65m를 유지한다."
+    }
+  },
+  "checkedSpaces": [
+    {
+      "id": "packaging",
+      "code": "apps/site/packaging-data.js",
+      "primaryImageVisuallyReviewed": "apps/site/assets/drawings/packaging/floor-3-measured-plan.png",
+      "evidence": ["references/stick-packaging-3f/drawing-review.json", "references/guardhouse-team2-20261112/reconstruction.json"],
+      "drawingMetres": {"mainWidth":31.35,"mainDepth":30.4,"columnPitchX":5.125,"wallThickness":0.3,"stairWidth":1.2,"floorDatums":[0,6,12.15],"eave":18.15,"ridge":19.51},
+      "currentModel": "도면과 같은 본체 폭·깊이·층고. 출입 돌출을 포함하는34.8×33.55m를 본체 전체 배율로 다시 적용하지 않음",
+      "result": "metric dimensions retained"
+    },
+    {
+      "id": "liquid",
+      "code": "apps/site/liquid-data.js",
+      "primaryImageVisuallyReviewed": "apps/site/assets/drawings/outdoor/equipment-plan-2022.png",
+      "evidence": "references/team3-liquid-20261110/placement-confidence.json",
+      "drawingMetres": {"width":99.7,"depth":39.2},
+      "currentModelMetres": {"width":99.7,"depth":39.2,"height":4.5},
+      "sourceRegistration": "2022-05-03 장비배치도 벡터를 x=(pdf_y-86.04)/10.49789368104313-49.85, z=(588.24-pdf_x)/10.493877551020407-19.6으로미터환산",
+      "limits": "높이4.5m는 미확정 모델값, 설비 현재 위치는 카드/과거 도면 대응 근사",
+      "result": "plan dimensions retained"
+    },
+    {
+      "id": "dryer",
+      "code": "apps/site/dryer-building-data.js",
+      "evidence": "A013–A018 평면과 A020 단면 등록",
+      "drawingMetres": {"lowerBuildingWidth":43,"lowerBuildingDepth":35,"towerWidth":17.2,"towerDepth":26.8},
+      "result": "building metre frame retained; room subdivisions and historic/current identities remain separately qualified"
+    },
+    {
+      "id": "preparation",
+      "code": "apps/site/preparation-data.js",
+      "evidence": "references/preparation-room-20261111/README.md",
+      "modelMetres": {"deckElevation":2.45,"tankBaseHeight":0.95,"typicalTankRadius":0.9,"tankBodyHeight":2.35},
+      "limits": "A013 평면에 11/11 연속 동선과 촬영된 현행 배치도를 비례 등록. 플랫폼과 장비 높이는영상 근사이며 일괄 축소 근거가 아님",
+      "result": "retain metric navigation and local floor support"
+    },
+    {
+      "id": "outdoor",
+      "code": "apps/site/outdoor-data.js",
+      "drawingBuildingAxesMetres": [99.7,39.2],
+      "currentCorridorLengthMetres":110,
+      "currentAisleCenterAcrossMetres":2.25,
+      "currentWallAcrossMetres":3.6,
+      "limits": "110m는 전체 기존 영상 설비열 길이이며99.7m 건물 축 치수와 범위가 다르다. 두 값을단순 나누어 전체 설비·사람을축소하지 않음",
+      "result": "current full utility route retained; survey-grade clearance unconfirmed"
+    },
+    {
+      "id": "campus",
+      "code": "apps/site/campus-data.js",
+      "evidence": ["references/yusan-campus/location-evidence.json", "references/guardhouse-team2-20261112/reconstruction.json"],
+      "currentProductionEnvelopeMetres": [80,51,10],
+      "limits": "물류장 전경은 반복 청색 박공·중앙 곡면 지붕과 인접 매스를 묶은 외관 근사. 2019의 단일3동 사각형과1:1로 치수 대응시켜 즉시 축소할 근거 없음",
+      "navigationChecksAlreadyRecorded": {"rearDoorNearestEquipmentGapMetres":3.375,"rearDoorClearApproachWidthMetres":2.5,"doorWidthsMetres":[0.8,1.1,1.2,1.4,2.2]},
+      "result": "do not apply unsupported global campus scale"
+    }
+  ],
+  "implementation": {
+    "changedFiles": ["apps/site/person-walk.js","tests/person-walk.test.mjs"],
+    "validation": "node --test tests/person-walk.test.mjs 및 tests/person-view.test.mjs로 이동과 실제 모델의 계단 보행 확인",
+    "newBehaviorTest": "12m/s at0.1s frame and fine0.005s frames both climb0.09m-deep/0.18m-high treads to the same2.34m landing"
+  },
+  "unresolvedMeasurements": ["캠퍼스 합성 물류장 정확한 현행 외곽", "액상 현재 천장높이", "모든 장비별 현장 실측 치수"],
+  "sourceUse": "휴대폰 위치·고도와 시야각을 건물 실측 높이로 해석하지 않음. 현재 도면값·사용자 요청·영상 근사를 구분함."
+}

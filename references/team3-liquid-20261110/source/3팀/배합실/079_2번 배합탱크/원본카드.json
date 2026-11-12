@@ -1,0 +1,74 @@
+{
+  "id": "3-2-1782113317939-195912",
+  "line": "",
+  "name": "2번 배합탱크",
+  "note": "",
+  "plan": "",
+  "rate": 0,
+  "room": "배합실",
+  "team": "3팀",
+  "group": "",
+  "owner": "",
+  "status": "비가동중",
+  "process": "",
+  "documents": [],
+  "lastCheck": "",
+  "modelName": "",
+  "nextCheck": "",
+  "photoCrop": null,
+  "photoName": "2번 배합탱크 photo.jpg",
+  "detailInfo": [
+    {
+      "label": "설비명",
+      "value": "2번 배합탱크"
+    },
+    {
+      "label": "관리팀",
+      "value": "3팀"
+    },
+    {
+      "label": "가동률",
+      "value": "0%"
+    }
+  ],
+  "ownerLabel": "담당 업체",
+  "production": "",
+  "teamDataKey": "work_team_calendar_team3",
+  "detailGroups": {
+    "equipmentSpecs": []
+  },
+  "manufacturer": "",
+  "photoDataUrl": "",
+  "equipmentCode": "3-2-1782113317939-195912",
+  "operationInfo": [
+    {
+      "label": "설비명",
+      "value": "2번 배합탱크"
+    },
+    {
+      "label": "관리팀",
+      "value": "3팀"
+    },
+    {
+      "label": "실",
+      "value": "배합실"
+    },
+    {
+      "label": "공정",
+      "value": ""
+    },
+    {
+      "label": "가동률",
+      "value": "0"
+    }
+  ],
+  "manufacturedAt": "",
+  "photoDocumentId": "1a7416f6-bdb2-4e1b-b46a-01b6ce52608d",
+  "photoPreviewUrl": "/api/files/1a7416f6-bdb2-4e1b-b46a-01b6ce52608d/view",
+  "photoDownloadUrl": "/api/files/1a7416f6-bdb2-4e1b-b46a-01b6ce52608d/download",
+  "manufacturerLabel": "제조사",
+  "photoThumbDataUrl": "",
+  "maintenanceHistory": [],
+  "photoAttachmentKey": "equipment-photo-main",
+  "photoStorageRelPath": "equipment-assets/equipment-history/2번 배합탱크/images/dbf6549d-365c-4522-83c0-ef27b2901b52.jpg"
+}

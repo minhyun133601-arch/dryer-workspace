@@ -1,0 +1,41 @@
+{
+  "date": "2026-11-10",
+  "scope": "3팀 액상 실내 52카드 사진/모델 외형 재감사",
+  "originalFilesChecked": 156,
+  "originalSourceHashesMatch": true,
+  "cards": 52,
+  "allSourceAndPhotoReferencesExist": true,
+  "numberObservationMapMatchesCrosswalk": true,
+  "contactSheetsReviewed": 7,
+  "nativeReflowDetailCards": [
+    42,
+    48,
+    49,
+    50,
+    60,
+    64,
+    67,
+    79,
+    83,
+    93
+  ],
+  "applicationSourceEditedByAudit": false,
+  "modelBaselineSha256": "7810b014c39152481c9eed5ffaa929ee08d9bc911a1dbef98b904f7072086487",
+  "outputs": [
+    {
+      "path": "references/team3-liquid-20261110/card-model-shape-audit-20261110.json",
+      "bytes": 108872,
+      "sha256": "b9c629c986d9f3c2d5659be44c92a8787e3636ae544ff0ee74240bb41220af5f"
+    },
+    {
+      "path": "references/team3-liquid-20261110/card-photo-observations-20261110.json",
+      "bytes": 20311,
+      "sha256": "9120e050da64acb2fe911fc6d536ed4cd46a05d7695d1a926987e1ac19837328"
+    },
+    {
+      "path": "references/team3-liquid-20261110/README.md",
+      "bytes": 5179,
+      "sha256": "6fe521f1ceeaf052afc2a4d518508f7bf6629c0654d3dd8c3445bdca0f3d7e4c"
+    }
+  ]
+}

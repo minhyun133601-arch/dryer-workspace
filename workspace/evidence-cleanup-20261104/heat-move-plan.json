@@ -1,0 +1,895 @@
+{
+  "source_root": "C:\\Users\\user\\Desktop\\근거 자료",
+  "target_root": "C:\\Users\\user\\Desktop\\프로젝트\\references\\열교환기",
+  "entries": [
+    {
+      "source": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-01-21 유산)건조기 열교환기(폐열회수 장치) 설치",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트\\references\\열교환기\\사업자료\\2026-01-21 유산)건조기 열교환기(폐열회수 장치) 설치"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\근거 자료\\최종자료\\건조기 열교환기 시뮬레이터.html",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트\\references\\열교환기\\최종자료\\건조기 열교환기 시뮬레이터.html"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\근거 자료\\최종자료\\열교환기 백데이터.html",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트\\references\\열교환기\\최종자료\\열교환기 백데이터.html"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_heat_exchanger",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트\\references\\열교환기\\관리자료\\수집·검토\\_work_heat_exchanger"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_approvals\\approval_review_data.json",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트\\references\\열교환기\\관리자료\\수집·검토\\_work_approvals\\approval_review_data.json"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\근거 자료\\KPI-전기-가스-월별-2024-2026 (1).xlsx",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트\\references\\열교환기\\KPI-전기-가스-월별-2024-2026 (1).xlsx"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\근거 자료\\00_자료열기.html",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트\\references\\열교환기\\00_자료열기.html"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\자료관리 안내.txt",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트\\references\\열교환기\\관리자료\\자료관리 안내.txt"
+    }
+  ],
+  "files": [
+    {
+      "relative": "사업자료/2026-01-21 유산)건조기 열교환기(폐열회수 장치) 설치/문서 본문.jpg",
+      "bytes": 265036,
+      "sha256": "6b106a87e4830d1c59ad55264051d5db71754acd942bd06a1f6b9a1b38264964"
+    },
+    {
+      "relative": "사업자료/2026-01-21 유산)건조기 열교환기(폐열회수 장치) 설치/문서 본문.pdf",
+      "bytes": 265992,
+      "sha256": "95fd227a78b6d2afef3d72859dee900016c9d1df733bc292a314db77ad3b7be2"
+    },
+    {
+      "relative": "사업자료/2026-01-21 유산)건조기 열교환기(폐열회수 장치) 설치/문서 원본 백업.zip",
+      "bytes": 2020725,
+      "sha256": "556a5a576f56d5e5ec0f12c458bfeafb79a8882fd9f1a95ac00edc9b42f62a58"
+    },
+    {
+      "relative": "사업자료/2026-01-21 유산)건조기 열교환기(폐열회수 장치) 설치/문서 정보.txt",
+      "bytes": 8197,
+      "sha256": "24b62abc2fdc9df32b73b0fa2b9a27fc6fb8acdd71e13011e5d89796eafd095a"
+    },
+    {
+      "relative": "사업자료/2026-01-21 유산)건조기 열교환기(폐열회수 장치) 설치/보관 검증.json",
+      "bytes": 3708,
+      "sha256": "e153b1796fdcea51fab574dd27ea7e39afc45c9d1ce13549ddf7981a20e24713"
+    },
+    {
+      "relative": "사업자료/2026-01-21 유산)건조기 열교환기(폐열회수 장치) 설치/첨부파일/열교환기 설치도.pptx",
+      "bytes": 1308596,
+      "sha256": "6fb84e239f126df1e56c21135d1312586b52491d6c45e4168e925052a0b19137"
+    },
+    {
+      "relative": "사업자료/2026-01-21 유산)건조기 열교환기(폐열회수 장치) 설치/첨부파일/열회수장치 설치 정면도.pdf",
+      "bytes": 206448,
+      "sha256": "8d910505a28cd714a5cb025b79052dc93cfbfc70ffaa123f40ff38bfdd1ff51c"
+    },
+    {
+      "relative": "사업자료/2026-01-21 유산)건조기 열교환기(폐열회수 장치) 설치/첨부파일/열회수장치 제작 스케줄.xlsx",
+      "bytes": 21603,
+      "sha256": "36b4f946732c0a19eb318fe88d1101655837fa6a04f73e7203e241433afe897b"
+    },
+    {
+      "relative": "사업자료/2026-01-21 유산)건조기 열교환기(폐열회수 장치) 설치/첨부파일/열회수장치 제작설치 견적서 2025.09.10.pdf",
+      "bytes": 222496,
+      "sha256": "be6f646eb9c64e691251e6e8323193249fddd6e34c5d7c440b25f1d192791beb"
+    },
+    {
+      "relative": "사업자료/2026-01-21 유산)건조기 열교환기(폐열회수 장치) 설치/첨부파일/열회수장치설치 평면도.pdf",
+      "bytes": 150542,
+      "sha256": "0baded04e8573181b9e76d85f65084df8937feece52ba80452c2c1e868ad2779"
+    },
+    {
+      "relative": "사업자료/2026-01-21 유산)건조기 열교환기(폐열회수 장치) 설치/첨부파일/온도근거 산출도.xls",
+      "bytes": 47616,
+      "sha256": "fa13b7a87b5dcb343c6025d2f4eb43a9299fcec2f6c1570826efa8bd5afbff50"
+    },
+    {
+      "relative": "최종자료/건조기 열교환기 시뮬레이터.html",
+      "bytes": 14885936,
+      "sha256": "0b7809ce3ff34a3c411b60e82342e41b5de4ac9734b6e399697d7291ddbf4c10"
+    },
+    {
+      "relative": "최종자료/열교환기 백데이터.html",
+      "bytes": 5932966,
+      "sha256": "1563d6a9be20dea71bb68eca44000229beee6918aa565e411c4baf2f0c3f0e74"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/3d_geometry_review.json",
+      "bytes": 10793,
+      "sha256": "5566200ab105d25c5a9db199ae576befd95780f8334a1dc51efb37aa3f018803"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/3d_qa.json",
+      "bytes": 18366,
+      "sha256": "6345814d6bc3be69c7a54c8000d8c98ea80b618837f809392c73f5c12a083f7d"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/3d_receipt.json",
+      "bytes": 774,
+      "sha256": "c9bc7fdcd6358f45b5dd11eb5c66e2697917842fe6f72da9795ad7f2e5b26610"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/attachment_extraction.json",
+      "bytes": 24244,
+      "sha256": "c5207e0068234da12941d5b735c399ddb8e6c65e07bb07f858f6b16757b7e408"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/body.jpg",
+      "bytes": 261189,
+      "sha256": "72f3d29d1423faabc76e044dec3d9b08995b9a3acdef32e3754ea395148639ba"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/body_vendor_comparison.png",
+      "bytes": 440141,
+      "sha256": "7879cc0bd99bdd7268a5f8f755936ded7c8dcbe7a18d11a611330f4dc85efd99"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/build_finance_audit.py",
+      "bytes": 14089,
+      "sha256": "feede773978d39902c428cdfc96509c6e3b4d58dbdfc7b32b4309e22351edadd"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/build_html.py",
+      "bytes": 46555,
+      "sha256": "ee1c7ff78894c0a06552c3bbb026987d92c2e3f88401eaf5dd2b54078de13e3a"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/build_oneglance.py",
+      "bytes": 32460,
+      "sha256": "df2a66cfc2b0c7c29ad8e0c2ff113a30b75879f91906c0b6418f11fd5113c1a6"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/build_oneglance_3d.py",
+      "bytes": 27502,
+      "sha256": "be2c8d34c278dea5e59b4ebe09d32f532856e7cbdd3bcd91e040d6b0f8045877"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/build_reconstruction_assets.py",
+      "bytes": 889,
+      "sha256": "12945489e1fbd4baf261c3330cd50fa7566a441f0ce2f8f8be7cbb281c7ae27c"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/build_simulator_model.py",
+      "bytes": 11960,
+      "sha256": "e6f007f6e3016d9c9dd99e67687b1b938a9244623135030be21cb21fc9468f58"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/detailed_geometry_review.json",
+      "bytes": 15324,
+      "sha256": "cc7de40e76c670e82b5557cc26531910c9c6d3458b2c6ed8d60348507ab65e6a"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/doc_source.json",
+      "bytes": 9037,
+      "sha256": "fa023eedce7ba81f5d28c3f1c7f0ca4e84a65007d5043417cf48c769b08dfb59"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/drawing1.xml",
+      "bytes": 27379,
+      "sha256": "376521f4e9015a33ef2cf1ad5d8ff0d001c234b66a2083e02492a1d2991cbe0a"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/executive_qa.json",
+      "bytes": 20592,
+      "sha256": "bb10eb425204533ccd280947d5d66ba51814181f638b3ff3deae2763f9e1ae9d"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/extract_finance_sources.py",
+      "bytes": 2898,
+      "sha256": "3afbb5f6f3bb1e156e4f70475d7298314e20890fd3632a8b78021724eb4fce3f"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/finance_audit.json",
+      "bytes": 25800,
+      "sha256": "a926eaffb82f5fa2fa34477209600212bf47659f7c4ffb4097975b71eac5cb1e"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/finance_audit_notes.md",
+      "bytes": 8782,
+      "sha256": "5f66510c6fbc2d8171338167dbde5cdd7c158f06515779a930a3ac7a7525aa68"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/flow-equipment-table.png",
+      "bytes": 108602,
+      "sha256": "2a9c100801cf9f09a3b3590bb9587a667cf9abf299d7d1ef613fd250bcaa8f8d"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full-final-auxiliary.png",
+      "bytes": 357022,
+      "sha256": "9c1192c684f3925d52ab952631b1565576c5fb41b14b5e625f9efe06e046fe90"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full-final-compact.png",
+      "bytes": 256764,
+      "sha256": "673c64ef16cac5cb3881771e1fa35956e31f11f8151b328c58098655e6b98b7e"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full-final-front-compare.png",
+      "bytes": 298969,
+      "sha256": "c2dc3d20891bf92af6256a3a253a933225b018017276ca3153daf25cf43f34f9"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full-final-mobile-pid.png",
+      "bytes": 103947,
+      "sha256": "9b2909a06fc251cab7c2cae45eaea2e6e09f247b88a34ce41619de4cbd6757d8"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full-final-overview.png",
+      "bytes": 407586,
+      "sha256": "4e644614b4f6e3581b5c0441ea87566329b3aef060162ea6021b5fcf00d5a053"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full-final-pid.png",
+      "bytes": 302101,
+      "sha256": "20546e0adc2ea1b6c83c08b92d373f1314233c9ee39e4a360be204ca683244b8"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full-final-plan-compare.png",
+      "bytes": 306239,
+      "sha256": "b163ad0f48882ecba2fd20fec00e9fc249f77936d7a1f94780315b44ac8fd4e4"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full-final-report.png",
+      "bytes": 229318,
+      "sha256": "9816db8e10f43f17997819ea8f0dca51fcf9020d8f291494acf24deb14b31b4b"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full-front.png",
+      "bytes": 354814,
+      "sha256": "bd48967576a406e6bea6c2aeaa202602a4e7756b52d5d90a9efffe46b6be627d"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full-initial.png",
+      "bytes": 427264,
+      "sha256": "4f57ca96d481d350fe742e7952e71464d4601127c8c631fea162a29bc5661b77"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full-pid.png",
+      "bytes": 323568,
+      "sha256": "0054dc1bbfde479348e6bc6bf163ac1cfcd8235de6ffe905a519f58d888c78ef"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full-plan.png",
+      "bytes": 359548,
+      "sha256": "bb7b5e86c16f1f4c8ccd55bc64be2e3a210b5ff3846bb69d554fe1e70fa2c8b6"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full-reconstruction-aux-focus.png",
+      "bytes": 326810,
+      "sha256": "482a7d74247e3feb7b3225bb79f56023bd65e29f6d662eac7acdd1b074bd8bc9"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full-reconstruction-aux-gallery.png",
+      "bytes": 359846,
+      "sha256": "c90f2a61428ebb48d2acff20ad4533c71b4eaae044f5cc295ab6fd7feef49894"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full-reconstruction-compact.png",
+      "bytes": 341905,
+      "sha256": "711596316f9eaef2c6d0a13400ca9378a48e8407ba0564c106a4d11364247875"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full-reconstruction-desktop.png",
+      "bytes": 407894,
+      "sha256": "9f664b64fed95fac13a40f8a6220b1ec310465d974e6ab4fe09702acb127773d"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full-reconstruction-front-split.png",
+      "bytes": 299215,
+      "sha256": "8c65f1aab1ef3a398e2a1a905306b5146df29ca0ab5051771c7a314ff01cd3bc"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full-reconstruction-mobile.png",
+      "bytes": 235614,
+      "sha256": "3af9c24e414071db0d13aff4f6ce44c230025bbea694651b748f25a9b4e59d1b"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full-reconstruction-pid.png",
+      "bytes": 302585,
+      "sha256": "f0d90f001b79163c256991f31faa82778b7ec12cf17385b53643b738a8134202"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full-reconstruction-plan-split.png",
+      "bytes": 306241,
+      "sha256": "59c46bb030f8fbbec5258f18415cf682af5c4d21154bf9fce66cb5a662c1e5b7"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full-reconstruction-report.png",
+      "bytes": 258493,
+      "sha256": "97fdcc4f01d058badea2a0548640d0eb4aead224d4b40b083988e74df9ff12be"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full_reconstruction_qa.json",
+      "bytes": 36413,
+      "sha256": "be6cb524ef96e8de20c94d2d409921eafcae9605b293727d8ef9a516994ca8d2"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full_scene_qa.json",
+      "bytes": 15672,
+      "sha256": "0d09736e6be6b788f4bec77cf497745b68a37e25b49b6d5c1efc871834170337"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/html_qa.json",
+      "bytes": 2904,
+      "sha256": "7ce973eced2842257cf916c8a475ec136b1827d16b58a1662ad5ee11c53df4ee"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/html_receipt.json",
+      "bytes": 1940,
+      "sha256": "6a107773117dcdec71582932942155e1ff126875ca2d40abbbe1b907022fffb7"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/image1.png",
+      "bytes": 23323,
+      "sha256": "4d5334b1ac7d8462275d32b4892e253e25ea584eb82bce1e5b295be699643818"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/image2.png",
+      "bytes": 3774,
+      "sha256": "9c0f7d84a79d129e32359d7d51a5c49d989355f6baaa3d8a8a2896ff5ea3af36"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/image3.png",
+      "bytes": 122152,
+      "sha256": "07e8f1c9fba8bba9849a4903193d8c00a9e67581bbf4104037099af358c1845a"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/image4.jpeg",
+      "bytes": 40798,
+      "sha256": "ad8a76e6ec4459e34efd654e11ba68791dd244d5d395958bc55b08535eb6c142"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/image5.emf",
+      "bytes": 18288,
+      "sha256": "918151487d850dd660956b0a5edcf1c5bdc099084517a30febd97dec67d007e4"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/installation_slides.txt",
+      "bytes": 1452,
+      "sha256": "4a4de9be225194b8acd3443054875d300a228935b272532dd3a70826bd027775"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/oneglance_qa.json",
+      "bytes": 3681,
+      "sha256": "bca7682c7609df1d704ed389d72d3c2aeb86622838a6b1dacc78808f54fda65b"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/oneglance_receipt.json",
+      "bytes": 2696,
+      "sha256": "c7ef3bbdd47e8adf6df5d7dd30e660fa760dd06afb94e80aacbf969ad8f0f7ef"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/pdf-0-p1.png",
+      "bytes": 180076,
+      "sha256": "088018595238d52eb567f5c178b8190889c7e40e7be334534c4b6f8a22f2fd6d"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/pdf-1-p1.png",
+      "bytes": 100755,
+      "sha256": "0272ca326fbe08daac3dc6c02f7e55ef07dc31ebcd1258ea5031cd8421f99556"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/pdf-1-p2.png",
+      "bytes": 96542,
+      "sha256": "994a2cf41f717b94134bc12b8f9245ea13189c05674640da017c9503b8bb5ac6"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/pdf-1-p3.png",
+      "bytes": 92611,
+      "sha256": "e120805975430bfb00a49d92005c8fb61d03b1f8c4248eec5cff7570a9229e57"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/pdf-2-p1.png",
+      "bytes": 238617,
+      "sha256": "1ae7b91ed8b8c1699b697450ef480a9be2a76c2ed30575c2efb6ad5c399bf08f"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/plan-1.txt",
+      "bytes": 31,
+      "sha256": "519b134e16e8d451d24cb031ea2ed938c0a14286396fec9496e1b9e63cb6b801"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/plan-2.txt",
+      "bytes": 2082,
+      "sha256": "f666a4c0030f1a777b568d1e9fc9cf827b33c82bbb7f990e4b638e1086a81a57"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/plan-3.txt",
+      "bytes": 2050,
+      "sha256": "29ca4aac652b1f6292d49f33200d46a7b343d688af57d1299c050169109c358a"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/ppt_scope_table.png",
+      "bytes": 17212,
+      "sha256": "7e5e58df8a0444fddf6be2517d3513a9ce6b8d27393043886a7b1bee5e2d43a5"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/qa_executive.py",
+      "bytes": 8441,
+      "sha256": "ac5143d755b8c6c0142ff85f4a7ff87305a38a68f7677f7a3188910603eed654"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/qa_full_reconstruction.py",
+      "bytes": 16437,
+      "sha256": "8e779b8065c8c1d4e24f3861563f48839c6980797536e5fc139c9c32b539dd4d"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/qa_full_scene.py",
+      "bytes": 9608,
+      "sha256": "320ba385e9ef9d60cd8971ee988b62a6513248764ec8a547ceae919708989dd6"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/qa_html.py",
+      "bytes": 4378,
+      "sha256": "e949513ba88cde541456afddc6e96033ad1bedc8a6b19db986dbe32216466e92"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/qa_oneglance.py",
+      "bytes": 4592,
+      "sha256": "5d5a5f80ee44534703ccf0c8a488fe8c0c22a0c4ca30736e60ec91a4a3fbbffb"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/qa_simulator_3d.py",
+      "bytes": 6108,
+      "sha256": "be6e0dd745418ff68bf2c11d4253b228fe52ea797409b7063e8ca103dfdc3936"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/quote-1.png",
+      "bytes": 100755,
+      "sha256": "0272ca326fbe08daac3dc6c02f7e55ef07dc31ebcd1258ea5031cd8421f99556"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/quote-2.png",
+      "bytes": 96542,
+      "sha256": "994a2cf41f717b94134bc12b8f9245ea13189c05674640da017c9503b8bb5ac6"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/quote-3.png",
+      "bytes": 92611,
+      "sha256": "e120805975430bfb00a49d92005c8fb61d03b1f8c4248eec5cff7570a9229e57"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/quote-p1.png",
+      "bytes": 122339,
+      "sha256": "e6db5bde8539a4119116491f5b65a1fd34c20450dccd12729c2a0f3de9e588d6"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/quote-p2.png",
+      "bytes": 117664,
+      "sha256": "9848a8dad2880bfbf4841761c2767584c292aab5316b5fff745245b4fe5a45d0"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/quote-p3.png",
+      "bytes": 111061,
+      "sha256": "6bf3c363aea1c8f06623eddfe6166374d7da0fc922862dc58af43a6c6778c851"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/render_mapping.json",
+      "bytes": 1693,
+      "sha256": "18ff70324fafbdce9530cbbf87975d87d3490a7d19eb2f571167d9d275d745a4"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/schedule_cells.txt",
+      "bytes": 1561,
+      "sha256": "53ac9ccf4f6b7520780b4c10a74b88167d956ae50c2d6432c5a112e77d1c0f31"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/schedule_shapes.json",
+      "bytes": 4876,
+      "sha256": "8ebd5f8f4a02c93d6274b92df5dd0e98e7be2fee2a31116cfe430e0bbcb27323"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/scope_audit.json",
+      "bytes": 15807,
+      "sha256": "ecd3252be561cdb5b3d9fd1a572c4a83cdf0d8cb2b68ed748ccf68fa3477a812"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/simulator_model.json",
+      "bytes": 26056,
+      "sha256": "626125b296323d7fbabb79e0391cdf588d4bdb9c84c949d23ff02838a021dbf7"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/source_doc.json",
+      "bytes": 9037,
+      "sha256": "fa023eedce7ba81f5d28c3f1c7f0ca4e84a65007d5043417cf48c769b08dfb59"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/visual_model_review.json",
+      "bytes": 7211,
+      "sha256": "e68dc1294aed164ba7de454b39d3250e7d3815f258d046a77738e55fe1ea4122"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/write_scope_audit.py",
+      "bytes": 11387,
+      "sha256": "936c9c9fdf6a554f2946809896f8bda800d75a8108ebb8d31cd9ccec64904d0e"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/xls_values.json",
+      "bytes": 7025,
+      "sha256": "90ae758ce890adf14f907c8a9fb52acdaac0b78a4b83dae58c07af3bf1867d00"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/열회수장치 설치 정면도.txt",
+      "bytes": 39,
+      "sha256": "c9636d3523ddd7b51747144414b1649c37a00e7858f1f64400daa1253a6d56ba"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/열회수장치 제작설치 견적서 2025.09.10.txt",
+      "bytes": 5839,
+      "sha256": "ff891215982c151fc7b22c032a130be4de837c314a54b75d7fa733e05e6b49ce"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/열회수장치설치 평면도.txt",
+      "bytes": 39,
+      "sha256": "c9636d3523ddd7b51747144414b1649c37a00e7858f1f64400daa1253a6d56ba"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/3d_assets/base-oneglance.html",
+      "bytes": 5224847,
+      "sha256": "f2809b8f77715a6f166747b999074332679e7316b034212a2372f4a43f19524e"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/3d_assets/executive.css",
+      "bytes": 5426,
+      "sha256": "e4db2c66165bc12239e491a5839bbe3190871d38d793026dda76f4edc75e1f0a"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/3d_assets/full-scene.js",
+      "bytes": 35016,
+      "sha256": "bc94e90cc2e614d3a54455f101fa45c9cda96b67cd6cc7f3999459bacb8275d4"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/3d_assets/reconstruction-ui.js",
+      "bytes": 21998,
+      "sha256": "b10162d8d2d1e6f38061b8ab6f458aa13a6adb0b10bb32a7f3e1a82bb05fa0f0"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/3d_assets/reconstruction.css",
+      "bytes": 9537,
+      "sha256": "b566a148699430965fad4a416b98142a860e3203eef36103be324d0510b5266e"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/3d_assets/scene.js",
+      "bytes": 24540,
+      "sha256": "a28cfaf31af1829d3cc4444661a3386b3196abe7e1aa4b9218620eb1d5083baf"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/3d_assets/simulator-controller.js",
+      "bytes": 7162,
+      "sha256": "5e5d5773250c7ac6260befbfcaa0d4aacc58b2b17df72fcfae25ecfb16bdc37f"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/3d_assets/three-r160.1.min.js",
+      "bytes": 669884,
+      "sha256": "170c6789f43217c96b3170f4b42fafe135de7f7cd48497a4218f9757ee1d49fa"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/detail_sources/dryer-cyclones.png",
+      "bytes": 313309,
+      "sha256": "8bee4ba3ba618ceebcd0d40619e244976f6ad97f28af31ed527489be4d2e3a17"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/detail_sources/heat-recovery-cip.png",
+      "bytes": 98489,
+      "sha256": "48067bd1bf1b49061bc14a30500bc542a74e437ca61a5922dbb0eb3eb142ea28"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/detail_sources/pid-tags-table.png",
+      "bytes": 52098,
+      "sha256": "1eb4654728cc1599674903e32bd7047eb5af22adfc78c6393c6339e1c6e20c5f"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full_reconstruction/build_front_plan_survey.py",
+      "bytes": 20752,
+      "sha256": "45dc4c803445ae05db425c548554cb677ec3f1db18838fed9f42df2c6770c634"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full_reconstruction/build_pid_catalog.py",
+      "bytes": 41584,
+      "sha256": "74d9e0c84f3c919f63872dbb4e4f1e0b716eba6803ea00b6c72f01aabb47c995"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full_reconstruction/chamber-instruments.png",
+      "bytes": 31268,
+      "sha256": "5fb033ea4768b5c42227dcf135ce800f53e54167f34e1e26f8e8e6c53698d557"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full_reconstruction/cyclones-main.png",
+      "bytes": 107576,
+      "sha256": "367b7748160dd61eb744f8c24fcbe9093c2a5c6bd72cb45e06708e91bc18294e"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full_reconstruction/export_source_geometry.py",
+      "bytes": 1310,
+      "sha256": "858010cbb84e4604fc65b4d83be18047835daea2597ca16d2b2cf6423b1033b0"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full_reconstruction/feed-and-vibro-complete.png",
+      "bytes": 248013,
+      "sha256": "89c1b404cb743c0b564e9ba03f518bb9c2cf74b598022bd1dd40496e541cf4dc"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full_reconstruction/front-overview.png",
+      "bytes": 205414,
+      "sha256": "f19af52323c73cb1941a92289d443a7f30b8060c7f060561a8d060eb39101223"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full_reconstruction/front_plan_survey.json",
+      "bytes": 74370,
+      "sha256": "5bfe7c80e78840b750b03bc6d9d52efd9388da0ddfa429094e8c06690ba544c4"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full_reconstruction/homogenizer.png",
+      "bytes": 118640,
+      "sha256": "f313da9d74052573de8a61cbf43b4662141fb5a2249856fff5aa5bbeada1c19c"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full_reconstruction/hotwater-control.png",
+      "bytes": 126274,
+      "sha256": "6dc9a9789e2da0f2170f851191351c07f2c4b665f6531e059c86ca981a99797f"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full_reconstruction/hp-drive-control.png",
+      "bytes": 31853,
+      "sha256": "f2ed6337a7486dcaa317fab134ef9202ad0d48b21e1c950b09e33eb217a00c60"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full_reconstruction/left-feed-air.png",
+      "bytes": 222950,
+      "sha256": "143f5f9169d872b522b1fc01d81798550d5660bede0781c119caa77abb2090c3"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full_reconstruction/lower-complete.png",
+      "bytes": 511882,
+      "sha256": "c6db659e53f834d311c08cc63f6c06a4577580c926f8ae9af8470bb08d73f5d4"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full_reconstruction/lower-vibro.png",
+      "bytes": 231311,
+      "sha256": "971ab66c78699829d6caa68774ed1c527fc5368ad29f6b9193b41627ab78ca94"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full_reconstruction/pid-full-4x.png",
+      "bytes": 1448751,
+      "sha256": "d1bce2891ac7868cc6567ac4b286a2572a90c2d78789fcfaa2d8d54f4831ae14"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full_reconstruction/pid_catalog.json",
+      "bytes": 329273,
+      "sha256": "7582626fb03db91a7ab29d3240bc670bfe0411e844a567f1ce99d724bf269dc5"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full_reconstruction/pid_catalog_validation.json",
+      "bytes": 683,
+      "sha256": "fd0d02cb5f960081f0b5cf2cbfdb514a98fce9594262573d88de6590ab1ef1ee"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full_reconstruction/plan-overview.png",
+      "bytes": 282336,
+      "sha256": "29ddbf0c9ae2b3a7497e903a33567d2400b879313937db38098e28fa5ebde16a"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full_reconstruction/qa_geometry_view.py",
+      "bytes": 1805,
+      "sha256": "5ba6a200bf7f5c9511d46ca8ac0c9ebb45bd5fcbdece398a1cf694716cc0b76e"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full_reconstruction/recovery-wet.png",
+      "bytes": 188528,
+      "sha256": "a7ebd53a45d575c47545dc81b5060c169f2a1cfd4dc76bd0c975e23fe708651c"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full_reconstruction/source_integrity.json",
+      "bytes": 4289,
+      "sha256": "6e86b032caa6fb4ca0849e345e341eb1aa79fd3109cfece7916da607a2a9abad"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full_reconstruction/table-fans.png",
+      "bytes": 80765,
+      "sha256": "5bc3a82d28d1e9e5ccb4d25a3896500aca5d02b7d09c8bcfb66d196985537a9b"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full_reconstruction/table-other.png",
+      "bytes": 48238,
+      "sha256": "b9f8e9c8bc365fd0ab4d480d2d47fe15a0bd4d6f7f9f8315f21abd832cb3c3f2"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full_reconstruction/table-pumps.png",
+      "bytes": 54926,
+      "sha256": "474cfe116ff05e13c0e998bbc7515b56f8c4608576aac782f42c6eb4386fc067"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full_reconstruction/upper-headers.png",
+      "bytes": 215190,
+      "sha256": "72ccc2518f16b109112b9a3bb7980d75c4aad5b73d6e3a671aa3c33a535b1c30"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full_reconstruction/vector_source_manifest.json",
+      "bytes": 2215,
+      "sha256": "1811c8b8f9cca8f7613a929363a44d258db3649095a4ca4c7d0ce7674a619598"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full_reconstruction/verify_source_data.py",
+      "bytes": 3599,
+      "sha256": "f1a30a9bc65ca862ede7285ae4041fb38567582f019a13fcf771177a9d2f07e6"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full_reconstruction/vf-bed-instruments.png",
+      "bytes": 52225,
+      "sha256": "77dadecf4890e4ab67d21ae20508f05389c654bbdaf3ada1b5f4da9c743c7a8a"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full_reconstruction/crops/dryer-plan.png",
+      "bytes": 591056,
+      "sha256": "01ddd0525d1bd0a7196dde7da0936314ec78323facb8ff3790669e5bdc4ad551"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full_reconstruction/crops/dryer-zone.png",
+      "bytes": 315757,
+      "sha256": "42bfc6eb37f41170dcd0bd0f2dbf24439d96bef35395da683b8c79b9aa9855a5"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full_reconstruction/crops/lower-utilities.png",
+      "bytes": 108068,
+      "sha256": "ea236e1dc0031d187ed0c419d480860ad3271324513e70570a0b5fa2ca607030"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full_reconstruction/crops/recovery-plan.png",
+      "bytes": 538961,
+      "sha256": "0d2ebe4aafdcb660209c2652bad8d9d848c506a97ddd7fad18e7cf445ccce7a1"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full_reconstruction/crops/recovery-zone.png",
+      "bytes": 392392,
+      "sha256": "2a13e85dd3391a8e666920403f49825970a30d34b9f038437855dfb5ff4c31c2"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full_reconstruction/source_assets/front-6x.png",
+      "bytes": 1076141,
+      "sha256": "f8c6ccb232512abd7689d19828b308add65e5a75c7106d7aeb6834d6ae59dd60"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full_reconstruction/source_assets/front.svg",
+      "bytes": 3971660,
+      "sha256": "30dcf588f9fa74d1b96d6c698d6be5b0d80c9081b0e98a705d0cab6db6c262c6"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full_reconstruction/source_assets/plan-6x.png",
+      "bytes": 1417481,
+      "sha256": "ca4087db63d4dcc77ec1353943b16f4cb0f7248eb7a1e95b190b84ccbc3bc714"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full_reconstruction/source_assets/plan.svg",
+      "bytes": 2521406,
+      "sha256": "b27202ee542567e0f7e0ecf0e1f4b325bf2348dd1544ffdad558b65e73c666d0"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full_reconstruction/view_qa/front-model.png",
+      "bytes": 430853,
+      "sha256": "5c262ab2719bf26cad69456bcc625009cbf881591ac0ed8ee47a9ff76d9051c7"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full_reconstruction/view_qa/front-split.png",
+      "bytes": 391481,
+      "sha256": "d2e67a30665e03c33f1784942857d90a0d396513646a61b3db01c2e179167347"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full_reconstruction/view_qa/geometry_visual_review.json",
+      "bytes": 2810,
+      "sha256": "90513fcbee9bd1092a658230002dc5ef8e09fd36abbab0b80192ac42fcde9ef3"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full_reconstruction/view_qa/plan-model.png",
+      "bytes": 447917,
+      "sha256": "ef36bdddcf4bda517f10c288caf9df5de3539ad71ed24db64fe821cef54c550c"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full_reconstruction/view_qa/plan-split.png",
+      "bytes": 391883,
+      "sha256": "2565717d42e376d11c23b854dcec63b4769c4860e66cdb2d90d7e93025fe5ac1"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/full_reconstruction/view_qa/receipt.json",
+      "bytes": 174458,
+      "sha256": "5f8bf4a26643cf3fe42793e051ab386630c74579164d93be4fe5d19e0cfdd500"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/visual_sources/build_crops.py",
+      "bytes": 977,
+      "sha256": "0943c753bac294c0831af922db688a7a26538109b6fd418b6d5e2a0e8006e4d3"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/visual_sources/elevation-full.png",
+      "bytes": 301767,
+      "sha256": "1ee7465c002dc6e5a900d33bc7a9021c17345799c1cd895ac5f3078ad036f04d"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/visual_sources/image_manifest.json",
+      "bytes": 992,
+      "sha256": "57d907032b70113538e12f78bd04d0b3b049f0d0fd38dfeaac62d275b39d7f09"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/visual_sources/install-slide-2.png",
+      "bytes": 626020,
+      "sha256": "821b5328933a3cfb5991fa675b89caf2facfd3bded0808e912cca66a76d16999"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/visual_sources/install-slide-3.png",
+      "bytes": 166461,
+      "sha256": "d812c396b1014d1a23c57e0c3e5b442134fe3de9d73d7935290dc52f95620ec5"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/visual_sources/installation-route.png",
+      "bytes": 421725,
+      "sha256": "89d2b6e35233106fbbabcbe94315a09ce898437b306eccfa02cbab4462cc66ea"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/visual_sources/pid-original.png",
+      "bytes": 122152,
+      "sha256": "07e8f1c9fba8bba9849a4903193d8c00a9e67581bbf4104037099af358c1845a"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/visual_sources/pid-recovery-detail.png",
+      "bytes": 85257,
+      "sha256": "8699e86c6ed9ec1f3c3a64562da85d6678991fca30b6e7d472228a87ae254013"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/visual_sources/plan-full.png",
+      "bytes": 403549,
+      "sha256": "6818262991c7a4557e43d9a2eaa68e236e8b58c08e7f0ab05b0a23b291af8402"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/visual_sources/render_sources.py",
+      "bytes": 1309,
+      "sha256": "acff452833c5fce21e05da05d543ef9fa22878f8cb058fd1fb198f4a0abef8a3"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/visual_sources/supply-fan-photo.jpeg",
+      "bytes": 40798,
+      "sha256": "ad8a76e6ec4459e34efd654e11ba68791dd244d5d395958bc55b08535eb6c142"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/visual_sources/visual_manifest.json",
+      "bytes": 10321,
+      "sha256": "51f0bd7b998b9b493724fffeedf18a7b49e851631207a71eb7f069508f289beb"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/visual_sources/write_visual_manifest.py",
+      "bytes": 6429,
+      "sha256": "a9451e8962293a164e1eff9d2ecd17342124512382e68f642fb6696862aa5279"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_heat_exchanger/__pycache__/build_reconstruction_assets.cpython-312.pyc",
+      "bytes": 1881,
+      "sha256": "4ae36513c3110617acc3072655e7b25ac9a7fd95a9985dbb5bde318292076042"
+    },
+    {
+      "relative": "관리자료/수집·검토/_work_approvals/approval_review_data.json",
+      "bytes": 2531549,
+      "sha256": "065856ce5807cc05174b2082d12ba4e791bc2b362e515b17f2746714d2072f07"
+    },
+    {
+      "relative": "KPI-전기-가스-월별-2024-2026 (1).xlsx",
+      "bytes": 42330,
+      "sha256": "38a86c057cfe30859c2fb34e89313b0d14502e69dd6a73a78bffc14cd11f581e"
+    },
+    {
+      "relative": "00_자료열기.html",
+      "bytes": 8964,
+      "sha256": "fa06abbb1b706d3660fbe49431f15fcf2dea65c441352e539b73a3f77fa79426"
+    },
+    {
+      "relative": "관리자료/자료관리 안내.txt",
+      "bytes": 1163,
+      "sha256": "78c21190b65076cb8c6518679be9f4505ff603270e8405423760d8db01d9943e"
+    }
+  ]
+}

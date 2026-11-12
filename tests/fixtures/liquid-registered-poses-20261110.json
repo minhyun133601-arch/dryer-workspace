@@ -1,0 +1,886 @@
+[
+  {
+    "id": "liquid-card-042",
+    "cardNumber": 42,
+    "name": "28파이 Pet 충진기",
+    "roomId": "pet",
+    "type": "filler",
+    "variant": "pet-enclosed",
+    "position": [
+      -27.8,
+      0,
+      -8.1
+    ],
+    "rotation": 0,
+    "width": 3,
+    "depth": 2.6,
+    "height": 2.6
+  },
+  {
+    "id": "liquid-card-043",
+    "cardNumber": 43,
+    "name": "Pet실 1",
+    "roomId": "pet",
+    "type": "tank",
+    "variant": "pet-jacket",
+    "position": [
+      -33.1,
+      0,
+      -7.4
+    ],
+    "rotation": 0,
+    "width": 1,
+    "depth": 1,
+    "height": 1.5
+  },
+  {
+    "id": "liquid-card-044",
+    "cardNumber": 44,
+    "name": "Pet 라인",
+    "roomId": "pet",
+    "type": "conveyor",
+    "variant": "pet-line",
+    "position": [
+      -17,
+      0,
+      -6.5
+    ],
+    "rotation": 0,
+    "width": 4,
+    "depth": 2.4,
+    "height": 1.9
+  },
+  {
+    "id": "liquid-card-045",
+    "cardNumber": 45,
+    "name": "38파이 라벨러",
+    "roomId": "outer",
+    "type": "cartoner",
+    "variant": "labeler",
+    "position": [
+      17,
+      0,
+      7
+    ],
+    "rotation": 0,
+    "width": 3.6,
+    "depth": 2.3,
+    "height": 2.2
+  },
+  {
+    "id": "liquid-card-046",
+    "cardNumber": 46,
+    "name": "파스텔 라이저",
+    "roomId": "pet",
+    "type": "pasteurizer",
+    "variant": "pet-tunnel",
+    "position": [
+      -13.5,
+      0,
+      -10.2
+    ],
+    "rotation": 0,
+    "width": 12,
+    "depth": 3.4,
+    "height": 2.1
+  },
+  {
+    "id": "liquid-card-047",
+    "cardNumber": 47,
+    "name": "88파이 자동 충진기",
+    "roomId": "pet",
+    "type": "filler",
+    "variant": "pet-open",
+    "position": [
+      -26.8,
+      0,
+      -12.2
+    ],
+    "rotation": 0,
+    "width": 1.6,
+    "depth": 1.6,
+    "height": 2.4
+  },
+  {
+    "id": "liquid-card-048",
+    "cardNumber": 48,
+    "name": "HIPE 16 스틱 충진기-2",
+    "roomId": "stick",
+    "type": "filler",
+    "variant": "stick",
+    "position": [
+      -20,
+      0,
+      16.5
+    ],
+    "rotation": 0,
+    "width": 2.3,
+    "depth": 2.2,
+    "height": 3
+  },
+  {
+    "id": "liquid-card-049",
+    "cardNumber": 49,
+    "name": "Hipe 16 스틱 충진기-1",
+    "roomId": "stick",
+    "type": "filler",
+    "variant": "stick",
+    "position": [
+      -15,
+      0,
+      16.5
+    ],
+    "rotation": 0,
+    "width": 2.3,
+    "depth": 2.2,
+    "height": 3
+  },
+  {
+    "id": "liquid-card-050",
+    "cardNumber": 50,
+    "name": "병뚜껑 조립기",
+    "roomId": "pet",
+    "type": "conveyor",
+    "variant": "cap-feeder",
+    "position": [
+      -32,
+      0,
+      -12.7
+    ],
+    "rotation": 0,
+    "width": 1.3,
+    "depth": 1.6,
+    "height": 2.7
+  },
+  {
+    "id": "liquid-card-051",
+    "cardNumber": 51,
+    "name": "연수기",
+    "roomId": "boiler",
+    "type": "softener",
+    "variant": "resin-vessels",
+    "position": [
+      37,
+      0,
+      -18.4
+    ],
+    "rotation": 0,
+    "width": 1.8,
+    "depth": 1.2,
+    "height": 2.2
+  },
+  {
+    "id": "liquid-card-052",
+    "cardNumber": 52,
+    "name": "병 라인 중량 선별기",
+    "roomId": "outer",
+    "type": "cartoner",
+    "variant": "checkweigher",
+    "position": [
+      20.8,
+      0,
+      7
+    ],
+    "rotation": 0,
+    "width": 2,
+    "depth": 1.2,
+    "height": 1.8
+  },
+  {
+    "id": "liquid-card-053",
+    "cardNumber": 53,
+    "name": "카토너",
+    "roomId": "outer",
+    "type": "cartoner",
+    "variant": "cartoner",
+    "position": [
+      16.5,
+      0,
+      12
+    ],
+    "rotation": 0,
+    "width": 4,
+    "depth": 2.5,
+    "height": 2.2
+  },
+  {
+    "id": "liquid-card-054",
+    "cardNumber": 54,
+    "name": "3팀용 제함기 1호기",
+    "roomId": "outer",
+    "type": "cartoner",
+    "variant": "case-sealer",
+    "position": [
+      22,
+      0,
+      12
+    ],
+    "rotation": 0,
+    "width": 2,
+    "depth": 1.5,
+    "height": 1.9
+  },
+  {
+    "id": "liquid-card-055",
+    "cardNumber": 55,
+    "name": "10입 자동 포장기",
+    "roomId": "outer",
+    "type": "cartoner",
+    "variant": "multipack",
+    "position": [
+      17.5,
+      0,
+      16
+    ],
+    "rotation": 0,
+    "width": 4,
+    "depth": 2.5,
+    "height": 2.2
+  },
+  {
+    "id": "liquid-card-056",
+    "cardNumber": 56,
+    "name": "파우치 후살균수조",
+    "roomId": "retort",
+    "type": "pasteurizer",
+    "variant": "pouch-hot",
+    "position": [
+      3,
+      0,
+      3.2
+    ],
+    "rotation": 0,
+    "width": 12,
+    "depth": 2.7,
+    "height": 1.6
+  },
+  {
+    "id": "liquid-card-057",
+    "cardNumber": 57,
+    "name": "파우치 냉각수조",
+    "roomId": "retort",
+    "type": "pasteurizer",
+    "variant": "pouch-cool",
+    "position": [
+      3,
+      0,
+      9
+    ],
+    "rotation": 0,
+    "width": 12,
+    "depth": 2.7,
+    "height": 1.6
+  },
+  {
+    "id": "liquid-card-058",
+    "cardNumber": 58,
+    "name": "후살균기",
+    "roomId": "retort",
+    "type": "pasteurizer",
+    "variant": "pouch-tunnel",
+    "position": [
+      3,
+      0,
+      15
+    ],
+    "rotation": 0,
+    "width": 7,
+    "depth": 2.8,
+    "height": 3.3
+  },
+  {
+    "id": "liquid-card-059",
+    "cardNumber": 59,
+    "name": "치어팩 언로더",
+    "roomId": "pouch",
+    "type": "conveyor",
+    "variant": "unloader",
+    "position": [
+      -6.2,
+      0,
+      6.7
+    ],
+    "rotation": 0,
+    "width": 1.8,
+    "depth": 1.5,
+    "height": 1.8
+  },
+  {
+    "id": "liquid-card-060",
+    "cardNumber": 60,
+    "name": "스틱 냉각기",
+    "roomId": "stick",
+    "type": "conveyor",
+    "variant": "stick-cooler",
+    "position": [
+      -8.1,
+      0,
+      16.5
+    ],
+    "rotation": 0,
+    "width": 4,
+    "depth": 2.4,
+    "height": 1.8
+  },
+  {
+    "id": "liquid-card-061",
+    "cardNumber": 61,
+    "name": "파우치 충진기 3호기",
+    "roomId": "pouch",
+    "type": "filler",
+    "variant": "pouch",
+    "position": [
+      -20,
+      0,
+      3
+    ],
+    "rotation": 0.7853981633974483,
+    "width": 3.6,
+    "depth": 3.4,
+    "height": 2.7
+  },
+  {
+    "id": "liquid-card-062",
+    "cardNumber": 62,
+    "name": "파우치 충진기 2호기",
+    "roomId": "pouch",
+    "type": "filler",
+    "variant": "pouch",
+    "position": [
+      -14.7,
+      0,
+      3
+    ],
+    "rotation": 0.7853981633974483,
+    "width": 3.6,
+    "depth": 3.4,
+    "height": 2.7
+  },
+  {
+    "id": "liquid-card-063",
+    "cardNumber": 63,
+    "name": "파우치 충진기 1호기",
+    "roomId": "pouch",
+    "type": "filler",
+    "variant": "pouch",
+    "position": [
+      -9.4,
+      0,
+      3
+    ],
+    "rotation": 0.7853981633974483,
+    "width": 3.6,
+    "depth": 3.4,
+    "height": 2.7
+  },
+  {
+    "id": "liquid-card-064",
+    "cardNumber": 64,
+    "name": "치어팩 충진기 3호기",
+    "roomId": "pouch",
+    "type": "filler",
+    "variant": "cheer",
+    "position": [
+      -20,
+      0,
+      9
+    ],
+    "rotation": 0,
+    "width": 3.6,
+    "depth": 3.4,
+    "height": 2.8
+  },
+  {
+    "id": "liquid-card-065",
+    "cardNumber": 65,
+    "name": "치어팩 충진기 2호기",
+    "roomId": "pouch",
+    "type": "filler",
+    "variant": "cheer",
+    "position": [
+      -14.7,
+      0,
+      9
+    ],
+    "rotation": 0,
+    "width": 3.6,
+    "depth": 3.4,
+    "height": 2.8
+  },
+  {
+    "id": "liquid-card-066",
+    "cardNumber": 66,
+    "name": "치어팩 충진기 1호기",
+    "roomId": "pouch",
+    "type": "filler",
+    "variant": "cheer",
+    "position": [
+      -9.4,
+      0,
+      9
+    ],
+    "rotation": 0,
+    "width": 3.6,
+    "depth": 3.4,
+    "height": 2.8
+  },
+  {
+    "id": "liquid-card-067",
+    "cardNumber": 67,
+    "name": "믹서탱크",
+    "roomId": "mixing",
+    "type": "mixer",
+    "variant": "tall-top-drive",
+    "position": [
+      -32,
+      0,
+      -1.5
+    ],
+    "rotation": 0,
+    "width": 2.4,
+    "depth": 2.4,
+    "height": 4.1
+  },
+  {
+    "id": "liquid-card-068",
+    "cardNumber": 68,
+    "name": "배합탱크 10",
+    "roomId": "mixing",
+    "type": "mixer",
+    "variant": "blue-top-drive",
+    "position": [
+      -28.2,
+      0,
+      -1.5
+    ],
+    "rotation": 0,
+    "width": 2.4,
+    "depth": 2.4,
+    "height": 3.8
+  },
+  {
+    "id": "liquid-card-069",
+    "cardNumber": 69,
+    "name": "배합탱크 7",
+    "roomId": "mixing",
+    "type": "mixer",
+    "variant": "domestic-top-drive",
+    "position": [
+      -32,
+      0,
+      2
+    ],
+    "rotation": 0,
+    "width": 2.4,
+    "depth": 2.4,
+    "height": 3.8
+  },
+  {
+    "id": "liquid-card-070",
+    "cardNumber": 70,
+    "name": "배합탱크 9",
+    "roomId": "mixing",
+    "type": "mixer",
+    "variant": "blue-top-drive",
+    "position": [
+      -28.2,
+      0,
+      2
+    ],
+    "rotation": 0,
+    "width": 2.4,
+    "depth": 2.4,
+    "height": 3.8
+  },
+  {
+    "id": "liquid-card-071",
+    "cardNumber": 71,
+    "name": "3번 탱크",
+    "roomId": "mixing",
+    "type": "mixer",
+    "variant": "side-drive",
+    "position": [
+      -36.1,
+      0,
+      4.9
+    ],
+    "rotation": 0,
+    "width": 2,
+    "depth": 2,
+    "height": 3.2
+  },
+  {
+    "id": "liquid-card-077",
+    "cardNumber": 77,
+    "name": "4번 배합탱크",
+    "roomId": "mixing",
+    "type": "tank",
+    "variant": "tall-process",
+    "position": [
+      -36.1,
+      0,
+      13.9
+    ],
+    "rotation": 0,
+    "width": 1.7,
+    "depth": 1.7,
+    "height": 3.8
+  },
+  {
+    "id": "liquid-card-078",
+    "cardNumber": 78,
+    "name": "3번 배합탱크",
+    "roomId": "mixing",
+    "type": "tank",
+    "variant": "tall-process",
+    "position": [
+      -32.6,
+      0,
+      13.9
+    ],
+    "rotation": 0,
+    "width": 1.7,
+    "depth": 1.7,
+    "height": 3.8
+  },
+  {
+    "id": "liquid-card-079",
+    "cardNumber": 79,
+    "name": "2번 배합탱크",
+    "roomId": "mixing",
+    "type": "tank",
+    "variant": "tall-process",
+    "position": [
+      -29.1,
+      0,
+      13.9
+    ],
+    "rotation": 0,
+    "width": 1.7,
+    "depth": 1.7,
+    "height": 3.8
+  },
+  {
+    "id": "liquid-card-080",
+    "cardNumber": 80,
+    "name": "A라인 1-4",
+    "roomId": "mixing",
+    "type": "mixer",
+    "variant": "a-line",
+    "position": [
+      -36.1,
+      0,
+      17.8
+    ],
+    "rotation": 0,
+    "width": 1.8,
+    "depth": 1.8,
+    "height": 3.4
+  },
+  {
+    "id": "liquid-card-081",
+    "cardNumber": 81,
+    "name": "A라인 1-3",
+    "roomId": "mixing",
+    "type": "mixer",
+    "variant": "a-line",
+    "position": [
+      -32.3,
+      0,
+      17.8
+    ],
+    "rotation": 0,
+    "width": 1.8,
+    "depth": 1.8,
+    "height": 3.4
+  },
+  {
+    "id": "liquid-card-082",
+    "cardNumber": 82,
+    "name": "A라인 1-2",
+    "roomId": "mixing",
+    "type": "mixer",
+    "variant": "a-line",
+    "position": [
+      -28.5,
+      0,
+      17.8
+    ],
+    "rotation": 0,
+    "width": 1.8,
+    "depth": 1.8,
+    "height": 3.4
+  },
+  {
+    "id": "liquid-card-083",
+    "cardNumber": 83,
+    "name": "A라인 1-1",
+    "roomId": "mixing",
+    "type": "mixer",
+    "variant": "a-line",
+    "position": [
+      -24.7,
+      0,
+      17.8
+    ],
+    "rotation": 0,
+    "width": 1.8,
+    "depth": 1.8,
+    "height": 3.4
+  },
+  {
+    "id": "liquid-card-093",
+    "cardNumber": 93,
+    "name": "호모 믹서탱크",
+    "roomId": "mixing",
+    "type": "mixer",
+    "variant": "side-drive",
+    "position": [
+      -32.3,
+      0,
+      6.3
+    ],
+    "rotation": 0,
+    "width": 1.8,
+    "depth": 1.8,
+    "height": 2.8
+  },
+  {
+    "id": "liquid-card-094",
+    "cardNumber": 94,
+    "name": "펄 진동채",
+    "roomId": "mixing",
+    "type": "sieve",
+    "variant": "pearl-vibratory",
+    "position": [
+      -34.8,
+      0,
+      10.7
+    ],
+    "rotation": 0,
+    "width": 1.2,
+    "depth": 1.2,
+    "height": 1.7
+  },
+  {
+    "id": "liquid-card-095",
+    "cardNumber": 95,
+    "name": "살균기 1호기",
+    "roomId": "mixing",
+    "type": "sterilizer",
+    "variant": "tubular",
+    "position": [
+      -24.7,
+      0,
+      6
+    ],
+    "rotation": 1.5707963267948966,
+    "width": 3.2,
+    "depth": 1.4,
+    "height": 2.2
+  },
+  {
+    "id": "liquid-card-096",
+    "cardNumber": 96,
+    "name": "살균기 2호기",
+    "roomId": "mixing",
+    "type": "sterilizer",
+    "variant": "tubular-red",
+    "position": [
+      -24.7,
+      0,
+      10
+    ],
+    "rotation": 1.5707963267948966,
+    "width": 3.2,
+    "depth": 1.4,
+    "height": 2.2
+  },
+  {
+    "id": "liquid-card-097",
+    "cardNumber": 97,
+    "name": "살균기 3호기",
+    "roomId": "mixing",
+    "type": "sterilizer",
+    "variant": "tubular",
+    "position": [
+      -24.7,
+      0,
+      14
+    ],
+    "rotation": 1.5707963267948966,
+    "width": 3.2,
+    "depth": 1.4,
+    "height": 2.2
+  },
+  {
+    "id": "liquid-card-098",
+    "cardNumber": 98,
+    "name": "펄 이송호퍼",
+    "roomId": "mixing",
+    "type": "hopper",
+    "variant": "pearl-transfer",
+    "position": [
+      -29.6,
+      0,
+      7
+    ],
+    "rotation": 0,
+    "width": 1.3,
+    "depth": 1.3,
+    "height": 2.3
+  },
+  {
+    "id": "liquid-card-099",
+    "cardNumber": 99,
+    "name": "HCPE - 5 균질기",
+    "roomId": "mixing",
+    "type": "homogenizer",
+    "variant": "hcpe-5",
+    "position": [
+      -27,
+      0,
+      8.1
+    ],
+    "rotation": 0,
+    "width": 1.8,
+    "depth": 1.2,
+    "height": 1.7
+  },
+  {
+    "id": "liquid-card-100",
+    "cardNumber": 100,
+    "name": "B라인 열수탱크",
+    "roomId": "mixing",
+    "type": "tank",
+    "variant": "hot-water-box",
+    "position": [
+      -29,
+      0,
+      11
+    ],
+    "rotation": 0,
+    "width": 2,
+    "depth": 1.6,
+    "height": 2
+  },
+  {
+    "id": "liquid-card-101",
+    "cardNumber": 101,
+    "name": "에어 콤프레셔",
+    "roomId": "boiler",
+    "type": "compressor",
+    "variant": "air-compressor",
+    "position": [
+      40.5,
+      0,
+      -18.3
+    ],
+    "rotation": 0,
+    "width": 1.3,
+    "depth": 1.2,
+    "height": 2
+  },
+  {
+    "id": "liquid-card-102",
+    "cardNumber": 102,
+    "name": "핫멜트",
+    "roomId": "outer",
+    "type": "cartoner",
+    "variant": "hotmelt",
+    "position": [
+      22,
+      0,
+      16
+    ],
+    "rotation": 0,
+    "width": 0.9,
+    "depth": 1,
+    "height": 1.6
+  },
+  {
+    "id": "liquid-card-103",
+    "cardNumber": 103,
+    "name": "보일러 3호기",
+    "roomId": "boiler",
+    "type": "boiler",
+    "variant": "box",
+    "position": [
+      37.4,
+      0,
+      -15.8
+    ],
+    "rotation": 0,
+    "width": 1.4,
+    "depth": 1.8,
+    "height": 2.6
+  },
+  {
+    "id": "liquid-card-104",
+    "cardNumber": 104,
+    "name": "보일러 1,2호기",
+    "roomId": "boiler",
+    "type": "boiler",
+    "variant": "vertical-single",
+    "position": [
+      40.8,
+      0,
+      -16
+    ],
+    "rotation": 0,
+    "width": 2.4,
+    "depth": 2.2,
+    "height": 3.6
+  },
+  {
+    "id": "liquid-card-105",
+    "cardNumber": 105,
+    "name": "티칭 로봇",
+    "roomId": "outer",
+    "type": "cartoner",
+    "variant": "delta",
+    "position": [
+      24.9,
+      0,
+      7
+    ],
+    "rotation": 0,
+    "width": 2.8,
+    "depth": 2.4,
+    "height": 3.5
+  },
+  {
+    "id": "liquid-card-106",
+    "cardNumber": 106,
+    "name": "제환기",
+    "roomId": "pellet",
+    "type": "pellet",
+    "variant": "pearl-former",
+    "position": [
+      7.1,
+      0,
+      -12
+    ],
+    "rotation": 0,
+    "width": 1.5,
+    "depth": 1.1,
+    "height": 1.9
+  },
+  {
+    "id": "liquid-card-107",
+    "cardNumber": 107,
+    "name": "반죽기",
+    "roomId": "pellet",
+    "type": "kneader",
+    "variant": "planetary-bowl",
+    "position": [
+      7.1,
+      0,
+      -8.5
+    ],
+    "rotation": 0,
+    "width": 1.1,
+    "depth": 1.3,
+    "height": 1.8
+  }
+]

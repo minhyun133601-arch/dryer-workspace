@@ -1,0 +1,28 @@
+{
+  "action": "moved_to_delete_candidates",
+  "reason": "이전 시뮬레이터의 검토 화면. 최종 재현본 검증 화면으로 대체됨.",
+  "files": [
+    {
+      "file": "삭제자료\\검토 화면\\executive-desktop.png",
+      "bytes": 402620
+    },
+    {
+      "file": "삭제자료\\검토 화면\\executive-compact.png",
+      "bytes": 342949
+    },
+    {
+      "file": "삭제자료\\검토 화면\\executive-mobile.png",
+      "bytes": 220675
+    },
+    {
+      "file": "삭제자료\\검토 화면\\executive-report.png",
+      "bytes": 427289
+    },
+    {
+      "file": "삭제자료\\검토 화면\\executive-heat-detail.png",
+      "bytes": 366235
+    }
+  ],
+  "permanentlyDeletedThisStep": 0,
+  "originalsModifiedThisStep": 0
+}

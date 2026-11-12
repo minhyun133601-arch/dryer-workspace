@@ -1,0 +1,11 @@
+{
+  "pack_id": "2f1fe675378203d45d17491e7b2151b80bcddc2b70f4502be6997141a6185430",
+  "file_uri": "C:\\Users\\user\\Desktop\\프로젝트\\workspace\\production-collection-20261104\\cloud-packages\\02_도면 관련자료\\02_도면 관련자료_025.zip",
+  "file_name": "02_도면 관련자료_025.zip",
+  "bytes": 81387308,
+  "local_mtime_ns": 1793771218828884500,
+  "sha256": "3b7f6ff0c890df12c0dd1c9e7ba7cd5609df51dfa7fdc732e8d72f6d60e51213",
+  "files": 8,
+  "compression": "ZIP_DEFLATED level 1; lossless",
+  "verification": "Every member SHA256 verified while writing; ZIP package SHA256 computed locally."
+}

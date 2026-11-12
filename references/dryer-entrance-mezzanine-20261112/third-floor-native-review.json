@@ -1,0 +1,136 @@
+{
+  "date": "2026-11-12",
+  "status": "read-only-next-phase-findings; model edits held until the first-floor detail pass is finished",
+  "scope": "Third-floor architectural, utility and movable context only. Detailed equipment shapes remain a separate parent review.",
+  "sourceManifest": "workspace/dryer-entrance-mezzanine-20261112/overview/index.json",
+  "nativeImageSize": [1080, 1920],
+  "reviewedSeconds": [450, 462, 474, 502, 508, 516, 520, 538, 548, 554, 588, 590, 593, 605, 614, 617, 626, 648, 666, 686, 692, 702, 708, 714, 720],
+  "supplementalSeconds": [480, 567],
+  "newFramesExtracted": [
+    "workspace/dryer-entrance-mezzanine-20261112/native/frame-617s.jpg",
+    "workspace/dryer-entrance-mezzanine-20261112/native/frame-567s.jpg",
+    "workspace/dryer-entrance-mezzanine-20261112/native/frame-480s.jpg"
+  ],
+  "reviewMethod": "All requested native frames were inspected in three labelled contact sheets; the yellow-room, wall-window/drain, IBC and upper-utility frames were additionally inspected individually at native resolution. The added 480s image is motion-blurred and supplies no reliable new detail.",
+  "comparison": {
+    "render": "workspace/dryer-entrance-mezzanine-20261112/3f-layout-after.png",
+    "source": "apps/site/dryer-route-environment.js, level===3 branch",
+    "existing": ["Yellow-glazed room, approximate shelving/tool cases and workbench", "Closed gray service door with exit light and violet insect trap", "Separate reduced third-floor envelope and lower-wing roofs"],
+    "largestMissingContext": ["External two-row yellow window banks and lower stainless wall protection", "Flush floor drain-channel runs", "Three IBCs and the closed roller-shutter/pallet area", "Visible facility utility runs, spiral duct and their actual supports"]
+  },
+  "evidencePolicy": {
+    "coordinates": "All proposed local coordinates, sizes, heights and window spacing remain approximate registrations. No GPS, altitude, heading or walking duration is a room dimension.",
+    "continuity": "The existing compact third-floor envelope remains the working registration. The native review does not establish an absolute compass orientation, full perimeter polygon or exact shrink ratio.",
+    "identity": "Storage use is inferred from tools and bins. Door/shutter destinations, pipe service functions, IBC contents and equipment OEM identities remain unconfirmed.",
+    "drawings": "The filmed drawings remain reference-only and do not override current visible openings or room use.",
+    "timing": "No architectural or equipment source was edited for this review. These findings are for the next phase after the first-floor pass."
+  },
+  "findings": [
+    {
+      "id": "yellow-room-door-and-glazing",
+      "priority": 1,
+      "seconds": [450, 462],
+      "certainty": "visible geometry; active leaf count only partially established",
+      "observed": [
+        "A pale panel-room corner projects into the green-floor hall; an open light-colored leaf has a compact yellow diffusing pane in its upper half.",
+        "The native 462s pane is visibly much narrower than the leaf: roughly 55–65% of the apparent leaf width, with broad solid side margins. The window occupies about the upper third of leaf height; the lower half is solid.",
+        "A second tall narrow yellow-glazed panel appears across the same broad portal. It may be fixed glazing or a passive leaf; this frame does not prove that it moves.",
+        "The adjacent perpendicular room wall contains another yellow pane. Frames and perimeter trims are silver/gray; the yellow surfaces diffuse the view strongly."
+      ],
+      "currentDifference": "The generic route door uses an upper pane approximately 90% of leaf width. The current fixed window and door already preserve the general corner arrangement, but the moving-leaf pane is too broad.",
+      "nextPhaseRecommendation": "Narrow the moving yellow pane and retain its broad solid margins. Keep the opposite panel fixed until movement is established. Preserve a descriptive interaction label in metadata without presenting an inferred room function as an observed official wall sign.",
+      "doNotInfer": ["Two confirmed moving door leaves", "An OP-room identity for this 3F room", "Measured portal width or room footprint from the oblique photograph"]
+    },
+    {
+      "id": "yellow-room-storage-context",
+      "priority": 2,
+      "seconds": [462, 474],
+      "certainty": "visible objects; inventory totals unknown",
+      "observed": ["White/light shelving holds orange/yellow plastic bins and tools inside the opening.", "474s clearly shows one large yellow ribbed crate, a teal hard tool case with black handle/latches on the shelf below, and cardboard packaging above.", "Brown material sacks on a dark pallet stand beside the portal outside the room."],
+      "currentDifference": "The existing repeated equal yellow bins and equal tool cases are representative. Their exact three-item repetition is not a confirmed inventory count.",
+      "nextPhaseRecommendation": "Use the visible mixed crate/tool-case/cardboard shapes and keep unobserved totals representative. Do not add a further pallet here if the same sack stack is already registered from the shutter-side view.",
+      "doNotInfer": ["Tool stock counts or readable official inventory labels", "A second room behind unseen walls"]
+    },
+    {
+      "id": "two-row-yellow-window-banks",
+      "priority": 1,
+      "seconds": [502, 590, 593, 617],
+      "certainty": "directly visible repeated wall type; complete pane count and wall registration unknown",
+      "observed": [
+        "Tall production-wall bays have two rows of strongly yellow diffusing glazing, divided by a continuous horizontal rail and vertical aluminum frames.",
+        "White structural piers interrupt the glazing; some lower panes show opening handles.",
+        "A continuous dark gray/stainless protective panel runs below the sill in the hopper-side view. Joints and a brighter top edge are visible.",
+        "The same two-row yellow window type is behind the independent cylinder, plate/pump area and the IBC row."
+      ],
+      "currentDifference": "The current 3F route environment builds only the small room's yellow panes. The principal factory perimeter remains largely blank white wall or a cutaway skeleton in the reviewed render.",
+      "nextPhaseRecommendation": "Register the observed wall-window type along the appropriate production-wall runs with genuine cut openings, frames and stainless lower protection. Keep the reduced floorplate and current door route. Pane counts, precise run lengths and geographic side assignment must be marked approximate.",
+      "doNotInfer": ["One continuous window across every wall", "Exact facade bay count", "Window opening state beyond the visible handles"]
+    },
+    {
+      "id": "wall-utility-and-floor-drain",
+      "priority": 1,
+      "seconds": [450, 502, 516, 520],
+      "certainty": "visible partial runs; full connectivity unknown",
+      "observed": [
+        "502s shows a yellow horizontal service pipe above the yellow window bank, carried on angled light-colored brackets attached to the window piers.",
+        "A narrow flush stainless floor channel runs parallel to the protected wall and turns across the floor near the plain end wall.",
+        "516/520s show a separate visible cross-floor channel line behind the three low transfer troughs.",
+        "450s includes a short dark floor-slot opening near the entry-side column."
+      ],
+      "currentDifference": "No 3F drain-channel context or the yellow wall-level service run appears in the current route-environment branch.",
+      "nextPhaseRecommendation": "Add only the visible local channel segments as shallow flush stainless channels/removable cover strips. The native view does not justify a large open grating pattern or a complete invented underground network. Register the yellow service run and its stand-off brackets without assigning a fluid or connecting it speculatively to equipment.",
+      "doNotInfer": ["Pipe function from its yellow color", "Drain direction, depth or complete connectivity", "A wide raised curb that changes the observed walking route"]
+    },
+    {
+      "id": "ceiling-and-facility-utility-runs",
+      "priority": 1,
+      "seconds": [502, 538, 548, 554, 590, 605, 614, 617, 648, 720],
+      "certainty": "directly visible portions; endpoints and service functions unknown",
+      "observed": [
+        "The third-floor hall has exposed gray corrugated overhead panels and white beams/columns, unlike the low white corridor ceiling on 1.5F.",
+        "617s clearly shows two blue horizontal runs with nearby gray/stainless runs carried on a metal channel/tray support; smaller parallel lines bend together near the ceiling.",
+        "A large galvanized spiral duct crosses the upper view at 590/617/720s, hanging below the primary beams.",
+        "648s shows a dense group of parallel stainless lines carried above the CIP deck, with a round high-level light nearby.",
+        "720s shows a red vertical run near the rear wall behind the pump/steelwork and additional high horizontal services.",
+        "605/614s show dark steel service beams close above the control area; these must not be confused with a new building storey."
+      ],
+      "currentDifference": "The reviewed 3F render has exposed generic perimeter/column steelwork with very little facility-level overhead context. Equipment-local stainless pipes exist but do not represent the observed colored and galvanized hall runs.",
+      "nextPhaseRecommendation": "Add the visible ceiling/utility portions as shared room context with their channel supports/hangers. Keep them separate from movable equipment models and avoid duplicating the existing CIP/hooper platform steel. Preserve cutaway visibility in overview while allowing the observed overhead enclosure in person/aisle/full-wall views.",
+      "doNotInfer": ["Red/blue pipe service or flow direction", "Hidden links to a specific hopper, CIP vessel or external utility", "A suspended white office ceiling on 3F", "A fourth building floor at the tank service deck"]
+    },
+    {
+      "id": "ibc-row",
+      "priority": 1,
+      "seconds": [617],
+      "certainty": "three containers visible together in one native frame",
+      "observed": ["Three white/translucent cubical IBC containers stand side by side along a wall between white structural piers and the yellow window bank.", "Each has a gray metal cage, dark pallet base, visible top cap and a front plate/holder; the foreground unit's plate is visibly larger/darker."],
+      "currentDifference": "The current 3F route environment does not include this three-container context.",
+      "nextPhaseRecommendation": "Add one movable-context group with the minimum observed three IBCs, preserving the clear foreground passage. Keep local positions and sizes approximate; do not register three new process-machine identities or assert their contents.",
+      "minimumObservedCount": 3,
+      "doNotInfer": ["Chemical identity or current contents", "A fourth obscured IBC", "Permanent anchoring or exact serial labels"]
+    },
+    {
+      "id": "shutter-gray-door-and-pallets",
+      "priority": 2,
+      "seconds": [450, 567],
+      "certainty": "visible closed faces; destinations unconfirmed",
+      "observed": [
+        "450s shows a gray single door beyond the yellow room, a pale notice on the leaf, a green/white exit light above and a violet insect trap to one side. The current model already includes this combination.",
+        "567s shows a broad closed gray corrugated roller shutter behind at least two pallet loads: a light bulk bag and stacked brown material sacks. Yellow floor boundary lines and a small cylindrical wheeled container are visible beside them."
+      ],
+      "currentDifference": "The gray service-door combination is represented. The roller-shutter/pallet zone is absent from the current 3F route branch.",
+      "nextPhaseRecommendation": "Retain the existing gray door's unknown-destination status. Add the closed shutter and minimum visible pallet context only after its relative wall location is reconciled with the continuous walk. Avoid making either destination enterable or automatically opening without observed connected interior evidence.",
+      "doNotInfer": ["A new adjacent room or external loading area", "A forklift route or operation state", "That the sack stack seen beside the yellow room is a distinct third pallet load"]
+    },
+    {
+      "id": "column-bases-and-loose-context",
+      "priority": 3,
+      "seconds": [450, 686, 692, 714],
+      "certainty": "directly visible; minor movable objects remain contextual",
+      "observed": ["White columns have widened pale bases with a green painted lower band in the floor-level views.", "450s shows a red floor fire extinguisher beside the entry-side column.", "A loose pedestal fan appears beside the local metal stair; pink/white barrier tape, cables and hoses are temporary objects around the service zone."],
+      "nextPhaseRecommendation": "Use visible column-base profiles where they materially explain room scale. Loose fans/extinguisher may be static context. Keep tape/hoses out of permanent room-boundary and fixed-route geometry; do not paint incidental wear as a surveyed structural feature."
+    }
+  ],
+  "nextPhaseOrder": ["Finish first-floor native corrections and verify their views first", "Reconcile 3F wall/window/shutter topology against the continuous walk", "Correct yellow-door proportions and visible storage contents", "Add local drains, three-IBC row and observed overhead context", "Review equipment details separately and verify clear passages and service-deck distinction"],
+  "modelFilesEdited": []
+}

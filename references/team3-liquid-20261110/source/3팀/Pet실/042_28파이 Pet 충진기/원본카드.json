@@ -1,0 +1,74 @@
+{
+  "id": "3-pet-28-pet-1782257756103-222626",
+  "line": "",
+  "name": "28파이 Pet 충진기",
+  "note": "",
+  "plan": "",
+  "rate": 0,
+  "room": "Pet실",
+  "team": "3팀",
+  "group": "",
+  "owner": "",
+  "status": "비가동중",
+  "process": "",
+  "documents": [],
+  "lastCheck": "",
+  "modelName": "",
+  "nextCheck": "",
+  "photoCrop": null,
+  "photoName": "28파이 Pet 충진기 photo.jpg",
+  "detailInfo": [
+    {
+      "label": "설비명",
+      "value": "28파이 Pet 충진기"
+    },
+    {
+      "label": "관리팀",
+      "value": "3팀"
+    },
+    {
+      "label": "가동률",
+      "value": "0%"
+    }
+  ],
+  "ownerLabel": "담당 업체",
+  "production": "",
+  "teamDataKey": "work_team_calendar_team3",
+  "detailGroups": {
+    "equipmentSpecs": []
+  },
+  "manufacturer": "",
+  "photoDataUrl": "",
+  "equipmentCode": "3-PET-28-PET-1782257756103-222626",
+  "operationInfo": [
+    {
+      "label": "설비명",
+      "value": "28파이 Pet 충진기"
+    },
+    {
+      "label": "관리팀",
+      "value": "3팀"
+    },
+    {
+      "label": "실",
+      "value": "Pet실"
+    },
+    {
+      "label": "공정",
+      "value": ""
+    },
+    {
+      "label": "가동률",
+      "value": "0"
+    }
+  ],
+  "manufacturedAt": "",
+  "photoDocumentId": "8e04a23e-fce3-4200-9f21-0cd339b5b6b6",
+  "photoPreviewUrl": "/api/files/8e04a23e-fce3-4200-9f21-0cd339b5b6b6/view",
+  "photoDownloadUrl": "/api/files/8e04a23e-fce3-4200-9f21-0cd339b5b6b6/download",
+  "manufacturerLabel": "제조사",
+  "photoThumbDataUrl": "",
+  "maintenanceHistory": [],
+  "photoAttachmentKey": "equipment-photo-main",
+  "photoStorageRelPath": "equipment-assets/equipment-history/28파이 Pet 충진기/images/5e853df3-261a-42fe-8821-adf3e20ca44b.jpg"
+}

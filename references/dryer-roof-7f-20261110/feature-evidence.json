@@ -1,0 +1,360 @@
+{
+  "date": "2026-11-10",
+  "scope": "건조기실 옥상 ~ 7층 새 자료의 읽기 전용 관찰·출처 감사. 모델 구현/원본 수정 없음.",
+  "sourceVideo": {
+    "path": "건조기실 옥상 ~ 7층/20261110_132953KST_GPS-VALID_LAT35.3626717_LON129.0302783_H220.2-TN_DIR-AVAILABLE_P-49.0_ACC2.4m_FV-050dba47-cf26-47c4-a78f-7012f284c151.mp4",
+    "sha256": "7e70508d612005962a77501c50323f36d6f1e64d1c83dd15753e8cb72ab55b26",
+    "durationSeconds": 507.876256,
+    "audioStreamPresent": false
+  },
+  "sourceStillPhotosPresent": false,
+  "evidenceLevels": {
+    "direct": "실제 프레임/글자/연속 동선 관찰",
+    "drawing-correspondence": "원도면 미리보기와 외형/상대 배치의 대응",
+    "inference": "관찰에서 해석한 기능/층 맥락. 실측/명판 확정과 구분",
+    "unknown": "원본에 없거나 판독 불가하여 구현 세부의 확정근거로 쓰지 않음",
+    "user-confirmed": "사용자가 직접 확인한 현재 현장 정보. 확인한 방의 정체성과 미확인 장치 사양을 구분."
+  },
+  "floorSequence": [
+    {
+      "rangeSeconds": [
+        0,
+        58
+      ],
+      "observedZone": "옥외 물탱크·원통 셸·배관 서비스bay",
+      "recommendedFloorContext": "A017 7F32.6 서비스bay",
+      "confidence": "도면의 세 구성과 연속 동선 대응; 현장 수준점 실측 아님"
+    },
+    {
+      "rangeSeconds": [
+        60,
+        113
+      ],
+      "observedZone": "엘리베이터 기계실의 구동 조립체·제어함·바닥 단말 계열 외형",
+      "recommendedFloorContext": "A017 7층 서비스 bay의 E.V기계실과 대응",
+      "confidence": "방의 정체성은 사용자 확인. 7층 서비스 bay와의 층 정합은 도면·연속 동선 대조. 장치 모델·권상 형식의 명판 판독은 없음."
+    },
+    {
+      "rangeSeconds": [
+        114,
+        126
+      ],
+      "observedZone": "문 주변 서비스bay 복귀",
+      "recommendedFloorContext": "7F 서비스bay 맥락",
+      "confidence": "연속영상"
+    },
+    {
+      "rangeSeconds": [
+        129,
+        168
+      ],
+      "observedZone": "계단실4런 하강",
+      "recommendedFloorContext": "7F 서비스bay→하부 설비실",
+      "confidence": "하향 동선 직접 관찰; 첫 런 끝7F 유도표지"
+    },
+    {
+      "rangeSeconds": [
+        169,
+        358
+      ],
+      "observedZone": "대형 원통·송풍기·가열부가 있는 하부 홀",
+      "recommendedFloorContext": "A0166층 설비실 대응(도면레벨26.2는 건축단면 감사와 연계)",
+      "confidence": "A0166층 송풍기/CHAMBER HOLE/UP계단과 A0177층 상부개구/DN계단, 영상4런하강/4런재상승을 직접 대조한 강한 해석. 출입문 층명 직접 판독·실측과 구분."
+    },
+    {
+      "rangeSeconds": [
+        359,
+        389
+      ],
+      "observedZone": "내부 흰 철골계단4런 상승",
+      "recommendedFloorContext": "하부 홀→7F상부 점검면",
+      "confidence": "상승 동선과 하부 조망 직접 확인; 총고 실측 아님"
+    },
+    {
+      "rangeSeconds": [
+        390,
+        490
+      ],
+      "observedZone": "큰 원형개구 둘레 상부 점검면",
+      "recommendedFloorContext": "A0177F상부 점검공간",
+      "confidence": "원형평면·DN계단·상하 조망 대응"
+    },
+    {
+      "rangeSeconds": [
+        491,
+        507
+      ],
+      "observedZone": "점검계단 하향 복귀와 영상 종료",
+      "recommendedFloorContext": "같은 설비 상하 연결",
+      "confidence": "마지막 복귀의 완전한 층 출구는 확인하지 못함"
+    }
+  ],
+  "features": [
+    {
+      "id": "water-tank",
+      "zone": "7f-service-bay",
+      "directEvidence": [
+        6,
+        12
+      ],
+      "observed": "회녹색 직사각 외함, 콘크리트 지지부, 측면 관통 보온 배관. 물탱크용량표의 총수량20ton/소화용수량9ton을 원본 프레임에서 직접 판독.",
+      "confirmedMinimumCount": 1,
+      "functionConfidence": "명판의 물탱크 명칭은 직접 확인",
+      "drawingSupport": "A017의 옥상수조20ton과 서비스bay내 상대 배치 대응",
+      "limits": "수조 내부 분할/실제 수위/현재 소화운영상태/정확한 외형 치수는 확인하지 못함. 표기 용량을 현재 보유량으로 쓰지 않음."
+    },
+    {
+      "id": "cylindrical-roof-shell",
+      "zone": "7f-service-bay",
+      "directEvidence": [
+        18,
+        24,
+        36,
+        45,
+        48
+      ],
+      "observed": "벌어진 원추 받침, 볼트 링, 세로 리브가 있는 하부 원통, 넓은 중단 외피, 좁은 상부 원통과 보호 케이지.",
+      "confirmedMinimumCount": 1,
+      "functionConfidence": "기능 미확정",
+      "drawingSupport": "A017의 Ø3000 원형 도형과 상대 배치는 대응 후보. 치수표기의 직접 설비 동일성은 기술 감사와 함께 판단.",
+      "limits": "18~48초는 한 대를 돌아 촬영한 연속 장면이다. 여러 프레임을 별개2~3대로 세지 않는다. 집진기/세정탑/배기팬의 기능명이나 내부를 명판 없이 단정하지 않음."
+    },
+    {
+      "id": "roof-pipes-hose-ladders",
+      "zone": "7f-service-bay",
+      "directEvidence": [
+        12,
+        30,
+        33,
+        48,
+        54
+      ],
+      "observed": "바닥 가까운 나란한 보온 배관, 작은 받침, 벽 관통 엘보, 호스릴, 천공 양개문. 30초에 보호 케이지가 있는 수직 사다리와 인접한 짧은 고정 사다리가 함께 보임.",
+      "functionConfidence": "외형·상대 위치 직접 관찰",
+      "limits": "보온관 각각의 유체/흐름 방향/관경/사다리의 최종 연결높이는 실측 근거 없음."
+    },
+    {
+      "id": "roof-surface-building-form",
+      "zone": "7f-service-bay",
+      "directEvidence": [
+        0,
+        18,
+        30,
+        48,
+        54
+      ],
+      "observed": "거칠고 짙은 옥외 보행면, 오염된 콘크리트 파라펫과 주황색 상단 캡, 밝은 가로줄 외벽, 낮은 돌출 지붕이 보임.",
+      "drawingSupport": "A018의 본체 경사지붕과 CAT WALK는 별도로 존재.",
+      "limits": "영상의 평평한 보행 구역을 근거로 건물 전체를 평지붕으로 만들지 않음. 옥외 서비스bay 자체를 독립8층 또는GL37.4로 고정할 근거도 아님."
+    },
+    {
+      "id": "upper-drive-assembly",
+      "zone": "7f-upper-machine-room",
+      "directEvidence": [
+        69,
+        75,
+        84,
+        87,
+        102,
+        105
+      ],
+      "observed": "엘리베이터 기계실 안에 회색 모터의 돌출 축단·통풍 커버, 큰 홈 바퀴·노란 보호 가드, 공통 철골 베이스와 지지부가 보인다. 방의 정체성은 사용자 확인이며, 사진에서 확인한 장치 외형과 구분한다.",
+      "confirmedMinimumCount": 1,
+      "functionConfidence": "승강기 구동장치가 있는 방의 정체성은 확정. 권상장치의 상세 형식·제조사·모델·사양은 미확정.",
+      "limits": "구동 조립체를 건조기 버너로 오인하지 않는다. 기계실임이 확인됐다는 이유로 보이지 않는 기구, 정격 하중·출력·속도, 현재 운영 상태를 단정하지 않는다.",
+      "roomName": "엘리베이터 기계실",
+      "roomIdentityConfidence": "사용자 확인 + A017 E.V기계실 도면의 위치 대응"
+    },
+    {
+      "id": "roof-to-lower-hall-stairs",
+      "zone": "external-stair-transition",
+      "directEvidence": [
+        135,
+        141,
+        153,
+        171
+      ],
+      "observed": "137~141,143~148,151~157,159~164초의4개 하향 런. 첫 런 끝 벽에7F유도표지. 169초에 녹색 바닥 설비실로 진입하고171초 승강기 문이 보임.",
+      "functionConfidence": "계단 방향과 런 수는 연속 영상 확인",
+      "limits": "7F표지는 첫 런 끝의 유도 표지이며 홀 출입문 층명 직접 판독과 다름. 개별 단수/총높이는 실측하지 않음."
+    },
+    {
+      "id": "lower-hall-vertical-shells",
+      "zone": "lower-machine-hall-6f-context",
+      "directEvidence": [
+        174,
+        198,
+        216,
+        219,
+        300,
+        312,
+        330
+      ],
+      "observed": "여러 수직 원통 외피와 대구경 연결부, 녹색 바닥 턱·배수구·난간. 큰 원통의 직사각 점검문은 잠금 바·수동 휠·손잡이·힌지·주의 표지를 가짐.",
+      "functionConfidence": "외피와 부품 외형 직접 관찰",
+      "limits": "촬영 각도가 바뀐 동일 설비가 포함되므로 원통 전체 대수 및 기존 cyclone/chamber ID대응은 사진만으로 일괄 확정하지 않음. 내부 공정/층별 중복 대수 추가 금지."
+    },
+    {
+      "id": "blower-duct-support",
+      "zone": "lower-machine-hall-6f-context",
+      "directEvidence": [
+        180,
+        186,
+        192,
+        201,
+        204,
+        207,
+        213,
+        393
+      ],
+      "observed": "붉은 철골 점검대·난간 위 회녹색 모터/송풍기 구동부, 원형 수평 덕트와 큰 엘보/플랜지, 보강 리브, 베이스 아래 파란 방진 지지부.393초 상부에서 이 점검대를 아래로 내려다봄.",
+      "confirmedMinimumCount": 1,
+      "functionConfidence": "송풍기 계통 외형의 직접 관찰. 명판 수치/모델 세부는 불가",
+      "limits": "덕트 흐름방향·성능·구동 출력/형식·정확한 연결고는 단정하지 않음."
+    },
+    {
+      "id": "heater-two-burner-heads",
+      "zone": "lower-machine-hall-6f-context",
+      "directEvidence": [
+        354,
+        356,
+        372
+      ],
+      "observed": "356초에 빨간 버너 헤드2개가 같은 가열부 전면에 나란히 보임. 각 하부 모터와 노란 가스 배관, 밸브·압력계, 상부 금속 후드의 노란 림을 확인.",
+      "confirmedMinimumBurnerHeadCount": 2,
+      "functionConfidence": "외관상 버너 헤드와 가스 트레인 직접 관찰",
+      "limits": "두 헤드를 별개 가열설비2대로 계산하지 않음. 열용량/가스 종류/제어운전/내부 연소실 구조는 확인 없음."
+    },
+    {
+      "id": "internal-four-flight-stairs",
+      "zone": "internal-stair-transition",
+      "directEvidence": [
+        362,
+        370,
+        375,
+        380,
+        387,
+        390,
+        393
+      ],
+      "observed": "364~369 첫 상승→370~373 중간발판→374~378 상승→380~383 상승→386~389 마지막 상승. 흰 철골 측판·난간과 천공 금속 디딤판.389초 녹색 상부 보행면으로 이어지고393초 하부 송풍기 점검대를 내려다봄.",
+      "confirmedFlightCount": 4,
+      "functionConfidence": "상승 동선과 상대 레벨 직접 관찰",
+      "limits": "영상에서 각 단 높이/전체 상승고는 실측하지 않음. A017의 내부 DN계단과 층 연결을 우선 대조."
+    },
+    {
+      "id": "upper-round-opening-walkway",
+      "zone": "7f-upper-inspection-deck",
+      "directEvidence": [
+        400,
+        402,
+        408,
+        414,
+        420,
+        432,
+        438,
+        444,
+        450,
+        468
+      ],
+      "observed": "큰 원형 개구 둘레 녹색 통로와 흰 난간, 부분 체커플레이트/점검판, 수평 원형 덕트, 보강된 직사각 외함/점검문, 노란 주름 호스와 검은 케이블, 벽 배관·창.",
+      "drawingSupport": "A017의 큰 원형 상부 점검 공간과 DN계단에 대응하는 유력 장면.",
+      "limits": "원형 내부의 기능/회전체/유체/실제 가동 상태를 외형만으로 추정하여 추가하지 않음."
+    },
+    {
+      "id": "elevator-room-controls-and-floor-anchors",
+      "zone": "7f-upper-machine-room",
+      "roomName": "엘리베이터 기계실",
+      "roomIdentityConfidence": "사용자 확인",
+      "directEvidence": [
+        61,
+        62,
+        75,
+        76,
+        77,
+        78,
+        80,
+        81,
+        82,
+        93,
+        96,
+        123
+      ],
+      "observed": "75초의 열린 회녹색 양문 제어함은 123초의 천공 양개 출입문과 다른 물체다. 76초에는 벽 부착 단문함과 하향 케이블이 보인다. 80~82/93/96초에는 바닥 위 고정판, 다수 볼트·스프링과 로프/케이블 단말 계열 외형이 보인다.",
+      "functionConfidence": "서로 다른 외함·출입문·바닥 고정부의 형상과 위치는 직접 관찰. 부품별 세부 기능은 미확정.",
+      "limits": "제어함 문짝을 방 출입문으로 재사용하거나 바닥 고정부를 모터·별도 탱크로 추가하지 않는다. 사진에 없는 제어 회로·하중 계산·로프 수량/경로·동작을 확정하지 않는다."
+    }
+  ],
+  "supportingDrawings": [
+    {
+      "drawingNumber": "A016",
+      "previewPath": "tmp/dryer-roof-7f-20261110/source-6f-plan-crop.png",
+      "previewSHA256": "b5ff4cc81235e35a56d78d2cd9d97ede8c856838ec91b88587c89e82cc90b44c",
+      "directlyViewed": true,
+      "scope": "(4동)6층 평면의 북측 송풍기/긴덕트, 서측 원형3열, 남측CHAMBER HOLE, 동측내부UP계단 직접 확인.",
+      "originalSourceManifest": "도면 원본 경로·SHA·단면레벨은 건축 원도면 감사와 연계. 미리보기hash는 원본hash와 다름."
+    },
+    {
+      "drawingNumber": "A017",
+      "previewPath": "tmp/dryer-roof-7f-20261110/source-7f-plan-crop.png",
+      "previewSHA256": "281648ba0adfb9b814cb573f52a9b57688c8373580697877b0a58e005a11ec9d",
+      "directlyViewed": true,
+      "scope": "7층 평면의 수조/Ø3000/E.V기계실/상부원형공간 및 지붕 평면의 경사지붕/CAT WALK 직접 확인",
+      "originalSourceManifest": "도면 원본 경로·SHA·다른층/단면 치수는 repo_contract_audit의 건축 원도면 감사에 연결 필요. 이 preview hash는 원본 DWG/PDF hash와 다름."
+    },
+    {
+      "drawingNumber": "A018",
+      "previewPath": "tmp/dryer-roof-7f-20261110/source-roof-plan-crop.png",
+      "previewSHA256": "352435e7f5f053f1fe5a9cbed4dc3a7e1706f61fc10a444f9b490115fb0644f9",
+      "directlyViewed": true,
+      "scope": "7층 평면의 수조/Ø3000/E.V기계실/상부원형공간 및 지붕 평면의 경사지붕/CAT WALK 직접 확인",
+      "originalSourceManifest": "도면 원본 경로·SHA·다른층/단면 치수는 repo_contract_audit의 건축 원도면 감사에 연결 필요. 이 preview hash는 원본 DWG/PDF hash와 다름."
+    }
+  ],
+  "registrationLimits": [
+    "GPS는 휴대전화 촬영 위치이며 설비 모서리 좌표가 아니다.",
+    "filename H는 진북 방위각이다. WGS84타원체 altitude도 수직정확도약16~20m로 층높이 실측에 사용하지 않음.",
+    "원본TXT는 estimated_camera_recording_frame이며 MP4첫프레임과 하드웨어 단위로 검증된 동기화가 아니다.",
+    "132807TXT에 대응하는8.424초MP4가 폴더에 없다. 자료 누락을 영상으로 본 것처럼 서술하지 않음.",
+    "A0177F서비스bay와 본체 지붕/옥상 CAT WALK는 서로 다른 건축 구역이다. 새 옥외 서비스bay를 임의8층으로 추가하지 않음.",
+    "174초 하부홀을7F로 고정한 초기 가설은 A0166층/A0177층 평면과 내부4런 재상승에 비춰 폐기한다.6F대응은 도면+동선의 강한 해석이며 출입문층명 직접 판독·실측과 구분한다."
+  ],
+  "assets": {
+    "photoManifest": "references/dryer-roof-7f-20261110/photo-manifest.json",
+    "offlineManifest": "references/dryer-roof-7f-20261110/offline-photo-manifest.json",
+    "gpsSummary": "references/dryer-roof-7f-20261110/gps-observation-summary.json",
+    "webFrames": 60,
+    "webBytesIncludingLabelCrop": 6956403,
+    "offlineFrames": 8,
+    "offlineBytes": 394698
+  },
+  "originalsModified": false,
+  "userConfirmedRoomIdentity": {
+    "date": "2026-11-10",
+    "statement": "옥상 계단 옆 공간은 엘리베이터 기계실이다.",
+    "statementKind": "현재 대화의 사용자 확인 내용 요약",
+    "confirmedScope": "방의 정체성",
+    "notConfirmed": [
+      "권상 방식과 감속기 형식",
+      "모터·권상장치 모델과 정격 출력",
+      "승강기 정격 하중·속도·운전 상태",
+      "바닥 고정판/볼트·스프링/로프 단말 계열 부품의 세부 기능"
+    ]
+  },
+  "supplementalFrameReview": {
+    "scope": "엘리베이터 기계실 60~114초 1초 간격 접촉시트 및 선별 원본 해상도 프레임 재확인",
+    "contactSheets": [
+      "tmp/dryer-roof-7f-20261110/elevator-room/contact-060-089.jpg",
+      "tmp/dryer-roof-7f-20261110/elevator-room/contact-090-114.jpg"
+    ],
+    "nativeFramesDirectlyViewed": [
+      76,
+      80,
+      85,
+      101
+    ],
+    "cacheRoot": "tmp/dryer-roof-7f-20261110/elevator-room",
+    "sourceVideoSHA256": "7e70508d612005962a77501c50323f36d6f1e64d1c83dd15753e8cb72ab55b26",
+    "appAssetsModified": false
+  }
+}

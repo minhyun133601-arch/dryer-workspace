@@ -1,0 +1,18 @@
+{
+  "requested_action": "Commit and push current HanCAD work, then remove only its target build outputs",
+  "repository": "C:\\Users\\user\\Desktop\\진행중\\간이캐드",
+  "commit": "e322b4a2776d74b840e0583bc3be01149b16a696",
+  "remote_commit_url": "https://github.com/minhyun133601-arch/HanCAD/commit/e322b4a2776d74b840e0583bc3be01149b16a696",
+  "push_verified": true,
+  "local_remote_hash_equal": true,
+  "worktree_clean": true,
+  "typecheck_passed": true,
+  "target": "C:\\Users\\user\\Desktop\\진행중\\간이캐드\\target",
+  "target_logical_bytes": 8867769725,
+  "target_unique_hardlink_bytes_approx": 7700000000,
+  "deletion_status": "blocked_before_execution_by_automatic_approval_review",
+  "review_reason": "blocked by policy; no more detailed reason supplied",
+  "target_deleted": false,
+  "retry_or_bypass_attempted": false,
+  "evidence": ["hancad-preservation-plan.json", "hancad-target-predelete.json"]
+}

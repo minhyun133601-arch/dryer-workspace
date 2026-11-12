@@ -1,0 +1,17 @@
+﻿[
+    {
+        "source":  "C:\\Users\\user\\Desktop\\프로젝트\\tmp\\heat-project-review.json",
+        "destination":  "C:\\Users\\user\\Desktop\\프로젝트\\workspace\\review\\heat-audits\\heat-project-review.json",
+        "sha256":  "2d909f81b3f97914224ff3e47419812fde95d29dc34b596ef125100317cef678"
+    },
+    {
+        "source":  "C:\\Users\\user\\Desktop\\프로젝트\\tmp\\kpi-audit.json",
+        "destination":  "C:\\Users\\user\\Desktop\\프로젝트\\workspace\\review\\heat-audits\\kpi-audit.json",
+        "sha256":  "f1e2184aec8216ba895276a62e4c9eca6caefc863314efcb43989711da671d0f"
+    },
+    {
+        "source":  "C:\\Users\\user\\Desktop\\프로젝트\\tmp\\supporting-excel-audit.json",
+        "destination":  "C:\\Users\\user\\Desktop\\프로젝트\\workspace\\review\\heat-audits\\supporting-excel-audit.json",
+        "sha256":  "d7a9328740badf9a9360fcd5f08ea8b6572e3fc3214c3359cc59078baa5921e4"
+    }
+]

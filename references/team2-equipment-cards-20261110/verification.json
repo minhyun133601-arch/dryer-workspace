@@ -1,0 +1,74 @@
+{
+  "date": "2026-11-10",
+  "identity": "현재2팀=스틱·소포장동9동",
+  "sourceCards": 41,
+  "unchangedSourceFiles": 127,
+  "archiveSha256": "bf8a6810e9493c99b02ce7d644f9207982357f4ed52d474e01a424ee58c3db2e",
+  "promptSha256": "fa6df4fa84a207672880b413f4e505efaec304a0e4a364a7dbd9edda80b52b8d",
+  "modelGroups": {
+    "1": 26,
+    "2": 31,
+    "3": 26,
+    "total": 83
+  },
+  "fixedTransferSections": {
+    "1": 17,
+    "2": 11,
+    "3": 0
+  },
+  "checks": {
+    "syntaxAndLocalPaths": {
+      "scripts": 98,
+      "passed": true
+    },
+    "fullSuite": {
+      "passed": 147,
+      "failed": 0
+    },
+    "finalPackagingFeatureSuite": {
+      "passed": 8,
+      "failed": 0
+    },
+    "stairSupportSamples": 2520,
+    "wholeViewFloors": [
+      0,
+      6,
+      12.15
+    ],
+    "savedCoordinatesRemainLocal": true,
+    "transportColumnConflicts": 0,
+    "bodyHeightWalkingTransportChecks": true,
+    "desktop": {
+      "width": 1440,
+      "height": 1000,
+      "horizontalOverflow": false
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "horizontalOverflow": false
+    },
+    "offlineSharedModel": {
+      "method": "HTTP bootstrap of self-contained HTML, then browser network disabled",
+      "levels": [
+        "all",
+        1,
+        2,
+        3
+      ],
+      "passed": true,
+      "directFileProtocol": "Playwright backend disallows file://; not directly tested"
+    },
+    "consoleErrors": 0
+  },
+  "shared": {
+    "file": "exports/건조기-통합-공유.html",
+    "bytes": 38756922,
+    "sha256": "b69505fbb017f48e943785f7318ca014741f5fcba7b33cb4c7254a05dcbbb110"
+  },
+  "limits": [
+    "실측 좌표·폭·설치 높이·기기별 이송면 전이 높이는 미확정. 도면 연결 위상과 사진 외형을 비례 재현.",
+    "도면에 흐름 화살표가 없어 정·역방향, 구동 방식과 세부 체인 기구는 확정하지 않음.",
+    "고정 이송 라인은 건물 바닥의 하위 모델이며 83개 선택 설비 그룹 수에 더하지 않음."
+  ]
+}

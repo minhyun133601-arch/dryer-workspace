@@ -1,0 +1,2913 @@
+{
+  "createdAt": "2026-11-10T08:15:58.170Z",
+  "mode": "read-only post-archive verification; no source modification or file moves; no repeated whole-archive hashing",
+  "passed": true,
+  "archive": {
+    "expectedFiles": 4117,
+    "entryCount": 4117,
+    "expectedBytes": 5090079791,
+    "targetExistsAndSizeVerified": 4117,
+    "originalSourceAbsent": 4117,
+    "fileDeletions": 0,
+    "removedEmptyDirectories": 241,
+    "protectedExtensionsArchived": 0,
+    "hashVerification": "Already verified by archive script immediately before and after every move; not repeated in this audit."
+  },
+  "officialDocuments": {
+    "baselineCount": 724,
+    "originalPathExistsAndSizeVerified": 724,
+    "baseline": "references/material-archive-20261110/protected-documents-before.json"
+  },
+  "runtimePhotos": {
+    "method": "Static runtime app/workspace/build-tool JS/MJS/CSS/HTML photo literals plus evaluated pure data/asset exports, including object keys and dynamically generated registries; test-only fixture strings excluded",
+    "totalActive": 830,
+    "referencedExisting": 808,
+    "missingReferences": [],
+    "remainingUnreferenced": 22,
+    "remainingUnreferencedPaths": [
+      "apps/site/photos/campus-rear-side/clip-001-008s.jpg",
+      "apps/site/photos/campus-rear-side/clip-001-032s.jpg",
+      "apps/site/photos/campus-rear-side/clip-001-048s.jpg",
+      "apps/site/photos/campus-rear-side/clip-001-088s.jpg",
+      "apps/site/photos/campus-rear-side/clip-001-128s.jpg",
+      "apps/site/photos/campus-rear-side/clip-001-152s.jpg",
+      "apps/site/photos/campus-rear-side/clip-001-184s.jpg",
+      "apps/site/photos/campus-rear-side/clip-001-328s.jpg",
+      "apps/site/photos/campus-rear-side/clip-001-336s.jpg",
+      "apps/site/photos/campus-rear-side/clip-001-392s.jpg",
+      "apps/site/photos/campus-rear-side/clip-001-416s.jpg",
+      "apps/site/photos/campus-rear-side/clip-001-448s.jpg",
+      "apps/site/photos/campus-rear-side/clip-002-016s.jpg",
+      "apps/site/photos/campus-rear-side/clip-002-072s.jpg",
+      "apps/site/photos/campus-rear-side/clip-002-080s.jpg",
+      "apps/site/photos/campus-rear-side/clip-002-088s.jpg",
+      "apps/site/photos/campus-rear-side/clip-002-104s.jpg",
+      "apps/site/photos/campus-rear-side/clip-002-112s.jpg",
+      "apps/site/photos/campus-rear-side/clip-002-136s.jpg",
+      "apps/site/photos/campus-rear-side/clip-003-004s.jpg",
+      "apps/site/photos/campus-rear-side/clip-003-006s.jpg",
+      "apps/site/photos/campus-rear-side/clip-003-018s.jpg"
+    ],
+    "protectedNewCampusPhotos": 34,
+    "expectedUnusedRemoved": 283,
+    "confirmedUnusedChecked": 283,
+    "confirmedUnusedAbsent": 283,
+    "confirmedUnusedArchived": 283,
+    "importedModules": [
+      "data",
+      "building-data",
+      "campus-data",
+      "chiller-data",
+      "dryer-building-data",
+      "dryer-upper-data",
+      "dryer-upper-reference",
+      "facility-data",
+      "furnace-drawing-data",
+      "liquid-data",
+      "liquid-assets",
+      "outdoor-card-data",
+      "outdoor-data",
+      "outdoor-drawing-data",
+      "packaging-data",
+      "packaging-transport-data",
+      "team2-card-data"
+    ],
+    "importErrors": [],
+    "referenceOwners": {
+      "apps/site/photos/campus-entrance.png": [
+        "apps/site/campus-data.js"
+      ],
+      "apps/site/photos/yusan-site-plan.png": [
+        "apps/site/campus-data.js"
+      ],
+      "apps/site/photos/yusan-site-plan-2019.png": [
+        "apps/site/campus-data.js"
+      ],
+      "apps/site/photos/yusan-entrance-plan-2019.png": [
+        "apps/site/campus-data.js"
+      ],
+      "apps/site/photos/yusan-tower-section.png": [
+        "apps/site/campus-data.js",
+        "apps/site/dryer-building-data.js",
+        "apps/site/building-data.js",
+        "apps/site/facility-data.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150434-000.jpg": [
+        "apps/site/campus-data.js",
+        "apps/site/outdoor-survey.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor-video/20261109_133757-004s.jpg": [
+        "apps/site/campus-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/heechang-official-logo.svg": [
+        "apps/site/campus-models.js",
+        "tooling/export-site.mjs"
+      ],
+      "apps/site/photos/chiller-20261110/hitachi-cutaway.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/hitachi-dimensions.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/20261028_161425.jpg": [
+        "apps/site/data.js",
+        "apps/site/building-data.js"
+      ],
+      "apps/site/photos/20261028_161551.jpg": [
+        "apps/site/data.js",
+        "apps/site/building-data.js"
+      ],
+      "apps/site/photos/20261028_161554.jpg": [
+        "apps/site/data.js",
+        "apps/site/building-data.js"
+      ],
+      "apps/site/photos/20261028_161600.jpg": [
+        "apps/site/data.js",
+        "apps/site/building-data.js"
+      ],
+      "apps/site/photos/20261028_161403.jpg": [
+        "apps/site/data.js",
+        "apps/site/building-data.js"
+      ],
+      "apps/site/photos/20261028_161356.jpg": [
+        "apps/site/data.js",
+        "apps/site/building-data.js"
+      ],
+      "apps/site/photos/20261028_161443.jpg": [
+        "apps/site/data.js",
+        "apps/site/building-data.js"
+      ],
+      "apps/site/photos/20261028_161411.jpg": [
+        "apps/site/data.js",
+        "apps/site/building-data.js"
+      ],
+      "apps/site/photos/furnace/overview.jpg": [
+        "apps/site/data.js",
+        "apps/site/furnace-detail.js",
+        "apps/site/building-data.js"
+      ],
+      "apps/site/photos/furnace/duct.jpg": [
+        "apps/site/data.js",
+        "apps/site/furnace-detail.js",
+        "apps/site/building-data.js"
+      ],
+      "apps/site/photos/furnace/body.jpg": [
+        "apps/site/data.js",
+        "apps/site/furnace-detail.js",
+        "apps/site/building-data.js"
+      ],
+      "apps/site/photos/furnace/blowers.jpg": [
+        "apps/site/data.js",
+        "apps/site/furnace-detail.js",
+        "apps/site/building-data.js"
+      ],
+      "apps/site/photos/furnace/gas.jpg": [
+        "apps/site/data.js",
+        "apps/site/furnace-detail.js",
+        "apps/site/building-data.js"
+      ],
+      "apps/site/photos/furnace/ignition.jpg": [
+        "apps/site/data.js",
+        "apps/site/furnace-detail.js",
+        "apps/site/building-data.js"
+      ],
+      "apps/site/photos/furnace/control.jpg": [
+        "apps/site/data.js",
+        "apps/site/furnace-detail.js",
+        "apps/site/building-data.js"
+      ],
+      "apps/site/photos/20261028_161503.jpg": [
+        "apps/site/data.js",
+        "apps/site/building-data.js"
+      ],
+      "apps/site/photos/20261028_161456.jpg": [
+        "apps/site/data.js",
+        "apps/site/building-data.js"
+      ],
+      "apps/site/photos/20261028_161507.jpg": [
+        "apps/site/data.js",
+        "apps/site/building-data.js"
+      ],
+      "apps/site/photos/20261028_161513.jpg": [
+        "apps/site/data.js",
+        "apps/site/building-data.js"
+      ],
+      "apps/site/photos/20261028_161352.jpg": [
+        "apps/site/data.js",
+        "apps/site/building-data.js"
+      ],
+      "apps/site/photos/dryer-roof-7f/frame-012s.jpg": [
+        "apps/site/dryer-upper-reference.js",
+        "apps/site/building-data.js",
+        "apps/site/dryer-upper-data.js"
+      ],
+      "apps/site/photos/dryer-roof-7f/frame-024s.jpg": [
+        "apps/site/dryer-upper-reference.js",
+        "apps/site/building-data.js",
+        "apps/site/dryer-upper-data.js"
+      ],
+      "apps/site/photos/dryer-roof-7f/frame-030s.jpg": [
+        "apps/site/dryer-upper-reference.js",
+        "apps/site/building-data.js",
+        "apps/site/dryer-upper-data.js"
+      ],
+      "apps/site/photos/dryer-roof-7f/frame-075s.jpg": [
+        "apps/site/dryer-upper-reference.js",
+        "apps/site/building-data.js",
+        "apps/site/dryer-upper-data.js"
+      ],
+      "apps/site/photos/dryer-roof-7f/frame-084s.jpg": [
+        "apps/site/dryer-upper-reference.js",
+        "apps/site/building-data.js",
+        "apps/site/dryer-upper-data.js"
+      ],
+      "apps/site/photos/dryer-roof-7f/frame-123s.jpg": [
+        "apps/site/dryer-upper-reference.js",
+        "apps/site/building-data.js",
+        "apps/site/dryer-upper-data.js"
+      ],
+      "apps/site/photos/dryer-roof-7f/frame-141s.jpg": [
+        "apps/site/dryer-upper-reference.js"
+      ],
+      "apps/site/photos/dryer-roof-7f/frame-201s.jpg": [
+        "apps/site/dryer-upper-reference.js"
+      ],
+      "apps/site/photos/dryer-roof-7f/frame-356s.jpg": [
+        "apps/site/dryer-upper-reference.js",
+        "apps/site/building-data.js",
+        "apps/site/dryer-upper-data.js"
+      ],
+      "apps/site/photos/dryer-roof-7f/frame-400s.jpg": [
+        "apps/site/dryer-upper-reference.js",
+        "apps/site/building-data.js",
+        "apps/site/dryer-upper-data.js"
+      ],
+      "apps/site/photos/dryer-roof-7f/frame-414s.jpg": [
+        "apps/site/dryer-upper-reference.js",
+        "apps/site/building-data.js",
+        "apps/site/dryer-upper-data.js"
+      ],
+      "apps/site/photos/dryer-roof-7f/frame-444s.jpg": [
+        "apps/site/dryer-upper-reference.js",
+        "apps/site/building-data.js",
+        "apps/site/dryer-upper-data.js"
+      ],
+      "apps/site/photos/dryer-building-plan-2f.png": [
+        "apps/site/facility-data.js",
+        "apps/site/building-data.js"
+      ],
+      "apps/site/photos/furnace/regulator.jpg": [
+        "apps/site/furnace-detail.js"
+      ],
+      "apps/site/photos/furnace/vmr.jpg": [
+        "apps/site/furnace-detail.js"
+      ],
+      "apps/site/photos/furnace/modutrol.jpg": [
+        "apps/site/furnace-detail.js"
+      ],
+      "apps/site/photos/furnace/switchhigh.jpg": [
+        "apps/site/furnace-detail.js"
+      ],
+      "apps/site/photos/furnace/switchlow.jpg": [
+        "apps/site/furnace-detail.js"
+      ],
+      "apps/site/photos/furnace/sight.jpg": [
+        "apps/site/furnace-detail.js"
+      ],
+      "apps/site/photos/furnace/manifold.jpg": [
+        "apps/site/furnace-detail.js"
+      ],
+      "apps/site/photos/furnace/valve.jpg": [
+        "apps/site/furnace-detail.js"
+      ],
+      "apps/site/photos/furnace/pilot.jpg": [
+        "apps/site/furnace-detail.js"
+      ],
+      "apps/site/photos/furnace/sheetburner.jpg": [
+        "apps/site/furnace-detail.js"
+      ],
+      "apps/site/photos/furnace/sheetpiping.jpg": [
+        "apps/site/furnace-detail.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-072.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-072-front.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-072-left.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-072-right.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-072-rear.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-073.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-073-front.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-073-left.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-073-right.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-073-rear.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-074.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-074-front.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-074-left.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-074-right.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-074-rear.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-075.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-075-front.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-075-left.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-075-right.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-075-rear.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-076.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-076-front.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-076-left.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-076-right.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-076-rear.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-084.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-084-front.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-084-left.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-084-right.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-084-rear.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-085.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-085-front.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-085-left.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-085-right.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-085-rear.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-086.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-086-front.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-086-left.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-086-right.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-086-rear.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-087.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-087-front.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-087-left.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-087-right.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-087-rear.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-088.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-088-front.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-088-left.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-088-right.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-088-rear.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-089.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-089-front.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-089-left.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-089-right.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-089-rear.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-090.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-090-front.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-090-left.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-090-right.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-090-rear.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-091.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-091-front.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-091-left.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-091-right.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-091-rear.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-092.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-092-front.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-092-left.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-092-right.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/team3-outdoor-cards/card-092-rear.jpg": [
+        "apps/site/outdoor-card-data.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-027.jpg": [
+        "apps/site/outdoor-data.js",
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-025.jpg": [
+        "apps/site/outdoor-data.js",
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-048.jpg": [
+        "apps/site/outdoor-data.js",
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150438-001.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150440-002.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150444-003.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150454-004.jpg": [
+        "apps/site/outdoor-survey.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150455-005.jpg": [
+        "apps/site/outdoor-survey.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150457-006.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150459-007.jpg": [
+        "apps/site/outdoor-survey.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150500-008.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150502-009.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150503-010.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150508-011.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150509-012.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150511-013.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150512-014.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150514-015.jpg": [
+        "apps/site/outdoor-survey.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150515-016.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150521-017.jpg": [
+        "apps/site/outdoor-survey.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150523-018.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150524-019.jpg": [
+        "apps/site/outdoor-survey.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150528-020.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150529-021.jpg": [
+        "apps/site/outdoor-survey.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150530-022.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150533-023.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150534-024.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150535-025.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150536-026.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150540-027.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150542-028.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150546-029.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150550-030.jpg": [
+        "apps/site/outdoor-survey.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150551-031.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150552-032.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150553-033.jpg": [
+        "apps/site/outdoor-survey.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150554-034.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150556-035.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150558-036.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150602-037.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150603-038.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150604-039.jpg": [
+        "apps/site/outdoor-survey.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150605-040.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150606-041.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150607-042.jpg": [
+        "apps/site/outdoor-survey.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150608-043.jpg": [
+        "apps/site/outdoor-survey.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150609-044.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150614-045.jpg": [
+        "apps/site/outdoor-survey.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150615-046.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150616-047.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150616-048.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150617-049.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150618-050.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150619-051.jpg": [
+        "apps/site/outdoor-survey.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150620-052.jpg": [
+        "apps/site/outdoor-survey.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150621-053.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150622-054.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150623-055.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150627-056.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150628-057.jpg": [
+        "apps/site/outdoor-survey.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150629-058.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150630-059.jpg": [
+        "apps/site/outdoor-survey.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150634-060.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150635-061.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150635-062.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150636-063.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150637-064.jpg": [
+        "apps/site/outdoor-survey.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150638-065.jpg": [
+        "apps/site/outdoor-survey.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150639-066.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150639-067.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150640-068.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150641-069.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150642-070.jpg": [
+        "apps/site/outdoor-survey.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150643-071.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150644-072.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150645-073.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150648-074.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150649-075.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150650-076.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150651-077.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150655-078.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150656-079.jpg": [
+        "apps/site/outdoor-survey.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150656-080.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150657-081.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150658-082.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150659-083.jpg": [
+        "apps/site/outdoor-survey.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150700-084.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150704-085.jpg": [
+        "apps/site/outdoor-survey.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150705-086.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150706-087.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150707-088.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150708-089.jpg": [
+        "apps/site/outdoor-survey.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150710-090.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150711-091.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150714-092.jpg": [
+        "apps/site/outdoor-survey.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150715-093.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150716-094.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150717-095.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150719-096.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150720-097.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150725-098.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150726-099.jpg": [
+        "apps/site/outdoor-survey.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150727-100.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150729-101.jpg": [
+        "apps/site/outdoor-survey.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150730-102.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150731-103.jpg": [
+        "apps/site/outdoor-survey.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150732-104.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150733-105.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150734-106.jpg": [
+        "apps/site/outdoor-survey.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150735-107.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150739-108.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150740-109.jpg": [
+        "apps/site/outdoor-survey.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150740-110.jpg": [
+        "apps/site/outdoor-survey.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150741-111.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150742-112.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150743-113.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150745-114.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150748-115.jpg": [
+        "apps/site/outdoor-survey.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150748-116.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150749-117.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150750-118.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150751-119.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150752-120.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150752-121.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150754-122.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150755-123.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150756-124.jpg": [
+        "apps/site/outdoor-survey.js",
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150756-125.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150757-126.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/outdoor/20261030_150758-127.jpg": [
+        "apps/site/outdoor-survey.js"
+      ],
+      "apps/site/photos/packaging-3f/third-floor-plan.png": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/third-floor-measured-plan.png": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/floor-1-workplace-2025.png": [
+        "apps/site/packaging-transport-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/floor-2-workplace-2025.png": [
+        "apps/site/packaging-transport-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-001.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-001-front.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-001-left.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-001-right.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-001-rear.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-002.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-002-front.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-002-left.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-002-right.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-002-rear.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-003.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-003-front.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-003-left.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-003-right.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-003-rear.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-004.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-004-front.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-004-left.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-004-right.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-004-rear.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-005.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-005-front.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-005-left.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-005-right.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-005-rear.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-006.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-006-front.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-006-left.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-006-right.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-006-rear.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-007.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-007-front.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-007-left.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-007-right.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-007-rear.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-008.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-008-front.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-008-left.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-008-right.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-008-rear.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-009.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-009-front.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-009-left.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-009-right.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-009-rear.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-010.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-010-front.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-010-left.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-010-right.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-010-rear.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-011.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-011-front.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-011-left.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-011-right.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-011-rear.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-012.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-012-front.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-012-left.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-012-right.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-012-rear.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-013.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-013-front.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-013-left.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-013-right.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-013-rear.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-014.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-014-front.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-014-left.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-014-right.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-014-rear.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-015.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-015-front.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-015-left.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-015-right.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-015-rear.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-016.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-016-front.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-016-left.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-016-right.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-016-rear.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-017.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-017-front.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-017-left.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-017-right.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-017-rear.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-018.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-018-front.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-018-left.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-018-right.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-018-rear.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-019.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-019-front.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-019-left.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-019-right.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-019-rear.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-020.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-020-front.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-020-left.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-020-right.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-020-rear.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-021.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-021-front.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-021-left.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-021-right.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-021-rear.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-022.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-022-front.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-022-left.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-022-right.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-022-rear.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-023.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-023-front.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-023-left.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-023-right.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-023-rear.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-024.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-024-front.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-024-left.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-024-right.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-024-rear.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-025.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-025-front.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-025-left.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-025-right.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-025-rear.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-026.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-026-front.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-026-left.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-026-right.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-026-rear.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-027.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-027-front.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-027-left.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-027-right.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-027-rear.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-028.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-028-front.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-028-left.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-028-right.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-028-rear.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-029.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-029-front.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-029-left.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-029-right.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-029-rear.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-030.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-030-front.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-030-left.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-030-right.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-030-rear.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-031.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-031-front.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-031-left.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-031-right.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-031-rear.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-032.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-032-front.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-032-left.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-032-right.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-032-rear.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-033.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-033-front.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-033-left.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-033-right.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-033-rear.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-034.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-034-front.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-034-left.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-034-right.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-034-rear.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-035.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-035-front.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-035-left.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-035-right.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-035-rear.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-036.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-036-front.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-036-left.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-036-right.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-036-rear.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-037.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-037-front.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-037-left.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-037-right.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-037-rear.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-038.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-038-front.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-038-left.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-038-right.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-038-rear.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-039.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-039-front.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-039-left.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-039-right.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-039-rear.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-040.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-040-front.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-040-left.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-040-right.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-040-rear.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-041.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-041-front.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-041-left.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-041-right.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/team2-cards/card-041-rear.jpg": [
+        "apps/site/team2-card-data.js",
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/dryer-roof-7f/frame-174s.jpg": [
+        "apps/site/building-data.js",
+        "apps/site/dryer-upper-data.js",
+        "apps/site/facility-data.js"
+      ],
+      "apps/site/photos/dryer-roof-7f/frame-180s.jpg": [
+        "apps/site/building-data.js",
+        "apps/site/dryer-upper-data.js"
+      ],
+      "apps/site/photos/dryer-roof-7f/frame-330s.jpg": [
+        "apps/site/building-data.js",
+        "apps/site/dryer-upper-data.js"
+      ],
+      "apps/site/photos/dryer-roof-7f/frame-432s.jpg": [
+        "apps/site/building-data.js",
+        "apps/site/dryer-upper-data.js",
+        "apps/site/facility-data.js"
+      ],
+      "apps/site/photos/dryer-roof-7f/frame-186s.jpg": [
+        "apps/site/building-data.js",
+        "apps/site/dryer-upper-data.js"
+      ],
+      "apps/site/photos/dryer-roof-7f/frame-198s.jpg": [
+        "apps/site/building-data.js",
+        "apps/site/dryer-upper-data.js"
+      ],
+      "apps/site/photos/dryer-roof-7f/frame-204s.jpg": [
+        "apps/site/building-data.js",
+        "apps/site/dryer-upper-data.js"
+      ],
+      "apps/site/photos/dryer-roof-7f/frame-393s.jpg": [
+        "apps/site/building-data.js",
+        "apps/site/dryer-upper-data.js"
+      ],
+      "apps/site/photos/dryer-roof-7f/frame-300s.jpg": [
+        "apps/site/building-data.js",
+        "apps/site/dryer-upper-data.js"
+      ],
+      "apps/site/photos/dryer-roof-7f/frame-354s.jpg": [
+        "apps/site/building-data.js",
+        "apps/site/dryer-upper-data.js"
+      ],
+      "apps/site/photos/dryer-roof-7f/frame-192s.jpg": [
+        "apps/site/building-data.js",
+        "apps/site/dryer-upper-data.js"
+      ],
+      "apps/site/photos/dryer-roof-7f/frame-219s.jpg": [
+        "apps/site/building-data.js",
+        "apps/site/dryer-upper-data.js"
+      ],
+      "apps/site/photos/dryer-roof-7f/frame-213s.jpg": [
+        "apps/site/building-data.js",
+        "apps/site/dryer-upper-data.js"
+      ],
+      "apps/site/photos/dryer-roof-7f/frame-216s.jpg": [
+        "apps/site/building-data.js",
+        "apps/site/dryer-upper-data.js"
+      ],
+      "apps/site/photos/dryer-roof-7f/frame-264s.jpg": [
+        "apps/site/building-data.js",
+        "apps/site/dryer-upper-data.js"
+      ],
+      "apps/site/photos/dryer-roof-7f/frame-276s.jpg": [
+        "apps/site/building-data.js",
+        "apps/site/dryer-upper-data.js"
+      ],
+      "apps/site/photos/dryer-roof-7f/frame-408s.jpg": [
+        "apps/site/building-data.js",
+        "apps/site/dryer-upper-data.js"
+      ],
+      "apps/site/photos/dryer-roof-7f/frame-420s.jpg": [
+        "apps/site/building-data.js",
+        "apps/site/dryer-upper-data.js"
+      ],
+      "apps/site/photos/dryer-roof-7f/frame-006s.jpg": [
+        "apps/site/building-data.js",
+        "apps/site/dryer-upper-data.js",
+        "apps/site/facility-data.js"
+      ],
+      "apps/site/photos/dryer-roof-7f/frame-018s.jpg": [
+        "apps/site/building-data.js",
+        "apps/site/dryer-upper-data.js"
+      ],
+      "apps/site/photos/dryer-roof-7f/frame-033s.jpg": [
+        "apps/site/building-data.js",
+        "apps/site/dryer-upper-data.js"
+      ],
+      "apps/site/photos/dryer-roof-7f/frame-036s.jpg": [
+        "apps/site/building-data.js",
+        "apps/site/dryer-upper-data.js"
+      ],
+      "apps/site/photos/dryer-roof-7f/frame-045s.jpg": [
+        "apps/site/building-data.js",
+        "apps/site/dryer-upper-data.js"
+      ],
+      "apps/site/photos/dryer-roof-7f/frame-048s.jpg": [
+        "apps/site/building-data.js",
+        "apps/site/dryer-upper-data.js"
+      ],
+      "apps/site/photos/dryer-roof-7f/frame-069s.jpg": [
+        "apps/site/building-data.js",
+        "apps/site/dryer-upper-data.js"
+      ],
+      "apps/site/photos/dryer-roof-7f/frame-087s.jpg": [
+        "apps/site/building-data.js",
+        "apps/site/dryer-upper-data.js"
+      ],
+      "apps/site/photos/dryer-roof-7f/frame-102s.jpg": [
+        "apps/site/building-data.js",
+        "apps/site/dryer-upper-data.js"
+      ],
+      "apps/site/photos/dryer-roof-7f/frame-105s.jpg": [
+        "apps/site/building-data.js",
+        "apps/site/dryer-upper-data.js"
+      ],
+      "apps/site/photos/dryer-building-plan-1f.png": [
+        "apps/site/building-data.js",
+        "apps/site/facility-data.js"
+      ],
+      "apps/site/photos/dryer-building-plan-3f.png": [
+        "apps/site/building-data.js",
+        "apps/site/facility-data.js"
+      ],
+      "apps/site/photos/dryer-building-plan-4f5f.png": [
+        "apps/site/building-data.js",
+        "apps/site/facility-data.js"
+      ],
+      "apps/site/photos/company-video/frame-280s.jpg": [
+        "apps/site/campus-data.js"
+      ],
+      "apps/site/photos/company-video/frame-278s.jpg": [
+        "apps/site/campus-data.js"
+      ],
+      "apps/site/photos/company-video/frame-052s.jpg": [
+        "apps/site/campus-data.js"
+      ],
+      "apps/site/photos/company-video/frame-146s.jpg": [
+        "apps/site/campus-data.js"
+      ],
+      "apps/site/photos/company-video/frame-186s.jpg": [
+        "apps/site/campus-data.js"
+      ],
+      "apps/site/photos/company-video/frame-276s.jpg": [
+        "apps/site/campus-data.js"
+      ],
+      "apps/site/photos/campus-rear-side/clip-001-016s.jpg": [
+        "apps/site/campus-data.js"
+      ],
+      "apps/site/photos/campus-rear-side/clip-001-056s.jpg": [
+        "apps/site/campus-data.js"
+      ],
+      "apps/site/photos/campus-rear-side/clip-001-118s.jpg": [
+        "apps/site/campus-data.js"
+      ],
+      "apps/site/photos/campus-rear-side/clip-001-122s.jpg": [
+        "apps/site/campus-data.js"
+      ],
+      "apps/site/photos/campus-rear-side/clip-001-144s.jpg": [
+        "apps/site/campus-data.js"
+      ],
+      "apps/site/photos/campus-rear-side/clip-001-208s.jpg": [
+        "apps/site/campus-data.js"
+      ],
+      "apps/site/photos/campus-rear-side/clip-001-264s.jpg": [
+        "apps/site/campus-data.js"
+      ],
+      "apps/site/photos/campus-rear-side/clip-001-376s.jpg": [
+        "apps/site/campus-data.js"
+      ],
+      "apps/site/photos/campus-rear-side/clip-001-432s.jpg": [
+        "apps/site/campus-data.js"
+      ],
+      "apps/site/photos/campus-rear-side/clip-002-064s.jpg": [
+        "apps/site/campus-data.js"
+      ],
+      "apps/site/photos/campus-rear-side/clip-002-144s.jpg": [
+        "apps/site/campus-data.js"
+      ],
+      "apps/site/photos/campus-rear-side/clip-003-020s.jpg": [
+        "apps/site/campus-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-001.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-002.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-003.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-004.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-005.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-006.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-007.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-008.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-009.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-010.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-011.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-012.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-013.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-014.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-015.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-016.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-017.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-018.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-019.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-020.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-021.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-022.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-023.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-024.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-026.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-028.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-029.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-030.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-031.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-032.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-033.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-034.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-035.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-036.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-037.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-038.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-039.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-040.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-041.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-042.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-043.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-044.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-045.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-046.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-047.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-049.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-050.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-051.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-052.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-053.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-054.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-055.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-056.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-057.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-058.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-059.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-060.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-061.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-062.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-063.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-064.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-065.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-066.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/photo-067.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/sheet-001.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/sheet-002.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/sheet-003.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/sheet-004.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/sheet-005.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/sheet-006.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/sheet-007.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/sheet-008.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/sheet-009.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/sheet-010.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/sheet-011.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/sheet-012.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/sheet-013.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/sheet-014.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/sheet-015.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/sheet-016.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/sheet-017.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/sheet-018.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/sheet-019.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/sheet-020.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/sheet-021.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/chiller-20261110/sheet-022.jpg": [
+        "apps/site/chiller-data.js"
+      ],
+      "apps/site/photos/team3-liquid-cards/card-042-reflow.jpg": [
+        "apps/site/liquid-assets.js"
+      ],
+      "apps/site/photos/team3-liquid-cards/card-043-reflow.jpg": [
+        "apps/site/liquid-assets.js"
+      ],
+      "apps/site/photos/team3-liquid-cards/card-044-reflow.jpg": [
+        "apps/site/liquid-assets.js"
+      ],
+      "apps/site/photos/team3-liquid-cards/card-045-reflow.jpg": [
+        "apps/site/liquid-assets.js"
+      ],
+      "apps/site/photos/team3-liquid-cards/card-046-reflow.jpg": [
+        "apps/site/liquid-assets.js"
+      ],
+      "apps/site/photos/team3-liquid-cards/card-047-reflow.jpg": [
+        "apps/site/liquid-assets.js"
+      ],
+      "apps/site/photos/team3-liquid-cards/card-048-reflow.jpg": [
+        "apps/site/liquid-assets.js"
+      ],
+      "apps/site/photos/team3-liquid-cards/card-049-reflow.jpg": [
+        "apps/site/liquid-assets.js"
+      ],
+      "apps/site/photos/team3-liquid-cards/card-050-reflow.jpg": [
+        "apps/site/liquid-assets.js"
+      ],
+      "apps/site/photos/team3-liquid-cards/card-051-reflow.jpg": [
+        "apps/site/liquid-assets.js"
+      ],
+      "apps/site/photos/team3-liquid-cards/card-052-reflow.jpg": [
+        "apps/site/liquid-assets.js"
+      ],
+      "apps/site/photos/team3-liquid-cards/card-053-reflow.jpg": [
+        "apps/site/liquid-assets.js"
+      ],
+      "apps/site/photos/team3-liquid-cards/card-054-reflow.jpg": [
+        "apps/site/liquid-assets.js"
+      ],
+      "apps/site/photos/team3-liquid-cards/card-055-reflow.jpg": [
+        "apps/site/liquid-assets.js"
+      ],
+      "apps/site/photos/team3-liquid-cards/card-056-reflow.jpg": [
+        "apps/site/liquid-assets.js"
+      ],
+      "apps/site/photos/team3-liquid-cards/card-057-reflow.jpg": [
+        "apps/site/liquid-assets.js"
+      ],
+      "apps/site/photos/team3-liquid-cards/card-058-reflow.jpg": [
+        "apps/site/liquid-assets.js"
+      ],
+      "apps/site/photos/team3-liquid-cards/card-059-reflow.jpg": [
+        "apps/site/liquid-assets.js"
+      ],
+      "apps/site/photos/team3-liquid-cards/card-060-reflow.jpg": [
+        "apps/site/liquid-assets.js"
+      ],
+      "apps/site/photos/team3-liquid-cards/card-061-reflow.jpg": [
+        "apps/site/liquid-assets.js"
+      ],
+      "apps/site/photos/team3-liquid-cards/card-062-reflow.jpg": [
+        "apps/site/liquid-assets.js"
+      ],
+      "apps/site/photos/team3-liquid-cards/card-063-reflow.jpg": [
+        "apps/site/liquid-assets.js"
+      ],
+      "apps/site/photos/team3-liquid-cards/card-064-reflow.jpg": [
+        "apps/site/liquid-assets.js"
+      ],
+      "apps/site/photos/team3-liquid-cards/card-065-reflow.jpg": [
+        "apps/site/liquid-assets.js"
+      ],
+      "apps/site/photos/team3-liquid-cards/card-066-reflow.jpg": [
+        "apps/site/liquid-assets.js"
+      ],
+      "apps/site/photos/team3-liquid-cards/card-067-reflow.jpg": [
+        "apps/site/liquid-assets.js"
+      ],
+      "apps/site/photos/team3-liquid-cards/card-068-reflow.jpg": [
+        "apps/site/liquid-assets.js"
+      ],
+      "apps/site/photos/team3-liquid-cards/card-069-reflow.jpg": [
+        "apps/site/liquid-assets.js"
+      ],
+      "apps/site/photos/team3-liquid-cards/card-070-reflow.jpg": [
+        "apps/site/liquid-assets.js"
+      ],
+      "apps/site/photos/team3-liquid-cards/card-071-reflow.jpg": [
+        "apps/site/liquid-assets.js"
+      ],
+      "apps/site/photos/team3-liquid-cards/card-077-reflow.jpg": [
+        "apps/site/liquid-assets.js"
+      ],
+      "apps/site/photos/team3-liquid-cards/card-078-reflow.jpg": [
+        "apps/site/liquid-assets.js"
+      ],
+      "apps/site/photos/team3-liquid-cards/card-079-reflow.jpg": [
+        "apps/site/liquid-assets.js"
+      ],
+      "apps/site/photos/team3-liquid-cards/card-080-reflow.jpg": [
+        "apps/site/liquid-assets.js"
+      ],
+      "apps/site/photos/team3-liquid-cards/card-081-reflow.jpg": [
+        "apps/site/liquid-assets.js"
+      ],
+      "apps/site/photos/team3-liquid-cards/card-082-reflow.jpg": [
+        "apps/site/liquid-assets.js"
+      ],
+      "apps/site/photos/team3-liquid-cards/card-083-reflow.jpg": [
+        "apps/site/liquid-assets.js"
+      ],
+      "apps/site/photos/team3-liquid-cards/card-093-reflow.jpg": [
+        "apps/site/liquid-assets.js"
+      ],
+      "apps/site/photos/team3-liquid-cards/card-094-reflow.jpg": [
+        "apps/site/liquid-assets.js"
+      ],
+      "apps/site/photos/team3-liquid-cards/card-095-reflow.jpg": [
+        "apps/site/liquid-assets.js"
+      ],
+      "apps/site/photos/team3-liquid-cards/card-096-reflow.jpg": [
+        "apps/site/liquid-assets.js"
+      ],
+      "apps/site/photos/team3-liquid-cards/card-097-reflow.jpg": [
+        "apps/site/liquid-assets.js"
+      ],
+      "apps/site/photos/team3-liquid-cards/card-098-reflow.jpg": [
+        "apps/site/liquid-assets.js"
+      ],
+      "apps/site/photos/team3-liquid-cards/card-099-reflow.jpg": [
+        "apps/site/liquid-assets.js"
+      ],
+      "apps/site/photos/team3-liquid-cards/card-100-reflow.jpg": [
+        "apps/site/liquid-assets.js"
+      ],
+      "apps/site/photos/team3-liquid-cards/card-101-reflow.jpg": [
+        "apps/site/liquid-assets.js"
+      ],
+      "apps/site/photos/team3-liquid-cards/card-102-reflow.jpg": [
+        "apps/site/liquid-assets.js"
+      ],
+      "apps/site/photos/team3-liquid-cards/card-103-reflow.jpg": [
+        "apps/site/liquid-assets.js"
+      ],
+      "apps/site/photos/team3-liquid-cards/card-104-reflow.jpg": [
+        "apps/site/liquid-assets.js"
+      ],
+      "apps/site/photos/team3-liquid-cards/card-105-reflow.jpg": [
+        "apps/site/liquid-assets.js"
+      ],
+      "apps/site/photos/team3-liquid-cards/card-106-reflow.jpg": [
+        "apps/site/liquid-assets.js"
+      ],
+      "apps/site/photos/team3-liquid-cards/card-107-reflow.jpg": [
+        "apps/site/liquid-assets.js"
+      ],
+      "apps/site/photos/outdoor-drawings/2022-outdoor-row.png": [
+        "apps/site/outdoor-data.js",
+        "apps/site/outdoor-drawing-data.js"
+      ],
+      "apps/site/photos/outdoor-drawings/2022-equipment-plan.png": [
+        "apps/site/outdoor-data.js",
+        "apps/site/outdoor-drawing-data.js"
+      ],
+      "apps/site/photos/outdoor-drawings/2022-utility-plan.png": [
+        "apps/site/outdoor-data.js",
+        "apps/site/outdoor-drawing-data.js"
+      ],
+      "apps/site/photos/outdoor-video/20261102_130415-008s.jpg": [
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor-video/20261102_130440-051s.jpg": [
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor-video/20261102_130440-058s.jpg": [
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor-video/20261102_130440-063s.jpg": [
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor-video/20261102_130440-072s.jpg": [
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor-video/20261102_130440-098s.jpg": [
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor-video/20261102_130440-105s.jpg": [
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor-video/20261102_130440-113s.jpg": [
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor-video/20261102_130440-128s.jpg": [
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor-video/20261102_130440-042s.jpg": [
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor-video/20261102_130440-055s.jpg": [
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor-video/20261102_130440-087s.jpg": [
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor-video/20261102_130440-125s.jpg": [
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor-video/20261109_133757-000s.jpg": [
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor-video/20261109_133757-012s.jpg": [
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor-video/20261109_133757-018s.jpg": [
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor-video/20261109_133757-028s.jpg": [
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor-video/20261109_133757-042s.jpg": [
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor-video/20261109_133757-060s.jpg": [
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor-video/20261109_133757-084s.jpg": [
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor-video/20261109_133757-114s.jpg": [
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor-video/20261109_133757-120s.jpg": [
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor-video/20261109_133757-132s.jpg": [
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor-video/20261109_133757-156s.jpg": [
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor-video/20261109_133757-192s.jpg": [
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor-video/20261109_133757-216s.jpg": [
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor-video/20261109_133757-222s.jpg": [
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor-video/20261109_133757-234s.jpg": [
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor-video/20261109_133757-246s.jpg": [
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor-video/20261109_133757-252s.jpg": [
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor-video/20261109_133757-258s.jpg": [
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor-video/20261109_133757-264s.jpg": [
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor-video/20261109_133757-270s.jpg": [
+        "apps/site/outdoor-data.js"
+      ],
+      "apps/site/photos/outdoor-drawings/2022-collector-detail.png": [
+        "apps/site/outdoor-data.js",
+        "apps/site/outdoor-drawing-data.js"
+      ],
+      "apps/site/photos/outdoor-drawings/2025-installation-plan.png": [
+        "apps/site/outdoor-data.js",
+        "apps/site/outdoor-drawing-data.js"
+      ],
+      "apps/site/photos/outdoor-drawings/haccp-air-plan.png": [
+        "apps/site/outdoor-data.js",
+        "apps/site/outdoor-drawing-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-0017s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-0114s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-0156s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-0167s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-0169s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-0174s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-0175s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-0200s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-0230s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-0250s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-0270s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-0285s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-0300s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-0310s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-0315s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-0320s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-0330s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-0342s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-0350s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-0370s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-0377s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-0390s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-0400s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-0420s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-0450s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-0465s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-0480s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-0490s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-0500s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-0520s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-0540s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-0543s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-0555s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-0557s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-0561s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-0565s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-0585s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-0615s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-0620s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-0650s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-0690s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-0730s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-0745s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-0750s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-0760s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-0790s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-0794s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-0810s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-0817s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-0830s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-0850s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-0880s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-0900s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-0930s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-0950s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-0990s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-0995s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-1012s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-1018s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-1020s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-1035s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-1050s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-1060s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/frame-1095s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/floor-1-architecture.png": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/floor-2-architecture.png": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/stick-packer-reference-plan.png": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/stick-packer-reference-elevations.png": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/floor-2-workers-route-20231018.png": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/floor-2-materials-route-20231018.png": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/floor-2-auger-proposal.png": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/floor-3-workplace-2025.png": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/redesign-0174s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/redesign-0194s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/redesign-0221s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/redesign-0228s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/redesign-0247s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/redesign-0278s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/redesign-0300s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/redesign-0330s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/redesign-0342s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/redesign-0353s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/redesign-0363s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/redesign-0379s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/redesign-0391s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/redesign-0393s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/redesign-0463s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/redesign-0478s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/redesign-0481s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/redesign-0506s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/redesign-0540s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/redesign-0544s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/redesign-0557s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/redesign-0561s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/redesign-0605s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/redesign-0614s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/redesign-0643s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/redesign-0660s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/redesign-0669s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/redesign-0674s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/redesign-0702s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/redesign-0732s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/redesign-0746s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/redesign-0760s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/redesign-0805s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/redesign-0829s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/redesign-0850s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/redesign-0905s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/redesign-0909s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/redesign-0916s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/redesign-0918s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/redesign-0948s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/redesign-0957s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/redesign-0958s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/redesign-0962s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/redesign-0995s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/redesign-1019s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/redesign-1057s.jpg": [
+        "apps/site/packaging-data.js"
+      ],
+      "apps/site/photos/packaging-3f/redesign-1059s.jpg": [
+        "apps/site/packaging-data.js"
+      ]
+    },
+    "captionCorrection": "Unused 216s photoCaptions key removed by root; non-web feature source time remains as historical review evidence. No additional images created or originals altered."
+  },
+  "failures": []
+}

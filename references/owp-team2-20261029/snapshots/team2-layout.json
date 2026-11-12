@@ -1,0 +1,25 @@
+{
+  "sourceFile": "video1.js",
+  "scene": "2팀 전체",
+  "snapshot_at": "2026-10-29T14:15:24.138097+09:00",
+  "layout": [
+    {
+      "element": "div",
+      "className": "Light",
+      "style": {
+        "position": "absolute",
+        "top": 0,
+        "left": 0,
+        "zoom": "100%"
+      }
+    },
+    {
+      "element": "div",
+      "className": "_C101000_table"
+    },
+    {
+      "element": "div",
+      "className": "_C101000_table_show"
+    }
+  ]
+}

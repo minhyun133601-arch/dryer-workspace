@@ -1,0 +1,74 @@
+{
+  "id": "3-3-1780970943317-952490",
+  "line": "",
+  "name": "보일러 3호기",
+  "note": "",
+  "plan": "",
+  "rate": 0,
+  "room": "보일러실",
+  "team": "3팀",
+  "group": "",
+  "owner": "",
+  "status": "비가동중",
+  "process": "",
+  "documents": [],
+  "lastCheck": "",
+  "modelName": "",
+  "nextCheck": "",
+  "photoCrop": null,
+  "photoName": "보일러 3호기 photo.jpg",
+  "detailInfo": [
+    {
+      "label": "설비명",
+      "value": "보일러 3호기"
+    },
+    {
+      "label": "관리팀",
+      "value": "3팀"
+    },
+    {
+      "label": "가동률",
+      "value": "0%"
+    }
+  ],
+  "ownerLabel": "담당 업체",
+  "production": "",
+  "teamDataKey": "work_team_calendar_team3",
+  "detailGroups": {
+    "equipmentSpecs": []
+  },
+  "manufacturer": "",
+  "photoDataUrl": "",
+  "equipmentCode": "3-3-1780970943317-952490",
+  "operationInfo": [
+    {
+      "label": "설비명",
+      "value": "보일러 3호기"
+    },
+    {
+      "label": "관리팀",
+      "value": "3팀"
+    },
+    {
+      "label": "실",
+      "value": "보일러실"
+    },
+    {
+      "label": "공정",
+      "value": ""
+    },
+    {
+      "label": "가동률",
+      "value": "0"
+    }
+  ],
+  "manufacturedAt": "",
+  "photoDocumentId": "c2448fd5-de65-48fd-a7a9-88aee98f784e",
+  "photoPreviewUrl": "/api/files/c2448fd5-de65-48fd-a7a9-88aee98f784e/view",
+  "photoDownloadUrl": "/api/files/c2448fd5-de65-48fd-a7a9-88aee98f784e/download",
+  "manufacturerLabel": "제조사",
+  "photoThumbDataUrl": "",
+  "maintenanceHistory": [],
+  "photoAttachmentKey": "equipment-photo-main",
+  "photoStorageRelPath": "equipment-assets/equipment-history/보일러 3호기/images/a4e6f13d-4d50-4e86-bbf0-29aa7225d1c3.jpg"
+}

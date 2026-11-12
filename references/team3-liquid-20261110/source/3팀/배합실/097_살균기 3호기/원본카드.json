@@ -1,0 +1,74 @@
+{
+  "id": "3-3-1781856888910-164968",
+  "line": "",
+  "name": "살균기 3호기",
+  "note": "",
+  "plan": "",
+  "rate": 0,
+  "room": "배합실",
+  "team": "3팀",
+  "group": "",
+  "owner": "",
+  "status": "비가동중",
+  "process": "",
+  "documents": [],
+  "lastCheck": "",
+  "modelName": "",
+  "nextCheck": "",
+  "photoCrop": null,
+  "photoName": "살균기 3호기 photo.jpg",
+  "detailInfo": [
+    {
+      "label": "설비명",
+      "value": "살균기 3호기"
+    },
+    {
+      "label": "관리팀",
+      "value": "3팀"
+    },
+    {
+      "label": "가동률",
+      "value": "0%"
+    }
+  ],
+  "ownerLabel": "담당 업체",
+  "production": "",
+  "teamDataKey": "work_team_calendar_team3",
+  "detailGroups": {
+    "equipmentSpecs": []
+  },
+  "manufacturer": "",
+  "photoDataUrl": "",
+  "equipmentCode": "3-3-1781856888910-164968",
+  "operationInfo": [
+    {
+      "label": "설비명",
+      "value": "살균기 3호기"
+    },
+    {
+      "label": "관리팀",
+      "value": "3팀"
+    },
+    {
+      "label": "실",
+      "value": "배합실"
+    },
+    {
+      "label": "공정",
+      "value": ""
+    },
+    {
+      "label": "가동률",
+      "value": "0"
+    }
+  ],
+  "manufacturedAt": "",
+  "photoDocumentId": "5619d4db-b68b-449a-bed1-5ac1a775e66a",
+  "photoPreviewUrl": "/api/files/5619d4db-b68b-449a-bed1-5ac1a775e66a/view",
+  "photoDownloadUrl": "/api/files/5619d4db-b68b-449a-bed1-5ac1a775e66a/download",
+  "manufacturerLabel": "제조사",
+  "photoThumbDataUrl": "",
+  "maintenanceHistory": [],
+  "photoAttachmentKey": "equipment-photo-main",
+  "photoStorageRelPath": "equipment-assets/equipment-history/살균기 3호기/images/99621671-27e4-4ab3-918a-34e659decc64.jpg"
+}

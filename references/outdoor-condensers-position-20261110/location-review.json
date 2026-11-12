@@ -1,0 +1,267 @@
+{
+  "reviewedAtUtc": "2026-11-10T03:24:53.252124+00:00",
+  "scope": "read-only relocation evidence audit; no source/model/data edits",
+  "target": "outdoor-condensers · 노출 코일/상부 팬 2개",
+  "currentPlacementUnderReview": {
+    "condensers": {
+      "along": 36.75,
+      "across": 0.5
+    },
+    "petAhu": {
+      "along": 37,
+      "across": -1.5
+    }
+  },
+  "finding": "현재 위치는 코일 뱅크를 PET/파우치 AHU의 긴 원형창 정면 앞에 나란히 놓는다. 직접 사진·원영상은 AHU의 집진설비 쪽 짧은 끝면 앞에 코일 뱅크가 이어지는 관계를 보여준다.",
+  "directEvidence": [
+    {
+      "source": "apps/site/photos/team3-outdoor-cards/card-085-left.jpg",
+      "observed": "카메라는 공장 외벽을 왼쪽, 블록 담장을 오른쪽에 두고 PET AHU의 짧은 끝면을 바라본다. 끝면의 검정 밸브·녹물 자국과 큰 상부 덕트가 보이고, 카메라 가까운 전경에 녹슨 원형 팬 두 개가 좌우로 나란히 걸린다.",
+      "supports": "코일 뱅크가 긴 정면 앞 across 방향이 아니라 짧은 끝면의 along 앞쪽에 인접. 두 팬의 배열 축은 외벽에서 담장으로 향하는 across 방향."
+    },
+    {
+      "source": "apps/site/photos/outdoor-video/20261102_130440-058s.jpg",
+      "observed": "청회색 코일 핀과 녹슨 수평 보호선의 사각 응축기 뒤로 PET AHU의 평평한 짧은 끝면이 보인다.",
+      "supports": "085 LEFT의 코일·끝면 조합과 동일성."
+    },
+    {
+      "source": "apps/site/photos/outdoor-video/20261102_130440-063s.jpg",
+      "observed": "같은 녹슨 팬 가드 두 개와 회색 외함, 뒤쪽 공장 창·배선이 보인다.",
+      "supports": "상부 팬 2개 관찰 그룹의 동일성. 독립 실물 장비 대수나 용량은 추가 확정하지 않음."
+    },
+    {
+      "source": "tmp/outdoor-condensers-location-20261110/20261109_133757-004s-native.jpg",
+      "sourceVideoSeconds": 4,
+      "observed": "코일의 녹슨 상부 팬·청회색 수직 코일이 왼쪽 전경에 있고, PET/파우치 공조기의 짧은 끝면 바로 옆으로 이어진다. 공조기의 원형창이 있는 긴 정면은 화면 깊이 방향으로 계속된다. 공장 외벽은 왼쪽, 블록 담장과 통행 띠는 오른쪽이다. 따라서 코일을 AHU 긴 정면 앞(across+)에 나란히 두는 현재 관계와 다르다.",
+      "supports": "085 LEFT와 11/02 캡처의 같은 회색 코일 뱅크·검정 밸브/녹물 끝면·원형창 AHU가 한 프레임에 이어져 직접 위치 관계를 재확인."
+    }
+  ],
+  "coverage": {
+    "oct30Photos": {
+      "directory": "apps/site/photos/outdoor",
+      "count": 128,
+      "method": "파일 시간/번호 역순의 연락표 8장을 전체 확인하고 집진기·맨홀·장비열 관련 사진과 GPS 원기록을 대조",
+      "contactSheets": [
+        "tmp/outdoor-condensers-location-20261110/reverse-001-016.jpg",
+        "tmp/outdoor-condensers-location-20261110/reverse-017-032.jpg",
+        "tmp/outdoor-condensers-location-20261110/reverse-033-048.jpg",
+        "tmp/outdoor-condensers-location-20261110/reverse-049-064.jpg",
+        "tmp/outdoor-condensers-location-20261110/reverse-065-080.jpg",
+        "tmp/outdoor-condensers-location-20261110/reverse-081-096.jpg",
+        "tmp/outdoor-condensers-location-20261110/reverse-097-112.jpg",
+        "tmp/outdoor-condensers-location-20261110/reverse-113-128.jpg"
+      ],
+      "result": "촬영 범위가 황색 사다리 집진설비 주변에서 끝나며 PET AHU/이 코일 뱅크를 직접 특정하는 장면은 확인되지 않음. 카메라 GPS를 장비 좌표로 바꾸지 않음.",
+      "resolutionBoundary": "보존된 앱용 128장과 파일명/GPS 메타를 확인했다. 고해상도 원본은 기존 2026-11-02 정리 기록상 별도 보존되지 않음."
+    },
+    "nov2Captures": {
+      "count": 13,
+      "contactSheet": "tmp/outdoor-condensers-location-20261110/nov2-reverse-contact.jpg",
+      "method": "대표 캡처를 시간 역순 확인. 58·63·72·87초는 개별 원해상도 확인. 원래 13:04:40 MP4는 기존 정리 기록상 휴지통 처리되어 현 프로젝트에는 없음."
+    },
+    "cards": {
+      "numbers": [
+        84,
+        85
+      ],
+      "viewsReviewed": "각 4방향, 총 8장 개별 확인",
+      "photoManifestRecords": [
+        {
+          "cardId": "3-1782110272096-950362",
+          "number": 84,
+          "name": "치어팩 스틱실 공조기",
+          "room": "실외기실",
+          "photo": "./photos/team3-outdoor-cards/card-084.jpg",
+          "sourcePhoto": "references/team3-outdoor-cards-20261110/source/3팀/실외기실/084_치어팩 스틱실 공조기/설비사진_치어팩 스틱실 공조기.jpg",
+          "sourceJson": "references/team3-outdoor-cards-20261110/source/3팀/실외기실/084_치어팩 스틱실 공조기/원본카드.json",
+          "size": [
+            1600,
+            500
+          ],
+          "sourceSha256": "7b72ef55252ba5d370919cf131b4b5125f575361e8303ab39b1092e5fea2a55b",
+          "assetSha256": "7b72ef55252ba5d370919cf131b4b5125f575361e8303ab39b1092e5fea2a55b",
+          "views": [
+            "./photos/team3-outdoor-cards/card-084-front.jpg",
+            "./photos/team3-outdoor-cards/card-084-left.jpg",
+            "./photos/team3-outdoor-cards/card-084-right.jpg",
+            "./photos/team3-outdoor-cards/card-084-rear.jpg"
+          ],
+          "viewFiles": [
+            {
+              "side": "front",
+              "path": "apps/site/photos/team3-outdoor-cards/card-084-front.jpg",
+              "bytes": 44294,
+              "sha256": "8d3090f4215dc68a38745f1ffee5b74d5bca5fb42928409c3ffac87c52dbc583",
+              "cropBox": [
+                0,
+                0,
+                400,
+                500
+              ]
+            },
+            {
+              "side": "left",
+              "path": "apps/site/photos/team3-outdoor-cards/card-084-left.jpg",
+              "bytes": 37566,
+              "sha256": "56a8415a8c05c61444feac6e1cf4b578b17c622b2bedc185d4ebdae9a5c5f377",
+              "cropBox": [
+                400,
+                0,
+                800,
+                500
+              ]
+            },
+            {
+              "side": "right",
+              "path": "apps/site/photos/team3-outdoor-cards/card-084-right.jpg",
+              "bytes": 39561,
+              "sha256": "36fc3327ca94e6e9c888a5f47808abcabb68deab7cfc09b759d819937e68cfda",
+              "cropBox": [
+                800,
+                0,
+                1200,
+                500
+              ]
+            },
+            {
+              "side": "rear",
+              "path": "apps/site/photos/team3-outdoor-cards/card-084-rear.jpg",
+              "bytes": 36010,
+              "sha256": "5d55482af99f6052aa3e16ef99c9c51c867c528a03591fe1c33d1e5fc85cdb9a",
+              "cropBox": [
+                1200,
+                0,
+                1600,
+                500
+              ]
+            }
+          ],
+          "cropPolicy": "원본의 4개 동일 폭 패널을 정면·좌측면·우측면·후면 순서로 분리. 원본 합성사진은 바이트 그대로 보존."
+        },
+        {
+          "cardId": "3-pet-1782110231083-672874",
+          "number": 85,
+          "name": "PET 파우치 공조기",
+          "room": "실외기실",
+          "photo": "./photos/team3-outdoor-cards/card-085.jpg",
+          "sourcePhoto": "references/team3-outdoor-cards-20261110/source/3팀/실외기실/085_PET 파우치 공조기/설비사진_PET 파우치 공조기.jpg",
+          "sourceJson": "references/team3-outdoor-cards-20261110/source/3팀/실외기실/085_PET 파우치 공조기/원본카드.json",
+          "size": [
+            1600,
+            500
+          ],
+          "sourceSha256": "a769a475c1948c23c79d1bb6a01a4aaee60d185e57c2b3b7e98fcbf9366d948c",
+          "assetSha256": "a769a475c1948c23c79d1bb6a01a4aaee60d185e57c2b3b7e98fcbf9366d948c",
+          "views": [
+            "./photos/team3-outdoor-cards/card-085-front.jpg",
+            "./photos/team3-outdoor-cards/card-085-left.jpg",
+            "./photos/team3-outdoor-cards/card-085-right.jpg",
+            "./photos/team3-outdoor-cards/card-085-rear.jpg"
+          ],
+          "viewFiles": [
+            {
+              "side": "front",
+              "path": "apps/site/photos/team3-outdoor-cards/card-085-front.jpg",
+              "bytes": 46947,
+              "sha256": "579b4a676bf380f467f88c310496e02d5ca4d5627d70a51a0d4e025270ffb844",
+              "cropBox": [
+                0,
+                0,
+                400,
+                500
+              ]
+            },
+            {
+              "side": "left",
+              "path": "apps/site/photos/team3-outdoor-cards/card-085-left.jpg",
+              "bytes": 60438,
+              "sha256": "64417bb87a2c6928156081103ec41daabfced7978fc4c3a283bf93336045a2b5",
+              "cropBox": [
+                400,
+                0,
+                800,
+                500
+              ]
+            },
+            {
+              "side": "right",
+              "path": "apps/site/photos/team3-outdoor-cards/card-085-right.jpg",
+              "bytes": 50242,
+              "sha256": "31672953ba1f13ed130d0e87cb19b2daf635caf4415b57b5344a5ac0e7b2cfac",
+              "cropBox": [
+                800,
+                0,
+                1200,
+                500
+              ]
+            },
+            {
+              "side": "rear",
+              "path": "apps/site/photos/team3-outdoor-cards/card-085-rear.jpg",
+              "bytes": 46065,
+              "sha256": "1d121ec81a2adac9a439e17cce0c04a8d71f32e54dd72efbf6f6a7fa2d95ee82",
+              "cropBox": [
+                1200,
+                0,
+                1600,
+                500
+              ]
+            }
+          ],
+          "cropPolicy": "원본의 4개 동일 폭 패널을 정면·좌측면·우측면·후면 순서로 분리. 원본 합성사진은 바이트 그대로 보존."
+        }
+      ]
+    },
+    "nov9Video": {
+      "source": {
+        "sourceVideo": "C:\\Users\\user\\Desktop\\프로젝트\\20261109_133757KST_GPS-VALID_LAT35.3619717_LON129.0312383_H24.7-TN_DIR-AVAILABLE_P-23.9_ACC2.4m_FV-32ca5218-af17-4d68-a395-de3573150cd8.mp4",
+        "sourceVideoRelativePath": "20261109_133757KST_GPS-VALID_LAT35.3619717_LON129.0312383_H24.7-TN_DIR-AVAILABLE_P-23.9_ACC2.4m_FV-32ca5218-af17-4d68-a395-de3573150cd8.mp4",
+        "sourceVideoBytes": 409712904,
+        "sourceVideoSha256": "662ae134b74db7d3f1c6438387f34eeb1dda5556ed08e2737242bfd1c59ae519",
+        "exactVideoSeconds": 4,
+        "frame": "tmp/outdoor-condensers-location-20261110/20261109_133757-004s-native.jpg",
+        "frameSha256": "cbc90a10e576b1e4c1609f302abd2124ced8fd522ede59d06d2be50b70483577",
+        "method": "ffmpeg accurate seek to 4s, one JPEG at native auto-rotated resolution; no source modification",
+        "observedView": "코일의 녹슨 상부 팬·청회색 수직 코일이 왼쪽 전경에 있고, PET/파우치 공조기의 짧은 끝면 바로 옆으로 이어진다. 공조기의 원형창이 있는 긴 정면은 화면 깊이 방향으로 계속된다. 공장 외벽은 왼쪽, 블록 담장과 통행 띠는 오른쪽이다. 따라서 코일을 AHU 긴 정면 앞(across+)에 나란히 두는 현재 관계와 다르다."
+      },
+      "targetedSeconds": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16
+      ],
+      "contactSheet": "tmp/outdoor-condensers-location-20261110/nov9-entry-contact.jpg"
+    },
+    "drawingBoundary": "2022/2025 액상 도면의 기존 AHU 이설(PET+액상) 인접 팬 기호는 보조 단서다. 명시적 CDU 번호와 현재 노출 코일의 동일성이 확정되지 않아 사진 위치를 우선한다."
+  },
+  "relativePlacementRecommendation": {
+    "highConfidenceRelations": [
+      "집진설비 쪽 → 낮은 코일 뱅크 → PET AHU의 짧은 끝면 → AHU 긴 원형창 정면이 진행 방향으로 이어진다.",
+      "코일과 AHU는 같은 설비 기초 띠에 있고 코일을 통로 중앙의 별도 섬으로 두지 않는다.",
+      "팬 두 개의 배열 축은 AHU 길이축에 직각인 across 방향으로 둔다."
+    ],
+    "modelCandidateFromRoot": {
+      "condensers": {
+        "along": 35,
+        "across": -1.3,
+        "rotationYDegrees": 125,
+        "rotationPolicy": "기존 yaw 35°에 90° 추가"
+      },
+      "petAhu": {
+        "along": 37.75,
+        "across": -1.5
+      },
+      "dustCollection": {
+        "along": 33.2,
+        "policy": "현 위치 유지; 실제 형상 경계 검사는 technical agent 담당"
+      }
+    },
+    "numericScope": "후보 숫자는 사진의 짧은 끝면 인접 관계와 통로 여유를 표현하기 위한 모델 조정값이며, 실측 좌표·간격·장비 모서리 GPS가 아니다. 최종 선택은 실제 메시 경계와 벽/통로 충돌 확인 후 결정한다.",
+    "independentReview": "prompt_audit도 카드085 LEFT/영상55·58·63초와 도면의 비확정 팬 기호를 독립 대조해 같은 상대 위치·팬 배열 축 해석에 동의했다."
+  }
+}

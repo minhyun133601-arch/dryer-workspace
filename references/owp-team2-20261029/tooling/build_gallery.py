@@ -1,0 +1,40 @@
+"""Build a fully local, double-clickable media index."""
+from pathlib import Path
+import json
+
+ROOT = Path(__file__).resolve().parent.parent
+manifest = json.loads((ROOT / 'manifest.json').read_text(encoding='utf-8'))
+data = json.dumps(manifest['scenes'], ensure_ascii=False)
+snapshot = json.loads((ROOT / 'data/monitoring-snapshot.json').read_text(encoding='utf-8'))
+saved_at = snapshot['saved_at'][:19].replace('T', ' ')
+
+html = '''<!doctype html>
+<html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OWP 건조기 2팀 참고 자료</title><link rel="icon" href="data:,">
+<style>
+*{box-sizing:border-box}body{margin:0;background:#10161f;color:#e9f0f8;font:16px/1.6 'Malgun Gothic',sans-serif}main{max-width:1500px;margin:auto;padding:36px 28px 60px}h1{font-size:30px;margin:0 0 8px}p{margin:0 0 16px;color:#b4c2d1}a{color:#8bc6ff;text-underline-offset:4px}button{font:inherit;cursor:pointer;border:1px solid #3c4c60;border-radius:8px;background:#1a2534;color:#e5edf7;padding:10px 20px}button[aria-pressed=true]{background:#2763ac;border-color:#83baff;color:white}nav{display:flex;gap:10px;flex-wrap:wrap;margin:24px 0 20px}.viewer{background:#182331;border:1px solid #34465b;border-radius:12px;overflow:hidden}.viewerhead{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:15px 20px;flex-wrap:wrap}.viewerhead strong{font-size:21px}.mode{display:flex;gap:7px}.mode button{font-size:14px;padding:7px 12px}img.hero,video.hero{display:block;width:100%;height:auto;background:white}.links{display:flex;gap:20px;flex-wrap:wrap;padding:16px 20px;font-size:14px}.note{font-size:14px;background:#1b2a3a;border-left:3px solid #5e9de2;padding:14px 18px;margin:18px 0 28px;color:#c1cfdf}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:18px 0 32px}.card{border:1px solid #34465b;border-radius:10px;overflow:hidden;background:#17212e}.card img{width:100%;display:block}.card div{padding:15px 18px}.card b{display:block;font-size:18px;margin-bottom:8px}.card a{font-size:14px;margin-right:14px}.resources{display:flex;gap:12px;flex-wrap:wrap}.resources a{padding:10px 14px;border:1px solid #34465b;border-radius:8px;text-decoration:none}h2{font-size:22px;margin:30px 0 12px}footer{font-size:13px;color:#91a3b7;margin-top:32px}.sub{font-size:14px;color:#95abc3}@media(max-width:850px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}main{padding:22px 14px}.mode{flex-wrap:wrap}.viewerhead{align-items:flex-start}}@media(max-width:540px){.grid{grid-template-columns:1fr}h1{font-size:24px}}
+</style>
+<main>
+<h1>OWP 건조기 · 2팀 참고 자료</h1>
+<p>2팀 전체 / 1층 / 3층 / 4층 / 5~7층 · 2026-10-29 보관</p>
+<div class="sub">원본 애니메이션 5개 · 1920×1080 PNG 35장 · 화면 소스와 배치 메모</div>
+<nav aria-label="층 선택" id="floors"></nav>
+<section class="viewer">
+<div class="viewerhead"><strong id="scene-title"></strong><div class="mode"><button id="still-mode" aria-pressed="true">원본 이미지</button><button id="video-mode" aria-pressed="false">원본 애니메이션</button></div></div>
+<img class="hero" id="still" alt="원본 영상 6초 프레임"><video class="hero" id="video" controls playsinline muted hidden style="display:none"></video>
+<div class="links"><a id="png-link">PNG 원본 열기</a><a id="video-link">WebM 원본 열기</a><a id="sequence-link">전환 과정 6컷</a><a id="overlay-link">표시값 배치 참고</a></div>
+</section>
+<div class="note">이미지는 OWP 원본 영상의 6초 프레임입니다. ‘표시값 배치 참고’는 원본 React/CSS와 저장 시점의 데이터를 이용한 오프라인 출력입니다. 크롬의 로그인된 화면을 직접 캡처한 자료와 구분해 보세요. 이 폴더는 설비를 제어하거나 서버 값을 변경하지 않습니다.</div>
+<h2>층별 파일</h2><div class="grid" id="cards"></div>
+<h2>재현 자료</h2><div class="resources"><a href="화면구성_재현메모.md">화면 구성·센서·좌표 메모</a><a href="README.md">자료 안내</a><a href="images/all-scenes.jpg">다섯 화면 모아보기</a><a href="data/monitoring-snapshot.csv">표시값 CSV</a><a href="data/monitoring-snapshot.json">표시값 JSON</a><a href="originals/source/source-manifest.json">원본 화면 소스 목록</a><a href="manifest.json">원본 파일 정보</a></div>
+<footer>원본: http://192.168.2.113/pages/C101000 · 데이터 저장 시각: __TIME__ KST<br>인터넷·OWP 서버 연결 없이 이 폴더의 자료를 볼 수 있습니다. WebM 재생은 크롬을 권장합니다.</footer>
+</main>
+<script>
+const scenes=__SCENES__;let active=0;let mode='still';const q=s=>document.querySelector(s);
+function select(index){active=index;const s=scenes[index];q('#scene-title').textContent=s.label;q('#still').src='images/'+s.id+'.png';q('#still').alt=s.label+' 원본 영상 6초 프레임';q('#video').pause();q('#video').src=s.video;q('#png-link').href='images/'+s.id+'.png';q('#video-link').href=s.video;q('#sequence-link').href='images/'+s.id+'-sequence.jpg';q('#overlay-link').href='snapshots/'+s.id+'.html';document.querySelectorAll('#floors button').forEach((b,i)=>b.setAttribute('aria-pressed',String(i===index)));showMode(mode)}
+function showMode(value){mode=value;const isVideo=value==='video';q('#still').hidden=isVideo;q('#still').style.display=isVideo?'none':'block';q('#video').hidden=!isVideo;q('#video').style.display=isVideo?'block':'none';q('#still-mode').setAttribute('aria-pressed',String(!isVideo));q('#video-mode').setAttribute('aria-pressed',String(isVideo));if(!isVideo)q('#video').pause()}
+scenes.forEach((s,i)=>{const b=document.createElement('button');b.textContent=s.label;b.onclick=()=>select(i);q('#floors').append(b);const c=document.createElement('article');c.className='card';c.innerHTML='<img loading="lazy" src="images/'+s.id+'.png" alt="'+s.label+'"><div><b>'+s.label+'</b><a href="images/'+s.id+'.png">PNG</a><a href="'+s.video+'">WebM</a><a href="images/'+s.id+'-sequence.jpg">6컷</a><a href="snapshots/'+s.id+'.html">표시값 배치</a></div>';q('#cards').append(c)});
+q('#still-mode').onclick=()=>showMode('still');q('#video-mode').onclick=()=>showMode('video');select(0);
+</script></html>'''
+(ROOT / 'index.html').write_text(html.replace('__SCENES__', data).replace('__TIME__', saved_at), encoding='utf-8')
+print('index.html built')

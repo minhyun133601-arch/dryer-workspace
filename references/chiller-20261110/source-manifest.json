@@ -1,0 +1,635 @@
+{
+  "date": "2026-11-10",
+  "folder": "냉동기",
+  "fileCount": 67,
+  "totalBytes": 53105809,
+  "sourceFiles": [
+    {
+      "id": "chiller-photo-001",
+      "path": "냉동기/20261110_112412KST_GPS-VALID_LAT35.3620967_LON129.0314433_H1.0-TN_DIR-AVAILABLE_P-43.0_ACC3.1m_FC-eef45fd5-5f59-4e16-845f-f654c16f282b.jpg",
+      "bytes": 916330,
+      "sha256": "371d65d2d85a5b8399090ac21040470f9f79a9087924da5a702ab172798619fd",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-002",
+      "path": "냉동기/20261110_112417KST_GPS-VALID_LAT35.3620767_LON129.0314183_H331.7-TN_DIR-AVAILABLE_P-18.2_ACC2.6m_FC-5e045173-3e68-4238-a5eb-615c44fedaf4.jpg",
+      "bytes": 815720,
+      "sha256": "a8bb155d0c276bb4d0141263afc225537dbce0d635f2b6711efca2ad5888e2db",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-003",
+      "path": "냉동기/20261110_112419KST_GPS-VALID_LAT35.3620950_LON129.0314083_H340.0-TN_DIR-AVAILABLE_P-22.5_ACC2.6m_FC-af6a6978-9d08-466d-8462-e34c3593cb08.jpg",
+      "bytes": 793628,
+      "sha256": "9e59d2436e474a41b99338dfa5e394c5864e7394f01ee8ef315d7632ad0a432f",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-004",
+      "path": "냉동기/20261110_112419KST_GPS-VALID_LAT35.3620950_LON129.0314083_H353.5-TN_DIR-AVAILABLE_P-18.5_ACC2.6m_FC-f24b7f44-f2d3-43d0-aeb3-2d4a1f403e4d.jpg",
+      "bytes": 837548,
+      "sha256": "708b8cde3910967dd3b8d2e7e5c55c1c5028bb297af7cc4baac870e17c2e80e3",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-005",
+      "path": "냉동기/20261110_112420KST_GPS-VALID_LAT35.3620967_LON129.0314083_H325.6-TN_DIR-AVAILABLE_P-40.7_ACC2.4m_FC-74f9675d-32c1-4344-a5c2-5b53de3ae0c7.jpg",
+      "bytes": 759358,
+      "sha256": "a615f1da92fdecf4a47a574a1241b89beb42bcf2adaceded42e021f45ea303d8",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-006",
+      "path": "냉동기/20261110_112420KST_GPS-VALID_LAT35.3620967_LON129.0314083_H349.4-TN_DIR-AVAILABLE_P-37.2_ACC2.4m_FC-d9f5eef1-295d-441f-ae6e-3fd1ddda9ae7.jpg",
+      "bytes": 815587,
+      "sha256": "3058045786707337f2c76d51ab441322a23afb2f78d4b21aec61ac27f8d4863f",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-007",
+      "path": "냉동기/20261110_112421KST_GPS-VALID_LAT35.3621017_LON129.0314033_H304.3-TN_DIR-AVAILABLE_P-35.3_ACC2.4m_FC-fdcf0a9e-2c22-4691-820a-97785247f8ee.jpg",
+      "bytes": 896365,
+      "sha256": "fe6a594e2c4a595652dee8d809ee759e06949b9142dae0d4cc6222cce19c6440",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-008",
+      "path": "냉동기/20261110_112422KST_GPS-VALID_LAT35.3621017_LON129.0314033_H316.9-TN_DIR-AVAILABLE_P-26.8_ACC2.4m_FC-4f553465-4e5d-44f0-ae68-d47bc2309464.jpg",
+      "bytes": 791442,
+      "sha256": "8f6bbb816812fa805e01bf4943f3dd9c1b076eaea63abe7a554b9410aa0c8211",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-009",
+      "path": "냉동기/20261110_112423KST_GPS-VALID_LAT35.3621083_LON129.0314033_H335.4-TN_DIR-AVAILABLE_P-21.0_ACC2.1m_FC-a2e8cf8a-f36e-4ad6-be4e-c85ed373f08f.jpg",
+      "bytes": 828887,
+      "sha256": "a3654c14bd4de84644fdc2f3c7a98fbd5e2bfa1aa384b37b09f34474c4f0b591",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-010",
+      "path": "냉동기/20261110_112424KST_GPS-VALID_LAT35.3621067_LON129.0314050_H341.6-TN_DIR-AVAILABLE_P-17.4_ACC2.0m_FC-a7fdcacf-0e44-4f14-8f72-d460a647981f.jpg",
+      "bytes": 823496,
+      "sha256": "e6f1c4bb8c2b36b89b8c4f7954e34fb8a88ce1abf6d6ca8d1c262bd4a5e0c4d8",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-011",
+      "path": "냉동기/20261110_112425KST_GPS-VALID_LAT35.3621000_LON129.0314283_H341.1-TN_DIR-AVAILABLE_P-17.7_ACC1.9m_FC-2954d220-0d92-43d1-b7cf-172761fc2eef.jpg",
+      "bytes": 829944,
+      "sha256": "c568ac6502b19388ddb57eb95fd138dd7e4754e5572c42d039b5c325f7c13a02",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-012",
+      "path": "냉동기/20261110_112426KST_GPS-VALID_LAT35.3621017_LON129.0314400_H357.4-TN_DIR-AVAILABLE_P-18.3_ACC2.0m_FC-913757a2-b5d5-47ad-90fa-0ce272a5f23e.jpg",
+      "bytes": 610534,
+      "sha256": "1bda0aad462004789ae194ec3fc6fee062defda41744e9d7495592573a9b754b",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-013",
+      "path": "냉동기/20261110_112427KST_GPS-VALID_LAT35.3621050_LON129.0314350_H358.1-TN_DIR-AVAILABLE_P-34.0_ACC2.0m_FC-05748103-89dd-43ab-92e3-ec3623109534.jpg",
+      "bytes": 615750,
+      "sha256": "b5667c4691a7ed8b5a6f4b06e0272a6e2c02bb41820d6e72adf55f1fc8abb398",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-014",
+      "path": "냉동기/20261110_112430KST_GPS-VALID_LAT35.3621200_LON129.0314383_H4.8-TN_DIR-AVAILABLE_P-19.9_ACC1.8m_FC-5f9695a5-9f39-4ab2-ad0d-721524b0800f.jpg",
+      "bytes": 737293,
+      "sha256": "1699066ede5aa895f4341d6e6c6ccf4ed2c8e17c24a9bf5c073bed450a7ab967",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-015",
+      "path": "냉동기/20261110_112432KST_GPS-VALID_LAT35.3621250_LON129.0314550_H16.7-TN_DIR-AVAILABLE_P-17.2_ACC1.8m_FC-19f791e6-6b0f-4308-ad98-328a156d7228.jpg",
+      "bytes": 710539,
+      "sha256": "2d2ad53f9667f293bd12ff5c1b291e418b92f1ec31343a75de42705afb740e1c",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-016",
+      "path": "냉동기/20261110_112433KST_GPS-VALID_LAT35.3621250_LON129.0314567_H9.9-TN_DIR-AVAILABLE_P-19.0_ACC1.7m_FC-7983e89d-2795-4ae5-b873-696cf41f8684.jpg",
+      "bytes": 738157,
+      "sha256": "ddfa915c9e45f69cfddbbcbb013d472a7af8575a236bc1c46c16268ca7325148",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-017",
+      "path": "냉동기/20261110_112434KST_GPS-VALID_LAT35.3621233_LON129.0314617_H355.9-TN_DIR-AVAILABLE_P-17.3_ACC1.7m_FC-0fc2b691-ac60-46b9-ad77-819e55e4818b.jpg",
+      "bytes": 697664,
+      "sha256": "5204d0cc6125354eca79238d94560a5e2d6895257a83961a68c0168e9ae5beee",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-018",
+      "path": "냉동기/20261110_112434KST_GPS-VALID_LAT35.3621250_LON129.0314567_H4.8-TN_DIR-AVAILABLE_P-21.1_ACC1.7m_FC-c4627e99-2681-45f7-84a7-e444a7a97217.jpg",
+      "bytes": 772790,
+      "sha256": "dcec6f4127b79c4952cb5645879e7409d0d64eda5fa07bee62800aefdf478e50",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-019",
+      "path": "냉동기/20261110_112435KST_GPS-VALID_LAT35.3621250_LON129.0314683_H319.0-TN_DIR-AVAILABLE_P-22.4_ACC1.7m_FC-fcfb9869-2d2d-42be-a7e3-0cc081f1d705.jpg",
+      "bytes": 789050,
+      "sha256": "21b5a3b1b1516ca52a62372554e514a122034abad89e602eae8804fa49b52fb8",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-020",
+      "path": "냉동기/20261110_112435KST_GPS-VALID_LAT35.3621250_LON129.0314683_H336.5-TN_DIR-AVAILABLE_P-20.3_ACC1.7m_FC-9457455f-7c11-4260-8b6c-0cd1cc42b7b3.jpg",
+      "bytes": 842642,
+      "sha256": "3f53885c4bfa72c7e608e4838738c03752ed1f60eb829e78cd01b5b69e787fde",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-021",
+      "path": "냉동기/20261110_112436KST_GPS-VALID_LAT35.3621267_LON129.0314733_H348.1-TN_DIR-AVAILABLE_P-20.9_ACC1.7m_FC-ac2c7a51-8565-4e34-8af1-944a89fe28d0.jpg",
+      "bytes": 773133,
+      "sha256": "821d66e86a4aabff1a55bf921a7351e2d39f906712ce5bf0bc420990b028e48c",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-022",
+      "path": "냉동기/20261110_112436KST_GPS-VALID_LAT35.3621267_LON129.0314733_H353.4-TN_DIR-AVAILABLE_P-23.8_ACC1.7m_FC-47d80f8b-7090-43de-b434-c4b3d8d86eb6.jpg",
+      "bytes": 736708,
+      "sha256": "6561a0535ede6913ec737b5ea44ddb64e6bc30c8aad7c092e44bb1b85cd246e5",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-023",
+      "path": "냉동기/20261110_112437KST_GPS-VALID_LAT35.3621267_LON129.0314733_H331.1-TN_DIR-AVAILABLE_P-45.9_ACC1.7m_FC-df5a62e6-d469-4158-912f-976bef84f252.jpg",
+      "bytes": 773291,
+      "sha256": "dbf2adcc6f4744f65ca0b03b00c12881af73df5921e2498880f3375e4d0d87fc",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-024",
+      "path": "냉동기/20261110_112437KST_GPS-VALID_LAT35.3621267_LON129.0314733_H357.5-TN_DIR-AVAILABLE_P-37.9_ACC1.7m_FC-20b20374-e537-4e97-9891-ef341766d25c.jpg",
+      "bytes": 800910,
+      "sha256": "b765bf07aec3bacc78aa6c8223401f70eb9f487738908162f1f39b76cb126714",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-025",
+      "path": "냉동기/20261110_112438KST_GPS-VALID_LAT35.3621300_LON129.0314717_H2.1-TN_DIR-AVAILABLE_P-21.4_ACC1.7m_FC-0c2b4c22-35aa-49d7-b096-4c5bf04c59d4.jpg",
+      "bytes": 859311,
+      "sha256": "2c29b631830e8ee4d055ba73a60ba2d5bc1cf903160c70f393aef699cf855a03",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-026",
+      "path": "냉동기/20261110_112438KST_GPS-VALID_LAT35.3621300_LON129.0314717_H360.0-TN_DIR-AVAILABLE_P-19.2_ACC1.7m_FC-9fac9b45-548a-43bc-82d1-cb6615c0d2b1.jpg",
+      "bytes": 880929,
+      "sha256": "688e22d6eb2a32447574186da31a468aa18d911880fdc951013d8896f76f36da",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-027",
+      "path": "냉동기/20261110_112439KST_GPS-VALID_LAT35.3621333_LON129.0314667_H5.6-TN_DIR-AVAILABLE_P-35.6_ACC1.7m_FC-4b13c0dd-d834-48ad-ada7-44167368de43.jpg",
+      "bytes": 1009064,
+      "sha256": "93ef7b199558b2d75655b7514f82ba085a2e9ac0bd05069346506dfb34ec0b41",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-028",
+      "path": "냉동기/20261110_112440KST_GPS-VALID_LAT35.3621400_LON129.0314683_H10.6-TN_DIR-AVAILABLE_P-29.1_ACC1.6m_FC-2b66415b-cea2-45a7-80fe-a5a9eef9fd89.jpg",
+      "bytes": 988478,
+      "sha256": "4cc3f12a09fc11058ff774dddb5f5dc73e92e7bc0a3ccba68809661991434ca5",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-029",
+      "path": "냉동기/20261110_112440KST_GPS-VALID_LAT35.3621400_LON129.0314683_H339.4-TN_DIR-AVAILABLE_P-26.3_ACC1.6m_FC-d31414b5-cf93-41a1-b210-0b83521ca3a3.jpg",
+      "bytes": 770227,
+      "sha256": "5a8e10dbc6ecf2f9c24a00dd758f3274dd52e0ac2383d66000fbfef419cf2338",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-030",
+      "path": "냉동기/20261110_112441KST_GPS-VALID_LAT35.3621433_LON129.0314667_H329.5-TN_DIR-AVAILABLE_P-25.4_ACC1.6m_FC-ac7f8f38-4d0b-40cf-89ae-fcacf792a86b.jpg",
+      "bytes": 760075,
+      "sha256": "18b5b65586b30719addc26685e948a2e65a50988854d9ae5828b52148c85d322",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-031",
+      "path": "냉동기/20261110_112444KST_GPS-VALID_LAT35.3621500_LON129.0314683_H302.1-TN_DIR-AVAILABLE_P-14.8_ACC1.6m_FC-015c5129-9a82-487b-b237-42963118740a.jpg",
+      "bytes": 740043,
+      "sha256": "8176df99d2f854bef48f59d587659c1c38b158364b808a2a43297fd318fff3e6",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-032",
+      "path": "냉동기/20261110_112445KST_GPS-VALID_LAT35.3621517_LON129.0314683_H278.9-TN_DIR-AVAILABLE_P-13.0_ACC1.7m_FC-1d4db3e2-86c2-4fb2-98fa-4ce06e8ac626.jpg",
+      "bytes": 682942,
+      "sha256": "c455984b94dc63778ec6358112c0764f5d7e379e9aec397a132634428a27bb10",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-033",
+      "path": "냉동기/20261110_112445KST_GPS-VALID_LAT35.3621517_LON129.0314683_H296.1-TN_DIR-AVAILABLE_P-13.1_ACC1.7m_FC-4764db99-72ee-44e1-a935-3e6b3f590fcb.jpg",
+      "bytes": 749181,
+      "sha256": "9220da3cb7d13ef8135edadc9c847c102ffe925e3b07462470956ef404d61c32",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-034",
+      "path": "냉동기/20261110_112446KST_GPS-VALID_LAT35.3621517_LON129.0314683_H261.1-TN_DIR-AVAILABLE_P-21.9_ACC1.6m_FC-dc3ada51-a6cc-457d-90ed-35e957a02b80.jpg",
+      "bytes": 657355,
+      "sha256": "8add841c0a5998f407e135bf256a12749f71b69f79a94998138b76209fc61159",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-035",
+      "path": "냉동기/20261110_112447KST_GPS-VALID_LAT35.3621517_LON129.0314683_H248.2-TN_DIR-AVAILABLE_P-12.5_ACC1.6m_FC-4f903ac6-7180-4732-be14-264a7df1111b.jpg",
+      "bytes": 674645,
+      "sha256": "52508b449800bd75dd12cc1212b447097071c9aed552f484a38636f8e7f3c660",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-036",
+      "path": "냉동기/20261110_112448KST_GPS-VALID_LAT35.3621517_LON129.0314683_H257.5-TN_DIR-AVAILABLE_P-14.6_ACC1.5m_FC-6ea9cfef-0cde-4524-9e06-c28fc9d056b7.jpg",
+      "bytes": 675054,
+      "sha256": "21c764bce074a3e7313d34a5dc1c10600525f236ddb2c289d477ef395e9090ad",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-037",
+      "path": "냉동기/20261110_112450KST_GPS-VALID_LAT35.3621517_LON129.0314683_H264.8-TN_DIR-AVAILABLE_P-17.0_ACC1.5m_FC-f4e6249b-a2ba-438f-96d5-87ddb8ebc01c.jpg",
+      "bytes": 873058,
+      "sha256": "73bec83200c5c859f2b0bc5ce427f245b7940b1186330acb7b8223cd91d92926",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-038",
+      "path": "냉동기/20261110_112451KST_GPS-VALID_LAT35.3621517_LON129.0314683_H283.6-TN_DIR-AVAILABLE_P-20.1_ACC1.5m_FC-be69904b-a8b9-42a9-bc11-e1927f741f8e.jpg",
+      "bytes": 904582,
+      "sha256": "94e24ca17187e46bf9dc98b5525df476439bf3a6ddba05f872abfcf60d78857c",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-039",
+      "path": "냉동기/20261110_112451KST_GPS-VALID_LAT35.3621517_LON129.0314683_H305.0-TN_DIR-AVAILABLE_P-19.6_ACC1.5m_FC-b1866fac-99eb-4a54-a4f8-77337a59b1bd.jpg",
+      "bytes": 913407,
+      "sha256": "48e0d0638d8a23feaca7a4462b93f045abf5457628419e5d9c65b271942c0062",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-040",
+      "path": "냉동기/20261110_112452KST_GPS-VALID_LAT35.3621517_LON129.0314683_H321.2-TN_DIR-AVAILABLE_P-15.8_ACC1.5m_FC-d05e1bd7-c9ef-4480-9d35-da329c5f48fb.jpg",
+      "bytes": 885445,
+      "sha256": "20cce89ff88483e71f8163628ad8599fd6e807812c98c2c3b62284dee84c7171",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-041",
+      "path": "냉동기/20261110_112453KST_GPS-VALID_LAT35.3621517_LON129.0314683_H331.1-TN_DIR-AVAILABLE_P-38.5_ACC1.6m_FC-fd668008-7a59-4ecf-8f36-67177f08ed56.jpg",
+      "bytes": 936133,
+      "sha256": "d259301371b5797b50ef551e42fc50e7558feecb18602732a5f519fa06c18dd1",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-042",
+      "path": "냉동기/20261110_112453KST_GPS-VALID_LAT35.3621517_LON129.0314683_H355.3-TN_DIR-AVAILABLE_P-34.2_ACC1.6m_FC-01754b55-4e42-4dd0-af95-2d083cd6c8db.jpg",
+      "bytes": 873739,
+      "sha256": "17355b34f705d1e1a24c7fec7adeeaa4fc543ffa35e66c65e4d38389a45b2a2a",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-043",
+      "path": "냉동기/20261110_112454KST_GPS-VALID_LAT35.3621517_LON129.0314683_H333.9-TN_DIR-AVAILABLE_P-10.8_ACC1.6m_FC-ecf84203-6e04-480f-8890-73cd5b39ce6a.jpg",
+      "bytes": 967964,
+      "sha256": "ea08b69d014653a6ac845bf254be4f42ef6ee1e32cdf4d93a0b2a5663be1dd2a",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-044",
+      "path": "냉동기/20261110_112455KST_GPS-VALID_LAT35.3621517_LON129.0314683_H318.9-TN_DIR-AVAILABLE_P-17.6_ACC1.6m_FC-dde8fbb5-589d-42d1-abc9-80f67e943ab5.jpg",
+      "bytes": 994875,
+      "sha256": "69914ba04ddebd8cde7734cb1142ca9ece541f9e74177092418a2a6257cfe096",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-045",
+      "path": "냉동기/20261110_112505KST_GPS-VALID_LAT35.3621400_LON129.0313933_H129.0-TN_DIR-AVAILABLE_P-19.4_ACC1.5m_FC-ae190017-8eb9-4a82-9106-e77a04f8753c.jpg",
+      "bytes": 728040,
+      "sha256": "6cd1ddfb6d4e7d7ac1a822a66456feea4e4a6a812baf94e309ec0dfb29a418b2",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-046",
+      "path": "냉동기/20261110_112506KST_GPS-VALID_LAT35.3621400_LON129.0313933_H115.9-TN_DIR-AVAILABLE_P-21.9_ACC1.6m_FC-4db03e3c-204b-4e4f-8fd8-771a1433ae94.jpg",
+      "bytes": 796763,
+      "sha256": "16ed9f0771f06eee13d390adce47e058d44990b4123d697af8399a6f015a7264",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-047",
+      "path": "냉동기/20261110_112507KST_GPS-VALID_LAT35.3621400_LON129.0313933_H109.5-TN_DIR-AVAILABLE_P-26.7_ACC1.6m_FC-2e86dcf4-8b39-48a9-ab16-2a8d73fe256a.jpg",
+      "bytes": 730959,
+      "sha256": "800ea58724182ab3103257546fab1c7da76245757a27685af99817d996b6c4e6",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-048",
+      "path": "냉동기/20261110_112509KST_GPS-VALID_LAT35.3621400_LON129.0313933_H132.6-TN_DIR-AVAILABLE_P-27.0_ACC1.7m_FC-28dc6746-b992-41c4-b211-bf548f192945.jpg",
+      "bytes": 709625,
+      "sha256": "0478aa2c7bd83164ae7cb6430ced13cb41889c032cef508021af0b04b1580269",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-049",
+      "path": "냉동기/20261110_112510KST_GPS-VALID_LAT35.3621400_LON129.0313933_H104.5-TN_DIR-AVAILABLE_P-17.8_ACC1.7m_FC-77b848fd-02d8-469d-8f5a-0789f51105e6.jpg",
+      "bytes": 809188,
+      "sha256": "a4265c936da3d454d1f6e0311376da54746b8d388e92959fbb359d84bbb24043",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-050",
+      "path": "냉동기/20261110_112510KST_GPS-VALID_LAT35.3621400_LON129.0313933_H95.8-TN_DIR-AVAILABLE_P-20.4_ACC1.7m_FC-8568e44a-c5fa-4dcd-80b6-130849119c3f.jpg",
+      "bytes": 687968,
+      "sha256": "90bfc0c8922226bd853c05355dcb0eff07b6e1cb1197d68cbe33975e4827b8fc",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-051",
+      "path": "냉동기/20261110_112511KST_GPS-VALID_LAT35.3621400_LON129.0313933_H71.5-TN_DIR-AVAILABLE_P-30.0_ACC1.8m_FC-16cf1190-6160-4e2b-a084-c8496a57c845.jpg",
+      "bytes": 714164,
+      "sha256": "564f22ff800af72ed5b6d20f616f02e015577cc7fb04d0825339a6cfa78bf4ae",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-052",
+      "path": "냉동기/20261110_112511KST_GPS-VALID_LAT35.3621400_LON129.0313933_H73.3-TN_DIR-AVAILABLE_P-26.6_ACC1.8m_FC-5e5443c1-dddf-434b-a379-b7ff721935b7.jpg",
+      "bytes": 715960,
+      "sha256": "80aa0b998649ef5724636558f07dd8ef4b69f349b061c2de19b470faf8b586ef",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-053",
+      "path": "냉동기/20261110_112512KST_GPS-VALID_LAT35.3621400_LON129.0313933_H88.4-TN_DIR-AVAILABLE_P-23.1_ACC1.7m_FC-e577110d-7308-4fd5-86b9-5eda37c9af4f.jpg",
+      "bytes": 680663,
+      "sha256": "3483ba048ad5cb4b0427fa97ff6ad96b590912b566d484358f7b98c8399fc32e",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-054",
+      "path": "냉동기/20261110_112513KST_GPS-VALID_LAT35.3621400_LON129.0313933_H121.9-TN_DIR-AVAILABLE_P-26.4_ACC1.7m_FC-be8bbacb-039b-4335-ba4e-3dbd7ffbcc54.jpg",
+      "bytes": 714161,
+      "sha256": "351aa029726a8203e66d49881f219ac0e1d9354ca91aac8611b5b897f7dcd539",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-055",
+      "path": "냉동기/20261110_112513KST_GPS-VALID_LAT35.3621400_LON129.0313933_H200.7-TN_DIR-AVAILABLE_P-32.7_ACC1.7m_FC-a4b58a77-1e98-49f1-a5ea-ba2fb174f3fc.jpg",
+      "bytes": 703462,
+      "sha256": "7888e71971cef2aedec8df996f74b0c7b893c1384ad98468412f88074b7cbd08",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-056",
+      "path": "냉동기/20261110_112514KST_GPS-VALID_LAT35.3621400_LON129.0313933_H214.1-TN_DIR-AVAILABLE_P-15.2_ACC1.7m_FC-443d4370-c61f-46a7-9bc3-229cab2b0c4f.jpg",
+      "bytes": 870191,
+      "sha256": "ee24517fbe955b6440d0857f0ba4c5989c1b811600296c6889c633de2ba8cb30",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-057",
+      "path": "냉동기/20261110_112514KST_GPS-VALID_LAT35.3621400_LON129.0313933_H224.4-TN_DIR-AVAILABLE_P-33.2_ACC1.7m_FC-8b9063eb-a7bf-43fd-bfa7-5dea38a1497e.jpg",
+      "bytes": 699498,
+      "sha256": "e3833100d5f5947aa03d947e2cfb50916cd153ca423f32ce3851cda96f3879b3",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-058",
+      "path": "냉동기/20261110_112515KST_GPS-VALID_LAT35.3621350_LON129.0314317_H111.5-TN_DIR-AVAILABLE_P-44.9_ACC1.7m_FC-fb503220-6dbb-4462-87fe-f2787ce86322.jpg",
+      "bytes": 795655,
+      "sha256": "e390bc9e371f054b598a37592eb52bb630cd570e7d077f3b43b121b20ca2c92b",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-059",
+      "path": "냉동기/20261110_112515KST_GPS-VALID_LAT35.3621350_LON129.0314317_H230.8-TN_DIR-AVAILABLE_P-37.2_ACC1.7m_FC-97aa7555-ccac-4982-a5e9-840a3d963a67.jpg",
+      "bytes": 673668,
+      "sha256": "dd9c0b06f8a93bd64d41756799fb14ffcbf72edef49ab4dea4de8d2e38bd67d9",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-060",
+      "path": "냉동기/20261110_112516KST_GPS-VALID_LAT35.3621350_LON129.0314350_H94.2-TN_DIR-AVAILABLE_P-33.6_ACC1.8m_FC-18d06eef-12ed-44ed-a97c-f2e735a94f18.jpg",
+      "bytes": 912648,
+      "sha256": "3c65ca6c9dadb94898e4e6aa5bb7826ae0dafb354485abdbd46a9774a2860fc1",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-061",
+      "path": "냉동기/20261110_112516KST_GPS-VALID_LAT35.3621350_LON129.0314350_H95.7-TN_DIR-AVAILABLE_P-42.5_ACC1.8m_FC-467b0234-c648-4996-a22a-880ad260628d.jpg",
+      "bytes": 778512,
+      "sha256": "7682e2ede8c2c5d06fcc512fee84778253380c396bc9c25f4c6e1535c5725d5b",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-062",
+      "path": "냉동기/20261110_112517KST_GPS-VALID_LAT35.3621333_LON129.0314350_H111.1-TN_DIR-AVAILABLE_P-28.5_ACC1.8m_FC-6c8e77b7-acb1-4df7-ae6a-e094f3a7528e.jpg",
+      "bytes": 927784,
+      "sha256": "be47aba05c48d04b5a6b4bb965cc79968ea4e4839ed418ee865161e76258f251",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-063",
+      "path": "냉동기/20261110_112518KST_GPS-VALID_LAT35.3621350_LON129.0314350_H131.5-TN_DIR-AVAILABLE_P-24.4_ACC1.8m_FC-15e6784e-e031-4d55-9d0c-3b934c3dfbc1.jpg",
+      "bytes": 690621,
+      "sha256": "8713c1618e42f758b53541b10f261a2b379b35114aec9ac9be58a028401f67be",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-064",
+      "path": "냉동기/20261110_112518KST_GPS-VALID_LAT35.3621350_LON129.0314350_H146.1-TN_DIR-AVAILABLE_P-12.3_ACC1.8m_FC-5f0696b2-109d-4f72-b1ac-bfadea190849.jpg",
+      "bytes": 738673,
+      "sha256": "7e4f6d7307832cf76a1f9369890b8faf5bb5d1ed4b8b9950404c929985366546",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-065",
+      "path": "냉동기/20261110_112521KST_GPS-VALID_LAT35.3621350_LON129.0314350_H186.7-TN_DIR-AVAILABLE_P-19.0_ACC1.7m_FC-39d2d7a7-a7c5-448c-8cb5-b299a6fce8f9.jpg",
+      "bytes": 847691,
+      "sha256": "096132d18fda713258ead40fc2434aefc125225bca8be40cd6c3a1e5b724ec9c",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-066",
+      "path": "냉동기/20261110_112529KST_GPS-VALID_LAT35.3621350_LON129.0314350_H96.7-TN_DIR-AVAILABLE_P-33.3_ACC1.8m_FC-0a9f3077-3366-42b8-b3b9-f53172359337.jpg",
+      "bytes": 840790,
+      "sha256": "338bdebfd824d6f8c28d95b1195890cf16a93edf9986e60d1772080c9b2ce4ef",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "chiller-photo-067",
+      "path": "냉동기/20261110_112531KST_GPS-VALID_LAT35.3621100_LON129.0314317_H95.5-TN_DIR-AVAILABLE_P-18.3_ACC1.8m_FC-bfb07692-6598-46c8-96e8-ffbcc84b5de2.jpg",
+      "bytes": 835852,
+      "sha256": "7d6ae01e967becc67aa15d879360dad78894db8a41d0bf596211cd682b9e9477",
+      "width": 1920,
+      "height": 1080
+    }
+  ],
+  "notes": [
+    "원본은 수정하지 않음.",
+    "폴더에는 JPG 67장만 있으며 제조사 구조도/PDF/CAD 파일은 없음.",
+    "GPS·촬영 방위는 카메라 위치/방향이며 설비의 측량 좌표가 아님."
+  ],
+  "relatedSources": [
+    {
+      "id": "card-087-photo",
+      "path": "apps/site/photos/team3-outdoor-cards/card-087.jpg",
+      "bytes": 207319,
+      "sha256": "87f041605da81edf4d25614ab754a066993f8759b845ff004aa9670d2bf0d6dd",
+      "scope": "이력카드에 첨부된 4면 사진. 카드 등록명과 실물 명판을 구분함."
+    },
+    {
+      "id": "card-089-photo",
+      "path": "apps/site/photos/team3-outdoor-cards/card-089.jpg",
+      "bytes": 119889,
+      "sha256": "f2ce6447312b930df7e679ea526005eb4d20fc7932a0fef69b342a12379e2fd1",
+      "scope": "이력카드에 첨부된 4면 사진. 카드 등록명과 실물 명판을 구분함."
+    },
+    {
+      "id": "outdoor-card-metadata",
+      "path": "references/team3-outdoor-cards-20261110/cards.json",
+      "bytes": 32773,
+      "sha256": "4a38aaabd8ed2b6297f8bc5527c358a24d03636f8ca2cae1bd78811d8032996c",
+      "scope": "087/089 등록명과 제조사·모델 필드 공란, 089의 40RT/60RT 문자열 충돌 확인."
+    },
+    {
+      "id": "outdoor-video-nov9",
+      "path": "20261109_133757KST_GPS-VALID_LAT35.3619717_LON129.0312383_H24.7-TN_DIR-AVAILABLE_P-23.9_ACC2.4m_FV-32ca5218-af17-4d68-a395-de3573150cd8.mp4",
+      "bytes": 409712904,
+      "sha256": "662ae134b74db7d3f1c6438387f34eeb1dda5556ed08e2737242bfd1c59ae519",
+      "hashBasis": "같은 원본의 기존 SHA 검증 영수증을 재사용. 원본 크기 일치 확인.",
+      "scope": "카드087 60/84/114초, 카드089 216초의 현장 인접 관계와 외형 대조. 정확 초 native 프레임 4장 신규 추출.",
+      "framePaths": [
+        "tmp/chiller-20261110/nov9-060s-native.jpg",
+        "tmp/chiller-20261110/nov9-084s-native.jpg",
+        "tmp/chiller-20261110/nov9-114s-native.jpg",
+        "tmp/chiller-20261110/nov9-216s-native.jpg"
+      ]
+    },
+    {
+      "id": "hitachi-asc-official-2015",
+      "path": "references/chiller-20261110/hitachi-HR-E555Q-2015.pdf",
+      "url": "https://www.jci-hitachi.com/wp-content/uploads/2015/08/HR-E555Q.pdf",
+      "bytes": 2595895,
+      "sha256": "5e1a5ea8ef822529d670103cde5076f13d57fc8c3ece3e91d4dc004fa354307d",
+      "documentDate": "Oct. 2015",
+      "pageCount": 3,
+      "scope": "제조사 ASC계열 압축기 내부 참고도와 외형 치수도. 현장 냉동기 전체 OEM 제작도나 2025 생산품의 개별 정비 매뉴얼은 아님.",
+      "reviewedPages": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "provided-chiller-scan-20261110",
+      "path": "Image_20261110_0001.pdf",
+      "bytes": 11096468,
+      "sha256": "0974fd6abb2b2bc13c7d87a7b3aad957bd5ee803fee46ccaf5fcc394deff6533",
+      "pageCount": 22,
+      "producer": "EPSON Scan",
+      "scanDate": "2026-11-10T11:45:21+09:00",
+      "scope": "제공된 여러 시기 기술도면/성적서/카탈로그를 스캔한 묶음. 스캔일이 원도면 작성일이나 준공일은 아님.",
+      "drawingManifest": "references/chiller-20261110/drawing-manifest.json"
+    }
+  ],
+  "review": {
+    "allFieldPhotosViewedAsContactSheets": true,
+    "fullResolutionPhotosReviewed": [
+      4,
+      7,
+      19,
+      25,
+      37,
+      48,
+      50,
+      66
+    ],
+    "contactSheets": [
+      "tmp/chiller-20261110/contact-001-012.jpg",
+      "tmp/chiller-20261110/contact-013-024.jpg",
+      "tmp/chiller-20261110/contact-025-036.jpg",
+      "tmp/chiller-20261110/contact-037-048.jpg",
+      "tmp/chiller-20261110/contact-049-060.jpg",
+      "tmp/chiller-20261110/contact-061-067.jpg"
+    ],
+    "originalsModified": false,
+    "photographedReportTitle": "사진007: 압축기 파손 점검 보고서(일부 페이지)"
+  }
+}

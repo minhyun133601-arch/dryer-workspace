@@ -1,0 +1,21 @@
+{
+  "status": "complete",
+  "finished_at": "2026-11-04T06:35:19.894485+00:00",
+  "output": "C:\\Users\\user\\Desktop\\프로젝트\\references\\생산팀 수집자료",
+  "deleted_files": 4295,
+  "deleted_logical_bytes": 18640034664,
+  "deleted_allocated_bytes_estimate": 18125235840,
+  "free_before": 11087310848,
+  "free_after": 21454274560,
+  "remaining_owned_files": [],
+  "preserved_records": [],
+  "extra_files_preserved": [],
+  "reparse_points_preserved": [],
+  "empty_owned_directories_removed": 1389,
+  "archive_source_aliases": 9374,
+  "archive_sha256_members": 4295,
+  "drive_packages_unchanged": 68,
+  "source_alias_mapping_errors": 0,
+  "per_file_receipt": "C:\\Users\\user\\Desktop\\프로젝트\\workspace\\storage-cleanup-20261104\\production-pc-offload-deletions.jsonl",
+  "free_delta_note": "Other authorized cleanup tasks ran concurrently; only the per-file deleted byte totals are attributable to this task."
+}

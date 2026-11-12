@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>도면 근거자료 · 희창유업</title>
+</head>
+<body>
+  <p>도면 검토실을 준비하고 있습니다. <a id="open-review" href="/drawing-review/">도면 열기</a></p>
+  <script>
+    if (location.protocol !== 'file:') location.replace('/drawing-review/' + location.search + location.hash);
+    else document.querySelector('p').textContent = '프로젝트 실행.cmd를 더블클릭한 뒤 도면 근거자료를 선택해 주세요.';
+  </script>
+</body>
+</html>

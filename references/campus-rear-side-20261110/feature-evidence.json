@@ -1,0 +1,709 @@
+{
+  "date": "2026-11-10",
+  "scope": "새 경비실 공무사무실 탱크 원본3클립/짝TXT3개만 추가 감사. 기존 액상·실외기실·건조실 원본과 앱 모델 코드는 변경하지 않음.",
+  "sourceManifest": "references/campus-rear-side-20261110/source-manifest.json",
+  "photoManifest": "references/campus-rear-side-20261110/photo-manifest.json",
+  "userConfirmedFacts": [
+    {
+      "fact": "기존 2팀 휴게실 명칭은 1팀 2파트 휴게실로 정정",
+      "support": "001118초 생산1팀2파트 문패+122초 휴게실 표지로 시각 확인."
+    },
+    {
+      "fact": "탱크 옆이면서 주차장 옆이 사용자 사무실",
+      "support": "사용자가 후속 질문에서 영상 끝 탱크 바로 옆 흰 건물이라고 특정함. 초반 긴 창벽/본관과 구분. 문패 직접 판독·내부 구획·치수 실측은 아님.",
+      "applicationId": "campus-maintenance-office",
+      "supersededOn": "2026-11-11",
+      "supersededBy": "공무사무실은 LPG 뒤 초록 지붕 건물; 탱크에 붙은 건물은 밸브실"
+    },
+    {
+      "fact": "11/11 사용자 지시: 사무실 외관은 사용자가 다시 제공. 우선 재활용실 같은 시설의 위치를 정확히 재현",
+      "support": "대화 중 후속 메시지. 공무사무실 형태는 보류하고 위치만 옹벽선 안으로 이동",
+      "date": "2026-11-11"
+    },
+    {
+      "fact": "11/11: 건조실 옆벽 '1팀 2파트 휴게실' 문은 실제 휴게실이 아니라 생산1팀 2파트 출입구",
+      "support": "사용자 정정. 실제 휴게실 문은 건물 뒷길 쪽",
+      "date": "2026-11-11"
+    },
+    {
+      "fact": "11/11: 탱크에 붙은 조립식 건물은 공무사무실도 휴게실도 아님. 내부는 002 영상 2:00~2:09에 촬영",
+      "support": "사용자 정정. 내부 공압 밸브·공기관·제어함·히터로 탱크 밸브실 표시",
+      "date": "2026-11-11"
+    },
+    {
+      "fact": "11/11: 초록 지붕 건물(LPG 뒤 콘크리트 건물)이 공무사무실. 외관 사진은 사용자가 추후 제공",
+      "support": "사용자 확인",
+      "date": "2026-11-11"
+    },
+    {
+      "fact": "11/11: 휴게실 문 위치를 실제 위치(뒷길 쪽)로 이동",
+      "support": "001 185초 유리문 문패 '생산 2팀 휴게실'",
+      "date": "2026-11-11"
+    }
+  ],
+  "review": {
+    "contactSheets": 5,
+    "sampledFrames": 90,
+    "fullClipSpanReviewedByContacts": true,
+    "nativeFramesPrepared": 63,
+    "nativeFramesDirectlyViewedDuringAudit": {
+      "001": [
+        16,
+        118,
+        120,
+        121,
+        122,
+        124,
+        128,
+        240,
+        264,
+        280,
+        360,
+        376,
+        432,
+        448,
+        416,
+        440
+      ],
+      "002": [
+        72,
+        144,
+        16,
+        40,
+        48,
+        64,
+        80,
+        136
+      ]
+    },
+    "audioAvailable": false
+  },
+  "timelineIntervalsAreApproximate": true,
+  "timeline": [
+    {
+      "clipId": "001",
+      "startSeconds": 0,
+      "endSeconds": 40,
+      "topic": "정문·경비실형 곡면창 건물·3동 큰 출입구"
+    },
+    {
+      "clipId": "001",
+      "startSeconds": 40,
+      "endSeconds": 104,
+      "topic": "낮은 긴 창벽·주차장·차로·건물 사이 접근"
+    },
+    {
+      "clipId": "001",
+      "startSeconds": 104,
+      "endSeconds": 116,
+      "topic": "건물 사이 좁은 진입 통로. 이동 적치물은 모델 범위 제외"
+    },
+    {
+      "clipId": "001",
+      "startSeconds": 116,
+      "endSeconds": 132,
+      "topic": "생산1팀2파트 문패와 휴게실 문·외벽"
+    },
+    {
+      "clipId": "001",
+      "startSeconds": 132,
+      "endSeconds": 158,
+      "topic": "출입구 차양·주황색 롤도어·회색 셔터"
+    },
+    {
+      "clipId": "001",
+      "startSeconds": 158,
+      "endSeconds": 232,
+      "topic": "다층 건물 후면·세로창 띠·노란 양문·옹벽측 통로"
+    },
+    {
+      "clipId": "001",
+      "startSeconds": 232,
+      "endSeconds": 272,
+      "topic": "LPG저장소 접근·회색 탱크2기·펜스와 고정 보호대"
+    },
+    {
+      "clipId": "001",
+      "startSeconds": 272,
+      "endSeconds": 318,
+      "topic": "작은 골판 서비스실. 5S표지 외 실명은 미확정"
+    },
+    {
+      "clipId": "001",
+      "startSeconds": 318,
+      "endSeconds": 384,
+      "topic": "LPG 기화기·게이지·배관·밸브 근접"
+    },
+    {
+      "clipId": "001",
+      "startSeconds": 384,
+      "endSeconds": 408,
+      "topic": "옹벽·펜스와 건물 사이의 후면 서비스 통로"
+    },
+    {
+      "clipId": "001",
+      "startSeconds": 408,
+      "endSeconds": 466.074989,
+      "topic": "스테인리스 탱크 뱅크·상부 보행면·하부 배관"
+    },
+    {
+      "clipId": "002",
+      "startSeconds": 0,
+      "endSeconds": 78,
+      "topic": "같은 탱크 뱅크 하부·다열 원통·공통관·상부 난간"
+    },
+    {
+      "clipId": "002",
+      "startSeconds": 78,
+      "endSeconds": 108,
+      "topic": "고정 플랫폼·공통 파이프랙·작은 금속 계단"
+    },
+    {
+      "clipId": "002",
+      "startSeconds": 108,
+      "endSeconds": 130,
+      "topic": "바닥 고정 펌프·배관과 서비스실 문 근접"
+    },
+    {
+      "clipId": "002",
+      "startSeconds": 130,
+      "endSeconds": 153.3691,
+      "topic": "탱크 사이 배관과 팜유 표찰"
+    },
+    {
+      "clipId": "003",
+      "startSeconds": 0,
+      "endSeconds": 21.499133,
+      "topic": "같은 구역 배관·펌프·기초·배관랙·작은 철제 계단 재촬영"
+    }
+  ],
+  "entities": [
+    {
+      "id": "entry-guardhouse",
+      "label": "정문 옆 경비실형 건물",
+      "identityBasis": "폴더명·사용자 작업 맥락과 정문 위치. 영상 안 경비실 글자는 직접 판독하지 못함.",
+      "visualObservation": "낮은 곡면 유리·큰 둥근 처마, 출입문 옆 인증판과 정문 펜스·차로가 보인다.",
+      "sources": [
+        {
+          "clipId": "001",
+          "seconds": 8,
+          "nativeFrame": "tmp/campus-rear-side-20261110/clip-001/native/frame-008s.jpg",
+          "webFrame": "apps/site/photos/campus-rear-side/clip-001-008s.jpg"
+        },
+        {
+          "clipId": "001",
+          "seconds": 16,
+          "nativeFrame": "tmp/campus-rear-side-20261110/clip-001/native/frame-016s.jpg",
+          "webFrame": "apps/site/photos/campus-rear-side/clip-001-016s.jpg"
+        }
+      ],
+      "confidence": "exterior-direct; function-user-context",
+      "limits": [
+        "경비실 글자가 찍힌 명판·내부 구조·정확한 높이와 크기는 확인하지 않았다."
+      ]
+    },
+    {
+      "id": "building-3-entry",
+      "label": "3동 출입구",
+      "identityBasis": "외벽의 3동 표찰 직접 판독.",
+      "visualObservation": "박공형 흰 벽, 파란 지붕 가장자리, 큰 개방 출입구·차양과 앞 포장 차로.",
+      "sources": [
+        {
+          "clipId": "001",
+          "seconds": 32,
+          "nativeFrame": "tmp/campus-rear-side-20261110/clip-001/native/frame-032s.jpg",
+          "webFrame": "apps/site/photos/campus-rear-side/clip-001-032s.jpg"
+        }
+      ],
+      "confidence": "sign-direct",
+      "limits": [
+        "옆 창고·컨테이너 적치물을 별도의 고정 설비로 세지 않는다."
+      ]
+    },
+    {
+      "id": "parking-office-side",
+      "label": "낮은 긴 창벽·주차장·차로",
+      "identityBasis": "영상 직접 관찰과 사용자 확인 관계.",
+      "visualObservation": "긴 흰 하부 벽과 세로 골판 금속 외벽·연속 창, 옆 주차면과 노란 차로선, 건물 사이 통로와 아치형 고정 차양.",
+      "sources": [
+        {
+          "clipId": "001",
+          "seconds": 48,
+          "nativeFrame": "tmp/campus-rear-side-20261110/clip-001/native/frame-048s.jpg",
+          "webFrame": "apps/site/photos/campus-rear-side/clip-001-048s.jpg"
+        },
+        {
+          "clipId": "001",
+          "seconds": 56,
+          "nativeFrame": "tmp/campus-rear-side-20261110/clip-001/native/frame-056s.jpg",
+          "webFrame": "apps/site/photos/campus-rear-side/clip-001-056s.jpg"
+        },
+        {
+          "clipId": "001",
+          "seconds": 88,
+          "nativeFrame": "tmp/campus-rear-side-20261110/clip-001/native/frame-088s.jpg",
+          "webFrame": "apps/site/photos/campus-rear-side/clip-001-088s.jpg"
+        }
+      ],
+      "confidence": "exterior-direct; exact-office-identity-unresolved",
+      "limits": [
+        "이 외벽 전체가 공무사무실인지 사용자 사무실인지 명판만으로 확정되지 않는다.",
+        "주차 차량을 고정 설비 대수에 포함하지 않는다."
+      ]
+    },
+    {
+      "id": "team1-part2-break-room",
+      "label": "1팀 2파트 휴게실",
+      "identityBasis": "사용자 명칭 정정 + 118초 문패 생산 1팀 2파트/Production 1Team 2Part + 122초 같은 문 휴게실 표지.",
+      "visualObservation": "수평 판넬 외벽·흰 테두리의 서리유리 양미닫이문·문 옆 표찰, 주변 노랑/검정 보호대·노란 바닥선·가로 창과 환기창.",
+      "sources": [
+        {
+          "clipId": "001",
+          "seconds": 118,
+          "nativeFrame": "tmp/campus-rear-side-20261110/clip-001/native/frame-118s.jpg",
+          "webFrame": "apps/site/photos/campus-rear-side/clip-001-118s.jpg"
+        },
+        {
+          "clipId": "001",
+          "seconds": 122,
+          "nativeFrame": "tmp/campus-rear-side-20261110/clip-001/native/frame-122s.jpg",
+          "webFrame": "apps/site/photos/campus-rear-side/clip-001-122s.jpg"
+        },
+        {
+          "clipId": "001",
+          "seconds": 128,
+          "nativeFrame": "tmp/campus-rear-side-20261110/clip-001/native/frame-128s.jpg",
+          "webFrame": "apps/site/photos/campus-rear-side/clip-001-128s.jpg"
+        }
+      ],
+      "confidence": "user-confirmed-and-sign-direct",
+      "limits": [
+        "다른 동·2층 도면의 휴게실과 같은 방으로 합치지 않는다.",
+        "옆 안내도에 적힌 작은 방명은 흐려서 판독하지 않았다."
+      ],
+      "supersededOn": "2026-11-11",
+      "supersededBy": "118·122초 문은 생산1팀 2파트 출입구, 휴게실 문은 production2-break-room-door"
+    },
+    {
+      "id": "rear-building-entries",
+      "label": "다층 건물 후면·셔터·계단실형 창 띠",
+      "identityBasis": "직접 외형 관찰.",
+      "visualObservation": "큰 회색 셔터, 주황색 롤도어, 깊은 수평 차양, 노란색 양문, 세로 유리창 띠와 외벽에 붙은 고정 배관·보호대.",
+      "sources": [
+        {
+          "clipId": "001",
+          "seconds": 144,
+          "nativeFrame": "tmp/campus-rear-side-20261110/clip-001/native/frame-144s.jpg",
+          "webFrame": "apps/site/photos/campus-rear-side/clip-001-144s.jpg"
+        },
+        {
+          "clipId": "001",
+          "seconds": 152,
+          "nativeFrame": "tmp/campus-rear-side-20261110/clip-001/native/frame-152s.jpg",
+          "webFrame": "apps/site/photos/campus-rear-side/clip-001-152s.jpg"
+        },
+        {
+          "clipId": "001",
+          "seconds": 184,
+          "nativeFrame": "tmp/campus-rear-side-20261110/clip-001/native/frame-184s.jpg",
+          "webFrame": "apps/site/photos/campus-rear-side/clip-001-184s.jpg"
+        },
+        {
+          "clipId": "001",
+          "seconds": 208,
+          "nativeFrame": "tmp/campus-rear-side-20261110/clip-001/native/frame-208s.jpg",
+          "webFrame": "apps/site/photos/campus-rear-side/clip-001-208s.jpg"
+        }
+      ],
+      "confidence": "exterior-direct; room-purpose-unresolved",
+      "limits": [
+        "이 면의 창 개수로 전체 층수·층고를 새로 확정하지 않는다.",
+        "3동·본관·건조동 등 현재 모델 ID 대응은 캠퍼스 좌표 검증과 별도로 확인해야 한다."
+      ]
+    },
+    {
+      "id": "lpg-storage",
+      "label": "LPG 저장소",
+      "identityBasis": "LPG 및 LPG저장소 표지 직접 판독.",
+      "visualObservation": "회색 세로 탱크 최소 두 기, 볼록한 윗면·상부 가는 관·전면 점검 외함, 녹색 철망 펜스와 출입문, 노랑/검정 U자 보호대·바닥 배관.",
+      "sources": [
+        {
+          "clipId": "001",
+          "seconds": 264,
+          "nativeFrame": "tmp/campus-rear-side-20261110/clip-001/native/frame-264s.jpg",
+          "webFrame": "apps/site/photos/campus-rear-side/clip-001-264s.jpg"
+        }
+      ],
+      "confidence": "sign-direct; visible-count-minimum-two",
+      "visibleCountMinimum": 2,
+      "limits": [
+        "전체 저장소 탱크 총수·개별 용량·압력은 확인하지 않았다.",
+        "스테인리스 저장탱크 뱅크와 같은 기기로 합치지 않는다.",
+        "제조사처럼 보이는 표찰은 있으나 개별 모델·정격 판독은 불충분하다."
+      ]
+    },
+    {
+      "id": "corrugated-service-shed",
+      "label": "작은 골판 서비스실 외형",
+      "identityBasis": "직접 외형 관찰.",
+      "visualObservation": "LPG 구역 가까이 낮은 골판 벽·얇은 지붕·작은 단문이 있고, 실내에는 붉은 프레임과 5S활동/현장개선의 기본 표지가 보인다.",
+      "sources": [
+        {
+          "clipId": "001",
+          "seconds": 256,
+          "nativeFrame": "tmp/campus-rear-side-20261110/clip-001/native/frame-256s.jpg",
+          "webFrame": null
+        },
+        {
+          "clipId": "001",
+          "seconds": 280,
+          "nativeFrame": "tmp/campus-rear-side-20261110/clip-001/native/frame-280s.jpg",
+          "webFrame": null
+        }
+      ],
+      "confidence": "exterior-direct; function-unresolved",
+      "limits": [
+        "공무사무실·휴게실 명판은 확인되지 않는다.",
+        "실내 느슨한 자재·이동식 기구·적치물은 설비 목록으로 만들지 않는다."
+      ]
+    },
+    {
+      "id": "lpg-vaporizer",
+      "label": "LPG 구역 기화기·계기·밸브",
+      "identityBasis": "VAPORIZER 표찰 직접 판독.",
+      "visualObservation": "볼트가 둘러진 흰 사각 몸체 위에 둥근 게이지, 회색 수직·수평 배관과 녹색 손바퀴 밸브·플랜지가 붙는다. 녹색 철망 펜스 안 고정 지지대에 설치돼 있다.",
+      "sources": [
+        {
+          "clipId": "001",
+          "seconds": 328,
+          "nativeFrame": "tmp/campus-rear-side-20261110/clip-001/native/frame-328s.jpg",
+          "webFrame": "apps/site/photos/campus-rear-side/clip-001-328s.jpg"
+        },
+        {
+          "clipId": "001",
+          "seconds": 336,
+          "nativeFrame": "tmp/campus-rear-side-20261110/clip-001/native/frame-336s.jpg",
+          "webFrame": "apps/site/photos/campus-rear-side/clip-001-336s.jpg"
+        },
+        {
+          "clipId": "001",
+          "seconds": 376,
+          "nativeFrame": "tmp/campus-rear-side-20261110/clip-001/native/frame-376s.jpg",
+          "webFrame": "apps/site/photos/campus-rear-side/clip-001-376s.jpg"
+        }
+      ],
+      "confidence": "sign-direct; exterior-only",
+      "limits": [
+        "보이는 기화기 재등장을 서로 다른 기기로 세지 않는다.",
+        "내부 가열 방식·용량·모델명·운전 상태는 확정하지 않는다."
+      ]
+    },
+    {
+      "id": "retaining-wall-service-route",
+      "label": "옹벽·펜스와 건물 사이 후면 서비스 통로",
+      "identityBasis": "직접 동선 관찰.",
+      "visualObservation": "옹벽 위 녹색 철망 펜스, 낮은 경계벽·포장/자갈 바닥과 고정 배관이 긴 좁은 틈을 만든다.",
+      "sources": [
+        {
+          "clipId": "001",
+          "seconds": 392,
+          "nativeFrame": "tmp/campus-rear-side-20261110/clip-001/native/frame-392s.jpg",
+          "webFrame": "apps/site/photos/campus-rear-side/clip-001-392s.jpg"
+        },
+        {
+          "clipId": "001",
+          "seconds": 416,
+          "nativeFrame": "tmp/campus-rear-side-20261110/clip-001/native/frame-416s.jpg",
+          "webFrame": "apps/site/photos/campus-rear-side/clip-001-416s.jpg"
+        }
+      ],
+      "confidence": "spatial-adjacency-direct; dimensions-unmeasured",
+      "limits": [
+        "휴대폰 GPS를 통로 양쪽 벽 모서리의 실측 좌표로 쓰지 않는다."
+      ]
+    },
+    {
+      "id": "stainless-storage-bank",
+      "label": "스테인리스 저장탱크 뱅크",
+      "identityBasis": "세 클립의 연속 외형·배관·난간·통로로 같은 구역의 재촬영을 대조. 002의 144초 팜유 표찰 직접 판독.",
+      "visualObservation": "다열로 보이는 큰 세로 원통 탱크, 상부 공통 보행면·난간·맨홀·짧은 상부 구동부, 측면 큰 연결구, 낮은 공통 보온관·플랜지·밸브·게이지가 보인다.",
+      "sources": [
+        {
+          "clipId": "001",
+          "seconds": 416,
+          "nativeFrame": "tmp/campus-rear-side-20261110/clip-001/native/frame-416s.jpg",
+          "webFrame": "apps/site/photos/campus-rear-side/clip-001-416s.jpg"
+        },
+        {
+          "clipId": "001",
+          "seconds": 432,
+          "nativeFrame": "tmp/campus-rear-side-20261110/clip-001/native/frame-432s.jpg",
+          "webFrame": "apps/site/photos/campus-rear-side/clip-001-432s.jpg"
+        },
+        {
+          "clipId": "001",
+          "seconds": 448,
+          "nativeFrame": "tmp/campus-rear-side-20261110/clip-001/native/frame-448s.jpg",
+          "webFrame": "apps/site/photos/campus-rear-side/clip-001-448s.jpg"
+        },
+        {
+          "clipId": "002",
+          "seconds": 16,
+          "nativeFrame": "tmp/campus-rear-side-20261110/clip-002/native/frame-016s.jpg",
+          "webFrame": "apps/site/photos/campus-rear-side/clip-002-016s.jpg"
+        },
+        {
+          "clipId": "002",
+          "seconds": 64,
+          "nativeFrame": "tmp/campus-rear-side-20261110/clip-002/native/frame-064s.jpg",
+          "webFrame": "apps/site/photos/campus-rear-side/clip-002-064s.jpg"
+        },
+        {
+          "clipId": "002",
+          "seconds": 72,
+          "nativeFrame": "tmp/campus-rear-side-20261110/clip-002/native/frame-072s.jpg",
+          "webFrame": "apps/site/photos/campus-rear-side/clip-002-072s.jpg"
+        },
+        {
+          "clipId": "002",
+          "seconds": 136,
+          "nativeFrame": "tmp/campus-rear-side-20261110/clip-002/native/frame-136s.jpg",
+          "webFrame": "apps/site/photos/campus-rear-side/clip-002-136s.jpg"
+        },
+        {
+          "clipId": "002",
+          "seconds": 144,
+          "nativeFrame": "tmp/campus-rear-side-20261110/clip-002/native/frame-144s.jpg",
+          "webFrame": "apps/site/photos/campus-rear-side/clip-002-144s.jpg"
+        }
+      ],
+      "confidence": "exterior-and-some-labels-direct; exact-total-unresolved",
+      "directlyReadableLabels": [
+        {
+          "clipId": "002",
+          "seconds": 144,
+          "text": "팜유"
+        }
+      ],
+      "uncertainLabels": [
+        {
+          "clipId": "002",
+          "seconds": 72,
+          "tentativeReading": "야경유 1처럼 보임",
+          "status": "판독 미확정. 장비명으로 확정하지 않음."
+        }
+      ],
+      "limits": [
+        "전체 탱크 수·동일 규격 여부·정격·내부 교반날은 확정하지 않는다.",
+        "001끝/002/003에 다시 나온 탱크·펌프·난간을 새 설비로 세지 않는다.",
+        "탱크 표찰이 가려지거나 흐린 경우 원료명을 추정하지 않는다."
+      ],
+      "visibleDistinctCountMinimum": 4,
+      "exactTotalCount": null,
+      "unitMap": "references/campus-rear-side-20261110/tank-bank-unit-map.json"
+    },
+    {
+      "id": "tank-fixed-access-piping",
+      "label": "탱크 구역 고정 계단·플랫폼·배관랙·펌프",
+      "identityBasis": "직접 외형 관찰.",
+      "visualObservation": "작은 금속 디딤판 계단과 얇은 난간, 여러 높이의 가로 파이프랙, 벽에 붙은 세로 관, 플랜지·원형 게이지, 바닥 베이스에 고정된 모터펌프가 보인다.",
+      "sources": [
+        {
+          "clipId": "002",
+          "seconds": 80,
+          "nativeFrame": "tmp/campus-rear-side-20261110/clip-002/native/frame-080s.jpg",
+          "webFrame": "apps/site/photos/campus-rear-side/clip-002-080s.jpg"
+        },
+        {
+          "clipId": "002",
+          "seconds": 88,
+          "nativeFrame": "tmp/campus-rear-side-20261110/clip-002/native/frame-088s.jpg",
+          "webFrame": "apps/site/photos/campus-rear-side/clip-002-088s.jpg"
+        },
+        {
+          "clipId": "002",
+          "seconds": 104,
+          "nativeFrame": "tmp/campus-rear-side-20261110/clip-002/native/frame-104s.jpg",
+          "webFrame": "apps/site/photos/campus-rear-side/clip-002-104s.jpg"
+        },
+        {
+          "clipId": "002",
+          "seconds": 112,
+          "nativeFrame": "tmp/campus-rear-side-20261110/clip-002/native/frame-112s.jpg",
+          "webFrame": "apps/site/photos/campus-rear-side/clip-002-112s.jpg"
+        },
+        {
+          "clipId": "003",
+          "seconds": 4,
+          "nativeFrame": "tmp/campus-rear-side-20261110/clip-003/native/frame-004s.jpg",
+          "webFrame": "apps/site/photos/campus-rear-side/clip-003-004s.jpg"
+        },
+        {
+          "clipId": "003",
+          "seconds": 6,
+          "nativeFrame": "tmp/campus-rear-side-20261110/clip-003/native/frame-006s.jpg",
+          "webFrame": "apps/site/photos/campus-rear-side/clip-003-006s.jpg"
+        },
+        {
+          "clipId": "003",
+          "seconds": 18,
+          "nativeFrame": "tmp/campus-rear-side-20261110/clip-003/native/frame-018s.jpg",
+          "webFrame": "apps/site/photos/campus-rear-side/clip-003-018s.jpg"
+        },
+        {
+          "clipId": "003",
+          "seconds": 20,
+          "nativeFrame": "tmp/campus-rear-side-20261110/clip-003/native/frame-020s.jpg",
+          "webFrame": "apps/site/photos/campus-rear-side/clip-003-020s.jpg"
+        }
+      ],
+      "confidence": "fixed-exterior-direct; topology-partly-occluded",
+      "limits": [
+        "계단 단수·높이·배관 지름과 중심간격은 실측하지 않았다.",
+        "003은 같은 플랫폼 주변 후속 촬영으로 보이며 같은 펌프 재등장은 별도 대수에 더하지 않는다.",
+        "복잡한 배관을 근거 없이 공정 흐름도로 해석하지 않는다."
+      ]
+    },
+    {
+      "id": "recycling-room-compression",
+      "label": "재활용실 · 압축실",
+      "identityBasis": "001 255-257초 문패 '압축실' 직접 판독 + 268-312초 내부 파란 유압 압축기·동력부. 사용자 호칭 재활용실.",
+      "visualObservation": "옹벽에 등을 댄 회색 골판 철판 창고, 외쪽 경사 지붕, 타공 패널 단문, 문 위 등, 빨간 하부 띠, 황흑 U자 보호대. 옆 옹벽을 따라 빨간 개방형 분리수거함.",
+      "sources": [
+        {
+          "clipId": "001",
+          "seconds": 252,
+          "webFrame": "apps/site/photos/campus-rear-side/clip-001-252s.jpg"
+        },
+        {
+          "clipId": "001",
+          "seconds": 256,
+          "webFrame": "apps/site/photos/campus-rear-side/clip-001-256s.jpg"
+        },
+        {
+          "clipId": "001",
+          "seconds": 295,
+          "webFrame": "apps/site/photos/campus-rear-side/clip-001-295s.jpg"
+        }
+      ],
+      "confidence": "sign-direct; interior-machine-direct; position-approximate",
+      "applicationId": "campus-recycling-room",
+      "limits": [
+        "압축기 기종·정격·실내 배치는 확정하지 않는다.",
+        "실내 기계는 외부에서 보이지 않아 형상화하지 않았다."
+      ]
+    },
+    {
+      "id": "bag-warming-room-door",
+      "label": "지대가온실 출입문",
+      "identityBasis": "001 131-133초 양문 위 문패 '지대가온실' 직접 판독.",
+      "visualObservation": "가로 패널 외벽의 크림색 양문. 1팀 2파트 휴게실 다음, 주황 고속문 앞.",
+      "sources": [
+        {
+          "clipId": "001",
+          "seconds": 132,
+          "webFrame": "apps/site/photos/campus-rear-side/clip-001-132s.jpg"
+        }
+      ],
+      "confidence": "sign-direct; order-along-wall-direct",
+      "applicationId": "campus-dryer-tower.exteriorDetails.bag-warming-room-door",
+      "limits": [
+        "실 내부 용도·면적은 추정하지 않는다."
+      ]
+    },
+    {
+      "id": "rear-concrete-building",
+      "label": "공무사무실 (초록 지붕 콘크리트 건물)",
+      "identityBasis": "001 263-264초 LPG 용기 바로 뒤, 404초·449초 자갈길·흰 방류턱 옆. 2019 DWG 같은 자리 기존 8동(1층). 문패 미확인. 11/11 사용자 확인: 공무사무실.",
+      "visualObservation": "베이지 콘크리트 매스, 환기 후드, 지붕 가장자리 안테나·접시. 항공사진 녹색 지붕.",
+      "sources": [
+        {
+          "clipId": "001",
+          "seconds": 264,
+          "webFrame": "apps/site/photos/campus-rear-side/clip-001-264s.jpg"
+        },
+        {
+          "clipId": "001",
+          "seconds": 404,
+          "webFrame": "apps/site/photos/campus-rear-side/clip-001-404s.jpg"
+        }
+      ],
+      "confidence": "exterior-direct; name-unknown",
+      "applicationId": "campus-maintenance-office",
+      "limits": [
+        "이름·용도를 모르므로 선택 가능한 건물로 만들지 않고 주변 매스로만 둔다."
+      ]
+    },
+    {
+      "id": "tank-valve-room",
+      "label": "탱크 밸브실 · 조립식 2동",
+      "identityBasis": "사용자: 탱크에 붙은 건물은 사무실·휴게실 아님 + 002 120초 내부(공압 밸브·파란 공기관·제어함·히터). 문패 미확인.",
+      "visualObservation": "연회색 패널 벽·파란 처마 컨테이너형 2동, 1m 남짓 틈, 틈 너머 탱크·배관 가대. 도로에서 초록 방류벽을 넘는 짧은 철제 계단.",
+      "sources": [
+        {
+          "clipId": "002",
+          "seconds": 69,
+          "webFrame": "apps/site/photos/campus-rear-side/clip-002-069s.jpg"
+        },
+        {
+          "clipId": "002",
+          "seconds": 120,
+          "webFrame": "apps/site/photos/campus-rear-side/clip-002-120s.jpg"
+        }
+      ],
+      "confidence": "user-identity-negative; interior-direct; name-from-interior",
+      "applicationId": "campus-tank-valve-room",
+      "limits": [
+        "다른 한 동의 내부는 영상에 없다.",
+        "각 동 4.4×2.3m·틈 1.2m는 영상·항공사진 근사."
+      ]
+    },
+    {
+      "id": "production2-break-room-door",
+      "label": "1팀 2파트 휴게실 문 (문패: 생산 2팀 휴게실)",
+      "identityBasis": "001 185초 유리문 위 문패 '생산 2팀 휴게실' 직접 판독 + 사용자: 실제 휴게실은 뒤쪽.",
+      "visualObservation": "건조실 뒷길 쪽 차양 아래 단일 유리문(긴 손잡이, '문을 꼭 닫아주세요' 표지), 양옆 회색 셔터.",
+      "sources": [
+        {
+          "clipId": "001",
+          "seconds": 185.6,
+          "webFrame": "apps/site/photos/campus-rear-side/clip-001-185s.jpg"
+        }
+      ],
+      "confidence": "sign-direct; user-confirmed-location",
+      "applicationId": "campus-dryer-tower.exteriorDetails.production1-part2-break-room",
+      "limits": [
+        "모델 저층동 뒷벽이 실제보다 앞이라 같은 X 위치의 모델 뒷벽에 붙였다."
+      ]
+    }
+  ],
+  "doNotModelAsEquipment": [
+    "이동식 파렛트·박스·자재 더미",
+    "옆에 놓인 빈 드럼·통·분리된 부품",
+    "느슨한 임시 호스·카트·쓰레기",
+    "주차 차량을 공장 고정 설비 수량에 포함하는 것"
+  ],
+  "unresolved": [
+    "공무사무실·사용자 사무실의 특정 문/외함 직접 명판 식별",
+    "스테인리스 저장탱크 전체 대수와 개별 원료명·정격",
+    "현재 캠퍼스 모델의 건물ID·모서리 좌표와 촬영기기GPS의 정확한 등록",
+    "가려진 배관과 내부 공정 구조·운전 상태",
+    "건조실 저층 별동의 실제 뒷벽선(Z≈-66)과 모델(Z=-49) 차이",
+    "탱크 방류턱 도로 모서리 파란 지붕 조립식 실의 용도·사무실 여부"
+  ],
+  "corrections20261111": {
+    "record": "references/campus-rear-side-20261110/placement-correction-20261111.json",
+    "summary": "대지 뒤쪽을 영상에 없는 35m 마당으로 늘렸던 해석을 철회하고 옹벽 발치선을 복원. 탱크 구역을 건조실 뒷길 건너 옹벽에 붙이고, LPG를 콘크리트 건물 앞(마당 쪽)으로 돌렸으며, 재활용실(압축실)을 옹벽 모서리에 추가. 경비실 곡면 모서리를 진입로 안쪽으로 옮김.",
+    "tankLabelsRead": [
+      "야경유 1",
+      "야경유 2",
+      "저감미당 3",
+      "팜유"
+    ],
+    "modelledVessels": 6,
+    "labelledSlots": [
+      "야경유 1",
+      "야경유 2"
+    ]
+  }
+}

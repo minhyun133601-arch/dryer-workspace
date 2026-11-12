@@ -1,0 +1,442 @@
+{
+  "date": "2026-11-10",
+  "source": {
+    "path": "Image_20261110_0001.pdf",
+    "bytes": 11096468,
+    "sha256": "0974fd6abb2b2bc13c7d87a7b3aad957bd5ee803fee46ccaf5fcc394deff6533",
+    "pageCount": 22,
+    "producer": "EPSON Scan",
+    "scanDate": "2026-11-10T11:45:21+09:00",
+    "scope": "제공된 여러 시기 기술도면/성적서/카탈로그를 스캔한 묶음. 스캔일이 원도면 작성일이나 준공일은 아님."
+  },
+  "pages": [
+    {
+      "page": 1,
+      "name": "공랭식 응축기 냉동능력 계산서",
+      "drawingNumber": null,
+      "documentDate": null,
+      "type": "calculation",
+      "note": "응축면적과 계산 냉동능력. 현장 실측 치수표가 아님.",
+      "sourcePath": "Image_20261110_0001.pdf",
+      "webPath": "apps/site/photos/chiller-20261110/sheet-001.jpg"
+    },
+    {
+      "page": 2,
+      "name": "액 리시버 치수도",
+      "drawingNumber": null,
+      "documentDate": null,
+      "type": "component-drawing",
+      "note": "LIQUID RECEIVER 318.5φ×570H,36.96L×2,R22. 신성엔지니어링/희창유업.",
+      "sourcePath": "Image_20261110_0001.pdf",
+      "webPath": "apps/site/photos/chiller-20261110/sheet-002.jpg"
+    },
+    {
+      "page": 3,
+      "name": "냉동설비 쉘형 및 압력용기류 성적서",
+      "drawingNumber": null,
+      "documentDate": "2011-04-01 제조 / 2011-05-04 시험서 서명",
+      "type": "test-certificate",
+      "note": "드림에어 DRV-250,318.5φ×570L,36.96L. 성적서 묶음 수량10은 현장 설치대수 아님.",
+      "sourcePath": "Image_20261110_0001.pdf",
+      "webPath": "apps/site/photos/chiller-20261110/sheet-003.jpg"
+    },
+    {
+      "page": 4,
+      "name": "쉘앤튜브 증발기 상세도",
+      "drawingNumber": null,
+      "documentDate": null,
+      "type": "component-drawing",
+      "note": "SHELL AND TUBE EVAPORATOR 406φ×1900L. 도면 표의33.25RT×1을 전체100RT 냉동기 용량으로 바꾸지 않음.",
+      "sourcePath": "Image_20261110_0001.pdf",
+      "webPath": "apps/site/photos/chiller-20261110/sheet-004.jpg"
+    },
+    {
+      "page": 5,
+      "name": "DHED 수냉각기 제품 자료",
+      "drawingNumber": null,
+      "documentDate": null,
+      "type": "catalogue",
+      "note": "쉘앤튜브/직팽식 제품의 형상·용량 표. 모델군 참고 자료이며 단독 현장 명판 아님.",
+      "sourcePath": "Image_20261110_0001.pdf",
+      "webPath": "apps/site/photos/chiller-20261110/sheet-005.jpg"
+    },
+    {
+      "page": 6,
+      "name": "A-SAN 안전밸브 조립 단면도",
+      "drawingNumber": "GC320174",
+      "documentDate": null,
+      "type": "component-section",
+      "note": "SAFETY VALVE ASSEMBLY DRAWING,GC-S50S11/S60S11. 압축기 단면이 아님.",
+      "sourcePath": "Image_20261110_0001.pdf",
+      "webPath": "apps/site/photos/chiller-20261110/sheet-006.jpg"
+    },
+    {
+      "page": 7,
+      "name": "안전변 작동 시험성적서 1",
+      "drawingNumber": null,
+      "documentDate": null,
+      "type": "test-certificate",
+      "note": "A-SAN 안전변 시험성적서. 정확 시험일 일부 수기 판독 미확정.",
+      "sourcePath": "Image_20261110_0001.pdf",
+      "webPath": "apps/site/photos/chiller-20261110/sheet-007.jpg"
+    },
+    {
+      "page": 8,
+      "name": "안전변 작동 시험성적서 2",
+      "drawingNumber": null,
+      "documentDate": null,
+      "type": "test-certificate",
+      "note": "A-SAN 안전변 시험성적서. 성적서2장을 추가 냉동기2대로 세지 않음.",
+      "sourcePath": "Image_20261110_0001.pdf",
+      "webPath": "apps/site/photos/chiller-20261110/sheet-008.jpg"
+    },
+    {
+      "page": 9,
+      "name": "제어기 I/O 배선도 · SCHEMATIC DIAGRAM #3",
+      "drawingNumber": "SCSA0073",
+      "documentDate": "2009-02-26",
+      "type": "electrical-schematic",
+      "note": "80/100/120RT 공통 전기도. ASI Controls 입출력 및 선택 조작부. 현장 현재 내부배선 확인값은 아님.",
+      "sourcePath": "Image_20261110_0001.pdf",
+      "webPath": "apps/site/photos/chiller-20261110/sheet-009.jpg"
+    },
+    {
+      "page": 10,
+      "name": "주전원·압축기·팬 회로도 · SCHEMATIC DIAGRAM #1",
+      "drawingNumber": "SCSA0071",
+      "documentDate": "2008-10-27",
+      "type": "electrical-schematic",
+      "note": "80/100/120RT 공통 전기도. 압축기2·팬모터8 주전원 계통.",
+      "sourcePath": "Image_20261110_0001.pdf",
+      "webPath": "apps/site/photos/chiller-20261110/sheet-010.jpg"
+    },
+    {
+      "page": 11,
+      "name": "제어·용량제어 회로도 · SCHEMATIC DIAGRAM #2",
+      "drawingNumber": "SCSA0072",
+      "documentDate": "2008-10-27",
+      "type": "electrical-schematic",
+      "note": "80/100/120RT 공통 회로. 압축기 용량제어 및 릴레이.",
+      "sourcePath": "Image_20261110_0001.pdf",
+      "webPath": "apps/site/photos/chiller-20261110/sheet-011.jpg"
+    },
+    {
+      "page": 12,
+      "name": "냉동기 위치 평면도",
+      "drawingNumber": null,
+      "documentDate": null,
+      "type": "site-plan",
+      "note": "기존1동창고 외벽에 냉동제조시설48.08RT 표시. 현재 본관입구·액상 실명·110m 장비열 직접 표시 없음.",
+      "sourcePath": "Image_20261110_0001.pdf",
+      "webPath": "apps/site/photos/chiller-20261110/sheet-012.jpg"
+    },
+    {
+      "page": 13,
+      "name": "냉동기 배치 평면도 · 냉동기·펌프·탱크 배열",
+      "drawingNumber": "SR-STORAGE TANK",
+      "documentDate": "2019년 날짜칸, 월/일 각인 판독 미확정",
+      "type": "equipment-layout",
+      "note": "냉동기+펌프+탱크 일렬 베이스9200mm/높이400mm. 실외기실 전체길이 아님.",
+      "sourcePath": "Image_20261110_0001.pdf",
+      "webPath": "apps/site/photos/chiller-20261110/sheet-013.jpg"
+    },
+    {
+      "page": 14,
+      "name": "공랭식 스크루 냉동기 조립도 · SCSA100AS1",
+      "drawingNumber": "SC010606",
+      "documentDate": "2011-02-23",
+      "type": "assembly-drawing",
+      "note": "신성엔지니어링 원제작도. 본체4140×1900×2200mm,23품목 부품표.",
+      "sourcePath": "Image_20261110_0001.pdf",
+      "webPath": "apps/site/photos/chiller-20261110/sheet-014.jpg"
+    },
+    {
+      "page": 15,
+      "name": "공랭식 스크루 냉동기 냉매 계통도 · SCSA100AS1",
+      "drawingNumber": "SC010609",
+      "documentDate": "2011-02-23",
+      "type": "piping-diagram",
+      "note": "좌우2냉매회로,압축기2,중앙COOLER,리시버2와밸브/센서 심볼.",
+      "sourcePath": "Image_20261110_0001.pdf",
+      "webPath": "apps/site/photos/chiller-20261110/sheet-015.jpg"
+    },
+    {
+      "page": 16,
+      "name": "HITACHI 50ASC 반밀폐 스크루 압축기 치수도",
+      "drawingNumber": "317T71062",
+      "documentDate": "2003-02-17로 표제 판독",
+      "type": "compressor-drawing",
+      "note": "MODEL50ASC,길이874mm·폭595mm. 현장50ASC-H 외형/포트와 직접 계열 대조 가능.",
+      "sourcePath": "Image_20261110_0001.pdf",
+      "webPath": "apps/site/photos/chiller-20261110/sheet-016.jpg"
+    },
+    {
+      "page": 17,
+      "name": "HITACHI 용량제어 부품 변경 · 1/2",
+      "drawingNumber": "SPN200808",
+      "documentDate": "2008-07",
+      "type": "service-parts-news",
+      "note": "50ASC-H 포함. 모터/로터를 포함한 단면 및 슬라이드밸브·피스톤·로드 확대도. 변경 전 그림임에 주의.",
+      "sourcePath": "Image_20261110_0001.pdf",
+      "webPath": "apps/site/photos/chiller-20261110/sheet-017.jpg"
+    },
+    {
+      "page": 18,
+      "name": "HITACHI 용량제어 부품 변경 · 2/2",
+      "drawingNumber": "SPN200808",
+      "documentDate": "2008-07",
+      "type": "service-parts-news",
+      "note": "2007년9월 생산부터 적용되는 부시/O링/케이싱/로터 조립체 변경표. 현장 신형 생산2025와 revision 구분.",
+      "sourcePath": "Image_20261110_0001.pdf",
+      "webPath": "apps/site/photos/chiller-20261110/sheet-018.jpg"
+    },
+    {
+      "page": 19,
+      "name": "HITACHI 스크루 압축기 계열 치수 자료",
+      "drawingNumber": null,
+      "documentDate": null,
+      "type": "catalogue",
+      "note": "여러 SC계열 크기표. 현장50ASC-H와 정확 같은 형식으로 단정하지 않음.",
+      "sourcePath": "Image_20261110_0001.pdf",
+      "webPath": "apps/site/photos/chiller-20261110/sheet-019.jpg"
+    },
+    {
+      "page": 20,
+      "name": "HITACHI 스크루 압축기 계열 일반·성능 자료",
+      "drawingNumber": null,
+      "documentDate": null,
+      "type": "catalogue",
+      "note": "여러 형식 성능표/운전범위. 현장 현재 압력·능력 측정값 아님.",
+      "sourcePath": "Image_20261110_0001.pdf",
+      "webPath": "apps/site/photos/chiller-20261110/sheet-020.jpg"
+    },
+    {
+      "page": 21,
+      "name": "응축 코일 상세도 · COIL, COND. 50HP-R",
+      "drawingNumber": "SC010007B",
+      "documentDate": "2005-11-04 / revision2015-06-19 포함",
+      "type": "coil-drawing",
+      "note": "SCSA050/100/150/200AS1 계열. 코일1715폭,3ROW×42STEPS. 탱크도면이 아님.",
+      "sourcePath": "Image_20261110_0001.pdf",
+      "webPath": "apps/site/photos/chiller-20261110/sheet-021.jpg"
+    },
+    {
+      "page": 22,
+      "name": "핀 사양 및 전열면적 표",
+      "drawingNumber": null,
+      "documentDate": null,
+      "type": "catalogue",
+      "note": "FIN SPECIFICATION/TRANSFER AREA,관·핀 제품 참고표. 별도 현장 치수표 아님.",
+      "sourcePath": "Image_20261110_0001.pdf",
+      "webPath": "apps/site/photos/chiller-20261110/sheet-022.jpg"
+    }
+  ],
+  "assembly": {
+    "page": 14,
+    "model": "SCSA100AS1",
+    "maker": "SHINSUNG ENGINEERING CO., LTD. / (주)신성엔지니어링",
+    "drawingNumber": "SC010606",
+    "date": "2011-02-23",
+    "overallDimensionsMm": {
+      "width": 4140,
+      "depth": 1900,
+      "height": 2200
+    },
+    "assemblyBom": [
+      {
+        "number": "01",
+        "description": "Compressor",
+        "quantity": 2,
+        "specification": "50ASC-H",
+        "koreanName": "압축기",
+        "remark": null
+      },
+      {
+        "number": "02",
+        "description": "Condenser",
+        "quantity": 1,
+        "specification": "Ass’y",
+        "koreanName": "응축기 조립체",
+        "remark": null
+      },
+      {
+        "number": "03",
+        "description": "Evaporator",
+        "quantity": 1,
+        "specification": "Ass’y",
+        "koreanName": "증발기 조립체",
+        "remark": null
+      },
+      {
+        "number": "04",
+        "description": "Expansion Valve",
+        "quantity": 2,
+        "specification": "1-1/8\" × 1-1/8\"",
+        "koreanName": "팽창밸브",
+        "remark": "Refer to Specification"
+      },
+      {
+        "number": "05",
+        "description": "Control & Power Box",
+        "quantity": 1,
+        "specification": "Ass’y",
+        "koreanName": "제어·전원함",
+        "remark": null
+      },
+      {
+        "number": "06",
+        "description": "Fan",
+        "quantity": 8,
+        "specification": "Ass’y",
+        "koreanName": "팬",
+        "remark": null
+      },
+      {
+        "number": "07",
+        "description": "Fan Motor",
+        "quantity": 8,
+        "specification": "Ass’y",
+        "koreanName": "팬 모터",
+        "remark": null
+      },
+      {
+        "number": "08",
+        "description": "Protector (1)",
+        "quantity": 10,
+        "specification": "Ass’y",
+        "koreanName": "보호 격자 (1)",
+        "remark": "DWG. SC010011"
+      },
+      {
+        "number": "09",
+        "description": "Protector (2)",
+        "quantity": 3,
+        "specification": "Ass’y",
+        "koreanName": "보호 격자 (2)",
+        "remark": "DWG. SC010012"
+      },
+      {
+        "number": "10",
+        "description": "Receiver",
+        "quantity": 2,
+        "specification": "Ass’y",
+        "koreanName": "액 리시버",
+        "remark": null
+      },
+      {
+        "number": "11",
+        "description": "Service Valve",
+        "quantity": 4,
+        "specification": "1-1/8\"",
+        "koreanName": "서비스 밸브",
+        "remark": null
+      },
+      {
+        "number": "12",
+        "description": "Safety & Stop Valve",
+        "quantity": 2,
+        "specification": "25A",
+        "koreanName": "안전·차단 밸브",
+        "remark": null
+      },
+      {
+        "number": "13",
+        "description": "Check Valve",
+        "quantity": 2,
+        "specification": "2-1/8\"",
+        "koreanName": "체크 밸브",
+        "remark": null
+      },
+      {
+        "number": "14",
+        "description": "Shut Off Valve",
+        "quantity": 2,
+        "specification": "2-1/8\"",
+        "koreanName": "차단 밸브",
+        "remark": null
+      },
+      {
+        "number": "15",
+        "description": "Filter Drier",
+        "quantity": 2,
+        "specification": "1-1/8\"",
+        "koreanName": "필터 드라이어",
+        "remark": null
+      },
+      {
+        "number": "16",
+        "description": "Sight Glass",
+        "quantity": 2,
+        "specification": "7/8\"",
+        "koreanName": "사이트 글라스",
+        "remark": null
+      },
+      {
+        "number": "17",
+        "description": "Solenoid Valve",
+        "quantity": 2,
+        "specification": "1-1/8\"",
+        "koreanName": "솔레노이드 밸브",
+        "remark": null
+      },
+      {
+        "number": "18",
+        "description": "Liquid Injection Sol. V/V",
+        "quantity": 2,
+        "specification": "3/8\"",
+        "koreanName": "액 분사 솔레노이드 밸브",
+        "remark": null
+      },
+      {
+        "number": "19",
+        "description": "Capillary Tube",
+        "quantity": 2,
+        "specification": "I.D. 4.0mm",
+        "koreanName": "모세관",
+        "remark": "L 1000mm"
+      },
+      {
+        "number": "20",
+        "description": "High Pressure Gauge",
+        "quantity": 2,
+        "specification": "Ass’y",
+        "koreanName": "고압 압력계",
+        "remark": null
+      },
+      {
+        "number": "21",
+        "description": "Low Pressure Gauge",
+        "quantity": 2,
+        "specification": "Ass’y",
+        "koreanName": "저압 압력계",
+        "remark": null
+      },
+      {
+        "number": "22",
+        "description": "Pressure Switch Box",
+        "quantity": 2,
+        "specification": "Ass’y",
+        "koreanName": "압력 스위치함",
+        "remark": null
+      },
+      {
+        "number": "23",
+        "description": "Common Base Frame",
+        "quantity": 1,
+        "specification": "Ass’y",
+        "koreanName": "공통 베이스 프레임",
+        "remark": null
+      }
+    ]
+  },
+  "siteAudit": {
+    "page12": "기존1동창고 외벽의48.08RT 등록도형은 원도면 위치 근거이나 현100RT 카드와의 동일성을 숫자만으로 확정하거나 배제하지 않음. 본관입구 및 액상 실명과 현22개 장비열의 일대일 대응은 미확정.",
+    "page13": "9200mm는 기계·펌프·탱크 전체 베이스 치수. 110m 실외기실 길이 또는4140mm 본체 길이와 혼용 금지.",
+    "drawingDimensions": "p12상단35000+1000+61500,기존3동39000/44000,기존2동33000 등 치수는 해당 과거 건물도형 기준이며 캠퍼스 현재 매스에 바로 강제 적용하지 않음."
+  },
+  "componentMatching": {
+    "status": "현장 사진과원제작도SCSA100AS1는상부V코일2뱅크·50ASC계열압축기2·격자·제어반외형과직접일치. 현장새압축기는2025제작명판이며2011원제작도이후교체/정비를반영해야함.",
+    "compressor": "p16 MODEL50ASC 외형과 현장50ASC-H 문자·440kg·단자함/이음볼트/리브를 대조. p17/18은 적용모델50ASC-H를 명시해 계열단면 근거가 된다.",
+    "limits": "신형의2025 내부 revision·정확 로터 가공치·개별 제조번호는 확인 불가. p4증발기와p21코일은 묶음내 상세 참고이며 치수/용량 표기를p14전체정격과혼용하지않음."
+  }
+}

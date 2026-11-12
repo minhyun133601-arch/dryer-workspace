@@ -1,0 +1,11 @@
+{
+  "sourceVideo": "C:\\Users\\user\\Desktop\\프로젝트\\20261109_133757KST_GPS-VALID_LAT35.3619717_LON129.0312383_H24.7-TN_DIR-AVAILABLE_P-23.9_ACC2.4m_FV-32ca5218-af17-4d68-a395-de3573150cd8.mp4",
+  "sourceVideoRelativePath": "20261109_133757KST_GPS-VALID_LAT35.3619717_LON129.0312383_H24.7-TN_DIR-AVAILABLE_P-23.9_ACC2.4m_FV-32ca5218-af17-4d68-a395-de3573150cd8.mp4",
+  "sourceVideoBytes": 409712904,
+  "sourceVideoSha256": "662ae134b74db7d3f1c6438387f34eeb1dda5556ed08e2737242bfd1c59ae519",
+  "exactVideoSeconds": 4,
+  "frame": "tmp/outdoor-condensers-location-20261110/20261109_133757-004s-native.jpg",
+  "frameSha256": "cbc90a10e576b1e4c1609f302abd2124ced8fd522ede59d06d2be50b70483577",
+  "method": "ffmpeg accurate seek to 4s, one JPEG at native auto-rotated resolution; no source modification",
+  "observedView": "코일의 녹슨 상부 팬·청회색 수직 코일이 왼쪽 전경에 있고, PET/파우치 공조기의 짧은 끝면 바로 옆으로 이어진다. 공조기의 원형창이 있는 긴 정면은 화면 깊이 방향으로 계속된다. 공장 외벽은 왼쪽, 블록 담장과 통행 띠는 오른쪽이다. 따라서 코일을 AHU 긴 정면 앞(across+)에 나란히 두는 현재 관계와 다르다."
+}

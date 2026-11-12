@@ -1,0 +1,74 @@
+{
+  "id": "3-pet-1782110231083-672874",
+  "line": "",
+  "name": "PET 파우치 공조기",
+  "note": "",
+  "plan": "",
+  "rate": 0,
+  "room": "실외기실",
+  "team": "3팀",
+  "group": "",
+  "owner": "",
+  "status": "비가동중",
+  "process": "",
+  "documents": [],
+  "lastCheck": "",
+  "modelName": "",
+  "nextCheck": "",
+  "photoCrop": null,
+  "photoName": "PET 파우치 공조기 photo.jpg",
+  "detailInfo": [
+    {
+      "label": "설비명",
+      "value": "PET 파우치 공조기"
+    },
+    {
+      "label": "관리팀",
+      "value": "3팀"
+    },
+    {
+      "label": "가동률",
+      "value": "0%"
+    }
+  ],
+  "ownerLabel": "담당 업체",
+  "production": "",
+  "teamDataKey": "work_team_calendar_team3",
+  "detailGroups": {
+    "equipmentSpecs": []
+  },
+  "manufacturer": "",
+  "photoDataUrl": "",
+  "equipmentCode": "3-PET-1782110231083-672874",
+  "operationInfo": [
+    {
+      "label": "설비명",
+      "value": "PET 파우치 공조기"
+    },
+    {
+      "label": "관리팀",
+      "value": "3팀"
+    },
+    {
+      "label": "실",
+      "value": "실외기실"
+    },
+    {
+      "label": "공정",
+      "value": ""
+    },
+    {
+      "label": "가동률",
+      "value": "0"
+    }
+  ],
+  "manufacturedAt": "",
+  "photoDocumentId": "23be18ff-e91c-4fb2-a1ea-2212c088c325",
+  "photoPreviewUrl": "/api/files/23be18ff-e91c-4fb2-a1ea-2212c088c325/view",
+  "photoDownloadUrl": "/api/files/23be18ff-e91c-4fb2-a1ea-2212c088c325/download",
+  "manufacturerLabel": "제조사",
+  "photoThumbDataUrl": "",
+  "maintenanceHistory": [],
+  "photoAttachmentKey": "equipment-photo-main",
+  "photoStorageRelPath": "equipment-assets/equipment-history/PET 파우치 공조기/images/e2516bef-89ea-4ccc-88e2-deda7dbdbd61.jpg"
+}

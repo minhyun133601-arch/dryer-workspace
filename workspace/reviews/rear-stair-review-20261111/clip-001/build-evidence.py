@@ -1,0 +1,119 @@
+from pathlib import Path
+import hashlib
+import json
+import math
+from PIL import Image
+
+root = Path(__file__).resolve().parents[4]
+work = Path(__file__).resolve().parent
+reference = root / 'references/rear-stair-20261111'
+photo_dir = root / 'apps/site/photos/rear-stair'
+source = next(root.rglob('20261111_142342*.mp4'))
+sidecar = source.with_suffix('.txt')
+probe = json.loads((work / 'ffprobe.json').read_text(encoding='utf-8-sig'))
+reference.mkdir(parents=True, exist_ok=True)
+photo_dir.mkdir(parents=True, exist_ok=True)
+
+def sha(path):
+    digest = hashlib.sha256()
+    with path.open('rb') as handle:
+        for chunk in iter(lambda: handle.read(1024 * 1024), b''):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+rows = [json.loads(line) for line in sidecar.read_text(encoding='utf-8-sig').splitlines() if line.startswith('{') and 'video_time_ms' in line]
+def gps(sec):
+    row = min(rows, key=lambda value: abs(value['video_time_ms'] / 1000 - sec))
+    loc, direction = row.get('geolocation', {}), row.get('camera_direction', {})
+    result = {'requestedSecond': sec, 'videoSecond': row['video_time_ms'] / 1000, 'status': loc.get('status'), 'headingDegrees': direction.get('heading_degrees'), 'pitchDegrees': direction.get('pitch_degrees'), 'usedAsEquipmentSurvey': False}
+    if 'latitude_degrees' in loc:
+        north = (loc['latitude_degrees'] - 35.36269436) * 111320
+        east = (loc['longitude_degrees'] - 129.03104166) * 111320 * math.cos(math.radians(35.36269436))
+        result.update({'latitude': loc['latitude_degrees'], 'longitude': loc['longitude_degrees'], 'accuracyM': loc.get('horizontal_accuracy_m'), 'ageMs': loc.get('age_ms'), 'campusXZ': [round(north * math.cos(math.radians(b)) + east * math.sin(math.radians(b)), 3) for b in [325.4, 55.4]]})
+    return result
+
+captions = {
+3:'높은 주동·세로창과 낮은 돌출 계단매스의 높이 차이',7:'생산 2팀 휴게실 명판과 유리문·옆 천공문',
+10:'휴게실 옆 천공 양개문과 부자재 셔터',13:'첫 부자재 출입구 셔터',16:'낮은 캐노피 위 수평창',19:'뒤편 통로와 연속 캐노피·검정노랑 방호관',
+22:'중간 유리 양개문과 인접 외함·관로',25:'고층 루버·층별 캐노피와 더 낮은 서측 계단매스',28:'중간 녹색 양개 유리 출입문',31:'문 옆 높은 검정노랑 방호 프레임·소형 실외기',
+34:'고층 측 세로창과 유리문 캐노피',37:'두 번째 부자재 출입구 양개 금속셔터',40:'고층벽 창·대형 루버와 저층 캐노피의 높이 관계',43:'다리 있는 큰 스테인리스 밀폐 사각 외함',
+46:'낮은 계단매스 모서리와 벽 하단 마감·우수관',49:'주 고층벽의 층별 루버·작은 캐노피 반복',52:'바닥 보온관 두 줄·밸브·액추에이터',55:'보온관 흰 핸드휠 밸브',
+58:'밀폐 사각 외함 하부 보온관 접속',61:'낮은 계단매스 세로창 하단과 우수관',64:'낮은 계단매스 지붕선과 반복 환기창 띠',67:'옹벽 앞 드럼·소형 용기 보관',70:'실외기 철골대 옆 긴 뒤편 통로',
+76:'높은 옹벽과 배수 측구·초록 배수덮개',79:'철골대 위 전면 루버 캐비닛 두 기 근접',82:'별도 2단 실외기열·노랑 보호링 사다리·건물 수평창',
+85:'지상 상부팬형 실외기와 콘크리트 받침',88:'기둥 사이 벽배관·전기함',91:'철골대 하부 보·기둥과 벽배관',94:'실외기 상부 원형팬·검정 열교환면',100:'노란 보호링 수직사다리',103:'Kiturami 표시 지상 실외기',
+106:'지상 실외기와 노랑 가스관',109:'지상열 뒤 소형 벽 실외기 두 기',112:'낮은 인접 매스와 3층동 벽 높이 차이',115:'노란 사다리·벽 사각 후드·상부 배기',118:'사다리 옆 열린 사각 벽 후드',
+121:'상부 루버 캐비닛과 노랑 난간',124:'루버 캐비닛 배관·배선과 상부 수평창',127:'상부 캐비닛 전면·철골 데크',130:'철골대 하부 보·기둥과 지상열',133:'스틱·소포장동 뒤 실외기열·창·지붕·옹벽 통로',
+136:'마지막 유리 현관과 작은 콘크리트 진입 경사',139:'마지막 현관 안 선풍기·소형 실외기 적치',142:'현관 문턱까지 접근; 실내 계단은 촬영되지 않음',
+}
+photos = []
+for second, caption in captions.items():
+    path = work / f'native/frame-{second}.jpg'
+    target = photo_dir / f'frame-{second:03d}s.jpg'
+    im = Image.open(path).convert('RGB')
+    im.thumbnail((1440, 1440), Image.Resampling.LANCZOS)
+    im.save(target, quality=84, optimize=True)
+    photos.append({'path': target.relative_to(root).as_posix(), 'second': second, 'caption': caption, 'width': im.width, 'height': im.height, 'sha256': sha(target), 'reviewed': True})
+
+evidence = {
+  'schemaVersion':1,'date':'2026-11-11',
+  'source': {'video':source.relative_to(root).as_posix(),'sidecar':sidecar.relative_to(root).as_posix(),'bytes':source.stat().st_size,'videoSha256':sha(source),'sidecarSha256':sha(sidecar),'durationSeconds':float(probe['format']['duration']),'encodedSize':[1920,1080],'displayRotationDegrees':-90,'uprightSize':[1080,1920],'audioPresent':False,'gpsObservationCount':len(rows)},
+  'review':{'scopeSeconds':[0,143.015933],'contactIntervalS':3,'nativeKeyframes':sorted(captions),'contactTimestampPrecision':'Approximate bins; exact observations use native ffmpeg seek times.','contactSheets':[f'tmp/rear-stair-review-20261111/clip-001/contact-{n:02d}.jpg' for n in range(1,5)]},
+  'coordinateReference':{'originLatLon':[35.36269436,129.03104166],'+XBearing':325.4,'+ZBearing':55.4,'units':'metres approximate; campus visual reconstruction, not equipment survey','cameraCoordinatesAreObjectCoordinates':False,'lastReceivedReferenceUsedAsCurrent':False},
+  'route':[
+    {'seconds':[0,18],'observation':'Starts at the known rear-road production-team-2 break-room frontage. Glass break-room door, adjacent perforated double door and first auxiliary-materials shutter under a low canopy.','landmark':'생산 2팀 휴게실','worldAnchorXZApprox':[51,-66],'basis':'Readable native7 plate + existing independently located facade + first GPS near[52.6,-64.1].'},
+    {'seconds':[19,41],'observation':'Walks west along the high dryer rear facade. Passes a separate green double-glazed personnel door, then a second metal auxiliary-materials shutter. Looks up at repeated high-level louver openings/canopies and high stair glazing.','approximateCameraXZRange':[[45.6,-72.8],[33.4,-71.1]],'basis':'Continuous footage, GPS corroboration; doors are distinct and must not be merged.'},
+    {'seconds':[42,66],'observation':'At the western end of the high facade, inspects a large closed rectangular steel housing on legs and connected insulated low pipework/handwheel valves, then a distinctly lower projecting stair-window mass and its roofline.','approximateCameraXZRange':[[31.1,-70.1],[27.8,-70.2]],'basis':'Native43/49/52/55/58/64; physical function of steel housing unconfirmed.'},
+    {'seconds':[67,78],'observation':'Rounds the mass into the long narrow back lane bounded by the next building facade and a tall retaining wall, with drainage channel/grates.','approximateCameraXZRange':[[25,-71.5],[17.6,-71.5]]},
+    {'seconds':[79,133],'observation':'Walks the separate two-tier HVAC service bank on the rear of the stick/small-packaging building, reaches the yellow caged vertical ladder and wall hood, then turns back.','approximateCameraXZRange':[[14,-68],[-5.8,-72.2],[3.4,-74.1]],'basis':'Entire rear bank on native82/133; distinct from the liquid-building OUTDOOR_ROOM equipment.'},
+    {'seconds':[134,143.015933],'observation':'Approaches the green double-glazed entrance beside the eastern end of the HVAC bank. Ends at its threshold with fan and loose equipment visible inside; no interior stair flight is filmed.','worldAnchorXZApprox':[10.5,-64.2],'basis':'GPS near [10.6,-64.2] at142 + existing packaging rear plane z=-64.2 + route continuity. Name 2팀 계단 is user context, not a readable plate in this final shot.'}
+  ],
+  'readableLabels':[
+    {'second':7,'text':'생산 2팀 휴게실','confidence':'clear door plate','correction':'The existing feature id may retain legacy wording, but user-visible identity must be 생산 2팀 휴게실.'},
+    {'seconds':[10,13],'text':'부자재 출입구','confidence':'first shutter sign'},
+    {'second':37,'text':'부자재 출입구','confidence':'clear second shutter sign'},
+    {'second':103,'text':'Kiturami','confidence':'visible manufacturer sticker; no capacity/specification inferred'},
+    {'second':139,'text':'금연건물','confidence':'entrance sticker; not a stair-room identification plate'}
+  ],
+  'massingInterpretation':{
+    'doNotRaiseEntireAnnex':{'annexExistingHeightM':7.3,'reason':'The first break-room canopy and horizontal-window low wall remain far lower than the repeated louver/canopy high main wall. The clip provides no evidence that the whole 48x45 annex is 13.3m high.'},
+    'highDryerRearFace':{'existingTowerPose':[28,0,-49],'existingSize':[17.2,26.8,40.4],'historicalRearPlaneZ':-62.4,'evidenceSeconds':[3,25,40,49],'observation':'At least five high-level louver/canopy repetitions remain vertically continuous; their adjacent glazing continues to the tall wall roof. This is not the small low stair projection.','recommendation':'Keep the established A013 interior registration and seven levels, but extend the approximate exterior rear envelope 3.6m to z=-66 to match the filmed common rear frontage; add repeated rear louver/awning detail and distinguish the northeast high bay.','exteriorRearExtensionMApprox':3.6,'registeredExteriorRearPlaneZApprox':-66,'measurementConfirmed':False,'geometryBasis':'rear-shape-approximation; current video priority; does not move historical interior floor axes'},
+    'highGlazedBay':{'evidenceSeconds':[3,25,34,49],'interpretation':'High glazing lies east of the repeated louver wall and is different from the later low roofed glazed stair mass.','worldXApproxRange':[36.6,41.4],'approximateEnvelope':{'centerX':39,'width':4.8,'depth':6.7,'rearZ':-66,'height':40.4},'measurementConfirmed':False,'geometryBasis':'A013 northeast bay extends beyond the main 17.2m tower footprint. Exterior rear frontage aligned to video at z=-66. World location is registration inference, not a measured new footprint.'},
+    'lowWesternStairProjection':{'evidenceSeconds':[25,46,61,64],'observation':'A separate substantially lower wall/roof is clearly visible beside the tall main facade. Its vertical green glazing has repeated opening strips and visible diagonal stair/landing silhouettes.','approximateEnvelope':{'centerX':23,'width':5.6,'depth':3.6,'rearZ':-66,'height':13.3},'measurementConfirmed':False,'confidence':'Height/width/pose proportional; not surveyed. Relative high-versus-low mass distinction is clear.','internalFlightsConfirmed':False,'recommendation':'Represent the observed low projecting envelope/window rhythm without inventing an exact flight count or full interior.'},
+    'packagingRear':{'existingPose':[2.225,0,-49],'existingSize':[31.35,30.4,13.3],'rearPlaneZ':-64.2,'xExtent':[-13.45,17.9],'evidenceSeconds':[70,82,112,115,133,136],'observation':'Long upper horizontal window bands, lower largely blank wall, raised steel HVAC rack and final entrance fit this existing building and rear plane.','keepSeparateFromLiquidOutdoorRoom':True},
+    'existingYellowDoorCaution':'The prior yellow double door near world[32.5,-62.75] needs comparison with the newly clear second materials roller shutter around x33. The new clip also has a separate green personnel double door around x42; do not collapse these into one old door/window feature.'
+  },
+  'featureEvidence':[
+    {'id':'break-room-frontage','seconds':[7,10,13,16],'features':['single green-tinted glass break-room door','square perforated double door','first metal materials shutter','shared broad concrete canopy/ceiling lamps','small high horizontal glazing','gas/pipe collision guards']},
+    {'id':'rear-personnel-door','seconds':[19,22,28,31,34],'features':['separate double green-glazed personnel door','short concrete ramp/threshold','concrete canopy','adjacent tall black/yellow protective frame','small air-conditioner/utility units','wall downpipes']},
+    {'id':'second-materials-shutter','seconds':[37,40],'features':['paired metal roller/sliding shutter leaves','부자재 출입구 sign','small ramp area','canopy','adjacent horizontal window and high-level louver stack']},
+    {'id':'closed-steel-housing','seconds':[43,52,55,58],'features':['large capped rectangular steel housing','four support legs','horizontal reinforcing bands','insulated pipe inlet at lower face','vertical side pipe','two low insulated mains','white handwheel valves','central small round valve/actuator'],'functionConfirmed':False,'notSimplyExistingOpenWashBasin':True},
+    {'id':'rear-hvac-rack','seconds':[79,82,85,100,109,118,124,127,130,133],'features':['gray steel elevated service platform with legs and underside beams','yellow upper safety rail','yellow vertical caged ladder','upper tall front-louver cabinets with visible black service pipes','ground twin-top-fan condenser modules on concrete feet','two small elevated wall condensers at western end','yellow low wall gas/service pipe','shiny vertical pipe/duct risers','open square wall hood by ladder'],'observedCountMinimum':{'upperLargeCabinetsInOneFrame':4,'groundLargeModulesInOneFrame':7,'smallWallUnits':2},'countCaution':'Bank endpoints are seen in separate views and some units are cropped; reconcile consecutive frames before presenting a total as exact. Do not add these to the liquid-building 22-unit catalog.'},
+    {'id':'retaining-lane','seconds':[67,70,73,76],'features':['tall weathered retaining wall','narrow asphalt lane','concrete drainage strip','green rectangular drain covers','yellow transverse line','drum/container staging near corner'],'stagingPositionsPermanent':False},
+    {'id':'final-stair-entrance','seconds':[136,139,142],'features':['recessed green double-glazed door with long steel pulls','concrete sloped threshold','low canopy','white wall base trim','indoor standing fan and loose condenser/equipment storage'],'interiorStairGeometryFilmed':False}
+  ],
+  'gpsSamples':[gps(s) for s in [0,3,7,10,16,22,28,34,40,43,49,55,58,64,70,76,82,88,94,100,106,112,118,124,130,136,139,142]],
+  'hvacReconstruction':{
+    'parentBuilding':'campus-packaging-building','separateFromLiquidOutdoorRoom':True,'faceYawRadians':math.pi,
+    'approximateRack':{'worldCenterXZ':[2.225,-65.6],'width':13.4,'depth':2.3,'deckElevation':3.4,'cabinetHeightRange':[1.8,2.0],'railHeightApprox':1.05,'measurementConfirmed':False,'integrationBasis':'Current rear-survey-data.js; measured dimensions remain unconfirmed.'},
+    'representedMinimumCount':{'upper':4,'ground':7,'smallWall':2},'additionalDistinctUnitsConfirmed':False,
+    'unitIdentityBasis':'Evidence indices run west to east, not readable installed asset IDs. They are not guaranteed to equal renderer-local IDs because a rear-facing feature frame rotates local X. Source views overlap and individual matching remains approximate.',
+    'upper':[
+      {'id':'rear-upper-1','facadeOrderWestToEast':1,'sourceSeconds':[121,124],'observation':'western cabinet by yellow ladder'},
+      {'id':'rear-upper-2','facadeOrderWestToEast':2,'sourceSeconds':[124,127],'observation':'adjacent weathered cabinet and visible black service piping'},
+      {'id':'rear-upper-3','facadeOrderWestToEast':3,'sourceSeconds':[79,82],'observation':'one of two cleaner eastern cabinets'},
+      {'id':'rear-upper-4','facadeOrderWestToEast':4,'sourceSeconds':[79,82],'observation':'eastern end cabinet near final entry canopy'}],
+    'ground':[
+      {'id':'rear-ground-1','facadeOrderWestToEast':1,'sourceSeconds':[109,133],'observedBrand':'Century','fanCount':2,'fanAxis':'up'},
+      {'id':'rear-ground-2','facadeOrderWestToEast':2,'sourceSeconds':[106,109],'observedBrand':'Kiturami','fanCount':2,'fanAxis':'up'},
+      {'id':'rear-ground-3','facadeOrderWestToEast':3,'sourceSeconds':[103,106],'observedBrand':'Kiturami','fanCount':None,'note':'second top fan partly cropped at103; do not treat one visible fan as a one-fan unit'},
+      {'id':'rear-ground-4','facadeOrderWestToEast':4,'sourceSeconds':[94,100],'fanCount':None},
+      {'id':'rear-ground-5','facadeOrderWestToEast':5,'sourceSeconds':[82,85,94],'fanCount':None},
+      {'id':'rear-ground-6','facadeOrderWestToEast':6,'sourceSeconds':[82,85],'fanCount':None},
+      {'id':'rear-ground-7','facadeOrderWestToEast':7,'sourceSeconds':[79,82],'fanCount':None}],
+    'wallSmall':[{'id':'rear-wall-small-1','sourceSeconds':[106,109],'observedBrand':'Carrier','fanCount':2,'fanAxis':'front-vertical-pair','hasProtectiveLouvers':True},{'id':'rear-wall-small-2','sourceSeconds':[106,109],'fanCount':2,'fanAxis':'front-vertical-pair','hasProtectiveLouvers':True}],
+    'deckHeightReason':'Native79 ground module approximately1.2-1.3m high compared with the nearby full steel column supports a deck around3.2-3.6m, not a4.8m deck. Upper module adds approximately1.8-2.0m. All dimensions remain visual proportions.'},
+  'uncertainties':['GPS gives camera estimates with metre-scale apparent precision but does not measure the wall behind the camera or equipment centres. Native frames and known campus adjacency control registration.','No site dimension survey, drone elevation or calibrated photogrammetry is supplied; heights and new protrusion dimensions remain proportional.','The final doorway is associated with the user-described 2팀 stair route, but its plate is not readable and no inside stair flights are recorded.','Unit model, capacity and operating state must not be inferred from the manufacturer sticker or grille count.','A closed steel housing is visible, but its liquid/air/process function is not verified.','The two vertical glazed masses are at different heights and positions. Do not stretch the low projection window to a 30m strip or raise the entire annex to the tower height.'],
+  'photos':photos,
+}
+(reference / 'evidence.json').write_text(json.dumps(evidence,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+print(json.dumps({'photoCount':len(photos),'photoBytes':sum((root/p['path']).stat().st_size for p in photos),'observations':len(rows),'duration':evidence['source']['durationSeconds']}))

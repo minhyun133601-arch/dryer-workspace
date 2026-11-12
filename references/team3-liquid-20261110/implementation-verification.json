@@ -1,0 +1,152 @@
+{
+  "date": "2026-11-10",
+  "identity": {
+    "team3": "액상",
+    "team2": "스틱·소포장",
+    "legacyDryerTeam2IsSeparate": true
+  },
+  "rooms": [
+    {
+      "id": "mixing",
+      "name": "배합실",
+      "cardCount": 20,
+      "referenceOnly": false
+    },
+    {
+      "id": "pouch",
+      "name": "파우치실",
+      "cardCount": 7,
+      "referenceOnly": false
+    },
+    {
+      "id": "outer",
+      "name": "외포장실",
+      "cardCount": 7,
+      "referenceOnly": false
+    },
+    {
+      "id": "pet",
+      "name": "PET실",
+      "cardCount": 6,
+      "referenceOnly": false
+    },
+    {
+      "id": "boiler",
+      "name": "보일러실 · 위치 미확정",
+      "cardCount": 4,
+      "referenceOnly": true
+    },
+    {
+      "id": "stick",
+      "name": "스틱실",
+      "cardCount": 3,
+      "referenceOnly": false
+    },
+    {
+      "id": "retort",
+      "name": "후살균실",
+      "cardCount": 3,
+      "referenceOnly": false
+    },
+    {
+      "id": "pellet",
+      "name": "제환실 · 위치 미확정",
+      "cardCount": 2,
+      "referenceOnly": true
+    }
+  ],
+  "cardCount": 52,
+  "sourceColumns": 9,
+  "sourceRoutes": 2,
+  "tests": {
+    "count": 163,
+    "pass": 163,
+    "fail": 0,
+    "log": "tmp/team3-liquid-20261110/full-tests.txt"
+  },
+  "syntaxScripts": 51,
+  "geometry": {
+    "equipmentOverlapCount": 0,
+    "columnOverlapCount": 0,
+    "individualCoordinates": "historical room-level registration; individual current placements and dimensions approximate",
+    "unlocatedRoomIds": [
+      "boiler",
+      "pellet"
+    ],
+    "referenceCardCount": 6
+  },
+  "browser": {
+    "sourcePhotosAll52Decoded": true,
+    "roomFiltersAll8Verified": true,
+    "localDeepLink": true,
+    "sharedDeepLink": true,
+    "offlineLiquidPhotoEmbedded": true,
+    "offlineChillerDrawingEmbedded": true,
+    "consoleErrors": 0,
+    "desktopAndPhone": true,
+    "roomCutaway": true
+  },
+  "artifact": {
+    "path": "exports/건조기-통합-공유.html",
+    "bytes": 25327792,
+    "sha256": "e90b1d1b99b4b7e12555ae4c0d4ff5c4e4e4e1eb52243d2b5148623201a23dee",
+    "selfContained": true
+  },
+  "files": [
+    {
+      "path": "apps/site/liquid-data.js",
+      "bytes": 101111,
+      "sha256": "86d85da3648bc8a6d229d96383564636a55029b5515be45c199ad1769cf536bd"
+    },
+    {
+      "path": "apps/site/liquid-models.js",
+      "bytes": 40924,
+      "sha256": "7810b014c39152481c9eed5ffaa929ee08d9bc911a1dbef98b904f7072086487"
+    },
+    {
+      "path": "apps/site/liquid-detail.js",
+      "bytes": 14911,
+      "sha256": "c147de94794e13d5fcb1c6adb4d9a4946f760f45b95673de05d13864eb3cd849"
+    },
+    {
+      "path": "apps/site/liquid-assets.js",
+      "bytes": 535,
+      "sha256": "6c4ea398411f26474db81dbe0fba70dfa645d5afd6660715e6739e4e5b82cc47"
+    },
+    {
+      "path": "apps/site/liquid-detail.css",
+      "bytes": 3986,
+      "sha256": "66801743991ffb78d6ecc2e4f8dc66844c809944d10fd3f87caa1473b7135f83"
+    },
+    {
+      "path": "apps/site/detail-camera.js",
+      "bytes": 6075,
+      "sha256": "b28593a57c40881df3fe8b187e4fc57c1e3fde3f6ba67f2730dec5a0965d421a"
+    },
+    {
+      "path": "apps/site/campus-data.js",
+      "bytes": 13779,
+      "sha256": "161ddcddb8988b943316caf1efbd8ee0c21642eff5e821c61dcba7be170f291e"
+    },
+    {
+      "path": "apps/site/campus-models.js",
+      "bytes": 45589,
+      "sha256": "48f75a65c6802d580f94a4e6932ddbf4c956854de0ebac45f77d96df6963f9a3"
+    },
+    {
+      "path": "apps/site/chiller-model.js",
+      "bytes": 26384,
+      "sha256": "67beb92d0cefe19e8767bd2ed63a79d58ea74a6e48fe3902e232c1024d115c77"
+    },
+    {
+      "path": "apps/site/chiller-data.js",
+      "bytes": 11847,
+      "sha256": "dfff2385cfa31288afa0ad71ebbf341ec5d556515b927eb3ca39d2b6dbc6bc6d"
+    },
+    {
+      "path": "apps/site/chiller-detail.js",
+      "bytes": 15446,
+      "sha256": "346c3461d67462076967cef193752dd360e8e95bdd9eb67b437ed6b7fcf0ec28"
+    }
+  ]
+}

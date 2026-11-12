@@ -1,0 +1,5 @@
+/* Presentation controls share the existing map's spacing and responsive rules. */
+body[data-area="dryer"] .area-navigation{min-height:0}
+body[data-area="dryer"] .area-summary{margin:0}
+body[data-area="dryer"] .map-brand p span{white-space:nowrap}
+@media(max-width:540px){body[data-area="dryer"] .map-brand p span{display:none}body[data-area="dryer"] .map-footer>p:first-child{max-width:47%}}

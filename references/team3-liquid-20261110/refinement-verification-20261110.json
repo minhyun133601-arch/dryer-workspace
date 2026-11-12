@@ -1,0 +1,838 @@
+{
+  "date": "2026-11-10T07:36:23.901Z",
+  "status": "verified",
+  "target": "desktop",
+  "source": {
+    "originalFilesChecked": 156,
+    "originalSourceHashesMatch": true,
+    "cards": 52,
+    "fourDirectionsPerCard": 4
+  },
+  "registration": {
+    "all52IdsNamesRoomsTypesVariantsPosesAndNominalDimensionsUnchanged": true,
+    "fixture": "tests/fixtures/liquid-registered-poses-20261110.json"
+  },
+  "geometry": {
+    "cardSpecificExteriors": 52,
+    "draws": 357,
+    "triangles": 345748,
+    "fit": "uniform scale within unchanged nominal envelopes; circular sections and whole-machine proportions retained",
+    "featuresByCard": [
+      {
+        "id": "liquid-card-042",
+        "card": 42,
+        "features": [
+          "front-three-dark-rounded-windows;rear-four-windows;two-side-windows;door-hinges-and-tall-handles;external-drive;unseen-carousel-omitted"
+        ]
+      },
+      {
+        "id": "liquid-card-043",
+        "card": 43,
+        "features": [
+          "small-lidded-round-tank;six-button-side-box;black-cable-loops"
+        ]
+      },
+      {
+        "id": "liquid-card-044",
+        "card": 44,
+        "features": [
+          "small-open-filling-bed;exposed-nozzle-tubes;curved-green-bottle-conveyor"
+        ]
+      },
+      {
+        "id": "liquid-card-045",
+        "card": 45,
+        "features": [
+          "long-bottle-conveyor;two-horizontal-label-reels;white-guide-loop;overhead-support;side-HMI"
+        ]
+      },
+      {
+        "id": "liquid-card-046",
+        "card": 46,
+        "features": [
+          "long-low-pasteurizer;thin-upper-window-strip;two-roof-blowers;green-side-pumps"
+        ]
+      },
+      {
+        "id": "liquid-card-047",
+        "card": 47,
+        "features": [
+          "open-wide-round-hopper;conical-outlet;three-visible-front-fill-stations;cantilever-HMI;low-SS-base"
+        ]
+      },
+      {
+        "id": "liquid-card-048",
+        "card": 48,
+        "features": [
+          "open-front-crossbars;blue-and-yellow-hoses;separate-front-SS-receiving-table",
+          "photographed-front-heads-representative;card-name-16-not-used-as-head-count"
+        ]
+      },
+      {
+        "id": "liquid-card-049",
+        "card": 49,
+        "features": [
+          "low-rear-red-printed-film-roll;rear-roller-frame;side-access-ladder",
+          "photographed-front-heads-representative;card-name-16-not-used-as-head-count"
+        ]
+      },
+      {
+        "id": "liquid-card-050",
+        "card": 50,
+        "features": [
+          "blue-vertical-cap-elevator-track;square-open-lower-hopper;top-return-box;floor-frame"
+        ]
+      },
+      {
+        "id": "liquid-card-051",
+        "card": 51,
+        "features": [
+          "tall-blue-resin-column;separate-short-brine-drum;white-square-automatic-valve-head;blue-circular-front-control;two-gauges;small-pipe-bypass"
+        ]
+      },
+      {
+        "id": "liquid-card-052",
+        "card": 52,
+        "features": [
+          "three-part-weighing-belt;separate-blue-roller-outlet;load-bed;screen-pole;background-taper-omitted"
+        ]
+      },
+      {
+        "id": "liquid-card-053",
+        "card": 53,
+        "features": [
+          "cartoning-glazed-multiple-doors;SS-lower-doors;visible-top-pack-guides;short-discharge-belt"
+        ]
+      },
+      {
+        "id": "liquid-card-054",
+        "card": 54,
+        "features": [
+          "orange-taping-bridge;yellow-side-tape-roll;open-roller-bed;vertical-SS-frame"
+        ]
+      },
+      {
+        "id": "liquid-card-055",
+        "card": 55,
+        "features": [
+          "multipack-door-cabinet;visible-high-drive;side-film-roll-and-cable"
+        ]
+      },
+      {
+        "id": "liquid-card-056",
+        "card": 56,
+        "features": [
+          "open-mesh-hot-water-trough;angular-end-hood;external-blue-drive"
+        ]
+      },
+      {
+        "id": "liquid-card-057",
+        "card": 57,
+        "features": [
+          "long-open-cooling-trough;mesh-bed;overhead-spray-bar-and-small-nozzles"
+        ]
+      },
+      {
+        "id": "liquid-card-058",
+        "card": 58,
+        "features": [
+          "high-multi-door-post-sterilizing-tunnel;upper-round-ports;roof-exhaust-stacks;low-SS-manifold-and-red-pump"
+        ]
+      },
+      {
+        "id": "liquid-card-059",
+        "card": 59,
+        "features": [
+          "low-SS-unloader-bed;blue-clamp-array;white-curved-slat-discharge;independent-HMI"
+        ]
+      },
+      {
+        "id": "liquid-card-060",
+        "card": 60,
+        "features": [
+          "long-trough-main-body;round-clamped-side-hatches;exposed-mesh-belt;angled-end-cover;two-vertical-pipes;central-button-box"
+        ]
+      },
+      {
+        "id": "liquid-card-061",
+        "card": 61,
+        "features": [
+          "large-side-round-hopper-and-cone",
+          "rotary-bed-observed-stations;guard-doors;SS-lower-cabinet;external-fill-hoses"
+        ]
+      },
+      {
+        "id": "liquid-card-062",
+        "card": 62,
+        "features": [
+          "paired-high-cylindrical-metering-assemblies",
+          "rotary-bed-observed-stations;guard-doors;SS-lower-cabinet;external-fill-hoses"
+        ]
+      },
+      {
+        "id": "liquid-card-063",
+        "card": 63,
+        "features": [
+          "high-front-HMI;blue-side-service-upright",
+          "rotary-bed-observed-stations;guard-doors;SS-lower-cabinet;external-fill-hoses"
+        ]
+      },
+      {
+        "id": "liquid-card-064",
+        "card": 64,
+        "features": [
+          "blue-front-band;SS-frame-and-transparent-double-doors;red-building-pipe-not-machine-frame",
+          "rotary-bed-observed-stations;guard-doors;SS-lower-cabinet;external-fill-hoses"
+        ]
+      },
+      {
+        "id": "liquid-card-065",
+        "card": 65,
+        "features": [
+          "inclined-pouch-magazine-with-visible-guide-slats",
+          "orange-front-band;inclined-pouch-feed-magazine",
+          "rotary-bed-observed-stations;guard-doors;SS-lower-cabinet;external-fill-hoses"
+        ]
+      },
+      {
+        "id": "liquid-card-066",
+        "card": 66,
+        "features": [
+          "inclined-pouch-magazine-with-visible-guide-slats",
+          "orange-front-band;inclined-pouch-feed-magazine",
+          "rotary-bed-observed-stations;guard-doors;SS-lower-cabinet;external-fill-hoses"
+        ]
+      },
+      {
+        "id": "liquid-card-067",
+        "card": 67,
+        "features": [
+          "flat-split-circular-lid;cross-beams;lift-handles",
+          "tall-silver-drive-column;two-perforated-guard-bands",
+          "rear-five-button-box;side-round-connection;low-external-pump",
+          "visible-sanitary-nozzles;external-valve;lower-elbow;black-service-hose"
+        ]
+      },
+      {
+        "id": "liquid-card-068",
+        "card": 68,
+        "features": [
+          "domed-top;inclined-round-manhole;clamp-handles",
+          "horizontal-blue-top-gearmotor",
+          "visible-sanitary-nozzles;external-valve;lower-elbow;black-service-hose"
+        ]
+      },
+      {
+        "id": "liquid-card-069",
+        "card": 69,
+        "features": [
+          "domed-top;inclined-round-manhole;clamp-handles",
+          "edge-vertical-gearmotor;flanged-open-support-column",
+          "visible-sanitary-nozzles;external-valve;lower-elbow;black-service-hose"
+        ]
+      },
+      {
+        "id": "liquid-card-070",
+        "card": 70,
+        "features": [
+          "domed-top;inclined-round-manhole;clamp-handles",
+          "horizontal-blue-top-gearmotor",
+          "visible-sanitary-nozzles;external-valve;lower-elbow;black-service-hose"
+        ]
+      },
+      {
+        "id": "liquid-card-071",
+        "card": 71,
+        "features": [
+          "domed-top;inclined-round-manhole;clamp-handles",
+          "tall-process-neck;horizontal-black-side-motor",
+          "visible-sanitary-nozzles;external-valve;lower-elbow;black-service-hose"
+        ]
+      },
+      {
+        "id": "liquid-card-077",
+        "card": 77,
+        "features": [
+          "tall-cylindrical-vessel;front-round-sightglass;lower-sanitary-outlet"
+        ]
+      },
+      {
+        "id": "liquid-card-078",
+        "card": 78,
+        "features": [
+          "tall-cylindrical-vessel;front-round-sightglass;lower-sanitary-outlet"
+        ]
+      },
+      {
+        "id": "liquid-card-079",
+        "card": 79,
+        "features": [
+          "tall-cylindrical-vessel;front-round-sightglass;lower-sanitary-outlet"
+        ]
+      },
+      {
+        "id": "liquid-card-080",
+        "card": 80,
+        "features": [
+          "flat-split-circular-lid;cross-beams;lift-handles",
+          "blue-vertical-gearmotor;flanged-open-support-column",
+          "visible-sanitary-nozzles;external-valve;lower-elbow;black-service-hose"
+        ]
+      },
+      {
+        "id": "liquid-card-081",
+        "card": 81,
+        "features": [
+          "domed-top;inclined-round-manhole;clamp-handles",
+          "blue-vertical-gearmotor;flanged-open-support-column",
+          "visible-sanitary-nozzles;external-valve;lower-elbow;black-service-hose"
+        ]
+      },
+      {
+        "id": "liquid-card-082",
+        "card": 82,
+        "features": [
+          "domed-top;inclined-round-manhole;clamp-handles",
+          "edge-vertical-gearmotor;flanged-open-support-column",
+          "visible-sanitary-nozzles;external-valve;lower-elbow;black-service-hose"
+        ]
+      },
+      {
+        "id": "liquid-card-083",
+        "card": 83,
+        "features": [
+          "flat-split-circular-lid;cross-beams;lift-handles",
+          "blue-vertical-gearmotor;flanged-open-support-column",
+          "visible-sanitary-nozzles;external-valve;lower-elbow;black-service-hose"
+        ]
+      },
+      {
+        "id": "liquid-card-093",
+        "card": 93,
+        "features": [
+          "domed-top;inclined-round-manhole;clamp-handles",
+          "parallel-tall-neck;vertical-dark-gearmotor;external-reducer",
+          "visible-sanitary-nozzles;external-valve;lower-elbow;black-service-hose"
+        ]
+      },
+      {
+        "id": "liquid-card-094",
+        "card": 94,
+        "features": [
+          "three-stacked-sieve-rings;three-radial-discharge-chutes;low-flat-lid;short-central-base"
+        ]
+      },
+      {
+        "id": "liquid-card-095",
+        "card": 95,
+        "features": [
+          "eight-level-tubular-bank;return-elbows;sanitary-unions;external-end-manifold;pump-and-gauges"
+        ]
+      },
+      {
+        "id": "liquid-card-096",
+        "card": 96,
+        "features": [
+          "red-insulated-return-pipes;low-long-horizontal-cylinder",
+          "eight-level-tubular-bank;return-elbows;sanitary-unions;external-end-manifold;pump-and-gauges",
+          "red-exposed-return-sections"
+        ]
+      },
+      {
+        "id": "liquid-card-097",
+        "card": 97,
+        "features": [
+          "separate-side-vertical-vessel;large-U-shaped-end-manifold",
+          "eight-level-tubular-bank;return-elbows;sanitary-unions;external-end-manifold;pump-and-gauges"
+        ]
+      },
+      {
+        "id": "liquid-card-098",
+        "card": 98,
+        "features": [
+          "low-long-transfer-trough;small-independent-round-vessel;short-exposed-feed-fittings;no-large-invented-cone"
+        ]
+      },
+      {
+        "id": "liquid-card-099",
+        "card": 99,
+        "features": [
+          "three-front-pump-heads;large-top-pressure-gauge;curved-braided-hose;rounded-SS-lid;paired-side-louvres"
+        ]
+      },
+      {
+        "id": "liquid-card-100",
+        "card": 100,
+        "features": [
+          "rectangular-hot-water-tank;side-gauge;external-drain"
+        ]
+      },
+      {
+        "id": "liquid-card-101",
+        "card": 101,
+        "features": [
+          "dark-two-door-cabinet;thin-blue-front-stripe;small-recessed-control;rear-square-grid"
+        ]
+      },
+      {
+        "id": "liquid-card-102",
+        "card": 102,
+        "features": [
+          "rounded-blue-enclosure;white-edge;high-blue-top-box;four-visible-rear-hose-connections"
+        ]
+      },
+      {
+        "id": "liquid-card-103",
+        "card": 103,
+        "features": [
+          "slender-front-control-tower;rectangular-SS-boiler;rear-black-burner-box;blue-lower-pump;external-valve-pipework"
+        ]
+      },
+      {
+        "id": "liquid-card-104",
+        "card": 104,
+        "features": [
+          "single-white-vertical-boiler;black-bolted-top;separate-tall-control-cabinet;side-blue-blower;external-level-column"
+        ]
+      },
+      {
+        "id": "liquid-card-105",
+        "card": 105,
+        "features": [
+          "parallel-delta-robot;white-upper-arms;three-paired-black-rods;transparent-four-side-guard;orange-front-uprights"
+        ]
+      },
+      {
+        "id": "liquid-card-106",
+        "card": 106,
+        "features": [
+          "two-height-SS-base-cabinets;square-rear-hopper;two-separate-control-boxes;blue-external-drive;blue-castors"
+        ]
+      },
+      {
+        "id": "liquid-card-107",
+        "card": 107,
+        "features": [
+          "white-vertical-planetary-bed;side-mounted-round-SS-bowl;slanted-metal-bowl-guard;lift-support-arms;rear-vent-panels;no-invented-mixing-tool"
+        ]
+      }
+    ]
+  },
+  "placement": {
+    "campusOutdoorShiftMetres": 3,
+    "onlyCampusOutdoorAreaMoved": true,
+    "liquidAndOfficePosesUnchanged": true,
+    "outdoorEquipmentCount": 22,
+    "sourceOutdoorLayoutUnchanged": true,
+    "fullSourceRowLength": 110,
+    "audit": {
+      "method": "Actual THREE campus builders and all22 rigidly reused outdoor equipment. Mesh/instance AABB clearance with vertical overlap; no physical survey claim.",
+      "buildings": [
+        {
+          "id": "campus-blue-annex",
+          "nominal": {
+            "min": [
+              -58,
+              0.3,
+              -62.2
+            ],
+            "max": [
+              -18.799999999999997,
+              8,
+              2.5
+            ]
+          },
+          "actual": {
+            "min": [
+              -58.35000076293945,
+              0,
+              -62.550000762939455
+            ],
+            "max": [
+              -18.449999237060545,
+              12.20999988913536,
+              3.7799988031387315
+            ]
+          },
+          "sourceNearest": [
+            {
+              "id": "outdoor-pet-ahu",
+              "gapToNominalWestWall": 3.1399999737739677,
+              "bounds": {
+                "min": [
+                  -63.95521918277082,
+                  0.012500001192092894,
+                  -36.77250000089408
+                ],
+                "max": [
+                  -61.13999997377397,
+                  5.220000014305115,
+                  -31.92349720219003
+                ]
+              }
+            },
+            {
+              "id": "outdoor-cooling-20",
+              "gapToNominalWestWall": 3.204999988079088,
+              "bounds": {
+                "min": [
+                  -62.583000000052174,
+                  0.059999998509883884,
+                  -52.80000001192092
+                ],
+                "max": [
+                  -61.20499998807909,
+                  2.970000000745058,
+                  -49.300000023841854
+                ]
+              }
+            },
+            {
+              "id": "outdoor-pump-pit",
+              "gapToNominalWestWall": 3.279999980926533,
+              "bounds": {
+                "min": [
+                  -63.96500001430513,
+                  1.1920928966180355e-9,
+                  -43.25000000149012
+                ],
+                "max": [
+                  -61.27999998092653,
+                  3.7099999952316285,
+                  -41.149999998509884
+                ]
+              }
+            },
+            {
+              "id": "outdoor-end-panel-tank",
+              "gapToNominalWestWall": 3.299999999999997,
+              "bounds": {
+                "min": [
+                  -64.94200000151992,
+                  -5.960464483090178e-9,
+                  -7.730000000000015
+                ],
+                "max": [
+                  -61.3,
+                  4.320000038146972,
+                  -2.8227117061615132
+                ]
+              }
+            },
+            {
+              "id": "outdoor-condensers",
+              "gapToNominalWestWall": 3.315000000298035,
+              "bounds": {
+                "min": [
+                  -64.344999999702,
+                  -4.768371586472142e-9,
+                  -38.28199999988079
+                ],
+                "max": [
+                  -61.315000000298035,
+                  1.6722148546799724,
+                  -36.815000001341105
+                ]
+              }
+            }
+          ],
+          "aboveGroundMeshPairClearance": {
+            "distance": 3.1399995923042425,
+            "id": "outdoor-pet-ahu",
+            "buildingMesh": "BoxGeometry",
+            "utilityMesh": "BoxGeometry"
+          }
+        },
+        {
+          "id": "campus-office",
+          "nominal": {
+            "min": [
+              -58,
+              0.3,
+              2.5
+            ],
+            "max": [
+              -14,
+              18,
+              37.5
+            ]
+          },
+          "actual": {
+            "min": [
+              -58.35000038146973,
+              0,
+              2.1499996185302734
+            ],
+            "max": [
+              -13.649999618530273,
+              19.11000046133995,
+              40.15
+            ]
+          },
+          "sourceNearest": [
+            {
+              "id": "outdoor-end-units",
+              "gapToNominalWestWall": 3.6049999996274806,
+              "bounds": {
+                "min": [
+                  -63.54250000018627,
+                  0.08999999850988388,
+                  6.15000009536741
+                ],
+                "max": [
+                  -61.60499999962748,
+                  1.820000000745058,
+                  10.849999904632547
+                ]
+              }
+            },
+            {
+              "id": "outdoor-blue-tank",
+              "gapToNominalWestWall": 3.9630000162124546,
+              "bounds": {
+                "min": [
+                  -64.19699998378752,
+                  2.384185793236071e-9,
+                  25.856000013351416
+                ],
+                "max": [
+                  -61.963000016212455,
+                  2.7899999991059303,
+                  29.4040000015497
+                ]
+              }
+            },
+            {
+              "id": "outdoor-end-sump",
+              "gapToNominalWestWall": 3.9799999761581404,
+              "bounds": {
+                "min": [
+                  -64.18000002384186,
+                  -0.010000003576278685,
+                  16.27499997615812
+                ],
+                "max": [
+                  -61.97999997615814,
+                  3.0149999976158144,
+                  19.580000007152535
+                ]
+              }
+            },
+            {
+              "id": "outdoor-stainless-vessel",
+              "gapToNominalWestWall": 4.022999958991996,
+              "bounds": {
+                "min": [
+                  -64.30521690469234,
+                  8.344650248570673e-9,
+                  32.44299995899198
+                ],
+                "max": [
+                  -62.022999958991996,
+                  4.315000001788139,
+                  34.557000041007974
+                ]
+              }
+            },
+            {
+              "id": "outdoor-chiller-40",
+              "gapToNominalWestWall": 4.249988083839412,
+              "bounds": {
+                "min": [
+                  -63.87300000005215,
+                  0.007499999925494195,
+                  1.4128067493438508
+                ],
+                "max": [
+                  -62.24998808383941,
+                  2.845000000372529,
+                  5.914999961853006
+                ]
+              }
+            }
+          ],
+          "aboveGroundMeshPairClearance": {
+            "distance": 3.6049999996274806,
+            "id": "outdoor-end-units",
+            "buildingMesh": "BoxGeometry",
+            "utilityMesh": "CylinderGeometry"
+          }
+        }
+      ],
+      "utility": {
+        "root": {
+          "min": [
+            -67.92999999523165,
+            -0.33000000596046447,
+            -75.9
+          ],
+          "max": [
+            -35.10000002384185,
+            6.743000001460313,
+            40.89999997615814
+          ]
+        },
+        "pad": {
+          "min": [
+            -67.78000000000003,
+            -0.33000000596046447,
+            -75.9
+          ],
+          "max": [
+            -35.10000002384185,
+            0.1299999976158142,
+            40.89999997615814
+          ]
+        },
+        "equipment": {
+          "min": [
+            -65.20700000151993,
+            -0.010000003576278685,
+            -71.6
+          ],
+          "max": [
+            -56.16587322086098,
+            6.743000001460313,
+            34.557000041007974
+          ]
+        },
+        "boundary": {
+          "min": [
+            -67.92999999523165,
+            -0.0024999998509883867,
+            -75.01500000208617
+          ],
+          "max": [
+            -56.28500000417235,
+            3.800000000745058,
+            37.70383364603602
+          ]
+        },
+        "aisle": {
+          "min": [
+            -67.78000000000003,
+            -0.33000000596046447,
+            -75.9
+          ],
+          "max": [
+            -56.329999904632594,
+            0.1299999976158142,
+            37.54999923706052
+          ]
+        },
+        "approach": {
+          "min": [
+            -67.22999997615814,
+            0.009999999627470973,
+            34.924999952316284
+          ],
+          "max": [
+            -35.10000002384185,
+            0.06000000037252903,
+            40.89999997615814
+          ]
+        },
+        "position": [
+          -64.4,
+          0,
+          -17.5
+        ],
+        "rotation": -1.5707963267948966,
+        "sourceCount": 22
+      },
+      "recommendation": {
+        "translateWorldX": -3,
+        "newPosition": [
+          -64.4,
+          0,
+          -17.5
+        ],
+        "preserveZAndYaw": true,
+        "newNominalFacadeGap": 3,
+        "officeApproach": [
+          [
+            -66.33,
+            0,
+            35
+          ],
+          [
+            -66.33,
+            0,
+            40
+          ],
+          [
+            -36,
+            0,
+            40
+          ],
+          [
+            -36,
+            0,
+            37.85
+          ]
+        ],
+        "sourceRoomEquipmentUnchanged": true
+      }
+    }
+  },
+  "navigation": {
+    "areas": [
+      "campus",
+      "dryer",
+      "packaging",
+      "liquid",
+      "outdoor"
+    ],
+    "liquidBannerRemoved": true,
+    "matchingFiveTabStyle": true,
+    "openingAndClosingRestoresPriorAreaAndPackagingLevel": true
+  },
+  "validation": {
+    "tests": {
+      "total": 212,
+      "passed": 212,
+      "failed": 0
+    },
+    "syntaxScripts": 59,
+    "all52RayPick": true,
+    "resourceDispose": true,
+    "actualPhotographicWindowAndMotorVariants": true
+  },
+  "browser": {
+    "viewport": [
+      1600,
+      1100
+    ],
+    "sourceRenderFallback": false,
+    "fileProtocolOfflineOpened": true,
+    "offlineNetworkRequests": 0,
+    "offlinePhotoDecoded": true,
+    "offlineAndSourceTabCallbacks": true,
+    "runtimeErrors": 0,
+    "screenshots": [
+      "tmp/liquid-card-refinement-20261110/unified-liquid-tab.png",
+      "tmp/liquid-card-refinement-20261110/campus-spacing-top.png",
+      "tmp/liquid-card-refinement-20261110/campus-spacing-close.png",
+      "tmp/liquid-card-refinement-20261110/card-051-final.png",
+      "tmp/liquid-card-refinement-20261110/final-offline-liquid.png",
+      "tmp/liquid-card-refinement-20261110/models-sheet-0.png",
+      "tmp/liquid-card-refinement-20261110/models-sheet-1.png",
+      "tmp/liquid-card-refinement-20261110/models-sheet-2.png",
+      "tmp/liquid-card-refinement-20261110/models-sheet-3.png",
+      "tmp/liquid-card-refinement-20261110/models-sheet-4.png",
+      "tmp/liquid-card-refinement-20261110/models-sheet-5.png",
+      "tmp/liquid-card-refinement-20261110/models-sheet-6.png"
+    ]
+  },
+  "limitations": [
+    "Detailed dimensions and individual current locations are not a site survey.",
+    "Only observed exterior features are represented; hidden mechanisms and operating status are not inferred."
+  ],
+  "artifact": {
+    "path": "exports/건조기-통합-공유.html",
+    "bytes": 26121061,
+    "sha256": "02d878eca11b427eb156c1fe7f299112261409bbbf5499845850e6cfe6e2884e",
+    "selfContained": true,
+    "under25MiB": true
+  }
+}

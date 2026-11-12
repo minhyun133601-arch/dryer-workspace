@@ -1,0 +1,47 @@
+{
+  "date": "2026-11-11",
+  "sourcesUnmodified": true,
+  "files": [
+    {
+      "path": "보일러실, 추가 파일/20261111_082857KST_GPS-VALID_LAT35.3626450_LON129.0300467_H2.2-TN_DIR-AVAILABLE_P-34.2_ACC3.4m_FV-3759c3dd-455e-4d66-8c2a-cdb209f55c30.txt",
+      "bytes": 26966,
+      "sha256": "93d7a6ca5c5e7b5d17db72763f06faaa7c98733367cf5f83717df81214d4b01b"
+    },
+    {
+      "path": "보일러실, 추가 파일/20261111_133538KST_GPS-VALID_LAT35.3628533_LON129.0299833_H17.5-TN_DIR-AVAILABLE_P-62.9_ACC2.8m_FV-45054c27-1682-4fc6-9ef7-9a95d156e574.mp4",
+      "bytes": 274064161,
+      "sha256": "9f6e3914eb83a0cfb281f5fa2fd2438b520dc5d248c3604bdcb461e7aaa3e014"
+    },
+    {
+      "path": "보일러실, 추가 파일/20261111_133538KST_GPS-VALID_LAT35.3628533_LON129.0299833_H17.5-TN_DIR-AVAILABLE_P-62.9_ACC2.8m_FV-45054c27-1682-4fc6-9ef7-9a95d156e574.txt",
+      "bytes": 354107,
+      "sha256": "fd250ae613e86a4f7ed07455416550ef127edd174c7a9e202458be95a14e77b2"
+    },
+    {
+      "path": "보일러실, 추가 파일/20261111_133938KST_GPS-VALID_LAT35.3626950_LON129.0304300_H179.9-TN_DIR-AVAILABLE_P-75.3_ACC3.4m_FV-bf5c6063-2b5f-4f2b-a997-297fbd0fa1db.mp4",
+      "bytes": 361769445,
+      "sha256": "2cd24777a576439ea13205197d391cea634563f84f9f5e48cec7e0de085fcd84"
+    },
+    {
+      "path": "보일러실, 추가 파일/20261111_133938KST_GPS-VALID_LAT35.3626950_LON129.0304300_H179.9-TN_DIR-AVAILABLE_P-75.3_ACC3.4m_FV-bf5c6063-2b5f-4f2b-a997-297fbd0fa1db.txt",
+      "bytes": 506669,
+      "sha256": "cf26491390d5e8274b83be62336026f0676a072c28a161424fa954c36a6f84c7"
+    }
+  ],
+  "missingVideoForMetadata": "20261111_082857KST",
+  "appPhotoCount": 31,
+  "reviewNotes": [
+    "location-evidence.json",
+    "interior-evidence.json",
+    "interior-photo-manifest.json"
+  ],
+  "implemented": [
+    "campus-boiler-room",
+    "campus-electrical-room",
+    "campus-maintenance-office exterior",
+    "side-wall tank staircase",
+    "dryer annex rear correction",
+    "exterior services and door positions"
+  ],
+  "placementLimit": "영상·동선 기반 근사, 휴대폰 GPS는 촬영자 위치로만 사용"
+}

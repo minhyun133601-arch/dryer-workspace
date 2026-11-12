@@ -1,0 +1,685 @@
+{
+  "date": "2026-11-10",
+  "assets": [
+    {
+      "archiveNumber": 42,
+      "webPath": "apps/site/photos/team3-liquid-cards/card-042-reflow.jpg",
+      "offlinePath": "references/team3-liquid-20261110/offline-assets/card-042.jpg",
+      "width": 512,
+      "height": 640,
+      "quality": 60,
+      "bytes": 43580,
+      "sha256": "9c1745387b361b30b82b0e6b5b3d181c5cbae4916c8510d8af8b6d563d813036",
+      "fallbackWebPaths": [
+        "apps/site/photos/team3-liquid-cards/card-042.jpg"
+      ]
+    },
+    {
+      "archiveNumber": 43,
+      "webPath": "apps/site/photos/team3-liquid-cards/card-043-reflow.jpg",
+      "offlinePath": "references/team3-liquid-20261110/offline-assets/card-043.jpg",
+      "width": 512,
+      "height": 640,
+      "quality": 60,
+      "bytes": 38168,
+      "sha256": "54ddc242f9bc24dd50a1b0f81b5a8ab91f2bda078e76222e0d0bc7e53e1266c9",
+      "fallbackWebPaths": [
+        "apps/site/photos/team3-liquid-cards/card-043.jpg"
+      ]
+    },
+    {
+      "archiveNumber": 44,
+      "webPath": "apps/site/photos/team3-liquid-cards/card-044-reflow.jpg",
+      "offlinePath": "references/team3-liquid-20261110/offline-assets/card-044.jpg",
+      "width": 512,
+      "height": 640,
+      "quality": 60,
+      "bytes": 47947,
+      "sha256": "86076f52c94669b3b2826893a72294e7be8ed117fa3246b72680a1e7b79d73af",
+      "fallbackWebPaths": [
+        "apps/site/photos/team3-liquid-cards/card-044.jpg"
+      ]
+    },
+    {
+      "archiveNumber": 45,
+      "webPath": "apps/site/photos/team3-liquid-cards/card-045-reflow.jpg",
+      "offlinePath": "references/team3-liquid-20261110/offline-assets/card-045.jpg",
+      "width": 512,
+      "height": 640,
+      "quality": 60,
+      "bytes": 40476,
+      "sha256": "79639aaa569150806a6d053a61e3588bbbdaef5d42ddd66453a879b87b2cba06",
+      "fallbackWebPaths": [
+        "apps/site/photos/team3-liquid-cards/card-045.jpg"
+      ]
+    },
+    {
+      "archiveNumber": 46,
+      "webPath": "apps/site/photos/team3-liquid-cards/card-046-reflow.jpg",
+      "offlinePath": "references/team3-liquid-20261110/offline-assets/card-046.jpg",
+      "width": 512,
+      "height": 640,
+      "quality": 60,
+      "bytes": 33880,
+      "sha256": "9f35e76098dbe6771ab835adc6627668b43696534796425cc68c72ac1704e405",
+      "fallbackWebPaths": [
+        "apps/site/photos/team3-liquid-cards/card-046.jpg"
+      ]
+    },
+    {
+      "archiveNumber": 47,
+      "webPath": "apps/site/photos/team3-liquid-cards/card-047-reflow.jpg",
+      "offlinePath": "references/team3-liquid-20261110/offline-assets/card-047.jpg",
+      "width": 512,
+      "height": 640,
+      "quality": 60,
+      "bytes": 48474,
+      "sha256": "6e4f27f22fbf7cc364ab44decb46c54a4cb8fcd5d98a7ad347cfccdc7737269c",
+      "fallbackWebPaths": [
+        "apps/site/photos/team3-liquid-cards/card-047.jpg"
+      ]
+    },
+    {
+      "archiveNumber": 48,
+      "webPath": "apps/site/photos/team3-liquid-cards/card-048-reflow.jpg",
+      "offlinePath": "references/team3-liquid-20261110/offline-assets/card-048.jpg",
+      "width": 512,
+      "height": 640,
+      "quality": 60,
+      "bytes": 54280,
+      "sha256": "ecac82bd08b492aa3700c906ed9447951eced7f45ecfa6416439f9392b751599",
+      "fallbackWebPaths": [
+        "apps/site/photos/team3-liquid-cards/card-048.jpg"
+      ]
+    },
+    {
+      "archiveNumber": 49,
+      "webPath": "apps/site/photos/team3-liquid-cards/card-049-reflow.jpg",
+      "offlinePath": "references/team3-liquid-20261110/offline-assets/card-049.jpg",
+      "width": 512,
+      "height": 640,
+      "quality": 60,
+      "bytes": 52529,
+      "sha256": "442add912d57ab9c694375582f8af0017807f36c20372a428aead0b3a299f80d",
+      "fallbackWebPaths": [
+        "apps/site/photos/team3-liquid-cards/card-049.jpg"
+      ]
+    },
+    {
+      "archiveNumber": 50,
+      "webPath": "apps/site/photos/team3-liquid-cards/card-050-reflow.jpg",
+      "offlinePath": "references/team3-liquid-20261110/offline-assets/card-050.jpg",
+      "width": 512,
+      "height": 640,
+      "quality": 60,
+      "bytes": 47635,
+      "sha256": "609b77f96ffd21323ba18fc5fa3e3e1daf1f7f4505daddcb365615dcd6644348",
+      "fallbackWebPaths": [
+        "apps/site/photos/team3-liquid-cards/card-050.jpg"
+      ]
+    },
+    {
+      "archiveNumber": 51,
+      "webPath": "apps/site/photos/team3-liquid-cards/card-051-reflow.jpg",
+      "offlinePath": "references/team3-liquid-20261110/offline-assets/card-051.jpg",
+      "width": 512,
+      "height": 640,
+      "quality": 60,
+      "bytes": 39042,
+      "sha256": "2501d291d0382bcf9a51ce9c4f8b1b7d3eff86b80f09b550c08f766423d75fba",
+      "fallbackWebPaths": [
+        "apps/site/photos/team3-liquid-cards/card-051.jpg"
+      ]
+    },
+    {
+      "archiveNumber": 52,
+      "webPath": "apps/site/photos/team3-liquid-cards/card-052-reflow.jpg",
+      "offlinePath": "references/team3-liquid-20261110/offline-assets/card-052.jpg",
+      "width": 512,
+      "height": 640,
+      "quality": 60,
+      "bytes": 39372,
+      "sha256": "5b7b0e3b5a458b538e6dfae6bd24d91f6318812a72ef7888ace7b497043cbf34",
+      "fallbackWebPaths": [
+        "apps/site/photos/team3-liquid-cards/card-052.jpg"
+      ]
+    },
+    {
+      "archiveNumber": 53,
+      "webPath": "apps/site/photos/team3-liquid-cards/card-053-reflow.jpg",
+      "offlinePath": "references/team3-liquid-20261110/offline-assets/card-053.jpg",
+      "width": 512,
+      "height": 640,
+      "quality": 60,
+      "bytes": 49538,
+      "sha256": "e6cc194eeaa959b3485f1ad0c813d6eedc8ca92ec40bc6c590289cb5d34ec5e9",
+      "fallbackWebPaths": [
+        "apps/site/photos/team3-liquid-cards/card-053.jpg"
+      ]
+    },
+    {
+      "archiveNumber": 54,
+      "webPath": "apps/site/photos/team3-liquid-cards/card-054-reflow.jpg",
+      "offlinePath": "references/team3-liquid-20261110/offline-assets/card-054.jpg",
+      "width": 512,
+      "height": 640,
+      "quality": 60,
+      "bytes": 50725,
+      "sha256": "f9a9f448431cd69ad6d0af2bafdf16b599bf45f7911482590788332787968928",
+      "fallbackWebPaths": [
+        "apps/site/photos/team3-liquid-cards/card-054.jpg"
+      ]
+    },
+    {
+      "archiveNumber": 55,
+      "webPath": "apps/site/photos/team3-liquid-cards/card-055-reflow.jpg",
+      "offlinePath": "references/team3-liquid-20261110/offline-assets/card-055.jpg",
+      "width": 512,
+      "height": 640,
+      "quality": 60,
+      "bytes": 47331,
+      "sha256": "5a0d591ad77a719908c0856cb8298a5df7f162fb6bf7991af46e5ffd6e49cc17",
+      "fallbackWebPaths": [
+        "apps/site/photos/team3-liquid-cards/card-055.jpg"
+      ]
+    },
+    {
+      "archiveNumber": 56,
+      "webPath": "apps/site/photos/team3-liquid-cards/card-056-reflow.jpg",
+      "offlinePath": "references/team3-liquid-20261110/offline-assets/card-056.jpg",
+      "width": 512,
+      "height": 640,
+      "quality": 60,
+      "bytes": 44014,
+      "sha256": "552ff014ef89be84b2f934ded8383af7c34af8ff77668081cdaa5f06b4e388a5",
+      "fallbackWebPaths": [
+        "apps/site/photos/team3-liquid-cards/card-056.jpg"
+      ]
+    },
+    {
+      "archiveNumber": 57,
+      "webPath": "apps/site/photos/team3-liquid-cards/card-057-reflow.jpg",
+      "offlinePath": "references/team3-liquid-20261110/offline-assets/card-057.jpg",
+      "width": 512,
+      "height": 640,
+      "quality": 60,
+      "bytes": 46006,
+      "sha256": "e1b7ddf7f4ea3ef689799df72e940ee4698d3d32ded329eb3011ccd0e4ac88cf",
+      "fallbackWebPaths": [
+        "apps/site/photos/team3-liquid-cards/card-057.jpg"
+      ]
+    },
+    {
+      "archiveNumber": 58,
+      "webPath": "apps/site/photos/team3-liquid-cards/card-058-reflow.jpg",
+      "offlinePath": "references/team3-liquid-20261110/offline-assets/card-058.jpg",
+      "width": 512,
+      "height": 640,
+      "quality": 60,
+      "bytes": 47807,
+      "sha256": "425da4efff7f8a8896f0f74b80991ddcfa957e4dd6404cfbf987dafee11e2456",
+      "fallbackWebPaths": [
+        "apps/site/photos/team3-liquid-cards/card-058.jpg"
+      ]
+    },
+    {
+      "archiveNumber": 59,
+      "webPath": "apps/site/photos/team3-liquid-cards/card-059-reflow.jpg",
+      "offlinePath": "references/team3-liquid-20261110/offline-assets/card-059.jpg",
+      "width": 512,
+      "height": 640,
+      "quality": 60,
+      "bytes": 50148,
+      "sha256": "615c4ad40e9046ca46c5a3fc0ac9de168f8f3af56110ba9fd4aed7fe3d84f3e1",
+      "fallbackWebPaths": [
+        "apps/site/photos/team3-liquid-cards/card-059.jpg"
+      ]
+    },
+    {
+      "archiveNumber": 60,
+      "webPath": "apps/site/photos/team3-liquid-cards/card-060-reflow.jpg",
+      "offlinePath": "references/team3-liquid-20261110/offline-assets/card-060.jpg",
+      "width": 512,
+      "height": 640,
+      "quality": 60,
+      "bytes": 39762,
+      "sha256": "b038649fdeff81a8ed4cbe275209563030e4751026deb928a7ac25700f4e0063",
+      "fallbackWebPaths": [
+        "apps/site/photos/team3-liquid-cards/card-060.jpg"
+      ]
+    },
+    {
+      "archiveNumber": 61,
+      "webPath": "apps/site/photos/team3-liquid-cards/card-061-reflow.jpg",
+      "offlinePath": "references/team3-liquid-20261110/offline-assets/card-061.jpg",
+      "width": 512,
+      "height": 640,
+      "quality": 60,
+      "bytes": 46852,
+      "sha256": "3739dad862a1c9d1e7a62266fd6e472b8835c4976dd588662cd26713c394724e",
+      "fallbackWebPaths": [
+        "apps/site/photos/team3-liquid-cards/card-061.jpg"
+      ]
+    },
+    {
+      "archiveNumber": 62,
+      "webPath": "apps/site/photos/team3-liquid-cards/card-062-reflow.jpg",
+      "offlinePath": "references/team3-liquid-20261110/offline-assets/card-062.jpg",
+      "width": 512,
+      "height": 640,
+      "quality": 60,
+      "bytes": 53843,
+      "sha256": "68808039f8e62d33951fbe82bf44b7b728af40d7863f969fa2646c7fda0a3825",
+      "fallbackWebPaths": [
+        "apps/site/photos/team3-liquid-cards/card-062.jpg"
+      ]
+    },
+    {
+      "archiveNumber": 63,
+      "webPath": "apps/site/photos/team3-liquid-cards/card-063-reflow.jpg",
+      "offlinePath": "references/team3-liquid-20261110/offline-assets/card-063.jpg",
+      "width": 512,
+      "height": 640,
+      "quality": 60,
+      "bytes": 49016,
+      "sha256": "735e2b59ba61ced801e15281b2b3469a0d91d73657f59248c6a26958ad941711",
+      "fallbackWebPaths": [
+        "apps/site/photos/team3-liquid-cards/card-063.jpg"
+      ]
+    },
+    {
+      "archiveNumber": 64,
+      "webPath": "apps/site/photos/team3-liquid-cards/card-064-reflow.jpg",
+      "offlinePath": "references/team3-liquid-20261110/offline-assets/card-064.jpg",
+      "width": 512,
+      "height": 640,
+      "quality": 60,
+      "bytes": 53520,
+      "sha256": "1ba599566dcd490c2046102c36d8f95511f637cec304bd3b36b267d9612ac19e",
+      "fallbackWebPaths": [
+        "apps/site/photos/team3-liquid-cards/card-064.jpg"
+      ]
+    },
+    {
+      "archiveNumber": 65,
+      "webPath": "apps/site/photos/team3-liquid-cards/card-065-reflow.jpg",
+      "offlinePath": "references/team3-liquid-20261110/offline-assets/card-065.jpg",
+      "width": 512,
+      "height": 640,
+      "quality": 60,
+      "bytes": 49078,
+      "sha256": "cec25f1c739d16e45a6111db53856e18e2390e9f439187324221b5cfee35dc35",
+      "fallbackWebPaths": [
+        "apps/site/photos/team3-liquid-cards/card-065.jpg"
+      ]
+    },
+    {
+      "archiveNumber": 66,
+      "webPath": "apps/site/photos/team3-liquid-cards/card-066-reflow.jpg",
+      "offlinePath": "references/team3-liquid-20261110/offline-assets/card-066.jpg",
+      "width": 512,
+      "height": 640,
+      "quality": 60,
+      "bytes": 52532,
+      "sha256": "396cad4d33c04163006b763da8c9ed377ec67657295a370cd6d375b1243d5899",
+      "fallbackWebPaths": [
+        "apps/site/photos/team3-liquid-cards/card-066.jpg"
+      ]
+    },
+    {
+      "archiveNumber": 67,
+      "webPath": "apps/site/photos/team3-liquid-cards/card-067-reflow.jpg",
+      "offlinePath": "references/team3-liquid-20261110/offline-assets/card-067.jpg",
+      "width": 512,
+      "height": 640,
+      "quality": 60,
+      "bytes": 49801,
+      "sha256": "4f67a566935bcafcb17c1de7d815f308d52509de2efdfe40df77fc4f7299a818",
+      "fallbackWebPaths": [
+        "apps/site/photos/team3-liquid-cards/card-067.jpg"
+      ]
+    },
+    {
+      "archiveNumber": 68,
+      "webPath": "apps/site/photos/team3-liquid-cards/card-068-reflow.jpg",
+      "offlinePath": "references/team3-liquid-20261110/offline-assets/card-068.jpg",
+      "width": 512,
+      "height": 640,
+      "quality": 60,
+      "bytes": 56887,
+      "sha256": "073479d83b5f478a765cd7b1849accb87a644685c373963e0b279ae585ac2a9f",
+      "fallbackWebPaths": [
+        "apps/site/photos/team3-liquid-cards/card-068.jpg"
+      ]
+    },
+    {
+      "archiveNumber": 69,
+      "webPath": "apps/site/photos/team3-liquid-cards/card-069-reflow.jpg",
+      "offlinePath": "references/team3-liquid-20261110/offline-assets/card-069.jpg",
+      "width": 512,
+      "height": 640,
+      "quality": 60,
+      "bytes": 61083,
+      "sha256": "d1823c57d76556e1e3e5eaa1155965bd489f7ca1e0ffdda52e75bd42e3cb03f9",
+      "fallbackWebPaths": [
+        "apps/site/photos/team3-liquid-cards/card-069.jpg"
+      ]
+    },
+    {
+      "archiveNumber": 70,
+      "webPath": "apps/site/photos/team3-liquid-cards/card-070-reflow.jpg",
+      "offlinePath": "references/team3-liquid-20261110/offline-assets/card-070.jpg",
+      "width": 512,
+      "height": 640,
+      "quality": 60,
+      "bytes": 59435,
+      "sha256": "a2bf6077cd9108ff3de6e47689f864415249554984358cdc5dd05bc905c067cd",
+      "fallbackWebPaths": [
+        "apps/site/photos/team3-liquid-cards/card-070.jpg"
+      ]
+    },
+    {
+      "archiveNumber": 71,
+      "webPath": "apps/site/photos/team3-liquid-cards/card-071-reflow.jpg",
+      "offlinePath": "references/team3-liquid-20261110/offline-assets/card-071.jpg",
+      "width": 512,
+      "height": 640,
+      "quality": 60,
+      "bytes": 53604,
+      "sha256": "8df9f170caa70805e833b0cc85fa95c7e32e3bbcfd6af4bce3fab03c2f2bcf5a",
+      "fallbackWebPaths": [
+        "apps/site/photos/team3-liquid-cards/card-071.jpg"
+      ]
+    },
+    {
+      "archiveNumber": 77,
+      "webPath": "apps/site/photos/team3-liquid-cards/card-077-reflow.jpg",
+      "offlinePath": "references/team3-liquid-20261110/offline-assets/card-077.jpg",
+      "width": 512,
+      "height": 640,
+      "quality": 60,
+      "bytes": 41512,
+      "sha256": "2b1a66ef98b32f79623fa5cb97c56bd4234eafbb3b238944ff1ab7f5e3a26352",
+      "fallbackWebPaths": [
+        "apps/site/photos/team3-liquid-cards/card-077.jpg"
+      ]
+    },
+    {
+      "archiveNumber": 78,
+      "webPath": "apps/site/photos/team3-liquid-cards/card-078-reflow.jpg",
+      "offlinePath": "references/team3-liquid-20261110/offline-assets/card-078.jpg",
+      "width": 512,
+      "height": 640,
+      "quality": 60,
+      "bytes": 36734,
+      "sha256": "d3f7c8cb30e742b504a66284727a5a518f032aa666dc213380ecb1f669df6ffe",
+      "fallbackWebPaths": [
+        "apps/site/photos/team3-liquid-cards/card-078.jpg"
+      ]
+    },
+    {
+      "archiveNumber": 79,
+      "webPath": "apps/site/photos/team3-liquid-cards/card-079-reflow.jpg",
+      "offlinePath": "references/team3-liquid-20261110/offline-assets/card-079.jpg",
+      "width": 512,
+      "height": 640,
+      "quality": 60,
+      "bytes": 39757,
+      "sha256": "27262bd1642453a243764746e3fddb12f07accfc73c8978e9544ebdbf6a3626b",
+      "fallbackWebPaths": [
+        "apps/site/photos/team3-liquid-cards/card-079.jpg"
+      ]
+    },
+    {
+      "archiveNumber": 80,
+      "webPath": "apps/site/photos/team3-liquid-cards/card-080-reflow.jpg",
+      "offlinePath": "references/team3-liquid-20261110/offline-assets/card-080.jpg",
+      "width": 512,
+      "height": 640,
+      "quality": 60,
+      "bytes": 51835,
+      "sha256": "0649d74527b21f63244dd5ad66f8fbb09e63b91f03b8ab6a8af13c22008baa12",
+      "fallbackWebPaths": [
+        "apps/site/photos/team3-liquid-cards/card-080.jpg"
+      ]
+    },
+    {
+      "archiveNumber": 81,
+      "webPath": "apps/site/photos/team3-liquid-cards/card-081-reflow.jpg",
+      "offlinePath": "references/team3-liquid-20261110/offline-assets/card-081.jpg",
+      "width": 512,
+      "height": 640,
+      "quality": 60,
+      "bytes": 48290,
+      "sha256": "ee42a1824aa4ae00ed4bdd74a96f3a612515cd82caab33ac9e40e21d3a0b9e48",
+      "fallbackWebPaths": [
+        "apps/site/photos/team3-liquid-cards/card-081.jpg"
+      ]
+    },
+    {
+      "archiveNumber": 82,
+      "webPath": "apps/site/photos/team3-liquid-cards/card-082-reflow.jpg",
+      "offlinePath": "references/team3-liquid-20261110/offline-assets/card-082.jpg",
+      "width": 512,
+      "height": 640,
+      "quality": 60,
+      "bytes": 49023,
+      "sha256": "d46eadd4af3d3f38b62947d69c3b7b24b9595336d41bc247be4a73b120269e44",
+      "fallbackWebPaths": [
+        "apps/site/photos/team3-liquid-cards/card-082.jpg"
+      ]
+    },
+    {
+      "archiveNumber": 83,
+      "webPath": "apps/site/photos/team3-liquid-cards/card-083-reflow.jpg",
+      "offlinePath": "references/team3-liquid-20261110/offline-assets/card-083.jpg",
+      "width": 512,
+      "height": 640,
+      "quality": 60,
+      "bytes": 48887,
+      "sha256": "f82d455ab03b45058811a759fd7270b65a6eadea9435059ea071cf68038948d8",
+      "fallbackWebPaths": [
+        "apps/site/photos/team3-liquid-cards/card-083.jpg"
+      ]
+    },
+    {
+      "archiveNumber": 93,
+      "webPath": "apps/site/photos/team3-liquid-cards/card-093-reflow.jpg",
+      "offlinePath": "references/team3-liquid-20261110/offline-assets/card-093.jpg",
+      "width": 512,
+      "height": 640,
+      "quality": 60,
+      "bytes": 55478,
+      "sha256": "31927e0ca65b27a67ac096d9121970482cdc32d845e031d7180d722a3f31244b",
+      "fallbackWebPaths": [
+        "apps/site/photos/team3-liquid-cards/card-093.jpg"
+      ]
+    },
+    {
+      "archiveNumber": 94,
+      "webPath": "apps/site/photos/team3-liquid-cards/card-094-reflow.jpg",
+      "offlinePath": "references/team3-liquid-20261110/offline-assets/card-094.jpg",
+      "width": 512,
+      "height": 640,
+      "quality": 60,
+      "bytes": 48124,
+      "sha256": "63cf914b4ef4eae4919840645932542289095ad753128351880cbc4a3055baed",
+      "fallbackWebPaths": [
+        "apps/site/photos/team3-liquid-cards/card-094.jpg"
+      ]
+    },
+    {
+      "archiveNumber": 95,
+      "webPath": "apps/site/photos/team3-liquid-cards/card-095-reflow.jpg",
+      "offlinePath": "references/team3-liquid-20261110/offline-assets/card-095.jpg",
+      "width": 512,
+      "height": 640,
+      "quality": 60,
+      "bytes": 62259,
+      "sha256": "9fa9a768c8bba4c417058fe34cac632df69100289c0aef539d3b6941db6fdf47",
+      "fallbackWebPaths": [
+        "apps/site/photos/team3-liquid-cards/card-095.jpg"
+      ]
+    },
+    {
+      "archiveNumber": 96,
+      "webPath": "apps/site/photos/team3-liquid-cards/card-096-reflow.jpg",
+      "offlinePath": "references/team3-liquid-20261110/offline-assets/card-096.jpg",
+      "width": 512,
+      "height": 640,
+      "quality": 60,
+      "bytes": 52149,
+      "sha256": "b695930980e581d67acb4b20bdcd090728bb355a3c26af55129c70526d81fa02",
+      "fallbackWebPaths": [
+        "apps/site/photos/team3-liquid-cards/card-096.jpg"
+      ]
+    },
+    {
+      "archiveNumber": 97,
+      "webPath": "apps/site/photos/team3-liquid-cards/card-097-reflow.jpg",
+      "offlinePath": "references/team3-liquid-20261110/offline-assets/card-097.jpg",
+      "width": 512,
+      "height": 640,
+      "quality": 60,
+      "bytes": 58429,
+      "sha256": "c86f19886b6c442a55a7769f04899869b246536dc7484350792ba02de544e38d",
+      "fallbackWebPaths": [
+        "apps/site/photos/team3-liquid-cards/card-097.jpg"
+      ]
+    },
+    {
+      "archiveNumber": 98,
+      "webPath": "apps/site/photos/team3-liquid-cards/card-098-reflow.jpg",
+      "offlinePath": "references/team3-liquid-20261110/offline-assets/card-098.jpg",
+      "width": 512,
+      "height": 640,
+      "quality": 60,
+      "bytes": 52857,
+      "sha256": "2cefe8155457fc97e1114e56b91b3f8002779431c762aa771968066cc672f9e7",
+      "fallbackWebPaths": [
+        "apps/site/photos/team3-liquid-cards/card-098.jpg"
+      ]
+    },
+    {
+      "archiveNumber": 99,
+      "webPath": "apps/site/photos/team3-liquid-cards/card-099-reflow.jpg",
+      "offlinePath": "references/team3-liquid-20261110/offline-assets/card-099.jpg",
+      "width": 512,
+      "height": 640,
+      "quality": 60,
+      "bytes": 45925,
+      "sha256": "992aa5972b3b20ff4cbef1a25983e164e6b062fc446554163093a165a61070db",
+      "fallbackWebPaths": [
+        "apps/site/photos/team3-liquid-cards/card-099.jpg"
+      ]
+    },
+    {
+      "archiveNumber": 100,
+      "webPath": "apps/site/photos/team3-liquid-cards/card-100-reflow.jpg",
+      "offlinePath": "references/team3-liquid-20261110/offline-assets/card-100.jpg",
+      "width": 512,
+      "height": 640,
+      "quality": 60,
+      "bytes": 39569,
+      "sha256": "7bfeb084ecb736799eb33e8414e99797f2d6988af85c3c15337e8c057dde3d94",
+      "fallbackWebPaths": [
+        "apps/site/photos/team3-liquid-cards/card-100.jpg"
+      ]
+    },
+    {
+      "archiveNumber": 101,
+      "webPath": "apps/site/photos/team3-liquid-cards/card-101-reflow.jpg",
+      "offlinePath": "references/team3-liquid-20261110/offline-assets/card-101.jpg",
+      "width": 512,
+      "height": 640,
+      "quality": 60,
+      "bytes": 30342,
+      "sha256": "76429b66d34a519b67d5ee4622014b50b14e4b4e02913eaf053e3993152088ed",
+      "fallbackWebPaths": [
+        "apps/site/photos/team3-liquid-cards/card-101.jpg"
+      ]
+    },
+    {
+      "archiveNumber": 102,
+      "webPath": "apps/site/photos/team3-liquid-cards/card-102-reflow.jpg",
+      "offlinePath": "references/team3-liquid-20261110/offline-assets/card-102.jpg",
+      "width": 512,
+      "height": 640,
+      "quality": 60,
+      "bytes": 41410,
+      "sha256": "97f0369a66a90dbd25fb58a833e1b37c6cd3e727204c993af2a0c64f3e3f4971",
+      "fallbackWebPaths": [
+        "apps/site/photos/team3-liquid-cards/card-102.jpg"
+      ]
+    },
+    {
+      "archiveNumber": 103,
+      "webPath": "apps/site/photos/team3-liquid-cards/card-103-reflow.jpg",
+      "offlinePath": "references/team3-liquid-20261110/offline-assets/card-103.jpg",
+      "width": 512,
+      "height": 640,
+      "quality": 60,
+      "bytes": 41618,
+      "sha256": "ccb1b12ef494070ab4b9e03ff6266ae1afda3f524d0a735033d49a8acbcc3cb2",
+      "fallbackWebPaths": [
+        "apps/site/photos/team3-liquid-cards/card-103.jpg"
+      ]
+    },
+    {
+      "archiveNumber": 104,
+      "webPath": "apps/site/photos/team3-liquid-cards/card-104-reflow.jpg",
+      "offlinePath": "references/team3-liquid-20261110/offline-assets/card-104.jpg",
+      "width": 512,
+      "height": 640,
+      "quality": 60,
+      "bytes": 43800,
+      "sha256": "9553e8f82fdf0a8ec7b0ef29413f97538a2cc7d6e59cdc9f7049b51ffaa013b3",
+      "fallbackWebPaths": [
+        "apps/site/photos/team3-liquid-cards/card-104.jpg"
+      ]
+    },
+    {
+      "archiveNumber": 105,
+      "webPath": "apps/site/photos/team3-liquid-cards/card-105-reflow.jpg",
+      "offlinePath": "references/team3-liquid-20261110/offline-assets/card-105.jpg",
+      "width": 512,
+      "height": 640,
+      "quality": 60,
+      "bytes": 44750,
+      "sha256": "20184cc07d38842a153402bc642925d6a326cbceec18fea98318d7cab6d89cfb",
+      "fallbackWebPaths": [
+        "apps/site/photos/team3-liquid-cards/card-105.jpg"
+      ]
+    },
+    {
+      "archiveNumber": 106,
+      "webPath": "apps/site/photos/team3-liquid-cards/card-106-reflow.jpg",
+      "offlinePath": "references/team3-liquid-20261110/offline-assets/card-106.jpg",
+      "width": 512,
+      "height": 640,
+      "quality": 60,
+      "bytes": 34162,
+      "sha256": "367931e4bd1e2080bb1ed5b651f78edd82d8bb93738bb33240f342ffef506e19",
+      "fallbackWebPaths": [
+        "apps/site/photos/team3-liquid-cards/card-106.jpg"
+      ]
+    },
+    {
+      "archiveNumber": 107,
+      "webPath": "apps/site/photos/team3-liquid-cards/card-107-reflow.jpg",
+      "offlinePath": "references/team3-liquid-20261110/offline-assets/card-107.jpg",
+      "width": 512,
+      "height": 640,
+      "quality": 60,
+      "bytes": 36056,
+      "sha256": "fe94f452206999cb02b549b9d565fc2417ca338d5f7fb7ae761bb5151cdb900c",
+      "fallbackWebPaths": [
+        "apps/site/photos/team3-liquid-cards/card-107.jpg"
+      ]
+    }
+  ],
+  "totalBytes": 2449331,
+  "note": "Only52 reflow photos are embedded offline. Full web composite+4direction crops remain on disk.",
+  "profile": "reflow 2x2; longest640; JPEG60; 800/JPEG65 exceeded size target; full web originals retained",
+  "base64BytesEstimate": 3265848
+}

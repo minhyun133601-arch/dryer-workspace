@@ -1,0 +1,74 @@
+{
+  "id": "3-1782200950997-340050",
+  "line": "",
+  "name": "파우치 냉각수조",
+  "note": "",
+  "plan": "",
+  "rate": 0,
+  "room": "후살균실",
+  "team": "3팀",
+  "group": "",
+  "owner": "",
+  "status": "비가동중",
+  "process": "",
+  "documents": [],
+  "lastCheck": "",
+  "modelName": "",
+  "nextCheck": "",
+  "photoCrop": null,
+  "photoName": "파우치 냉각수조 photo.jpg",
+  "detailInfo": [
+    {
+      "label": "설비명",
+      "value": "파우치 냉각수조"
+    },
+    {
+      "label": "관리팀",
+      "value": "3팀"
+    },
+    {
+      "label": "가동률",
+      "value": "0%"
+    }
+  ],
+  "ownerLabel": "담당 업체",
+  "production": "",
+  "teamDataKey": "work_team_calendar_team3",
+  "detailGroups": {
+    "equipmentSpecs": []
+  },
+  "manufacturer": "",
+  "photoDataUrl": "",
+  "equipmentCode": "3-1782200950997-340050",
+  "operationInfo": [
+    {
+      "label": "설비명",
+      "value": "파우치 냉각수조"
+    },
+    {
+      "label": "관리팀",
+      "value": "3팀"
+    },
+    {
+      "label": "실",
+      "value": "후살균실"
+    },
+    {
+      "label": "공정",
+      "value": ""
+    },
+    {
+      "label": "가동률",
+      "value": "0"
+    }
+  ],
+  "manufacturedAt": "",
+  "photoDocumentId": "d6500d5d-cf2c-4933-9138-a10f5fa37385",
+  "photoPreviewUrl": "/api/files/d6500d5d-cf2c-4933-9138-a10f5fa37385/view",
+  "photoDownloadUrl": "/api/files/d6500d5d-cf2c-4933-9138-a10f5fa37385/download",
+  "manufacturerLabel": "제조사",
+  "photoThumbDataUrl": "",
+  "maintenanceHistory": [],
+  "photoAttachmentKey": "equipment-photo-main",
+  "photoStorageRelPath": "equipment-assets/equipment-history/파우치 냉각수조/images/5d9d02bf-580e-4a3b-87f2-8a8d22462acc.jpg"
+}

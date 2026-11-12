@@ -1,0 +1,10 @@
+{
+  "pack_id": "0f3ecc8a24ff21ec87a5ce78f6250fabf2dccc398676f496065276d2dfef1f16",
+  "file_uri": "C:\\Users\\user\\Desktop\\프로젝트\\workspace\\production-collection-20261104\\cloud-packages\\01_DWG 도면\\01_DWG 도면_002.zip",
+  "file_name": "01_DWG 도면_002.zip",
+  "bytes": 1044714682,
+  "local_mtime_ns": 1793766870226052200,
+  "sha256": "94d8bff13ad6892f22cc1050bff10f9079688a7178f6dd51177959925d63063d",
+  "files": 480,
+  "verification": "Every member SHA256 verified while writing; ZIP package SHA256 computed locally."
+}

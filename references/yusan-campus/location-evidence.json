@@ -1,0 +1,871 @@
+{
+  "schema_version": 1,
+  "updated_on": "2026-11-09",
+  "purpose": "희창유업·HC글로벌 유산공장 전경의 위치·배치 근거 통합. 모델 좌표는 UI에 표시하지 않음.",
+  "site_identity": {
+    "address": "경상남도 양산시 유산공단7길 45",
+    "parcel_address_reference": "경상남도 양산시 유산동 250",
+    "address_confirmed_by": "사용자 확인 및 공식 회사소개 페이지",
+    "official_location_label": "HC글로벌",
+    "same_address_may_include_other_companies": true,
+    "scope": "희창유업·HC글로벌 공장 재현 대상과 주변 맥락을 구분. 송월 등 같은 주소의 타사 시설을 희창 소유 건물로 편입하지 않음.",
+    "historic_drawing_site_area_m2": 21130,
+    "site_boundary_quality": "과거 배치도와 항공영상 기반 시각 경계이며 현재 지적·소유 경계 확정이 아님."
+  },
+  "source_urls": [
+    {
+      "id": "official-company-location",
+      "url": "https://www.heechang.com/bbs/content.php?co_id=01_02",
+      "role": "공식 회사소개·HC글로벌 주소 확인"
+    },
+    {
+      "id": "company-promotion-video",
+      "url": "https://www.youtube.com/watch?v=5AAN38m96hA",
+      "role": "실제 외관 4:36~4:40, 건물 모형 0:52; 높이·간판·창·지붕 보강"
+    },
+    {
+      "id": "aerial-imagery",
+      "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=129.0284%2C35.3607%2C129.0340%2C35.3640&bboxSR=4326&imageSR=3857&size=1600%2C1150&format=jpg&f=json",
+      "role": "현재 확보한 항공사진상의 건물 지붕·상대 위치·진입로·주변 도로 비교",
+      "attribution": "Esri, Vantor, Earthstar Geographics, GIS User Community",
+      "retrieved": "2026-11-09",
+      "capture_date": null,
+      "capture_date_note": "다운로드 날짜와 항공사진 촬영 날짜는 다름. 촬영 날짜 미확인."
+    },
+    {
+      "id": "official-company-logo",
+      "url": "https://www.heechang.com/theme/basic/images/top_logo.svg",
+      "role": "실제 공식 SVG 로고를 모델 텍스처에 사용하기 위한 원본"
+    }
+  ],
+  "aerial_reference": {
+    "image_path": "references/yusan-campus/yusan-surroundings.jpg",
+    "request_metadata_path": "references/yusan-campus/imagery-request.json",
+    "image_size_px": [
+      1600,
+      1150
+    ],
+    "image_crs": "EPSG:3857",
+    "extent": {
+      "xmin": 14363374.116572507,
+      "ymin": 4213007.514554911,
+      "xmax": 14364000.844317572,
+      "ymax": 4213457.975121677,
+      "spatialReference": {
+        "wkid": 102100,
+        "latestWkid": 3857
+      }
+    },
+    "north_in_image": "위쪽",
+    "image_is_geographic_context": true
+  },
+  "approximate_model_frame": {
+    "status": "항공영상 픽셀 기반 근사 등록; 측량 기준점·실측 CAD 정합 아님",
+    "origin_image_pixel": [
+      755,
+      455
+    ],
+    "origin_wgs84": {
+      "latitude_degrees": 35.36269436395243,
+      "longitude_degrees": 129.03104165649964
+    },
+    "origin_epsg3857_m": [
+      14363669.85372721,
+      4213279.749419174
+    ],
+    "image_pixel_axis": {
+      "u": "오른쪽 +",
+      "v": "아래쪽 +"
+    },
+    "positive_model_x_unit_in_image_pixel_plane": [
+      -0.568,
+      -0.823
+    ],
+    "positive_model_z_unit_in_image_pixel_plane": [
+      0.823,
+      -0.568
+    ],
+    "approx_true_north_model_xz": [
+      0.823,
+      0.568
+    ],
+    "approx_model_x_bearing_true_north_degrees": 325.3881936320869,
+    "approx_model_z_bearing_true_north_degrees": 55.388193632086896,
+    "ground_meters_per_image_pixel": 0.31943717636358054,
+    "scale_method": "(extent.xmax - extent.xmin) / image_width * cos(origin_latitude)",
+    "pixel_to_local_formula": "du=u-755; dv=v-455; X=(du*(-0.568)+dv*(-0.823))*ground_meters_per_image_pixel; Z=(du*0.823+dv*(-0.568))*ground_meters_per_image_pixel",
+    "altitude_registration": null,
+    "north_quality": "항공사진 북쪽 기준의 모델 축 근사값. 휴대폰 나침반이나 오래된 도면 방위표와 정밀 보정하지 않음."
+  },
+  "entrance_user_override": {
+    "photo_path": "입구.png",
+    "photo_visually_reviewed": true,
+    "priority": "사용자의 진입 동선 설명과 입구 사진을 우선한 시각 배치",
+    "visible_facts": [
+      "사진 오른쪽 차로가 전면 아래에서 건물 옆으로 계속 직진함",
+      "녹색 지붕 경비실이 차로 왼쪽에 있음",
+      "전면에 차단기와 철제 출입문·펜스가 보임",
+      "원 입구 사진에서는 경비실 뒤쪽 버스 주차가 보임; 현 모델에서는 사용자 요청으로 버스를 생략"
+    ],
+    "runtime_approximate_layout": {
+      "road_center_x": 82,
+      "road_width_m": 10,
+      "road_from_z": 120,
+      "road_to_z": -70,
+      "guard_position_xyz": [
+        71,
+        0,
+        53
+      ],
+      "sideParking": {
+        "centerX": 92.5,
+        "fromZ": -45,
+        "toZ": 36,
+        "step": 3.8,
+        "depth": 5.2,
+        "width": 2.6,
+        "angleDegrees": 45
+      },
+      "parked_vehicle_count": 16,
+      "empty_entrance_end_stalls": 2,
+      "front_loading_truck_omitted": true,
+      "guard_dimensions_m": {
+        "width": 10,
+        "depth": 8.9,
+        "height": 3.2
+      },
+      "guard_drawing_normalized_footprint_m": [
+        [
+          10,
+          8.9
+        ],
+        [
+          3.6,
+          8.9
+        ],
+        [
+          0,
+          5.3
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          10,
+          0
+        ]
+      ]
+    },
+    "registration_note": "위 값은 사용자 설명+사진을 만족시키는 런타임 근사 배치이며 위성사진 건물 픽셀점으로 역산한 GPS 위치가 아님. 사진으로 폭·이격·높이를 실측하지 않음.",
+    "current_user_edits": [
+      "버스는 사용자 요청으로 제거함",
+      "주차는 도로변을 따라 연속된 한 줄의 사선·대각 주차로 반영하고 45도 각도·폭·칸수는 모형 근사로 취급함",
+      "기존 전면 정형 주차열과 추가 임의 격자 주차를 제거함",
+      "진입로 중심 X=82와 직진 폭10m를 유지",
+      "맞은편 주황 지붕 공장동, 버스 뒤 흰색 건물(진입로 건너 회색 공장동), 전면 주황 지붕 띠창동을 모델 범위에서 생략",
+      "앞을 막는 차량을 빼 달라는 사용자 요청으로 전면 하역 트럭을 생략하고 사선 주차의 입구 끝 두 칸을 비움. 도로변 주차 차량은 16대만 남김."
+    ],
+    "parking_layout_basis": "사용자가 도로를 따라 사선·대각으로 주차한다고 정정함. 원 입구 사진의 도로변 연속 관계와 함께, 한 줄 대각 주차로 반영함.",
+    "parking_model_quality": "45도 각도·폭·깊이·간격·칸수는 모형 근사이며 실측값이 아님. 기존 전면 정형 주차열을 제거하고 부지 앞에 추가 임의 격자를 두지 않음.",
+    "guard_geometry_basis": "2019 파일명 배치도의 WALL1 5각 외곽을 mm 관례로 환산해 폭10·깊이8.9m를 모델에 참고. 높이3.2m와 (X,Y,Z)=(71,0,53) 배치는 사진·사용자 동선 기준 근사이며 기존 위치를 유지함."
+  },
+  "historic_drawings": [
+    {
+      "sha256": "0cd4ea0d0d1bdbbb59afd1418ec3e3da56af6d9891c5345cfd00949c21444ac7",
+      "name": "유산공장 배치도(A3).pdf",
+      "original_path": "근거 자료/건물3D 후보도면/01_전체배치/유산/유산공장 배치도(A3)__0cd4ea0d0d1b.pdf",
+      "review_page": "근거 자료/도면검토앱/cache/0cd4ea0d0d1bdbbb59afd1418ec3e3da56af6d9891c5345cfd00949c21444ac7/page-001.png",
+      "review_route": "/drawing-review/?drawing=0cd4ea0d0d1bdbbb59afd1418ec3e3da56af6d9891c5345cfd00949c21444ac7",
+      "use": "배치·도로·보조시설 관계 참고. 과거 증축·철거안이므로 현 건물과 일대일 확정하지 않음."
+    },
+    {
+      "sha256": "e7d2135851f5828daf9407746223dc9d0a5072f9137ae11fee4bbbd29485779d",
+      "name": "A-002-건물배치도.dwg",
+      "original_path": "근거 자료/건물3D 후보도면/원본 DWG/01_전체배치/유산/A-002-건물배치도__e7d2135851f5.dwg",
+      "review_page": "근거 자료/도면검토앱/cache/e7d2135851f5828daf9407746223dc9d0a5072f9137ae11fee4bbbd29485779d/page-001.png",
+      "review_route": "/drawing-review/?drawing=e7d2135851f5828daf9407746223dc9d0a5072f9137ae11fee4bbbd29485779d",
+      "use": "배치·도로·보조시설 관계 참고. 과거 증축·철거안이므로 현 건물과 일대일 확정하지 않음."
+    },
+    {
+      "sha256": "4e711089487a02d445af0a24ffab2f83817ced8e0bdb5d938eeb0fdef1164ae9",
+      "name": "A-002-배치도.dwg",
+      "original_path": "근거 자료/건물3D 후보도면/원본 DWG/01_전체배치/유산/A-002-배치도__4e711089487a.dwg",
+      "review_page": "근거 자료/도면검토앱/cache/4e711089487a02d445af0a24ffab2f83817ced8e0bdb5d938eeb0fdef1164ae9/page-001.png",
+      "review_route": "/drawing-review/?drawing=4e711089487a02d445af0a24ffab2f83817ced8e0bdb5d938eeb0fdef1164ae9",
+      "use": "배치·도로·보조시설 관계 참고. 과거 증축·철거안이므로 현 건물과 일대일 확정하지 않음."
+    },
+    {
+      "sha256": "16ca82299ae3ceeca64dda51209a5c2273e8b32167e3b0761dfa913497c9dc33",
+      "name": "유산공장 건물배치도2019.12.23.dwg",
+      "original_path": "근거 자료/건물3D 후보도면/원본 DWG/01_전체배치/유산/유산공장 건물배치도2019.12.23__16ca82299ae3.dwg",
+      "review_route": "/drawing-review/?drawing=16ca82299ae3ceeca64dda51209a5c2273e8b32167e3b0761dfa913497c9dc33",
+      "use": "이번 사용자 요청으로 선택한 단일 배치도만 복사·변환해 경비실과 출입구·과거 주차 표식을 확인. 원본·표준 캐시·SQLite는 변경하지 않음.",
+      "review_artifact_directory": "references/yusan-campus/2019-drawing-review"
+    }
+  ],
+  "historic_drawing_observations": {
+    "dated_references": [
+      "A3 PDF 표제란 07.11",
+      "A-002 계열 2006년 표제·수정 이력"
+    ],
+    "directly_read": [
+      "대지 21,130㎡",
+      "10m 도로",
+      "4동 폭 35,000mm(24,200+10,800)",
+      "4동~3동 사이 12,500mm",
+      "9동 증축 부분 31,350×24,925mm",
+      "2동 900㎡ 철거 표기",
+      "오른쪽 경계 안쪽의 과거 주차계획 표시(현 모델의 도로변 한 줄 대각 주차와 구분)",
+      "옥외위험물저장소·변전실·경비실·폐수처리장·압축실·100톤 지하수조·정화조 표기"
+    ],
+    "limitations": [
+      "역사적 증축·철거 계획을 현재 건물에 그대로 합치지 않음",
+      "도면 동번호와 현재 외관 관찰 그룹의 대응을 확정하지 않음",
+      "2019 배치 DWG는 표준 검토앱 미리보기 미지원이었으나 이번 선택 검토로 references/yusan-campus/2019-drawing-review에 핵심 진단 추출을 보존. BAK와 일부 수정05.31 파일의180px 저장 썸네일은 치수 판독에 사용하지 않음."
+    ]
+  },
+  "phone_gps_observations": {
+    "source_directory": "좌표",
+    "coordinate_reference": "WGS84 / EPSG:4326 휴대폰 촬영 위치",
+    "filter_for_summary": {
+      "status": "valid",
+      "is_mock": false,
+      "maximum_age_ms": 10000,
+      "maximum_horizontal_accuracy_m": 10
+    },
+    "counts_include_track_start_end_observations": true,
+    "timeline_quality": "video_time_ms는 추정 연결이며 일부 시작·끝 기록은 명목 영상 시간 밖일 수 있음. 프레임 노출과 하드웨어 동기 검증되지 않음.",
+    "tracks": [
+      {
+        "text_path": "좌표/20261109_130757KST_GPS-NOFIX_LATNA_LONNA_H51.0-MN_DIR-AVAILABLE_P-16.7_ACCNAm_FV-47720f0f-0e5b-4ccd-8fdc-8c5c1f90d157.txt",
+        "video_path": null,
+        "recorded_filename": "20261109_130757KST_GPS-NOFIX_LATNA_LONNA_H51.0-MN_DIR-AVAILABLE_P-16.7_ACCNAm_FV-47720f0f-0e5b-4ccd-8fdc-8c5c1f90d157.mp4",
+        "duration_ms": 9333,
+        "observations_total": 14,
+        "valid_nonmock_samples": 7,
+        "fresh_accuracy_at_most_10m_samples": 0,
+        "visual_scope": "미수신 시작의 짧은 촬영"
+      },
+      {
+        "text_path": "좌표/20261109_133757KST_GPS-VALID_LAT35.3619717_LON129.0312383_H24.7-TN_DIR-AVAILABLE_P-23.9_ACC2.4m_FV-32ca5218-af17-4d68-a395-de3573150cd8.txt",
+        "video_path": "20261109_133757KST_GPS-VALID_LAT35.3619717_LON129.0312383_H24.7-TN_DIR-AVAILABLE_P-23.9_ACC2.4m_FV-32ca5218-af17-4d68-a395-de3573150cd8.mp4",
+        "recorded_filename": "20261109_133757KST_GPS-VALID_LAT35.3619717_LON129.0312383_H24.7-TN_DIR-AVAILABLE_P-23.9_ACC2.4m_FV-32ca5218-af17-4d68-a395-de3573150cd8.mp4",
+        "duration_ms": 272956,
+        "observations_total": 276,
+        "valid_nonmock_samples": 276,
+        "fresh_accuracy_at_most_10m_samples": 276,
+        "latitude_range_degrees": [
+          35.361959999999996,
+          35.36243833333333
+        ],
+        "longitude_range_degrees": [
+          129.03123833333333,
+          129.03178833333334
+        ],
+        "median_latitude_degrees": 35.36221,
+        "median_longitude_degrees": 129.0314666666667,
+        "median_horizontal_accuracy_m": 1.600000023841858,
+        "visual_scope": "실외기실 현장 촬영"
+      },
+      {
+        "text_path": "좌표/20261109_144505KST_GPS-VALID_LAT35.3625783_LON129.0303183_H3.5-TN_DIR-AVAILABLE_P-54.5_ACC2.7m_FV-d000702e-bcaf-4209-bc8e-95029e688aea.txt",
+        "video_path": "좌표/20261109_144505KST_GPS-VALID_LAT35.3625783_LON129.0303183_H3.5-TN_DIR-AVAILABLE_P-54.5_ACC2.7m_FV-d000702e-bcaf-4209-bc8e-95029e688aea.mp4",
+        "recorded_filename": "20261109_144505KST_GPS-VALID_LAT35.3625783_LON129.0303183_H3.5-TN_DIR-AVAILABLE_P-54.5_ACC2.7m_FV-d000702e-bcaf-4209-bc8e-95029e688aea.mp4",
+        "duration_ms": 2033,
+        "observations_total": 6,
+        "valid_nonmock_samples": 6,
+        "fresh_accuracy_at_most_10m_samples": 6,
+        "latitude_range_degrees": [
+          35.36257666666667,
+          35.36259166666667
+        ],
+        "longitude_range_degrees": [
+          129.0303133333333,
+          129.03031833333335
+        ],
+        "median_latitude_degrees": 35.36258083333333,
+        "median_longitude_degrees": 129.0303133333333,
+        "median_horizontal_accuracy_m": 2.700000047683716,
+        "visual_scope": "바닥·출입구·실내 생산설비·복도·계단 위주; 외부 footprint 결정에 사용하지 않음"
+      },
+      {
+        "text_path": "좌표/20261109_144712KST_GPS-VALID_LAT35.3622383_LON129.0304400_H238.5-TN_DIR-AVAILABLE_P-57.6_ACC2.8m_FV-a77713e8-61c1-4e7a-ae7b-08a98d0893e0.txt",
+        "video_path": "좌표/20261109_144712KST_GPS-VALID_LAT35.3622383_LON129.0304400_H238.5-TN_DIR-AVAILABLE_P-57.6_ACC2.8m_FV-a77713e8-61c1-4e7a-ae7b-08a98d0893e0.mp4",
+        "recorded_filename": "20261109_144712KST_GPS-VALID_LAT35.3622383_LON129.0304400_H238.5-TN_DIR-AVAILABLE_P-57.6_ACC2.8m_FV-a77713e8-61c1-4e7a-ae7b-08a98d0893e0.mp4",
+        "duration_ms": 22766,
+        "observations_total": 27,
+        "valid_nonmock_samples": 27,
+        "fresh_accuracy_at_most_10m_samples": 27,
+        "latitude_range_degrees": [
+          35.362206666666665,
+          35.36226833333333
+        ],
+        "longitude_range_degrees": [
+          129.03043,
+          129.030515
+        ],
+        "median_latitude_degrees": 35.36223833333334,
+        "median_longitude_degrees": 129.03049000000001,
+        "median_horizontal_accuracy_m": 2.299999952316284,
+        "visual_scope": "바닥·출입구·실내 생산설비·복도·계단 위주; 외부 footprint 결정에 사용하지 않음"
+      },
+      {
+        "text_path": "좌표/20261109_144753KST_GPS-VALID_LAT35.3623483_LON129.0303950_H214.1-TN_DIR-AVAILABLE_P-65.3_ACC37.5m_FV-c54af9f3-48dc-45ba-982d-b856cbecf21b.txt",
+        "video_path": "좌표/20261109_144753KST_GPS-VALID_LAT35.3623483_LON129.0303950_H214.1-TN_DIR-AVAILABLE_P-65.3_ACC37.5m_FV-c54af9f3-48dc-45ba-982d-b856cbecf21b.mp4",
+        "recorded_filename": "20261109_144753KST_GPS-VALID_LAT35.3623483_LON129.0303950_H214.1-TN_DIR-AVAILABLE_P-65.3_ACC37.5m_FV-c54af9f3-48dc-45ba-982d-b856cbecf21b.mp4",
+        "duration_ms": 1102887,
+        "observations_total": 1103,
+        "valid_nonmock_samples": 937,
+        "fresh_accuracy_at_most_10m_samples": 909,
+        "latitude_range_degrees": [
+          35.36199666666666,
+          35.36252
+        ],
+        "longitude_range_degrees": [
+          129.02995166666668,
+          129.03072833333331
+        ],
+        "median_latitude_degrees": 35.36227833333333,
+        "median_longitude_degrees": 129.0304033333333,
+        "median_horizontal_accuracy_m": 2.799999952316284,
+        "visual_scope": "바닥·출입구·실내 생산설비·복도·계단 위주; 외부 footprint 결정에 사용하지 않음"
+      },
+      {
+        "text_path": "좌표/20261109_150652KST_GPS-VALID_LAT35.3624217_LON129.0302950_H135.3-TN_DIR-AVAILABLE_P-36.7_ACC5.0m_FV-8667f097-86b1-4339-a5ba-498caa0361ea.txt",
+        "video_path": "좌표/20261109_150652KST_GPS-VALID_LAT35.3624217_LON129.0302950_H135.3-TN_DIR-AVAILABLE_P-36.7_ACC5.0m_FV-8667f097-86b1-4339-a5ba-498caa0361ea.mp4",
+        "recorded_filename": "20261109_150652KST_GPS-VALID_LAT35.3624217_LON129.0302950_H135.3-TN_DIR-AVAILABLE_P-36.7_ACC5.0m_FV-8667f097-86b1-4339-a5ba-498caa0361ea.mp4",
+        "duration_ms": 71821,
+        "observations_total": 76,
+        "valid_nonmock_samples": 76,
+        "fresh_accuracy_at_most_10m_samples": 76,
+        "latitude_range_degrees": [
+          35.362345,
+          35.36320166666667
+        ],
+        "longitude_range_degrees": [
+          129.02914333333334,
+          129.03042833333333
+        ],
+        "median_latitude_degrees": 35.362518333333334,
+        "median_longitude_degrees": 129.02989,
+        "median_horizontal_accuracy_m": 2.5,
+        "visual_scope": "바닥·출입구·실내 생산설비·복도·계단 위주; 외부 footprint 결정에 사용하지 않음"
+      }
+    ],
+    "quality_caveats": [
+      "촬영 위치이며 설비 위치나 건물 모서리 실측점이 아님",
+      "실내·금속 구조물 주변에서 반사와 위치 드리프트 가능. 15:06 영상은 계단·복도 촬영인데 좌표가 100m 이상 흐르는 구간이 있음",
+      "정확도 수치는 68% 수준의 추정 반경으로 표시되며 정확한 위치를 보증하지 않음",
+      "파일명의 H는 heading 방위각이며 높이가 아님",
+      "GPS altitude_m은 WGS84 타원체 기준이고 수직 오차가 커서 층고·지반고로 사용하지 않음",
+      "자북·진북 및 센서 신뢰도·미수신·마지막 수신 위치를 구분. 마지막 수신 참고값을 현재 위치로 사용하지 않음"
+    ]
+  },
+  "integration_policy": {
+    "confirmed": [
+      "사용자가 지정한 주소",
+      "항공영상에 보이는 지붕 형태와 상대 관계",
+      "원 입구 사진의 직진 차로·왼쪽 경비실·버스·차단기 관찰 관계(현 모델에서는 버스 생략)",
+      "보관 도면에 실제 쓰인 역사적 치수·시설 표기"
+    ],
+    "approximate": [
+      "건물 높이·숨은 외벽·지붕 세부치수",
+      "항공사진 픽셀에서 환산한 모델 크기와 방향",
+      "사용자 입구 설명에 맞춘 도로·경비실·버스의 런타임 위치"
+    ],
+    "not_inferred": [
+      "현 시점 법적 부지 경계와 타사 건물 소유권",
+      "휴대폰 좌표로 실내 벽·기둥·층고 결정",
+      "오래된 도면을 현 준공 상태로 확정"
+    ],
+    "display_coordinates_in_ui": false,
+    "original_files_modified": false
+  },
+  "current_model_scope": {
+    "reason": "직원 확인에 따라7층건조실과그옆별도3층스틱·소포장동을분리한최신6그룹표현. 기존사용자생략대상은유지.",
+    "retained_groups": [
+      {
+        "id": "campus-office",
+        "name": "본관",
+        "name_status": "confirmed_by_user",
+        "roomLink": null
+      },
+      {
+        "id": "campus-dryer-tower",
+        "name": "건조실 · 7층",
+        "name_status": "confirmed_by_user",
+        "roomLink": "all"
+      },
+      {
+        "id": "campus-packaging-building",
+        "name": "스틱·소포장동 · 3층",
+        "name_status": "confirmed_by_user",
+        "roomLink": "packaging"
+      },
+      {
+        "id": "campus-production",
+        "name": "물류장",
+        "name_status": "confirmed_by_user",
+        "roomLink": null
+      },
+      {
+        "id": "campus-blue-annex",
+        "name": "액상",
+        "name_status": "confirmed_by_user",
+        "roomLink": null
+      },
+      {
+        "id": "campus-guardhouse",
+        "name": "정문 녹색 경비실",
+        "name_status": "photo_and_employee_reference",
+        "roomLink": null
+      }
+    ],
+    "omitted_by_user_request": [
+      "버스",
+      "맞은편 주황 지붕 공장동",
+      "버스 뒤 흰색 건물(진입로 건너 회색 공장동)",
+      "전면 주황 지붕 띠창동",
+      "전면 하역 트럭"
+    ],
+    "interpretation": "사용자가 선택한 모델 표현 범위에서 생략한 것이며, 사진·항공영상 속 실제 주변 건물이 존재하지 않는다는 뜻이 아님. 기존 관찰과 원본 근거는 보존함.",
+    "parking_scope": "도로변 한 줄 대각 주차만 배치. 기존 전면 정형 주차열과 부지 앞 추가 임의 주차 격자는 제거. 45도와 주차칸 치수·칸수는 근사. 사용자 요청으로 전면 하역 트럭을 제거하고 입구 끝 두 칸을 비우며 도로변 주차 차량은 16대로 제한함.",
+    "campus_group_count": 6,
+    "latest_building_identity": {
+      "dryer_building": "간판이 있는 건물은7층건조실",
+      "dryer_third_floor_cyclone": "직원 확인3층테라스사이클론이며지상탱크로보지않음",
+      "packaging_building": "건조실옆별도스틱·소포장동,이번긴영상은그3층",
+      "direct_click_navigation": "배치이동모드가아닐때건조실직접클릭은all,스틱·소포장동직접클릭은packaging내부로이동",
+      "evidence": "사용자명시확인+CG/도면참고.캠퍼스설치위치와층고는비례근사."
+    }
+  },
+  "selected_2019_drawing_review": {
+    "status": "confirmed_from_selected_drawing",
+    "source_sha256": "16ca82299ae3ceeca64dda51209a5c2273e8b32167e3b0761dfa913497c9dc33",
+    "source_original_path": "근거 자료/건물3D 후보도면/원본 DWG/01_전체배치/유산/유산공장 건물배치도2019.12.23__16ca82299ae3.dwg",
+    "source_read_only": true,
+    "original_sha_verified_unchanged": true,
+    "standard_app_cache_changed": false,
+    "sqlite_changed": false,
+    "authorization_scope": "사용자가 해당 배치도 확인을 명시 요청하여 선택한 단일 도면만 검토. 일괄 CAD 변환 재개 아님.",
+    "artifacts": [
+      {
+        "path": "references/yusan-campus/2019-drawing-review/site-2019-focused.png",
+        "bytes": 107536,
+        "sha256": "c669cc270638a72e4b3b6d2552d2aa9e6b8c929e07cf0d05296190a24b69bcf3"
+      },
+      {
+        "path": "references/yusan-campus/2019-drawing-review/entrance-parking-2019.png",
+        "bytes": 49709,
+        "sha256": "2dee6b0c211cc4d83ffe0d6ec55174b13bed159f386765952fee88cac85249db"
+      },
+      {
+        "path": "references/yusan-campus/2019-drawing-review/selected-drawing-findings.json",
+        "bytes": 3067,
+        "sha256": "8229fb549cc7591bf4f08a2edd1a116f79ecbc57c46bc4b08a3b9e3cc7a8c883"
+      },
+      {
+        "path": "references/yusan-campus/2019-drawing-review/conversion.json",
+        "bytes": 459,
+        "sha256": "5fd0fd486161fc5554827d8254361da78ef8015c8c3cd6281ab46301542d3859"
+      }
+    ],
+    "preserved_artifacts_total_bytes": 160771,
+    "large_intermediates": "약220MB DXF와 원본 작업 복사본은 tmp/yusan-2019-selected-review에만 두며 references에 중복 복사하지 않음.",
+    "dxf_insunits": 0,
+    "unit_note": "DXF INSUNITS=0으로 단위가 지정되지 않음. 기존 도면의 mm 치수 관례로 환산한 모델 참고이며 현장 실측 확정값이 아님.",
+    "recency_note": "파일명2019.12.23이나 내부에2017.08.03 표제·이전 증축안·동일 배치 복제본이 섞여 있어 최신 준공도면으로 단정하지 않음.",
+    "rendering_method": "기존 ODA로 임시 DXF를 만들고 저메모리 streaming XY 진단으로 LINE/LWPOLYLINE/ARC/CIRCLE/TEXT를 추출.",
+    "rendering_caveats": [
+      "INSERT 블록 내부·해치·기타 복합 객체를 생략한 진단 이미지이며 정식 CAD 출력 전체가 아님",
+      "문자 회전을 적용하지 않음",
+      "같은 부지 배치 복제본에 반복된 경비실 표기는 실제 경비실 여러 개를 뜻하지 않음"
+    ],
+    "guardhouse_drawing_fact": {
+      "label": "증축7동 (경비실)",
+      "location_in_plan": "주배치도 우상단 10M 도로·출입구 가까이",
+      "outline_layer": "WALL1",
+      "raw_width": 10000,
+      "raw_depth": 8900,
+      "raw_chamfer": 3600,
+      "normalized_footprint_m_if_mm": [
+        [
+          10,
+          8.9
+        ],
+        [
+          3.6,
+          8.9
+        ],
+        [
+          0,
+          5.3
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          10,
+          0
+        ]
+      ],
+      "physical_guardhouse_count_in_selected_plan": 1
+    },
+    "parking_drawing_fact": {
+      "label": "기존주차 (91대)",
+      "symbol_raw_size": [
+        5000,
+        2300
+      ],
+      "geometry": "축정렬 직사각형 안을 대각 선분이 가로지르는 주차장 기호",
+      "interpretation": "내부 사선을 45도 사선 주차 방향으로 단정하지 않음. 현재 사선 주차·16대·입구끝 두 칸 비움은 직원 최신 정정을 우선함."
+    }
+  },
+  "tower_exterior_reference": {
+    "status": "approximate_model_combining_drawing_and_cg",
+    "model_group_id": "campus-dryer-tower",
+    "source_drawings": [
+      {
+        "sha256": "4c44530968e6330bd92056b1bf075092876ebc6fdc6f0f753726cdde99bc0363",
+        "name": "A-011,012-입면도.dwg",
+        "original_path": "근거 자료/건물3D 후보도면/원본 DWG/02_동별건축/유산/A-011,012-입면도__4c44530968e6.dwg",
+        "review_route": "/drawing-review/?drawing=4c44530968e6330bd92056b1bf075092876ebc6fdc6f0f753726cdde99bc0363",
+        "site_path_evidence": "희창유업 유산공장 도면 (1)-조준상/4동-제조동",
+        "drawing_title": "(주)에이치씨산업 공장증축공사 / 4동",
+        "visual_reviewed": true
+      },
+      {
+        "sha256": "fa581cca30e3554acecddc634538dde30d7765e3a6654302a704079d34ef6fba",
+        "name": "A-019-종단면도.dwg",
+        "original_path": "근거 자료/건물3D 후보도면/원본 DWG/02_동별건축/유산/A-019-종단면도__fa581cca30e3.dwg",
+        "review_route": "/drawing-review/?drawing=fa581cca30e3554acecddc634538dde30d7765e3a6654302a704079d34ef6fba",
+        "site_path_evidence": "희창유업 유산공장 도면 (1)-조준상/4동-제조동",
+        "drawing_title": "(주)에이치씨산업 공장증축공사 / 4동",
+        "visual_reviewed": true
+      },
+      {
+        "sha256": "84dddc02968dff9bda2ccc62d919cd1bfa87c0b828161e49f680116a2fed4437",
+        "name": "A-020-횡단면도.dwg",
+        "original_path": "근거 자료/건물3D 후보도면/원본 DWG/02_동별건축/유산/A-020-횡단면도__84dddc02968d.dwg",
+        "review_route": "/drawing-review/?drawing=84dddc02968dff9bda2ccc62d919cd1bfa87c0b828161e49f680116a2fed4437",
+        "site_path_evidence": "희창유업 유산공장 도면 (1)-조준상/4동-제조동",
+        "drawing_title": "(주)에이치씨산업 공장증축공사 / 4동",
+        "visual_reviewed": true
+      },
+      {
+        "sha256": "08c9f47866f5f6285023ada13fdd7383bd54fbea6ee88d346cb0d495eddd3016",
+        "name": "A-033-부분상세도-지붕.dwg",
+        "original_path": "근거 자료/건물3D 후보도면/원본 DWG/02_동별건축/유산/A-033-부분상세도-지붕__08c9f47866f5.dwg",
+        "review_route": "/drawing-review/?drawing=08c9f47866f5f6285023ada13fdd7383bd54fbea6ee88d346cb0d495eddd3016",
+        "site_path_evidence": "희창유업 유산공장 도면 (1)-조준상/4동-제조동",
+        "drawing_title": "(주)에이치씨산업 공장증축공사 / 4동",
+        "visual_reviewed": true
+      }
+    ],
+    "read_dimensions_m": {
+      "eave": 37.4,
+      "ridge": 40.4,
+      "high_tower_axis_width": 17,
+      "high_tower_outer_width": 17.2,
+      "high_tower_longitudinal_depth": 26.8,
+      "whole_building_width_including_low_wing": 43,
+      "whole_building_longitudinal_depth": 35
+    },
+    "model_mass_reference_m": {
+      "width": 17.2,
+      "depth": 26.8,
+      "height": 40.4
+    },
+    "dimension_status": "유산4동 입면·단면의 기재 치수를 모델 매스 참고로 채택한 근사. 현재 준공 최종 revision과 외관의 완전 일치는 확인하지 않음.",
+    "cg_image_path": "apps/site/photos/company-video/frame-052s.jpg",
+    "cg_visual_facts": [
+      "무창 크림색 고층 정면",
+      "큰 청색 HEE CHANG 간판",
+      "주황 세로 모서리",
+      "열린 평지붕·파라펫처럼 보이는 상부",
+      "뒤편 별도 수직부"
+    ],
+    "difference_from_drawings": "입면·지붕 상세도는 박공지붕, 철재 난간과 익스팬디드메탈 점검 통로를 보여줌. CG052의 열린 평지붕·파라펫 및 뒤편 수직부와 차이가 있어 외관은 CG를 우선하고 치수는 도면 참고로 분리함.",
+    "not_in_drawings": [
+      "간판 실제 치수",
+      "간판 설치 위치·색상",
+      "현재 완공 상태와 CG의 일치 여부"
+    ],
+    "model_visual_application": {
+      "status": "approximate_model_following_cg",
+      "features": [
+        "무창 크림색 정면",
+        "열린 평지붕·파라펫과 들어간 상부 데크",
+        "후면 분리 수직부와 열린 상부 슬롯",
+        "낮은 주황 박공지붕 연결동",
+        "3층 작업면의 사이클론과 설비 받침"
+      ],
+      "roof_decision": "CG를 따라 높은 본체의 주황 박공지붕은 생략하고 낮은 연결동의 주황 박공지붕은 유지함. 도면의 높은 박공지붕과 차이는 별도 기록."
+    },
+    "employee_correction_to_initial_tank_description": "초기외관설명에서탱크처럼기재한외부구조는직원이건조실3층사이클론으로확인함.현재모델은3층작업면에두며지상탱크로단정하지않음."
+  },
+  "cg_capture_traceability": {
+    "user_capture_reference": "사용자 첨부 스크린샷260",
+    "user_capture_local_path": null,
+    "status": "source_scene_traceable",
+    "source_video_url": "https://www.youtube.com/watch?v=5AAN38m96hA",
+    "source_time_seconds": 52,
+    "available_local_image": "apps/site/photos/company-video/frame-052s.jpg",
+    "reference_image_visually_reviewed": true,
+    "note": "첨부 캡처 자체의 로컬 파일 경로는 확인되지 않았으나 동일 홍보 CG 장면은 저장된0:52 프레임으로 직접 확인·추적 가능. 원 첨부와 바이트 동일성까지 검증한 뜻은 아님."
+  },
+  "field_status_definitions": {
+    "confirmed_by_user": "직원의 명칭·동선·표현 범위 확인",
+    "confirmed_from_source": "실제 도면 기재·기하·이미지에서 확인한 사실이며 현장 실측이나 최종 준공상태를 뜻하지 않음",
+    "approximate_model": "출처를 참고해 모델에 채택한 비례·배치·크기 근사",
+    "omitted_by_user_request": "실제 존재 여부와 별개로 사용자가 정한 모델 범위에서 생략",
+    "unverified": "자료만으로 확정하지 않은 항목"
+  },
+  "field_evidence_status": [
+    {
+      "field": "model_groups.campus-office.name",
+      "status": "confirmed_by_user",
+      "value": "본관",
+      "evidence": "사용자의 명칭 정정"
+    },
+    {
+      "field": "model_groups.campus-blue-annex.name",
+      "status": "confirmed_by_user",
+      "value": "액상",
+      "evidence": "사용자의 명칭 정정"
+    },
+    {
+      "field": "model_groups.campus-production.name",
+      "status": "confirmed_by_user",
+      "value": "물류장",
+      "evidence": "사용자의 명칭 정정"
+    },
+    {
+      "field": "site_identity.address",
+      "status": "confirmed_by_user",
+      "value": "경상남도 양산시 유산공단7길 45",
+      "evidence": "사용자 및 공식 회사소개"
+    },
+    {
+      "field": "guardhouse.outline",
+      "status": "confirmed_from_source",
+      "value": {
+        "raw_width": 10000,
+        "raw_depth": 8900,
+        "raw_chamfer": 3600,
+        "insunits": 0
+      },
+      "evidence_sha256": "16ca82299ae3ceeca64dda51209a5c2273e8b32167e3b0761dfa913497c9dc33"
+    },
+    {
+      "field": "guardhouse.model_dimensions_m",
+      "status": "approximate_model",
+      "value": {
+        "width": 10,
+        "depth": 8.9,
+        "height": 3.2
+      },
+      "note": "평면은 단위0 CAD의 mm 관례 환산, 높이는 사진 비례"
+    },
+    {
+      "field": "guardhouse.model_position_xyz",
+      "status": "approximate_model",
+      "value": [
+        71,
+        0,
+        53
+      ],
+      "note": "사용자 사진·동선 기준 위치 유지"
+    },
+    {
+      "field": "tower.model_mass_reference_m",
+      "status": "approximate_model",
+      "value": {
+        "width": 17.2,
+        "depth": 26.8,
+        "height": 40.4
+      },
+      "evidence_sha256": [
+        "4c44530968e6330bd92056b1bf075092876ebc6fdc6f0f753726cdde99bc0363",
+        "fa581cca30e3554acecddc634538dde30d7765e3a6654302a704079d34ef6fba",
+        "84dddc02968dff9bda2ccc62d919cd1bfa87c0b828161e49f680116a2fed4437",
+        "08c9f47866f5f6285023ada13fdd7383bd54fbea6ee88d346cb0d495eddd3016"
+      ],
+      "note": "도면 치수 참고·CG 외관 혼합"
+    },
+    {
+      "field": "tower.roof_final_as_built",
+      "status": "unverified",
+      "note": "도면 박공지붕과 CG 평상부·파라펫 차이"
+    },
+    {
+      "field": "parking.current_orientation",
+      "status": "confirmed_by_user",
+      "value": "도로변 연속 한 줄의 사선·대각 주차"
+    },
+    {
+      "field": "parking.model_angle_dimensions_and_count",
+      "status": "approximate_model",
+      "value": {
+        "angle_degrees": 45,
+        "parked_vehicles": 16,
+        "empty_entrance_end_stalls": 2,
+        "stall_width_m": 2.6,
+        "stall_depth_m": 5.2
+      }
+    },
+    {
+      "field": "model_scope.omitted_objects",
+      "status": "omitted_by_user_request",
+      "value": [
+        "버스",
+        "맞은편 주황 지붕 공장동",
+        "버스 뒤 흰색 건물(진입로 건너 회색 공장동)",
+        "전면 주황 지붕 띠창동",
+        "전면 하역 트럭"
+      ]
+    },
+    {
+      "field": "site_current_legal_boundary_and_building_ownership",
+      "status": "unverified",
+      "note": "타사 동일 주소를 희창 소유로 편입하지 않음"
+    },
+    {
+      "field": "tower.official_logo_asset",
+      "status": "confirmed_from_source",
+      "value": {
+        "url": "https://www.heechang.com/theme/basic/images/top_logo.svg",
+        "sha256": "952b4f4bca7b514acbd239e8fcc38019187423d769b79148950cd4d77a6589f8",
+        "bytes": 4448
+      },
+      "note": "정면 간판 한 개의 실제 SVG 텍스처. 설치 위치·크기는 CG 참고 근사."
+    },
+    {
+      "field": "model_groups.campus-packaging-building.identity",
+      "status": "confirmed_by_user",
+      "value": "7층건조실옆별도스틱·소포장동의3층",
+      "evidence": "직원명시확인"
+    },
+    {
+      "field": "model_groups.campus-dryer-tower.cyclone_floor",
+      "status": "confirmed_by_user",
+      "value": 3,
+      "note": "3층작업면사이클론의실측높이·이격은미확정"
+    },
+    {
+      "field": "model_scope.current_campus_group_count",
+      "status": "confirmed_by_user",
+      "value": 6,
+      "note": "별도스틱·소포장동을분리한모델표현범위"
+    }
+  ],
+  "official_logo": {
+    "status": "confirmed_official_asset",
+    "url": "https://www.heechang.com/theme/basic/images/top_logo.svg",
+    "local_file": "references/yusan-campus/heechang-official-logo.svg",
+    "app_local_file": "apps/site/photos/heechang-official-logo.svg",
+    "sha256": "952b4f4bca7b514acbd239e8fcc38019187423d769b79148950cd4d77a6589f8",
+    "bytes": 4448,
+    "discovery": "회사 홈페이지 img 태그에서 직접 확인한 공식 SVG URL",
+    "http_status_when_downloaded": 200,
+    "reference_and_app_copy_identical": true,
+    "runtime_texture_path": "./photos/heechang-official-logo.svg",
+    "runtime_use": "TextureLoader로 실제 SVG를 읽어 투명 재질의 정면 간판 한 개에 적용",
+    "model_placement_status": "간판 설치 크기·위치는 CG052 영상 비례 근사"
+  },
+  "current_campus_model_snapshot": [
+    {
+      "id": "campus-office",
+      "name": "본관",
+      "roomLink": null,
+      "floorCount": null,
+      "position": [
+        -36,
+        0,
+        20
+      ],
+      "width": 44,
+      "depth": 35,
+      "height": 18,
+      "thirdFloorElevation": null
+    },
+    {
+      "id": "campus-dryer-tower",
+      "name": "건조실 · 7층",
+      "roomLink": "all",
+      "floorCount": 7,
+      "position": [
+        28,
+        0,
+        -49
+      ],
+      "width": 17.2,
+      "depth": 26.8,
+      "height": 40.4,
+      "thirdFloorElevation": 7.3
+    },
+    {
+      "id": "campus-packaging-building",
+      "name": "스틱·소포장동 · 3층",
+      "roomLink": "packaging",
+      "floorCount": 3,
+      "position": [
+        2.225,
+        0,
+        -49
+      ],
+      "width": 31.35,
+      "depth": 30.4,
+      "height": 13.3,
+      "thirdFloorElevation": null
+    },
+    {
+      "id": "campus-production",
+      "name": "물류장",
+      "roomLink": null,
+      "floorCount": null,
+      "position": [
+        27,
+        0,
+        6
+      ],
+      "width": 80,
+      "depth": 51,
+      "height": 10,
+      "thirdFloorElevation": null
+    },
+    {
+      "id": "campus-blue-annex",
+      "name": "액상",
+      "roomLink": null,
+      "floorCount": null,
+      "position": [
+        -47,
+        0,
+        -42
+      ],
+      "width": 64,
+      "depth": 40,
+      "height": 8,
+      "thirdFloorElevation": null
+    },
+    {
+      "id": "campus-guardhouse",
+      "name": "정문 녹색 경비실",
+      "roomLink": null,
+      "floorCount": null,
+      "position": [
+        71,
+        0,
+        53
+      ],
+      "width": 10,
+      "depth": 8.9,
+      "height": 3.2,
+      "thirdFloorElevation": null
+    }
+  ],
+  "packaging_reference_bundle": "references/stick-packaging-3f/reconstruction-evidence.json"
+}

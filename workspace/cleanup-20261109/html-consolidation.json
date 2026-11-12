@@ -1,0 +1,97 @@
+﻿{
+    "purpose":  "Single Heechang 3D modeling project; generated duplicate HTML and ZIP only",
+    "canonical_runtime":  "index.html / 프로젝트 실행.cmd",
+    "canonical_portable":  "exports/건조기-통합-공유.html",
+    "files":  [
+                  {
+                      "path":  "C:\\Users\\user\\Desktop\\프로젝트\\exports\\건조기 7층 버너.html",
+                      "relative_path":  "exports\\건조기 7층 버너.html",
+                      "bytes":  5827813,
+                      "sha256":  "0FE607833B4EFFFB48DA48599DD1499386FAEAA43F3FC1464BCD2AF6A6A4FBDC",
+                      "action":  "recycle",
+                      "result":  "recycled"
+                  },
+                  {
+                      "path":  "C:\\Users\\user\\Desktop\\프로젝트\\exports\\건조기-3D-지도.html",
+                      "relative_path":  "exports\\건조기-3D-지도.html",
+                      "bytes":  5861850,
+                      "sha256":  "6B1C0E9E3EC367E1B0C03844B1BAD0F754E8E22A2DCA01730ADB540578D2242A",
+                      "action":  "recycle",
+                      "result":  "recycled"
+                  },
+                  {
+                      "path":  "C:\\Users\\user\\Desktop\\프로젝트\\workspace\\production-collection-20261104\\cloud-catalog\\00_자료열기.html",
+                      "relative_path":  "workspace\\production-collection-20261104\\cloud-catalog\\00_자료열기.html",
+                      "bytes":  5812150,
+                      "sha256":  "3125219BDBB091C125C1B421A6FD76BDCC3BAEFDD38CEE4D7950300C814F575B",
+                      "action":  "recycle",
+                      "result":  "recycled"
+                  },
+                  {
+                      "path":  "C:\\Users\\user\\Desktop\\프로젝트\\workspace\\production-collection-20261104\\local-cloud-only-catalog\\00_자료열기.html",
+                      "relative_path":  "workspace\\production-collection-20261104\\local-cloud-only-catalog\\00_자료열기.html",
+                      "bytes":  5812295,
+                      "sha256":  "E0CBF6E5BC14182190C3EFC0B3ED40BBA9116B25BF29531609FCD75C08AF7FAE",
+                      "action":  "recycle",
+                      "result":  "recycled"
+                  },
+                  {
+                      "path":  "C:\\Users\\user\\Desktop\\프로젝트\\workspace\\storage-cleanup-20261104\\production-pc-offload-before-metadata\\00_자료열기.html",
+                      "relative_path":  "workspace\\storage-cleanup-20261104\\production-pc-offload-before-metadata\\00_자료열기.html",
+                      "bytes":  7892961,
+                      "sha256":  "608C7CA3F119A46246586FD91E0098B12AB4BACC6BE9C3F6F804ADEEC8DA2D1A",
+                      "action":  "recycle",
+                      "result":  "recycled"
+                  },
+                  {
+                      "path":  "C:\\Users\\user\\Desktop\\프로젝트\\sites\\dryer-map-share-20261030\\dist\\index.html",
+                      "relative_path":  "sites\\dryer-map-share-20261030\\dist\\index.html",
+                      "bytes":  14779,
+                      "sha256":  "7124D36480A10CF8C0E4207867A7ADE5E571B1BE16DF1B52C5FBFCB35ED6593F",
+                      "action":  "recycle",
+                      "result":  "recycled"
+                  },
+                  {
+                      "path":  "C:\\Users\\user\\Desktop\\프로젝트\\sites\\dryer-map-share-20261030\\dist\\downloads\\dryer-workspace.zip",
+                      "relative_path":  "sites\\dryer-map-share-20261030\\dist\\downloads\\dryer-workspace.zip",
+                      "bytes":  19727763,
+                      "sha256":  "0EF211332B075554228439C3478F8DB7F8E87845081E2879FA47F83BF8A3BEB1",
+                      "action":  "recycle",
+                      "result":  "recycled"
+                  },
+                  {
+                      "path":  "C:\\Users\\user\\Desktop\\프로젝트\\sites\\dryer-map-share-20261030\\dist\\viewers\\heat-exchanger.html",
+                      "relative_path":  "sites\\dryer-map-share-20261030\\dist\\viewers\\heat-exchanger.html",
+                      "bytes":  14970062,
+                      "sha256":  "4D66BED1972907E633FA742EEF8D0534405868859FA9946B029D660FD7668031",
+                      "action":  "recycle",
+                      "result":  "recycled"
+                  },
+                  {
+                      "path":  "C:\\Users\\user\\Desktop\\프로젝트\\sites\\dryer-map-share-20261030\\dist\\viewers\\motor.html",
+                      "relative_path":  "sites\\dryer-map-share-20261030\\dist\\viewers\\motor.html",
+                      "bytes":  1421657,
+                      "sha256":  "74E4A16C1695E60C7824B7F96987CB21112A030603F11EB074EE973F4BFF2E3E",
+                      "action":  "recycle",
+                      "result":  "recycled"
+                  },
+                  {
+                      "path":  "C:\\Users\\user\\Desktop\\프로젝트\\sites\\dryer-map-share-20261030\\dist\\viewers\\panel.html",
+                      "relative_path":  "sites\\dryer-map-share-20261030\\dist\\viewers\\panel.html",
+                      "bytes":  15676392,
+                      "sha256":  "E60E4F04A41332D3829916F4F255489EF43641A1760606B9E5EE1EDC5E577BC3",
+                      "action":  "recycle",
+                      "result":  "recycled"
+                  },
+                  {
+                      "path":  "C:\\Users\\user\\Desktop\\프로젝트\\sites\\dryer-map-share-20261030\\dist\\viewers\\site.html",
+                      "relative_path":  "sites\\dryer-map-share-20261030\\dist\\viewers\\site.html",
+                      "bytes":  5861914,
+                      "sha256":  "9E8A56E8E8925B140ABD703BD46CC9B0D4BF220C44064623270A07AC801F247F",
+                      "action":  "recycle",
+                      "result":  "recycled"
+                  }
+              ],
+    "target_count":  11,
+    "target_bytes":  88879636
+}

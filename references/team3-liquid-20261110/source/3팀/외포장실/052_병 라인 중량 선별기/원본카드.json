@@ -1,0 +1,74 @@
+{
+  "id": "3-1782201070046-377867",
+  "line": "",
+  "name": "병 라인 중량 선별기",
+  "note": "",
+  "plan": "",
+  "rate": 0,
+  "room": "외포장실",
+  "team": "3팀",
+  "group": "",
+  "owner": "",
+  "status": "비가동중",
+  "process": "",
+  "documents": [],
+  "lastCheck": "",
+  "modelName": "",
+  "nextCheck": "",
+  "photoCrop": null,
+  "photoName": "선별기 photo.jpg",
+  "detailInfo": [
+    {
+      "label": "설비명",
+      "value": "병 라인 중량 선별기"
+    },
+    {
+      "label": "관리팀",
+      "value": "3팀"
+    },
+    {
+      "label": "가동률",
+      "value": "0%"
+    }
+  ],
+  "ownerLabel": "담당 업체",
+  "production": "",
+  "teamDataKey": "work_team_calendar_team3",
+  "detailGroups": {
+    "equipmentSpecs": []
+  },
+  "manufacturer": "",
+  "photoDataUrl": "",
+  "equipmentCode": "3-1782201070046-377867",
+  "operationInfo": [
+    {
+      "label": "설비명",
+      "value": "병 라인 중량 선별기"
+    },
+    {
+      "label": "관리팀",
+      "value": "3팀"
+    },
+    {
+      "label": "실",
+      "value": "외포장실"
+    },
+    {
+      "label": "공정",
+      "value": ""
+    },
+    {
+      "label": "가동률",
+      "value": "0"
+    }
+  ],
+  "manufacturedAt": "",
+  "photoDocumentId": "6af2f78d-d667-436a-8a54-fc2292e83c57",
+  "photoPreviewUrl": "/api/files/6af2f78d-d667-436a-8a54-fc2292e83c57/view",
+  "photoDownloadUrl": "/api/files/6af2f78d-d667-436a-8a54-fc2292e83c57/download",
+  "manufacturerLabel": "제조사",
+  "photoThumbDataUrl": "",
+  "maintenanceHistory": [],
+  "photoAttachmentKey": "equipment-photo-main",
+  "photoStorageRelPath": "equipment-assets/equipment-history/선별기/images/09ad2af6-6176-4188-ab12-68c503e22dd5.jpg"
+}

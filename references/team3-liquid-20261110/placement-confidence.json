@@ -1,0 +1,1916 @@
+{
+  "date": "2026-11-10",
+  "mode": "historical-plan and card-family correspondence; no present survey or exact card-to-plan equipment identification",
+  "sourceDocuments": [
+    {
+      "id": "2022-plan",
+      "path": "근거 자료/건물3D 후보도면/04_검토필요/미확정/장비배치도__6a5f2b29c507.pdf",
+      "axis": [
+        99.7,
+        39.2
+      ],
+      "page": 1
+    },
+    {
+      "id": "2021-stick",
+      "cache": "근거 자료/도면검토앱/cache/e514c3c11438875b34c20404b376dd247b0a0d4155c2d2f612d83548f4fc2951/page-001.png",
+      "status": "construction proposal; red new/modified and yellow removed symbols are not present completion evidence"
+    },
+    {
+      "id": "250325-mixing",
+      "source": "근거 자료/건물3D 후보도면/원본 DWG/03_층별·생산팀평면/미확정/액상 배합실 디졸버믹서외 LAYOUT-250325 (1)__0f22b13305de.dwg",
+      "receipt": "tmp/team3-liquid-20261110/latest-mixing-dwg/conversion.json",
+      "status": "filename250325; internalSJ-2023-01-A001 CONCEPT D.W.G; new0.5TON dissolver and sanitary line proposal; completion unconfirmed"
+    }
+  ],
+  "coordinateFrame": {
+    "origin": "2022 architecture axes centre",
+    "x": "long edge",
+    "z": "short edge; external utility side positive",
+    "units": "metres",
+    "metricFormula": {
+      "x": "(pdf_y-86.04)/10.49789368104313-49.85",
+      "z": "(588.24-pdf_x)/10.493877551020407-19.6"
+    },
+    "height": "4.5 model assumption"
+  },
+  "roomCounts": {
+    "mixing": 20,
+    "pouch": 7,
+    "outer": 7,
+    "pet": 6,
+    "boiler": 4,
+    "stick": 3,
+    "retort": 3,
+    "pellet": 2
+  },
+  "rooms": [
+    {
+      "id": "mixing",
+      "name": "배합실",
+      "bounds": {
+        "minX": -37.85,
+        "maxX": -22.85,
+        "minZ": -3.2,
+        "maxZ": 19.6
+      },
+      "outline": [
+        [
+          -37.85,
+          0.4
+        ],
+        [
+          -33.85,
+          0.4
+        ],
+        [
+          -33.85,
+          -3.2
+        ],
+        [
+          -22.85,
+          -3.2
+        ],
+        [
+          -22.85,
+          19.6
+        ],
+        [
+          -37.85,
+          19.6
+        ]
+      ],
+      "planLabels": [
+        "배합실"
+      ],
+      "basis": "2022 장비배치도의 배합실·탱크열과 2025 디졸버믹서·A/B LINE 개조 개념도를 대조했습니다. 개별 카드의 탱크 번호와 도면 번호는 연결하지 않았습니다.",
+      "positionMatch": "historical-room-approximation"
+    },
+    {
+      "id": "pouch",
+      "name": "파우치실",
+      "bounds": {
+        "minX": -22.85,
+        "maxX": -4.85,
+        "minZ": 0.4,
+        "maxZ": 13.4
+      },
+      "outline": [
+        [
+          -22.85,
+          0.4
+        ],
+        [
+          -4.85,
+          0.4
+        ],
+        [
+          -4.85,
+          13.4
+        ],
+        [
+          -22.85,
+          13.4
+        ]
+      ],
+      "planLabels": [
+        "액상로타리포장실",
+        "파우치포장실"
+      ],
+      "basis": "2022 로타리·파우치 포장 구역의 실루엣과 2021 스틱 배치 공사안의 중앙 충진기 군을 참고했습니다. 현재 6개 충진기의 개별 호기 좌표는 미확정입니다.",
+      "positionMatch": "historical-room-approximation"
+    },
+    {
+      "id": "outer",
+      "name": "외포장실",
+      "bounds": {
+        "minX": -4.85,
+        "maxX": 27.85,
+        "minZ": -4.6,
+        "maxZ": 19.6
+      },
+      "outline": [
+        [
+          -4.85,
+          -4.6
+        ],
+        [
+          18.85,
+          -4.6
+        ],
+        [
+          18.85,
+          2.6
+        ],
+        [
+          27.85,
+          2.6
+        ],
+        [
+          27.85,
+          19.6
+        ],
+        [
+          10.85,
+          19.6
+        ],
+        [
+          10.85,
+          0.4
+        ],
+        [
+          -4.85,
+          0.4
+        ]
+      ],
+      "planLabels": [
+        "외포장실"
+      ],
+      "basis": "2022 외포장실의 꺾인 외곽과 포장·검사 이송 흐름을 참고했습니다. 카드의 현 장비별 설치 완료 위치·컨베이어 연결은 확인되지 않았습니다.",
+      "positionMatch": "historical-room-approximation"
+    },
+    {
+      "id": "pet",
+      "name": "PET실",
+      "bounds": {
+        "minX": -34.85,
+        "maxX": -4.85,
+        "minZ": -14.6,
+        "maxZ": -4.2
+      },
+      "outline": [
+        [
+          -34.85,
+          -14.6
+        ],
+        [
+          -22.85,
+          -14.6
+        ],
+        [
+          -22.85,
+          -12.6
+        ],
+        [
+          -4.85,
+          -12.6
+        ],
+        [
+          -4.85,
+          -4.6
+        ],
+        [
+          -22.85,
+          -4.6
+        ],
+        [
+          -22.85,
+          -4.2
+        ],
+        [
+          -34.85,
+          -4.2
+        ]
+      ],
+      "planLabels": [
+        "PET충진실",
+        "PET살균냉각실"
+      ],
+      "basis": "2022 PET충진실과 긴 PET살균냉각실 구역을 하나의 카드상 PET실 탐색 영역으로 묶었습니다. 현재 카드의 병 구경·설비명은 과거 도면 기호에 강제 대응하지 않습니다.",
+      "positionMatch": "historical-room-approximation"
+    },
+    {
+      "id": "boiler",
+      "name": "보일러실 · 위치 미확정",
+      "bounds": {
+        "minX": 35.85,
+        "maxX": 42.85,
+        "minZ": -19.6,
+        "maxZ": -14.6
+      },
+      "outline": [
+        [
+          35.85,
+          -19.6
+        ],
+        [
+          42.85,
+          -19.6
+        ],
+        [
+          42.85,
+          -14.6
+        ],
+        [
+          35.85,
+          -14.6
+        ]
+      ],
+      "planLabels": [
+        "2021 공사안 보일러실 후보"
+      ],
+      "basis": "2021 공사안의 탈의·샤워 구역 인접 보일러실 표기를 참고한 낮은 확신의 대표 영역입니다. 2022 발전기실을 보일러실로 바꾸지 않았으며 현재 구획·정확 위치는 확인되지 않았습니다.",
+      "positionMatch": "unconfirmed-room"
+    },
+    {
+      "id": "stick",
+      "name": "스틱실",
+      "bounds": {
+        "minX": -22.85,
+        "maxX": -4.85,
+        "minZ": 13.4,
+        "maxZ": 19.6
+      },
+      "outline": [
+        [
+          -22.85,
+          13.4
+        ],
+        [
+          -4.85,
+          13.4
+        ],
+        [
+          -4.85,
+          19.6
+        ],
+        [
+          -22.85,
+          19.6
+        ]
+      ],
+      "planLabels": [
+        "2021 HIPE형 병렬 충진기 후보"
+      ],
+      "basis": "2021 스틱 배치 공사안의 병렬 HIPE형 2대와 2022 중앙 블록의 긴 충진·포장 실루엣을 참고했습니다. 3팀 액상의 스틱실이며 2팀 스틱 소포장동과 구분합니다.",
+      "positionMatch": "unconfirmed-room"
+    },
+    {
+      "id": "retort",
+      "name": "후살균실",
+      "bounds": {
+        "minX": -4.85,
+        "maxX": 10.85,
+        "minZ": 0.4,
+        "maxZ": 19.6
+      },
+      "outline": [
+        [
+          -4.85,
+          0.4
+        ],
+        [
+          10.85,
+          0.4
+        ],
+        [
+          10.85,
+          19.6
+        ],
+        [
+          -4.85,
+          19.6
+        ]
+      ],
+      "planLabels": [
+        "살균냉각실"
+      ],
+      "basis": "2022 살균냉각실의 세 줄 긴 수조·냉각기 실루엣을 현재 후살균실 카드의 방 단위 배치 참고로 사용했습니다. 현재 기기별 일대일 대응과 정확한 길이는 미확정입니다.",
+      "positionMatch": "historical-room-approximation"
+    },
+    {
+      "id": "pellet",
+      "name": "제환실 · 위치 미확정",
+      "bounds": {
+        "minX": 5,
+        "maxX": 9.2,
+        "minZ": -14.6,
+        "maxZ": -6
+      },
+      "outline": [
+        [
+          5,
+          -14.6
+        ],
+        [
+          9.2,
+          -14.6
+        ],
+        [
+          9.2,
+          -6
+        ],
+        [
+          5,
+          -6
+        ]
+      ],
+      "planLabels": [
+        "펄제품제환실 구역 후보"
+      ],
+      "basis": "2022 펄제품제환실 표기 주변을 카드상 제환실의 후보 영역으로 표시했습니다. 현재 카드 2개 장비의 위치·방 경계는 확인되지 않았습니다.",
+      "positionMatch": "unconfirmed-room"
+    }
+  ],
+  "equipment": [
+    {
+      "id": "liquid-card-042",
+      "cardNumber": 42,
+      "name": "28파이 Pet 충진기",
+      "roomId": "pet",
+      "position": [
+        -27.8,
+        0,
+        -8.1
+      ],
+      "rotation": 0,
+      "dimensions": [
+        3,
+        2.6,
+        2.6
+      ],
+      "sourceConfidence": {
+        "identity": "direct-card",
+        "appearance": "four-photo-panels",
+        "room": "card-room",
+        "roomGeometry": "historical-room-approximation",
+        "equipmentPlanMatch": "unconfirmed",
+        "currentPose": "unconfirmed",
+        "dimensions": "approximate"
+      },
+      "identityWarning": null
+    },
+    {
+      "id": "liquid-card-043",
+      "cardNumber": 43,
+      "name": "Pet실 1",
+      "roomId": "pet",
+      "position": [
+        -33.1,
+        0,
+        -7.4
+      ],
+      "rotation": 0,
+      "dimensions": [
+        1,
+        1,
+        1.5
+      ],
+      "sourceConfidence": {
+        "identity": "direct-card",
+        "appearance": "four-photo-panels",
+        "room": "card-room",
+        "roomGeometry": "historical-room-approximation",
+        "equipmentPlanMatch": "unconfirmed",
+        "currentPose": "unconfirmed",
+        "dimensions": "approximate"
+      },
+      "identityWarning": null
+    },
+    {
+      "id": "liquid-card-044",
+      "cardNumber": 44,
+      "name": "Pet 라인",
+      "roomId": "pet",
+      "position": [
+        -17,
+        0,
+        -6.5
+      ],
+      "rotation": 0,
+      "dimensions": [
+        4,
+        2.4,
+        1.9
+      ],
+      "sourceConfidence": {
+        "identity": "direct-card",
+        "appearance": "four-photo-panels",
+        "room": "card-room",
+        "roomGeometry": "historical-room-approximation",
+        "equipmentPlanMatch": "unconfirmed",
+        "currentPose": "unconfirmed",
+        "dimensions": "approximate"
+      },
+      "identityWarning": null
+    },
+    {
+      "id": "liquid-card-045",
+      "cardNumber": 45,
+      "name": "38파이 라벨러",
+      "roomId": "outer",
+      "position": [
+        17,
+        0,
+        7
+      ],
+      "rotation": 0,
+      "dimensions": [
+        3.6,
+        2.3,
+        2.2
+      ],
+      "sourceConfidence": {
+        "identity": "direct-card",
+        "appearance": "four-photo-panels",
+        "room": "card-room",
+        "roomGeometry": "historical-room-approximation",
+        "equipmentPlanMatch": "unconfirmed",
+        "currentPose": "unconfirmed",
+        "dimensions": "approximate"
+      },
+      "identityWarning": null
+    },
+    {
+      "id": "liquid-card-046",
+      "cardNumber": 46,
+      "name": "파스텔 라이저",
+      "roomId": "pet",
+      "position": [
+        -13.5,
+        0,
+        -10.2
+      ],
+      "rotation": 0,
+      "dimensions": [
+        12,
+        3.4,
+        2.1
+      ],
+      "sourceConfidence": {
+        "identity": "direct-card",
+        "appearance": "four-photo-panels",
+        "room": "card-room",
+        "roomGeometry": "historical-room-approximation",
+        "equipmentPlanMatch": "unconfirmed",
+        "currentPose": "unconfirmed",
+        "dimensions": "approximate"
+      },
+      "identityWarning": null
+    },
+    {
+      "id": "liquid-card-047",
+      "cardNumber": 47,
+      "name": "88파이 자동 충진기",
+      "roomId": "pet",
+      "position": [
+        -26.8,
+        0,
+        -12.2
+      ],
+      "rotation": 0,
+      "dimensions": [
+        1.6,
+        1.6,
+        2.4
+      ],
+      "sourceConfidence": {
+        "identity": "direct-card",
+        "appearance": "four-photo-panels",
+        "room": "card-room",
+        "roomGeometry": "historical-room-approximation",
+        "equipmentPlanMatch": "unconfirmed",
+        "currentPose": "unconfirmed",
+        "dimensions": "approximate"
+      },
+      "identityWarning": null
+    },
+    {
+      "id": "liquid-card-048",
+      "cardNumber": 48,
+      "name": "HIPE 16 스틱 충진기-2",
+      "roomId": "stick",
+      "position": [
+        -20,
+        0,
+        16.5
+      ],
+      "rotation": 0,
+      "dimensions": [
+        2.3,
+        2.2,
+        3
+      ],
+      "sourceConfidence": {
+        "identity": "direct-card",
+        "appearance": "four-photo-panels",
+        "room": "card-room",
+        "roomGeometry": "unconfirmed-room",
+        "equipmentPlanMatch": "unconfirmed",
+        "currentPose": "unconfirmed",
+        "dimensions": "approximate"
+      },
+      "identityWarning": null
+    },
+    {
+      "id": "liquid-card-049",
+      "cardNumber": 49,
+      "name": "Hipe 16 스틱 충진기-1",
+      "roomId": "stick",
+      "position": [
+        -15,
+        0,
+        16.5
+      ],
+      "rotation": 0,
+      "dimensions": [
+        2.3,
+        2.2,
+        3
+      ],
+      "sourceConfidence": {
+        "identity": "direct-card",
+        "appearance": "four-photo-panels",
+        "room": "card-room",
+        "roomGeometry": "unconfirmed-room",
+        "equipmentPlanMatch": "unconfirmed",
+        "currentPose": "unconfirmed",
+        "dimensions": "approximate"
+      },
+      "identityWarning": null
+    },
+    {
+      "id": "liquid-card-050",
+      "cardNumber": 50,
+      "name": "병뚜껑 조립기",
+      "roomId": "pet",
+      "position": [
+        -32,
+        0,
+        -12.7
+      ],
+      "rotation": 0,
+      "dimensions": [
+        1.3,
+        1.6,
+        2.7
+      ],
+      "sourceConfidence": {
+        "identity": "direct-card",
+        "appearance": "four-photo-panels",
+        "room": "card-room",
+        "roomGeometry": "historical-room-approximation",
+        "equipmentPlanMatch": "unconfirmed",
+        "currentPose": "unconfirmed",
+        "dimensions": "approximate"
+      },
+      "identityWarning": null
+    },
+    {
+      "id": "liquid-card-051",
+      "cardNumber": 51,
+      "name": "연수기",
+      "roomId": "boiler",
+      "position": [
+        37,
+        0,
+        -18.4
+      ],
+      "rotation": 0,
+      "dimensions": [
+        1.8,
+        1.2,
+        2.2
+      ],
+      "sourceConfidence": {
+        "identity": "direct-card",
+        "appearance": "four-photo-panels",
+        "room": "card-room",
+        "roomGeometry": "unconfirmed-room",
+        "equipmentPlanMatch": "unconfirmed",
+        "currentPose": "unconfirmed",
+        "dimensions": "approximate"
+      },
+      "identityWarning": null
+    },
+    {
+      "id": "liquid-card-052",
+      "cardNumber": 52,
+      "name": "병 라인 중량 선별기",
+      "roomId": "outer",
+      "position": [
+        20.8,
+        0,
+        7
+      ],
+      "rotation": 0,
+      "dimensions": [
+        2,
+        1.2,
+        1.8
+      ],
+      "sourceConfidence": {
+        "identity": "direct-card",
+        "appearance": "four-photo-panels",
+        "room": "card-room",
+        "roomGeometry": "historical-room-approximation",
+        "equipmentPlanMatch": "unconfirmed",
+        "currentPose": "unconfirmed",
+        "dimensions": "approximate"
+      },
+      "identityWarning": null
+    },
+    {
+      "id": "liquid-card-053",
+      "cardNumber": 53,
+      "name": "카토너",
+      "roomId": "outer",
+      "position": [
+        16.5,
+        0,
+        12
+      ],
+      "rotation": 0,
+      "dimensions": [
+        4,
+        2.5,
+        2.2
+      ],
+      "sourceConfidence": {
+        "identity": "direct-card",
+        "appearance": "four-photo-panels",
+        "room": "card-room",
+        "roomGeometry": "historical-room-approximation",
+        "equipmentPlanMatch": "unconfirmed",
+        "currentPose": "unconfirmed",
+        "dimensions": "approximate"
+      },
+      "identityWarning": null
+    },
+    {
+      "id": "liquid-card-054",
+      "cardNumber": 54,
+      "name": "3팀용 제함기 1호기",
+      "roomId": "outer",
+      "position": [
+        22,
+        0,
+        12
+      ],
+      "rotation": 0,
+      "dimensions": [
+        2,
+        1.5,
+        1.9
+      ],
+      "sourceConfidence": {
+        "identity": "direct-card",
+        "appearance": "four-photo-panels",
+        "room": "card-room",
+        "roomGeometry": "historical-room-approximation",
+        "equipmentPlanMatch": "unconfirmed",
+        "currentPose": "unconfirmed",
+        "dimensions": "approximate"
+      },
+      "identityWarning": "카드명은 제함기이지만 사진은 주황색 테이핑·시일 외형이므로 사진 형상으로 재현했습니다. 명칭 원문을 보존합니다."
+    },
+    {
+      "id": "liquid-card-055",
+      "cardNumber": 55,
+      "name": "10입 자동 포장기",
+      "roomId": "outer",
+      "position": [
+        17.5,
+        0,
+        16
+      ],
+      "rotation": 0,
+      "dimensions": [
+        4,
+        2.5,
+        2.2
+      ],
+      "sourceConfidence": {
+        "identity": "direct-card",
+        "appearance": "four-photo-panels",
+        "room": "card-room",
+        "roomGeometry": "historical-room-approximation",
+        "equipmentPlanMatch": "unconfirmed",
+        "currentPose": "unconfirmed",
+        "dimensions": "approximate"
+      },
+      "identityWarning": null
+    },
+    {
+      "id": "liquid-card-056",
+      "cardNumber": 56,
+      "name": "파우치 후살균수조",
+      "roomId": "retort",
+      "position": [
+        3,
+        0,
+        3.2
+      ],
+      "rotation": 0,
+      "dimensions": [
+        12,
+        2.7,
+        1.6
+      ],
+      "sourceConfidence": {
+        "identity": "direct-card",
+        "appearance": "four-photo-panels",
+        "room": "card-room",
+        "roomGeometry": "historical-room-approximation",
+        "equipmentPlanMatch": "unconfirmed",
+        "currentPose": "unconfirmed",
+        "dimensions": "approximate"
+      },
+      "identityWarning": null
+    },
+    {
+      "id": "liquid-card-057",
+      "cardNumber": 57,
+      "name": "파우치 냉각수조",
+      "roomId": "retort",
+      "position": [
+        3,
+        0,
+        9
+      ],
+      "rotation": 0,
+      "dimensions": [
+        12,
+        2.7,
+        1.6
+      ],
+      "sourceConfidence": {
+        "identity": "direct-card",
+        "appearance": "four-photo-panels",
+        "room": "card-room",
+        "roomGeometry": "historical-room-approximation",
+        "equipmentPlanMatch": "unconfirmed",
+        "currentPose": "unconfirmed",
+        "dimensions": "approximate"
+      },
+      "identityWarning": null
+    },
+    {
+      "id": "liquid-card-058",
+      "cardNumber": 58,
+      "name": "후살균기",
+      "roomId": "retort",
+      "position": [
+        3,
+        0,
+        15
+      ],
+      "rotation": 0,
+      "dimensions": [
+        7,
+        2.8,
+        3.3
+      ],
+      "sourceConfidence": {
+        "identity": "direct-card",
+        "appearance": "four-photo-panels",
+        "room": "card-room",
+        "roomGeometry": "historical-room-approximation",
+        "equipmentPlanMatch": "unconfirmed",
+        "currentPose": "unconfirmed",
+        "dimensions": "approximate"
+      },
+      "identityWarning": null
+    },
+    {
+      "id": "liquid-card-059",
+      "cardNumber": 59,
+      "name": "치어팩 언로더",
+      "roomId": "pouch",
+      "position": [
+        -6.2,
+        0,
+        6.7
+      ],
+      "rotation": 0,
+      "dimensions": [
+        1.8,
+        1.5,
+        1.8
+      ],
+      "sourceConfidence": {
+        "identity": "direct-card",
+        "appearance": "four-photo-panels",
+        "room": "card-room",
+        "roomGeometry": "historical-room-approximation",
+        "equipmentPlanMatch": "unconfirmed",
+        "currentPose": "unconfirmed",
+        "dimensions": "approximate"
+      },
+      "identityWarning": null
+    },
+    {
+      "id": "liquid-card-060",
+      "cardNumber": 60,
+      "name": "스틱 냉각기",
+      "roomId": "stick",
+      "position": [
+        -8.1,
+        0,
+        16.5
+      ],
+      "rotation": 0,
+      "dimensions": [
+        4,
+        2.4,
+        1.8
+      ],
+      "sourceConfidence": {
+        "identity": "direct-card",
+        "appearance": "four-photo-panels",
+        "room": "card-room",
+        "roomGeometry": "unconfirmed-room",
+        "equipmentPlanMatch": "unconfirmed",
+        "currentPose": "unconfirmed",
+        "dimensions": "approximate"
+      },
+      "identityWarning": null
+    },
+    {
+      "id": "liquid-card-061",
+      "cardNumber": 61,
+      "name": "파우치 충진기 3호기",
+      "roomId": "pouch",
+      "position": [
+        -20,
+        0,
+        3
+      ],
+      "rotation": 0.7853981633974483,
+      "dimensions": [
+        3.6,
+        3.4,
+        2.7
+      ],
+      "sourceConfidence": {
+        "identity": "direct-card",
+        "appearance": "four-photo-panels",
+        "room": "card-room",
+        "roomGeometry": "historical-room-approximation",
+        "equipmentPlanMatch": "unconfirmed",
+        "currentPose": "unconfirmed",
+        "dimensions": "approximate"
+      },
+      "identityWarning": null
+    },
+    {
+      "id": "liquid-card-062",
+      "cardNumber": 62,
+      "name": "파우치 충진기 2호기",
+      "roomId": "pouch",
+      "position": [
+        -14.7,
+        0,
+        3
+      ],
+      "rotation": 0.7853981633974483,
+      "dimensions": [
+        3.6,
+        3.4,
+        2.7
+      ],
+      "sourceConfidence": {
+        "identity": "direct-card",
+        "appearance": "four-photo-panels",
+        "room": "card-room",
+        "roomGeometry": "historical-room-approximation",
+        "equipmentPlanMatch": "unconfirmed",
+        "currentPose": "unconfirmed",
+        "dimensions": "approximate"
+      },
+      "identityWarning": null
+    },
+    {
+      "id": "liquid-card-063",
+      "cardNumber": 63,
+      "name": "파우치 충진기 1호기",
+      "roomId": "pouch",
+      "position": [
+        -9.4,
+        0,
+        3
+      ],
+      "rotation": 0.7853981633974483,
+      "dimensions": [
+        3.6,
+        3.4,
+        2.7
+      ],
+      "sourceConfidence": {
+        "identity": "direct-card",
+        "appearance": "four-photo-panels",
+        "room": "card-room",
+        "roomGeometry": "historical-room-approximation",
+        "equipmentPlanMatch": "unconfirmed",
+        "currentPose": "unconfirmed",
+        "dimensions": "approximate"
+      },
+      "identityWarning": null
+    },
+    {
+      "id": "liquid-card-064",
+      "cardNumber": 64,
+      "name": "치어팩 충진기 3호기",
+      "roomId": "pouch",
+      "position": [
+        -20,
+        0,
+        9
+      ],
+      "rotation": 0,
+      "dimensions": [
+        3.6,
+        3.4,
+        2.8
+      ],
+      "sourceConfidence": {
+        "identity": "direct-card",
+        "appearance": "four-photo-panels",
+        "room": "card-room",
+        "roomGeometry": "historical-room-approximation",
+        "equipmentPlanMatch": "unconfirmed",
+        "currentPose": "unconfirmed",
+        "dimensions": "approximate"
+      },
+      "identityWarning": null
+    },
+    {
+      "id": "liquid-card-065",
+      "cardNumber": 65,
+      "name": "치어팩 충진기 2호기",
+      "roomId": "pouch",
+      "position": [
+        -14.7,
+        0,
+        9
+      ],
+      "rotation": 0,
+      "dimensions": [
+        3.6,
+        3.4,
+        2.8
+      ],
+      "sourceConfidence": {
+        "identity": "direct-card",
+        "appearance": "four-photo-panels",
+        "room": "card-room",
+        "roomGeometry": "historical-room-approximation",
+        "equipmentPlanMatch": "unconfirmed",
+        "currentPose": "unconfirmed",
+        "dimensions": "approximate"
+      },
+      "identityWarning": null
+    },
+    {
+      "id": "liquid-card-066",
+      "cardNumber": 66,
+      "name": "치어팩 충진기 1호기",
+      "roomId": "pouch",
+      "position": [
+        -9.4,
+        0,
+        9
+      ],
+      "rotation": 0,
+      "dimensions": [
+        3.6,
+        3.4,
+        2.8
+      ],
+      "sourceConfidence": {
+        "identity": "direct-card",
+        "appearance": "four-photo-panels",
+        "room": "card-room",
+        "roomGeometry": "historical-room-approximation",
+        "equipmentPlanMatch": "unconfirmed",
+        "currentPose": "unconfirmed",
+        "dimensions": "approximate"
+      },
+      "identityWarning": null
+    },
+    {
+      "id": "liquid-card-067",
+      "cardNumber": 67,
+      "name": "믹서탱크",
+      "roomId": "mixing",
+      "position": [
+        -32,
+        0,
+        -1.5
+      ],
+      "rotation": 0,
+      "dimensions": [
+        2.4,
+        2.4,
+        4.1
+      ],
+      "sourceConfidence": {
+        "identity": "direct-card",
+        "appearance": "four-photo-panels",
+        "room": "card-room",
+        "roomGeometry": "historical-room-approximation",
+        "equipmentPlanMatch": "unconfirmed",
+        "currentPose": "unconfirmed",
+        "dimensions": "approximate"
+      },
+      "identityWarning": null
+    },
+    {
+      "id": "liquid-card-068",
+      "cardNumber": 68,
+      "name": "배합탱크 10",
+      "roomId": "mixing",
+      "position": [
+        -28.2,
+        0,
+        -1.5
+      ],
+      "rotation": 0,
+      "dimensions": [
+        2.4,
+        2.4,
+        3.8
+      ],
+      "sourceConfidence": {
+        "identity": "direct-card",
+        "appearance": "four-photo-panels",
+        "room": "card-room",
+        "roomGeometry": "historical-room-approximation",
+        "equipmentPlanMatch": "unconfirmed",
+        "currentPose": "unconfirmed",
+        "dimensions": "approximate"
+      },
+      "identityWarning": null
+    },
+    {
+      "id": "liquid-card-069",
+      "cardNumber": 69,
+      "name": "배합탱크 7",
+      "roomId": "mixing",
+      "position": [
+        -32,
+        0,
+        2
+      ],
+      "rotation": 0,
+      "dimensions": [
+        2.4,
+        2.4,
+        3.8
+      ],
+      "sourceConfidence": {
+        "identity": "direct-card",
+        "appearance": "four-photo-panels",
+        "room": "card-room",
+        "roomGeometry": "historical-room-approximation",
+        "equipmentPlanMatch": "unconfirmed",
+        "currentPose": "unconfirmed",
+        "dimensions": "approximate"
+      },
+      "identityWarning": null
+    },
+    {
+      "id": "liquid-card-070",
+      "cardNumber": 70,
+      "name": "배합탱크 9",
+      "roomId": "mixing",
+      "position": [
+        -28.2,
+        0,
+        2
+      ],
+      "rotation": 0,
+      "dimensions": [
+        2.4,
+        2.4,
+        3.8
+      ],
+      "sourceConfidence": {
+        "identity": "direct-card",
+        "appearance": "four-photo-panels",
+        "room": "card-room",
+        "roomGeometry": "historical-room-approximation",
+        "equipmentPlanMatch": "unconfirmed",
+        "currentPose": "unconfirmed",
+        "dimensions": "approximate"
+      },
+      "identityWarning": null
+    },
+    {
+      "id": "liquid-card-071",
+      "cardNumber": 71,
+      "name": "3번 탱크",
+      "roomId": "mixing",
+      "position": [
+        -36.1,
+        0,
+        4.9
+      ],
+      "rotation": 0,
+      "dimensions": [
+        2,
+        2,
+        3.2
+      ],
+      "sourceConfidence": {
+        "identity": "direct-card",
+        "appearance": "four-photo-panels",
+        "room": "card-room",
+        "roomGeometry": "historical-room-approximation",
+        "equipmentPlanMatch": "unconfirmed",
+        "currentPose": "unconfirmed",
+        "dimensions": "approximate"
+      },
+      "identityWarning": null
+    },
+    {
+      "id": "liquid-card-077",
+      "cardNumber": 77,
+      "name": "4번 배합탱크",
+      "roomId": "mixing",
+      "position": [
+        -36.1,
+        0,
+        13.9
+      ],
+      "rotation": 0,
+      "dimensions": [
+        1.7,
+        1.7,
+        3.8
+      ],
+      "sourceConfidence": {
+        "identity": "direct-card",
+        "appearance": "four-photo-panels",
+        "room": "card-room",
+        "roomGeometry": "historical-room-approximation",
+        "equipmentPlanMatch": "unconfirmed",
+        "currentPose": "unconfirmed",
+        "dimensions": "approximate"
+      },
+      "identityWarning": "카드는 4번 배합탱크이나 사진의 종이 표찰은 2번 탱크로 보입니다. 서로 다른 라인 여부는 확인되지 않아 도면 번호로 강제 치환하지 않았습니다."
+    },
+    {
+      "id": "liquid-card-078",
+      "cardNumber": 78,
+      "name": "3번 배합탱크",
+      "roomId": "mixing",
+      "position": [
+        -32.6,
+        0,
+        13.9
+      ],
+      "rotation": 0,
+      "dimensions": [
+        1.7,
+        1.7,
+        3.8
+      ],
+      "sourceConfidence": {
+        "identity": "direct-card",
+        "appearance": "four-photo-panels",
+        "room": "card-room",
+        "roomGeometry": "historical-room-approximation",
+        "equipmentPlanMatch": "unconfirmed",
+        "currentPose": "unconfirmed",
+        "dimensions": "approximate"
+      },
+      "identityWarning": "카드는 3번 배합탱크이나 사진의 종이 표찰은 1번 탱크로 보입니다. 서로 다른 라인 여부는 확인되지 않아 도면 번호로 강제 치환하지 않았습니다."
+    },
+    {
+      "id": "liquid-card-079",
+      "cardNumber": 79,
+      "name": "2번 배합탱크",
+      "roomId": "mixing",
+      "position": [
+        -29.1,
+        0,
+        13.9
+      ],
+      "rotation": 0,
+      "dimensions": [
+        1.7,
+        1.7,
+        3.8
+      ],
+      "sourceConfidence": {
+        "identity": "direct-card",
+        "appearance": "four-photo-panels",
+        "room": "card-room",
+        "roomGeometry": "historical-room-approximation",
+        "equipmentPlanMatch": "unconfirmed",
+        "currentPose": "unconfirmed",
+        "dimensions": "approximate"
+      },
+      "identityWarning": null
+    },
+    {
+      "id": "liquid-card-080",
+      "cardNumber": 80,
+      "name": "A라인 1-4",
+      "roomId": "mixing",
+      "position": [
+        -36.1,
+        0,
+        17.8
+      ],
+      "rotation": 0,
+      "dimensions": [
+        1.8,
+        1.8,
+        3.4
+      ],
+      "sourceConfidence": {
+        "identity": "direct-card",
+        "appearance": "four-photo-panels",
+        "room": "card-room",
+        "roomGeometry": "historical-room-approximation",
+        "equipmentPlanMatch": "unconfirmed",
+        "currentPose": "unconfirmed",
+        "dimensions": "approximate"
+      },
+      "identityWarning": null
+    },
+    {
+      "id": "liquid-card-081",
+      "cardNumber": 81,
+      "name": "A라인 1-3",
+      "roomId": "mixing",
+      "position": [
+        -32.3,
+        0,
+        17.8
+      ],
+      "rotation": 0,
+      "dimensions": [
+        1.8,
+        1.8,
+        3.4
+      ],
+      "sourceConfidence": {
+        "identity": "direct-card",
+        "appearance": "four-photo-panels",
+        "room": "card-room",
+        "roomGeometry": "historical-room-approximation",
+        "equipmentPlanMatch": "unconfirmed",
+        "currentPose": "unconfirmed",
+        "dimensions": "approximate"
+      },
+      "identityWarning": null
+    },
+    {
+      "id": "liquid-card-082",
+      "cardNumber": 82,
+      "name": "A라인 1-2",
+      "roomId": "mixing",
+      "position": [
+        -28.5,
+        0,
+        17.8
+      ],
+      "rotation": 0,
+      "dimensions": [
+        1.8,
+        1.8,
+        3.4
+      ],
+      "sourceConfidence": {
+        "identity": "direct-card",
+        "appearance": "four-photo-panels",
+        "room": "card-room",
+        "roomGeometry": "historical-room-approximation",
+        "equipmentPlanMatch": "unconfirmed",
+        "currentPose": "unconfirmed",
+        "dimensions": "approximate"
+      },
+      "identityWarning": null
+    },
+    {
+      "id": "liquid-card-083",
+      "cardNumber": 83,
+      "name": "A라인 1-1",
+      "roomId": "mixing",
+      "position": [
+        -24.7,
+        0,
+        17.8
+      ],
+      "rotation": 0,
+      "dimensions": [
+        1.8,
+        1.8,
+        3.4
+      ],
+      "sourceConfidence": {
+        "identity": "direct-card",
+        "appearance": "four-photo-panels",
+        "room": "card-room",
+        "roomGeometry": "historical-room-approximation",
+        "equipmentPlanMatch": "unconfirmed",
+        "currentPose": "unconfirmed",
+        "dimensions": "approximate"
+      },
+      "identityWarning": null
+    },
+    {
+      "id": "liquid-card-093",
+      "cardNumber": 93,
+      "name": "호모 믹서탱크",
+      "roomId": "mixing",
+      "position": [
+        -32.3,
+        0,
+        6.3
+      ],
+      "rotation": 0,
+      "dimensions": [
+        1.8,
+        1.8,
+        2.8
+      ],
+      "sourceConfidence": {
+        "identity": "direct-card",
+        "appearance": "four-photo-panels",
+        "room": "card-room",
+        "roomGeometry": "historical-room-approximation",
+        "equipmentPlanMatch": "unconfirmed",
+        "currentPose": "unconfirmed",
+        "dimensions": "approximate"
+      },
+      "identityWarning": null
+    },
+    {
+      "id": "liquid-card-094",
+      "cardNumber": 94,
+      "name": "펄 진동채",
+      "roomId": "mixing",
+      "position": [
+        -34.8,
+        0,
+        10.7
+      ],
+      "rotation": 0,
+      "dimensions": [
+        1.2,
+        1.2,
+        1.7
+      ],
+      "sourceConfidence": {
+        "identity": "direct-card",
+        "appearance": "four-photo-panels",
+        "room": "card-room",
+        "roomGeometry": "historical-room-approximation",
+        "equipmentPlanMatch": "unconfirmed",
+        "currentPose": "unconfirmed",
+        "dimensions": "approximate"
+      },
+      "identityWarning": null
+    },
+    {
+      "id": "liquid-card-095",
+      "cardNumber": 95,
+      "name": "살균기 1호기",
+      "roomId": "mixing",
+      "position": [
+        -24.7,
+        0,
+        6
+      ],
+      "rotation": 1.5707963267948966,
+      "dimensions": [
+        3.2,
+        1.4,
+        2.2
+      ],
+      "sourceConfidence": {
+        "identity": "direct-card",
+        "appearance": "four-photo-panels",
+        "room": "card-room",
+        "roomGeometry": "historical-room-approximation",
+        "equipmentPlanMatch": "unconfirmed",
+        "currentPose": "unconfirmed",
+        "dimensions": "approximate"
+      },
+      "identityWarning": null
+    },
+    {
+      "id": "liquid-card-096",
+      "cardNumber": 96,
+      "name": "살균기 2호기",
+      "roomId": "mixing",
+      "position": [
+        -24.7,
+        0,
+        10
+      ],
+      "rotation": 1.5707963267948966,
+      "dimensions": [
+        3.2,
+        1.4,
+        2.2
+      ],
+      "sourceConfidence": {
+        "identity": "direct-card",
+        "appearance": "four-photo-panels",
+        "room": "card-room",
+        "roomGeometry": "historical-room-approximation",
+        "equipmentPlanMatch": "unconfirmed",
+        "currentPose": "unconfirmed",
+        "dimensions": "approximate"
+      },
+      "identityWarning": null
+    },
+    {
+      "id": "liquid-card-097",
+      "cardNumber": 97,
+      "name": "살균기 3호기",
+      "roomId": "mixing",
+      "position": [
+        -24.7,
+        0,
+        14
+      ],
+      "rotation": 1.5707963267948966,
+      "dimensions": [
+        3.2,
+        1.4,
+        2.2
+      ],
+      "sourceConfidence": {
+        "identity": "direct-card",
+        "appearance": "four-photo-panels",
+        "room": "card-room",
+        "roomGeometry": "historical-room-approximation",
+        "equipmentPlanMatch": "unconfirmed",
+        "currentPose": "unconfirmed",
+        "dimensions": "approximate"
+      },
+      "identityWarning": null
+    },
+    {
+      "id": "liquid-card-098",
+      "cardNumber": 98,
+      "name": "펄 이송호퍼",
+      "roomId": "mixing",
+      "position": [
+        -29.6,
+        0,
+        7
+      ],
+      "rotation": 0,
+      "dimensions": [
+        1.3,
+        1.3,
+        2.3
+      ],
+      "sourceConfidence": {
+        "identity": "direct-card",
+        "appearance": "four-photo-panels",
+        "room": "card-room",
+        "roomGeometry": "historical-room-approximation",
+        "equipmentPlanMatch": "unconfirmed",
+        "currentPose": "unconfirmed",
+        "dimensions": "approximate"
+      },
+      "identityWarning": null
+    },
+    {
+      "id": "liquid-card-099",
+      "cardNumber": 99,
+      "name": "HCPE - 5 균질기",
+      "roomId": "mixing",
+      "position": [
+        -27,
+        0,
+        8.1
+      ],
+      "rotation": 0,
+      "dimensions": [
+        1.8,
+        1.2,
+        1.7
+      ],
+      "sourceConfidence": {
+        "identity": "direct-card",
+        "appearance": "four-photo-panels",
+        "room": "card-room",
+        "roomGeometry": "historical-room-approximation",
+        "equipmentPlanMatch": "unconfirmed",
+        "currentPose": "unconfirmed",
+        "dimensions": "approximate"
+      },
+      "identityWarning": null
+    },
+    {
+      "id": "liquid-card-100",
+      "cardNumber": 100,
+      "name": "B라인 열수탱크",
+      "roomId": "mixing",
+      "position": [
+        -29,
+        0,
+        11
+      ],
+      "rotation": 0,
+      "dimensions": [
+        2,
+        1.6,
+        2
+      ],
+      "sourceConfidence": {
+        "identity": "direct-card",
+        "appearance": "four-photo-panels",
+        "room": "card-room",
+        "roomGeometry": "historical-room-approximation",
+        "equipmentPlanMatch": "unconfirmed",
+        "currentPose": "unconfirmed",
+        "dimensions": "approximate"
+      },
+      "identityWarning": null
+    },
+    {
+      "id": "liquid-card-101",
+      "cardNumber": 101,
+      "name": "에어 콤프레셔",
+      "roomId": "boiler",
+      "position": [
+        40.5,
+        0,
+        -18.3
+      ],
+      "rotation": 0,
+      "dimensions": [
+        1.3,
+        1.2,
+        2
+      ],
+      "sourceConfidence": {
+        "identity": "direct-card",
+        "appearance": "four-photo-panels",
+        "room": "card-room",
+        "roomGeometry": "unconfirmed-room",
+        "equipmentPlanMatch": "unconfirmed",
+        "currentPose": "unconfirmed",
+        "dimensions": "approximate"
+      },
+      "identityWarning": null
+    },
+    {
+      "id": "liquid-card-102",
+      "cardNumber": 102,
+      "name": "핫멜트",
+      "roomId": "outer",
+      "position": [
+        22,
+        0,
+        16
+      ],
+      "rotation": 0,
+      "dimensions": [
+        0.9,
+        1,
+        1.6
+      ],
+      "sourceConfidence": {
+        "identity": "direct-card",
+        "appearance": "four-photo-panels",
+        "room": "card-room",
+        "roomGeometry": "historical-room-approximation",
+        "equipmentPlanMatch": "unconfirmed",
+        "currentPose": "unconfirmed",
+        "dimensions": "approximate"
+      },
+      "identityWarning": null
+    },
+    {
+      "id": "liquid-card-103",
+      "cardNumber": 103,
+      "name": "보일러 3호기",
+      "roomId": "boiler",
+      "position": [
+        37.4,
+        0,
+        -15.8
+      ],
+      "rotation": 0,
+      "dimensions": [
+        1.4,
+        1.8,
+        2.6
+      ],
+      "sourceConfidence": {
+        "identity": "direct-card",
+        "appearance": "four-photo-panels",
+        "room": "card-room",
+        "roomGeometry": "unconfirmed-room",
+        "equipmentPlanMatch": "unconfirmed",
+        "currentPose": "unconfirmed",
+        "dimensions": "approximate"
+      },
+      "identityWarning": null
+    },
+    {
+      "id": "liquid-card-104",
+      "cardNumber": 104,
+      "name": "보일러 1,2호기",
+      "roomId": "boiler",
+      "position": [
+        40.8,
+        0,
+        -16
+      ],
+      "rotation": 0,
+      "dimensions": [
+        2.4,
+        2.2,
+        3.6
+      ],
+      "sourceConfidence": {
+        "identity": "direct-card",
+        "appearance": "four-photo-panels",
+        "room": "card-room",
+        "roomGeometry": "unconfirmed-room",
+        "equipmentPlanMatch": "unconfirmed",
+        "currentPose": "unconfirmed",
+        "dimensions": "approximate"
+      },
+      "identityWarning": "카드명은 보일러 1,2호기이나 네 방향 사진은 원통 보일러 한 대의 외관입니다. 이 카드 한 그룹을 유지하며 원문명만으로 보일러 두 대를 복제하지 않았습니다."
+    },
+    {
+      "id": "liquid-card-105",
+      "cardNumber": 105,
+      "name": "티칭 로봇",
+      "roomId": "outer",
+      "position": [
+        24.9,
+        0,
+        7
+      ],
+      "rotation": 0,
+      "dimensions": [
+        2.8,
+        2.4,
+        3.5
+      ],
+      "sourceConfidence": {
+        "identity": "direct-card",
+        "appearance": "four-photo-panels",
+        "room": "card-room",
+        "roomGeometry": "historical-room-approximation",
+        "equipmentPlanMatch": "unconfirmed",
+        "currentPose": "unconfirmed",
+        "dimensions": "approximate"
+      },
+      "identityWarning": null
+    },
+    {
+      "id": "liquid-card-106",
+      "cardNumber": 106,
+      "name": "제환기",
+      "roomId": "pellet",
+      "position": [
+        7.1,
+        0,
+        -12
+      ],
+      "rotation": 0,
+      "dimensions": [
+        1.5,
+        1.1,
+        1.9
+      ],
+      "sourceConfidence": {
+        "identity": "direct-card",
+        "appearance": "four-photo-panels",
+        "room": "card-room",
+        "roomGeometry": "unconfirmed-room",
+        "equipmentPlanMatch": "unconfirmed",
+        "currentPose": "unconfirmed",
+        "dimensions": "approximate"
+      },
+      "identityWarning": null
+    },
+    {
+      "id": "liquid-card-107",
+      "cardNumber": 107,
+      "name": "반죽기",
+      "roomId": "pellet",
+      "position": [
+        7.1,
+        0,
+        -8.5
+      ],
+      "rotation": 0,
+      "dimensions": [
+        1.1,
+        1.3,
+        1.8
+      ],
+      "sourceConfidence": {
+        "identity": "direct-card",
+        "appearance": "four-photo-panels",
+        "room": "card-room",
+        "roomGeometry": "unconfirmed-room",
+        "equipmentPlanMatch": "unconfirmed",
+        "currentPose": "unconfirmed",
+        "dimensions": "approximate"
+      },
+      "identityWarning": null
+    }
+  ],
+  "columns": [
+    {
+      "position": [
+        10.1506,
+        0,
+        -0.0057
+      ],
+      "width": 0.2058,
+      "depth": 0.4002,
+      "height": 4.5,
+      "section": "I",
+      "pdfPathIndices": [
+        9726,
+        9730
+      ],
+      "source": "2022-05-03 PDF I-column vector outline",
+      "confidence": "historical-plan-geometry; current height unmeasured"
+    },
+    {
+      "position": [
+        4.1494,
+        0,
+        -0.0057
+      ],
+      "width": 0.2058,
+      "depth": 0.4002,
+      "height": 4.5,
+      "section": "I",
+      "pdfPathIndices": [
+        9735,
+        9739
+      ],
+      "source": "2022-05-03 PDF I-column vector outline",
+      "confidence": "historical-plan-geometry; current height unmeasured"
+    },
+    {
+      "position": [
+        -37.8476,
+        0,
+        -19.6057
+      ],
+      "width": 0.2058,
+      "depth": 0.4002,
+      "height": 4.5,
+      "section": "I",
+      "pdfPathIndices": [
+        9850,
+        9854
+      ],
+      "source": "2022-05-03 PDF I-column vector outline",
+      "confidence": "historical-plan-geometry; current height unmeasured"
+    },
+    {
+      "position": [
+        -43.8488,
+        0,
+        -19.6057
+      ],
+      "width": 0.2058,
+      "depth": 0.4002,
+      "height": 4.5,
+      "section": "I",
+      "pdfPathIndices": [
+        9859,
+        9863
+      ],
+      "source": "2022-05-03 PDF I-column vector outline",
+      "confidence": "historical-plan-geometry; current height unmeasured"
+    },
+    {
+      "position": [
+        -49.85,
+        0,
+        -19.6057
+      ],
+      "width": 0.2058,
+      "depth": 0.4002,
+      "height": 4.5,
+      "section": "I",
+      "pdfPathIndices": [
+        9868,
+        9872
+      ],
+      "source": "2022-05-03 PDF I-column vector outline",
+      "confidence": "historical-plan-geometry; current height unmeasured"
+    },
+    {
+      "position": [
+        10.1506,
+        0,
+        19.6057
+      ],
+      "width": 0.2058,
+      "depth": 0.4002,
+      "height": 4.5,
+      "section": "I",
+      "pdfPathIndices": [
+        10031,
+        10033
+      ],
+      "source": "2022-05-03 PDF I-column vector outline",
+      "confidence": "historical-plan-geometry; current height unmeasured"
+    },
+    {
+      "position": [
+        10.1506,
+        0,
+        -19.6057
+      ],
+      "width": 0.2058,
+      "depth": 0.4002,
+      "height": 4.5,
+      "section": "I",
+      "pdfPathIndices": [
+        18721,
+        18725
+      ],
+      "source": "2022-05-03 PDF I-column vector outline",
+      "confidence": "historical-plan-geometry; current height unmeasured"
+    },
+    {
+      "position": [
+        4.1494,
+        0,
+        -19.6057
+      ],
+      "width": 0.2058,
+      "depth": 0.4002,
+      "height": 4.5,
+      "section": "I",
+      "pdfPathIndices": [
+        18731,
+        18799
+      ],
+      "source": "2022-05-03 PDF I-column vector outline",
+      "confidence": "historical-plan-geometry; current height unmeasured"
+    },
+    {
+      "position": [
+        20.4498,
+        0,
+        -0.0057
+      ],
+      "width": 0.2058,
+      "depth": 0.4002,
+      "height": 4.5,
+      "section": "I",
+      "pdfPathIndices": [
+        31324,
+        31328
+      ],
+      "source": "2022-05-03 PDF I-column vector outline",
+      "confidence": "historical-plan-geometry; current height unmeasured"
+    }
+  ]
+}

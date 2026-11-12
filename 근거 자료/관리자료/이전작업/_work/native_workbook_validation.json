@@ -1,0 +1,15 @@
+{
+  "file": "C:\\Users\\user\\Desktop\\근거 자료\\outputs\\2027_KPI_투자근거\\2027_KPI_투자이행_근거및절감산정.xlsx",
+  "source_paths_verified": 49,
+  "source_investments": 14,
+  "native_engine": "Microsoft Excel",
+  "checks": [
+    "Summary and 16 quantitative source cases recalculated correctly",
+    "Dryer input propagation 270000 KRW",
+    "Confirmation gate preserves unconfirmed status",
+    "Negative savings -20 preserved",
+    "Missing input does not turn into zero",
+    "One-off alternative-cost saving 250000 KRW"
+  ],
+  "excel_version": "16.0"
+}

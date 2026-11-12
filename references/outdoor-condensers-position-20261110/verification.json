@@ -1,0 +1,46 @@
+{
+  "date": "2026-11-10",
+  "changedPositions": [
+    "outdoor-condensers",
+    "outdoor-pet-ahu"
+  ],
+  "outdoorModels": 22,
+  "packagingModels": 83,
+  "roomGalleryDrawingViews": 5,
+  "card85LocationContextOnly": true,
+  "sourceFrame": {
+    "path": "apps/site/photos/outdoor-video/20261109_133757-004s.jpg",
+    "bytes": 196724,
+    "sha256": "34a4bf38c6364f2c65da9c8e5b203b4ba0260e8996f45eff0664bb724242c323"
+  },
+  "migration": {
+    "previousDefaultUpdated": true,
+    "manuallyRotatedPosePreserved": true,
+    "explicitImportPreserved": true
+  },
+  "shared": {
+    "bytes": 5417640,
+    "sha256": "2475c4fd6ecb6c9d0d74c9f80ba1ede13f37fd6ce51bc6c6c766f3d1d231fc03",
+    "equipmentDocumentFeature": false
+  },
+  "checks": {
+    "javascriptFiles": 43,
+    "testsPassed": 115,
+    "testsFailed": 0,
+    "actualGeometryIntersections": {
+      "collector": 0,
+      "petAhu": 0,
+      "fixedStructure": 0
+    }
+  },
+  "browser": {
+    "localDesktopReady": true,
+    "localMobileReady": true,
+    "restoredPreviousDefaultInBrowser": true,
+    "sharedDesktopReady": true,
+    "sharedMobileOfflineReady": true,
+    "documentControls": 0,
+    "automaticPdfDialogs": 0,
+    "consoleErrors": 0
+  }
+}

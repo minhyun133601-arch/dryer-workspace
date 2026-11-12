@@ -1,0 +1,35 @@
+{
+    "date":  "2026-11-12",
+    "request":  "경비실~2팀 입구 세부 모델·파일 목적별 정리",
+    "checks":  {
+                   "syntaxAndAssets":  "passed, 85 JavaScript files",
+                   "desktopBrowser":  "passed",
+                   "mobile390":  "passed, no overflow",
+                   "passed":  352,
+                   "elevatorOpeningAndCabin":  "visually verified",
+                   "tests":  352,
+                   "defaultPlacementMigration":  "passed; manual moves and imports retained",
+                   "consoleErrors":  0,
+                   "failed":  0,
+                   "doorwayAndHvacClearance":  "passed",
+                   "standaloneSharedViewer":  "passed"
+               },
+    "fileOrganization":  {
+                             "repairedScripts":  8,
+                             "permanentFileDeletions":  0,
+                             "movedFiles":  158,
+                             "index":  "workspace/file-organization-20261112/project-file-index.csv",
+                             "originalsHashMatched":  true,
+                             "movedBytes":  462992139
+                         },
+    "export":  {
+                   "path":  "exports/건조기-통합-공유.html",
+                   "sha256":  "fcd1d2815bf407e2496cd110741152be49b26ba00a4833bcd63ff8304bb7eaf9",
+                   "bytes":  17533617
+               },
+    "evidence":  "reconstruction.json",
+    "logs":  [
+                 "workspace/entrance-route-20261112/final-check.log",
+                 "workspace/entrance-route-20261112/final-tests.log"
+             ]
+}

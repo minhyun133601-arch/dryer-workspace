@@ -1,0 +1,107 @@
+{
+  "date": "2026-11-12",
+  "scope": "Faster inspection walking, enterable doors, manual/automatic controls and drawing-based person view",
+  "behavior": {
+    "speedMetresPerSecond": {
+      "normal": 6,
+      "shift": 12,
+      "previous": [
+        4,
+        8
+      ],
+      "factor": 1.5,
+      "purpose": "fast model inspection"
+    },
+    "defaultAutomaticDoors": false,
+    "manualControls": [
+      "F toggles nearby faced eligible doorway",
+      "on-screen open/close button"
+    ],
+    "automaticControls": "Checkbox enables approach opening and delayed departure closing for enterable:true leaves only",
+    "closedReviewedThreshold": "Crossing waits until all leaves have opened",
+    "connectedRoute": "campus Team-2 rear entry <-> packaging first-floor entry; person view retained",
+    "portalContinuity": "One F operation; paired threshold stays open across transition; spawn 0.9m inside / 1.7m outside",
+    "pairedLeaves": "one interaction synchronizes leaves, elevator panels and curtain strips",
+    "preferencesKey": "dryer-person-navigation-v1",
+    "metricScale": 1,
+    "eyeHeightMetres": 1.65,
+    "verticalFovDegrees": 70,
+    "viewScaleRangePercent": [
+      75,
+      125
+    ],
+    "drawingDecision": "Retain reviewed metric dimensions; view scale adjusts camera projection",
+    "maximumGroundSampleSpacingMetres": 0.06
+  },
+  "automated": {
+    "npm test": {
+      "passed": 371,
+      "failed": 0,
+      "log": "workspace/walking-doors-realism-20261112/tests-final.log"
+    },
+    "npm run check": {
+      "javascriptFiles": 86,
+      "status": "passed",
+      "log": "workspace/walking-doors-realism-20261112/check-final.log"
+    },
+    "npm run export:share": {
+      "status": "passed",
+      "log": "workspace/walking-doors-realism-20261112/export-final.log"
+    },
+    "featureCoverage": [
+      "F key repeat suppression",
+      "checkbox/button/settings in local and shared apps",
+      "paired panels",
+      "enterable-only model metadata",
+      "closed and partly-open threshold blocking",
+      "relocated/rotated portal return and re-entry",
+      "fast movement on narrow stairs",
+      "camera scale preserves drawing coordinates"
+    ]
+  },
+  "browser": {
+    "local": "ready=true; no console errors",
+    "manualF": "Actual Team-2 rear doorway opened after F; state carried to the first-floor doorway",
+    "singleOperationRoundTrip": {
+      "inside": [
+        -4,
+        0,
+        14.3
+      ],
+      "returnedOutside": [
+        9.625,
+        0.055,
+        -65.85
+      ],
+      "bothThresholdsOpenOnArrival": true
+    },
+    "automatic": "Checkbox hides manual button, updates hint and focuses canvas",
+    "persistence": "automatic=true and scale=.8 survived reload; review preferences reset to false/1",
+    "mobile": {
+      "viewport": [
+        390,
+        844
+      ],
+      "horizontalOverflow": false,
+      "canvasSize": [
+        353,
+        314.390625
+      ],
+      "controlsInsideCanvas": true,
+      "screenshot": "workspace/walking-doors-realism-20261112/mobile-person-canvas.png"
+    },
+    "shared": "Standalone iframe ready=true; person controls and checkbox respond; no console errors",
+    "sharedScreenshot": "workspace/walking-doors-realism-20261112/shared-person-desktop.png"
+  },
+  "export": {
+    "path": "exports/건조기-통합-공유.html",
+    "bytes": 17550649,
+    "sha256": "7a12cbd07a9f7f00deae3b0c15811abf74cec4a44d7737010457ae237a4d9942"
+  },
+  "limits": [
+    "Existing wall pass-through navigation is retained; closed reviewed doorway thresholds require opening.",
+    "Measured drawing values, video proportions and unmeasured geometry are distinguished in scale-audit.json.",
+    "Liquid orbit inspection is not treated as a walking person and cannot trigger proximity doors."
+  ],
+  "backup": ".backups/walking-doors-realism-20261112"
+}

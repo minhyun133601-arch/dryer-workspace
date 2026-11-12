@@ -1,0 +1,3405 @@
+{
+  "date": "2026-11-10",
+  "cardCount": 52,
+  "compositeCount": 52,
+  "panelCount": 208,
+  "totalBytes": 29761579,
+  "photoPanels": "FRONT/LEFT/RIGHT/REAR header included; four equal-width panels; image orientation is card-specific, not building north.",
+  "cards": [
+    {
+      "archiveNumber": 42,
+      "name": "28파이 Pet 충진기",
+      "room": "Pet실",
+      "sourcePath": "references/team3-liquid-20261110/source/3팀/Pet실/042_28파이 Pet 충진기/설비사진_28파이 Pet 충진기.jpg",
+      "sourceSha256": "a45d79428bf206d75030991d321ac5d62f3c58dd27460002808bd6c7c7a486e7",
+      "path": "apps/site/photos/team3-liquid-cards/card-042.jpg",
+      "sha256": "0d07d753846f9910b1012bdb6577c29fd861eddb13ae7394b42a415fa3ccd416",
+      "bytes": 171892,
+      "width": 1600,
+      "height": 500,
+      "panels": [
+        {
+          "direction": "front",
+          "path": "apps/site/photos/team3-liquid-cards/card-042-front.jpg",
+          "cropBox": [
+            0,
+            0,
+            400,
+            500
+          ],
+          "sha256": "01a83b7bedf63dc1cdbcbfc286238afff67b1718c8d036f94db8c96c1c532cc4",
+          "bytes": 42149
+        },
+        {
+          "direction": "left",
+          "path": "apps/site/photos/team3-liquid-cards/card-042-left.jpg",
+          "cropBox": [
+            400,
+            0,
+            800,
+            500
+          ],
+          "sha256": "00f291a1592fe4a2c825260b645fa0f15dce9b7e4daae41514297f1839a3700d",
+          "bytes": 49016
+        },
+        {
+          "direction": "right",
+          "path": "apps/site/photos/team3-liquid-cards/card-042-right.jpg",
+          "cropBox": [
+            800,
+            0,
+            1200,
+            500
+          ],
+          "sha256": "03e72bc64768cf562f98ee015d0ea8c91d306e8b5bcd1ed82b1535ea44104fef",
+          "bytes": 44617
+        },
+        {
+          "direction": "rear",
+          "path": "apps/site/photos/team3-liquid-cards/card-042-rear.jpg",
+          "cropBox": [
+            1200,
+            0,
+            1600,
+            500
+          ],
+          "sha256": "d622f3822ec3b12f7d3de42de37ee0e2da316796cf49bc8cfa4f022fd5abb17c",
+          "bytes": 42973
+        }
+      ],
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-042-reflow.jpg",
+      "reflowSha256": "00fc05e337237a2d01a7bd834f575a7aea5fa8713b0c4b8db20622bd0b86bbcc",
+      "reflowBytes": 177706
+    },
+    {
+      "archiveNumber": 43,
+      "name": "Pet실 1",
+      "room": "Pet실",
+      "sourcePath": "references/team3-liquid-20261110/source/3팀/Pet실/043_Pet실 1/설비사진_Pet실 1.jpg",
+      "sourceSha256": "1ee9950f381d7acb39710e0fa448af1cbf71f1bba5fbf84eec73faffd8686eaa",
+      "path": "apps/site/photos/team3-liquid-cards/card-043.jpg",
+      "sha256": "b53e3da7d3e00188a5fed49f2c42b8354f21c0362074b9f39a9f35084b354f74",
+      "bytes": 152035,
+      "width": 1600,
+      "height": 500,
+      "panels": [
+        {
+          "direction": "front",
+          "path": "apps/site/photos/team3-liquid-cards/card-043-front.jpg",
+          "cropBox": [
+            0,
+            0,
+            400,
+            500
+          ],
+          "sha256": "5e82cf2a81c006439ce4a112bf302e4f0571d62030633a5189d4e13a8e4202f7",
+          "bytes": 39113
+        },
+        {
+          "direction": "left",
+          "path": "apps/site/photos/team3-liquid-cards/card-043-left.jpg",
+          "cropBox": [
+            400,
+            0,
+            800,
+            500
+          ],
+          "sha256": "9272b153f927eaf69c0985462ad8cc0d69c71991a3ce0322fe4d9ab9c9c3ad7e",
+          "bytes": 38349
+        },
+        {
+          "direction": "right",
+          "path": "apps/site/photos/team3-liquid-cards/card-043-right.jpg",
+          "cropBox": [
+            800,
+            0,
+            1200,
+            500
+          ],
+          "sha256": "4ec0157426ba9043daebded9efc6bb32e71f43d21199f3f8db92b56457ff4845",
+          "bytes": 43806
+        },
+        {
+          "direction": "rear",
+          "path": "apps/site/photos/team3-liquid-cards/card-043-rear.jpg",
+          "cropBox": [
+            1200,
+            0,
+            1600,
+            500
+          ],
+          "sha256": "ab8690335a431b30f8ec53a9a2c0d9954b2d356b08f184118d6578154f3ae66c",
+          "bytes": 36644
+        }
+      ],
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-043-reflow.jpg",
+      "reflowSha256": "182325c72978293cd16737218f0284cf8019913d711497b619fa5a4ced56e910",
+      "reflowBytes": 158015
+    },
+    {
+      "archiveNumber": 44,
+      "name": "Pet 라인",
+      "room": "Pet실",
+      "sourcePath": "references/team3-liquid-20261110/source/3팀/Pet실/044_Pet 라인/설비사진_Pet 라인.jpg",
+      "sourceSha256": "be790aef9600b95e76faa78db118ef04841914fc65b457fcb1f51c28d420d3fa",
+      "path": "apps/site/photos/team3-liquid-cards/card-044.jpg",
+      "sha256": "78265be8c26b90f07cbd409432c0cb5e23fcfb5ce6d4747d6ddb212b2ebf00f9",
+      "bytes": 188933,
+      "width": 1600,
+      "height": 500,
+      "panels": [
+        {
+          "direction": "front",
+          "path": "apps/site/photos/team3-liquid-cards/card-044-front.jpg",
+          "cropBox": [
+            0,
+            0,
+            400,
+            500
+          ],
+          "sha256": "022edbf5881209c785bd21642d9a1bd61e58cb4aee0626b71354118d502a5df2",
+          "bytes": 47879
+        },
+        {
+          "direction": "left",
+          "path": "apps/site/photos/team3-liquid-cards/card-044-left.jpg",
+          "cropBox": [
+            400,
+            0,
+            800,
+            500
+          ],
+          "sha256": "3a95970f99c88dcf18311fbc43c465a1927ef12047d14ee1054181897adb5f1e",
+          "bytes": 49145
+        },
+        {
+          "direction": "right",
+          "path": "apps/site/photos/team3-liquid-cards/card-044-right.jpg",
+          "cropBox": [
+            800,
+            0,
+            1200,
+            500
+          ],
+          "sha256": "80ac82f94c4d7c95d3084431863d0ad89938e1557a921172bac6ce57277d2dfe",
+          "bytes": 59612
+        },
+        {
+          "direction": "rear",
+          "path": "apps/site/photos/team3-liquid-cards/card-044-rear.jpg",
+          "cropBox": [
+            1200,
+            0,
+            1600,
+            500
+          ],
+          "sha256": "8bd31c6ed62df8885e1849f715b24177987b1157219430f8a6817ce0506a8fb4",
+          "bytes": 39749
+        }
+      ],
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-044-reflow.jpg",
+      "reflowSha256": "74a71a788574b84a1381e2e6c2d5590c45c9f38a392c69e48de5ee7f2c59b902",
+      "reflowBytes": 197177
+    },
+    {
+      "archiveNumber": 45,
+      "name": "38파이 라벨러",
+      "room": "외포장실",
+      "sourcePath": "references/team3-liquid-20261110/source/3팀/외포장실/045_38파이 라벨러/설비사진_38파이 라벨러.jpg",
+      "sourceSha256": "a230618a61bb93cb62f925d4d8bf0c269462d81cbe5f4333e4eab5f26c3b68e1",
+      "path": "apps/site/photos/team3-liquid-cards/card-045.jpg",
+      "sha256": "9046214483c30c02e54107c3613a8e6f075d5045a760740840f2c6a0f57dd377",
+      "bytes": 156428,
+      "width": 1600,
+      "height": 500,
+      "panels": [
+        {
+          "direction": "front",
+          "path": "apps/site/photos/team3-liquid-cards/card-045-front.jpg",
+          "cropBox": [
+            0,
+            0,
+            400,
+            500
+          ],
+          "sha256": "d2c96578d2ee3c17a735f6869b9878afede68a14bc204f7c91afe66de4210fea",
+          "bytes": 38038
+        },
+        {
+          "direction": "left",
+          "path": "apps/site/photos/team3-liquid-cards/card-045-left.jpg",
+          "cropBox": [
+            400,
+            0,
+            800,
+            500
+          ],
+          "sha256": "ed4196989676a19ff72dbe3d8b4c98fac56fc2d9e370668223b5895fb3d36ac0",
+          "bytes": 41685
+        },
+        {
+          "direction": "right",
+          "path": "apps/site/photos/team3-liquid-cards/card-045-right.jpg",
+          "cropBox": [
+            800,
+            0,
+            1200,
+            500
+          ],
+          "sha256": "6be077c8c02a390a55c497f6762b60bd13c11cb69219f348a87bacedbb8f65a6",
+          "bytes": 39165
+        },
+        {
+          "direction": "rear",
+          "path": "apps/site/photos/team3-liquid-cards/card-045-rear.jpg",
+          "cropBox": [
+            1200,
+            0,
+            1600,
+            500
+          ],
+          "sha256": "f32627da286c38ef140da83f74554f2b74ccfecd894867a1fb574b02939fad41",
+          "bytes": 43141
+        }
+      ],
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-045-reflow.jpg",
+      "reflowSha256": "13c605526585ec22cded53b75843a56f3d6a893e2e5e32479bf92e1618b11a9b",
+      "reflowBytes": 163199
+    },
+    {
+      "archiveNumber": 46,
+      "name": "파스텔 라이저",
+      "room": "Pet실",
+      "sourcePath": "references/team3-liquid-20261110/source/3팀/Pet실/046_파스텔 라이저/설비사진_파스텔 라이저.jpg",
+      "sourceSha256": "4f735a68f39e2b5a2945292dd03f171cb39ff56e72f158e4b58752897eb37252",
+      "path": "apps/site/photos/team3-liquid-cards/card-046.jpg",
+      "sha256": "33cff5fa963076f7215d5f91612c087e01fab134b493c091c09ebe8e09e3a87d",
+      "bytes": 125892,
+      "width": 1600,
+      "height": 500,
+      "panels": [
+        {
+          "direction": "front",
+          "path": "apps/site/photos/team3-liquid-cards/card-046-front.jpg",
+          "cropBox": [
+            0,
+            0,
+            400,
+            500
+          ],
+          "sha256": "9ed28b01bf0f022c78542a3939aecb08167a757dbdbc52be8c604c8be8f92b5d",
+          "bytes": 31557
+        },
+        {
+          "direction": "left",
+          "path": "apps/site/photos/team3-liquid-cards/card-046-left.jpg",
+          "cropBox": [
+            400,
+            0,
+            800,
+            500
+          ],
+          "sha256": "21116dc6307f3bfc72def3634982fe4cd18411397b9d1a95d38ee3e8db6ffad4",
+          "bytes": 30535
+        },
+        {
+          "direction": "right",
+          "path": "apps/site/photos/team3-liquid-cards/card-046-right.jpg",
+          "cropBox": [
+            800,
+            0,
+            1200,
+            500
+          ],
+          "sha256": "2dc7be7ede55afc6b2b627b6c5c409601d85fce3f3155e8ea95295e78201cabe",
+          "bytes": 38179
+        },
+        {
+          "direction": "rear",
+          "path": "apps/site/photos/team3-liquid-cards/card-046-rear.jpg",
+          "cropBox": [
+            1200,
+            0,
+            1600,
+            500
+          ],
+          "sha256": "919be576b27acc7649a92e4578c07984fa85d755b973c0b8a6658db6716fc2b4",
+          "bytes": 30640
+        }
+      ],
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-046-reflow.jpg",
+      "reflowSha256": "7eddd5bf89074b22d6c3f1f1df540648efcfcdc05fcad4458d36c91ed677da75",
+      "reflowBytes": 130986
+    },
+    {
+      "archiveNumber": 47,
+      "name": "88파이 자동 충진기",
+      "room": "Pet실",
+      "sourcePath": "references/team3-liquid-20261110/source/3팀/Pet실/047_88파이 자동 충진기/설비사진_88파이 자동 충진기.jpg",
+      "sourceSha256": "ad2e6a442ce61ae660f85053d5d6123767ec60fdc19e1c63469bcb4f515b1a55",
+      "path": "apps/site/photos/team3-liquid-cards/card-047.jpg",
+      "sha256": "fb0c88ecbc35f31dcab23f6f9627e2f44321b1b06108f3498224c0b6bae91e0b",
+      "bytes": 181253,
+      "width": 1600,
+      "height": 500,
+      "panels": [
+        {
+          "direction": "front",
+          "path": "apps/site/photos/team3-liquid-cards/card-047-front.jpg",
+          "cropBox": [
+            0,
+            0,
+            400,
+            500
+          ],
+          "sha256": "e2d7223fff2b35a6eeff53aeb0c6797e59ae663001e421bbb08a8b5bed502ff2",
+          "bytes": 43733
+        },
+        {
+          "direction": "left",
+          "path": "apps/site/photos/team3-liquid-cards/card-047-left.jpg",
+          "cropBox": [
+            400,
+            0,
+            800,
+            500
+          ],
+          "sha256": "e687e5afb09ee863fb87090b4bdaa231722b8aca0684b2e1e5ffd111933ac935",
+          "bytes": 49843
+        },
+        {
+          "direction": "right",
+          "path": "apps/site/photos/team3-liquid-cards/card-047-right.jpg",
+          "cropBox": [
+            800,
+            0,
+            1200,
+            500
+          ],
+          "sha256": "bb2c1b8843b106ff3554a4cd64ec19c5174f1083f91a040b73159f5fcc966be1",
+          "bytes": 49138
+        },
+        {
+          "direction": "rear",
+          "path": "apps/site/photos/team3-liquid-cards/card-047-rear.jpg",
+          "cropBox": [
+            1200,
+            0,
+            1600,
+            500
+          ],
+          "sha256": "ec80fc9ea0b0d8d4672611e1abcf59a302c0c93c64928dc12d1d1da7493a80eb",
+          "bytes": 44871
+        }
+      ],
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-047-reflow.jpg",
+      "reflowSha256": "b0d5f25defc90372d7d0fda3b06e894db1d9cd9892e5ce86a806614079a3fcb8",
+      "reflowBytes": 187621
+    },
+    {
+      "archiveNumber": 48,
+      "name": "HIPE 16 스틱 충진기-2",
+      "room": "스틱실",
+      "sourcePath": "references/team3-liquid-20261110/source/3팀/스틱실/048_HIPE 16 스틱 충진기-2/설비사진_HIPE 16 스틱 충진기-2.jpg",
+      "sourceSha256": "7ea2cb7555213beabeea7efaac5ec95539c68c90042fa77919c85d6556010d84",
+      "path": "apps/site/photos/team3-liquid-cards/card-048.jpg",
+      "sha256": "5b086914ae6b32f201d072ec45200446553bcd480cda05744d36ed4fdadf7d3e",
+      "bytes": 206589,
+      "width": 1600,
+      "height": 500,
+      "panels": [
+        {
+          "direction": "front",
+          "path": "apps/site/photos/team3-liquid-cards/card-048-front.jpg",
+          "cropBox": [
+            0,
+            0,
+            400,
+            500
+          ],
+          "sha256": "3e4db44fe08a77732cce190173607ceab7e6e2d1b483efa9824775be8c2d5720",
+          "bytes": 56338
+        },
+        {
+          "direction": "left",
+          "path": "apps/site/photos/team3-liquid-cards/card-048-left.jpg",
+          "cropBox": [
+            400,
+            0,
+            800,
+            500
+          ],
+          "sha256": "f0f8fbb88a9606001fb4bd364bc9a614a32ef2e527ad6f4c6f017eea7ca75dea",
+          "bytes": 51251
+        },
+        {
+          "direction": "right",
+          "path": "apps/site/photos/team3-liquid-cards/card-048-right.jpg",
+          "cropBox": [
+            800,
+            0,
+            1200,
+            500
+          ],
+          "sha256": "606f2444a13a88df08f8b39a2d81c87766fa09821c2e41eb79eefb96fd206192",
+          "bytes": 49802
+        },
+        {
+          "direction": "rear",
+          "path": "apps/site/photos/team3-liquid-cards/card-048-rear.jpg",
+          "cropBox": [
+            1200,
+            0,
+            1600,
+            500
+          ],
+          "sha256": "f7a325c5c6e69e28b9734e0050ee39e47ef04d08c9ec5f44eb2e8a8b2c46a1ab",
+          "bytes": 57191
+        }
+      ],
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-048-reflow.jpg",
+      "reflowSha256": "e6bf20a8a78ca7ce8a48b24c0200cfa1c4df9deaa12686eb4f7a708316c09a04",
+      "reflowBytes": 215758
+    },
+    {
+      "archiveNumber": 49,
+      "name": "Hipe 16 스틱 충진기-1",
+      "room": "스틱실",
+      "sourcePath": "references/team3-liquid-20261110/source/3팀/스틱실/049_Hipe 16 스틱 충진기-1/설비사진_Hipe 16 스틱 충진기-1.jpg",
+      "sourceSha256": "176deb084cf17c441af2c5f7118cdf4673bb4b134e966dfbb084d2213ab11cd8",
+      "path": "apps/site/photos/team3-liquid-cards/card-049.jpg",
+      "sha256": "0c558a08b33c396bf116adcf58210f1eb2d3c35ac1fdf0b20fd007fac46769fc",
+      "bytes": 207186,
+      "width": 1600,
+      "height": 500,
+      "panels": [
+        {
+          "direction": "front",
+          "path": "apps/site/photos/team3-liquid-cards/card-049-front.jpg",
+          "cropBox": [
+            0,
+            0,
+            400,
+            500
+          ],
+          "sha256": "75fa771e06e56f11ef01b9f7ca0252ff68999ca6cdf825195eb2c418a246ff28",
+          "bytes": 55061
+        },
+        {
+          "direction": "left",
+          "path": "apps/site/photos/team3-liquid-cards/card-049-left.jpg",
+          "cropBox": [
+            400,
+            0,
+            800,
+            500
+          ],
+          "sha256": "45ce7481aebc1019ed206d7d31bf44f2c26617b353841d5ba3f039eba270637c",
+          "bytes": 48944
+        },
+        {
+          "direction": "right",
+          "path": "apps/site/photos/team3-liquid-cards/card-049-right.jpg",
+          "cropBox": [
+            800,
+            0,
+            1200,
+            500
+          ],
+          "sha256": "07b79fedc48e0263dc82cc40ed32579d78ed4aae8e22730bc778b8e16636b260",
+          "bytes": 54485
+        },
+        {
+          "direction": "rear",
+          "path": "apps/site/photos/team3-liquid-cards/card-049-rear.jpg",
+          "cropBox": [
+            1200,
+            0,
+            1600,
+            500
+          ],
+          "sha256": "ef635688f83b7fd8beb5ade670f6a50e9f2711105c3e98b8883bad8581a8b94f",
+          "bytes": 56515
+        }
+      ],
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-049-reflow.jpg",
+      "reflowSha256": "daa6e6a611740d856912a245a74ee273fa7cafff11018eb5983c1d85df85a711",
+      "reflowBytes": 215237
+    },
+    {
+      "archiveNumber": 50,
+      "name": "병뚜껑 조립기",
+      "room": "Pet실",
+      "sourcePath": "references/team3-liquid-20261110/source/3팀/Pet실/050_병뚜껑 조립기/설비사진_병뚜껑 조립기.jpg",
+      "sourceSha256": "55645789890ab5e73613b74b5f0d71798d46ceac19a0fc0545063c81b06cff33",
+      "path": "apps/site/photos/team3-liquid-cards/card-050.jpg",
+      "sha256": "51247cdb8a1651d655cc162b5e3207ac5dd3cebf7e3b3e59bf2d26d04dba3491",
+      "bytes": 182464,
+      "width": 1600,
+      "height": 500,
+      "panels": [
+        {
+          "direction": "front",
+          "path": "apps/site/photos/team3-liquid-cards/card-050-front.jpg",
+          "cropBox": [
+            0,
+            0,
+            400,
+            500
+          ],
+          "sha256": "b13764beb19c1b6944c3e64a95ed01faaf35fa92976bf49eabda3696712d142b",
+          "bytes": 43934
+        },
+        {
+          "direction": "left",
+          "path": "apps/site/photos/team3-liquid-cards/card-050-left.jpg",
+          "cropBox": [
+            400,
+            0,
+            800,
+            500
+          ],
+          "sha256": "8f7384f3d00cdd6f769f472b393c5151f9770eb0fc0ac36899bc72440432dbd4",
+          "bytes": 45988
+        },
+        {
+          "direction": "right",
+          "path": "apps/site/photos/team3-liquid-cards/card-050-right.jpg",
+          "cropBox": [
+            800,
+            0,
+            1200,
+            500
+          ],
+          "sha256": "dae0e563a4e8e28f67879552052e55d5944fd162c035762586c807ba387d8630",
+          "bytes": 48556
+        },
+        {
+          "direction": "rear",
+          "path": "apps/site/photos/team3-liquid-cards/card-050-rear.jpg",
+          "cropBox": [
+            1200,
+            0,
+            1600,
+            500
+          ],
+          "sha256": "e001a4eb538ec027921f21310018ee07222fdb7816e1f40bbb8e9701e37a4951",
+          "bytes": 50716
+        }
+      ],
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-050-reflow.jpg",
+      "reflowSha256": "9893e56c023652c4a779ebc1b5fdb638919cee013b8a0b2034bc8f978d49d116",
+      "reflowBytes": 188884
+    },
+    {
+      "archiveNumber": 51,
+      "name": "연수기",
+      "room": "보일러실",
+      "sourcePath": "references/team3-liquid-20261110/source/3팀/보일러실/051_연수기/설비사진_연수기.jpg",
+      "sourceSha256": "61877d85cdaf4ba912e29e8712d06c819542594706f31ca13415b8ea61d67c48",
+      "path": "apps/site/photos/team3-liquid-cards/card-051.jpg",
+      "sha256": "f5eb860f0155711d05bad175282d949c704fb5128bebf5ce016ef465b963b5ec",
+      "bytes": 151717,
+      "width": 1600,
+      "height": 500,
+      "panels": [
+        {
+          "direction": "front",
+          "path": "apps/site/photos/team3-liquid-cards/card-051-front.jpg",
+          "cropBox": [
+            0,
+            0,
+            400,
+            500
+          ],
+          "sha256": "a96228029c978e5c1a68bbd50e4a7ab699f13bea0599cc57de3021c32e9e3f83",
+          "bytes": 39883
+        },
+        {
+          "direction": "left",
+          "path": "apps/site/photos/team3-liquid-cards/card-051-left.jpg",
+          "cropBox": [
+            400,
+            0,
+            800,
+            500
+          ],
+          "sha256": "5ebfeff232bc7b91e7313f0a9dfd2837e06d543a3471da1dbb8b0aa305b84619",
+          "bytes": 40116
+        },
+        {
+          "direction": "right",
+          "path": "apps/site/photos/team3-liquid-cards/card-051-right.jpg",
+          "cropBox": [
+            800,
+            0,
+            1200,
+            500
+          ],
+          "sha256": "81df2262ec8bb993980396c3715939bcecd022fa9d1d07070820b7aa4cc600fc",
+          "bytes": 39100
+        },
+        {
+          "direction": "rear",
+          "path": "apps/site/photos/team3-liquid-cards/card-051-rear.jpg",
+          "cropBox": [
+            1200,
+            0,
+            1600,
+            500
+          ],
+          "sha256": "aa6d1fc5b7ea8a3873325f8d67c804aa9e62850e0b86fa27e25f9cc7e0e385d5",
+          "bytes": 38580
+        }
+      ],
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-051-reflow.jpg",
+      "reflowSha256": "bd20906ce97a61bdd6d9f5bc6cda082b9a1f43c0d5874930dd5a0d5b3e326288",
+      "reflowBytes": 157472
+    },
+    {
+      "archiveNumber": 52,
+      "name": "병 라인 중량 선별기",
+      "room": "외포장실",
+      "sourcePath": "references/team3-liquid-20261110/source/3팀/외포장실/052_병 라인 중량 선별기/설비사진_병 라인 중량 선별기.jpg",
+      "sourceSha256": "994677baca3770c0400436284d959c4f18b9ab82b30a71c8429fd4c32d38766e",
+      "path": "apps/site/photos/team3-liquid-cards/card-052.jpg",
+      "sha256": "c06dd85ca774cb6ebff7775eb862d279c55865d629a5f3096cbeea1241d1fcf8",
+      "bytes": 147404,
+      "width": 1600,
+      "height": 500,
+      "panels": [
+        {
+          "direction": "front",
+          "path": "apps/site/photos/team3-liquid-cards/card-052-front.jpg",
+          "cropBox": [
+            0,
+            0,
+            400,
+            500
+          ],
+          "sha256": "18f179ada0540728f1a3246d97b1092d6bb6779565c3c42956f2976de0a5f7bf",
+          "bytes": 34200
+        },
+        {
+          "direction": "left",
+          "path": "apps/site/photos/team3-liquid-cards/card-052-left.jpg",
+          "cropBox": [
+            400,
+            0,
+            800,
+            500
+          ],
+          "sha256": "73126c0be0f1fd7fac89d306f8e7f21dcb22ff6e8aaffb4d8bf242deeeaa020c",
+          "bytes": 39377
+        },
+        {
+          "direction": "right",
+          "path": "apps/site/photos/team3-liquid-cards/card-052-right.jpg",
+          "cropBox": [
+            800,
+            0,
+            1200,
+            500
+          ],
+          "sha256": "880cc5d57436d04aca5ddb6bc49f93f82ce3f46570f849fb08b6ead83d80a8bf",
+          "bytes": 39804
+        },
+        {
+          "direction": "rear",
+          "path": "apps/site/photos/team3-liquid-cards/card-052-rear.jpg",
+          "cropBox": [
+            1200,
+            0,
+            1600,
+            500
+          ],
+          "sha256": "903c46bd88c3601399b2931fbdb499fff3022a08f722dbf83ec9c19c6fa42820",
+          "bytes": 39735
+        }
+      ],
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-052-reflow.jpg",
+      "reflowSha256": "4857fd87afe1db16549a7db44e19e4e59b471bec3889ff218a7fa1a73afe9415",
+      "reflowBytes": 154863
+    },
+    {
+      "archiveNumber": 53,
+      "name": "카토너",
+      "room": "외포장실",
+      "sourcePath": "references/team3-liquid-20261110/source/3팀/외포장실/053_카토너/설비사진_카토너.jpg",
+      "sourceSha256": "4a800ad90438d888764d21643acf9dd739e908062a6726b71a1dbd012ad93593",
+      "path": "apps/site/photos/team3-liquid-cards/card-053.jpg",
+      "sha256": "6fad3aaf2a81c87dda556ba935942d044a741555f3e89ec1fa8b3853dc6c5b51",
+      "bytes": 197037,
+      "width": 1600,
+      "height": 500,
+      "panels": [
+        {
+          "direction": "front",
+          "path": "apps/site/photos/team3-liquid-cards/card-053-front.jpg",
+          "cropBox": [
+            0,
+            0,
+            400,
+            500
+          ],
+          "sha256": "f21c65e02496b32dd828896ce686fff7914ef9c772870e94221f1e34b0a5298e",
+          "bytes": 46935
+        },
+        {
+          "direction": "left",
+          "path": "apps/site/photos/team3-liquid-cards/card-053-left.jpg",
+          "cropBox": [
+            400,
+            0,
+            800,
+            500
+          ],
+          "sha256": "8778b6f2313e49dc7410e92874c3dd3a5c13da6dc8df4d7514c852323766bc14",
+          "bytes": 49462
+        },
+        {
+          "direction": "right",
+          "path": "apps/site/photos/team3-liquid-cards/card-053-right.jpg",
+          "cropBox": [
+            800,
+            0,
+            1200,
+            500
+          ],
+          "sha256": "9c468ac8ee28211661f8fe39467e1a8c1914860c3e86f1221a5e78b2a6277862",
+          "bytes": 53141
+        },
+        {
+          "direction": "rear",
+          "path": "apps/site/photos/team3-liquid-cards/card-053-rear.jpg",
+          "cropBox": [
+            1200,
+            0,
+            1600,
+            500
+          ],
+          "sha256": "9f0c91453ceff4e5fbd05cee62fb6fcdf639f4a2f19c784faf2eece2334ac051",
+          "bytes": 55481
+        }
+      ],
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-053-reflow.jpg",
+      "reflowSha256": "516add83a2304fcce7257526cf29ea373ec8b5d638f396444c5ab92955579fdf",
+      "reflowBytes": 205204
+    },
+    {
+      "archiveNumber": 54,
+      "name": "3팀용 제함기 1호기",
+      "room": "외포장실",
+      "sourcePath": "references/team3-liquid-20261110/source/3팀/외포장실/054_3팀용 제함기 1호기/설비사진_3팀용 제함기 1호기.jpg",
+      "sourceSha256": "47b94a195f1fb4b38527c79d3642293ec421f8f9331a0ecb5c101b3664650d31",
+      "path": "apps/site/photos/team3-liquid-cards/card-054.jpg",
+      "sha256": "495a11de64c09d634b22ed22fb3331a040a325879162b67d23e2d47abf5e4bfa",
+      "bytes": 193714,
+      "width": 1600,
+      "height": 500,
+      "panels": [
+        {
+          "direction": "front",
+          "path": "apps/site/photos/team3-liquid-cards/card-054-front.jpg",
+          "cropBox": [
+            0,
+            0,
+            400,
+            500
+          ],
+          "sha256": "fbcb9c6a3e5e17e9c330ca9104c4b008ea90165a4d4795d60e686b1d51c62df3",
+          "bytes": 52131
+        },
+        {
+          "direction": "left",
+          "path": "apps/site/photos/team3-liquid-cards/card-054-left.jpg",
+          "cropBox": [
+            400,
+            0,
+            800,
+            500
+          ],
+          "sha256": "340625556547c69bfcf9d9b0a635de02da0413aa877287aab3633bb2f550a185",
+          "bytes": 56307
+        },
+        {
+          "direction": "right",
+          "path": "apps/site/photos/team3-liquid-cards/card-054-right.jpg",
+          "cropBox": [
+            800,
+            0,
+            1200,
+            500
+          ],
+          "sha256": "73ea3dc97dbb7499fe1d347932c2f83ad0f28dad4f1f3288202792c33c0e78fb",
+          "bytes": 46837
+        },
+        {
+          "direction": "rear",
+          "path": "apps/site/photos/team3-liquid-cards/card-054-rear.jpg",
+          "cropBox": [
+            1200,
+            0,
+            1600,
+            500
+          ],
+          "sha256": "335b91ea184f1a1f648fbed1ba3ce42a061cc30592c3ee68093f01322421b0e2",
+          "bytes": 45951
+        }
+      ],
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-054-reflow.jpg",
+      "reflowSha256": "8e0b97ae84745b2d84415e1bc1e538f7b935d49174f41cd1e1799d4e14c259fc",
+      "reflowBytes": 200468
+    },
+    {
+      "archiveNumber": 55,
+      "name": "10입 자동 포장기",
+      "room": "외포장실",
+      "sourcePath": "references/team3-liquid-20261110/source/3팀/외포장실/055_10입 자동 포장기/설비사진_10입 자동 포장기.jpg",
+      "sourceSha256": "4143b870bb8af046e3b5800f0af7abdd0900850a8050b355481dc3c9e3ec5962",
+      "path": "apps/site/photos/team3-liquid-cards/card-055.jpg",
+      "sha256": "d12c144e7e96e8ce8e953fab14a40c8c66c5c7444e4ba8a250a5793d4fe81beb",
+      "bytes": 186787,
+      "width": 1600,
+      "height": 500,
+      "panels": [
+        {
+          "direction": "front",
+          "path": "apps/site/photos/team3-liquid-cards/card-055-front.jpg",
+          "cropBox": [
+            0,
+            0,
+            400,
+            500
+          ],
+          "sha256": "5368eb5d195a73ac3b3e970c15643416eb4b002951cd0fb38b347cca07c5960b",
+          "bytes": 47491
+        },
+        {
+          "direction": "left",
+          "path": "apps/site/photos/team3-liquid-cards/card-055-left.jpg",
+          "cropBox": [
+            400,
+            0,
+            800,
+            500
+          ],
+          "sha256": "fec1335f663f8767b69ef189ff01a056340287bf809fd814fd07a6a70a892807",
+          "bytes": 48213
+        },
+        {
+          "direction": "right",
+          "path": "apps/site/photos/team3-liquid-cards/card-055-right.jpg",
+          "cropBox": [
+            800,
+            0,
+            1200,
+            500
+          ],
+          "sha256": "0ac02f170b03f10af73680b7a644fb6b6ec102fa217e6206d3217918b19080e4",
+          "bytes": 52863
+        },
+        {
+          "direction": "rear",
+          "path": "apps/site/photos/team3-liquid-cards/card-055-rear.jpg",
+          "cropBox": [
+            1200,
+            0,
+            1600,
+            500
+          ],
+          "sha256": "147f652c7c2db6288a08f612bd7f936654d80fe0802637156f728c0525720d37",
+          "bytes": 45328
+        }
+      ],
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-055-reflow.jpg",
+      "reflowSha256": "fc8599601e60fdeaec50e9538067f9bddf752bb8138537f614c07528623375f3",
+      "reflowBytes": 193483
+    },
+    {
+      "archiveNumber": 56,
+      "name": "파우치 후살균수조",
+      "room": "후살균실",
+      "sourcePath": "references/team3-liquid-20261110/source/3팀/후살균실/056_파우치 후살균수조/설비사진_파우치 후살균수조.jpg",
+      "sourceSha256": "78c2a4f54b92903c1d36a75b163f6b6334b5fde7faee9c6a5d06408e71be7985",
+      "path": "apps/site/photos/team3-liquid-cards/card-056.jpg",
+      "sha256": "1cf38b94bee89274745f36e821937aac6dd6a7b1bf8fe67540b2e58cc59f8b20",
+      "bytes": 169720,
+      "width": 1600,
+      "height": 500,
+      "panels": [
+        {
+          "direction": "front",
+          "path": "apps/site/photos/team3-liquid-cards/card-056-front.jpg",
+          "cropBox": [
+            0,
+            0,
+            400,
+            500
+          ],
+          "sha256": "222dee0c511cd99e1d6fd43a7295cab8b511cfd3d134a1a13b2aad237b4dda52",
+          "bytes": 43173
+        },
+        {
+          "direction": "left",
+          "path": "apps/site/photos/team3-liquid-cards/card-056-left.jpg",
+          "cropBox": [
+            400,
+            0,
+            800,
+            500
+          ],
+          "sha256": "2f2c04f39f59a689ec318490f3b2409a80fa716e49fb2d6aea60a09190c82c52",
+          "bytes": 43181
+        },
+        {
+          "direction": "right",
+          "path": "apps/site/photos/team3-liquid-cards/card-056-right.jpg",
+          "cropBox": [
+            800,
+            0,
+            1200,
+            500
+          ],
+          "sha256": "fa92eceff5d17c7a9ed1b68e3f39bded661ddbb83686d54308cfea0a37ad5038",
+          "bytes": 43216
+        },
+        {
+          "direction": "rear",
+          "path": "apps/site/photos/team3-liquid-cards/card-056-rear.jpg",
+          "cropBox": [
+            1200,
+            0,
+            1600,
+            500
+          ],
+          "sha256": "18e6120ff7712fa03944498df645de0bad7ddeea8e9c13e4ffd334b1645fadfe",
+          "bytes": 46632
+        }
+      ],
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-056-reflow.jpg",
+      "reflowSha256": "46da92ed3617785dfc82d91ea8ce6ef67a83b326100f6b0fd5b692663b202764",
+      "reflowBytes": 176275
+    },
+    {
+      "archiveNumber": 57,
+      "name": "파우치 냉각수조",
+      "room": "후살균실",
+      "sourcePath": "references/team3-liquid-20261110/source/3팀/후살균실/057_파우치 냉각수조/설비사진_파우치 냉각수조.jpg",
+      "sourceSha256": "a3401d46727c6f1c352d431c02cf6926262afc3142104e19b864a64da199bdd3",
+      "path": "apps/site/photos/team3-liquid-cards/card-057.jpg",
+      "sha256": "bf6b6b7a8da46d1d94e01822e1c823abb40d5e0b1edcd29f4b43eba77278b7d2",
+      "bytes": 175426,
+      "width": 1600,
+      "height": 500,
+      "panels": [
+        {
+          "direction": "front",
+          "path": "apps/site/photos/team3-liquid-cards/card-057-front.jpg",
+          "cropBox": [
+            0,
+            0,
+            400,
+            500
+          ],
+          "sha256": "a425add30d6d6a8072591af21465039afec7b727a987ae41a122afc2ace26ddc",
+          "bytes": 35399
+        },
+        {
+          "direction": "left",
+          "path": "apps/site/photos/team3-liquid-cards/card-057-left.jpg",
+          "cropBox": [
+            400,
+            0,
+            800,
+            500
+          ],
+          "sha256": "7883db13adb6963174868c9861073c9ee4747767c5c96b2bfd45b08280d472fd",
+          "bytes": 44682
+        },
+        {
+          "direction": "right",
+          "path": "apps/site/photos/team3-liquid-cards/card-057-right.jpg",
+          "cropBox": [
+            800,
+            0,
+            1200,
+            500
+          ],
+          "sha256": "3cf25440c228fef77643f553236e0e1ed9a749fc8a9583925358554dd6d79035",
+          "bytes": 55715
+        },
+        {
+          "direction": "rear",
+          "path": "apps/site/photos/team3-liquid-cards/card-057-rear.jpg",
+          "cropBox": [
+            1200,
+            0,
+            1600,
+            500
+          ],
+          "sha256": "415811749010171d8a98aa90f55c56e19c2e9506a31b4beb1950a604b19cabc0",
+          "bytes": 46118
+        }
+      ],
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-057-reflow.jpg",
+      "reflowSha256": "e380732b6c52abea90d1f9d1a3495b217848b1f7d40ef0babb25584c8acce803",
+      "reflowBytes": 183665
+    },
+    {
+      "archiveNumber": 58,
+      "name": "후살균기",
+      "room": "후살균실",
+      "sourcePath": "references/team3-liquid-20261110/source/3팀/후살균실/058_후살균기/설비사진_후살균기.jpg",
+      "sourceSha256": "c1c0f4731e1cff3d2df860b92932d82735ff520c0c2a8ae99488ca945523a6d1",
+      "path": "apps/site/photos/team3-liquid-cards/card-058.jpg",
+      "sha256": "9fcce691fe462c0cc18825ced8cfe22679a51823bd6bbd165c1347b605cf2816",
+      "bytes": 187722,
+      "width": 1600,
+      "height": 500,
+      "panels": [
+        {
+          "direction": "front",
+          "path": "apps/site/photos/team3-liquid-cards/card-058-front.jpg",
+          "cropBox": [
+            0,
+            0,
+            400,
+            500
+          ],
+          "sha256": "e5e7cea7cccf621a90ddcac3e5f7c4ac9b7cfc5f77ecb74b664d2f755171d9a9",
+          "bytes": 54213
+        },
+        {
+          "direction": "left",
+          "path": "apps/site/photos/team3-liquid-cards/card-058-left.jpg",
+          "cropBox": [
+            400,
+            0,
+            800,
+            500
+          ],
+          "sha256": "ded193bfa96a164b6bf0568b55c71e69ae48aa0dff54c532556e5f6ce1713484",
+          "bytes": 47523
+        },
+        {
+          "direction": "right",
+          "path": "apps/site/photos/team3-liquid-cards/card-058-right.jpg",
+          "cropBox": [
+            800,
+            0,
+            1200,
+            500
+          ],
+          "sha256": "b06103f417520c6ce70b09aeaeb6dcc4841270a641eed6f181e2b83d6c0a0f3e",
+          "bytes": 44535
+        },
+        {
+          "direction": "rear",
+          "path": "apps/site/photos/team3-liquid-cards/card-058-rear.jpg",
+          "cropBox": [
+            1200,
+            0,
+            1600,
+            500
+          ],
+          "sha256": "1ddeb3fe06fc170cf86b0fce2ae614b9dfa49cf9a5e32e260b0ffd21cb058ae8",
+          "bytes": 48285
+        }
+      ],
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-058-reflow.jpg",
+      "reflowSha256": "471546207a0565fa7e415cbb264ccd118c77d622caa09127b116ef4ca01285c0",
+      "reflowBytes": 194713
+    },
+    {
+      "archiveNumber": 59,
+      "name": "치어팩 언로더",
+      "room": "파우치실",
+      "sourcePath": "references/team3-liquid-20261110/source/3팀/파우치실/059_치어팩 언로더/설비사진_치어팩 언로더.jpg",
+      "sourceSha256": "d6f1d386619ef39f2db41ffeca6fbd63d8f84ece929629a84ed63dcf3808b964",
+      "path": "apps/site/photos/team3-liquid-cards/card-059.jpg",
+      "sha256": "f5b75b38add98271ea33146e91ed2a0ddc9c079e34187bf12f149b3c254506cf",
+      "bytes": 199360,
+      "width": 1600,
+      "height": 500,
+      "panels": [
+        {
+          "direction": "front",
+          "path": "apps/site/photos/team3-liquid-cards/card-059-front.jpg",
+          "cropBox": [
+            0,
+            0,
+            400,
+            500
+          ],
+          "sha256": "d79af4bfe45f1c48979370d2f9716e3ad9fe4b48c62d6269f29b2ab6ce3a109c",
+          "bytes": 53417
+        },
+        {
+          "direction": "left",
+          "path": "apps/site/photos/team3-liquid-cards/card-059-left.jpg",
+          "cropBox": [
+            400,
+            0,
+            800,
+            500
+          ],
+          "sha256": "8f8419c1c63c00c0cafa74827f5eea364b91f4de1542d4759dd2309487a496a7",
+          "bytes": 58716
+        },
+        {
+          "direction": "right",
+          "path": "apps/site/photos/team3-liquid-cards/card-059-right.jpg",
+          "cropBox": [
+            800,
+            0,
+            1200,
+            500
+          ],
+          "sha256": "442d6c281f84ad6fdabee213003e1687d9c4a3659cd95eef2ebc4b763f0ef52c",
+          "bytes": 46581
+        },
+        {
+          "direction": "rear",
+          "path": "apps/site/photos/team3-liquid-cards/card-059-rear.jpg",
+          "cropBox": [
+            1200,
+            0,
+            1600,
+            500
+          ],
+          "sha256": "d18888fd7ce657e343cc1491c1932e48fcfb79549fc2c5985981753b64691256",
+          "bytes": 48002
+        }
+      ],
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-059-reflow.jpg",
+      "reflowSha256": "a21edfd83f3edca85c081dbac25e4003e190b4c3d8ecb301180d0d9afdfb2521",
+      "reflowBytes": 207124
+    },
+    {
+      "archiveNumber": 60,
+      "name": "스틱 냉각기",
+      "room": "스틱실",
+      "sourcePath": "references/team3-liquid-20261110/source/3팀/스틱실/060_스틱 냉각기/설비사진_스틱 냉각기.jpg",
+      "sourceSha256": "1aef5e3d4e33b36f7cbe05fecee521fc07e57cb83ff2ef2108e7a1f3e8b7891b",
+      "path": "apps/site/photos/team3-liquid-cards/card-060.jpg",
+      "sha256": "1e86d6d1d69c26a3013587a1365c70ab26b1d30345e7e6c805478b90b62a67bd",
+      "bytes": 157557,
+      "width": 1600,
+      "height": 500,
+      "panels": [
+        {
+          "direction": "front",
+          "path": "apps/site/photos/team3-liquid-cards/card-060-front.jpg",
+          "cropBox": [
+            0,
+            0,
+            400,
+            500
+          ],
+          "sha256": "20b500dfa1ce7cee126fa4d922feb0f411a8e8333a7c0a7a4ceb482526ea65e9",
+          "bytes": 42100
+        },
+        {
+          "direction": "left",
+          "path": "apps/site/photos/team3-liquid-cards/card-060-left.jpg",
+          "cropBox": [
+            400,
+            0,
+            800,
+            500
+          ],
+          "sha256": "16d69f5cba744b5a812fbefb285cbec99b5852a34124ec7922762e3b1204ca6e",
+          "bytes": 37280
+        },
+        {
+          "direction": "right",
+          "path": "apps/site/photos/team3-liquid-cards/card-060-right.jpg",
+          "cropBox": [
+            800,
+            0,
+            1200,
+            500
+          ],
+          "sha256": "7695c6a094b4757b938dcf783394ab401ea2290648772b4888e404daed123a4b",
+          "bytes": 36114
+        },
+        {
+          "direction": "rear",
+          "path": "apps/site/photos/team3-liquid-cards/card-060-rear.jpg",
+          "cropBox": [
+            1200,
+            0,
+            1600,
+            500
+          ],
+          "sha256": "5921215893d30fbbfc819568f45303105d17da80207b932303f76c1235f523cd",
+          "bytes": 47929
+        }
+      ],
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-060-reflow.jpg",
+      "reflowSha256": "fd2c391b24b5bbd66df6ab0abb99b8b653b9db471ecf3238e67f77ebe515a920",
+      "reflowBytes": 163837
+    },
+    {
+      "archiveNumber": 61,
+      "name": "파우치 충진기 3호기",
+      "room": "파우치실",
+      "sourcePath": "references/team3-liquid-20261110/source/3팀/파우치실/061_파우치 충진기 3호기/설비사진_파우치 충진기 3호기.jpg",
+      "sourceSha256": "b04ca86316b6d201ce84c541fdbbd925af70ae444945c717abb506d1021a559e",
+      "path": "apps/site/photos/team3-liquid-cards/card-061.jpg",
+      "sha256": "ce4f56a8c4e54765bcad1c96fb9fce9483a8fa7823dd54a71ad1dbc9e61f6dba",
+      "bytes": 195208,
+      "width": 1600,
+      "height": 500,
+      "panels": [
+        {
+          "direction": "front",
+          "path": "apps/site/photos/team3-liquid-cards/card-061-front.jpg",
+          "cropBox": [
+            0,
+            0,
+            400,
+            500
+          ],
+          "sha256": "b091e354faa49b1928a1629540c5b434e97d6e0e8b8ebe75d4e3b7d07af23a57",
+          "bytes": 46819
+        },
+        {
+          "direction": "left",
+          "path": "apps/site/photos/team3-liquid-cards/card-061-left.jpg",
+          "cropBox": [
+            400,
+            0,
+            800,
+            500
+          ],
+          "sha256": "a4a6d61327864e444fe98459d50780daf122c3674c201a9172d5f2292e538455",
+          "bytes": 58037
+        },
+        {
+          "direction": "right",
+          "path": "apps/site/photos/team3-liquid-cards/card-061-right.jpg",
+          "cropBox": [
+            800,
+            0,
+            1200,
+            500
+          ],
+          "sha256": "6d0f6c4f97a5a87e16a11d7561dd45da13d1e9e364724b2906231ae214ab19d9",
+          "bytes": 47852
+        },
+        {
+          "direction": "rear",
+          "path": "apps/site/photos/team3-liquid-cards/card-061-rear.jpg",
+          "cropBox": [
+            1200,
+            0,
+            1600,
+            500
+          ],
+          "sha256": "96b0badfec57c879296104ca46bd24ee3b60986b1b9cce85de51a9d9406fbc88",
+          "bytes": 50095
+        }
+      ],
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-061-reflow.jpg",
+      "reflowSha256": "692c2ce318d11225ad21f4c108d1969fe28556a5a51aed7a930bb3de955677c4",
+      "reflowBytes": 203137
+    },
+    {
+      "archiveNumber": 62,
+      "name": "파우치 충진기 2호기",
+      "room": "파우치실",
+      "sourcePath": "references/team3-liquid-20261110/source/3팀/파우치실/062_파우치 충진기 2호기/설비사진_파우치 충진기 2호기.jpg",
+      "sourceSha256": "80123a9ca4ccdad27f634be6615b41cd95a17c752a302c7452160b7435b6263b",
+      "path": "apps/site/photos/team3-liquid-cards/card-062.jpg",
+      "sha256": "f82330234609089d342a4442623d3d196d3e21c7dd12a1edb0553980970ec8ee",
+      "bytes": 213523,
+      "width": 1600,
+      "height": 500,
+      "panels": [
+        {
+          "direction": "front",
+          "path": "apps/site/photos/team3-liquid-cards/card-062-front.jpg",
+          "cropBox": [
+            0,
+            0,
+            400,
+            500
+          ],
+          "sha256": "40655eeccac74b303def232ddd450993b02a74450a822584c0de815a06f3baaf",
+          "bytes": 52844
+        },
+        {
+          "direction": "left",
+          "path": "apps/site/photos/team3-liquid-cards/card-062-left.jpg",
+          "cropBox": [
+            400,
+            0,
+            800,
+            500
+          ],
+          "sha256": "52fca16d8795c4e7f25261970d2874313c9d1928d7f8b17d3ad44ab8d3d79aa6",
+          "bytes": 57487
+        },
+        {
+          "direction": "right",
+          "path": "apps/site/photos/team3-liquid-cards/card-062-right.jpg",
+          "cropBox": [
+            800,
+            0,
+            1200,
+            500
+          ],
+          "sha256": "8fd87beb5aacbb52d5789b2c4990276f024a7305d393565f92406add91f2bcc6",
+          "bytes": 56213
+        },
+        {
+          "direction": "rear",
+          "path": "apps/site/photos/team3-liquid-cards/card-062-rear.jpg",
+          "cropBox": [
+            1200,
+            0,
+            1600,
+            500
+          ],
+          "sha256": "f1d36e3d02deea87dd88c58b4c00143a9094f15b052320cc7f508b356ea91da8",
+          "bytes": 55105
+        }
+      ],
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-062-reflow.jpg",
+      "reflowSha256": "dc904699d124bb4375bc1a72e4fc1e2c205bd7b9a22e7524f06e1b5535746025",
+      "reflowBytes": 221606
+    },
+    {
+      "archiveNumber": 63,
+      "name": "파우치 충진기 1호기",
+      "room": "파우치실",
+      "sourcePath": "references/team3-liquid-20261110/source/3팀/파우치실/063_파우치 충진기 1호기/설비사진_파우치 충진기 1호기.jpg",
+      "sourceSha256": "4361a214a989ae64cdf129fe77c1da351588ab5be1ffee6de1981f07f0909e18",
+      "path": "apps/site/photos/team3-liquid-cards/card-063.jpg",
+      "sha256": "9d2b52bae984b29eb0685570a2cf06dd0eb7739ba8df653c0f3e0f26f8c5dd79",
+      "bytes": 200675,
+      "width": 1600,
+      "height": 500,
+      "panels": [
+        {
+          "direction": "front",
+          "path": "apps/site/photos/team3-liquid-cards/card-063-front.jpg",
+          "cropBox": [
+            0,
+            0,
+            400,
+            500
+          ],
+          "sha256": "adedd5acf7e712759523a441693a6a96a7fb2d072b3ee0103ab92fc34afebbc6",
+          "bytes": 53397
+        },
+        {
+          "direction": "left",
+          "path": "apps/site/photos/team3-liquid-cards/card-063-left.jpg",
+          "cropBox": [
+            400,
+            0,
+            800,
+            500
+          ],
+          "sha256": "53fa49abe27ca5d3fd8bd5bda7310a9dfccfb0eed63d08dfa80f9c14f5b884cd",
+          "bytes": 51673
+        },
+        {
+          "direction": "right",
+          "path": "apps/site/photos/team3-liquid-cards/card-063-right.jpg",
+          "cropBox": [
+            800,
+            0,
+            1200,
+            500
+          ],
+          "sha256": "6adb45a3d1da2d98018a3053e5a4b924ac955d1efa878de334eef4e09b277143",
+          "bytes": 55832
+        },
+        {
+          "direction": "rear",
+          "path": "apps/site/photos/team3-liquid-cards/card-063-rear.jpg",
+          "cropBox": [
+            1200,
+            0,
+            1600,
+            500
+          ],
+          "sha256": "97f33a3249500284c90c71b137f9e76525aea1fb75336190271cc2b74d9d9600",
+          "bytes": 47789
+        }
+      ],
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-063-reflow.jpg",
+      "reflowSha256": "b13e7b89e336bbfe759c2a99170dc9ff8563d67badbba3fcdfc2ad03b77d06b0",
+      "reflowBytes": 209726
+    },
+    {
+      "archiveNumber": 64,
+      "name": "치어팩 충진기 3호기",
+      "room": "파우치실",
+      "sourcePath": "references/team3-liquid-20261110/source/3팀/파우치실/064_치어팩 충진기 3호기/설비사진_치어팩 충진기 3호기.jpg",
+      "sourceSha256": "f5a8a7b1aaab38d2ae6aeeafa338c0cb3f9783ef6eef869630a77d3b53d610fa",
+      "path": "apps/site/photos/team3-liquid-cards/card-064.jpg",
+      "sha256": "ca28b3f83501c65428bf642e6212bbeebd9fb1d40d20d445835bd3ee58fe9282",
+      "bytes": 208207,
+      "width": 1600,
+      "height": 500,
+      "panels": [
+        {
+          "direction": "front",
+          "path": "apps/site/photos/team3-liquid-cards/card-064-front.jpg",
+          "cropBox": [
+            0,
+            0,
+            400,
+            500
+          ],
+          "sha256": "75af0dfc357e22c532f6ad21fe17a57e8924bc3d088625f84c156b475da86f4d",
+          "bytes": 47253
+        },
+        {
+          "direction": "left",
+          "path": "apps/site/photos/team3-liquid-cards/card-064-left.jpg",
+          "cropBox": [
+            400,
+            0,
+            800,
+            500
+          ],
+          "sha256": "b656c2ddcc2b423223211cbcce8008afa97b553e04e907471a1a7cbe3371fcd4",
+          "bytes": 55682
+        },
+        {
+          "direction": "right",
+          "path": "apps/site/photos/team3-liquid-cards/card-064-right.jpg",
+          "cropBox": [
+            800,
+            0,
+            1200,
+            500
+          ],
+          "sha256": "9d8f4c7157ef945c89d96579f48f177654670949277d68484679ef9575194035",
+          "bytes": 57617
+        },
+        {
+          "direction": "rear",
+          "path": "apps/site/photos/team3-liquid-cards/card-064-rear.jpg",
+          "cropBox": [
+            1200,
+            0,
+            1600,
+            500
+          ],
+          "sha256": "ea3a5824ea800c187896e355e66fb8aba3c04c8bd2eb22efbe3d864f7dbe13a8",
+          "bytes": 55497
+        }
+      ],
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-064-reflow.jpg",
+      "reflowSha256": "271b7961538b1ab37e66bcb806d2a2e508c6b2746bc63d2fceb5e3892e4c1752",
+      "reflowBytes": 215825
+    },
+    {
+      "archiveNumber": 65,
+      "name": "치어팩 충진기 2호기",
+      "room": "파우치실",
+      "sourcePath": "references/team3-liquid-20261110/source/3팀/파우치실/065_치어팩 충진기 2호기/설비사진_치어팩 충진기 2호기.jpg",
+      "sourceSha256": "588821fe43af412102ee20ca18f2cadd4a0b5ff4d473b5b6da657cdf0358e137",
+      "path": "apps/site/photos/team3-liquid-cards/card-065.jpg",
+      "sha256": "d0ffb48cc90fca438efbcfc1ce66bf12465b5e5f00c24df75d6eac85cf9e9f9e",
+      "bytes": 195898,
+      "width": 1600,
+      "height": 500,
+      "panels": [
+        {
+          "direction": "front",
+          "path": "apps/site/photos/team3-liquid-cards/card-065-front.jpg",
+          "cropBox": [
+            0,
+            0,
+            400,
+            500
+          ],
+          "sha256": "cddca07c94c6b7a39c23fb91834f45c256158c8f68a74c26e7cd65eeacd92a66",
+          "bytes": 51498
+        },
+        {
+          "direction": "left",
+          "path": "apps/site/photos/team3-liquid-cards/card-065-left.jpg",
+          "cropBox": [
+            400,
+            0,
+            800,
+            500
+          ],
+          "sha256": "e20d2b141c117e252b3887e595e69ad32b40fe667e380b05cdd42fcd09c81a87",
+          "bytes": 56484
+        },
+        {
+          "direction": "right",
+          "path": "apps/site/photos/team3-liquid-cards/card-065-right.jpg",
+          "cropBox": [
+            800,
+            0,
+            1200,
+            500
+          ],
+          "sha256": "d34e93527bed4ce929ea536f6febfda8caef5d29d98d6f0b74015f33f268ab4b",
+          "bytes": 50584
+        },
+        {
+          "direction": "rear",
+          "path": "apps/site/photos/team3-liquid-cards/card-065-rear.jpg",
+          "cropBox": [
+            1200,
+            0,
+            1600,
+            500
+          ],
+          "sha256": "9c8d27cf45d39ac7dc9c6a79ffa4ea2d758d2d0e5021c24916d80ada57cebe7f",
+          "bytes": 45040
+        }
+      ],
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-065-reflow.jpg",
+      "reflowSha256": "a2961056eb91faf97a44cd2bb872fa0839240f5b114d4140fc0038e16713d9d3",
+      "reflowBytes": 203477
+    },
+    {
+      "archiveNumber": 66,
+      "name": "치어팩 충진기 1호기",
+      "room": "파우치실",
+      "sourcePath": "references/team3-liquid-20261110/source/3팀/파우치실/066_치어팩 충진기 1호기/설비사진_치어팩 충진기 1호기.jpg",
+      "sourceSha256": "89981309b9d145e636f3e59c793aad259dfc3ba89a4e95636e31c57cd269bafe",
+      "path": "apps/site/photos/team3-liquid-cards/card-066.jpg",
+      "sha256": "c8e95a67d08c6370a6b3c7833200fff74ec395e52191eb542f9ad9c25efe118a",
+      "bytes": 209534,
+      "width": 1600,
+      "height": 500,
+      "panels": [
+        {
+          "direction": "front",
+          "path": "apps/site/photos/team3-liquid-cards/card-066-front.jpg",
+          "cropBox": [
+            0,
+            0,
+            400,
+            500
+          ],
+          "sha256": "fe538148caeca94eafe88ea0ca9a66db8f6ce117aca680de5c90094b573746be",
+          "bytes": 58881
+        },
+        {
+          "direction": "left",
+          "path": "apps/site/photos/team3-liquid-cards/card-066-left.jpg",
+          "cropBox": [
+            400,
+            0,
+            800,
+            500
+          ],
+          "sha256": "5edbf84a7ace98047e04b487fe3ea75d2348d206715961328bb2166ee54f5816",
+          "bytes": 57053
+        },
+        {
+          "direction": "right",
+          "path": "apps/site/photos/team3-liquid-cards/card-066-right.jpg",
+          "cropBox": [
+            800,
+            0,
+            1200,
+            500
+          ],
+          "sha256": "d0e421cf1afd39dd77d843b459b3f937a28690ad55e9f564957fd79195c81a4a",
+          "bytes": 52742
+        },
+        {
+          "direction": "rear",
+          "path": "apps/site/photos/team3-liquid-cards/card-066-rear.jpg",
+          "cropBox": [
+            1200,
+            0,
+            1600,
+            500
+          ],
+          "sha256": "35dc4bc78b14aa56f455595fbbc2808fc94a72e8f986b4d09b4d99dee0d8e11d",
+          "bytes": 49350
+        }
+      ],
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-066-reflow.jpg",
+      "reflowSha256": "c55e6a07879b2d7b9281c106d27c960efc2c7c1235ff28ebd50c4c4e95452e9f",
+      "reflowBytes": 218143
+    },
+    {
+      "archiveNumber": 67,
+      "name": "믹서탱크",
+      "room": "배합실",
+      "sourcePath": "references/team3-liquid-20261110/source/3팀/배합실/067_믹서탱크/설비사진_믹서탱크.jpg",
+      "sourceSha256": "6de79a4ac461372943494f515bdc29b0bbeed8a4190469a20ef792e01ac9f841",
+      "path": "apps/site/photos/team3-liquid-cards/card-067.jpg",
+      "sha256": "7e103f48998e68fb774348771cb50841961ed457ddf48507fc5b1c6494d9bd8c",
+      "bytes": 202188,
+      "width": 1600,
+      "height": 500,
+      "panels": [
+        {
+          "direction": "front",
+          "path": "apps/site/photos/team3-liquid-cards/card-067-front.jpg",
+          "cropBox": [
+            0,
+            0,
+            400,
+            500
+          ],
+          "sha256": "3815328a7f3789f857fa714617eebb3839236ddaa94fee34f71c37e79bb1fb03",
+          "bytes": 56031
+        },
+        {
+          "direction": "left",
+          "path": "apps/site/photos/team3-liquid-cards/card-067-left.jpg",
+          "cropBox": [
+            400,
+            0,
+            800,
+            500
+          ],
+          "sha256": "7943142f22d726aabd0f4a2b1c37a0a359de56a2ac37a8e0b303279024175ed1",
+          "bytes": 55301
+        },
+        {
+          "direction": "right",
+          "path": "apps/site/photos/team3-liquid-cards/card-067-right.jpg",
+          "cropBox": [
+            800,
+            0,
+            1200,
+            500
+          ],
+          "sha256": "cb175bc6fca88a3bfc799475c57a56bd0b18cb21211c9049db9d731cd8e4948d",
+          "bytes": 53128
+        },
+        {
+          "direction": "rear",
+          "path": "apps/site/photos/team3-liquid-cards/card-067-rear.jpg",
+          "cropBox": [
+            1200,
+            0,
+            1600,
+            500
+          ],
+          "sha256": "6648ab8e387e3c4fe6409022fa31bc052e5ac89a2b4749fcda57cdabc6211739",
+          "bytes": 45472
+        }
+      ],
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-067-reflow.jpg",
+      "reflowSha256": "e4c8a3c75c1239401bfbbb81ae5e742a8490cd975a891d43da8c6584c156ff24",
+      "reflowBytes": 209322
+    },
+    {
+      "archiveNumber": 68,
+      "name": "배합탱크 10",
+      "room": "배합실",
+      "sourcePath": "references/team3-liquid-20261110/source/3팀/배합실/068_배합탱크 10/설비사진_배합탱크 10.jpg",
+      "sourceSha256": "0c8713be84fcce2f8aa83ac571eb5f5c7bc642ab22a6cb2b4bbb743c625053d1",
+      "path": "apps/site/photos/team3-liquid-cards/card-068.jpg",
+      "sha256": "82670aab269c8959201afd4f78a4741d63f12e3c63236fbd21de1b44a8a8c7ad",
+      "bytes": 233485,
+      "width": 1600,
+      "height": 500,
+      "panels": [
+        {
+          "direction": "front",
+          "path": "apps/site/photos/team3-liquid-cards/card-068-front.jpg",
+          "cropBox": [
+            0,
+            0,
+            400,
+            500
+          ],
+          "sha256": "ad96736581cf2205c969745bb282afb9260babff1b4edc968bce0aab1db42fe5",
+          "bytes": 63819
+        },
+        {
+          "direction": "left",
+          "path": "apps/site/photos/team3-liquid-cards/card-068-left.jpg",
+          "cropBox": [
+            400,
+            0,
+            800,
+            500
+          ],
+          "sha256": "e9b7af43116c74a4932435cf3b2718ddb6ca8e2431ac1ed58e14fdb09d04581f",
+          "bytes": 58096
+        },
+        {
+          "direction": "right",
+          "path": "apps/site/photos/team3-liquid-cards/card-068-right.jpg",
+          "cropBox": [
+            800,
+            0,
+            1200,
+            500
+          ],
+          "sha256": "3bbcb9273ef0f43486048b29fe81bfd4726d4ade5ca06b437451abd4213d85f2",
+          "bytes": 59830
+        },
+        {
+          "direction": "rear",
+          "path": "apps/site/photos/team3-liquid-cards/card-068-rear.jpg",
+          "cropBox": [
+            1200,
+            0,
+            1600,
+            500
+          ],
+          "sha256": "885a3c7d0fae138c8020aa9452deba32142ad8296e3cd57dfcf8869c46b77d52",
+          "bytes": 61146
+        }
+      ],
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-068-reflow.jpg",
+      "reflowSha256": "abe98c8e0ca51e7aa7d1e3c96d991039d38349c8a27035bb49ebb9b056cbb26b",
+      "reflowBytes": 244013
+    },
+    {
+      "archiveNumber": 69,
+      "name": "배합탱크 7",
+      "room": "배합실",
+      "sourcePath": "references/team3-liquid-20261110/source/3팀/배합실/069_배합탱크 7/설비사진_배합탱크 7.jpg",
+      "sourceSha256": "1cc9d3a6e20a2b1737548ca78276661a01a899ee2b6102e10c5ebeab04b5e6e1",
+      "path": "apps/site/photos/team3-liquid-cards/card-069.jpg",
+      "sha256": "32283dc52364269faa7c4401bb6d7eef599abafd7d5bc69fc86ebddd3d32efd8",
+      "bytes": 254818,
+      "width": 1600,
+      "height": 500,
+      "panels": [
+        {
+          "direction": "front",
+          "path": "apps/site/photos/team3-liquid-cards/card-069-front.jpg",
+          "cropBox": [
+            0,
+            0,
+            400,
+            500
+          ],
+          "sha256": "4fce349914ee0ed87e7d8bd501830dfc556c17b3027793454afa633cfff1014f",
+          "bytes": 63798
+        },
+        {
+          "direction": "left",
+          "path": "apps/site/photos/team3-liquid-cards/card-069-left.jpg",
+          "cropBox": [
+            400,
+            0,
+            800,
+            500
+          ],
+          "sha256": "68b519e4dea0d723cf8c9f4ddde120c4fd2fdeeb435ae744ade6110bf6d8c3de",
+          "bytes": 65419
+        },
+        {
+          "direction": "right",
+          "path": "apps/site/photos/team3-liquid-cards/card-069-right.jpg",
+          "cropBox": [
+            800,
+            0,
+            1200,
+            500
+          ],
+          "sha256": "c987c2b70a4606bb3098df4f6e8650edc5bd0b42096962987bfadd100877f149",
+          "bytes": 69168
+        },
+        {
+          "direction": "rear",
+          "path": "apps/site/photos/team3-liquid-cards/card-069-rear.jpg",
+          "cropBox": [
+            1200,
+            0,
+            1600,
+            500
+          ],
+          "sha256": "91323e5b8ac0345cc6c30eda8ce39b4534031b0dce5db933fafa61129c9c4a2c",
+          "bytes": 66085
+        }
+      ],
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-069-reflow.jpg",
+      "reflowSha256": "e9ff76cfbf75966a126c395a53e4d657df3df39c2a8a3eea9bb7c002a784914e",
+      "reflowBytes": 264511
+    },
+    {
+      "archiveNumber": 70,
+      "name": "배합탱크 9",
+      "room": "배합실",
+      "sourcePath": "references/team3-liquid-20261110/source/3팀/배합실/070_배합탱크 9/설비사진_배합탱크 9.jpg",
+      "sourceSha256": "784d082cfa4486993911ddd8782aa0e5c1b32781d23cf77cdcc69afd7737d76b",
+      "path": "apps/site/photos/team3-liquid-cards/card-070.jpg",
+      "sha256": "764b5ba0d72a1f9e847c0fa12141ae2ba9634ebeadacc8687916790bed7826ae",
+      "bytes": 246172,
+      "width": 1600,
+      "height": 500,
+      "panels": [
+        {
+          "direction": "front",
+          "path": "apps/site/photos/team3-liquid-cards/card-070-front.jpg",
+          "cropBox": [
+            0,
+            0,
+            400,
+            500
+          ],
+          "sha256": "c5e5511a7e0943952d2c6451f2ea36fdaf25871c6c4e80ced71a1f809d9d06b2",
+          "bytes": 61962
+        },
+        {
+          "direction": "left",
+          "path": "apps/site/photos/team3-liquid-cards/card-070-left.jpg",
+          "cropBox": [
+            400,
+            0,
+            800,
+            500
+          ],
+          "sha256": "a09e48300784b68cb39e36591c4449f1bee6df13448a0c8d1024919dc4d47b6a",
+          "bytes": 63385
+        },
+        {
+          "direction": "right",
+          "path": "apps/site/photos/team3-liquid-cards/card-070-right.jpg",
+          "cropBox": [
+            800,
+            0,
+            1200,
+            500
+          ],
+          "sha256": "b2d33a7685f103314e37ecb3df6fa576539126ee7bb3791ce491458ec50ec135",
+          "bytes": 66937
+        },
+        {
+          "direction": "rear",
+          "path": "apps/site/photos/team3-liquid-cards/card-070-rear.jpg",
+          "cropBox": [
+            1200,
+            0,
+            1600,
+            500
+          ],
+          "sha256": "99971a13c387d6faa722a88de619d4893b0b262c4ee8e9480ba991366d068a13",
+          "bytes": 63680
+        }
+      ],
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-070-reflow.jpg",
+      "reflowSha256": "77eff10bac8365d32012fd724dbf4d4f41a293254c68107f54da74cf5addd2bb",
+      "reflowBytes": 256855
+    },
+    {
+      "archiveNumber": 71,
+      "name": "3번 탱크",
+      "room": "배합실",
+      "sourcePath": "references/team3-liquid-20261110/source/3팀/배합실/071_3번 탱크/설비사진_3번 탱크.jpg",
+      "sourceSha256": "c9dc6f2a966a7e77f34f15bea1a32982bd30cfed0a6d93ecf08e115eaad75343",
+      "path": "apps/site/photos/team3-liquid-cards/card-071.jpg",
+      "sha256": "f3dcb18afd01b7c3fea06f4852d7bc40efcf41cc9b9ab2ed2f22c6d2f93cf689",
+      "bytes": 215894,
+      "width": 1600,
+      "height": 500,
+      "panels": [
+        {
+          "direction": "front",
+          "path": "apps/site/photos/team3-liquid-cards/card-071-front.jpg",
+          "cropBox": [
+            0,
+            0,
+            400,
+            500
+          ],
+          "sha256": "72d827f1fe3cdbe2bb6685d6b53cc2ea0a9aecffe305f0efe4da606a1f10eb6d",
+          "bytes": 54025
+        },
+        {
+          "direction": "left",
+          "path": "apps/site/photos/team3-liquid-cards/card-071-left.jpg",
+          "cropBox": [
+            400,
+            0,
+            800,
+            500
+          ],
+          "sha256": "887d068195565150e1eacf38ad11fba6476fb7b922bf5f58faee2131bf1e5221",
+          "bytes": 57533
+        },
+        {
+          "direction": "right",
+          "path": "apps/site/photos/team3-liquid-cards/card-071-right.jpg",
+          "cropBox": [
+            800,
+            0,
+            1200,
+            500
+          ],
+          "sha256": "90919eb12702a4f59af6c1622673f9117b77af527ecfcb33fe901ea4a6212229",
+          "bytes": 57397
+        },
+        {
+          "direction": "rear",
+          "path": "apps/site/photos/team3-liquid-cards/card-071-rear.jpg",
+          "cropBox": [
+            1200,
+            0,
+            1600,
+            500
+          ],
+          "sha256": "2b8683a4dd556f0f3d90f745cfbb79d6a17e2580c04ef3d1c984fd66a429b5c6",
+          "bytes": 55387
+        }
+      ],
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-071-reflow.jpg",
+      "reflowSha256": "4b1bba821baaa6518a76e425159cf9068d182be52f23bf8ed0a23b8d089e1768",
+      "reflowBytes": 224375
+    },
+    {
+      "archiveNumber": 77,
+      "name": "4번 배합탱크",
+      "room": "배합실",
+      "sourcePath": "references/team3-liquid-20261110/source/3팀/배합실/077_4번 배합탱크/설비사진_4번 배합탱크.jpg",
+      "sourceSha256": "1e8290ef367e5c245c4afcee1e24be0254f8d8498e85d765f94eca3b323641ac",
+      "path": "apps/site/photos/team3-liquid-cards/card-077.jpg",
+      "sha256": "229501e02f90d400ceba4aaaf146551460c4711a8870847e102b2fd56e15af38",
+      "bytes": 174860,
+      "width": 1600,
+      "height": 500,
+      "panels": [
+        {
+          "direction": "front",
+          "path": "apps/site/photos/team3-liquid-cards/card-077-front.jpg",
+          "cropBox": [
+            0,
+            0,
+            400,
+            500
+          ],
+          "sha256": "ee828c348407582d8038e335ef08b69438d9093c1a6dcf4b869f88be5ccd0da3",
+          "bytes": 49801
+        },
+        {
+          "direction": "left",
+          "path": "apps/site/photos/team3-liquid-cards/card-077-left.jpg",
+          "cropBox": [
+            400,
+            0,
+            800,
+            500
+          ],
+          "sha256": "793b22be54004277999a5045760854b42b6782e4cca165b8a938ccd3349ea52a",
+          "bytes": 41951
+        },
+        {
+          "direction": "right",
+          "path": "apps/site/photos/team3-liquid-cards/card-077-right.jpg",
+          "cropBox": [
+            800,
+            0,
+            1200,
+            500
+          ],
+          "sha256": "077e26218b3d9dcbbe086bda445dd1321156b50be089d230e4b90e9be2db0eaa",
+          "bytes": 44526
+        },
+        {
+          "direction": "rear",
+          "path": "apps/site/photos/team3-liquid-cards/card-077-rear.jpg",
+          "cropBox": [
+            1200,
+            0,
+            1600,
+            500
+          ],
+          "sha256": "02cdce733f468fe87ec0a65a29f0b289c65640ef976e1afd940f2bc066425c96",
+          "bytes": 44836
+        }
+      ],
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-077-reflow.jpg",
+      "reflowSha256": "87a8b4cd974c665b5762f17f33ec1ff3ecad78aa4045994ed604e0087601cfc7",
+      "reflowBytes": 181420
+    },
+    {
+      "archiveNumber": 78,
+      "name": "3번 배합탱크",
+      "room": "배합실",
+      "sourcePath": "references/team3-liquid-20261110/source/3팀/배합실/078_3번 배합탱크/설비사진_3번 배합탱크.jpg",
+      "sourceSha256": "75b64dc627d8c25860deb278d6d9d876611f756bd7c8a9c9e071da21fb49b7a6",
+      "path": "apps/site/photos/team3-liquid-cards/card-078.jpg",
+      "sha256": "7d441fa97315ef19fd4064137205985bd631aa62708fcf0ccb2a5bd36d03d42b",
+      "bytes": 142449,
+      "width": 1600,
+      "height": 500,
+      "panels": [
+        {
+          "direction": "front",
+          "path": "apps/site/photos/team3-liquid-cards/card-078-front.jpg",
+          "cropBox": [
+            0,
+            0,
+            400,
+            500
+          ],
+          "sha256": "a152f9363bc7411b6184d238a50df2b22b873faa679a658f71525adde343fcda",
+          "bytes": 41003
+        },
+        {
+          "direction": "left",
+          "path": "apps/site/photos/team3-liquid-cards/card-078-left.jpg",
+          "cropBox": [
+            400,
+            0,
+            800,
+            500
+          ],
+          "sha256": "637194498819a52456157509c3c334b532f030848fbc09c8cca639ff95d53cf1",
+          "bytes": 34190
+        },
+        {
+          "direction": "right",
+          "path": "apps/site/photos/team3-liquid-cards/card-078-right.jpg",
+          "cropBox": [
+            800,
+            0,
+            1200,
+            500
+          ],
+          "sha256": "7e268a78558f1706b5679e659a7fa3321e6e6400e62667d5ecfdbdaccdf4a65c",
+          "bytes": 38935
+        },
+        {
+          "direction": "rear",
+          "path": "apps/site/photos/team3-liquid-cards/card-078-rear.jpg",
+          "cropBox": [
+            1200,
+            0,
+            1600,
+            500
+          ],
+          "sha256": "59a0ed54e1e11a1dae04ab30efa4cc39d20654ed3290d1efed0e959c82b62994",
+          "bytes": 33466
+        }
+      ],
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-078-reflow.jpg",
+      "reflowSha256": "9f9ac6285b9314259016f41c5dd87ee5e568c26b0aaf9a1450b0ebbc069e40d3",
+      "reflowBytes": 148274
+    },
+    {
+      "archiveNumber": 79,
+      "name": "2번 배합탱크",
+      "room": "배합실",
+      "sourcePath": "references/team3-liquid-20261110/source/3팀/배합실/079_2번 배합탱크/설비사진_2번 배합탱크.jpg",
+      "sourceSha256": "f7d95da8c9c4edf5328bbd8a6cd9c5178873915802f0804ebd84aa698b3e5bb9",
+      "path": "apps/site/photos/team3-liquid-cards/card-079.jpg",
+      "sha256": "43ac6e02d96397bac736d0660203707bd1e1d2d6b8288ca92a2efa9f75e5476f",
+      "bytes": 159336,
+      "width": 1600,
+      "height": 500,
+      "panels": [
+        {
+          "direction": "front",
+          "path": "apps/site/photos/team3-liquid-cards/card-079-front.jpg",
+          "cropBox": [
+            0,
+            0,
+            400,
+            500
+          ],
+          "sha256": "0758e49707cadbc27dbac6e786aafbcd872f5f6ad433a0be2076a036c9bd001b",
+          "bytes": 47213
+        },
+        {
+          "direction": "left",
+          "path": "apps/site/photos/team3-liquid-cards/card-079-left.jpg",
+          "cropBox": [
+            400,
+            0,
+            800,
+            500
+          ],
+          "sha256": "ef2ded369d4ce42e42f8d3b74178ff2a75756b3faab5fb5c2d4242acae48ebcf",
+          "bytes": 37211
+        },
+        {
+          "direction": "right",
+          "path": "apps/site/photos/team3-liquid-cards/card-079-right.jpg",
+          "cropBox": [
+            800,
+            0,
+            1200,
+            500
+          ],
+          "sha256": "ced806ddfa9d8cecb8b482a9e675fabd17004bc9aca0a8b4a90454ba2d4d722c",
+          "bytes": 38815
+        },
+        {
+          "direction": "rear",
+          "path": "apps/site/photos/team3-liquid-cards/card-079-rear.jpg",
+          "cropBox": [
+            1200,
+            0,
+            1600,
+            500
+          ],
+          "sha256": "8037ac510870702bcc97f159d835e07782c8182949650d69777eaaf3c5cfc8d9",
+          "bytes": 42197
+        }
+      ],
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-079-reflow.jpg",
+      "reflowSha256": "221245710c8d706c1dd08be54796fe825de570dbd17a2e6a47408cedc5d7dfd3",
+      "reflowBytes": 166173
+    },
+    {
+      "archiveNumber": 80,
+      "name": "A라인 1-4",
+      "room": "배합실",
+      "sourcePath": "references/team3-liquid-20261110/source/3팀/배합실/080_A라인 1-4/설비사진_A라인 1-4.jpg",
+      "sourceSha256": "ba5de6af6fd1a285b38b9449b5ed44f84807c9c6d98531d882f3389eb441fa3f",
+      "path": "apps/site/photos/team3-liquid-cards/card-080.jpg",
+      "sha256": "45383112ff1b76f921ffe0efd113e1150f1e8ed69ff14a26a7941704faa014a1",
+      "bytes": 208297,
+      "width": 1600,
+      "height": 500,
+      "panels": [
+        {
+          "direction": "front",
+          "path": "apps/site/photos/team3-liquid-cards/card-080-front.jpg",
+          "cropBox": [
+            0,
+            0,
+            400,
+            500
+          ],
+          "sha256": "06d8cce168f52c98a00732a61d0e746fac299f3c3edae840e718034563fd6fad",
+          "bytes": 54772
+        },
+        {
+          "direction": "left",
+          "path": "apps/site/photos/team3-liquid-cards/card-080-left.jpg",
+          "cropBox": [
+            400,
+            0,
+            800,
+            500
+          ],
+          "sha256": "3565360a1d3a8437d929f4b7ba105e99b5c8bc62fadf75a11cf1a660c4e8593d",
+          "bytes": 54037
+        },
+        {
+          "direction": "right",
+          "path": "apps/site/photos/team3-liquid-cards/card-080-right.jpg",
+          "cropBox": [
+            800,
+            0,
+            1200,
+            500
+          ],
+          "sha256": "189c6589388311948d13417319a5be379a61f8868a15d320b0c09d8310517353",
+          "bytes": 63622
+        },
+        {
+          "direction": "rear",
+          "path": "apps/site/photos/team3-liquid-cards/card-080-rear.jpg",
+          "cropBox": [
+            1200,
+            0,
+            1600,
+            500
+          ],
+          "sha256": "d0645e7b55bbaaef353c1688affa0b7604fd4c4e05a2586063aa0e13a691657d",
+          "bytes": 43412
+        }
+      ],
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-080-reflow.jpg",
+      "reflowSha256": "a1ec6727bc033ec66eb270f2b50ad36c9c14eedfb4cada304efdbba9f28ac660",
+      "reflowBytes": 216831
+    },
+    {
+      "archiveNumber": 81,
+      "name": "A라인 1-3",
+      "room": "배합실",
+      "sourcePath": "references/team3-liquid-20261110/source/3팀/배합실/081_A라인 1-3/설비사진_A라인 1-3.jpg",
+      "sourceSha256": "9a50a701245405cf65481739cd3d992923d783e7298eeb22bf0ecbb5d970de72",
+      "path": "apps/site/photos/team3-liquid-cards/card-081.jpg",
+      "sha256": "950c04101913d510c8dfff38a0e2f2489f9d2d31217e1667d9c6002a5de09d4d",
+      "bytes": 189903,
+      "width": 1600,
+      "height": 500,
+      "panels": [
+        {
+          "direction": "front",
+          "path": "apps/site/photos/team3-liquid-cards/card-081-front.jpg",
+          "cropBox": [
+            0,
+            0,
+            400,
+            500
+          ],
+          "sha256": "efbc71631593dd8a509339112e055f88360338b98186314312f6661fb2416524",
+          "bytes": 48479
+        },
+        {
+          "direction": "left",
+          "path": "apps/site/photos/team3-liquid-cards/card-081-left.jpg",
+          "cropBox": [
+            400,
+            0,
+            800,
+            500
+          ],
+          "sha256": "0c550ab002bcf646c88034e404c43dd8bbf632b2f5877fa608e9830f545ac1f6",
+          "bytes": 58263
+        },
+        {
+          "direction": "right",
+          "path": "apps/site/photos/team3-liquid-cards/card-081-right.jpg",
+          "cropBox": [
+            800,
+            0,
+            1200,
+            500
+          ],
+          "sha256": "f24c4ed92f2c1b8a7a5a6ff7ff8a593776712eb0a3a9a25c2c1a1071de2664a4",
+          "bytes": 43599
+        },
+        {
+          "direction": "rear",
+          "path": "apps/site/photos/team3-liquid-cards/card-081-rear.jpg",
+          "cropBox": [
+            1200,
+            0,
+            1600,
+            500
+          ],
+          "sha256": "09a30f622e5151ce89e2b810c1686a0f2e794b502e955ff2829a7d7fa1f8183f",
+          "bytes": 46224
+        }
+      ],
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-081-reflow.jpg",
+      "reflowSha256": "1788dfa07dda167763e93f76c27aec227d35aae81adf26f2d3e0cc83c38c1aef",
+      "reflowBytes": 197397
+    },
+    {
+      "archiveNumber": 82,
+      "name": "A라인 1-2",
+      "room": "배합실",
+      "sourcePath": "references/team3-liquid-20261110/source/3팀/배합실/082_A라인 1-2/설비사진_A라인 1-2.jpg",
+      "sourceSha256": "39933fc5bd62f43f3203bc20e3eb67f602d4c1671de2b88cf6b1c11b56ffd227",
+      "path": "apps/site/photos/team3-liquid-cards/card-082.jpg",
+      "sha256": "9dd3f25f8d030ef37b120bd792f3127cd651395d82cfbf5d122e32b3019672c0",
+      "bytes": 186460,
+      "width": 1600,
+      "height": 500,
+      "panels": [
+        {
+          "direction": "front",
+          "path": "apps/site/photos/team3-liquid-cards/card-082-front.jpg",
+          "cropBox": [
+            0,
+            0,
+            400,
+            500
+          ],
+          "sha256": "dcad918dd405c57d43fcd1f9059fb8fb9ba5b1c975db0483471c100d003433ad",
+          "bytes": 51206
+        },
+        {
+          "direction": "left",
+          "path": "apps/site/photos/team3-liquid-cards/card-082-left.jpg",
+          "cropBox": [
+            400,
+            0,
+            800,
+            500
+          ],
+          "sha256": "a6dfde61408d281d80f2451e2f270f64c3910d972aa63f48e6bb8f2d1b4875ad",
+          "bytes": 46520
+        },
+        {
+          "direction": "right",
+          "path": "apps/site/photos/team3-liquid-cards/card-082-right.jpg",
+          "cropBox": [
+            800,
+            0,
+            1200,
+            500
+          ],
+          "sha256": "96748541b0c1a84fe61cbeb99c01d92f3709bb8a5ab3d5850c675f0af150f8e6",
+          "bytes": 51070
+        },
+        {
+          "direction": "rear",
+          "path": "apps/site/photos/team3-liquid-cards/card-082-rear.jpg",
+          "cropBox": [
+            1200,
+            0,
+            1600,
+            500
+          ],
+          "sha256": "b350cde18a23192694f9f7b5428b5e80df6cfabd9208030aa02722259a29603d",
+          "bytes": 44283
+        }
+      ],
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-082-reflow.jpg",
+      "reflowSha256": "f5565197a13208b5f4f5b6b6aaeb90e97e2a96a5cf504ef86ecc44d7b455dace",
+      "reflowBytes": 192754
+    },
+    {
+      "archiveNumber": 83,
+      "name": "A라인 1-1",
+      "room": "배합실",
+      "sourcePath": "references/team3-liquid-20261110/source/3팀/배합실/083_A라인 1-1/설비사진_A라인 1-1.jpg",
+      "sourceSha256": "a1dbcd31b51af0e63712e4705013f35ce67e3f078719471fc9a139b0eddb6ab1",
+      "path": "apps/site/photos/team3-liquid-cards/card-083.jpg",
+      "sha256": "bd6da21b114413d9f281889208c10992ecbbcba279e5744c52548878b21db2f1",
+      "bytes": 188349,
+      "width": 1600,
+      "height": 500,
+      "panels": [
+        {
+          "direction": "front",
+          "path": "apps/site/photos/team3-liquid-cards/card-083-front.jpg",
+          "cropBox": [
+            0,
+            0,
+            400,
+            500
+          ],
+          "sha256": "fa0f19aa78d75ea5458334d03280205fc4a40ea1390de10d4347f765b4ce9c12",
+          "bytes": 45595
+        },
+        {
+          "direction": "left",
+          "path": "apps/site/photos/team3-liquid-cards/card-083-left.jpg",
+          "cropBox": [
+            400,
+            0,
+            800,
+            500
+          ],
+          "sha256": "cbead41807a0402e2ce111ac69f4c2dca828b0e89aeaae049cde0bc1a3bdeffc",
+          "bytes": 48037
+        },
+        {
+          "direction": "right",
+          "path": "apps/site/photos/team3-liquid-cards/card-083-right.jpg",
+          "cropBox": [
+            800,
+            0,
+            1200,
+            500
+          ],
+          "sha256": "db33c5f4d5da03f8935de1c40799cba38b8c22eac4cc99eaae0547afefdc0110",
+          "bytes": 49681
+        },
+        {
+          "direction": "rear",
+          "path": "apps/site/photos/team3-liquid-cards/card-083-rear.jpg",
+          "cropBox": [
+            1200,
+            0,
+            1600,
+            500
+          ],
+          "sha256": "f778b8a334a9c1db53ee2bcbea9b8891e4ff22ee02693994702ff12110f39677",
+          "bytes": 52428
+        }
+      ],
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-083-reflow.jpg",
+      "reflowSha256": "be67e6a0d911e7299078f37331ea844d45f96f64c15fc89237dac28fa034d369",
+      "reflowBytes": 197007
+    },
+    {
+      "archiveNumber": 93,
+      "name": "호모 믹서탱크",
+      "room": "배합실",
+      "sourcePath": "references/team3-liquid-20261110/source/3팀/배합실/093_호모 믹서탱크/설비사진_호모 믹서탱크.jpg",
+      "sourceSha256": "f738471bc48236daa671eaa9c9fb5c99c3a430d72cf5b77cf12e4f90b01c26fc",
+      "path": "apps/site/photos/team3-liquid-cards/card-093.jpg",
+      "sha256": "d64b20fd8949af410d6f7491bd8b192911e1e1e21ac2ed025d8c506bf1d5a7e0",
+      "bytes": 229857,
+      "width": 1600,
+      "height": 500,
+      "panels": [
+        {
+          "direction": "front",
+          "path": "apps/site/photos/team3-liquid-cards/card-093-front.jpg",
+          "cropBox": [
+            0,
+            0,
+            400,
+            500
+          ],
+          "sha256": "8738c7e9ff4c4ac130badf4528b12c6c423c5f8ffec1aadeb458a37096bfb253",
+          "bytes": 61985
+        },
+        {
+          "direction": "left",
+          "path": "apps/site/photos/team3-liquid-cards/card-093-left.jpg",
+          "cropBox": [
+            400,
+            0,
+            800,
+            500
+          ],
+          "sha256": "66acd256a7463e226911fc30d43e1ebaeda1b52aea6410fec14786126772a28c",
+          "bytes": 69144
+        },
+        {
+          "direction": "right",
+          "path": "apps/site/photos/team3-liquid-cards/card-093-right.jpg",
+          "cropBox": [
+            800,
+            0,
+            1200,
+            500
+          ],
+          "sha256": "96f7523cf834ddfbff351949d45614e2dd9dc96e60399399665dc50a2892b105",
+          "bytes": 60538
+        },
+        {
+          "direction": "rear",
+          "path": "apps/site/photos/team3-liquid-cards/card-093-rear.jpg",
+          "cropBox": [
+            1200,
+            0,
+            1600,
+            500
+          ],
+          "sha256": "69aac7af320533a3853efecda584e1e169e5c11695e1fa44e668e705f5bcd801",
+          "bytes": 46830
+        }
+      ],
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-093-reflow.jpg",
+      "reflowSha256": "6bd1bab58249bcb33f1a3320ca4b528613f70512e24e91620a3b16cd203441e4",
+      "reflowBytes": 239692
+    },
+    {
+      "archiveNumber": 94,
+      "name": "펄 진동채",
+      "room": "배합실",
+      "sourcePath": "references/team3-liquid-20261110/source/3팀/배합실/094_펄 진동채/설비사진_펄 진동채.jpg",
+      "sourceSha256": "79108f25f21877ca4018178bf655d3fd58bfd17dcf5180683556e376331c660f",
+      "path": "apps/site/photos/team3-liquid-cards/card-094.jpg",
+      "sha256": "004b3a229c61dcc071c639c4a723a3204df41efaa848e4bc7c82b3c531a9a7dd",
+      "bytes": 196989,
+      "width": 1600,
+      "height": 500,
+      "panels": [
+        {
+          "direction": "front",
+          "path": "apps/site/photos/team3-liquid-cards/card-094-front.jpg",
+          "cropBox": [
+            0,
+            0,
+            400,
+            500
+          ],
+          "sha256": "f5ed7e3d91e486f6978eae9dfb2e972af072b07a48b2b922c8df3dbb26b323d8",
+          "bytes": 50875
+        },
+        {
+          "direction": "left",
+          "path": "apps/site/photos/team3-liquid-cards/card-094-left.jpg",
+          "cropBox": [
+            400,
+            0,
+            800,
+            500
+          ],
+          "sha256": "3390cea8ebbfc20967226c4d5eb74b9b8d2c2bb6de4fe3f8916b6c1331928392",
+          "bytes": 49402
+        },
+        {
+          "direction": "right",
+          "path": "apps/site/photos/team3-liquid-cards/card-094-right.jpg",
+          "cropBox": [
+            800,
+            0,
+            1200,
+            500
+          ],
+          "sha256": "2b1795afc296895fdbdc844cbe75991adf8ce25ac820bb0dcbf84cc77fd76f57",
+          "bytes": 49140
+        },
+        {
+          "direction": "rear",
+          "path": "apps/site/photos/team3-liquid-cards/card-094-rear.jpg",
+          "cropBox": [
+            1200,
+            0,
+            1600,
+            500
+          ],
+          "sha256": "86f1a7be2b14d4a3147f79f97c0442b5b817e97723cb9ecdfbbddd1b3a282b0a",
+          "bytes": 55054
+        }
+      ],
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-094-reflow.jpg",
+      "reflowSha256": "0471fa91545aeb1740433e258413ea5ea28ae8c5491727986be1bbd27c3d15f4",
+      "reflowBytes": 205841
+    },
+    {
+      "archiveNumber": 95,
+      "name": "살균기 1호기",
+      "room": "배합실",
+      "sourcePath": "references/team3-liquid-20261110/source/3팀/배합실/095_살균기 1호기/설비사진_살균기 1호기.jpg",
+      "sourceSha256": "3f7c0ca7a31b4816df08bbc03261dbd016fd40251a766db353e334d3b06ad4b7",
+      "path": "apps/site/photos/team3-liquid-cards/card-095.jpg",
+      "sha256": "1b3f60855fb0823f7d0f43571ad6f32d97c8a813901b03781d64489da2dbe5ab",
+      "bytes": 248479,
+      "width": 1600,
+      "height": 500,
+      "panels": [
+        {
+          "direction": "front",
+          "path": "apps/site/photos/team3-liquid-cards/card-095-front.jpg",
+          "cropBox": [
+            0,
+            0,
+            400,
+            500
+          ],
+          "sha256": "77d0138e5dabd2a5db22a5d07f8e710ee88b7a539b0b53f2d0a3bd98c76f79f5",
+          "bytes": 61327
+        },
+        {
+          "direction": "left",
+          "path": "apps/site/photos/team3-liquid-cards/card-095-left.jpg",
+          "cropBox": [
+            400,
+            0,
+            800,
+            500
+          ],
+          "sha256": "6f65c7f0ea9c38b0f12eabd205602a360368101505dd490adae11c58e34889ee",
+          "bytes": 61404
+        },
+        {
+          "direction": "right",
+          "path": "apps/site/photos/team3-liquid-cards/card-095-right.jpg",
+          "cropBox": [
+            800,
+            0,
+            1200,
+            500
+          ],
+          "sha256": "4409755abd96aac24ee10292a2fc6c983b6947797990d762af452482c3530beb",
+          "bytes": 67160
+        },
+        {
+          "direction": "rear",
+          "path": "apps/site/photos/team3-liquid-cards/card-095-rear.jpg",
+          "cropBox": [
+            1200,
+            0,
+            1600,
+            500
+          ],
+          "sha256": "1e29b8da79bf72c394120aeb02829f0d0b9db689839759405d20c1f42aa03aa3",
+          "bytes": 67500
+        }
+      ],
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-095-reflow.jpg",
+      "reflowSha256": "d4519dd4bc0cf85eba5123eccf52c4f8f3ac5d7e465df7be64b5f86e2d1114ec",
+      "reflowBytes": 258687
+    },
+    {
+      "archiveNumber": 96,
+      "name": "살균기 2호기",
+      "room": "배합실",
+      "sourcePath": "references/team3-liquid-20261110/source/3팀/배합실/096_살균기 2호기/설비사진_살균기 2호기.jpg",
+      "sourceSha256": "f3de812f3c8d7f3f53b7eb822005220352cf9bbd16a6aed4660548d70d5031de",
+      "path": "apps/site/photos/team3-liquid-cards/card-096.jpg",
+      "sha256": "f76d389f8a2255c3a720877cc99cbd2927887265225532d4673ed0135d4a76a2",
+      "bytes": 209062,
+      "width": 1600,
+      "height": 500,
+      "panels": [
+        {
+          "direction": "front",
+          "path": "apps/site/photos/team3-liquid-cards/card-096-front.jpg",
+          "cropBox": [
+            0,
+            0,
+            400,
+            500
+          ],
+          "sha256": "5f3f173a26fcbc5d7ff18c49a86690f01dd2e3e45e417fc6cd7faa281d4fd058",
+          "bytes": 47470
+        },
+        {
+          "direction": "left",
+          "path": "apps/site/photos/team3-liquid-cards/card-096-left.jpg",
+          "cropBox": [
+            400,
+            0,
+            800,
+            500
+          ],
+          "sha256": "dd1dadd45cec9d749febeef41db694c66eac84bc3294f9e8a6e4769dee3aabca",
+          "bytes": 66439
+        },
+        {
+          "direction": "right",
+          "path": "apps/site/photos/team3-liquid-cards/card-096-right.jpg",
+          "cropBox": [
+            800,
+            0,
+            1200,
+            500
+          ],
+          "sha256": "a4dc214ea75eeb858881715d1e93adfe1c110889ed84f3f1e6224baf1182d33c",
+          "bytes": 53098
+        },
+        {
+          "direction": "rear",
+          "path": "apps/site/photos/team3-liquid-cards/card-096-rear.jpg",
+          "cropBox": [
+            1200,
+            0,
+            1600,
+            500
+          ],
+          "sha256": "2be9c9272ad32e840b0f59af3f8bb60d133d5cd57ea58aa9e132129ad2ff75a5",
+          "bytes": 49340
+        }
+      ],
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-096-reflow.jpg",
+      "reflowSha256": "72b247dfbd7cea66a59b3de1c7238724e47e4ad7e9475e5ef732e7f2ee840237",
+      "reflowBytes": 216974
+    },
+    {
+      "archiveNumber": 97,
+      "name": "살균기 3호기",
+      "room": "배합실",
+      "sourcePath": "references/team3-liquid-20261110/source/3팀/배합실/097_살균기 3호기/설비사진_살균기 3호기.jpg",
+      "sourceSha256": "e70fda9f56e61a461d73d5044c3e3e6683c17be0ff393f9958aa26b2a4050a65",
+      "path": "apps/site/photos/team3-liquid-cards/card-097.jpg",
+      "sha256": "7c010a0063dde442ad7f8e6d3afebe002e27744c7d844c9c086139a16c61f60f",
+      "bytes": 227796,
+      "width": 1600,
+      "height": 500,
+      "panels": [
+        {
+          "direction": "front",
+          "path": "apps/site/photos/team3-liquid-cards/card-097-front.jpg",
+          "cropBox": [
+            0,
+            0,
+            400,
+            500
+          ],
+          "sha256": "abdc66c85fc2f5ac463a15ed805f2fa324dd8be63ebb89618ffd2b2c1b7f255c",
+          "bytes": 64752
+        },
+        {
+          "direction": "left",
+          "path": "apps/site/photos/team3-liquid-cards/card-097-left.jpg",
+          "cropBox": [
+            400,
+            0,
+            800,
+            500
+          ],
+          "sha256": "bca101b88d2965f59be27f76f978c5c85cce14b74247e857af8e145d4a6c220b",
+          "bytes": 60804
+        },
+        {
+          "direction": "right",
+          "path": "apps/site/photos/team3-liquid-cards/card-097-right.jpg",
+          "cropBox": [
+            800,
+            0,
+            1200,
+            500
+          ],
+          "sha256": "58f1ae122a0f094bfc75f92e0089df94e4630b38640b41c115b2270216469a89",
+          "bytes": 52385
+        },
+        {
+          "direction": "rear",
+          "path": "apps/site/photos/team3-liquid-cards/card-097-rear.jpg",
+          "cropBox": [
+            1200,
+            0,
+            1600,
+            500
+          ],
+          "sha256": "3ac7492b0722cba7dc1866e554869eb1d1fb1927a9a841ea24875540e0d5d7bc",
+          "bytes": 58070
+        }
+      ],
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-097-reflow.jpg",
+      "reflowSha256": "671a767d0d90952c71abf72554e6bc56a42b4d5b39b3069f9c0e59f90835404d",
+      "reflowBytes": 235985
+    },
+    {
+      "archiveNumber": 98,
+      "name": "펄 이송호퍼",
+      "room": "배합실",
+      "sourcePath": "references/team3-liquid-20261110/source/3팀/배합실/098_펄 이송호퍼/설비사진_펄 이송호퍼.jpg",
+      "sourceSha256": "e96d0c7c2fe69a1f76f11b7af618b6e3899f7ce6f8fe02ddc88e903adbace52f",
+      "path": "apps/site/photos/team3-liquid-cards/card-098.jpg",
+      "sha256": "d9986bc80a5c7da6bac4622e867e912b51b16d5d30b2a2245ab8c4cde692d6c6",
+      "bytes": 217154,
+      "width": 1600,
+      "height": 500,
+      "panels": [
+        {
+          "direction": "front",
+          "path": "apps/site/photos/team3-liquid-cards/card-098-front.jpg",
+          "cropBox": [
+            0,
+            0,
+            400,
+            500
+          ],
+          "sha256": "5165ad3145672a5ac148d6c6a3a9d4f893f676847d3c04feab433e82cff83545",
+          "bytes": 54126
+        },
+        {
+          "direction": "left",
+          "path": "apps/site/photos/team3-liquid-cards/card-098-left.jpg",
+          "cropBox": [
+            400,
+            0,
+            800,
+            500
+          ],
+          "sha256": "284932aa06c454ba70e7f44499c620585843897b2781ab92f1078ab080d44032",
+          "bytes": 59044
+        },
+        {
+          "direction": "right",
+          "path": "apps/site/photos/team3-liquid-cards/card-098-right.jpg",
+          "cropBox": [
+            800,
+            0,
+            1200,
+            500
+          ],
+          "sha256": "a8fc2b739a18a849033e00c9d8694563066ceb36f27309de1e641221bf878988",
+          "bytes": 52776
+        },
+        {
+          "direction": "rear",
+          "path": "apps/site/photos/team3-liquid-cards/card-098-rear.jpg",
+          "cropBox": [
+            1200,
+            0,
+            1600,
+            500
+          ],
+          "sha256": "c27ae92dd2e8a43a42dd629306af5965d768214734fdeb4978dab5020a3b9c02",
+          "bytes": 59615
+        }
+      ],
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-098-reflow.jpg",
+      "reflowSha256": "1f1aba561610816c50c14693d219b1dbe591c25628217b1f970f058dd7b359a9",
+      "reflowBytes": 226155
+    },
+    {
+      "archiveNumber": 99,
+      "name": "HCPE - 5 균질기",
+      "room": "배합실",
+      "sourcePath": "references/team3-liquid-20261110/source/3팀/배합실/099_HCPE - 5 균질기/설비사진_HCPE - 5 균질기.jpg",
+      "sourceSha256": "19facd008bb8b6caf60454014d7ff9f1d865cdc28650e42ee34016d6452678a2",
+      "path": "apps/site/photos/team3-liquid-cards/card-099.jpg",
+      "sha256": "89a26b364484a32e99827c692de4852df312962e3dadd0fe840da3be2f598312",
+      "bytes": 188635,
+      "width": 1600,
+      "height": 500,
+      "panels": [
+        {
+          "direction": "front",
+          "path": "apps/site/photos/team3-liquid-cards/card-099-front.jpg",
+          "cropBox": [
+            0,
+            0,
+            400,
+            500
+          ],
+          "sha256": "d146b1a01a33b4e93f260232c32ec55d7a886e953964086701fc93576808b63f",
+          "bytes": 54774
+        },
+        {
+          "direction": "left",
+          "path": "apps/site/photos/team3-liquid-cards/card-099-left.jpg",
+          "cropBox": [
+            400,
+            0,
+            800,
+            500
+          ],
+          "sha256": "15a888a059a427fe06bff3a66880ced99da70d322d5bfaac573d8bf7c49353bf",
+          "bytes": 41384
+        },
+        {
+          "direction": "right",
+          "path": "apps/site/photos/team3-liquid-cards/card-099-right.jpg",
+          "cropBox": [
+            800,
+            0,
+            1200,
+            500
+          ],
+          "sha256": "4aca3ced14ca92795f8d118450d2053d36fac01f32be00eade98d2bbdb407c91",
+          "bytes": 57162
+        },
+        {
+          "direction": "rear",
+          "path": "apps/site/photos/team3-liquid-cards/card-099-rear.jpg",
+          "cropBox": [
+            1200,
+            0,
+            1600,
+            500
+          ],
+          "sha256": "424ae6a79069705f7b3fdabfcb9701454927db477ae1a7731f3fe5de05012d78",
+          "bytes": 42191
+        }
+      ],
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-099-reflow.jpg",
+      "reflowSha256": "542e731c48c2d6fc78a70bfaf2adf327d9d2790ee142417bcde4c7adc8580911",
+      "reflowBytes": 195398
+    },
+    {
+      "archiveNumber": 100,
+      "name": "B라인 열수탱크",
+      "room": "배합실",
+      "sourcePath": "references/team3-liquid-20261110/source/3팀/배합실/100_B라인 열수탱크/설비사진_B라인 열수탱크.jpg",
+      "sourceSha256": "7c3a39feb96c7693180da35ccbb33756d39e0bd3dbe40f6eb88dd5f7efb0e0f3",
+      "path": "apps/site/photos/team3-liquid-cards/card-100.jpg",
+      "sha256": "10044877dda1b68ba53fae7e7d4d040959be848cf74c692306b2d74cab98771e",
+      "bytes": 155294,
+      "width": 1600,
+      "height": 500,
+      "panels": [
+        {
+          "direction": "front",
+          "path": "apps/site/photos/team3-liquid-cards/card-100-front.jpg",
+          "cropBox": [
+            0,
+            0,
+            400,
+            500
+          ],
+          "sha256": "ece16ffc6bfe63cd6fc76a89cf11c756b64dc77c2645b530c7889d8f574dedd2",
+          "bytes": 44905
+        },
+        {
+          "direction": "left",
+          "path": "apps/site/photos/team3-liquid-cards/card-100-left.jpg",
+          "cropBox": [
+            400,
+            0,
+            800,
+            500
+          ],
+          "sha256": "4353eb6ea84a539fb3d14d28863274ede40da0a8a798901779a30820cd3b7a76",
+          "bytes": 45288
+        },
+        {
+          "direction": "right",
+          "path": "apps/site/photos/team3-liquid-cards/card-100-right.jpg",
+          "cropBox": [
+            800,
+            0,
+            1200,
+            500
+          ],
+          "sha256": "e77695dd715d5abdd96a4df7092bfea8a21af3f9b0219a1b6fcb17929fe42828",
+          "bytes": 34332
+        },
+        {
+          "direction": "rear",
+          "path": "apps/site/photos/team3-liquid-cards/card-100-rear.jpg",
+          "cropBox": [
+            1200,
+            0,
+            1600,
+            500
+          ],
+          "sha256": "b20bc21c663be5f828293c3a2fc393169e61745219aa8269728fbbcefbc59aa1",
+          "bytes": 36385
+        }
+      ],
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-100-reflow.jpg",
+      "reflowSha256": "ab6b2cbba49f3e86d236d4cbcf19821dbb989422f46bbe6a446e44a461fb5446",
+      "reflowBytes": 161774
+    },
+    {
+      "archiveNumber": 101,
+      "name": "에어 콤프레셔",
+      "room": "보일러실",
+      "sourcePath": "references/team3-liquid-20261110/source/3팀/보일러실/101_에어 콤프레셔/설비사진_에어 콤프레셔.jpg",
+      "sourceSha256": "aec2eb2ad3c508868f7685844d2f02ff0426fbefc27536f40267a71443e2a3e4",
+      "path": "apps/site/photos/team3-liquid-cards/card-101.jpg",
+      "sha256": "36d2404bde0080b03e667e9d31014de011b4157b870da3a4fae92fdf89ba4ca2",
+      "bytes": 117721,
+      "width": 1600,
+      "height": 500,
+      "panels": [
+        {
+          "direction": "front",
+          "path": "apps/site/photos/team3-liquid-cards/card-101-front.jpg",
+          "cropBox": [
+            0,
+            0,
+            400,
+            500
+          ],
+          "sha256": "511d03433d56bfd5913903e134ac6a8d91c90eb43f0abc624f550fa1acd3a029",
+          "bytes": 30377
+        },
+        {
+          "direction": "left",
+          "path": "apps/site/photos/team3-liquid-cards/card-101-left.jpg",
+          "cropBox": [
+            400,
+            0,
+            800,
+            500
+          ],
+          "sha256": "357a280d99b086a8ec3b8090667423ebc03c5043e0c2c14f858bd963e97250ec",
+          "bytes": 27704
+        },
+        {
+          "direction": "right",
+          "path": "apps/site/photos/team3-liquid-cards/card-101-right.jpg",
+          "cropBox": [
+            800,
+            0,
+            1200,
+            500
+          ],
+          "sha256": "74c58f483450d15be78a3733af3609495e6976e96739bddd8b3d7b989766d168",
+          "bytes": 28392
+        },
+        {
+          "direction": "rear",
+          "path": "apps/site/photos/team3-liquid-cards/card-101-rear.jpg",
+          "cropBox": [
+            1200,
+            0,
+            1600,
+            500
+          ],
+          "sha256": "03610e77de5bc99540a2cb33642b93fb3bcd98a171156d1907b3d4d06a5a1c06",
+          "bytes": 35964
+        }
+      ],
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-101-reflow.jpg",
+      "reflowSha256": "6f7bbd1daa2a73d8c192fa77850880b9fec6dbf785e8dbbc567c02ecb95c5d63",
+      "reflowBytes": 121219
+    },
+    {
+      "archiveNumber": 102,
+      "name": "핫멜트",
+      "room": "외포장실",
+      "sourcePath": "references/team3-liquid-20261110/source/3팀/외포장실/102_핫멜트/설비사진_핫멜트.jpg",
+      "sourceSha256": "64dd239f779b1a292071f118fb924455f60095ce35262a7cbb0bf61063310cde",
+      "path": "apps/site/photos/team3-liquid-cards/card-102.jpg",
+      "sha256": "44a778bbd2a7f7cf432e6efc6cc27c2275e19ee69b58dd793c1f01018550cbd6",
+      "bytes": 153912,
+      "width": 1600,
+      "height": 500,
+      "panels": [
+        {
+          "direction": "front",
+          "path": "apps/site/photos/team3-liquid-cards/card-102-front.jpg",
+          "cropBox": [
+            0,
+            0,
+            400,
+            500
+          ],
+          "sha256": "071627650e73a2a116e3adcfe97e9c427d332f831f8b4af104c9ecf8af773028",
+          "bytes": 39164
+        },
+        {
+          "direction": "left",
+          "path": "apps/site/photos/team3-liquid-cards/card-102-left.jpg",
+          "cropBox": [
+            400,
+            0,
+            800,
+            500
+          ],
+          "sha256": "6f56424438f9cdb450883ccf94338603c0f3c47322d082a94877401e94ad3ca5",
+          "bytes": 38167
+        },
+        {
+          "direction": "right",
+          "path": "apps/site/photos/team3-liquid-cards/card-102-right.jpg",
+          "cropBox": [
+            800,
+            0,
+            1200,
+            500
+          ],
+          "sha256": "d750a01af8747628209055990c08403c00e66870bfd1bfa337a28d0a5f590509",
+          "bytes": 36197
+        },
+        {
+          "direction": "rear",
+          "path": "apps/site/photos/team3-liquid-cards/card-102-rear.jpg",
+          "cropBox": [
+            1200,
+            0,
+            1600,
+            500
+          ],
+          "sha256": "1096038653fb235eb024a37027a9d3e74f7ae6afda5d045c1f4be9c3d9a4f112",
+          "bytes": 46336
+        }
+      ],
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-102-reflow.jpg",
+      "reflowSha256": "ad9c81932825bc92f98e10494ebd1d697e39c7265d515285badff814c59600c9",
+      "reflowBytes": 160200
+    },
+    {
+      "archiveNumber": 103,
+      "name": "보일러 3호기",
+      "room": "보일러실",
+      "sourcePath": "references/team3-liquid-20261110/source/3팀/보일러실/103_보일러 3호기/설비사진_보일러 3호기.jpg",
+      "sourceSha256": "369d166b38eac99a6d11adfc37e5c18498da266382b9df1f2ad17c7514955997",
+      "path": "apps/site/photos/team3-liquid-cards/card-103.jpg",
+      "sha256": "d6a2f81428d27e3dcf705439f84b65571985ac7798dd891b6178f419dde00119",
+      "bytes": 159765,
+      "width": 1600,
+      "height": 500,
+      "panels": [
+        {
+          "direction": "front",
+          "path": "apps/site/photos/team3-liquid-cards/card-103-front.jpg",
+          "cropBox": [
+            0,
+            0,
+            400,
+            500
+          ],
+          "sha256": "1cf03a31d110e7128410d0fd47cba396bfcb6da7cb200cb20a139653c1b26996",
+          "bytes": 43300
+        },
+        {
+          "direction": "left",
+          "path": "apps/site/photos/team3-liquid-cards/card-103-left.jpg",
+          "cropBox": [
+            400,
+            0,
+            800,
+            500
+          ],
+          "sha256": "e74215b1aa44007079ad7c0e5294f0c941614ecf3b4ba34f770181292b636b83",
+          "bytes": 36702
+        },
+        {
+          "direction": "right",
+          "path": "apps/site/photos/team3-liquid-cards/card-103-right.jpg",
+          "cropBox": [
+            800,
+            0,
+            1200,
+            500
+          ],
+          "sha256": "f0eb29c4f6b3e74dc84ddd8df988d18ac57a2db567e093db9902e079180e8037",
+          "bytes": 39123
+        },
+        {
+          "direction": "rear",
+          "path": "apps/site/photos/team3-liquid-cards/card-103-rear.jpg",
+          "cropBox": [
+            1200,
+            0,
+            1600,
+            500
+          ],
+          "sha256": "1a84bedab06bc35229384ee312ad05b4404179a328f2259f23c83163f534b503",
+          "bytes": 46671
+        }
+      ],
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-103-reflow.jpg",
+      "reflowSha256": "452a8d1af632ec07a3104ca82a546792dc7e17c06b0dca7c1c311cb1c2a03e39",
+      "reflowBytes": 165309
+    },
+    {
+      "archiveNumber": 104,
+      "name": "보일러 1,2호기",
+      "room": "보일러실",
+      "sourcePath": "references/team3-liquid-20261110/source/3팀/보일러실/104_보일러 1,2호기/설비사진_보일러 1,2호기.jpg",
+      "sourceSha256": "3e3a9cddfc0f8cc80c24e0e77632ea63d9d4bce69c74de48fa7ea9359d9535a7",
+      "path": "apps/site/photos/team3-liquid-cards/card-104.jpg",
+      "sha256": "b5b2c99c6938faf49a15f8568c19a14717cae2cb4b8ad0d126a30d76b457245e",
+      "bytes": 163591,
+      "width": 1600,
+      "height": 500,
+      "panels": [
+        {
+          "direction": "front",
+          "path": "apps/site/photos/team3-liquid-cards/card-104-front.jpg",
+          "cropBox": [
+            0,
+            0,
+            400,
+            500
+          ],
+          "sha256": "38bb3055d7eefe33c8bcb28098b2fb4b5cd5e45ced569697fe05ad51102278ca",
+          "bytes": 43315
+        },
+        {
+          "direction": "left",
+          "path": "apps/site/photos/team3-liquid-cards/card-104-left.jpg",
+          "cropBox": [
+            400,
+            0,
+            800,
+            500
+          ],
+          "sha256": "618616db483fb79b3eece0d1509bd8834dd356147991269837de243557768a4a",
+          "bytes": 40765
+        },
+        {
+          "direction": "right",
+          "path": "apps/site/photos/team3-liquid-cards/card-104-right.jpg",
+          "cropBox": [
+            800,
+            0,
+            1200,
+            500
+          ],
+          "sha256": "2fcbc554f12f19d95301cad397920d5bbe1c92d195b75ab1b9a80c7e64da3811",
+          "bytes": 44552
+        },
+        {
+          "direction": "rear",
+          "path": "apps/site/photos/team3-liquid-cards/card-104-rear.jpg",
+          "cropBox": [
+            1200,
+            0,
+            1600,
+            500
+          ],
+          "sha256": "a716adab66043c4ed1a1a992512d91bba8af0b4a1e8668aeb8f451dd6fe28b08",
+          "bytes": 41185
+        }
+      ],
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-104-reflow.jpg",
+      "reflowSha256": "0ad12faa322b4ee47a0e2d3080e51c72ed225f987ec3ab9648a5f3d68037b212",
+      "reflowBytes": 170346
+    },
+    {
+      "archiveNumber": 105,
+      "name": "티칭 로봇",
+      "room": "외포장실",
+      "sourcePath": "references/team3-liquid-20261110/source/3팀/외포장실/105_티칭 로봇/설비사진_티칭 로봇.jpg",
+      "sourceSha256": "3e10d778c6c2b30d7fb88c9ed433425030e50c4f91f7d4b20a16f7edf52a0c34",
+      "path": "apps/site/photos/team3-liquid-cards/card-105.jpg",
+      "sha256": "256f3b6a6440c8b40696448033b7774e453d726b7ffab7ba80ba9c5733f73bc3",
+      "bytes": 165622,
+      "width": 1600,
+      "height": 500,
+      "panels": [
+        {
+          "direction": "front",
+          "path": "apps/site/photos/team3-liquid-cards/card-105-front.jpg",
+          "cropBox": [
+            0,
+            0,
+            400,
+            500
+          ],
+          "sha256": "2ee481d62f8fd9d5928b090b3212e43e5f00749792df7b92ec910bf123ff0283",
+          "bytes": 44247
+        },
+        {
+          "direction": "left",
+          "path": "apps/site/photos/team3-liquid-cards/card-105-left.jpg",
+          "cropBox": [
+            400,
+            0,
+            800,
+            500
+          ],
+          "sha256": "19760381db5bcbaf6009fe69cd2f0a0af202920d19c066e28e8011dcc560b467",
+          "bytes": 42351
+        },
+        {
+          "direction": "right",
+          "path": "apps/site/photos/team3-liquid-cards/card-105-right.jpg",
+          "cropBox": [
+            800,
+            0,
+            1200,
+            500
+          ],
+          "sha256": "2778f245fd928cbf7e2e199335d0fe9d2c83023d84e3af79057daf88c34a6099",
+          "bytes": 42984
+        },
+        {
+          "direction": "rear",
+          "path": "apps/site/photos/team3-liquid-cards/card-105-rear.jpg",
+          "cropBox": [
+            1200,
+            0,
+            1600,
+            500
+          ],
+          "sha256": "811528d0f1ca610713d242ea9a31cfa26919624266329b90b0ff1887f1ded3a7",
+          "bytes": 42543
+        }
+      ],
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-105-reflow.jpg",
+      "reflowSha256": "ed3711ade83add2c2dc4a2bcce9b5afbbc02d18aecbd07d9cfec454fc7108b13",
+      "reflowBytes": 172900
+    },
+    {
+      "archiveNumber": 106,
+      "name": "제환기",
+      "room": "제환실",
+      "sourcePath": "references/team3-liquid-20261110/source/3팀/제환실/106_제환기/설비사진_제환기.jpg",
+      "sourceSha256": "96b78409aaff2a2b4cc9ac7f1480591c68b340dd68609dd38d73b6667ec63e5b",
+      "path": "apps/site/photos/team3-liquid-cards/card-106.jpg",
+      "sha256": "9ce4ec3c7cf2337ab3393d89b9e98f16e2036b23c18239420c8aeb441658dc2c",
+      "bytes": 131905,
+      "width": 1600,
+      "height": 500,
+      "panels": [
+        {
+          "direction": "front",
+          "path": "apps/site/photos/team3-liquid-cards/card-106-front.jpg",
+          "cropBox": [
+            0,
+            0,
+            400,
+            500
+          ],
+          "sha256": "c303c26ecb5cd7716da249723112aeab73d0370c26cb0d11754fe7f756f1f57a",
+          "bytes": 34630
+        },
+        {
+          "direction": "left",
+          "path": "apps/site/photos/team3-liquid-cards/card-106-left.jpg",
+          "cropBox": [
+            400,
+            0,
+            800,
+            500
+          ],
+          "sha256": "c7445341f73e046f2794d356fdaa4fd8395628afefddc9998a92e2e1582a0d59",
+          "bytes": 36361
+        },
+        {
+          "direction": "right",
+          "path": "apps/site/photos/team3-liquid-cards/card-106-right.jpg",
+          "cropBox": [
+            800,
+            0,
+            1200,
+            500
+          ],
+          "sha256": "550a9628e2a11f5527abcf896d7a73533df9df9a235ff8de830431c3c38d2e85",
+          "bytes": 33168
+        },
+        {
+          "direction": "rear",
+          "path": "apps/site/photos/team3-liquid-cards/card-106-rear.jpg",
+          "cropBox": [
+            1200,
+            0,
+            1600,
+            500
+          ],
+          "sha256": "577f5c598c0ce928789a0898aa881df65b9d52cbd23dce55b1df8a83c7743d0c",
+          "bytes": 33065
+        }
+      ],
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-106-reflow.jpg",
+      "reflowSha256": "25a9fa429b83fc23fe89a17d98bc02e962ced757a7bb924faa3817c0177a8475",
+      "reflowBytes": 136400
+    },
+    {
+      "archiveNumber": 107,
+      "name": "반죽기",
+      "room": "제환실",
+      "sourcePath": "references/team3-liquid-20261110/source/3팀/제환실/107_반죽기/설비사진_반죽기.jpg",
+      "sourceSha256": "2bbf3d792102bb19e40e36c4dcaa34dc12dd1de98dc9daf8a0b55f265d9bf003",
+      "path": "apps/site/photos/team3-liquid-cards/card-107.jpg",
+      "sha256": "cb42660e0012f41f73b56cc8b27291e8f45837175a5c26d1cb1f1f0dee09d313",
+      "bytes": 139558,
+      "width": 1600,
+      "height": 500,
+      "panels": [
+        {
+          "direction": "front",
+          "path": "apps/site/photos/team3-liquid-cards/card-107-front.jpg",
+          "cropBox": [
+            0,
+            0,
+            400,
+            500
+          ],
+          "sha256": "e4bd00213a812c641b7609ff6dcf960d9280a5bcd7fe7f4ab4c93c31e25cdb61",
+          "bytes": 34786
+        },
+        {
+          "direction": "left",
+          "path": "apps/site/photos/team3-liquid-cards/card-107-left.jpg",
+          "cropBox": [
+            400,
+            0,
+            800,
+            500
+          ],
+          "sha256": "0b7a3f01c5309984687aa116bff295bcb3a3d5637796e8965d782e6b40087c35",
+          "bytes": 37804
+        },
+        {
+          "direction": "right",
+          "path": "apps/site/photos/team3-liquid-cards/card-107-right.jpg",
+          "cropBox": [
+            800,
+            0,
+            1200,
+            500
+          ],
+          "sha256": "b1566e8c4a5ec8e1a8d121485f6453b5bcd269b68628eb34d500e698e584d1ef",
+          "bytes": 39990
+        },
+        {
+          "direction": "rear",
+          "path": "apps/site/photos/team3-liquid-cards/card-107-rear.jpg",
+          "cropBox": [
+            1200,
+            0,
+            1600,
+            500
+          ],
+          "sha256": "4337fd3884dda66c7905691edece7f92a278fd44e044fb4de0ffac445af4bf76",
+          "bytes": 32468
+        }
+      ],
+      "reflowPath": "apps/site/photos/team3-liquid-cards/card-107-reflow.jpg",
+      "reflowSha256": "04212b5424fd816c3441d8fb19f19b48035fb7400b97009787ba340e5a2faa23",
+      "reflowBytes": 145545
+    }
+  ],
+  "contactSheets": [
+    "tmp/team3-liquid-20261110/contact-01-08.jpg",
+    "tmp/team3-liquid-20261110/contact-09-16.jpg",
+    "tmp/team3-liquid-20261110/contact-17-24.jpg",
+    "tmp/team3-liquid-20261110/contact-25-32.jpg",
+    "tmp/team3-liquid-20261110/contact-33-40.jpg",
+    "tmp/team3-liquid-20261110/contact-41-48.jpg",
+    "tmp/team3-liquid-20261110/contact-49-52.jpg"
+  ],
+  "totals": {
+    "compositeBytes": 9669712,
+    "panelBytes": 10036909,
+    "reflowBytes": 10054958
+  },
+  "assetCount": 312
+}

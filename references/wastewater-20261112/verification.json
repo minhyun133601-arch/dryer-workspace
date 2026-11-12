@@ -1,0 +1,28 @@
+{
+    "date":  "2026-11-12",
+    "equipmentId":  "campus-wastewater-treatment",
+    "checks":  {
+                   "syntaxAndAssets":  "passed",
+                   "desktopBrowser":  "passed",
+                   "drawingImages":  3,
+                   "standaloneSharedBrowser":  "passed",
+                   "passed":  343,
+                   "featureTests":  42,
+                   "totalTests":  343,
+                   "inspectOpenCloseReopen":  "passed",
+                   "consoleErrors":  0,
+                   "finalTestLog":  "tmp/wastewater-final-tests.log",
+                   "failed":  0,
+                   "mobileWidth390":  "passed, no horizontal overflow"
+               },
+    "export":  {
+                   "path":  "exports/건조기-통합-공유.html",
+                   "sha256":  "2e0fe36ea6aee9054f558c94a38bbe34f1f992b9b623ef61c5d6ded8260317b7",
+                   "bytes":  17493938
+               },
+    "notes":  [
+                  "기존 건물 좌표를 변경하지 않음",
+                  "건조실 전용 온라인 발표본은 변경하지 않음",
+                  "모델 배치·외장 근사와 도면 치수 구분은 reconstruction.json 참고"
+              ]
+}

@@ -381,18 +381,22 @@ function routeConeBank(s, root, item, g) {
     const cone = tag(s._group(g[0], [0, 0, z]), 'observed-conical-hopper');
     cyl(s, cone, 1.08, 2.1, [0, 2.5, 0], s.mat.steel, .22, 'observed-hopper-conical-shell', 40);
     cyl(s, cone, 1.08, .38, [0, 3.74, 0], s.mat.steel, 1.08, 'observed-hopper-upper-rim', 40);
+    // 538/548s: the feed enters a shallow sloping lid above the cylindrical
+    // collar; the broad vessel top is not a flat, open-topped drum.
+    cyl(s, cone, .24, .18, [0, 4.02, 0], s.mat.steel, 1.08, 'observed-hopper-sloping-cover', 48);
     for (const yy of [1.45, 3.55, 3.93]) ring(s, cone, yy < 2 ? .24 : 1.09, [0, yy, 0], s.mat.trim, .025);
     cyl(s, g[2], .22, .26, [0, 1.32, z], s.mat.black, .22, 'observed-hopper-flexible-neck');
     cyl(s, g[2], .32, .14, [0, 1.12, z], s.mat.trim, .32, 'observed-hopper-discharge-flange');
     box(s, g[2], [.65, .25, .43], [0, .94, z], s.mat.steel, 'observed-hopper-discharge-assembly');
     if(z<0){
-      pipe(s,g[3],[[0,4.02,z],[0,4.75,z],[.85,5.18,z],[1.2,5.4,z]],.16,s.mat.steel,'observed-inclined-hopper-feed');
+      pipe(s,g[3],[[0,4.11,z],[0,4.75,z],[.85,5.18,z],[1.2,5.4,z]],.21,s.mat.steel,'observed-inclined-hopper-feed');
       for(const point of [[0,4.35,z],[.75,5.12,z]])ring(s,g[3],.18,point,s.mat.trim,.025);
     }else{
-      cyl(s,g[3],.29,.67,[0,4.32,z],s.mat.white,.29,'observed-hopper-wide-flexible-coupling');
-      cyl(s,g[3],.28,.75,[0,5.03,z],s.mat.steel,.28,'observed-hopper-vertical-upper-riser');
-      for(const yy of [3.99,4.65])ring(s,g[3],.31,[0,yy,z],s.mat.trim,.025,'y','observed-hopper-flex-coupling-band');
-      thirdDetailFlange(s,g[3],[0,4.7,z],.33,'y','observed-hopper-upper-riser-flange');
+      const flex=material(s,'third-hopper-cream-flexible-sleeve',0xded7a6,{roughness:.83,metalness:0});
+      cyl(s,g[3],.4,.67,[0,4.445,z],flex,.4,'observed-hopper-wide-flexible-coupling');
+      cyl(s,g[3],.38,.75,[0,5.155,z],s.mat.steel,.38,'observed-hopper-vertical-upper-riser');
+      for(const yy of [4.11,4.78])ring(s,g[3],.415,[0,yy,z],s.mat.trim,.025,'y','observed-hopper-flex-coupling-band');
+      thirdDetailFlange(s,g[3],[0,4.81,z],.43,'y','observed-hopper-upper-riser-flange');
     }
     const rotary=tag(s._group(g[2],[0,.94,z]),'observed-hopper-rotary-outlet-detail');
     cyl(s,rotary,.23,.5,[0,0,0],s.mat.steel,.23,'observed-hopper-rotary-outlet-body').rotation.z=PI/2;
@@ -403,6 +407,7 @@ function routeConeBank(s, root, item, g) {
   }
   const outline = [[-1.5, -3], [1.5, -3], [1.5, 3], [-1.5, 3]];
   deck(s, g[1], outline, centers.map(z => [0, z, 1.14]), y, 'observed-hopper-common-platform');
+  thirdDetailChecker(s,g[1],{minX:-1.5,maxX:1.5,minZ:-3,maxZ:3,y,holes:centers.map(z=>[0,z,1.14])},'observed-hopper-checker-plate-relief');
   legs(s, g[1], 2.7, 5.7, y);
   for (const z of [-2.85, 0, 2.85]) box(s, g[1], [2.9, .16, .13], [0, y - .18, z], s.mat.trim, 'observed-hopper-platform-beam');
   for(const x of [-1.36,1.36])box(s,g[1],[.13,.23,5.85],[x,y-.23,0],s.mat.trim,'observed-hopper-underdeck-longitudinal-bearer');
@@ -431,7 +436,11 @@ function routeConeBank(s, root, item, g) {
   for (const z of [-.85, 0, .85]) {
     const trough = tag(s._group(g[2], [-.9, 0, z]), 'observed-covered-transfer-trough');
     box(s, trough, [3.5, .15, .2], [0, .55, 0], s.mat.steel, 'observed-covered-trough-body');
-    box(s, trough, [3.55, .035, .24], [0, .64, 0], s.mat.trim, 'observed-covered-trough-lid');
+    // 516s shows separate shallow removable covers with a narrow seam, rather
+    // than one thick unbroken rectangular bar along the entire transfer.
+    const covers=tag(s._group(trough),'observed-covered-trough-lid');
+    for(const x of[-1.18,0,1.18])box(s,covers,[1.16,.035,.24],[x,.64,0],s.mat.steel,'observed-trough-removable-cover');
+    for(const side of[-1,1])box(s,trough,[3.55,.045,.025],[0,.645,side*.125],s.mat.trim,'observed-trough-folded-lid-edge');
     for (const x of [-1.25, 1.25]) box(s, trough, [.06, .44, .28], [x, .22, 0], s.mat.trim, 'observed-trough-support');
     for (const x of [-1.35, -.45, .45, 1.35]) box(s, trough, [.035, .045, .27], [x, .65, 0], s.mat.dark, 'observed-trough-cover-clamp');
   }
@@ -485,18 +494,32 @@ function routeCylinder(s, root, item, g) {
   wheel.userData.sourceSeconds=[590];Object.assign(manifold.userData,{visibleRegulatorAndTwoGauges:true,pipeRouteApproximate:true,liveReadingsAdded:false});
 }
 function thirdDetailOpenTankCap(s, parent, x, z, y, radius) {
+  const neckRadius=.3,domeHeight=.11,neckRise=domeHeight*(1-(.33**2+.25**2)/radius**2),neckBase=y+neckRise,lip=neckBase+.2;
   const shape = new THREE.Shape(); shape.absarc(0, 0, radius, 0, PI * 2, false);
-  const hole = new THREE.Path(); hole.absarc(.33, .25, .225, 0, PI * 2, true); shape.holes.push(hole);
-  const geom = new THREE.ExtrudeGeometry(shape, { depth: .035, bevelEnabled: false, curveSegments: 32 }); geom.rotateX(PI / 2);
-  tag(s._mesh(geom, s.mat.steel, parent, [x, y, z]), 'observed-tank-cap-with-open-manhole');
-  const neck = tag(s._mesh(new THREE.CylinderGeometry(.225, .225, .16, 32, 1, true), s.mat.steel, parent, [x + .33, y + .08, z + .25]), 'observed-open-manhole-neck');
-  ring(s, parent, .235, [x + .33, y + .16, z + .25], s.mat.trim, .025);
-  const hinge=tag(s._group(parent,[x+.33,y+.16,z+.025]),'observed-cip-manhole-lid-hinge');hinge.rotation.x=-1;
-  cyl(s,hinge,.23,.035,[0,0,-.225],s.mat.trim,.23,'observed-open-manhole-lid',32);
-  const pin=cyl(s,parent,.018,.3,[x+.33,y+.16,z+.025],s.mat.trim,.018,'observed-cip-lid-hinge-pin',12);pin.rotation.z=PI/2;
-  box(s,parent,[.065,.11,.045],[x+.33,y+.08,z+.49],s.mat.trim,'observed-cip-manhole-latch-body');
-  bar(s,parent,[x+.33,y+.11,z+.49],[x+.33,y+.23,z+.51],.014,s.mat.trim,'observed-cip-manhole-latch-screw');
-  bar(s,parent,[x+.26,y+.23,z+.51],[x+.4,y+.23,z+.51],.012,s.mat.trim,'observed-cip-manhole-latch-handle');
+  const hole = new THREE.Path(); hole.absarc(.33, .25, neckRadius, 0, PI * 2, true); shape.holes.push(hole);
+  const flat = new THREE.ExtrudeGeometry(shape, { depth: .035, bevelEnabled: false, curveSegments: 40 }); flat.rotateX(PI / 2);
+  // Subdivide the pierced cap before lifting its centre. This gives the broad
+  // shallow dished roof in 702/708s while preserving an actual open manhole.
+  const source=flat.attributes.position,sourceNormals=flat.attributes.normal,vertices=[],normals=[];
+  const emit=(a,b,c,normal,depth)=>{
+    if(depth){const ab=a.clone().add(b).multiplyScalar(.5),bc=b.clone().add(c).multiplyScalar(.5),ca=c.clone().add(a).multiplyScalar(.5);emit(a,ab,ca,normal,depth-1);emit(ab,b,bc,normal,depth-1);emit(ca,bc,c,normal,depth-1);emit(ab,bc,ca,normal,depth-1);return;}
+    for(const point of[a,b,c]){
+      vertices.push(point.x,point.y+domeHeight*(1-(point.x**2+point.z**2)/radius**2),point.z);
+      const n=Math.abs(normal.y)>.8?new THREE.Vector3(2*domeHeight*point.x/radius**2,1,2*domeHeight*point.z/radius**2).normalize().multiplyScalar(Math.sign(normal.y)):normal;
+      normals.push(n.x,n.y,n.z);
+    }
+  };
+  for(let i=0;i<source.count;i+=3)emit(new THREE.Vector3().fromBufferAttribute(source,i),new THREE.Vector3().fromBufferAttribute(source,i+1),new THREE.Vector3().fromBufferAttribute(source,i+2),new THREE.Vector3().fromBufferAttribute(sourceNormals,i),Math.abs(sourceNormals.getY(i))>.8?2:0);
+  const geom=new THREE.BufferGeometry();geom.setAttribute('position',new THREE.Float32BufferAttribute(vertices,3));geom.setAttribute('normal',new THREE.Float32BufferAttribute(normals,3));flat.dispose();
+  const cap=tag(s._mesh(geom,s.mat.steel,parent,[x,y,z]),'observed-tank-cap-with-open-manhole');cap.userData.dishedRoofHeight=domeHeight;
+  const neck = tag(s._mesh(new THREE.CylinderGeometry(neckRadius, neckRadius, .24, 40, 1, true), s.mat.steel, parent, [x + .33, neckBase + .08, z + .25]), 'observed-open-manhole-neck');
+  ring(s, parent, neckRadius+.01, [x + .33, lip, z + .25], s.mat.trim, .025);
+  const hinge=tag(s._group(parent,[x+.33,lip,z+.25-neckRadius]),'observed-cip-manhole-lid-hinge');hinge.rotation.x=-.22;
+  cyl(s,hinge,neckRadius+.005,.035,[0,0,-neckRadius],s.mat.trim,neckRadius+.005,'observed-open-manhole-lid',40);
+  const pin=cyl(s,parent,.018,.3,[x+.33,lip,z+.25-neckRadius],s.mat.trim,.018,'observed-cip-lid-hinge-pin',12);pin.rotation.z=PI/2;
+  box(s,parent,[.065,.11,.045],[x+.33,lip-.08,z+.25+neckRadius+.015],s.mat.trim,'observed-cip-manhole-latch-body');
+  bar(s,parent,[x+.33,lip-.05,z+.25+neckRadius+.015],[x+.33,lip+.07,z+.25+neckRadius+.035],.014,s.mat.trim,'observed-cip-manhole-latch-screw');
+  bar(s,parent,[x+.26,lip+.07,z+.25+neckRadius+.035],[x+.4,lip+.07,z+.25+neckRadius+.035],.012,s.mat.trim,'observed-cip-manhole-latch-handle');
   neck.userData.actualOpenBore = true;
 }
 function routeCipDeck(s, root, item, g) {
@@ -504,14 +527,21 @@ function routeCipDeck(s, root, item, g) {
   for (const [index, z] of centers.entries()) {
     const body = tag(s._group(g[0], [0, 0, z]), 'observed-cip-tank');
     tag(s._mesh(new THREE.CylinderGeometry(radius, radius, 1.65, 40, 1, true), s.mat.steel, body, [0, 1.325, 0]), 'observed-cip-tank-shell');
+    // The exterior is intentionally open at the manhole. Give it its visible
+    // inner wall and deep dished bottom so an oblique view cannot see the hall
+    // floor through the backfaces of the stainless shell (702/708s).
+    const interior=material(s,'third-cip-shadowed-interior',0x35403f,{roughness:.86,metalness:.04,side:THREE.BackSide});
+    tag(s._mesh(new THREE.CylinderGeometry(radius-.006,radius-.006,1.65,40,1,true),interior,body,[0,1.325,0]),'observed-cip-inner-vessel-wall');
+    cyl(s,body,radius-.008,.235,[0,.385,0],material(s,'third-cip-shadowed-bottom',0x28332f,{roughness:.92,metalness:.02}),.22,'observed-cip-deep-inner-bottom',40);
     cyl(s, body, radius, .24, [0, .38, 0], s.mat.steel, .22, 'observed-cip-tank-lower-dish', 40);
     ring(s, body, radius + .01, [0, .53, 0]);
     tag(s._mesh(new THREE.CylinderGeometry(radius * .97, radius, .12, 40, 1, true), s.mat.steel, body, [0, 2.21, 0]), 'observed-cip-tank-shoulder');
     thirdDetailOpenTankCap(s, g[1], 0, z, 2.28, radius * .97);
-    cyl(s, g[1], .1, .24, [-.3, 2.42, z - .2], s.mat.trim, .1, 'observed-cip-mixer-shaft');
-    routeMotor(s, g[1], [-.3, 2.83, z - .2], .19, .55);
-    thirdDetailFlange(s,g[1],[-.3,2.36,z-.2],.28,'y','observed-cip-wide-mixer-mounting-flange');
-    cyl(s,g[1],.15,.24,[-.3,2.55,z-.2],s.mat.motor,.2,'observed-cip-mixer-reducer');
+    cyl(s, g[1], .1, .24, [-.3, 2.49, z - .2], s.mat.trim, .1, 'observed-cip-mixer-shaft');
+    const mixer=routeMotor(s, g[1], [-.3, 3.18, z - .2], .19, .64);
+    cyl(s,mixer,.205,.085,[0,.36,0],material(s,'route-motor-green',0x578c83),.205,'observed-cip-mixer-fan-cover');
+    thirdDetailFlange(s,g[1],[-.3,2.43,z-.2],.28,'y','observed-cip-wide-mixer-mounting-flange');
+    cyl(s,g[1],.15,.43,[-.3,2.65,z-.2],s.mat.motor,.2,'observed-cip-mixer-reducer');
     for (const x of [-.9, .9]) box(s, g[2], [.28, .1, .2], [x, y + .025, z], s.mat.trim, 'observed-cip-hanging-lug');
     pipe(s, g[3], [[0, .25, z], [0, .25, z + .4], [.8, .25, z + .4]], .055, s.mat.trim, 'observed-cip-lower-outlet');
     body.userData.observedLabel = index === 0 ? 'CIP탱크(산)' : null;
@@ -542,6 +572,9 @@ function observedThirdFloor(s, root, item, g) {
   const builder = { 'third-cone-bank': routeConeBank, 'third-service-skid': routeServiceSkid, 'third-drive-frame': routeDriveFrame, 'third-cylinder': routeCylinder, 'third-cip-deck': routeCipDeck }[kind];
   if (!builder) return false;
   builder(s, root, item, g);
+  const stainless=material(s,'third-observed-stainless',0xd8dddc,{roughness:.29,metalness:.38,map:s.mat.steel.map||null});
+  const edges=material(s,'third-observed-stainless-trim',0xbfc9c6,{roughness:.34,metalness:.4});
+  root.traverse(node=>{if(node.isMesh){if(node.material===s.mat.steel)node.material=stainless;else if(node.material===s.mat.trim)node.material=edges;}});
   Object.assign(root.userData, { observedRouteEquipment: { ...item.dryerRoute }, historicalEquipmentIdentityConfirmed: false, modelDimensionsMeasured: false });
   return true;
 }
@@ -636,7 +669,8 @@ function packingDetailPlatform(s,parent,item){
 }
 function overlookedPackingCubicle(s, root, item, g) {
   const index=Number(item.id.at(-1))-1,width=index===2?1.85:2.1,depth=index===2?1.75:2.15,roof=index===2?2.5:2.4;
-  const glass=material(s,'route-packing-smoked-guards',0x52645f,{transparent:true,opacity:.38,depthWrite:false,side:THREE.DoubleSide});
+  const glass=material(s,'route-packing-smoked-guards',0x7eabb5,{transparent:true,opacity:.32,depthWrite:false,side:THREE.DoubleSide});
+  const stainless=material(s,'route-packing-machined-stainless',0xa5b1b3,{roughness:.38,metalness:.62});
   box(s,g[0],[width+.07,.12,depth+.04],[0,.18,0],s.mat.trim,'observed-packing-base');
   for(const x of [-width/2,width/2])for(const z of [-depth/2,depth/2]){
     box(s,g[0],[.055,roof-.22,.055],[x,(roof+.22)/2,z],s.mat.trim,'observed-packing-cubicle-post');
@@ -647,6 +681,15 @@ function overlookedPackingCubicle(s, root, item, g) {
     box(s,g[0],[width+.1,.07,.85],[0,roof+.1,-.65],s.mat.white,'observed-packing-stepped-rear-roof');
     box(s,g[0],[width+.08,.23,.035],[0,roof-.015,-.2],s.mat.steel,'observed-packing-roof-step-riser');
   }else box(s,g[0],[width+.15,.07,depth+.15],[0,roof,0],s.mat.white,'observed-packing-flat-roof');
+  // 348/354/390s: folded sheet-metal roof edges and a deep rear service
+  // enclosure distinguish the cabinets from empty transparent display boxes.
+  for(const x of [-width/2-.04,width/2+.04])box(s,g[0],[.035,.085,depth+.13],[x,roof-.025,0],stainless,'observed-packing-folded-roof-edge');
+  for(const z of [-depth/2-.04,depth/2+.04])box(s,g[0],[width+.1,.085,.035],[0,roof-.025,z],stainless,'observed-packing-folded-roof-edge');
+  box(s,g[0],[width-.12,1.78,.12],[0,1.22,-depth/2+.045],stainless,'observed-packing-rear-service-casing');
+  for(const x of [-width*.24,width*.24]){
+    box(s,g[0],[.018,1.7,.016],[x,1.22,-depth/2-.023],s.mat.dark,'observed-packing-rear-panel-joint');
+    box(s,g[0],[.035,.21,.035],[x+.13,1.23,-depth/2-.04],s.mat.dark,'observed-packing-rear-panel-handle');
+  }
   for(const x of [-width/2,width/2]){
     box(s,g[0],[.025,1.54,depth-.12],[x,1.47,0],glass,'observed-packing-transparent-side');
     box(s,g[0],[.035,.46,depth-.1],[x,.48,0],s.mat.steel,'observed-packing-lower-metal-panel');
@@ -665,6 +708,29 @@ function overlookedPackingCubicle(s, root, item, g) {
   for(const y of [.82,1.25])box(s,g[2],[.8,.12,.25],[0,y,.3],s.mat.dark,'observed-packing-sealing-block');
   const film=cyl(s,g[2],.23,.76,[0,1.45,-.45],s.mat.white,.23,'observed-packing-film-roll');film.rotation.z=PI/2;
   for(const x of [-.42,.42])bar(s,g[2],[x,.55,-.46],[x,1.7,-.46],.025,s.mat.trim,'observed-packing-film-support');
+  const mechanics=tag(s._group(g[2]),'observed-packing-visible-filling-mechanism');
+  Object.assign(mechanics.userData,{sourceTimes:[344,348,354,390],internalLayoutApproximate:true});
+  // Only externally visible cylinders, film rollers and jaws are represented;
+  // these are not a claimed reconstruction of the concealed drive train.
+  for(const x of index===0?[-.34,.34]:[0]){
+    cyl(s,mechanics,.095,.72,[x,1.9,-.18],stainless,.095,'observed-packing-vertical-filling-tube');
+    cyl(s,mechanics,.2,.2,[x,1.52,-.18],stainless,.11,'observed-packing-forming-collar');
+    ring(s,mechanics,.17,[x,1.62,-.18],s.mat.trim,.018);
+    box(s,mechanics,[.28,.42,.025],[x,1.16,.09],s.mat.white,'observed-packing-visible-film-web');
+    for(const side of [-1,1]){
+      box(s,mechanics,[.12,.35,.085],[x+side*.19,1.15,.12],stainless,'observed-packing-film-pull-block');
+      cyl(s,mechanics,.045,.19,[x+side*.23,.81,.14],s.mat.dark,.045,'observed-packing-pneumatic-actuator',12).rotation.z=PI/2;
+    }
+    box(s,mechanics,[.51,.085,.22],[x,.76,.18],stainless,'observed-packing-transverse-sealing-jaw');
+  }
+  for(const y of [1.66,1.9]){
+    const roller=cyl(s,mechanics,.035,width*.72,[0,y,-.55],stainless,.035,'observed-packing-film-guide-roller',12);roller.rotation.z=PI/2;
+    for(const x of [-width*.38,width*.38])box(s,mechanics,[.035,.43,.055],[x,1.75,-.55],stainless,'observed-packing-film-guide-bracket');
+  }
+  const spool=tag(s._group(g[2],[width/2+.16,1.03,-.51]),'observed-packing-side-reel');
+  for(const x of [-.06,.06])cyl(s,spool,.27,.025,[x,0,0],stainless,.27,'observed-packing-side-reel-flange').rotation.z=PI/2;
+  cyl(s,spool,.12,.18,[0,0,0],s.mat.white,.12,'observed-packing-side-reel-hub').rotation.z=PI/2;
+  pipe(s,g[2],[[width/2+.18,1.16,-.54],[width/2+.26,.55,-.54],[width/2+.26,.22,.1],[.35,.22,.25]],.018,s.mat.black,'observed-packing-visible-service-cable');
   beltPath(s,g[2],[[0,.65],[0,1.5],[.25,2.12]],.5,.72);
   packingDetailControl(s,g[2],index,width,depth);
   Object.assign(root.userData,{observedRoofedPackingCubicle:true,packingNativeVariant:index===0?'twin-outlet-left-assembly':index===1?'stepped-roof-round-feed':'front-screen-round-feed',exactOpenLineToCabinetIdentityConfirmed:false});

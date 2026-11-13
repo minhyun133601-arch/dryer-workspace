@@ -1,0 +1,108 @@
+/* Wide desktop */
+@media (min-width: 1600px) {
+  .workspace {
+    grid-template-columns: 250px minmax(400px, 1fr) 355px;
+  }
+
+  .part-photo {
+    height: 155px;
+  }
+
+  .detail-top {
+    padding: 24px;
+  }
+
+  .detail-scroll {
+    padding: 18px 24px;
+  }
+
+  .spec-row {
+    font-size: 12px;
+    padding: 12px 0;
+  }
+
+  .summary {
+    font-size: 12px;
+  }
+
+  .resource-copy strong {
+    font-size: 12px;
+  }
+
+  .detail-bottom {
+    padding: 16px 24px;
+  }
+
+  .part-row-text strong {
+    font-size: 13px;
+  }
+
+  .part-row {
+    padding: 12px;
+  }
+}
+
+/* Compact desktop */
+@media (max-width: 1240px) {
+  .workspace {
+    grid-template-columns: 210px minmax(320px, 1fr) 298px;
+    gap: 12px;
+  }
+
+  main {
+    padding: 0 18px;
+  }
+
+  .site-header {
+    padding: 0 22px;
+  }
+
+  .heading-actions {
+    gap: 12px;
+  }
+
+  .connection-count {
+    display: none;
+  }
+
+  .canvas-toolbar {
+    padding: 12px;
+  }
+
+  .tiny-badge {
+    display: none;
+  }
+
+  .detail-top {
+    padding: 18px 16px 14px;
+  }
+
+  .detail-scroll {
+    padding: 14px 16px;
+  }
+
+  .detail-bottom {
+    padding: 13px 16px;
+  }
+
+  .view-switch button {
+    padding: 6px 7px;
+  }
+
+  .canvas-title > .icon {
+    display: none;
+  }
+
+  .part-mini-icon {
+    width: 27px;
+  }
+
+  .part-row {
+    gap: 7px;
+  }
+
+  .legend {
+    gap: 10px;
+  }
+}
+

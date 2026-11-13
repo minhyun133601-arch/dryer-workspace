@@ -1,0 +1,2633 @@
+{
+  "reviewedAsOf": "2026-11-03",
+  "documentId": "334757",
+  "drawingNature": {
+    "frontVectorPaths": 22410,
+    "planVectorPaths": 13922,
+    "rasterImages": 0,
+    "displayPagePt": [
+      1191.0,
+      842.0
+    ],
+    "nativeMediaBoxPt": [
+      842,
+      1191
+    ],
+    "pageRotation": 270,
+    "pointNote": "아래좌표는270도회전반영후1191×842가로화면의PDF display좌표. get_drawings원시좌표에는page.rotation_matrix를먼저적용해야함."
+  },
+  "coordinateSystem": {
+    "units": "m, 도면치수에맞춘상대좌표;site survey값아님",
+    "axes": {
+      "x": "좌측공정기준선에서우측으로",
+      "y": "정면최하부기준선에서위로",
+      "z": "평면북측내부기준선에서남측으로"
+    },
+    "front": {
+      "processXDatumPt": 366.48,
+      "baseYDatumPt": 677.28,
+      "mmPerPdfPoint": 56.91879585125221,
+      "formulaX": "(frontX−366.48)×56.915mm",
+      "formulaY": "(677.28−frontY)×56.915mm"
+    },
+    "plan": {
+      "processXDatumPt": 355.68,
+      "northInternalYDatumPt": 218.52,
+      "mmPerPdfPoint": 44.352454169130695,
+      "formulaX": "(planX−355.68)×44.354mm",
+      "formulaZ": "(planY−218.52)×44.354mm"
+    },
+    "registrationNote": "건조기중심front471.96/plan490.0의worldX가각약6m로정합.회수코어front677.5/plan753.5도약17.7m로정합. 깊이좌표는평면값을우선,높이는정면값을우선."
+  },
+  "building": {
+    "frontProcessBoundsPt": [
+      366.48,
+      132.6,
+      840.84,
+      677.28
+    ],
+    "frontBuildingBoundsPt": [
+      232.92,
+      132.6,
+      840.84,
+      677.28
+    ],
+    "planInternalBoundsPt": [
+      184.32,
+      218.52,
+      964.44,
+      601.8
+    ],
+    "planOuterDepthBoundsPt": [
+      179.88,
+      213.96,
+      968.88,
+      606.24
+    ],
+    "confirmedDimensionLabels": {
+      "frontOverallWidth": 34600,
+      "frontProcessWidth": 27000,
+      "frontOverallHeight": 31000,
+      "planOverallWidth": 34600,
+      "planProcessWidth": 27000,
+      "planOuterDepth": 17400,
+      "planInnerDepth": 17000
+    },
+    "dimensionUnitBoundary": "도면치수관례에따른mm상대변환.최종제작·시공단위는원문/계약확인. 박스기하정보와확정제작사양을구별.",
+    "relativeLevels": [
+      {
+        "yPdf": 677.28,
+        "heightM": 0
+      },
+      {
+        "yPdf": 571.8,
+        "heightM": 6
+      },
+      {
+        "yPdf": 448.92,
+        "heightM": 13
+      },
+      {
+        "yPdf": 343.44,
+        "heightM": 19
+      },
+      {
+        "yPdf": 229.2,
+        "heightM": 25.5
+      },
+      {
+        "yPdf": 132.6,
+        "heightM": 31
+      }
+    ],
+    "criticalPartialLevel": {
+      "heightM": 25.5,
+      "sourceSpanXPt": [
+        232.92,
+        577.32
+      ],
+      "note": "이높이수평마젠타구조선은건물왼쪽건조기구간에만있음.우측회수기구간까지전폭바닥을추가하면원문과달리장치와충돌."
+    },
+    "floorNameMapping": {
+      "status": "inferred",
+      "candidate": "상대13m구간급기팬을PPT4층,상대19m구간회수기설치기반을PPT5층으로읽을수있으나도면에층명직접라벨은없음.높이의상대치수와층명매핑을분리."
+    }
+  },
+  "cadDerivedProfiles": {
+    "boundary": "다음은PDF벡터실루엣과도면영역치수로역산한기하근사이며직접기입된제작치수아님. PDF선두께/중첩/투영부재를고려해단순실루엣용으로사용.",
+    "dryer": {
+      "planOuterCirclePt": [
+        393.84,
+        290.52,
+        587.88,
+        484.56
+      ],
+      "planSecondCirclePt": [
+        396.12,
+        292.8,
+        585.6,
+        482.28
+      ],
+      "planCircleCentrePt": [
+        490.86,
+        387.54
+      ],
+      "inferredOuterDiameterM": 8.6062,
+      "inferredSecondDiameterM": 8.4039,
+      "frontOuterCylinderPt": [
+        396.6,
+        228.24,
+        547.2,
+        343.44
+      ],
+      "frontInnerCylinderPt": [
+        398.16,
+        232.8,
+        545.76,
+        337.08
+      ],
+      "frontInnerConeEdgesPt": [
+        [
+          398.16,
+          337.08,
+          463.08,
+          494.04
+        ],
+        [
+          545.76,
+          337.08,
+          480.72,
+          494.04
+        ]
+      ],
+      "inferredCylinderInnerDiameterM": 8.4012,
+      "inferredCylinderInnerHeightM": 5.9355,
+      "inferredConeInnerHeightM": 8.934,
+      "inferredConeOutletDiameterM": 1.004,
+      "interpretation": "평면외곽8.61m/둘째원8.40m,정면내경8.40m·출구약1.00m가서로정합.전형적인짧은콘보다긴원뿔형실루엣을원문에맞춰재현할근거."
+    }
+  },
+  "items": [
+    {
+      "id": "E01",
+      "name": "기존 건조 챔버",
+      "kind": "dryer",
+      "confidence": "high",
+      "frontBoundsPt": [
+        396,
+        224,
+        553,
+        499
+      ],
+      "planBoundsPt": [
+        386,
+        287,
+        595,
+        494
+      ],
+      "frontBoundsNormalized": [
+        0.332494,
+        0.266033,
+        0.464316,
+        0.592637
+      ],
+      "planBoundsNormalized": [
+        0.324097,
+        0.340855,
+        0.49958,
+        0.586698
+      ],
+      "frontAnchorPt": [
+        471.96,
+        355
+      ],
+      "planAnchorPt": [
+        490.86,
+        387.54
+      ],
+      "center": [
+        5.9956,
+        18.3438,
+        7.4965
+      ],
+      "sizeFromProjectedBounds": [
+        8.9363,
+        15.6527,
+        9.181
+      ],
+      "coordinateStatus": "도면 투영의 시각 서베이 근사. 제작 치수·현장 측량값이 아님.",
+      "notes": [
+        "정면 원통/원뿔 외곽, 평면 원형 외곽을 대응. 평면에는 상부 덕트·링도 중첩되어 있으므로 모든 외곽을 몸체 직경으로 사용하지 않음.",
+        "직접 제조 직경은 확인하지 못함. 앞쪽원통 높이와하부원뿔 비례를 도면투영에 맞출 것.",
+        "상부 급기부/분배부는 E02로 분리. 하부 배출은 E03으로 연결."
+      ],
+      "sourceLocators": [
+        "정면도1쪽",
+        "평면도1쪽"
+      ],
+      "frontPlanXCheck": {
+        "frontXM": 6.0038,
+        "planXM": 5.9956,
+        "absDifferenceM": 0.0082,
+        "interpretation": "투영중심근사매칭"
+      },
+      "modelPlacementPriority": {
+        "x": "평면anchor우선인현재center값.중심차경고가있는기기는확정공통실물좌표로사용하지않음.",
+        "y": "정면anchor높이우선",
+        "z": "평면anchor깊이우선",
+        "projectionXSpanM": [
+          5.9956,
+          6.0038
+        ],
+        "spanMeaning": "두수작업anchor의X위치범위.실측오차막대/통계적신뢰구간아님."
+      },
+      "correspondenceStatus": "주요장치의X투영근사정합.깊이·높이는각도면anchor에서취함."
+    },
+    {
+      "id": "E02",
+      "name": "건조기 상부 급기·가열 연결부",
+      "kind": "dryer-top-air",
+      "confidence": "medium",
+      "frontBoundsPt": [
+        422,
+        195,
+        519,
+        229
+      ],
+      "planBoundsPt": [
+        441,
+        219,
+        579,
+        385
+      ],
+      "frontBoundsNormalized": [
+        0.354324,
+        0.231591,
+        0.435768,
+        0.271971
+      ],
+      "planBoundsNormalized": [
+        0.370277,
+        0.260095,
+        0.486146,
+        0.457245
+      ],
+      "frontAnchorPt": [
+        470.5,
+        212.0
+      ],
+      "planAnchorPt": [
+        510.0,
+        302.0
+      ],
+      "center": [
+        6.8445,
+        26.4832,
+        3.7025
+      ],
+      "sizeFromProjectedBounds": [
+        5.5211,
+        1.9352,
+        7.3625
+      ],
+      "coordinateStatus": "도면 투영의 시각 서베이 근사. 제작 치수·현장 측량값이 아님.",
+      "notes": [
+        "정면은 상부곡관과사각전이,평면은환형/접선형외곽. 단순돔만올리지말고곡관+사각전이를조합.",
+        "정확 버너/분배기 내부는 P&ID와 별도 대응."
+      ],
+      "sourceLocators": [
+        "정면도1쪽",
+        "평면도1쪽"
+      ],
+      "frontPlanXCheck": {
+        "frontXM": 5.9207,
+        "planXM": 6.8445,
+        "absDifferenceM": 0.9238,
+        "interpretation": "부품중심/투영범위상이또는매칭후보.정확대응으로쓰지않음"
+      },
+      "modelPlacementPriority": {
+        "x": "평면anchor우선인현재center값.중심차경고가있는기기는확정공통실물좌표로사용하지않음.",
+        "y": "정면anchor높이우선",
+        "z": "평면anchor깊이우선",
+        "projectionXSpanM": [
+          5.9207,
+          6.8445
+        ],
+        "spanMeaning": "두수작업anchor의X위치범위.실측오차막대/통계적신뢰구간아님."
+      },
+      "correspondenceStatus": "동일기능/인접투영영역의대응후보.중심기준과투영범위상이.",
+      "solidPlacementStatus": "비축척설명용개략.두투영동시정합제작좌표아님."
+    },
+    {
+      "id": "E03",
+      "name": "기존 하부 유동층/수평 제품 회수 장치",
+      "kind": "fluidizer",
+      "confidence": "medium",
+      "frontBoundsPt": [
+        456,
+        525,
+        648,
+        568
+      ],
+      "planBoundsPt": [
+        489,
+        362,
+        646,
+        413
+      ],
+      "frontBoundsNormalized": [
+        0.382872,
+        0.623515,
+        0.544081,
+        0.674584
+      ],
+      "planBoundsNormalized": [
+        0.410579,
+        0.429929,
+        0.542401,
+        0.490499
+      ],
+      "frontAnchorPt": [
+        552.0,
+        546.5
+      ],
+      "planAnchorPt": [
+        567.5,
+        387.5
+      ],
+      "center": [
+        9.3947,
+        7.4438,
+        7.4947
+      ],
+      "sizeFromProjectedBounds": [
+        10.9284,
+        2.4475,
+        2.262
+      ],
+      "coordinateStatus": "도면 투영의 시각 서베이 근사. 제작 치수·현장 측량값이 아님.",
+      "notes": [
+        "P&ID VIBRO FLUIDIZER와 실루엣을 대응할 수 있음.",
+        "긴 수평 직사각함체·지지다리·스프링 및복수유입관으로표현.",
+        "평면 도면에는 상부·하부 투영이 중첩되어 정확 깊이 외곽은 미확정."
+      ],
+      "sourceLocators": [
+        "정면도1쪽",
+        "평면도1쪽"
+      ],
+      "frontPlanXCheck": {
+        "frontXM": 10.5596,
+        "planXM": 9.3947,
+        "absDifferenceM": 1.1648,
+        "interpretation": "부품중심/투영범위상이또는매칭후보.정확대응으로쓰지않음"
+      },
+      "modelPlacementPriority": {
+        "x": "평면anchor우선인현재center값.중심차경고가있는기기는확정공통실물좌표로사용하지않음.",
+        "y": "정면anchor높이우선",
+        "z": "평면anchor깊이우선",
+        "projectionXSpanM": [
+          9.3947,
+          10.5596
+        ],
+        "spanMeaning": "두수작업anchor의X위치범위.실측오차막대/통계적신뢰구간아님."
+      },
+      "correspondenceStatus": "동일기능/인접투영영역의대응후보.중심기준과투영범위상이.",
+      "solidPlacementStatus": "비축척설명용개략.두투영동시정합제작좌표아님."
+    },
+    {
+      "id": "E04",
+      "name": "유동층 후단 경사 배출장치",
+      "kind": "inclined-discharge",
+      "confidence": "low",
+      "frontBoundsPt": [
+        638,
+        549,
+        667,
+        569
+      ],
+      "planBoundsPt": [
+        645,
+        379,
+        677,
+        399
+      ],
+      "frontBoundsNormalized": [
+        0.535684,
+        0.652019,
+        0.560034,
+        0.675772
+      ],
+      "planBoundsNormalized": [
+        0.541562,
+        0.450119,
+        0.56843,
+        0.473872
+      ],
+      "frontAnchorPt": [
+        652.5,
+        559.0
+      ],
+      "planAnchorPt": [
+        661.0,
+        389.0
+      ],
+      "center": [
+        13.5417,
+        6.7324,
+        7.5612
+      ],
+      "sizeFromProjectedBounds": [
+        1.6506,
+        1.1384,
+        0.887
+      ],
+      "coordinateStatus": "도면 투영의 시각 서베이 근사. 제작 치수·현장 측량값이 아님.",
+      "notes": [
+        "경사 스크린/배출기 같은 형상. 정확 명칭·태그는 미확정이므로 일반체로표현.",
+        "생략하지 말되 제품공정 연결선으로만 기능을 표시."
+      ],
+      "sourceLocators": [
+        "정면도1쪽",
+        "평면도1쪽"
+      ],
+      "frontPlanXCheck": {
+        "frontXM": 16.2799,
+        "planXM": 13.5417,
+        "absDifferenceM": 2.7382,
+        "interpretation": "부품중심/투영범위상이또는매칭후보.정확대응으로쓰지않음"
+      },
+      "modelPlacementPriority": {
+        "x": "평면anchor우선인현재center값.중심차경고가있는기기는확정공통실물좌표로사용하지않음.",
+        "y": "정면anchor높이우선",
+        "z": "평면anchor깊이우선",
+        "projectionXSpanM": [
+          13.5417,
+          16.2799
+        ],
+        "spanMeaning": "두수작업anchor의X위치범위.실측오차막대/통계적신뢰구간아님."
+      },
+      "correspondenceStatus": "동일실물대응미확정.정면영역과평면영역을분리보존.",
+      "solidPlacementStatus": "정확실물솔리드로병합금지.각도면별와이어/반투명영역으로보존권장.",
+      "recommendedRenderModes": [
+        "front projected outline",
+        "plan projected outline"
+      ]
+    },
+    {
+      "id": "E11",
+      "name": "기존 사이클론 1",
+      "kind": "cyclone",
+      "confidence": "medium",
+      "frontBoundsPt": [
+        624.6,
+        292,
+        670.6,
+        502
+      ],
+      "planBoundsPt": [
+        687.1,
+        303.4,
+        745.6999999999999,
+        361.8
+      ],
+      "frontBoundsNormalized": [
+        0.524433,
+        0.346793,
+        0.563056,
+        0.5962
+      ],
+      "planBoundsNormalized": [
+        0.57691,
+        0.360333,
+        0.626113,
+        0.429691
+      ],
+      "frontAnchorPt": [
+        647.6,
+        375
+      ],
+      "planAnchorPt": [
+        716.4,
+        332.2
+      ],
+      "center": [
+        15.9988,
+        17.2054,
+        5.042
+      ],
+      "sizeFromProjectedBounds": [
+        2.6183,
+        11.9529,
+        2.5902
+      ],
+      "coordinateStatus": "도면 투영의 시각 서베이 근사. 제작 치수·현장 측량값이 아님.",
+      "notes": [
+        "3개 장치가 공통 배기 헤더에 분기하는 집진군. 하나씩 차례로 통과하는 직렬 장치로 표현하지 않음.",
+        "원통·깊은 원뿔·하부 길게 내려오는 제품 회수관을 구분.",
+        "정면 bounds는 상부 배기부에서 하부 배출관까지의 조립영역이므로 이를 단일 원뿔 높이로 사용하지 않음."
+      ],
+      "sourceLocators": [
+        "기존 P&ID CYCLONE 3개",
+        "정면도 중앙 우측",
+        "평면도 우측 상부 3원형"
+      ],
+      "frontPlanXCheck": {
+        "frontXM": 16.001,
+        "planXM": 15.9988,
+        "absDifferenceM": 0.0022,
+        "interpretation": "투영중심근사매칭"
+      },
+      "modelPlacementPriority": {
+        "x": "평면anchor우선인현재center값.중심차경고가있는기기는확정공통실물좌표로사용하지않음.",
+        "y": "정면anchor높이우선",
+        "z": "평면anchor깊이우선",
+        "projectionXSpanM": [
+          15.9988,
+          16.001
+        ],
+        "spanMeaning": "두수작업anchor의X위치범위.실측오차막대/통계적신뢰구간아님."
+      },
+      "correspondenceStatus": "주요장치의X투영근사정합.깊이·높이는각도면anchor에서취함."
+    },
+    {
+      "id": "E12",
+      "name": "기존 사이클론 2",
+      "kind": "cyclone",
+      "confidence": "medium",
+      "frontBoundsPt": [
+        675.1,
+        292,
+        721.1,
+        489
+      ],
+      "planBoundsPt": [
+        751.9000000000001,
+        303.4,
+        810.5,
+        361.8
+      ],
+      "frontBoundsNormalized": [
+        0.566835,
+        0.346793,
+        0.605458,
+        0.58076
+      ],
+      "planBoundsNormalized": [
+        0.631318,
+        0.360333,
+        0.680521,
+        0.429691
+      ],
+      "frontAnchorPt": [
+        698.1,
+        375
+      ],
+      "planAnchorPt": [
+        781.2,
+        332.2
+      ],
+      "center": [
+        18.8729,
+        17.2054,
+        5.042
+      ],
+      "sizeFromProjectedBounds": [
+        2.6183,
+        11.213,
+        2.5902
+      ],
+      "coordinateStatus": "도면 투영의 시각 서베이 근사. 제작 치수·현장 측량값이 아님.",
+      "notes": [
+        "3개 장치가 공통 배기 헤더에 분기하는 집진군. 하나씩 차례로 통과하는 직렬 장치로 표현하지 않음.",
+        "원통·깊은 원뿔·하부 길게 내려오는 제품 회수관을 구분.",
+        "정면 bounds는 상부 배기부에서 하부 배출관까지의 조립영역이므로 이를 단일 원뿔 높이로 사용하지 않음."
+      ],
+      "sourceLocators": [
+        "기존 P&ID CYCLONE 3개",
+        "정면도 중앙 우측",
+        "평면도 우측 상부 3원형"
+      ],
+      "frontPlanXCheck": {
+        "frontXM": 18.8754,
+        "planXM": 18.8729,
+        "absDifferenceM": 0.0026,
+        "interpretation": "투영중심근사매칭"
+      },
+      "modelPlacementPriority": {
+        "x": "평면anchor우선인현재center값.중심차경고가있는기기는확정공통실물좌표로사용하지않음.",
+        "y": "정면anchor높이우선",
+        "z": "평면anchor깊이우선",
+        "projectionXSpanM": [
+          18.8729,
+          18.8754
+        ],
+        "spanMeaning": "두수작업anchor의X위치범위.실측오차막대/통계적신뢰구간아님."
+      },
+      "correspondenceStatus": "주요장치의X투영근사정합.깊이·높이는각도면anchor에서취함."
+    },
+    {
+      "id": "E13",
+      "name": "기존 사이클론 3",
+      "kind": "cyclone",
+      "confidence": "medium",
+      "frontBoundsPt": [
+        728.7,
+        292,
+        774.7,
+        480
+      ],
+      "planBoundsPt": [
+        820.6,
+        303.4,
+        879.1999999999999,
+        361.8
+      ],
+      "frontBoundsNormalized": [
+        0.611839,
+        0.346793,
+        0.650462,
+        0.570071
+      ],
+      "planBoundsNormalized": [
+        0.689001,
+        0.360333,
+        0.738203,
+        0.429691
+      ],
+      "frontAnchorPt": [
+        751.7,
+        375
+      ],
+      "planAnchorPt": [
+        849.9,
+        332.2
+      ],
+      "center": [
+        21.9199,
+        17.2054,
+        5.042
+      ],
+      "sizeFromProjectedBounds": [
+        2.6183,
+        10.7007,
+        2.5902
+      ],
+      "coordinateStatus": "도면 투영의 시각 서베이 근사. 제작 치수·현장 측량값이 아님.",
+      "notes": [
+        "3개 장치가 공통 배기 헤더에 분기하는 집진군. 하나씩 차례로 통과하는 직렬 장치로 표현하지 않음.",
+        "원통·깊은 원뿔·하부 길게 내려오는 제품 회수관을 구분.",
+        "정면 bounds는 상부 배기부에서 하부 배출관까지의 조립영역이므로 이를 단일 원뿔 높이로 사용하지 않음."
+      ],
+      "sourceLocators": [
+        "기존 P&ID CYCLONE 3개",
+        "정면도 중앙 우측",
+        "평면도 우측 상부 3원형"
+      ],
+      "frontPlanXCheck": {
+        "frontXM": 21.9263,
+        "planXM": 21.9199,
+        "absDifferenceM": 0.0064,
+        "interpretation": "투영중심근사매칭"
+      },
+      "modelPlacementPriority": {
+        "x": "평면anchor우선인현재center값.중심차경고가있는기기는확정공통실물좌표로사용하지않음.",
+        "y": "정면anchor높이우선",
+        "z": "평면anchor깊이우선",
+        "projectionXSpanM": [
+          21.9199,
+          21.9263
+        ],
+        "spanMeaning": "두수작업anchor의X위치범위.실측오차막대/통계적신뢰구간아님."
+      },
+      "correspondenceStatus": "주요장치의X투영근사정합.깊이·높이는각도면anchor에서취함."
+    },
+    {
+      "id": "E14",
+      "name": "사이클론 공통 상부 배기 헤더",
+      "kind": "exhaust-header",
+      "confidence": "high",
+      "frontBoundsPt": [
+        620,
+        289,
+        774,
+        311
+      ],
+      "planBoundsPt": [
+        711,
+        326,
+        853,
+        336
+      ],
+      "frontBoundsNormalized": [
+        0.520571,
+        0.34323,
+        0.649874,
+        0.369359
+      ],
+      "planBoundsNormalized": [
+        0.596977,
+        0.387173,
+        0.716205,
+        0.39905
+      ],
+      "frontAnchorPt": [
+        697.0,
+        300.0
+      ],
+      "planAnchorPt": [
+        782.0,
+        331.0
+      ],
+      "center": [
+        18.9083,
+        21.4743,
+        4.9888
+      ],
+      "sizeFromProjectedBounds": [
+        8.7655,
+        1.2522,
+        0.4435
+      ],
+      "coordinateStatus": "도면 투영의 시각 서베이 근사. 제작 치수·현장 측량값이 아님.",
+      "notes": [
+        "집진군 각 상부에서 공통 배기팬 쪽으로 연결되는 헤더.",
+        "이 헤더와 하부 제품회수라인 E15를 구분."
+      ],
+      "sourceLocators": [
+        "정면도1쪽",
+        "평면도1쪽"
+      ],
+      "frontPlanXCheck": {
+        "frontXM": 18.8128,
+        "planXM": 18.9083,
+        "absDifferenceM": 0.0955,
+        "interpretation": "투영중심근사매칭"
+      },
+      "modelPlacementPriority": {
+        "x": "평면anchor우선인현재center값.중심차경고가있는기기는확정공통실물좌표로사용하지않음.",
+        "y": "정면anchor높이우선",
+        "z": "평면anchor깊이우선",
+        "projectionXSpanM": [
+          18.8128,
+          18.9083
+        ],
+        "spanMeaning": "두수작업anchor의X위치범위.실측오차막대/통계적신뢰구간아님."
+      },
+      "correspondenceStatus": "주요장치의X투영근사정합.깊이·높이는각도면anchor에서취함."
+    },
+    {
+      "id": "E15",
+      "name": "사이클론 하부 제품 회수·이송 연결",
+      "kind": "product-return",
+      "confidence": "medium",
+      "frontBoundsPt": [
+        642,
+        464,
+        785,
+        505
+      ],
+      "planBoundsPt": [
+        703,
+        348,
+        852,
+        426
+      ],
+      "frontBoundsNormalized": [
+        0.539043,
+        0.551069,
+        0.65911,
+        0.599762
+      ],
+      "planBoundsNormalized": [
+        0.59026,
+        0.413302,
+        0.715365,
+        0.505938
+      ],
+      "frontAnchorPt": [
+        713.5,
+        484.5
+      ],
+      "planAnchorPt": [
+        777.5,
+        387.0
+      ],
+      "center": [
+        18.7088,
+        10.9728,
+        7.4725
+      ],
+      "sizeFromProjectedBounds": [
+        8.1394,
+        2.3337,
+        3.4595
+      ],
+      "coordinateStatus": "도면 투영의 시각 서베이 근사. 제작 치수·현장 측량값이 아님.",
+      "notes": [
+        "정면에서 비스듬한 수평회수관이 각 사이클론 하부와 연결.",
+        "가스가 흐르는 폐열회수 덕트와 색·굵기·라벨을 달리함."
+      ],
+      "sourceLocators": [
+        "정면도1쪽",
+        "평면도1쪽"
+      ],
+      "frontPlanXCheck": {
+        "frontXM": 19.752,
+        "planXM": 18.7088,
+        "absDifferenceM": 1.0432,
+        "interpretation": "부품중심/투영범위상이또는매칭후보.정확대응으로쓰지않음"
+      },
+      "modelPlacementPriority": {
+        "x": "평면anchor우선인현재center값.중심차경고가있는기기는확정공통실물좌표로사용하지않음.",
+        "y": "정면anchor높이우선",
+        "z": "평면anchor깊이우선",
+        "projectionXSpanM": [
+          18.7088,
+          19.752
+        ],
+        "spanMeaning": "두수작업anchor의X위치범위.실측오차막대/통계적신뢰구간아님."
+      },
+      "correspondenceStatus": "동일기능/인접투영영역의대응후보.중심기준과투영범위상이.",
+      "solidPlacementStatus": "비축척설명용개략.두투영동시정합제작좌표아님."
+    },
+    {
+      "id": "N01",
+      "name": "신규 열교환 코어 투영부",
+      "kind": "preheater-core",
+      "confidence": "high",
+      "frontBoundsPt": [
+        655,
+        233,
+        700,
+        286
+      ],
+      "planBoundsPt": [
+        727,
+        521,
+        780,
+        590
+      ],
+      "frontBoundsNormalized": [
+        0.549958,
+        0.276722,
+        0.587741,
+        0.339667
+      ],
+      "planBoundsNormalized": [
+        0.610411,
+        0.618765,
+        0.654912,
+        0.700713
+      ],
+      "frontAnchorPt": [
+        677.5,
+        259.5
+      ],
+      "planAnchorPt": [
+        753.5,
+        555.5
+      ],
+      "center": [
+        17.6443,
+        23.7795,
+        14.9459
+      ],
+      "sizeFromProjectedBounds": [
+        2.5613,
+        3.0167,
+        3.0603
+      ],
+      "coordinateStatus": "도면 투영의 시각 서베이 근사. 제작 치수·현장 측량값이 아님.",
+      "notes": [
+        "빨간 반복선으로 나타난 열교환 코어 영역을 양도면에서 대응.",
+        "평면약2.35m 폭×3.06m 깊이는 견적챔버 3000×2300과정합하나최종제작치수로단정하지않음.",
+        "내부 판/핀 수량은 도면 반복선의 직접 기계부품 수가 아님."
+      ],
+      "sourceLocators": [
+        "정면도1쪽",
+        "평면도1쪽"
+      ],
+      "frontPlanXCheck": {
+        "frontXM": 17.7029,
+        "planXM": 17.6443,
+        "absDifferenceM": 0.0586,
+        "interpretation": "투영중심근사매칭"
+      },
+      "modelPlacementPriority": {
+        "x": "평면anchor우선인현재center값.중심차경고가있는기기는확정공통실물좌표로사용하지않음.",
+        "y": "정면anchor높이우선",
+        "z": "평면anchor깊이우선",
+        "projectionXSpanM": [
+          17.6443,
+          17.7029
+        ],
+        "spanMeaning": "두수작업anchor의X위치범위.실측오차막대/통계적신뢰구간아님."
+      },
+      "correspondenceStatus": "주요장치의X투영근사정합.깊이·높이는각도면anchor에서취함."
+    },
+    {
+      "id": "N02",
+      "name": "신규 상부 챔버",
+      "kind": "preheater-upper",
+      "confidence": "medium",
+      "frontBoundsPt": [
+        658,
+        206,
+        699,
+        233
+      ],
+      "planBoundsPt": [
+        724,
+        518,
+        783,
+        593
+      ],
+      "frontBoundsNormalized": [
+        0.552477,
+        0.244656,
+        0.586902,
+        0.276722
+      ],
+      "planBoundsNormalized": [
+        0.607893,
+        0.615202,
+        0.657431,
+        0.704276
+      ],
+      "frontAnchorPt": [
+        677.5,
+        219.5
+      ],
+      "planAnchorPt": [
+        753.5,
+        555.5
+      ],
+      "center": [
+        17.6443,
+        26.0563,
+        14.9459
+      ],
+      "sizeFromProjectedBounds": [
+        2.3337,
+        1.5368,
+        3.3264
+      ],
+      "coordinateStatus": "도면 투영의 시각 서베이 근사. 제작 치수·현장 측량값이 아님.",
+      "notes": [
+        "상부 사각챔버와원형점검/접속구. 견적ITEM02 Size3000×2300×1450L.",
+        "상하챔버평면외곽은코어와겹침. 상부CIP노즐배관별도."
+      ],
+      "sourceLocators": [
+        "정면도1쪽",
+        "평면도1쪽"
+      ],
+      "frontPlanXCheck": {
+        "frontXM": 17.7029,
+        "planXM": 17.6443,
+        "absDifferenceM": 0.0586,
+        "interpretation": "투영중심근사매칭"
+      },
+      "modelPlacementPriority": {
+        "x": "평면anchor우선인현재center값.중심차경고가있는기기는확정공통실물좌표로사용하지않음.",
+        "y": "정면anchor높이우선",
+        "z": "평면anchor깊이우선",
+        "projectionXSpanM": [
+          17.6443,
+          17.7029
+        ],
+        "spanMeaning": "두수작업anchor의X위치범위.실측오차막대/통계적신뢰구간아님."
+      },
+      "correspondenceStatus": "주요장치의X투영근사정합.깊이·높이는각도면anchor에서취함."
+    },
+    {
+      "id": "N03",
+      "name": "신규 하부 챔버·전이부",
+      "kind": "preheater-lower",
+      "confidence": "medium",
+      "frontBoundsPt": [
+        655,
+        285,
+        702,
+        315
+      ],
+      "planBoundsPt": [
+        724,
+        518,
+        783,
+        593
+      ],
+      "frontBoundsNormalized": [
+        0.549958,
+        0.33848,
+        0.589421,
+        0.374109
+      ],
+      "planBoundsNormalized": [
+        0.607893,
+        0.615202,
+        0.657431,
+        0.704276
+      ],
+      "frontAnchorPt": [
+        677.5,
+        300
+      ],
+      "planAnchorPt": [
+        753.5,
+        555.5
+      ],
+      "center": [
+        17.6443,
+        21.4743,
+        14.9459
+      ],
+      "sizeFromProjectedBounds": [
+        2.6752,
+        1.7076,
+        3.3264
+      ],
+      "coordinateStatus": "도면 투영의 시각 서베이 근사. 제작 치수·현장 측량값이 아님.",
+      "notes": [
+        "견적ITEM03 Size3000×2300×1400L. 하부덕트/배기팬투영과겹치는영역이있음.",
+        "하부코어/챔버와 팬을 동일 기기로 합치지 않음."
+      ],
+      "sourceLocators": [
+        "정면도1쪽",
+        "평면도1쪽"
+      ],
+      "frontPlanXCheck": {
+        "frontXM": 17.7029,
+        "planXM": 17.6443,
+        "absDifferenceM": 0.0586,
+        "interpretation": "투영중심근사매칭"
+      },
+      "modelPlacementPriority": {
+        "x": "평면anchor우선인현재center값.중심차경고가있는기기는확정공통실물좌표로사용하지않음.",
+        "y": "정면anchor높이우선",
+        "z": "평면anchor깊이우선",
+        "projectionXSpanM": [
+          17.6443,
+          17.7029
+        ],
+        "spanMeaning": "두수작업anchor의X위치범위.실측오차막대/통계적신뢰구간아님."
+      },
+      "correspondenceStatus": "주요장치의X투영근사정합.깊이·높이는각도면anchor에서취함."
+    },
+    {
+      "id": "N04",
+      "name": "교체 배기팬·모터",
+      "kind": "exhaust-fan",
+      "confidence": "high",
+      "frontBoundsPt": [
+        658,
+        277,
+        709,
+        316
+      ],
+      "planBoundsPt": [
+        737.76,
+        453.0,
+        785.0,
+        501.0
+      ],
+      "frontBoundsNormalized": [
+        0.552477,
+        0.328979,
+        0.595298,
+        0.375297
+      ],
+      "planBoundsNormalized": [
+        0.619446,
+        0.538005,
+        0.65911,
+        0.595012
+      ],
+      "frontAnchorPt": [
+        690,
+        292
+      ],
+      "planAnchorPt": [
+        753.42,
+        465.06
+      ],
+      "center": [
+        17.6407,
+        21.9297,
+        10.9347
+      ],
+      "sizeFromProjectedBounds": [
+        2.9029,
+        2.2198,
+        2.1289
+      ],
+      "coordinateStatus": "도면 투영의 시각 서베이 근사. 제작 치수·현장 측량값이 아님.",
+      "notes": [
+        "평면에서 회수코어보다북측(작은Z)에있어정면에서겹쳐보임.",
+        "순수팬하우징곡면bbox는plan737.76,453.0..769.08,477.12,모터/받침까지포함영역은더큼.",
+        "신규200kW정격,기존P&ID C102220kW;별도급기팬E20과혼동금지."
+      ],
+      "sourceLocators": [
+        "견적ITEM07",
+        "제작스케줄 배기팬철거설치",
+        "정면/평면녹색팬조립체"
+      ],
+      "frontPlanXCheck": {
+        "frontXM": 18.4144,
+        "planXM": 17.6407,
+        "absDifferenceM": 0.7736,
+        "interpretation": "부품중심/투영범위상이또는매칭후보.정확대응으로쓰지않음"
+      },
+      "modelPlacementPriority": {
+        "x": "평면anchor우선인현재center값.중심차경고가있는기기는확정공통실물좌표로사용하지않음.",
+        "y": "정면anchor높이우선",
+        "z": "평면anchor깊이우선",
+        "projectionXSpanM": [
+          17.6407,
+          18.4144
+        ],
+        "spanMeaning": "두수작업anchor의X위치범위.실측오차막대/통계적신뢰구간아님."
+      },
+      "correspondenceStatus": "동일기능/인접투영영역의대응후보.중심기준과투영범위상이.",
+      "solidPlacementStatus": "비축척설명용개략.두투영동시정합제작좌표아님."
+    },
+    {
+      "id": "N05",
+      "name": "열교환기 지지 프레임/접근 사다리",
+      "kind": "support-frame",
+      "confidence": "high",
+      "frontBoundsPt": [
+        630,
+        260,
+        719,
+        344
+      ],
+      "planBoundsPt": [
+        684,
+        433,
+        790,
+        513
+      ],
+      "frontBoundsNormalized": [
+        0.528967,
+        0.308789,
+        0.603694,
+        0.408551
+      ],
+      "planBoundsNormalized": [
+        0.574307,
+        0.514252,
+        0.663308,
+        0.609264
+      ],
+      "frontAnchorPt": [
+        674.5,
+        302.0
+      ],
+      "planAnchorPt": [
+        737.0,
+        473.0
+      ],
+      "center": [
+        16.9125,
+        21.3605,
+        11.2868
+      ],
+      "sizeFromProjectedBounds": [
+        5.0658,
+        4.7812,
+        3.5482
+      ],
+      "coordinateStatus": "도면 투영의 시각 서베이 근사. 제작 치수·현장 측량값이 아님.",
+      "notes": [
+        "전면기둥/상부보/프레임외곽과왼쪽사다리.",
+        "견적H-beam200×200,Channel150×75,Baseplate350×350×25t,Ladder와대응.",
+        "시각범위의 프레임이고 정확 부재/접합구조는 미확정."
+      ],
+      "sourceLocators": [
+        "정면도1쪽",
+        "평면도1쪽"
+      ],
+      "frontPlanXCheck": {
+        "frontXM": 17.5321,
+        "planXM": 16.9125,
+        "absDifferenceM": 0.6196,
+        "interpretation": "부품중심/투영범위상이또는매칭후보.정확대응으로쓰지않음"
+      },
+      "modelPlacementPriority": {
+        "x": "평면anchor우선인현재center값.중심차경고가있는기기는확정공통실물좌표로사용하지않음.",
+        "y": "정면anchor높이우선",
+        "z": "평면anchor깊이우선",
+        "projectionXSpanM": [
+          16.9125,
+          17.5321
+        ],
+        "spanMeaning": "두수작업anchor의X위치범위.실측오차막대/통계적신뢰구간아님."
+      },
+      "correspondenceStatus": "동일기능/인접투영영역의대응후보.중심기준과투영범위상이.",
+      "solidPlacementStatus": "비축척설명용개략.두투영동시정합제작좌표아님."
+    },
+    {
+      "id": "N06",
+      "name": "급기 필터/사각-원형 전이부",
+      "kind": "supply-filter",
+      "confidence": "medium",
+      "frontBoundsPt": [
+        618,
+        235,
+        655,
+        258
+      ],
+      "planBoundsPt": [
+        688,
+        521,
+        727,
+        590
+      ],
+      "frontBoundsNormalized": [
+        0.518892,
+        0.279097,
+        0.549958,
+        0.306413
+      ],
+      "planBoundsNormalized": [
+        0.577666,
+        0.618765,
+        0.610411,
+        0.700713
+      ],
+      "frontAnchorPt": [
+        636.5,
+        246.5
+      ],
+      "planAnchorPt": [
+        707.5,
+        555.5
+      ],
+      "center": [
+        15.6041,
+        24.5195,
+        14.9459
+      ],
+      "sizeFromProjectedBounds": [
+        2.106,
+        1.3091,
+        3.0603
+      ],
+      "coordinateStatus": "도면 투영의 시각 서베이 근사. 제작 치수·현장 측량값이 아님.",
+      "notes": [
+        "견적ITEM05급기필터 및ITEM04 Heatingairoutduct전이부가단순화가능.",
+        "정확필터박스와사각전이부각각의정면투영역은제작도없어분리식별불확실. 원문P&ID입구필터기호로존재를확인."
+      ],
+      "sourceLocators": [
+        "정면도1쪽",
+        "평면도1쪽"
+      ],
+      "frontPlanXCheck": {
+        "frontXM": 15.3692,
+        "planXM": 15.6041,
+        "absDifferenceM": 0.2349,
+        "interpretation": "투영중심근사매칭"
+      },
+      "modelPlacementPriority": {
+        "x": "평면anchor우선인현재center값.중심차경고가있는기기는확정공통실물좌표로사용하지않음.",
+        "y": "정면anchor높이우선",
+        "z": "평면anchor깊이우선",
+        "projectionXSpanM": [
+          15.3692,
+          15.6041
+        ],
+        "spanMeaning": "두수작업anchor의X위치범위.실측오차막대/통계적신뢰구간아님."
+      },
+      "correspondenceStatus": "주요장치의X투영근사정합.깊이·높이는각도면anchor에서취함."
+    },
+    {
+      "id": "N07",
+      "name": "CIP 헤더·세척 분기관",
+      "kind": "cip-header",
+      "confidence": "medium",
+      "frontBoundsPt": [
+        658,
+        201,
+        704,
+        236
+      ],
+      "planBoundsPt": [
+        724,
+        516,
+        787,
+        594
+      ],
+      "frontBoundsNormalized": [
+        0.552477,
+        0.238717,
+        0.5911,
+        0.280285
+      ],
+      "planBoundsNormalized": [
+        0.607893,
+        0.612827,
+        0.660789,
+        0.705463
+      ],
+      "frontAnchorPt": [
+        681.0,
+        218.5
+      ],
+      "planAnchorPt": [
+        755.5,
+        555.0
+      ],
+      "center": [
+        17.733,
+        26.1132,
+        14.9237
+      ],
+      "sizeFromProjectedBounds": [
+        2.6183,
+        1.9922,
+        3.4595
+      ],
+      "coordinateStatus": "도면 투영의 시각 서베이 근사. 제작 치수·현장 측량값이 아님.",
+      "notes": [
+        "원문P&ID에CIP SUPPLY,코어상부로내려오는다수분기표시.",
+        "기구위치는개념배치;노즐수량·간격을확정치수로만들지않음."
+      ],
+      "sourceLocators": [
+        "정면도1쪽",
+        "평면도1쪽"
+      ],
+      "frontPlanXCheck": {
+        "frontXM": 17.9021,
+        "planXM": 17.733,
+        "absDifferenceM": 0.1691,
+        "interpretation": "투영중심근사매칭"
+      },
+      "modelPlacementPriority": {
+        "x": "평면anchor우선인현재center값.중심차경고가있는기기는확정공통실물좌표로사용하지않음.",
+        "y": "정면anchor높이우선",
+        "z": "평면anchor깊이우선",
+        "projectionXSpanM": [
+          17.733,
+          17.9021
+        ],
+        "spanMeaning": "두수작업anchor의X위치범위.실측오차막대/통계적신뢰구간아님."
+      },
+      "correspondenceStatus": "주요장치의X투영근사정합.깊이·높이는각도면anchor에서취함."
+    },
+    {
+      "id": "E20",
+      "name": "4층 급기 송풍기·모터",
+      "kind": "supply-fan",
+      "confidence": "high",
+      "frontBoundsPt": [
+        381,
+        412,
+        427,
+        448
+      ],
+      "planBoundsPt": [
+        375,
+        493,
+        438,
+        557
+      ],
+      "frontBoundsNormalized": [
+        0.319899,
+        0.489311,
+        0.358522,
+        0.532067
+      ],
+      "planBoundsNormalized": [
+        0.314861,
+        0.585511,
+        0.367758,
+        0.66152
+      ],
+      "frontAnchorPt": [
+        408.5,
+        429
+      ],
+      "planAnchorPt": [
+        408.5,
+        520
+      ],
+      "center": [
+        2.3427,
+        14.1318,
+        13.3714
+      ],
+      "sizeFromProjectedBounds": [
+        2.6183,
+        2.0491,
+        2.8386
+      ],
+      "coordinateStatus": "도면 투영의 시각 서베이 근사. 제작 치수·현장 측량값이 아님.",
+      "notes": [
+        "PPT사진과4층라벨에직접대응.",
+        "신규C102배기팬과분리.기존C103급기팬계통.",
+        "좌측 모터, 원형 흡입부가 보이는 원심팬 하우징, 기존수직급기덕트로연결."
+      ],
+      "sourceLocators": [
+        "설치도PPT2 4층송풍기",
+        "기존P&ID C103",
+        "정면좌측낮은팬"
+      ],
+      "frontPlanXCheck": {
+        "frontXM": 2.3917,
+        "planXM": 2.3427,
+        "absDifferenceM": 0.049,
+        "interpretation": "투영중심근사매칭"
+      },
+      "modelPlacementPriority": {
+        "x": "평면anchor우선인현재center값.중심차경고가있는기기는확정공통실물좌표로사용하지않음.",
+        "y": "정면anchor높이우선",
+        "z": "평면anchor깊이우선",
+        "projectionXSpanM": [
+          2.3427,
+          2.3917
+        ],
+        "spanMeaning": "두수작업anchor의X위치범위.실측오차막대/통계적신뢰구간아님."
+      },
+      "correspondenceStatus": "주요장치의X투영근사정합.깊이·높이는각도면anchor에서취함."
+    },
+    {
+      "id": "E21",
+      "name": "습식집진기 본체",
+      "kind": "wet-scrubber",
+      "confidence": "high",
+      "frontBoundsPt": [
+        767,
+        306,
+        822,
+        429
+      ],
+      "planBoundsPt": [
+        870,
+        405,
+        928,
+        475
+      ],
+      "frontBoundsNormalized": [
+        0.643997,
+        0.36342,
+        0.690176,
+        0.509501
+      ],
+      "planBoundsNormalized": [
+        0.730479,
+        0.480998,
+        0.779177,
+        0.564133
+      ],
+      "frontAnchorPt": [
+        794.4,
+        368
+      ],
+      "planAnchorPt": [
+        906,
+        440
+      ],
+      "center": [
+        24.408,
+        17.6038,
+        9.8232
+      ],
+      "sizeFromProjectedBounds": [
+        3.1305,
+        7.001,
+        3.1047
+      ],
+      "coordinateStatus": "도면 투영의 시각 서베이 근사. 제작 치수·현장 측량값이 아님.",
+      "notes": [
+        "우측원통+하부원뿔과상부긴배기스택E22. 기존P&ID WET SCRUBBER.",
+        "정면두입출구덕트와신규회수기후단배기덕트가중첩."
+      ],
+      "sourceLocators": [
+        "정면도1쪽",
+        "평면도1쪽"
+      ],
+      "frontPlanXCheck": {
+        "frontXM": 24.3567,
+        "planXM": 24.408,
+        "absDifferenceM": 0.0514,
+        "interpretation": "투영중심근사매칭"
+      },
+      "modelPlacementPriority": {
+        "x": "평면anchor우선인현재center값.중심차경고가있는기기는확정공통실물좌표로사용하지않음.",
+        "y": "정면anchor높이우선",
+        "z": "평면anchor깊이우선",
+        "projectionXSpanM": [
+          24.3567,
+          24.408
+        ],
+        "spanMeaning": "두수작업anchor의X위치범위.실측오차막대/통계적신뢰구간아님."
+      },
+      "correspondenceStatus": "주요장치의X투영근사정합.깊이·높이는각도면anchor에서취함."
+    },
+    {
+      "id": "E22",
+      "name": "습식집진기 배기 스택",
+      "kind": "stack",
+      "confidence": "medium",
+      "frontBoundsPt": [
+        776,
+        113,
+        811,
+        307
+      ],
+      "planBoundsPt": [
+        886,
+        421,
+        920,
+        459
+      ],
+      "frontBoundsNormalized": [
+        0.651553,
+        0.134204,
+        0.68094,
+        0.364608
+      ],
+      "planBoundsNormalized": [
+        0.743913,
+        0.5,
+        0.77246,
+        0.545131
+      ],
+      "frontAnchorPt": [
+        793.5,
+        210.0
+      ],
+      "planAnchorPt": [
+        903.0,
+        440.0
+      ],
+      "center": [
+        24.275,
+        26.597,
+        9.8232
+      ],
+      "sizeFromProjectedBounds": [
+        1.9922,
+        11.0422,
+        1.6854
+      ],
+      "coordinateStatus": "도면 투영의 시각 서베이 근사. 제작 치수·현장 측량값이 아님.",
+      "notes": [
+        "정면에서 지붕보다 위로 솟는 직선스택. 실제높이도면투영근사.",
+        "원문평면에서는집진기중심또는접속원형으로겹쳐보임."
+      ],
+      "sourceLocators": [
+        "정면도1쪽",
+        "평면도1쪽"
+      ],
+      "frontPlanXCheck": {
+        "frontXM": 24.3055,
+        "planXM": 24.275,
+        "absDifferenceM": 0.0305,
+        "interpretation": "투영중심근사매칭"
+      },
+      "modelPlacementPriority": {
+        "x": "평면anchor우선인현재center값.중심차경고가있는기기는확정공통실물좌표로사용하지않음.",
+        "y": "정면anchor높이우선",
+        "z": "평면anchor깊이우선",
+        "projectionXSpanM": [
+          24.275,
+          24.3055
+        ],
+        "spanMeaning": "두수작업anchor의X위치범위.실측오차막대/통계적신뢰구간아님."
+      },
+      "correspondenceStatus": "주요장치의X투영근사정합.깊이·높이는각도면anchor에서취함."
+    },
+    {
+      "id": "E23",
+      "name": "습식집진 하부 보조탱크/드레인",
+      "kind": "wet-tank",
+      "confidence": "medium",
+      "frontBoundsPt": [
+        800,
+        521,
+        843,
+        569
+      ],
+      "planBoundsPt": [
+        919,
+        405,
+        951,
+        438
+      ],
+      "frontBoundsNormalized": [
+        0.671704,
+        0.618765,
+        0.707809,
+        0.675772
+      ],
+      "planBoundsNormalized": [
+        0.77162,
+        0.480998,
+        0.798489,
+        0.52019
+      ],
+      "frontAnchorPt": [
+        820.5,
+        546
+      ],
+      "planAnchorPt": [
+        934.5,
+        416.5
+      ],
+      "center": [
+        25.6721,
+        7.4723,
+        8.7809
+      ],
+      "sizeFromProjectedBounds": [
+        2.4475,
+        2.7321,
+        1.4636
+      ],
+      "coordinateStatus": "도면 투영의 시각 서베이 근사. 제작 치수·현장 측량값이 아님.",
+      "notes": [
+        "위 집진기와 아래 원형탱크 사이에가는배수/순환연결관.",
+        "기존P&ID WET SCRUBBER TANK 후보지만기기제조태그확정X."
+      ],
+      "sourceLocators": [
+        "정면도1쪽",
+        "평면도1쪽"
+      ],
+      "frontPlanXCheck": {
+        "frontXM": 25.8423,
+        "planXM": 25.6721,
+        "absDifferenceM": 0.1702,
+        "interpretation": "투영중심근사매칭"
+      },
+      "modelPlacementPriority": {
+        "x": "평면anchor우선인현재center값.중심차경고가있는기기는확정공통실물좌표로사용하지않음.",
+        "y": "정면anchor높이우선",
+        "z": "평면anchor깊이우선",
+        "projectionXSpanM": [
+          25.6721,
+          25.8423
+        ],
+        "spanMeaning": "두수작업anchor의X위치범위.실측오차막대/통계적신뢰구간아님."
+      },
+      "correspondenceStatus": "주요장치의X투영근사정합.깊이·높이는각도면anchor에서취함."
+    },
+    {
+      "id": "U01",
+      "name": "하부 교반 보조탱크",
+      "kind": "utility-agitated-tank",
+      "confidence": "medium",
+      "frontBoundsPt": [
+        372,
+        615,
+        418,
+        677
+      ],
+      "planBoundsPt": [
+        366,
+        229,
+        402,
+        263
+      ],
+      "frontBoundsNormalized": [
+        0.312343,
+        0.730404,
+        0.350966,
+        0.804038
+      ],
+      "planBoundsNormalized": [
+        0.307305,
+        0.271971,
+        0.337531,
+        0.312352
+      ],
+      "frontAnchorPt": [
+        397,
+        649
+      ],
+      "planAnchorPt": [
+        385,
+        245
+      ],
+      "center": [
+        1.3004,
+        1.6097,
+        1.1745
+      ],
+      "sizeFromProjectedBounds": [
+        2.6183,
+        3.529,
+        1.508
+      ],
+      "coordinateStatus": "도면 투영의 시각 서베이 근사. 제작 치수·현장 측량값이 아님.",
+      "notes": [
+        "정면하부좌측:상부모터/뚜껑/원통/원뿔/다리·측면가는배관.",
+        "평면상부좌측원형설비와위치대응추정. CIP/온수탱크실제기능은미확정."
+      ],
+      "sourceLocators": [
+        "정면도1쪽",
+        "평면도1쪽"
+      ],
+      "frontPlanXCheck": {
+        "frontXM": 1.7372,
+        "planXM": 1.3004,
+        "absDifferenceM": 0.4367,
+        "interpretation": "투영중심근사매칭"
+      },
+      "modelPlacementPriority": {
+        "x": "평면anchor우선인현재center값.중심차경고가있는기기는확정공통실물좌표로사용하지않음.",
+        "y": "정면anchor높이우선",
+        "z": "평면anchor깊이우선",
+        "projectionXSpanM": [
+          1.3004,
+          1.7372
+        ],
+        "spanMeaning": "두수작업anchor의X위치범위.실측오차막대/통계적신뢰구간아님."
+      },
+      "correspondenceStatus": "주요장치의X투영근사정합.깊이·높이는각도면anchor에서취함."
+    },
+    {
+      "id": "U02",
+      "name": "하부 보조 캐비닛",
+      "kind": "utility-cabinet",
+      "confidence": "low",
+      "frontBoundsPt": [
+        432,
+        646,
+        460,
+        677
+      ],
+      "planBoundsPt": [
+        440,
+        229,
+        480,
+        257
+      ],
+      "frontBoundsNormalized": [
+        0.36272,
+        0.767221,
+        0.38623,
+        0.804038
+      ],
+      "planBoundsNormalized": [
+        0.369437,
+        0.271971,
+        0.403023,
+        0.305226
+      ],
+      "frontAnchorPt": [
+        446.0,
+        661.5
+      ],
+      "planAnchorPt": [
+        460.0,
+        243.0
+      ],
+      "center": [
+        4.6268,
+        0.8982,
+        1.0857
+      ],
+      "sizeFromProjectedBounds": [
+        1.5937,
+        1.7645,
+        1.2419
+      ],
+      "coordinateStatus": "도면 투영의 시각 서베이 근사. 제작 치수·현장 측량값이 아님.",
+      "notes": [
+        "정면보조탱크옆사각장치와평면상부좌측사각영역의대응후보.",
+        "열원/펌프/캐비닛명칭미확정. 일반상자형상+미확정라벨."
+      ],
+      "sourceLocators": [
+        "정면도1쪽",
+        "평면도1쪽"
+      ],
+      "frontPlanXCheck": {
+        "frontXM": 4.5262,
+        "planXM": 4.6268,
+        "absDifferenceM": 0.1007,
+        "interpretation": "투영중심근사매칭"
+      },
+      "modelPlacementPriority": {
+        "x": "평면anchor우선인현재center값.중심차경고가있는기기는확정공통실물좌표로사용하지않음.",
+        "y": "정면anchor높이우선",
+        "z": "평면anchor깊이우선",
+        "projectionXSpanM": [
+          4.5262,
+          4.6268
+        ],
+        "spanMeaning": "두수작업anchor의X위치범위.실측오차막대/통계적신뢰구간아님."
+      },
+      "correspondenceStatus": "주요장치의X투영근사정합.깊이·높이는각도면anchor에서취함."
+    },
+    {
+      "id": "U11",
+      "name": "기존 보조 송풍/가열 모듈 1",
+      "kind": "aux-module",
+      "confidence": "low",
+      "frontBoundsPt": [
+        463,
+        417,
+        486,
+        448
+      ],
+      "planBoundsPt": null,
+      "frontBoundsNormalized": [
+        0.388749,
+        0.495249,
+        0.40806,
+        0.532067
+      ],
+      "planBoundsNormalized": null,
+      "frontAnchorPt": [
+        474.5,
+        432.5
+      ],
+      "planAnchorPt": null,
+      "center": [
+        6.1484,
+        13.9326,
+        null
+      ],
+      "sizeFromProjectedBounds": [
+        1.3091,
+        1.7645,
+        null
+      ],
+      "coordinateStatus": "도면 투영의 시각 서베이 근사. 제작 치수·현장 측량값이 아님.",
+      "notes": [
+        "정면유동층상부주변의4개작은기계실루엣중하나.",
+        "각P&ID팬·히터섹션과개별태그매핑은미확정.",
+        "도면보이는수량/외곽은재현하되새로운기능·사양을추정하지않음."
+      ],
+      "sourceLocators": [
+        "정면도1쪽",
+        "평면도1쪽"
+      ]
+    },
+    {
+      "id": "U12",
+      "name": "기존 보조 송풍/가열 모듈 2",
+      "kind": "aux-module",
+      "confidence": "low",
+      "frontBoundsPt": [
+        515,
+        417,
+        538,
+        448
+      ],
+      "planBoundsPt": null,
+      "frontBoundsNormalized": [
+        0.43241,
+        0.495249,
+        0.451721,
+        0.532067
+      ],
+      "planBoundsNormalized": null,
+      "frontAnchorPt": [
+        526.5,
+        432.5
+      ],
+      "planAnchorPt": null,
+      "center": [
+        9.1081,
+        13.9326,
+        null
+      ],
+      "sizeFromProjectedBounds": [
+        1.3091,
+        1.7645,
+        null
+      ],
+      "coordinateStatus": "도면 투영의 시각 서베이 근사. 제작 치수·현장 측량값이 아님.",
+      "notes": [
+        "정면유동층상부주변의4개작은기계실루엣중하나.",
+        "각P&ID팬·히터섹션과개별태그매핑은미확정.",
+        "도면보이는수량/외곽은재현하되새로운기능·사양을추정하지않음."
+      ],
+      "sourceLocators": [
+        "정면도1쪽",
+        "평면도1쪽"
+      ]
+    },
+    {
+      "id": "U13",
+      "name": "기존 보조 송풍/가열 모듈 3",
+      "kind": "aux-module",
+      "confidence": "low",
+      "frontBoundsPt": [
+        567,
+        417,
+        590,
+        448
+      ],
+      "planBoundsPt": null,
+      "frontBoundsNormalized": [
+        0.476071,
+        0.495249,
+        0.495382,
+        0.532067
+      ],
+      "planBoundsNormalized": null,
+      "frontAnchorPt": [
+        578.5,
+        432.5
+      ],
+      "planAnchorPt": null,
+      "center": [
+        12.0679,
+        13.9326,
+        null
+      ],
+      "sizeFromProjectedBounds": [
+        1.3091,
+        1.7645,
+        null
+      ],
+      "coordinateStatus": "도면 투영의 시각 서베이 근사. 제작 치수·현장 측량값이 아님.",
+      "notes": [
+        "정면유동층상부주변의4개작은기계실루엣중하나.",
+        "각P&ID팬·히터섹션과개별태그매핑은미확정.",
+        "도면보이는수량/외곽은재현하되새로운기능·사양을추정하지않음."
+      ],
+      "sourceLocators": [
+        "정면도1쪽",
+        "평면도1쪽"
+      ]
+    },
+    {
+      "id": "U14",
+      "name": "기존 보조 송풍/가열 모듈 4",
+      "kind": "aux-module",
+      "confidence": "low",
+      "frontBoundsPt": [
+        606,
+        417,
+        629,
+        448
+      ],
+      "planBoundsPt": null,
+      "frontBoundsNormalized": [
+        0.508816,
+        0.495249,
+        0.528128,
+        0.532067
+      ],
+      "planBoundsNormalized": null,
+      "frontAnchorPt": [
+        617.5,
+        432.5
+      ],
+      "planAnchorPt": null,
+      "center": [
+        14.2878,
+        13.9326,
+        null
+      ],
+      "sizeFromProjectedBounds": [
+        1.3091,
+        1.7645,
+        null
+      ],
+      "coordinateStatus": "도면 투영의 시각 서베이 근사. 제작 치수·현장 측량값이 아님.",
+      "notes": [
+        "정면유동층상부주변의4개작은기계실루엣중하나.",
+        "각P&ID팬·히터섹션과개별태그매핑은미확정.",
+        "도면보이는수량/외곽은재현하되새로운기능·사양을추정하지않음."
+      ],
+      "sourceLocators": [
+        "정면도1쪽",
+        "평면도1쪽"
+      ]
+    },
+    {
+      "id": "P01",
+      "name": "평면 우측 하부 X표 사각 영역",
+      "kind": "unidentified-plan-outline",
+      "confidence": "low",
+      "frontBoundsPt": null,
+      "planBoundsPt": [
+        875,
+        539,
+        964,
+        601
+      ],
+      "frontBoundsNormalized": null,
+      "planBoundsNormalized": [
+        0.734677,
+        0.640143,
+        0.809404,
+        0.713777
+      ],
+      "frontAnchorPt": null,
+      "planAnchorPt": [
+        919.5,
+        570.0
+      ],
+      "center": [
+        25.0068,
+        null,
+        15.589
+      ],
+      "sizeFromProjectedBounds": [
+        null,
+        null,
+        2.7499
+      ],
+      "coordinateStatus": "도면 투영의 시각 서베이 근사. 제작 치수·현장 측량값이 아님.",
+      "notes": [
+        "상자모양처럼보이나개구부/샤프트/장비기호중정확해석미확정.",
+        "3D솔리드장비로발명하지말고해당위치에얇은와이어/해칭표시로보존."
+      ],
+      "sourceLocators": [
+        "정면도1쪽",
+        "평면도1쪽"
+      ]
+    },
+    {
+      "id": "P02",
+      "name": "건조기 우측 대각 계단/접근 구조",
+      "kind": "access-stair",
+      "confidence": "medium",
+      "frontBoundsPt": [
+        459,
+        211,
+        613,
+        344
+      ],
+      "planBoundsPt": [
+        355,
+        571,
+        625,
+        601
+      ],
+      "frontBoundsNormalized": [
+        0.38539,
+        0.250594,
+        0.514694,
+        0.408551
+      ],
+      "planBoundsNormalized": [
+        0.298069,
+        0.678147,
+        0.524769,
+        0.713777
+      ],
+      "frontAnchorPt": [
+        536.0,
+        277.5
+      ],
+      "planAnchorPt": [
+        490.0,
+        586.0
+      ],
+      "center": [
+        5.9574,
+        22.755,
+        16.2986
+      ],
+      "sizeFromProjectedBounds": [
+        8.7655,
+        7.5702,
+        1.3306
+      ],
+      "coordinateStatus": "도면 투영의 시각 서베이 근사. 제작 치수·현장 측량값이 아님.",
+      "notes": [
+        "정면왼쪽상층에서우측중층으로내려가는대각선기존접근구조.",
+        "평면남측긴구간의단차/사다리표현과연관후보;정확동일구조매핑은미확정."
+      ],
+      "sourceLocators": [
+        "정면도1쪽",
+        "평면도1쪽"
+      ],
+      "frontPlanXCheck": {
+        "frontXM": 9.6489,
+        "planXM": 5.9574,
+        "absDifferenceM": 3.6915,
+        "interpretation": "부품중심/투영범위상이또는매칭후보.정확대응으로쓰지않음"
+      },
+      "modelPlacementPriority": {
+        "x": "평면anchor우선인현재center값.중심차경고가있는기기는확정공통실물좌표로사용하지않음.",
+        "y": "정면anchor높이우선",
+        "z": "평면anchor깊이우선",
+        "projectionXSpanM": [
+          5.9574,
+          9.6489
+        ],
+        "spanMeaning": "두수작업anchor의X위치범위.실측오차막대/통계적신뢰구간아님."
+      },
+      "correspondenceStatus": "동일실물대응미확정.정면영역과평면영역을분리보존.",
+      "solidPlacementStatus": "정확실물솔리드로병합금지.각도면별와이어/반투명영역으로보존권장.",
+      "recommendedRenderModes": [
+        "front projected outline",
+        "plan projected outline"
+      ]
+    },
+    {
+      "id": "P11",
+      "name": "평면 건조기 좌측 원형 플랜지/장치 투영 1",
+      "kind": "unidentified-circular-projection",
+      "confidence": "low",
+      "frontBoundsPt": null,
+      "planBoundsPt": [
+        374,
+        402,
+        420,
+        448
+      ],
+      "frontBoundsNormalized": null,
+      "planBoundsNormalized": [
+        0.314022,
+        0.477435,
+        0.352645,
+        0.532067
+      ],
+      "frontAnchorPt": null,
+      "planAnchorPt": [
+        397.0,
+        425.0
+      ],
+      "center": [
+        1.8326,
+        null,
+        9.1579
+      ],
+      "sizeFromProjectedBounds": [
+        null,
+        null,
+        2.0402
+      ],
+      "coordinateStatus": "도면 투영의 시각 서베이 근사. 제작 치수·현장 측량값이 아님.",
+      "notes": [
+        "평면에3개원형외곽과복수접속/플랜지/점검부형상이보임.",
+        "서로다른독립탱크인지다층관로투영인지미확정.확인없이원통탱크3개를솔리드로추가하지않음.",
+        "하단투영은급기팬하우징/모터와중첩.2D와이어/가이드윤곽으로보존권장."
+      ],
+      "sourceLocators": [
+        "정면도1쪽",
+        "평면도1쪽"
+      ]
+    },
+    {
+      "id": "P12",
+      "name": "평면 건조기 좌측 원형 플랜지/장치 투영 2",
+      "kind": "unidentified-circular-projection",
+      "confidence": "low",
+      "frontBoundsPt": null,
+      "planBoundsPt": [
+        374,
+        452,
+        420,
+        498
+      ],
+      "frontBoundsNormalized": null,
+      "planBoundsNormalized": [
+        0.314022,
+        0.536817,
+        0.352645,
+        0.591449
+      ],
+      "frontAnchorPt": null,
+      "planAnchorPt": [
+        397.0,
+        475.0
+      ],
+      "center": [
+        1.8326,
+        null,
+        11.3755
+      ],
+      "sizeFromProjectedBounds": [
+        null,
+        null,
+        2.0402
+      ],
+      "coordinateStatus": "도면 투영의 시각 서베이 근사. 제작 치수·현장 측량값이 아님.",
+      "notes": [
+        "평면에3개원형외곽과복수접속/플랜지/점검부형상이보임.",
+        "서로다른독립탱크인지다층관로투영인지미확정.확인없이원통탱크3개를솔리드로추가하지않음.",
+        "하단투영은급기팬하우징/모터와중첩.2D와이어/가이드윤곽으로보존권장."
+      ],
+      "sourceLocators": [
+        "정면도1쪽",
+        "평면도1쪽"
+      ]
+    },
+    {
+      "id": "P13",
+      "name": "평면 건조기 좌측 원형 플랜지/장치 투영 3",
+      "kind": "unidentified-circular-projection",
+      "confidence": "low",
+      "frontBoundsPt": null,
+      "planBoundsPt": [
+        374,
+        502,
+        420,
+        548
+      ],
+      "frontBoundsNormalized": null,
+      "planBoundsNormalized": [
+        0.314022,
+        0.5962,
+        0.352645,
+        0.650831
+      ],
+      "frontAnchorPt": null,
+      "planAnchorPt": [
+        397.0,
+        525.0
+      ],
+      "center": [
+        1.8326,
+        null,
+        13.5931
+      ],
+      "sizeFromProjectedBounds": [
+        null,
+        null,
+        2.0402
+      ],
+      "coordinateStatus": "도면 투영의 시각 서베이 근사. 제작 치수·현장 측량값이 아님.",
+      "notes": [
+        "평면에3개원형외곽과복수접속/플랜지/점검부형상이보임.",
+        "서로다른독립탱크인지다층관로투영인지미확정.확인없이원통탱크3개를솔리드로추가하지않음.",
+        "하단투영은급기팬하우징/모터와중첩.2D와이어/가이드윤곽으로보존권장."
+      ],
+      "sourceLocators": [
+        "정면도1쪽",
+        "평면도1쪽"
+      ]
+    },
+    {
+      "id": "P14",
+      "name": "평면 상단 작은 사각 단면 기호",
+      "kind": "unidentified-plan-section",
+      "confidence": "low",
+      "frontBoundsPt": null,
+      "planBoundsPt": [
+        475,
+        215,
+        515,
+        225
+      ],
+      "frontBoundsNormalized": null,
+      "planBoundsNormalized": [
+        0.398825,
+        0.255344,
+        0.43241,
+        0.267221
+      ],
+      "frontAnchorPt": null,
+      "planAnchorPt": [
+        495.0,
+        220.0
+      ],
+      "center": [
+        6.1792,
+        null,
+        0.0656
+      ],
+      "sizeFromProjectedBounds": [
+        null,
+        null,
+        0.4435
+      ],
+      "coordinateStatus": "도면 투영의 시각 서베이 근사. 제작 치수·현장 측량값이 아님.",
+      "notes": [
+        "건물북측상단의X표사각단면기호.덕트단면/개구부후보이나확정못함.얇은와이어윤곽만권장."
+      ],
+      "sourceLocators": [
+        "정면도1쪽",
+        "평면도1쪽"
+      ]
+    },
+    {
+      "id": "P15",
+      "name": "평면 보조 직사각 받침/장치 쌍",
+      "kind": "unidentified-plan-pair",
+      "confidence": "low",
+      "frontBoundsPt": null,
+      "planBoundsPt": [
+        366,
+        272,
+        401,
+        294
+      ],
+      "frontBoundsNormalized": null,
+      "planBoundsNormalized": [
+        0.307305,
+        0.32304,
+        0.336692,
+        0.349169
+      ],
+      "frontAnchorPt": null,
+      "planAnchorPt": [
+        383.5,
+        283.0
+      ],
+      "center": [
+        1.2339,
+        null,
+        2.8598
+      ],
+      "sizeFromProjectedBounds": [
+        null,
+        null,
+        0.9758
+      ],
+      "coordinateStatus": "도면 투영의 시각 서베이 근사. 제작 치수·현장 측량값이 아님.",
+      "notes": [
+        "기존보조교반탱크아래두직사각장치투영.명칭·기능·높이확정못함.",
+        "기존설비가려진부분을생략하지않기위한2D영역ID."
+      ],
+      "sourceLocators": [
+        "정면도1쪽",
+        "평면도1쪽"
+      ]
+    }
+  ],
+  "ductSurvey": [
+    {
+      "id": "D01",
+      "name": "급기송풍기→기존가열/상부급기연결",
+      "source": "정면좌측수직원형덕트와상부90도엘보",
+      "frontCenterlinePt": [
+        [
+          408,
+          429
+        ],
+        [
+          408,
+          242
+        ],
+        [
+          418,
+          220
+        ],
+        [
+          447,
+          205
+        ],
+        [
+          494,
+          205
+        ]
+      ],
+      "confidence": "medium",
+      "circuit": "fresh/heated supply",
+      "note": "팬에서건조기상부쪽기존경로.온도21.45예상값의센서위치를이선에확정하지않음."
+    },
+    {
+      "id": "D02",
+      "name": "신규예열급기층간덕트",
+      "source": "견적ITEM10+정면녹색회수기왼쪽연결+PPT5층→4층",
+      "frontCenterlinePt": [
+        [
+          655,
+          246
+        ],
+        [
+          629,
+          246
+        ],
+        [
+          612,
+          265
+        ],
+        [
+          612,
+          394
+        ],
+        [
+          596,
+          424
+        ],
+        [
+          414,
+          424
+        ]
+      ],
+      "confidence": "medium",
+      "circuit": "preheated fresh supply",
+      "rawDiameter": "Ø1100",
+      "note": "실제도면기하투영에맞춘개략선.곡관반경과평면각도는제작상세미확정."
+    },
+    {
+      "id": "D03",
+      "name": "기존건조기배출→집진군",
+      "source": "정면건조기하부측면에서사이클론구역상부/우측으로굽는굵은덕트",
+      "frontCenterlinePt": [
+        [
+          479,
+          396
+        ],
+        [
+          570,
+          388
+        ],
+        [
+          584,
+          374
+        ],
+        [
+          584,
+          349
+        ],
+        [
+          612,
+          322
+        ],
+        [
+          647,
+          315
+        ]
+      ],
+      "confidence": "medium",
+      "circuit": "hot process exhaust",
+      "note": "원문P&ID와대조해집진군경로로읽을수있으나정면투영만으로각장치깊이는확정못함."
+    },
+    {
+      "id": "D04",
+      "name": "사이클론공통헤더→교체배기팬",
+      "source": "P&ID C102 및평면신규팬북측집진군후단연결",
+      "frontCenterlinePt": [
+        [
+          647,
+          296
+        ],
+        [
+          748,
+          296
+        ],
+        [
+          709,
+          292
+        ]
+      ],
+      "confidence": "low",
+      "circuit": "hot exhaust",
+      "note": "3사이클론공통헤더연결.중첩된정면상세단일꺾임길이를최종배관제작경로로사용하지않음."
+    },
+    {
+      "id": "D05",
+      "name": "배기팬→열교환기",
+      "source": "견적ITEM08",
+      "confidence": "high",
+      "circuit": "hot exhaust",
+      "rawDiameter": "Ø1200",
+      "note": "fan과회수코어가평면깊이방향약4m분리되어있음.원문앞뒤배치반영."
+    },
+    {
+      "id": "D06",
+      "name": "열교환기→습식집진기",
+      "source": "견적ITEM09+정면우측U자형덕트",
+      "frontCenterlinePt": [
+        [
+          699,
+          243
+        ],
+        [
+          710,
+          243
+        ],
+        [
+          710,
+          280
+        ],
+        [
+          706,
+          291
+        ],
+        [
+          737,
+          291
+        ],
+        [
+          748,
+          302
+        ],
+        [
+          748,
+          364
+        ],
+        [
+          763,
+          388
+        ],
+        [
+          794,
+          392
+        ]
+      ],
+      "confidence": "medium",
+      "circuit": "cooled exhaust",
+      "rawDiameter": "Ø1200",
+      "note": "회수기후단습식집진연결.정면U자실루엣을살리되급기덕트와회로분리."
+    },
+    {
+      "id": "D07",
+      "name": "CIP헤더/세척분기",
+      "source": "P&ID녹색CIP SUPPLY",
+      "confidence": "high_presence_low_geometry",
+      "circuit": "wash liquid",
+      "note": "얇은별도라인.노즐수량·3D장착점미확정."
+    }
+  ],
+  "sourceAssets": {
+    "frontSvg": "source_assets/front.svg",
+    "planSvg": "source_assets/plan.svg",
+    "frontRaster6x": "source_assets/front-6x.png",
+    "planRaster6x": "source_assets/plan-6x.png",
+    "crops": [
+      "crops/dryer-zone.png",
+      "crops/recovery-zone.png",
+      "crops/lower-utilities.png",
+      "crops/dryer-plan.png",
+      "crops/recovery-plan.png"
+    ]
+  },
+  "coverage": {
+    "equipmentOrRegions": 33,
+    "unmatchedFrontIds": [
+      "U11",
+      "U12",
+      "U13",
+      "U14"
+    ],
+    "unmatchedPlanIds": [
+      "P01",
+      "P11",
+      "P12",
+      "P13",
+      "P14",
+      "P15"
+    ],
+    "frontPlanCorrespondenceWarnings": [
+      {
+        "id": "E02",
+        "name": "건조기 상부 급기·가열 연결부",
+        "frontXM": 5.9207,
+        "planXM": 6.8445,
+        "absDifferenceM": 0.9238,
+        "interpretation": "부품중심/투영범위상이또는매칭후보.정확대응으로쓰지않음"
+      },
+      {
+        "id": "E03",
+        "name": "기존 하부 유동층/수평 제품 회수 장치",
+        "frontXM": 10.5596,
+        "planXM": 9.3947,
+        "absDifferenceM": 1.1648,
+        "interpretation": "부품중심/투영범위상이또는매칭후보.정확대응으로쓰지않음"
+      },
+      {
+        "id": "E04",
+        "name": "유동층 후단 경사 배출장치",
+        "frontXM": 16.2799,
+        "planXM": 13.5417,
+        "absDifferenceM": 2.7382,
+        "interpretation": "부품중심/투영범위상이또는매칭후보.정확대응으로쓰지않음"
+      },
+      {
+        "id": "E15",
+        "name": "사이클론 하부 제품 회수·이송 연결",
+        "frontXM": 19.752,
+        "planXM": 18.7088,
+        "absDifferenceM": 1.0432,
+        "interpretation": "부품중심/투영범위상이또는매칭후보.정확대응으로쓰지않음"
+      },
+      {
+        "id": "N04",
+        "name": "교체 배기팬·모터",
+        "frontXM": 18.4144,
+        "planXM": 17.6407,
+        "absDifferenceM": 0.7736,
+        "interpretation": "부품중심/투영범위상이또는매칭후보.정확대응으로쓰지않음"
+      },
+      {
+        "id": "N05",
+        "name": "열교환기 지지 프레임/접근 사다리",
+        "frontXM": 17.5321,
+        "planXM": 16.9125,
+        "absDifferenceM": 0.6196,
+        "interpretation": "부품중심/투영범위상이또는매칭후보.정확대응으로쓰지않음"
+      },
+      {
+        "id": "P02",
+        "name": "건조기 우측 대각 계단/접근 구조",
+        "frontXM": 9.6489,
+        "planXM": 5.9574,
+        "absDifferenceM": 3.6915,
+        "interpretation": "부품중심/투영범위상이또는매칭후보.정확대응으로쓰지않음"
+      }
+    ],
+    "note": "매칭이약한보조설비도누락하지않고low-confidenceID로보존.미확정기기는고유기능/태그를발명하지않음. E02/E03/E04/E15/N04/N05/P02는중심상이또는투영범위상이로주의."
+  },
+  "doNotInfer": [
+    "두2D투영만으로모든덕트의깊이·엘보반경을완전확정",
+    "정면보조팬4개를확인없이특정P&ID태그로동일시",
+    "평면X표사각형을확인없이새장비솔리드로제작",
+    "3개사이클론의직렬연속배기가동",
+    "정격220−200kW실제절감",
+    "실제준공·성능검수상태"
+  ]
+}

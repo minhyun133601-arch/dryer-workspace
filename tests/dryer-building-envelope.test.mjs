@@ -88,7 +88,8 @@ test('the third floor shrinks to the tower and keeps unconfirmed drawing-only ci
     }
     assert.ok(!h.labels.some(label=>label.text==='콤프레샤실'),'an unconfirmed historical room is reference-only');
     assert.equal(down(three.deck,10.3,-10).length,0,'the filmed return stair has a real opening in the 3F bay');
-    assert.ok(down(three.deck,11,-7.65).length>0,'the top stair landing joins the reduced 3F slab');
+    const [doorX,doorZ]=DRYER_BUILDING_FLOORS[3].routeSurvey.entryFromStair.door;
+    assert.ok(down(three.deck,doorX+.35,doorZ).length>0,'the top stair landing joins the reduced 3F slab at the observed return door');
     assert.ok(!h.labels.some(label => /펌프기계실|사장.*대기|용도 미확정|세부명 판독/.test(label.text)), 'uncertain room names cannot be invented');
   } finally { h.dispose(); }
 });

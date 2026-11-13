@@ -1,0 +1,766 @@
+{
+  "열교환기 설치도.pptx": [
+    {
+      "slide": 1,
+      "text": "표지\n2026.01.20\n생산본부 \n(공무환경팀 류 원대) \n유산)건조기 열교환기 설치 ",
+      "shapes": 6
+    },
+    {
+      "slide": 2,
+      "text": "Ⅳ생산본부 ④생산3팀(액상) KPI설정\n1. 유산)생산1팀2파트 건조기 가스(LPG/LNG)절감\n1/3\n      1)가스 사용 절감   \n→現, 유산공장 건조기 버너(LNG/LPG겸용) 가동 후 버려지는 열량(배풍기 출구 온도 85℃)이 너무 많아서 이를  회수하여 재 투입 하고자 함.  \n      2)폐열을 회수하여 재 사용하는 설비 즉,열교환기를 5층에 설치하여 가스  비용의 절감 목적에 있음.   \n2.유산)건조기 설치 장소(유산공장 : 5층 → 4층 송풍기 투입)\n\n\n5층 열교환기\n4층 송풍기",
+      "shapes": 19
+    },
+    {
+      "slide": 3,
+      "text": "Ⅳ생산본부 ④생산3팀(액상) KPI설정\n2/3\n3. 열교환기 설치 업무 SCOPE  \n  1)공사 구분 비교\n                                                                 \n\n     1)기간 : 26.10.01 ~ 11.10(41일),생산(가동)중단에 따른 先 생산 일정표 작성(생산팀)\n     2)인력 운영 계획案 마련, 생산팀 검토 – 수출 재고 확보로 고객사 대응 \n\n\n \n   \n  2)공사 기간중 운영 계획",
+      "shapes": 10
+    }
+  ],
+  "열회수장치 설치 정면도.pdf": [
+    {
+      "page": 1,
+      "text": "주식회사 아인 시스템\n"
+    }
+  ],
+  "열회수장치 제작 스케줄.xlsx": {
+    "Sheet1": [
+      {
+        "cell": "A1",
+        "value": "열회수 설비  제작 스케줄",
+        "cached": "열회수 설비  제작 스케줄",
+        "number_format": "General"
+      },
+      {
+        "cell": "A2",
+        "value": "단계",
+        "cached": "단계",
+        "number_format": "General"
+      },
+      {
+        "cell": "B2",
+        "value": "항목",
+        "cached": "항목",
+        "number_format": "General"
+      },
+      {
+        "cell": "C2",
+        "value": "일정",
+        "cached": "일정",
+        "number_format": "General"
+      },
+      {
+        "cell": "E2",
+        "value": "3",
+        "cached": "3",
+        "number_format": "General"
+      },
+      {
+        "cell": "K2",
+        "value": "4",
+        "cached": "4",
+        "number_format": "General"
+      },
+      {
+        "cell": "Q2",
+        "value": "5",
+        "cached": "5",
+        "number_format": "General"
+      },
+      {
+        "cell": "W2",
+        "value": "6",
+        "cached": "6",
+        "number_format": "General"
+      },
+      {
+        "cell": "AC2",
+        "value": "7",
+        "cached": "7",
+        "number_format": "General"
+      },
+      {
+        "cell": "AI2",
+        "value": "8",
+        "cached": "8",
+        "number_format": "General"
+      },
+      {
+        "cell": "AO2",
+        "value": "9",
+        "cached": "9",
+        "number_format": "General"
+      },
+      {
+        "cell": "AU2",
+        "value": "10",
+        "cached": "10",
+        "number_format": "General"
+      },
+      {
+        "cell": "BA2",
+        "value": "11",
+        "cached": "11",
+        "number_format": "General"
+      },
+      {
+        "cell": "E3",
+        "value": "5",
+        "cached": "5",
+        "number_format": "General"
+      },
+      {
+        "cell": "F3",
+        "value": "10",
+        "cached": "10",
+        "number_format": "General"
+      },
+      {
+        "cell": "G3",
+        "value": "15",
+        "cached": "15",
+        "number_format": "General"
+      },
+      {
+        "cell": "H3",
+        "value": "20",
+        "cached": "20",
+        "number_format": "General"
+      },
+      {
+        "cell": "I3",
+        "value": "25",
+        "cached": "25",
+        "number_format": "General"
+      },
+      {
+        "cell": "J3",
+        "value": "30",
+        "cached": "30",
+        "number_format": "General"
+      },
+      {
+        "cell": "K3",
+        "value": "5",
+        "cached": "5",
+        "number_format": "General"
+      },
+      {
+        "cell": "L3",
+        "value": "10",
+        "cached": "10",
+        "number_format": "General"
+      },
+      {
+        "cell": "M3",
+        "value": "15",
+        "cached": "15",
+        "number_format": "General"
+      },
+      {
+        "cell": "N3",
+        "value": "20",
+        "cached": "20",
+        "number_format": "General"
+      },
+      {
+        "cell": "O3",
+        "value": "25",
+        "cached": "25",
+        "number_format": "General"
+      },
+      {
+        "cell": "P3",
+        "value": "30",
+        "cached": "30",
+        "number_format": "General"
+      },
+      {
+        "cell": "Q3",
+        "value": "5",
+        "cached": "5",
+        "number_format": "General"
+      },
+      {
+        "cell": "R3",
+        "value": "10",
+        "cached": "10",
+        "number_format": "General"
+      },
+      {
+        "cell": "S3",
+        "value": "15",
+        "cached": "15",
+        "number_format": "General"
+      },
+      {
+        "cell": "T3",
+        "value": "20",
+        "cached": "20",
+        "number_format": "General"
+      },
+      {
+        "cell": "U3",
+        "value": "25",
+        "cached": "25",
+        "number_format": "General"
+      },
+      {
+        "cell": "V3",
+        "value": "30",
+        "cached": "30",
+        "number_format": "General"
+      },
+      {
+        "cell": "W3",
+        "value": "5",
+        "cached": "5",
+        "number_format": "General"
+      },
+      {
+        "cell": "X3",
+        "value": "10",
+        "cached": "10",
+        "number_format": "General"
+      },
+      {
+        "cell": "Y3",
+        "value": "15",
+        "cached": "15",
+        "number_format": "General"
+      },
+      {
+        "cell": "Z3",
+        "value": "20",
+        "cached": "20",
+        "number_format": "General"
+      },
+      {
+        "cell": "AA3",
+        "value": "25",
+        "cached": "25",
+        "number_format": "General"
+      },
+      {
+        "cell": "AB3",
+        "value": "30",
+        "cached": "30",
+        "number_format": "General"
+      },
+      {
+        "cell": "AC3",
+        "value": "5",
+        "cached": "5",
+        "number_format": "General"
+      },
+      {
+        "cell": "AD3",
+        "value": "10",
+        "cached": "10",
+        "number_format": "General"
+      },
+      {
+        "cell": "AE3",
+        "value": "15",
+        "cached": "15",
+        "number_format": "General"
+      },
+      {
+        "cell": "AF3",
+        "value": "20",
+        "cached": "20",
+        "number_format": "General"
+      },
+      {
+        "cell": "AG3",
+        "value": "25",
+        "cached": "25",
+        "number_format": "General"
+      },
+      {
+        "cell": "AH3",
+        "value": "30",
+        "cached": "30",
+        "number_format": "General"
+      },
+      {
+        "cell": "AI3",
+        "value": "5",
+        "cached": "5",
+        "number_format": "General"
+      },
+      {
+        "cell": "AJ3",
+        "value": "10",
+        "cached": "10",
+        "number_format": "General"
+      },
+      {
+        "cell": "AK3",
+        "value": "15",
+        "cached": "15",
+        "number_format": "General"
+      },
+      {
+        "cell": "AL3",
+        "value": "20",
+        "cached": "20",
+        "number_format": "General"
+      },
+      {
+        "cell": "AM3",
+        "value": "25",
+        "cached": "25",
+        "number_format": "General"
+      },
+      {
+        "cell": "AN3",
+        "value": "30",
+        "cached": "30",
+        "number_format": "General"
+      },
+      {
+        "cell": "AO3",
+        "value": "5",
+        "cached": "5",
+        "number_format": "General"
+      },
+      {
+        "cell": "AP3",
+        "value": "10",
+        "cached": "10",
+        "number_format": "General"
+      },
+      {
+        "cell": "AQ3",
+        "value": "15",
+        "cached": "15",
+        "number_format": "General"
+      },
+      {
+        "cell": "AR3",
+        "value": "20",
+        "cached": "20",
+        "number_format": "General"
+      },
+      {
+        "cell": "AS3",
+        "value": "25",
+        "cached": "25",
+        "number_format": "General"
+      },
+      {
+        "cell": "AT3",
+        "value": "30",
+        "cached": "30",
+        "number_format": "General"
+      },
+      {
+        "cell": "AU3",
+        "value": "5",
+        "cached": "5",
+        "number_format": "General"
+      },
+      {
+        "cell": "AV3",
+        "value": "10",
+        "cached": "10",
+        "number_format": "General"
+      },
+      {
+        "cell": "AW3",
+        "value": "15",
+        "cached": "15",
+        "number_format": "General"
+      },
+      {
+        "cell": "AX3",
+        "value": "20",
+        "cached": "20",
+        "number_format": "General"
+      },
+      {
+        "cell": "AY3",
+        "value": "25",
+        "cached": "25",
+        "number_format": "General"
+      },
+      {
+        "cell": "AZ3",
+        "value": "30",
+        "cached": "30",
+        "number_format": "General"
+      },
+      {
+        "cell": "BA3",
+        "value": "5",
+        "cached": "5",
+        "number_format": "General"
+      },
+      {
+        "cell": "BB3",
+        "value": "10",
+        "cached": "10",
+        "number_format": "General"
+      },
+      {
+        "cell": "BC3",
+        "value": "15",
+        "cached": "15",
+        "number_format": "General"
+      },
+      {
+        "cell": "BD3",
+        "value": "20",
+        "cached": "20",
+        "number_format": "General"
+      },
+      {
+        "cell": "BE3",
+        "value": "25",
+        "cached": "25",
+        "number_format": "General"
+      },
+      {
+        "cell": "BF3",
+        "value": "30",
+        "cached": "30",
+        "number_format": "General"
+      },
+      {
+        "cell": "A4",
+        "value": "발주",
+        "cached": "발주",
+        "number_format": "General"
+      },
+      {
+        "cell": "B4",
+        "value": "현장 위치 재 확인(도면 검토)",
+        "cached": "현장 위치 재 확인(도면 검토)",
+        "number_format": "General"
+      },
+      {
+        "cell": "C4",
+        "value": "5일",
+        "cached": "5일",
+        "number_format": "General"
+      },
+      {
+        "cell": "B5",
+        "value": "열교환기 제작도 작성",
+        "cached": "열교환기 제작도 작성",
+        "number_format": "General"
+      },
+      {
+        "cell": "C5",
+        "value": "10일",
+        "cached": "10일",
+        "number_format": "General"
+      },
+      {
+        "cell": "A7",
+        "value": "제작",
+        "cached": "제작",
+        "number_format": "General"
+      },
+      {
+        "cell": "B7",
+        "value": "열교환기 본체",
+        "cached": "열교환기 본체",
+        "number_format": "General"
+      },
+      {
+        "cell": "C7",
+        "value": "4.5개월",
+        "cached": "4.5개월",
+        "number_format": "General"
+      },
+      {
+        "cell": "B8",
+        "value": "AIR FILTER",
+        "cached": "AIR FILTER",
+        "number_format": "General"
+      },
+      {
+        "cell": "C8",
+        "value": "1개월",
+        "cached": "1개월",
+        "number_format": "mm\"월\"\\ dd\"일\""
+      },
+      {
+        "cell": "B9",
+        "value": "STRUCTURE",
+        "cached": "STRUCTURE",
+        "number_format": "General"
+      },
+      {
+        "cell": "C9",
+        "value": "20일",
+        "cached": "20일",
+        "number_format": "General"
+      },
+      {
+        "cell": "B10",
+        "value": "배기 팬 신규 제작",
+        "cached": "배기 팬 신규 제작",
+        "number_format": "General"
+      },
+      {
+        "cell": "C10",
+        "value": "3.5개월",
+        "cached": "3.5개월",
+        "number_format": "mm\"월\"\\ dd\"일\""
+      },
+      {
+        "cell": "B11",
+        "value": "열교환기 상부 챔버",
+        "cached": "열교환기 상부 챔버",
+        "number_format": "General"
+      },
+      {
+        "cell": "C11",
+        "value": "1.5개월",
+        "cached": "1.5개월",
+        "number_format": "mm\"월\"\\ dd\"일\""
+      },
+      {
+        "cell": "B12",
+        "value": "열교환기 하부 챔버",
+        "cached": "열교환기 하부 챔버",
+        "number_format": "General"
+      },
+      {
+        "cell": "C12",
+        "value": "1.5개월",
+        "cached": "1.5개월",
+        "number_format": "General"
+      },
+      {
+        "cell": "B13",
+        "value": "AIR 닥트",
+        "cached": "AIR 닥트",
+        "number_format": "General"
+      },
+      {
+        "cell": "C13",
+        "value": "2개월",
+        "cached": "2개월",
+        "number_format": "General"
+      },
+      {
+        "cell": "B14",
+        "value": "운반작업",
+        "cached": "운반작업",
+        "number_format": "General"
+      },
+      {
+        "cell": "C14",
+        "value": "2일",
+        "cached": "2일",
+        "number_format": "mm-dd-yy"
+      },
+      {
+        "cell": "B15",
+        "value": " ",
+        "cached": " ",
+        "number_format": "General"
+      },
+      {
+        "cell": "C15",
+        "value": " ",
+        "cached": " ",
+        "number_format": "General"
+      },
+      {
+        "cell": "A16",
+        "value": "현장 작업",
+        "cached": "현장 작업",
+        "number_format": "General"
+      },
+      {
+        "cell": "B16",
+        "value": "배기팬 철거 및 설치",
+        "cached": "배기팬 철거 및 설치",
+        "number_format": "General"
+      },
+      {
+        "cell": "C16",
+        "value": "5일",
+        "cached": "5일",
+        "number_format": "mm-dd-yy"
+      },
+      {
+        "cell": "B17",
+        "value": "구조물 설치",
+        "cached": "구조물 설치",
+        "number_format": "General"
+      },
+      {
+        "cell": "C17",
+        "value": "10일",
+        "cached": "10일",
+        "number_format": "mm\"월\"\\ dd\"일\""
+      },
+      {
+        "cell": "B18",
+        "value": "열교환기 반입",
+        "cached": "열교환기 반입",
+        "number_format": "General"
+      },
+      {
+        "cell": "C18",
+        "value": "2일",
+        "cached": "2일",
+        "number_format": "General"
+      },
+      {
+        "cell": "B19",
+        "value": "열교환기 상 하부 챔버  ",
+        "cached": "열교환기 상 하부 챔버  ",
+        "number_format": "General"
+      },
+      {
+        "cell": "C19",
+        "value": "20일",
+        "cached": "20일",
+        "number_format": "mm\"월\"\\ dd\"일\""
+      },
+      {
+        "cell": "B20",
+        "value": "닥트 연결작업",
+        "cached": "닥트 연결작업",
+        "number_format": "General"
+      },
+      {
+        "cell": "C20",
+        "value": "15일",
+        "cached": "15일",
+        "number_format": "mm\"월\"\\ dd\"일\""
+      },
+      {
+        "cell": "B21",
+        "value": "CIP LINE 작업",
+        "cached": "CIP LINE 작업",
+        "number_format": "General"
+      },
+      {
+        "cell": "C21",
+        "value": "8일",
+        "cached": "8일",
+        "number_format": "General"
+      },
+      {
+        "cell": "B22",
+        "value": "전기 배선 및 프로그램 작업",
+        "cached": "전기 배선 및 프로그램 작업",
+        "number_format": "General"
+      },
+      {
+        "cell": "C22",
+        "value": "15일",
+        "cached": "15일",
+        "number_format": "General"
+      },
+      {
+        "cell": "B23",
+        "value": "보온 작업",
+        "cached": "보온 작업",
+        "number_format": "General"
+      },
+      {
+        "cell": "C23",
+        "value": "7일",
+        "cached": "7일",
+        "number_format": "General"
+      },
+      {
+        "cell": "B24",
+        "value": "도비 크레인 작업",
+        "cached": "도비 크레인 작업",
+        "number_format": "General"
+      },
+      {
+        "cell": "C24",
+        "value": "4일",
+        "cached": "4일",
+        "number_format": "General"
+      },
+      {
+        "cell": "B25",
+        "value": "TEST 시운전",
+        "cached": "TEST 시운전",
+        "number_format": "General"
+      },
+      {
+        "cell": "C25",
+        "value": " ",
+        "cached": " ",
+        "number_format": "General"
+      },
+      {
+        "cell": "A26",
+        "value": "   REMARKS",
+        "cached": "   REMARKS",
+        "number_format": "General"
+      },
+      {
+        "cell": "A27",
+        "value": "               기존 fan 철거전  지붕 일부 철거 작업",
+        "cached": "               기존 fan 철거전  지붕 일부 철거 작업",
+        "number_format": "General"
+      },
+      {
+        "cell": "A28",
+        "value": " ",
+        "cached": " ",
+        "number_format": "General"
+      },
+      {
+        "cell": "A29",
+        "value": " ",
+        "cached": " ",
+        "number_format": "General"
+      },
+      {
+        "cell": "A30",
+        "value": " ",
+        "cached": " ",
+        "number_format": "General"
+      },
+      {
+        "cell": "A31",
+        "value": "     ",
+        "cached": "     ",
+        "number_format": "General"
+      }
+    ]
+  },
+  "열회수장치 제작설치 견적서 2025.09.10.pdf": [
+    {
+      "page": 1,
+      "text": " \n \n \n견   적   서   No. ESL-250910 \n \n \n      HC GLOBAL      귀하       \n \n \n \n 2025    09.   10. \n아래와 같이 견적합니다. \n \n \n납    기   8개월 (현장작업 45일)                               주식회사   아 인 시 스 템 \n \n \n \n \n \n \n \n \n대표이사   신     동     훈 \n인도장소    현장 설치 \n      \n \n \n \n \n \n \n \n \n본사:서울시 강남구 대치동 889-5 \n지불조건    계 약 금   50 %     \n                        Tel     : 02)2052-9441 \n잔 금 (설치후)50%                                   Fax     : 02)2052-9448 \n \n          \n \n                                E-mail  : ein@ein.co.kr \n \n                                                   \nhttp \n: www.ein.co.kr \n \n유효기간   30일  \n \n \n \n         \n공장:충남 천안시 직산읍 마정리 493 \n \n \n \n \n \n \n \n \nTel \n: 041)583-9441 \n합계금액   一金칠억사천오백만원정                           \nFax \n: 041)583-4316 \n \n \n품     명 \n \n   규   격 \n   수  량 \n    금   액 \n     비   고 \n \nSD 건조기 열 회수장치 설치공사                     1             745,000,000 \n \n \n1. 열교환기 제작 \n \n2. Exhaust fan 제작. \n \n3. 열교환기용 구조물 \n \n4. Duct 제작설치 \n \n5. 전선연결 및 프로그램수정작업 \n  \n \n \n \n \n \n \n \n   합  계      \\745,000,000-   (V.A.T. 별도) \n                                                   Nego 가격 :\\ 700,000,000.- \n \nREMARKS \n- 열교환기 무게 15ton \n- 건물 콘크리트 HOLE 작업 제외 \n- 열교환기 설치부분 지붕 철거 및 마감작업 제외 \n \n \n \n"
+    },
+    {
+      "page": 2,
+      "text": " \n \nITEM NO. \nDESCRIPTION                                                  PRICE \n \n \n01. \n \nPre Heater (열교환기)                                          170,000,000       \n-Supply air     : 55,000kg/hr   20℃ → 62℃. \n-Exhaust air    :  93,000kg.hr   90℃ → 64℃. \n-Heat duty      :  554,000kcal/hr. \n-Material       :  STS 304. \n \n \n02.             Pre filter 상부 챔버                                            40,000,000 \n-Size              :  3000x 2300 x 1450L. \n-Thickness        :  3mm. \n-Material          :  STS04. \n         -Reinforce angle    :  40x40x3t. \n         - Flange            :  50x12t. \n         -Man hole         :  Ø450. \n-In let duct         :  Ø1200. \n         -Spray nozzles \n  \n \n03. \n \nPre filter 하부 챔버                                            40,000,000 \n-Size               :  3000x 2300 x 1400L. \n-Thickness         :  3mm. \n-Material           :  STS04. \n         -Reinforce angle   :  40x40x3t. \n         -Flange            :  50x12t. \n        -Man hole          :  Ø450. \n-In let duct         :  Ø1200. \n \n \n04.            Heating air out duct                                             18,000,000 \n-Size               :  (3000x 1350) x Ø1100 x 1200L. \n-Thickness         :  3mm. \n-Material           :  STS04. \n         -Reinforce angle    :  40x40x3t. \n         -Flange            :  50x12t. \n \n \n05.           Supply air filter                                                    10,000,000 \n \n \n06.           supporting structure                                                40,00,000 \n                - H- beam        :  200x200 \n                - Channel        :  150x75 \n                - Base plate      :  350x350x 25t \n                - STS 304 3t plate \n                - Ladder \n \n \n07.          Exhaust fan                                                         85,00,000 \n               -Capacity     :  93.000kg/hr x 500mmwg \n               -Material      :  sts304 \n               - motor       :  200kw \n               - Ladder \n"
+    },
+    {
+      "page": 3,
+      "text": " \n \nITEM NO. \nDESCRIPTION                                                  PRICE \n \n \n08. \n \nexhaust duct ( fan – 열교환기)                                 12,000,000       \n-Size              :  Ø1200. \n-Thickness         :  2mm. \n-Material           :  STS04. \n         -Reinforce bar     :  50x6t. \n- Flange            :  50x12t. \n \n \n09.             wet scrubber duct ( 열교환기 – wet scrubber)                  15,000,000 \n-Size              :  Ø1200. \n-Thickness         :  2mm. \n-Material           :  STS04. \n         -Reinforce bar     :  50x6t. \n        - Flange            :  50x12t. \n \n \n10.             supply air duct ( 열교환기 – supply fan)                        50,000,000 \n-Size              :  Ø1100. \n-Thickness         :  2mm. \n-Material           :  STS04. \n         -Reinforce bar     :  50x6t. \n        - Flange            :  50x12t. \n \n \n11.             전기 배선 및 프로그램 수정                                    35,000,000 \n- 온도 센서 설치 – 3point \n- 차압계 설치 ( supply filter) \n- 배기팬 전선작업Size              :  Ø1100. \n- 프로그램 수정  \n \n \n12.             조립 및 현장 설치 작업                                        140,000,000 \n-열교환기 설치 \n- exhaust fan 설치 \n- duct 설치 \n- CIP 배관 작업  \n \n \n13.             보온 작업                                                     30,000,000 \n- exhaust duct ( fan – 열교환기)  \n-열교환기  \n- supply air duct ( 열교환기 – supply fan)                         \n- thickness  : 50mm \n- 보온 커버  :  STS 304. \n \n \n14.             도비 및 크레인 작업                                           50,00,000 \n \n \n15             운반 작업                                                     10,000,000                      \n----------------------------------------------------------------------------  \n                  합   계                                                  \\745,000,000 \n"
+    }
+  ],
+  "열회수장치설치 평면도.pdf": [
+    {
+      "page": 1,
+      "text": "주식회사 아인 시스템\n"
+    }
+  ],
+  "xls_formula_audit": [
+    {
+      "sheet": "1 - Output Summary",
+      "usedRange": "$A$1:$IU$69",
+      "formulaCount": 0,
+      "formulas": [],
+      "shapeCount": 1
+    }
+  ]
+}

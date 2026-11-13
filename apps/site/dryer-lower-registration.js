@@ -2,11 +2,12 @@
 // current walk; remaining approximate process poses retain historical context.
 const placements = {
   'f1-ica-1': [-5.5, -2.5], 'f1-ica-2': [0, -2.5], 'f1-ica-3': [5, -2.5],
-  'f1-xray-1': [-5.5, 1.05], 'f1-xray-2': [0, 1.05], 'f1-xray-3': [5, 1.05],
+  'f1-xray-1': [-5.5, 1], 'f1-xray-2': [0, 1], 'f1-xray-3': [5, 1],
   'f1-mix-a': [21.2, -1.3], 'f1-mix-b': [25.3, -1.3],
   'f1-melting': [21.2, 3.3], 'f1-oil-water': [25.5, 3.3], 'f1-s1': [23.5, 10],
-  'f1-conveyor-a': [-2.1, 14.5], 'f1-conveyor-b': [6.7, 12.2], 'f1-palletizer': [10.8, 13.7],
-  'f3-sterilizer': [-5.9, -4.8], 'f3-homogenizer': [-5.9, -.2], 'f3-balance-tank': [-6.8, 4], 'f3-holding': [5.5, 1.1],
+  'f1-conveyor-a': [-2, 14.5], 'f1-conveyor-b': [6.75, 12.25], 'f1-palletizer': [10.75, 13.75],
+  'f3-sterilizer': [-6, -4.75], 'f3-homogenizer': [-6, -.25], 'f3-balance-tank': [-6.75, 4],
+  'f3-feed-tank': [-2.25, 4.5], 'f3-holding': [5.5, 1],
   'f4-fluid-bed': [-4.4, -1.7], 'f5-extraction': [5.9, -1],
 };
 // Only the interrupted full-envelope release produced these automatic clamp
@@ -70,6 +71,16 @@ const previousRoutePoses = {
   'f1-conveyor-b':[[8.5,14]],
   'f1-palletizer':[[13,15.1],[13,15]],
 };
+// The real Edge save retained these exact earlier defaults after the 11/12
+// route stamps had been written. ICA/inspection 1 are historical X=-9 poses
+// clipped by their newer body footprints; the others are the old catalog's
+// quarter-grid/clipped results. Do not treat nearby positions as defaults.
+const hallPlacementRevision = 'dryer-hall-saved-defaults-20261113';
+const savedHallDefaultPoses = Object.freeze({
+  'f1-ica-1': [-7.25, -2.75], 'f1-xray-1': [-7.75, 1.5],
+  'f1-conveyor-a': [-2.75, 6], 'f1-conveyor-b': [5.5, 5.5], 'f1-palletizer': [10, 6.75],
+  'f3-sterilizer': [-6.5, -4.75], 'f3-holding': [6, 1],
+});
 const thirdFloorObserved = Object.freeze({
   'f3-sterilizer': {
     name: '3층 스테인리스 판형·펌프 설비', tag: '3F 판형·펌프',
@@ -124,10 +135,13 @@ export function registerDryerLowerEquipment(item) {
   const previousPlacements = repairablePreviousPlacements(item, pose);
   const observed = firstFloorObserved[item.id] || thirdFloorObserved[item.id];
   if (observed) {
+    const savedHallPose = savedHallDefaultPoses[item.id];
+    const historicalPoses = [...(previousRoutePoses[item.id] || []), ...(savedHallPose ? [savedHallPose] : [])];
     const qualifiedPoses = reviewedRouteRevisions.flatMap(catalogRevision =>
-      (previousRoutePoses[item.id] || []).map(([x, z]) => ({ position: [x, item.position[1], z], rotation: item.rotation || 0, catalogRevision, migrationBasis: 'dryer-route-video-default' })));
+      historicalPoses.map(([x, z]) => ({ position: [x, item.position[1], z], rotation: item.rotation || 0, catalogRevision, migrationBasis: 'dryer-route-video-default' })));
     return Object.freeze({
       ...item, ...observed, position: pose ? [pose[0], item.position[1], pose[1]] : item.position,
+      ...(savedHallPose ? { placementRevision: hallPlacementRevision } : {}),
       previousPlacements: [...previousPlacements, ...qualifiedPoses],
       positionBasis: observed.dryerRoute.positionBasis, positionConfidence: 'approximate',
       confidence: '2026-11-12 연속 영상 관찰 · 치수·좌표 비실측',

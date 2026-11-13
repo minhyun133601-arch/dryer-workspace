@@ -1,0 +1,7097 @@
+{
+  "source": "KPI-전기-가스-월별-2024-2026 (1).xlsx",
+  "sheets": {
+    "필터 보기": {
+      "rows": 110,
+      "columns": 7,
+      "state": "visible",
+      "cells": [
+        {
+          "cell": "A1",
+          "formula": null,
+          "value": "연도·구분 열의 ▼에서 원하는 항목을 선택하세요. 가스 비용 합계는 원자료 시트에서 확인할 수 있습니다."
+        },
+        {
+          "cell": "A2",
+          "formula": null,
+          "value": "연도"
+        },
+        {
+          "cell": "B2",
+          "formula": null,
+          "value": "구분"
+        },
+        {
+          "cell": "C2",
+          "formula": null,
+          "value": "월"
+        },
+        {
+          "cell": "D2",
+          "formula": null,
+          "value": "에너지원"
+        },
+        {
+          "cell": "E2",
+          "formula": null,
+          "value": "사용량"
+        },
+        {
+          "cell": "F2",
+          "formula": null,
+          "value": "사용량 단위"
+        },
+        {
+          "cell": "G2",
+          "formula": null,
+          "value": "비용 (원)"
+        },
+        {
+          "cell": "A3",
+          "formula": null,
+          "value": 2024
+        },
+        {
+          "cell": "B3",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "C3",
+          "formula": null,
+          "value": "2024-01"
+        },
+        {
+          "cell": "D3",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "E3",
+          "formula": null,
+          "value": 743235
+        },
+        {
+          "cell": "F3",
+          "formula": null,
+          "value": "kWh"
+        },
+        {
+          "cell": "G3",
+          "formula": null,
+          "value": 132330441
+        },
+        {
+          "cell": "A4",
+          "formula": null,
+          "value": 2024
+        },
+        {
+          "cell": "B4",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C4",
+          "formula": null,
+          "value": "2024-01"
+        },
+        {
+          "cell": "D4",
+          "formula": null,
+          "value": "LNG"
+        },
+        {
+          "cell": "E4",
+          "formula": null,
+          "value": 210744
+        },
+        {
+          "cell": "F4",
+          "formula": null,
+          "value": "m³"
+        },
+        {
+          "cell": "G4",
+          "formula": null,
+          "value": 209328224
+        },
+        {
+          "cell": "A5",
+          "formula": null,
+          "value": 2024
+        },
+        {
+          "cell": "B5",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C5",
+          "formula": null,
+          "value": "2024-01"
+        },
+        {
+          "cell": "D5",
+          "formula": null,
+          "value": "LPG"
+        },
+        {
+          "cell": "E5",
+          "formula": null,
+          "value": 126322
+        },
+        {
+          "cell": "F5",
+          "formula": null,
+          "value": "kg"
+        },
+        {
+          "cell": "G5",
+          "formula": null,
+          "value": 121269120
+        },
+        {
+          "cell": "A6",
+          "formula": null,
+          "value": 2024
+        },
+        {
+          "cell": "B6",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "C6",
+          "formula": null,
+          "value": "2024-02"
+        },
+        {
+          "cell": "D6",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "E6",
+          "formula": null,
+          "value": 633155
+        },
+        {
+          "cell": "F6",
+          "formula": null,
+          "value": "kWh"
+        },
+        {
+          "cell": "G6",
+          "formula": null,
+          "value": 116459151
+        },
+        {
+          "cell": "A7",
+          "formula": null,
+          "value": 2024
+        },
+        {
+          "cell": "B7",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C7",
+          "formula": null,
+          "value": "2024-02"
+        },
+        {
+          "cell": "D7",
+          "formula": null,
+          "value": "LNG"
+        },
+        {
+          "cell": "E7",
+          "formula": null,
+          "value": 158001
+        },
+        {
+          "cell": "F7",
+          "formula": null,
+          "value": "m³"
+        },
+        {
+          "cell": "G7",
+          "formula": null,
+          "value": 144147387
+        },
+        {
+          "cell": "A8",
+          "formula": null,
+          "value": 2024
+        },
+        {
+          "cell": "B8",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C8",
+          "formula": null,
+          "value": "2024-02"
+        },
+        {
+          "cell": "D8",
+          "formula": null,
+          "value": "LPG"
+        },
+        {
+          "cell": "E8",
+          "formula": null,
+          "value": 83794
+        },
+        {
+          "cell": "F8",
+          "formula": null,
+          "value": "kg"
+        },
+        {
+          "cell": "G8",
+          "formula": null,
+          "value": 80442240
+        },
+        {
+          "cell": "A9",
+          "formula": null,
+          "value": 2024
+        },
+        {
+          "cell": "B9",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "C9",
+          "formula": null,
+          "value": "2024-03"
+        },
+        {
+          "cell": "D9",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "E9",
+          "formula": null,
+          "value": 683939
+        },
+        {
+          "cell": "F9",
+          "formula": null,
+          "value": "kWh"
+        },
+        {
+          "cell": "G9",
+          "formula": null,
+          "value": 103999756
+        },
+        {
+          "cell": "A10",
+          "formula": null,
+          "value": 2024
+        },
+        {
+          "cell": "B10",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C10",
+          "formula": null,
+          "value": "2024-03"
+        },
+        {
+          "cell": "D10",
+          "formula": null,
+          "value": "LNG"
+        },
+        {
+          "cell": "E10",
+          "formula": null,
+          "value": 175458
+        },
+        {
+          "cell": "F10",
+          "formula": null,
+          "value": "m³"
+        },
+        {
+          "cell": "G10",
+          "formula": null,
+          "value": 164362589
+        },
+        {
+          "cell": "A11",
+          "formula": null,
+          "value": 2024
+        },
+        {
+          "cell": "B11",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C11",
+          "formula": null,
+          "value": "2024-03"
+        },
+        {
+          "cell": "D11",
+          "formula": null,
+          "value": "LPG"
+        },
+        {
+          "cell": "E11",
+          "formula": null,
+          "value": 115880
+        },
+        {
+          "cell": "F11",
+          "formula": null,
+          "value": "kg"
+        },
+        {
+          "cell": "G11",
+          "formula": null,
+          "value": 111244800
+        },
+        {
+          "cell": "A12",
+          "formula": null,
+          "value": 2024
+        },
+        {
+          "cell": "B12",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "C12",
+          "formula": null,
+          "value": "2024-04"
+        },
+        {
+          "cell": "D12",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "E12",
+          "formula": null,
+          "value": 734327
+        },
+        {
+          "cell": "F12",
+          "formula": null,
+          "value": "kWh"
+        },
+        {
+          "cell": "G12",
+          "formula": null,
+          "value": 109292959
+        },
+        {
+          "cell": "A13",
+          "formula": null,
+          "value": 2024
+        },
+        {
+          "cell": "B13",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C13",
+          "formula": null,
+          "value": "2024-04"
+        },
+        {
+          "cell": "D13",
+          "formula": null,
+          "value": "LNG"
+        },
+        {
+          "cell": "E13",
+          "formula": null,
+          "value": 167504
+        },
+        {
+          "cell": "F13",
+          "formula": null,
+          "value": "m³"
+        },
+        {
+          "cell": "G13",
+          "formula": null,
+          "value": 140038103
+        },
+        {
+          "cell": "A14",
+          "formula": null,
+          "value": 2024
+        },
+        {
+          "cell": "B14",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C14",
+          "formula": null,
+          "value": "2024-04"
+        },
+        {
+          "cell": "D14",
+          "formula": null,
+          "value": "LPG"
+        },
+        {
+          "cell": "E14",
+          "formula": null,
+          "value": 130412
+        },
+        {
+          "cell": "F14",
+          "formula": null,
+          "value": "kg"
+        },
+        {
+          "cell": "G14",
+          "formula": null,
+          "value": 125195520
+        },
+        {
+          "cell": "A15",
+          "formula": null,
+          "value": 2024
+        },
+        {
+          "cell": "B15",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "C15",
+          "formula": null,
+          "value": "2024-05"
+        },
+        {
+          "cell": "D15",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "E15",
+          "formula": null,
+          "value": 816048
+        },
+        {
+          "cell": "F15",
+          "formula": null,
+          "value": "kWh"
+        },
+        {
+          "cell": "G15",
+          "formula": null,
+          "value": 119011713
+        },
+        {
+          "cell": "A16",
+          "formula": null,
+          "value": 2024
+        },
+        {
+          "cell": "B16",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C16",
+          "formula": null,
+          "value": "2024-05"
+        },
+        {
+          "cell": "D16",
+          "formula": null,
+          "value": "LNG"
+        },
+        {
+          "cell": "E16",
+          "formula": null,
+          "value": 194015
+        },
+        {
+          "cell": "F16",
+          "formula": null,
+          "value": "m³"
+        },
+        {
+          "cell": "G16",
+          "formula": null,
+          "value": 169675460
+        },
+        {
+          "cell": "A17",
+          "formula": null,
+          "value": 2024
+        },
+        {
+          "cell": "B17",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C17",
+          "formula": null,
+          "value": "2024-05"
+        },
+        {
+          "cell": "D17",
+          "formula": null,
+          "value": "LPG"
+        },
+        {
+          "cell": "E17",
+          "formula": null,
+          "value": 130114
+        },
+        {
+          "cell": "F17",
+          "formula": null,
+          "value": "kg"
+        },
+        {
+          "cell": "G17",
+          "formula": null,
+          "value": 124909440
+        },
+        {
+          "cell": "A18",
+          "formula": null,
+          "value": 2024
+        },
+        {
+          "cell": "B18",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "C18",
+          "formula": null,
+          "value": "2024-06"
+        },
+        {
+          "cell": "D18",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "E18",
+          "formula": null,
+          "value": 830642
+        },
+        {
+          "cell": "F18",
+          "formula": null,
+          "value": "kWh"
+        },
+        {
+          "cell": "G18",
+          "formula": null,
+          "value": 138269365
+        },
+        {
+          "cell": "A19",
+          "formula": null,
+          "value": 2024
+        },
+        {
+          "cell": "B19",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C19",
+          "formula": null,
+          "value": "2024-06"
+        },
+        {
+          "cell": "D19",
+          "formula": null,
+          "value": "LNG"
+        },
+        {
+          "cell": "E19",
+          "formula": null,
+          "value": 166198
+        },
+        {
+          "cell": "F19",
+          "formula": null,
+          "value": "m³"
+        },
+        {
+          "cell": "G19",
+          "formula": null,
+          "value": 140472451
+        },
+        {
+          "cell": "A20",
+          "formula": null,
+          "value": 2024
+        },
+        {
+          "cell": "B20",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C20",
+          "formula": null,
+          "value": "2024-06"
+        },
+        {
+          "cell": "D20",
+          "formula": null,
+          "value": "LPG"
+        },
+        {
+          "cell": "E20",
+          "formula": null,
+          "value": 116155
+        },
+        {
+          "cell": "F20",
+          "formula": null,
+          "value": "kg"
+        },
+        {
+          "cell": "G20",
+          "formula": null,
+          "value": 111508800
+        },
+        {
+          "cell": "A21",
+          "formula": null,
+          "value": 2024
+        },
+        {
+          "cell": "B21",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "C21",
+          "formula": null,
+          "value": "2024-07"
+        },
+        {
+          "cell": "D21",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "E21",
+          "formula": null,
+          "value": 793836
+        },
+        {
+          "cell": "F21",
+          "formula": null,
+          "value": "kWh"
+        },
+        {
+          "cell": "G21",
+          "formula": null,
+          "value": 143578047
+        },
+        {
+          "cell": "A22",
+          "formula": null,
+          "value": 2024
+        },
+        {
+          "cell": "B22",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C22",
+          "formula": null,
+          "value": "2024-07"
+        },
+        {
+          "cell": "D22",
+          "formula": null,
+          "value": "LNG"
+        },
+        {
+          "cell": "E22",
+          "formula": null,
+          "value": 144178
+        },
+        {
+          "cell": "F22",
+          "formula": null,
+          "value": "m³"
+        },
+        {
+          "cell": "G22",
+          "formula": null,
+          "value": 125707372
+        },
+        {
+          "cell": "A23",
+          "formula": null,
+          "value": 2024
+        },
+        {
+          "cell": "B23",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C23",
+          "formula": null,
+          "value": "2024-07"
+        },
+        {
+          "cell": "D23",
+          "formula": null,
+          "value": "LPG"
+        },
+        {
+          "cell": "E23",
+          "formula": null,
+          "value": 99673
+        },
+        {
+          "cell": "F23",
+          "formula": null,
+          "value": "kg"
+        },
+        {
+          "cell": "G23",
+          "formula": null,
+          "value": 95686080
+        },
+        {
+          "cell": "A24",
+          "formula": null,
+          "value": 2024
+        },
+        {
+          "cell": "B24",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "C24",
+          "formula": null,
+          "value": "2024-08"
+        },
+        {
+          "cell": "D24",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "E24",
+          "formula": null,
+          "value": 722993
+        },
+        {
+          "cell": "F24",
+          "formula": null,
+          "value": "kWh"
+        },
+        {
+          "cell": "G24",
+          "formula": null,
+          "value": 131290113
+        },
+        {
+          "cell": "A25",
+          "formula": null,
+          "value": 2024
+        },
+        {
+          "cell": "B25",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C25",
+          "formula": null,
+          "value": "2024-08"
+        },
+        {
+          "cell": "D25",
+          "formula": null,
+          "value": "LNG"
+        },
+        {
+          "cell": "E25",
+          "formula": null,
+          "value": 133431
+        },
+        {
+          "cell": "F25",
+          "formula": null,
+          "value": "m³"
+        },
+        {
+          "cell": "G25",
+          "formula": null,
+          "value": 122267757
+        },
+        {
+          "cell": "A26",
+          "formula": null,
+          "value": 2024
+        },
+        {
+          "cell": "B26",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C26",
+          "formula": null,
+          "value": "2024-08"
+        },
+        {
+          "cell": "D26",
+          "formula": null,
+          "value": "LPG"
+        },
+        {
+          "cell": "E26",
+          "formula": null,
+          "value": 76012
+        },
+        {
+          "cell": "F26",
+          "formula": null,
+          "value": "kg"
+        },
+        {
+          "cell": "G26",
+          "formula": null,
+          "value": 77152180
+        },
+        {
+          "cell": "A27",
+          "formula": null,
+          "value": 2024
+        },
+        {
+          "cell": "B27",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "C27",
+          "formula": null,
+          "value": "2024-09"
+        },
+        {
+          "cell": "D27",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "E27",
+          "formula": null,
+          "value": 648564
+        },
+        {
+          "cell": "F27",
+          "formula": null,
+          "value": "kWh"
+        },
+        {
+          "cell": "G27",
+          "formula": null,
+          "value": 104476627
+        },
+        {
+          "cell": "A28",
+          "formula": null,
+          "value": 2024
+        },
+        {
+          "cell": "B28",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C28",
+          "formula": null,
+          "value": "2024-09"
+        },
+        {
+          "cell": "D28",
+          "formula": null,
+          "value": "LNG"
+        },
+        {
+          "cell": "E28",
+          "formula": null,
+          "value": 102881
+        },
+        {
+          "cell": "F28",
+          "formula": null,
+          "value": "m³"
+        },
+        {
+          "cell": "G28",
+          "formula": null,
+          "value": 95471708
+        },
+        {
+          "cell": "A29",
+          "formula": null,
+          "value": 2024
+        },
+        {
+          "cell": "B29",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C29",
+          "formula": null,
+          "value": "2024-09"
+        },
+        {
+          "cell": "D29",
+          "formula": null,
+          "value": "LPG"
+        },
+        {
+          "cell": "E29",
+          "formula": null,
+          "value": 50910
+        },
+        {
+          "cell": "F29",
+          "formula": null,
+          "value": "kg"
+        },
+        {
+          "cell": "G29",
+          "formula": null,
+          "value": 51673650
+        },
+        {
+          "cell": "A30",
+          "formula": null,
+          "value": 2024
+        },
+        {
+          "cell": "B30",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "C30",
+          "formula": null,
+          "value": "2024-10"
+        },
+        {
+          "cell": "D30",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "E30",
+          "formula": null,
+          "value": 723420
+        },
+        {
+          "cell": "F30",
+          "formula": null,
+          "value": "kWh"
+        },
+        {
+          "cell": "G30",
+          "formula": null,
+          "value": 110368822
+        },
+        {
+          "cell": "A31",
+          "formula": null,
+          "value": 2024
+        },
+        {
+          "cell": "B31",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C31",
+          "formula": null,
+          "value": "2024-10"
+        },
+        {
+          "cell": "D31",
+          "formula": null,
+          "value": "LNG"
+        },
+        {
+          "cell": "E31",
+          "formula": null,
+          "value": 181161
+        },
+        {
+          "cell": "F31",
+          "formula": null,
+          "value": "m³"
+        },
+        {
+          "cell": "G31",
+          "formula": null,
+          "value": 163678011
+        },
+        {
+          "cell": "A32",
+          "formula": null,
+          "value": 2024
+        },
+        {
+          "cell": "B32",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C32",
+          "formula": null,
+          "value": "2024-10"
+        },
+        {
+          "cell": "D32",
+          "formula": null,
+          "value": "LPG"
+        },
+        {
+          "cell": "E32",
+          "formula": null,
+          "value": 95184
+        },
+        {
+          "cell": "F32",
+          "formula": null,
+          "value": "kg"
+        },
+        {
+          "cell": "G32",
+          "formula": null,
+          "value": 95088816
+        },
+        {
+          "cell": "A33",
+          "formula": null,
+          "value": 2024
+        },
+        {
+          "cell": "B33",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "C33",
+          "formula": null,
+          "value": "2024-11"
+        },
+        {
+          "cell": "D33",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "E33",
+          "formula": null,
+          "value": 757290
+        },
+        {
+          "cell": "F33",
+          "formula": null,
+          "value": "kWh"
+        },
+        {
+          "cell": "G33",
+          "formula": null,
+          "value": 142103836
+        },
+        {
+          "cell": "A34",
+          "formula": null,
+          "value": 2024
+        },
+        {
+          "cell": "B34",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C34",
+          "formula": null,
+          "value": "2024-11"
+        },
+        {
+          "cell": "D34",
+          "formula": null,
+          "value": "LNG"
+        },
+        {
+          "cell": "E34",
+          "formula": null,
+          "value": 177218
+        },
+        {
+          "cell": "F34",
+          "formula": null,
+          "value": "m³"
+        },
+        {
+          "cell": "G34",
+          "formula": null,
+          "value": 159604071
+        },
+        {
+          "cell": "A35",
+          "formula": null,
+          "value": 2024
+        },
+        {
+          "cell": "B35",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C35",
+          "formula": null,
+          "value": "2024-11"
+        },
+        {
+          "cell": "D35",
+          "formula": null,
+          "value": "LPG"
+        },
+        {
+          "cell": "E35",
+          "formula": null,
+          "value": 107113
+        },
+        {
+          "cell": "F35",
+          "formula": null,
+          "value": "kg"
+        },
+        {
+          "cell": "G35",
+          "formula": null,
+          "value": 107005887
+        },
+        {
+          "cell": "A36",
+          "formula": null,
+          "value": 2024
+        },
+        {
+          "cell": "B36",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "C36",
+          "formula": null,
+          "value": "2024-12"
+        },
+        {
+          "cell": "D36",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "E36",
+          "formula": null,
+          "value": 751261
+        },
+        {
+          "cell": "F36",
+          "formula": null,
+          "value": "kWh"
+        },
+        {
+          "cell": "G36",
+          "formula": null,
+          "value": 144786974
+        },
+        {
+          "cell": "A37",
+          "formula": null,
+          "value": 2024
+        },
+        {
+          "cell": "B37",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C37",
+          "formula": null,
+          "value": "2024-12"
+        },
+        {
+          "cell": "D37",
+          "formula": null,
+          "value": "LNG"
+        },
+        {
+          "cell": "E37",
+          "formula": null,
+          "value": 197172
+        },
+        {
+          "cell": "F37",
+          "formula": null,
+          "value": "m³"
+        },
+        {
+          "cell": "G37",
+          "formula": null,
+          "value": 186214834
+        },
+        {
+          "cell": "A38",
+          "formula": null,
+          "value": 2024
+        },
+        {
+          "cell": "B38",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C38",
+          "formula": null,
+          "value": "2024-12"
+        },
+        {
+          "cell": "D38",
+          "formula": null,
+          "value": "LPG"
+        },
+        {
+          "cell": "E38",
+          "formula": null,
+          "value": 112681
+        },
+        {
+          "cell": "F38",
+          "formula": null,
+          "value": "kg"
+        },
+        {
+          "cell": "G38",
+          "formula": null,
+          "value": 117638964
+        },
+        {
+          "cell": "A39",
+          "formula": null,
+          "value": 2025
+        },
+        {
+          "cell": "B39",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "C39",
+          "formula": null,
+          "value": "2025-01"
+        },
+        {
+          "cell": "D39",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "E39",
+          "formula": null,
+          "value": 656040
+        },
+        {
+          "cell": "F39",
+          "formula": null,
+          "value": "kWh"
+        },
+        {
+          "cell": "G39",
+          "formula": null,
+          "value": 128251811
+        },
+        {
+          "cell": "A40",
+          "formula": null,
+          "value": 2025
+        },
+        {
+          "cell": "B40",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C40",
+          "formula": null,
+          "value": "2025-01"
+        },
+        {
+          "cell": "D40",
+          "formula": null,
+          "value": "LNG"
+        },
+        {
+          "cell": "E40",
+          "formula": null,
+          "value": 158576
+        },
+        {
+          "cell": "F40",
+          "formula": null,
+          "value": "m³"
+        },
+        {
+          "cell": "G40",
+          "formula": null,
+          "value": 146643631
+        },
+        {
+          "cell": "A41",
+          "formula": null,
+          "value": 2025
+        },
+        {
+          "cell": "B41",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C41",
+          "formula": null,
+          "value": "2025-01"
+        },
+        {
+          "cell": "D41",
+          "formula": null,
+          "value": "LPG"
+        },
+        {
+          "cell": "E41",
+          "formula": null,
+          "value": 81753
+        },
+        {
+          "cell": "F41",
+          "formula": null,
+          "value": "kg"
+        },
+        {
+          "cell": "G41",
+          "formula": null,
+          "value": 85350132
+        },
+        {
+          "cell": "A42",
+          "formula": null,
+          "value": 2025
+        },
+        {
+          "cell": "B42",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "C42",
+          "formula": null,
+          "value": "2025-02"
+        },
+        {
+          "cell": "D42",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "E42",
+          "formula": null,
+          "value": 645587
+        },
+        {
+          "cell": "F42",
+          "formula": null,
+          "value": "kWh"
+        },
+        {
+          "cell": "G42",
+          "formula": null,
+          "value": 129799492
+        },
+        {
+          "cell": "A43",
+          "formula": null,
+          "value": 2025
+        },
+        {
+          "cell": "B43",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C43",
+          "formula": null,
+          "value": "2025-02"
+        },
+        {
+          "cell": "D43",
+          "formula": null,
+          "value": "LNG"
+        },
+        {
+          "cell": "E43",
+          "formula": null,
+          "value": 173543
+        },
+        {
+          "cell": "F43",
+          "formula": null,
+          "value": "m³"
+        },
+        {
+          "cell": "G43",
+          "formula": null,
+          "value": 158069817
+        },
+        {
+          "cell": "A44",
+          "formula": null,
+          "value": 2025
+        },
+        {
+          "cell": "B44",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C44",
+          "formula": null,
+          "value": "2025-02"
+        },
+        {
+          "cell": "D44",
+          "formula": null,
+          "value": "LPG"
+        },
+        {
+          "cell": "E44",
+          "formula": null,
+          "value": 92762
+        },
+        {
+          "cell": "F44",
+          "formula": null,
+          "value": "kg"
+        },
+        {
+          "cell": "G44",
+          "formula": null,
+          "value": 96843528
+        },
+        {
+          "cell": "A45",
+          "formula": null,
+          "value": 2025
+        },
+        {
+          "cell": "B45",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "C45",
+          "formula": null,
+          "value": "2025-03"
+        },
+        {
+          "cell": "D45",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "E45",
+          "formula": null,
+          "value": 683494
+        },
+        {
+          "cell": "F45",
+          "formula": null,
+          "value": "kWh"
+        },
+        {
+          "cell": "G45",
+          "formula": null,
+          "value": 117239381
+        },
+        {
+          "cell": "A46",
+          "formula": null,
+          "value": 2025
+        },
+        {
+          "cell": "B46",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C46",
+          "formula": null,
+          "value": "2025-03"
+        },
+        {
+          "cell": "D46",
+          "formula": null,
+          "value": "LNG"
+        },
+        {
+          "cell": "E46",
+          "formula": null,
+          "value": 166073
+        },
+        {
+          "cell": "F46",
+          "formula": null,
+          "value": "m³"
+        },
+        {
+          "cell": "G46",
+          "formula": null,
+          "value": 147233434
+        },
+        {
+          "cell": "A47",
+          "formula": null,
+          "value": 2025
+        },
+        {
+          "cell": "B47",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C47",
+          "formula": null,
+          "value": "2025-03"
+        },
+        {
+          "cell": "D47",
+          "formula": null,
+          "value": "LPG"
+        },
+        {
+          "cell": "E47",
+          "formula": null,
+          "value": 91686
+        },
+        {
+          "cell": "F47",
+          "formula": null,
+          "value": "kg"
+        },
+        {
+          "cell": "G47",
+          "formula": null,
+          "value": 95720184
+        },
+        {
+          "cell": "A48",
+          "formula": null,
+          "value": 2025
+        },
+        {
+          "cell": "B48",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "C48",
+          "formula": null,
+          "value": "2025-04"
+        },
+        {
+          "cell": "D48",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "E48",
+          "formula": null,
+          "value": 725958
+        },
+        {
+          "cell": "F48",
+          "formula": null,
+          "value": "kWh"
+        },
+        {
+          "cell": "G48",
+          "formula": null,
+          "value": 122722753
+        },
+        {
+          "cell": "A49",
+          "formula": null,
+          "value": 2025
+        },
+        {
+          "cell": "B49",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C49",
+          "formula": null,
+          "value": "2025-04"
+        },
+        {
+          "cell": "D49",
+          "formula": null,
+          "value": "LNG"
+        },
+        {
+          "cell": "E49",
+          "formula": null,
+          "value": 167494
+        },
+        {
+          "cell": "F49",
+          "formula": null,
+          "value": "m³"
+        },
+        {
+          "cell": "G49",
+          "formula": null,
+          "value": 154924292
+        },
+        {
+          "cell": "A50",
+          "formula": null,
+          "value": 2025
+        },
+        {
+          "cell": "B50",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C50",
+          "formula": null,
+          "value": "2025-04"
+        },
+        {
+          "cell": "D50",
+          "formula": null,
+          "value": "LPG"
+        },
+        {
+          "cell": "E50",
+          "formula": null,
+          "value": 89941
+        },
+        {
+          "cell": "F50",
+          "formula": null,
+          "value": "kg"
+        },
+        {
+          "cell": "G50",
+          "formula": null,
+          "value": 93898404
+        },
+        {
+          "cell": "A51",
+          "formula": null,
+          "value": 2025
+        },
+        {
+          "cell": "B51",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "C51",
+          "formula": null,
+          "value": "2025-05"
+        },
+        {
+          "cell": "D51",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "E51",
+          "formula": null,
+          "value": 607401
+        },
+        {
+          "cell": "F51",
+          "formula": null,
+          "value": "kWh"
+        },
+        {
+          "cell": "G51",
+          "formula": null,
+          "value": 103648913
+        },
+        {
+          "cell": "A52",
+          "formula": null,
+          "value": 2025
+        },
+        {
+          "cell": "B52",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C52",
+          "formula": null,
+          "value": "2025-05"
+        },
+        {
+          "cell": "D52",
+          "formula": null,
+          "value": "LNG"
+        },
+        {
+          "cell": "E52",
+          "formula": null,
+          "value": 125043
+        },
+        {
+          "cell": "F52",
+          "formula": null,
+          "value": "m³"
+        },
+        {
+          "cell": "G52",
+          "formula": null,
+          "value": 107334728
+        },
+        {
+          "cell": "A53",
+          "formula": null,
+          "value": 2025
+        },
+        {
+          "cell": "B53",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C53",
+          "formula": null,
+          "value": "2025-05"
+        },
+        {
+          "cell": "D53",
+          "formula": null,
+          "value": "LPG"
+        },
+        {
+          "cell": "E53",
+          "formula": null,
+          "value": 62287
+        },
+        {
+          "cell": "F53",
+          "formula": null,
+          "value": "kg"
+        },
+        {
+          "cell": "G53",
+          "formula": null,
+          "value": 65027628
+        },
+        {
+          "cell": "A54",
+          "formula": null,
+          "value": 2025
+        },
+        {
+          "cell": "B54",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "C54",
+          "formula": null,
+          "value": "2025-06"
+        },
+        {
+          "cell": "D54",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "E54",
+          "formula": null,
+          "value": 643492
+        },
+        {
+          "cell": "F54",
+          "formula": null,
+          "value": "kWh"
+        },
+        {
+          "cell": "G54",
+          "formula": null,
+          "value": 127053369
+        },
+        {
+          "cell": "A55",
+          "formula": null,
+          "value": 2025
+        },
+        {
+          "cell": "B55",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C55",
+          "formula": null,
+          "value": "2025-06"
+        },
+        {
+          "cell": "D55",
+          "formula": null,
+          "value": "LNG"
+        },
+        {
+          "cell": "E55",
+          "formula": null,
+          "value": 135681
+        },
+        {
+          "cell": "F55",
+          "formula": null,
+          "value": "m³"
+        },
+        {
+          "cell": "G55",
+          "formula": null,
+          "value": 113082983
+        },
+        {
+          "cell": "A56",
+          "formula": null,
+          "value": 2025
+        },
+        {
+          "cell": "B56",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C56",
+          "formula": null,
+          "value": "2025-06"
+        },
+        {
+          "cell": "D56",
+          "formula": null,
+          "value": "LPG"
+        },
+        {
+          "cell": "E56",
+          "formula": null,
+          "value": 70193
+        },
+        {
+          "cell": "F56",
+          "formula": null,
+          "value": "kg"
+        },
+        {
+          "cell": "G56",
+          "formula": null,
+          "value": 71365223
+        },
+        {
+          "cell": "A57",
+          "formula": null,
+          "value": 2025
+        },
+        {
+          "cell": "B57",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "C57",
+          "formula": null,
+          "value": "2025-07"
+        },
+        {
+          "cell": "D57",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "E57",
+          "formula": null,
+          "value": 717304
+        },
+        {
+          "cell": "F57",
+          "formula": null,
+          "value": "kWh"
+        },
+        {
+          "cell": "G57",
+          "formula": null,
+          "value": 141976825
+        },
+        {
+          "cell": "A58",
+          "formula": null,
+          "value": 2025
+        },
+        {
+          "cell": "B58",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C58",
+          "formula": null,
+          "value": "2025-07"
+        },
+        {
+          "cell": "D58",
+          "formula": null,
+          "value": "LNG"
+        },
+        {
+          "cell": "E58",
+          "formula": null,
+          "value": 134220
+        },
+        {
+          "cell": "F58",
+          "formula": null,
+          "value": "m³"
+        },
+        {
+          "cell": "G58",
+          "formula": null,
+          "value": 106719564
+        },
+        {
+          "cell": "A59",
+          "formula": null,
+          "value": 2025
+        },
+        {
+          "cell": "B59",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C59",
+          "formula": null,
+          "value": "2025-07"
+        },
+        {
+          "cell": "D59",
+          "formula": null,
+          "value": "LPG"
+        },
+        {
+          "cell": "E59",
+          "formula": null,
+          "value": 67905
+        },
+        {
+          "cell": "F59",
+          "formula": null,
+          "value": "kg"
+        },
+        {
+          "cell": "G59",
+          "formula": null,
+          "value": 63946139
+        },
+        {
+          "cell": "A60",
+          "formula": null,
+          "value": 2025
+        },
+        {
+          "cell": "B60",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "C60",
+          "formula": null,
+          "value": "2025-08"
+        },
+        {
+          "cell": "D60",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "E60",
+          "formula": null,
+          "value": 676466
+        },
+        {
+          "cell": "F60",
+          "formula": null,
+          "value": "kWh"
+        },
+        {
+          "cell": "G60",
+          "formula": null,
+          "value": 140932590
+        },
+        {
+          "cell": "A61",
+          "formula": null,
+          "value": 2025
+        },
+        {
+          "cell": "B61",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C61",
+          "formula": null,
+          "value": "2025-08"
+        },
+        {
+          "cell": "D61",
+          "formula": null,
+          "value": "LNG"
+        },
+        {
+          "cell": "E61",
+          "formula": null,
+          "value": 141279
+        },
+        {
+          "cell": "F61",
+          "formula": null,
+          "value": "m³"
+        },
+        {
+          "cell": "G61",
+          "formula": null,
+          "value": 111188929
+        },
+        {
+          "cell": "A62",
+          "formula": null,
+          "value": 2025
+        },
+        {
+          "cell": "B62",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C62",
+          "formula": null,
+          "value": "2025-08"
+        },
+        {
+          "cell": "D62",
+          "formula": null,
+          "value": "LPG"
+        },
+        {
+          "cell": "E62",
+          "formula": null,
+          "value": 72678
+        },
+        {
+          "cell": "F62",
+          "formula": null,
+          "value": "kg"
+        },
+        {
+          "cell": "G62",
+          "formula": null,
+          "value": 68440873
+        },
+        {
+          "cell": "A63",
+          "formula": null,
+          "value": 2025
+        },
+        {
+          "cell": "B63",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "C63",
+          "formula": null,
+          "value": "2025-09"
+        },
+        {
+          "cell": "D63",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "E63",
+          "formula": null,
+          "value": 796742
+        },
+        {
+          "cell": "F63",
+          "formula": null,
+          "value": "kWh"
+        },
+        {
+          "cell": "G63",
+          "formula": null,
+          "value": 137446513
+        },
+        {
+          "cell": "A64",
+          "formula": null,
+          "value": 2025
+        },
+        {
+          "cell": "B64",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C64",
+          "formula": null,
+          "value": "2025-09"
+        },
+        {
+          "cell": "D64",
+          "formula": null,
+          "value": "LNG"
+        },
+        {
+          "cell": "E64",
+          "formula": null,
+          "value": 174353
+        },
+        {
+          "cell": "F64",
+          "formula": null,
+          "value": "m³"
+        },
+        {
+          "cell": "G64",
+          "formula": null,
+          "value": 144937703
+        },
+        {
+          "cell": "A65",
+          "formula": null,
+          "value": 2025
+        },
+        {
+          "cell": "B65",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C65",
+          "formula": null,
+          "value": "2025-09"
+        },
+        {
+          "cell": "D65",
+          "formula": null,
+          "value": "LPG"
+        },
+        {
+          "cell": "E65",
+          "formula": null,
+          "value": 98751
+        },
+        {
+          "cell": "F65",
+          "formula": null,
+          "value": "kg"
+        },
+        {
+          "cell": "G65",
+          "formula": null,
+          "value": 89763785
+        },
+        {
+          "cell": "A66",
+          "formula": null,
+          "value": 2025
+        },
+        {
+          "cell": "B66",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "C66",
+          "formula": null,
+          "value": "2025-10"
+        },
+        {
+          "cell": "D66",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "E66",
+          "formula": null,
+          "value": 583850
+        },
+        {
+          "cell": "F66",
+          "formula": null,
+          "value": "kWh"
+        },
+        {
+          "cell": "G66",
+          "formula": null,
+          "value": 100751316
+        },
+        {
+          "cell": "A67",
+          "formula": null,
+          "value": 2025
+        },
+        {
+          "cell": "B67",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C67",
+          "formula": null,
+          "value": "2025-10"
+        },
+        {
+          "cell": "D67",
+          "formula": null,
+          "value": "LNG"
+        },
+        {
+          "cell": "E67",
+          "formula": null,
+          "value": 128179
+        },
+        {
+          "cell": "F67",
+          "formula": null,
+          "value": "m³"
+        },
+        {
+          "cell": "G67",
+          "formula": null,
+          "value": 101004829
+        },
+        {
+          "cell": "A68",
+          "formula": null,
+          "value": 2025
+        },
+        {
+          "cell": "B68",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C68",
+          "formula": null,
+          "value": "2025-10"
+        },
+        {
+          "cell": "D68",
+          "formula": null,
+          "value": "LPG"
+        },
+        {
+          "cell": "E68",
+          "formula": null,
+          "value": 79586
+        },
+        {
+          "cell": "F68",
+          "formula": null,
+          "value": "kg"
+        },
+        {
+          "cell": "G68",
+          "formula": null,
+          "value": 77047150
+        },
+        {
+          "cell": "A69",
+          "formula": null,
+          "value": 2025
+        },
+        {
+          "cell": "B69",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "C69",
+          "formula": null,
+          "value": "2025-11"
+        },
+        {
+          "cell": "D69",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "E69",
+          "formula": null,
+          "value": 664458
+        },
+        {
+          "cell": "F69",
+          "formula": null,
+          "value": "kWh"
+        },
+        {
+          "cell": "G69",
+          "formula": null,
+          "value": 129075095
+        },
+        {
+          "cell": "A70",
+          "formula": null,
+          "value": 2025
+        },
+        {
+          "cell": "B70",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C70",
+          "formula": null,
+          "value": "2025-11"
+        },
+        {
+          "cell": "D70",
+          "formula": null,
+          "value": "LNG"
+        },
+        {
+          "cell": "E70",
+          "formula": null,
+          "value": 174639
+        },
+        {
+          "cell": "F70",
+          "formula": null,
+          "value": "m³"
+        },
+        {
+          "cell": "G70",
+          "formula": null,
+          "value": 129566719
+        },
+        {
+          "cell": "A71",
+          "formula": null,
+          "value": 2025
+        },
+        {
+          "cell": "B71",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C71",
+          "formula": null,
+          "value": "2025-11"
+        },
+        {
+          "cell": "D71",
+          "formula": null,
+          "value": "LPG"
+        },
+        {
+          "cell": "E71",
+          "formula": null,
+          "value": 91368
+        },
+        {
+          "cell": "F71",
+          "formula": null,
+          "value": "kg"
+        },
+        {
+          "cell": "G71",
+          "formula": null,
+          "value": 82276884
+        },
+        {
+          "cell": "A72",
+          "formula": null,
+          "value": 2025
+        },
+        {
+          "cell": "B72",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "C72",
+          "formula": null,
+          "value": "2025-12"
+        },
+        {
+          "cell": "D72",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "E72",
+          "formula": null,
+          "value": 744348
+        },
+        {
+          "cell": "F72",
+          "formula": null,
+          "value": "kWh"
+        },
+        {
+          "cell": "G72",
+          "formula": null,
+          "value": 145282122
+        },
+        {
+          "cell": "A73",
+          "formula": null,
+          "value": 2025
+        },
+        {
+          "cell": "B73",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C73",
+          "formula": null,
+          "value": "2025-12"
+        },
+        {
+          "cell": "D73",
+          "formula": null,
+          "value": "LNG"
+        },
+        {
+          "cell": "E73",
+          "formula": null,
+          "value": 216312
+        },
+        {
+          "cell": "F73",
+          "formula": null,
+          "value": "m³"
+        },
+        {
+          "cell": "G73",
+          "formula": null,
+          "value": 162979922
+        },
+        {
+          "cell": "A74",
+          "formula": null,
+          "value": 2025
+        },
+        {
+          "cell": "B74",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C74",
+          "formula": null,
+          "value": "2025-12"
+        },
+        {
+          "cell": "D74",
+          "formula": null,
+          "value": "LPG"
+        },
+        {
+          "cell": "E74",
+          "formula": null,
+          "value": 123113
+        },
+        {
+          "cell": "F74",
+          "formula": null,
+          "value": "kg"
+        },
+        {
+          "cell": "G74",
+          "formula": null,
+          "value": 110863256
+        },
+        {
+          "cell": "A75",
+          "formula": null,
+          "value": 2026
+        },
+        {
+          "cell": "B75",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "C75",
+          "formula": null,
+          "value": "2026-01"
+        },
+        {
+          "cell": "D75",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "E75",
+          "formula": null,
+          "value": 778168
+        },
+        {
+          "cell": "F75",
+          "formula": null,
+          "value": "kWh"
+        },
+        {
+          "cell": "G75",
+          "formula": null,
+          "value": 150033113
+        },
+        {
+          "cell": "A76",
+          "formula": null,
+          "value": 2026
+        },
+        {
+          "cell": "B76",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C76",
+          "formula": null,
+          "value": "2026-01"
+        },
+        {
+          "cell": "D76",
+          "formula": null,
+          "value": "LNG"
+        },
+        {
+          "cell": "E76",
+          "formula": null,
+          "value": 220863
+        },
+        {
+          "cell": "F76",
+          "formula": null,
+          "value": "m³"
+        },
+        {
+          "cell": "G76",
+          "formula": null,
+          "value": 170303536
+        },
+        {
+          "cell": "A77",
+          "formula": null,
+          "value": 2026
+        },
+        {
+          "cell": "B77",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C77",
+          "formula": null,
+          "value": "2026-01"
+        },
+        {
+          "cell": "D77",
+          "formula": null,
+          "value": "LPG"
+        },
+        {
+          "cell": "E77",
+          "formula": null,
+          "value": 125407
+        },
+        {
+          "cell": "F77",
+          "formula": null,
+          "value": "kg"
+        },
+        {
+          "cell": "G77",
+          "formula": null,
+          "value": 114183074
+        },
+        {
+          "cell": "A78",
+          "formula": null,
+          "value": 2026
+        },
+        {
+          "cell": "B78",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "C78",
+          "formula": null,
+          "value": "2026-02"
+        },
+        {
+          "cell": "D78",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "E78",
+          "formula": null,
+          "value": 578456
+        },
+        {
+          "cell": "F78",
+          "formula": null,
+          "value": "kWh"
+        },
+        {
+          "cell": "G78",
+          "formula": null,
+          "value": 115252823
+        },
+        {
+          "cell": "A79",
+          "formula": null,
+          "value": 2026
+        },
+        {
+          "cell": "B79",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C79",
+          "formula": null,
+          "value": "2026-02"
+        },
+        {
+          "cell": "D79",
+          "formula": null,
+          "value": "LNG"
+        },
+        {
+          "cell": "E79",
+          "formula": null,
+          "value": 161499
+        },
+        {
+          "cell": "F79",
+          "formula": null,
+          "value": "m³"
+        },
+        {
+          "cell": "G79",
+          "formula": null,
+          "value": 127198642
+        },
+        {
+          "cell": "A80",
+          "formula": null,
+          "value": 2026
+        },
+        {
+          "cell": "B80",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C80",
+          "formula": null,
+          "value": "2026-02"
+        },
+        {
+          "cell": "D80",
+          "formula": null,
+          "value": "LPG"
+        },
+        {
+          "cell": "E80",
+          "formula": null,
+          "value": 97629
+        },
+        {
+          "cell": "F80",
+          "formula": null,
+          "value": "kg"
+        },
+        {
+          "cell": "G80",
+          "formula": null,
+          "value": 88891205
+        },
+        {
+          "cell": "A81",
+          "formula": null,
+          "value": 2026
+        },
+        {
+          "cell": "B81",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "C81",
+          "formula": null,
+          "value": "2026-03"
+        },
+        {
+          "cell": "D81",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "E81",
+          "formula": null,
+          "value": 651113
+        },
+        {
+          "cell": "F81",
+          "formula": null,
+          "value": "kWh"
+        },
+        {
+          "cell": "G81",
+          "formula": null,
+          "value": 110436464
+        },
+        {
+          "cell": "A82",
+          "formula": null,
+          "value": 2026
+        },
+        {
+          "cell": "B82",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C82",
+          "formula": null,
+          "value": "2026-03"
+        },
+        {
+          "cell": "D82",
+          "formula": null,
+          "value": "LNG"
+        },
+        {
+          "cell": "E82",
+          "formula": null,
+          "value": 178230
+        },
+        {
+          "cell": "F82",
+          "formula": null,
+          "value": "m³"
+        },
+        {
+          "cell": "G82",
+          "formula": null,
+          "value": 136647574
+        },
+        {
+          "cell": "A83",
+          "formula": null,
+          "value": 2026
+        },
+        {
+          "cell": "B83",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C83",
+          "formula": null,
+          "value": "2026-03"
+        },
+        {
+          "cell": "D83",
+          "formula": null,
+          "value": "LPG"
+        },
+        {
+          "cell": "E83",
+          "formula": null,
+          "value": 95532
+        },
+        {
+          "cell": "F83",
+          "formula": null,
+          "value": "kg"
+        },
+        {
+          "cell": "G83",
+          "formula": null,
+          "value": 87889440
+        },
+        {
+          "cell": "A84",
+          "formula": null,
+          "value": 2026
+        },
+        {
+          "cell": "B84",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "C84",
+          "formula": null,
+          "value": "2026-04"
+        },
+        {
+          "cell": "D84",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "E84",
+          "formula": null,
+          "value": 553302.951
+        },
+        {
+          "cell": "F84",
+          "formula": null,
+          "value": "kWh"
+        },
+        {
+          "cell": "G84",
+          "formula": null,
+          "value": 103748921
+        },
+        {
+          "cell": "A85",
+          "formula": null,
+          "value": 2026
+        },
+        {
+          "cell": "B85",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C85",
+          "formula": null,
+          "value": "2026-04"
+        },
+        {
+          "cell": "D85",
+          "formula": null,
+          "value": "LNG"
+        },
+        {
+          "cell": "E85",
+          "formula": null,
+          "value": 160777
+        },
+        {
+          "cell": "F85",
+          "formula": null,
+          "value": "m³"
+        },
+        {
+          "cell": "G85",
+          "formula": null,
+          "value": 127046953
+        },
+        {
+          "cell": "A86",
+          "formula": null,
+          "value": 2026
+        },
+        {
+          "cell": "B86",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C86",
+          "formula": null,
+          "value": "2026-04"
+        },
+        {
+          "cell": "D86",
+          "formula": null,
+          "value": "LPG"
+        },
+        {
+          "cell": "E86",
+          "formula": null,
+          "value": 65013
+        },
+        {
+          "cell": "F86",
+          "formula": null,
+          "value": "kg"
+        },
+        {
+          "cell": "G86",
+          "formula": null,
+          "value": 61112220
+        },
+        {
+          "cell": "A87",
+          "formula": null,
+          "value": 2026
+        },
+        {
+          "cell": "B87",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "C87",
+          "formula": null,
+          "value": "2026-05"
+        },
+        {
+          "cell": "D87",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "E87",
+          "formula": null,
+          "value": 531018.665
+        },
+        {
+          "cell": "F87",
+          "formula": null,
+          "value": "kWh"
+        },
+        {
+          "cell": "G87",
+          "formula": null,
+          "value": 97465491
+        },
+        {
+          "cell": "A88",
+          "formula": null,
+          "value": 2026
+        },
+        {
+          "cell": "B88",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C88",
+          "formula": null,
+          "value": "2026-05"
+        },
+        {
+          "cell": "D88",
+          "formula": null,
+          "value": "LNG"
+        },
+        {
+          "cell": "E88",
+          "formula": null,
+          "value": 129084
+        },
+        {
+          "cell": "F88",
+          "formula": null,
+          "value": "m³"
+        },
+        {
+          "cell": "G88",
+          "formula": null,
+          "value": 111794843
+        },
+        {
+          "cell": "A89",
+          "formula": null,
+          "value": 2026
+        },
+        {
+          "cell": "B89",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C89",
+          "formula": null,
+          "value": "2026-05"
+        },
+        {
+          "cell": "D89",
+          "formula": null,
+          "value": "LPG"
+        },
+        {
+          "cell": "E89",
+          "formula": null,
+          "value": 66833
+        },
+        {
+          "cell": "F89",
+          "formula": null,
+          "value": "kg"
+        },
+        {
+          "cell": "G89",
+          "formula": null,
+          "value": 70114500
+        },
+        {
+          "cell": "A90",
+          "formula": null,
+          "value": 2026
+        },
+        {
+          "cell": "B90",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "C90",
+          "formula": null,
+          "value": "2026-06"
+        },
+        {
+          "cell": "D90",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "E90",
+          "formula": null,
+          "value": 710016.917
+        },
+        {
+          "cell": "F90",
+          "formula": null,
+          "value": "kWh"
+        },
+        {
+          "cell": "G90",
+          "formula": null,
+          "value": 150175458
+        },
+        {
+          "cell": "A91",
+          "formula": null,
+          "value": 2026
+        },
+        {
+          "cell": "B91",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C91",
+          "formula": null,
+          "value": "2026-06"
+        },
+        {
+          "cell": "D91",
+          "formula": null,
+          "value": "LNG"
+        },
+        {
+          "cell": "E91",
+          "formula": null,
+          "value": 154466
+        },
+        {
+          "cell": "F91",
+          "formula": null,
+          "value": "m³"
+        },
+        {
+          "cell": "G91",
+          "formula": null,
+          "value": 146202249
+        },
+        {
+          "cell": "A92",
+          "formula": null,
+          "value": 2026
+        },
+        {
+          "cell": "B92",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C92",
+          "formula": null,
+          "value": "2026-06"
+        },
+        {
+          "cell": "D92",
+          "formula": null,
+          "value": "LPG"
+        },
+        {
+          "cell": "E92",
+          "formula": null,
+          "value": 77512
+        },
+        {
+          "cell": "F92",
+          "formula": null,
+          "value": "kg"
+        },
+        {
+          "cell": "G92",
+          "formula": null,
+          "value": 86247602
+        },
+        {
+          "cell": "A93",
+          "formula": null,
+          "value": 2026
+        },
+        {
+          "cell": "B93",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "C93",
+          "formula": null,
+          "value": "2026-07"
+        },
+        {
+          "cell": "D93",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "E93",
+          "formula": null,
+          "value": 714005.822
+        },
+        {
+          "cell": "F93",
+          "formula": null,
+          "value": "kWh"
+        },
+        {
+          "cell": "G93",
+          "formula": null,
+          "value": 151946963
+        },
+        {
+          "cell": "A94",
+          "formula": null,
+          "value": 2026
+        },
+        {
+          "cell": "B94",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C94",
+          "formula": null,
+          "value": "2026-07"
+        },
+        {
+          "cell": "D94",
+          "formula": null,
+          "value": "LNG"
+        },
+        {
+          "cell": "E94",
+          "formula": null,
+          "value": 141711
+        },
+        {
+          "cell": "F94",
+          "formula": null,
+          "value": "m³"
+        },
+        {
+          "cell": "G94",
+          "formula": null,
+          "value": 137110713
+        },
+        {
+          "cell": "A95",
+          "formula": null,
+          "value": 2026
+        },
+        {
+          "cell": "B95",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C95",
+          "formula": null,
+          "value": "2026-07"
+        },
+        {
+          "cell": "D95",
+          "formula": null,
+          "value": "LPG"
+        },
+        {
+          "cell": "E95",
+          "formula": null,
+          "value": 57292
+        },
+        {
+          "cell": "F95",
+          "formula": null,
+          "value": "kg"
+        },
+        {
+          "cell": "G95",
+          "formula": null,
+          "value": 66304032
+        },
+        {
+          "cell": "A96",
+          "formula": null,
+          "value": 2026
+        },
+        {
+          "cell": "B96",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "C96",
+          "formula": null,
+          "value": "2026-08"
+        },
+        {
+          "cell": "D96",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "E96",
+          "formula": null,
+          "value": 602323.2220000001
+        },
+        {
+          "cell": "F96",
+          "formula": null,
+          "value": "kWh"
+        },
+        {
+          "cell": "G96",
+          "formula": null,
+          "value": 128574972
+        },
+        {
+          "cell": "A97",
+          "formula": null,
+          "value": 2026
+        },
+        {
+          "cell": "B97",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C97",
+          "formula": null,
+          "value": "2026-08"
+        },
+        {
+          "cell": "D97",
+          "formula": null,
+          "value": "LNG"
+        },
+        {
+          "cell": "E97",
+          "formula": null,
+          "value": 110573
+        },
+        {
+          "cell": "F97",
+          "formula": null,
+          "value": "m³"
+        },
+        {
+          "cell": "G97",
+          "formula": null,
+          "value": 118449071
+        },
+        {
+          "cell": "A98",
+          "formula": null,
+          "value": 2026
+        },
+        {
+          "cell": "B98",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C98",
+          "formula": null,
+          "value": "2026-08"
+        },
+        {
+          "cell": "D98",
+          "formula": null,
+          "value": "LPG"
+        },
+        {
+          "cell": "E98",
+          "formula": null,
+          "value": 60565
+        },
+        {
+          "cell": "F98",
+          "formula": null,
+          "value": "kg"
+        },
+        {
+          "cell": "G98",
+          "formula": null,
+          "value": 73671266
+        },
+        {
+          "cell": "A99",
+          "formula": null,
+          "value": 2026
+        },
+        {
+          "cell": "B99",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "C99",
+          "formula": null,
+          "value": "2026-09"
+        },
+        {
+          "cell": "D99",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "E99",
+          "formula": null,
+          "value": 1466340.421
+        },
+        {
+          "cell": "F99",
+          "formula": null,
+          "value": "kWh"
+        },
+        {
+          "cell": "G99",
+          "formula": null,
+          "value": 272492409
+        },
+        {
+          "cell": "A100",
+          "formula": null,
+          "value": 2026
+        },
+        {
+          "cell": "B100",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C100",
+          "formula": null,
+          "value": "2026-09"
+        },
+        {
+          "cell": "D100",
+          "formula": null,
+          "value": "LNG"
+        },
+        {
+          "cell": "E100",
+          "formula": null,
+          "value": 147113
+        },
+        {
+          "cell": "F100",
+          "formula": null,
+          "value": "m³"
+        },
+        {
+          "cell": "G100",
+          "formula": null,
+          "value": 167290868
+        },
+        {
+          "cell": "A101",
+          "formula": null,
+          "value": 2026
+        },
+        {
+          "cell": "B101",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C101",
+          "formula": null,
+          "value": "2026-09"
+        },
+        {
+          "cell": "D101",
+          "formula": null,
+          "value": "LPG"
+        },
+        {
+          "cell": "E101",
+          "formula": null,
+          "value": 66792
+        },
+        {
+          "cell": "F101",
+          "formula": null,
+          "value": "kg"
+        },
+        {
+          "cell": "G101",
+          "formula": null,
+          "value": 86161680
+        },
+        {
+          "cell": "A102",
+          "formula": null,
+          "value": 2026
+        },
+        {
+          "cell": "B102",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "C102",
+          "formula": null,
+          "value": "2026-10"
+        },
+        {
+          "cell": "D102",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "E102",
+          "formula": null,
+          "value": 1207063.170999
+        },
+        {
+          "cell": "F102",
+          "formula": null,
+          "value": "kWh"
+        },
+        {
+          "cell": "G102",
+          "formula": null,
+          "value": 0
+        },
+        {
+          "cell": "A103",
+          "formula": null,
+          "value": 2026
+        },
+        {
+          "cell": "B103",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C103",
+          "formula": null,
+          "value": "2026-10"
+        },
+        {
+          "cell": "D103",
+          "formula": null,
+          "value": "LNG"
+        },
+        {
+          "cell": "E103",
+          "formula": null,
+          "value": 46113
+        },
+        {
+          "cell": "F103",
+          "formula": null,
+          "value": "m³"
+        },
+        {
+          "cell": "A104",
+          "formula": null,
+          "value": 2026
+        },
+        {
+          "cell": "B104",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C104",
+          "formula": null,
+          "value": "2026-10"
+        },
+        {
+          "cell": "D104",
+          "formula": null,
+          "value": "LPG"
+        },
+        {
+          "cell": "E104",
+          "formula": null,
+          "value": 96654
+        },
+        {
+          "cell": "F104",
+          "formula": null,
+          "value": "kg"
+        },
+        {
+          "cell": "A105",
+          "formula": null,
+          "value": 2026
+        },
+        {
+          "cell": "B105",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "C105",
+          "formula": null,
+          "value": "2026-11"
+        },
+        {
+          "cell": "D105",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "E105",
+          "formula": null,
+          "value": 21155.306001
+        },
+        {
+          "cell": "F105",
+          "formula": null,
+          "value": "kWh"
+        },
+        {
+          "cell": "G105",
+          "formula": null,
+          "value": 0
+        },
+        {
+          "cell": "A106",
+          "formula": null,
+          "value": 2026
+        },
+        {
+          "cell": "B106",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C106",
+          "formula": null,
+          "value": "2026-11"
+        },
+        {
+          "cell": "D106",
+          "formula": null,
+          "value": "LNG"
+        },
+        {
+          "cell": "F106",
+          "formula": null,
+          "value": "m³"
+        },
+        {
+          "cell": "A107",
+          "formula": null,
+          "value": 2026
+        },
+        {
+          "cell": "B107",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C107",
+          "formula": null,
+          "value": "2026-11"
+        },
+        {
+          "cell": "D107",
+          "formula": null,
+          "value": "LPG"
+        },
+        {
+          "cell": "F107",
+          "formula": null,
+          "value": "kg"
+        },
+        {
+          "cell": "A108",
+          "formula": null,
+          "value": 2026
+        },
+        {
+          "cell": "B108",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "C108",
+          "formula": null,
+          "value": "2026-12"
+        },
+        {
+          "cell": "D108",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "F108",
+          "formula": null,
+          "value": "kWh"
+        },
+        {
+          "cell": "A109",
+          "formula": null,
+          "value": 2026
+        },
+        {
+          "cell": "B109",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C109",
+          "formula": null,
+          "value": "2026-12"
+        },
+        {
+          "cell": "D109",
+          "formula": null,
+          "value": "LNG"
+        },
+        {
+          "cell": "F109",
+          "formula": null,
+          "value": "m³"
+        },
+        {
+          "cell": "A110",
+          "formula": null,
+          "value": 2026
+        },
+        {
+          "cell": "B110",
+          "formula": null,
+          "value": "가스"
+        },
+        {
+          "cell": "C110",
+          "formula": null,
+          "value": "2026-12"
+        },
+        {
+          "cell": "D110",
+          "formula": null,
+          "value": "LPG"
+        },
+        {
+          "cell": "F110",
+          "formula": null,
+          "value": "kg"
+        }
+      ]
+    },
+    "원자료": {
+      "rows": 37,
+      "columns": 8,
+      "state": "visible",
+      "cells": [
+        {
+          "cell": "A1",
+          "formula": null,
+          "value": "월"
+        },
+        {
+          "cell": "B1",
+          "formula": null,
+          "value": "전기 사용량 (kWh)"
+        },
+        {
+          "cell": "C1",
+          "formula": null,
+          "value": "전기 비용 (원)"
+        },
+        {
+          "cell": "D1",
+          "formula": null,
+          "value": "LNG 사용량 (m³)"
+        },
+        {
+          "cell": "E1",
+          "formula": null,
+          "value": "LNG 비용 (원)"
+        },
+        {
+          "cell": "F1",
+          "formula": null,
+          "value": "LPG 사용량 (kg)"
+        },
+        {
+          "cell": "G1",
+          "formula": null,
+          "value": "LPG 비용 (원)"
+        },
+        {
+          "cell": "H1",
+          "formula": null,
+          "value": "가스 비용 합계 (원)"
+        },
+        {
+          "cell": "A2",
+          "formula": null,
+          "value": "2024-01"
+        },
+        {
+          "cell": "B2",
+          "formula": null,
+          "value": 743235
+        },
+        {
+          "cell": "C2",
+          "formula": null,
+          "value": 132330441
+        },
+        {
+          "cell": "D2",
+          "formula": null,
+          "value": 210744
+        },
+        {
+          "cell": "E2",
+          "formula": null,
+          "value": 209328224
+        },
+        {
+          "cell": "F2",
+          "formula": null,
+          "value": 126322
+        },
+        {
+          "cell": "G2",
+          "formula": null,
+          "value": 121269120
+        },
+        {
+          "cell": "H2",
+          "formula": null,
+          "value": 330597344
+        },
+        {
+          "cell": "A3",
+          "formula": null,
+          "value": "2024-02"
+        },
+        {
+          "cell": "B3",
+          "formula": null,
+          "value": 633155
+        },
+        {
+          "cell": "C3",
+          "formula": null,
+          "value": 116459151
+        },
+        {
+          "cell": "D3",
+          "formula": null,
+          "value": 158001
+        },
+        {
+          "cell": "E3",
+          "formula": null,
+          "value": 144147387
+        },
+        {
+          "cell": "F3",
+          "formula": null,
+          "value": 83794
+        },
+        {
+          "cell": "G3",
+          "formula": null,
+          "value": 80442240
+        },
+        {
+          "cell": "H3",
+          "formula": null,
+          "value": 224589627
+        },
+        {
+          "cell": "A4",
+          "formula": null,
+          "value": "2024-03"
+        },
+        {
+          "cell": "B4",
+          "formula": null,
+          "value": 683939
+        },
+        {
+          "cell": "C4",
+          "formula": null,
+          "value": 103999756
+        },
+        {
+          "cell": "D4",
+          "formula": null,
+          "value": 175458
+        },
+        {
+          "cell": "E4",
+          "formula": null,
+          "value": 164362589
+        },
+        {
+          "cell": "F4",
+          "formula": null,
+          "value": 115880
+        },
+        {
+          "cell": "G4",
+          "formula": null,
+          "value": 111244800
+        },
+        {
+          "cell": "H4",
+          "formula": null,
+          "value": 275607389
+        },
+        {
+          "cell": "A5",
+          "formula": null,
+          "value": "2024-04"
+        },
+        {
+          "cell": "B5",
+          "formula": null,
+          "value": 734327
+        },
+        {
+          "cell": "C5",
+          "formula": null,
+          "value": 109292959
+        },
+        {
+          "cell": "D5",
+          "formula": null,
+          "value": 167504
+        },
+        {
+          "cell": "E5",
+          "formula": null,
+          "value": 140038103
+        },
+        {
+          "cell": "F5",
+          "formula": null,
+          "value": 130412
+        },
+        {
+          "cell": "G5",
+          "formula": null,
+          "value": 125195520
+        },
+        {
+          "cell": "H5",
+          "formula": null,
+          "value": 265233623
+        },
+        {
+          "cell": "A6",
+          "formula": null,
+          "value": "2024-05"
+        },
+        {
+          "cell": "B6",
+          "formula": null,
+          "value": 816048
+        },
+        {
+          "cell": "C6",
+          "formula": null,
+          "value": 119011713
+        },
+        {
+          "cell": "D6",
+          "formula": null,
+          "value": 194015
+        },
+        {
+          "cell": "E6",
+          "formula": null,
+          "value": 169675460
+        },
+        {
+          "cell": "F6",
+          "formula": null,
+          "value": 130114
+        },
+        {
+          "cell": "G6",
+          "formula": null,
+          "value": 124909440
+        },
+        {
+          "cell": "H6",
+          "formula": null,
+          "value": 294584900
+        },
+        {
+          "cell": "A7",
+          "formula": null,
+          "value": "2024-06"
+        },
+        {
+          "cell": "B7",
+          "formula": null,
+          "value": 830642
+        },
+        {
+          "cell": "C7",
+          "formula": null,
+          "value": 138269365
+        },
+        {
+          "cell": "D7",
+          "formula": null,
+          "value": 166198
+        },
+        {
+          "cell": "E7",
+          "formula": null,
+          "value": 140472451
+        },
+        {
+          "cell": "F7",
+          "formula": null,
+          "value": 116155
+        },
+        {
+          "cell": "G7",
+          "formula": null,
+          "value": 111508800
+        },
+        {
+          "cell": "H7",
+          "formula": null,
+          "value": 251981251
+        },
+        {
+          "cell": "A8",
+          "formula": null,
+          "value": "2024-07"
+        },
+        {
+          "cell": "B8",
+          "formula": null,
+          "value": 793836
+        },
+        {
+          "cell": "C8",
+          "formula": null,
+          "value": 143578047
+        },
+        {
+          "cell": "D8",
+          "formula": null,
+          "value": 144178
+        },
+        {
+          "cell": "E8",
+          "formula": null,
+          "value": 125707372
+        },
+        {
+          "cell": "F8",
+          "formula": null,
+          "value": 99673
+        },
+        {
+          "cell": "G8",
+          "formula": null,
+          "value": 95686080
+        },
+        {
+          "cell": "H8",
+          "formula": null,
+          "value": 221393452
+        },
+        {
+          "cell": "A9",
+          "formula": null,
+          "value": "2024-08"
+        },
+        {
+          "cell": "B9",
+          "formula": null,
+          "value": 722993
+        },
+        {
+          "cell": "C9",
+          "formula": null,
+          "value": 131290113
+        },
+        {
+          "cell": "D9",
+          "formula": null,
+          "value": 133431
+        },
+        {
+          "cell": "E9",
+          "formula": null,
+          "value": 122267757
+        },
+        {
+          "cell": "F9",
+          "formula": null,
+          "value": 76012
+        },
+        {
+          "cell": "G9",
+          "formula": null,
+          "value": 77152180
+        },
+        {
+          "cell": "H9",
+          "formula": null,
+          "value": 199419937
+        },
+        {
+          "cell": "A10",
+          "formula": null,
+          "value": "2024-09"
+        },
+        {
+          "cell": "B10",
+          "formula": null,
+          "value": 648564
+        },
+        {
+          "cell": "C10",
+          "formula": null,
+          "value": 104476627
+        },
+        {
+          "cell": "D10",
+          "formula": null,
+          "value": 102881
+        },
+        {
+          "cell": "E10",
+          "formula": null,
+          "value": 95471708
+        },
+        {
+          "cell": "F10",
+          "formula": null,
+          "value": 50910
+        },
+        {
+          "cell": "G10",
+          "formula": null,
+          "value": 51673650
+        },
+        {
+          "cell": "H10",
+          "formula": null,
+          "value": 147145358
+        },
+        {
+          "cell": "A11",
+          "formula": null,
+          "value": "2024-10"
+        },
+        {
+          "cell": "B11",
+          "formula": null,
+          "value": 723420
+        },
+        {
+          "cell": "C11",
+          "formula": null,
+          "value": 110368822
+        },
+        {
+          "cell": "D11",
+          "formula": null,
+          "value": 181161
+        },
+        {
+          "cell": "E11",
+          "formula": null,
+          "value": 163678011
+        },
+        {
+          "cell": "F11",
+          "formula": null,
+          "value": 95184
+        },
+        {
+          "cell": "G11",
+          "formula": null,
+          "value": 95088816
+        },
+        {
+          "cell": "H11",
+          "formula": null,
+          "value": 258766827
+        },
+        {
+          "cell": "A12",
+          "formula": null,
+          "value": "2024-11"
+        },
+        {
+          "cell": "B12",
+          "formula": null,
+          "value": 757290
+        },
+        {
+          "cell": "C12",
+          "formula": null,
+          "value": 142103836
+        },
+        {
+          "cell": "D12",
+          "formula": null,
+          "value": 177218
+        },
+        {
+          "cell": "E12",
+          "formula": null,
+          "value": 159604071
+        },
+        {
+          "cell": "F12",
+          "formula": null,
+          "value": 107113
+        },
+        {
+          "cell": "G12",
+          "formula": null,
+          "value": 107005887
+        },
+        {
+          "cell": "H12",
+          "formula": null,
+          "value": 266609958
+        },
+        {
+          "cell": "A13",
+          "formula": null,
+          "value": "2024-12"
+        },
+        {
+          "cell": "B13",
+          "formula": null,
+          "value": 751261
+        },
+        {
+          "cell": "C13",
+          "formula": null,
+          "value": 144786974
+        },
+        {
+          "cell": "D13",
+          "formula": null,
+          "value": 197172
+        },
+        {
+          "cell": "E13",
+          "formula": null,
+          "value": 186214834
+        },
+        {
+          "cell": "F13",
+          "formula": null,
+          "value": 112681
+        },
+        {
+          "cell": "G13",
+          "formula": null,
+          "value": 117638964
+        },
+        {
+          "cell": "H13",
+          "formula": null,
+          "value": 303853798
+        },
+        {
+          "cell": "A14",
+          "formula": null,
+          "value": "2025-01"
+        },
+        {
+          "cell": "B14",
+          "formula": null,
+          "value": 656040
+        },
+        {
+          "cell": "C14",
+          "formula": null,
+          "value": 128251811
+        },
+        {
+          "cell": "D14",
+          "formula": null,
+          "value": 158576
+        },
+        {
+          "cell": "E14",
+          "formula": null,
+          "value": 146643631
+        },
+        {
+          "cell": "F14",
+          "formula": null,
+          "value": 81753
+        },
+        {
+          "cell": "G14",
+          "formula": null,
+          "value": 85350132
+        },
+        {
+          "cell": "H14",
+          "formula": null,
+          "value": 231993763
+        },
+        {
+          "cell": "A15",
+          "formula": null,
+          "value": "2025-02"
+        },
+        {
+          "cell": "B15",
+          "formula": null,
+          "value": 645587
+        },
+        {
+          "cell": "C15",
+          "formula": null,
+          "value": 129799492
+        },
+        {
+          "cell": "D15",
+          "formula": null,
+          "value": 173543
+        },
+        {
+          "cell": "E15",
+          "formula": null,
+          "value": 158069817
+        },
+        {
+          "cell": "F15",
+          "formula": null,
+          "value": 92762
+        },
+        {
+          "cell": "G15",
+          "formula": null,
+          "value": 96843528
+        },
+        {
+          "cell": "H15",
+          "formula": null,
+          "value": 254913345
+        },
+        {
+          "cell": "A16",
+          "formula": null,
+          "value": "2025-03"
+        },
+        {
+          "cell": "B16",
+          "formula": null,
+          "value": 683494
+        },
+        {
+          "cell": "C16",
+          "formula": null,
+          "value": 117239381
+        },
+        {
+          "cell": "D16",
+          "formula": null,
+          "value": 166073
+        },
+        {
+          "cell": "E16",
+          "formula": null,
+          "value": 147233434
+        },
+        {
+          "cell": "F16",
+          "formula": null,
+          "value": 91686
+        },
+        {
+          "cell": "G16",
+          "formula": null,
+          "value": 95720184
+        },
+        {
+          "cell": "H16",
+          "formula": null,
+          "value": 242953618
+        },
+        {
+          "cell": "A17",
+          "formula": null,
+          "value": "2025-04"
+        },
+        {
+          "cell": "B17",
+          "formula": null,
+          "value": 725958
+        },
+        {
+          "cell": "C17",
+          "formula": null,
+          "value": 122722753
+        },
+        {
+          "cell": "D17",
+          "formula": null,
+          "value": 167494
+        },
+        {
+          "cell": "E17",
+          "formula": null,
+          "value": 154924292
+        },
+        {
+          "cell": "F17",
+          "formula": null,
+          "value": 89941
+        },
+        {
+          "cell": "G17",
+          "formula": null,
+          "value": 93898404
+        },
+        {
+          "cell": "H17",
+          "formula": null,
+          "value": 248822696
+        },
+        {
+          "cell": "A18",
+          "formula": null,
+          "value": "2025-05"
+        },
+        {
+          "cell": "B18",
+          "formula": null,
+          "value": 607401
+        },
+        {
+          "cell": "C18",
+          "formula": null,
+          "value": 103648913
+        },
+        {
+          "cell": "D18",
+          "formula": null,
+          "value": 125043
+        },
+        {
+          "cell": "E18",
+          "formula": null,
+          "value": 107334728
+        },
+        {
+          "cell": "F18",
+          "formula": null,
+          "value": 62287
+        },
+        {
+          "cell": "G18",
+          "formula": null,
+          "value": 65027628
+        },
+        {
+          "cell": "H18",
+          "formula": null,
+          "value": 172362356
+        },
+        {
+          "cell": "A19",
+          "formula": null,
+          "value": "2025-06"
+        },
+        {
+          "cell": "B19",
+          "formula": null,
+          "value": 643492
+        },
+        {
+          "cell": "C19",
+          "formula": null,
+          "value": 127053369
+        },
+        {
+          "cell": "D19",
+          "formula": null,
+          "value": 135681
+        },
+        {
+          "cell": "E19",
+          "formula": null,
+          "value": 113082983
+        },
+        {
+          "cell": "F19",
+          "formula": null,
+          "value": 70193
+        },
+        {
+          "cell": "G19",
+          "formula": null,
+          "value": 71365223
+        },
+        {
+          "cell": "H19",
+          "formula": null,
+          "value": 184448206
+        },
+        {
+          "cell": "A20",
+          "formula": null,
+          "value": "2025-07"
+        },
+        {
+          "cell": "B20",
+          "formula": null,
+          "value": 717304
+        },
+        {
+          "cell": "C20",
+          "formula": null,
+          "value": 141976825
+        },
+        {
+          "cell": "D20",
+          "formula": null,
+          "value": 134220
+        },
+        {
+          "cell": "E20",
+          "formula": null,
+          "value": 106719564
+        },
+        {
+          "cell": "F20",
+          "formula": null,
+          "value": 67905
+        },
+        {
+          "cell": "G20",
+          "formula": null,
+          "value": 63946139
+        },
+        {
+          "cell": "H20",
+          "formula": null,
+          "value": 170665703
+        },
+        {
+          "cell": "A21",
+          "formula": null,
+          "value": "2025-08"
+        },
+        {
+          "cell": "B21",
+          "formula": null,
+          "value": 676466
+        },
+        {
+          "cell": "C21",
+          "formula": null,
+          "value": 140932590
+        },
+        {
+          "cell": "D21",
+          "formula": null,
+          "value": 141279
+        },
+        {
+          "cell": "E21",
+          "formula": null,
+          "value": 111188929
+        },
+        {
+          "cell": "F21",
+          "formula": null,
+          "value": 72678
+        },
+        {
+          "cell": "G21",
+          "formula": null,
+          "value": 68440873
+        },
+        {
+          "cell": "H21",
+          "formula": null,
+          "value": 179629802
+        },
+        {
+          "cell": "A22",
+          "formula": null,
+          "value": "2025-09"
+        },
+        {
+          "cell": "B22",
+          "formula": null,
+          "value": 796742
+        },
+        {
+          "cell": "C22",
+          "formula": null,
+          "value": 137446513
+        },
+        {
+          "cell": "D22",
+          "formula": null,
+          "value": 174353
+        },
+        {
+          "cell": "E22",
+          "formula": null,
+          "value": 144937703
+        },
+        {
+          "cell": "F22",
+          "formula": null,
+          "value": 98751
+        },
+        {
+          "cell": "G22",
+          "formula": null,
+          "value": 89763785
+        },
+        {
+          "cell": "H22",
+          "formula": null,
+          "value": 234701488
+        },
+        {
+          "cell": "A23",
+          "formula": null,
+          "value": "2025-10"
+        },
+        {
+          "cell": "B23",
+          "formula": null,
+          "value": 583850
+        },
+        {
+          "cell": "C23",
+          "formula": null,
+          "value": 100751316
+        },
+        {
+          "cell": "D23",
+          "formula": null,
+          "value": 128179
+        },
+        {
+          "cell": "E23",
+          "formula": null,
+          "value": 101004829
+        },
+        {
+          "cell": "F23",
+          "formula": null,
+          "value": 79586
+        },
+        {
+          "cell": "G23",
+          "formula": null,
+          "value": 77047150
+        },
+        {
+          "cell": "H23",
+          "formula": null,
+          "value": 178051979
+        },
+        {
+          "cell": "A24",
+          "formula": null,
+          "value": "2025-11"
+        },
+        {
+          "cell": "B24",
+          "formula": null,
+          "value": 664458
+        },
+        {
+          "cell": "C24",
+          "formula": null,
+          "value": 129075095
+        },
+        {
+          "cell": "D24",
+          "formula": null,
+          "value": 174639
+        },
+        {
+          "cell": "E24",
+          "formula": null,
+          "value": 129566719
+        },
+        {
+          "cell": "F24",
+          "formula": null,
+          "value": 91368
+        },
+        {
+          "cell": "G24",
+          "formula": null,
+          "value": 82276884
+        },
+        {
+          "cell": "H24",
+          "formula": null,
+          "value": 211843603
+        },
+        {
+          "cell": "A25",
+          "formula": null,
+          "value": "2025-12"
+        },
+        {
+          "cell": "B25",
+          "formula": null,
+          "value": 744348
+        },
+        {
+          "cell": "C25",
+          "formula": null,
+          "value": 145282122
+        },
+        {
+          "cell": "D25",
+          "formula": null,
+          "value": 216312
+        },
+        {
+          "cell": "E25",
+          "formula": null,
+          "value": 162979922
+        },
+        {
+          "cell": "F25",
+          "formula": null,
+          "value": 123113
+        },
+        {
+          "cell": "G25",
+          "formula": null,
+          "value": 110863256
+        },
+        {
+          "cell": "H25",
+          "formula": null,
+          "value": 273843178
+        },
+        {
+          "cell": "A26",
+          "formula": null,
+          "value": "2026-01"
+        },
+        {
+          "cell": "B26",
+          "formula": null,
+          "value": 778168
+        },
+        {
+          "cell": "C26",
+          "formula": null,
+          "value": 150033113
+        },
+        {
+          "cell": "D26",
+          "formula": null,
+          "value": 220863
+        },
+        {
+          "cell": "E26",
+          "formula": null,
+          "value": 170303536
+        },
+        {
+          "cell": "F26",
+          "formula": null,
+          "value": 125407
+        },
+        {
+          "cell": "G26",
+          "formula": null,
+          "value": 114183074
+        },
+        {
+          "cell": "H26",
+          "formula": null,
+          "value": 284486610
+        },
+        {
+          "cell": "A27",
+          "formula": null,
+          "value": "2026-02"
+        },
+        {
+          "cell": "B27",
+          "formula": null,
+          "value": 578456
+        },
+        {
+          "cell": "C27",
+          "formula": null,
+          "value": 115252823
+        },
+        {
+          "cell": "D27",
+          "formula": null,
+          "value": 161499
+        },
+        {
+          "cell": "E27",
+          "formula": null,
+          "value": 127198642
+        },
+        {
+          "cell": "F27",
+          "formula": null,
+          "value": 97629
+        },
+        {
+          "cell": "G27",
+          "formula": null,
+          "value": 88891205
+        },
+        {
+          "cell": "H27",
+          "formula": null,
+          "value": 216089847
+        },
+        {
+          "cell": "A28",
+          "formula": null,
+          "value": "2026-03"
+        },
+        {
+          "cell": "B28",
+          "formula": null,
+          "value": 651113
+        },
+        {
+          "cell": "C28",
+          "formula": null,
+          "value": 110436464
+        },
+        {
+          "cell": "D28",
+          "formula": null,
+          "value": 178230
+        },
+        {
+          "cell": "E28",
+          "formula": null,
+          "value": 136647574
+        },
+        {
+          "cell": "F28",
+          "formula": null,
+          "value": 95532
+        },
+        {
+          "cell": "G28",
+          "formula": null,
+          "value": 87889440
+        },
+        {
+          "cell": "H28",
+          "formula": null,
+          "value": 224537014
+        },
+        {
+          "cell": "A29",
+          "formula": null,
+          "value": "2026-04"
+        },
+        {
+          "cell": "B29",
+          "formula": null,
+          "value": 553302.951
+        },
+        {
+          "cell": "C29",
+          "formula": null,
+          "value": 103748921
+        },
+        {
+          "cell": "D29",
+          "formula": null,
+          "value": 160777
+        },
+        {
+          "cell": "E29",
+          "formula": null,
+          "value": 127046953
+        },
+        {
+          "cell": "F29",
+          "formula": null,
+          "value": 65013
+        },
+        {
+          "cell": "G29",
+          "formula": null,
+          "value": 61112220
+        },
+        {
+          "cell": "H29",
+          "formula": null,
+          "value": 188159173
+        },
+        {
+          "cell": "A30",
+          "formula": null,
+          "value": "2026-05"
+        },
+        {
+          "cell": "B30",
+          "formula": null,
+          "value": 531018.665
+        },
+        {
+          "cell": "C30",
+          "formula": null,
+          "value": 97465491
+        },
+        {
+          "cell": "D30",
+          "formula": null,
+          "value": 129084
+        },
+        {
+          "cell": "E30",
+          "formula": null,
+          "value": 111794843
+        },
+        {
+          "cell": "F30",
+          "formula": null,
+          "value": 66833
+        },
+        {
+          "cell": "G30",
+          "formula": null,
+          "value": 70114500
+        },
+        {
+          "cell": "H30",
+          "formula": null,
+          "value": 181909343
+        },
+        {
+          "cell": "A31",
+          "formula": null,
+          "value": "2026-06"
+        },
+        {
+          "cell": "B31",
+          "formula": null,
+          "value": 710016.917
+        },
+        {
+          "cell": "C31",
+          "formula": null,
+          "value": 150175458
+        },
+        {
+          "cell": "D31",
+          "formula": null,
+          "value": 154466
+        },
+        {
+          "cell": "E31",
+          "formula": null,
+          "value": 146202249
+        },
+        {
+          "cell": "F31",
+          "formula": null,
+          "value": 77512
+        },
+        {
+          "cell": "G31",
+          "formula": null,
+          "value": 86247602
+        },
+        {
+          "cell": "H31",
+          "formula": null,
+          "value": 232449851
+        },
+        {
+          "cell": "A32",
+          "formula": null,
+          "value": "2026-07"
+        },
+        {
+          "cell": "B32",
+          "formula": null,
+          "value": 714005.822
+        },
+        {
+          "cell": "C32",
+          "formula": null,
+          "value": 151946963
+        },
+        {
+          "cell": "D32",
+          "formula": null,
+          "value": 141711
+        },
+        {
+          "cell": "E32",
+          "formula": null,
+          "value": 137110713
+        },
+        {
+          "cell": "F32",
+          "formula": null,
+          "value": 57292
+        },
+        {
+          "cell": "G32",
+          "formula": null,
+          "value": 66304032
+        },
+        {
+          "cell": "H32",
+          "formula": null,
+          "value": 203414745
+        },
+        {
+          "cell": "A33",
+          "formula": null,
+          "value": "2026-08"
+        },
+        {
+          "cell": "B33",
+          "formula": null,
+          "value": 602323.2220000001
+        },
+        {
+          "cell": "C33",
+          "formula": null,
+          "value": 128574972
+        },
+        {
+          "cell": "D33",
+          "formula": null,
+          "value": 110573
+        },
+        {
+          "cell": "E33",
+          "formula": null,
+          "value": 118449071
+        },
+        {
+          "cell": "F33",
+          "formula": null,
+          "value": 60565
+        },
+        {
+          "cell": "G33",
+          "formula": null,
+          "value": 73671266
+        },
+        {
+          "cell": "H33",
+          "formula": null,
+          "value": 192120337
+        },
+        {
+          "cell": "A34",
+          "formula": null,
+          "value": "2026-09"
+        },
+        {
+          "cell": "B34",
+          "formula": null,
+          "value": 1466340.421
+        },
+        {
+          "cell": "C34",
+          "formula": null,
+          "value": 272492409
+        },
+        {
+          "cell": "D34",
+          "formula": null,
+          "value": 147113
+        },
+        {
+          "cell": "E34",
+          "formula": null,
+          "value": 167290868
+        },
+        {
+          "cell": "F34",
+          "formula": null,
+          "value": 66792
+        },
+        {
+          "cell": "G34",
+          "formula": null,
+          "value": 86161680
+        },
+        {
+          "cell": "H34",
+          "formula": null,
+          "value": 253452548
+        },
+        {
+          "cell": "A35",
+          "formula": null,
+          "value": "2026-10"
+        },
+        {
+          "cell": "B35",
+          "formula": null,
+          "value": 1207063.170999
+        },
+        {
+          "cell": "C35",
+          "formula": null,
+          "value": 0
+        },
+        {
+          "cell": "D35",
+          "formula": null,
+          "value": 46113
+        },
+        {
+          "cell": "F35",
+          "formula": null,
+          "value": 96654
+        },
+        {
+          "cell": "A36",
+          "formula": null,
+          "value": "2026-11"
+        },
+        {
+          "cell": "B36",
+          "formula": null,
+          "value": 21155.306001
+        },
+        {
+          "cell": "C36",
+          "formula": null,
+          "value": 0
+        },
+        {
+          "cell": "A37",
+          "formula": null,
+          "value": "2026-12"
+        }
+      ]
+    },
+    "팀별 원단위": {
+      "rows": 18,
+      "columns": 6,
+      "state": "visible",
+      "cells": [
+        {
+          "cell": "A1",
+          "formula": null,
+          "value": "팀별로 열량과 생산량이 모두 있는 월을 합산합니다. 원단위는 총열량 ÷ 총생산량입니다."
+        },
+        {
+          "cell": "A2",
+          "formula": null,
+          "value": "기간"
+        },
+        {
+          "cell": "B2",
+          "formula": null,
+          "value": "팀"
+        },
+        {
+          "cell": "C2",
+          "formula": null,
+          "value": "포함 월 수"
+        },
+        {
+          "cell": "D2",
+          "formula": null,
+          "value": "총열량 (kJ)"
+        },
+        {
+          "cell": "E2",
+          "formula": null,
+          "value": "총생산량 (kg)"
+        },
+        {
+          "cell": "F2",
+          "formula": null,
+          "value": "원단위 (kJ/kg)"
+        },
+        {
+          "cell": "A3",
+          "formula": null,
+          "value": "2024~2026"
+        },
+        {
+          "cell": "B3",
+          "formula": null,
+          "value": "1팀 1파트"
+        },
+        {
+          "cell": "C3",
+          "formula": null,
+          "value": 33
+        },
+        {
+          "cell": "D3",
+          "formula": null,
+          "value": 197423832375
+        },
+        {
+          "cell": "E3",
+          "formula": null,
+          "value": 37819977
+        },
+        {
+          "cell": "F3",
+          "formula": null,
+          "value": 5220.093930120582
+        },
+        {
+          "cell": "A4",
+          "formula": null,
+          "value": "2024~2026"
+        },
+        {
+          "cell": "B4",
+          "formula": null,
+          "value": "1팀 2파트"
+        },
+        {
+          "cell": "C4",
+          "formula": null,
+          "value": 33
+        },
+        {
+          "cell": "D4",
+          "formula": null,
+          "value": 210305751900.80005
+        },
+        {
+          "cell": "E4",
+          "formula": null,
+          "value": 45226352.4
+        },
+        {
+          "cell": "F4",
+          "formula": null,
+          "value": 4650.071047976004
+        },
+        {
+          "cell": "A5",
+          "formula": null,
+          "value": "2024~2026"
+        },
+        {
+          "cell": "B5",
+          "formula": null,
+          "value": "2팀"
+        },
+        {
+          "cell": "C5",
+          "formula": null,
+          "value": 33
+        },
+        {
+          "cell": "D5",
+          "formula": null,
+          "value": 11487449952
+        },
+        {
+          "cell": "E5",
+          "formula": null,
+          "value": 11839253.399999997
+        },
+        {
+          "cell": "F5",
+          "formula": null,
+          "value": 970.2849971941646
+        },
+        {
+          "cell": "A6",
+          "formula": null,
+          "value": "2024~2026"
+        },
+        {
+          "cell": "B6",
+          "formula": null,
+          "value": "3팀"
+        },
+        {
+          "cell": "C6",
+          "formula": null,
+          "value": 33
+        },
+        {
+          "cell": "D6",
+          "formula": null,
+          "value": 41236312410
+        },
+        {
+          "cell": "E6",
+          "formula": null,
+          "value": 8883876.099999998
+        },
+        {
+          "cell": "F6",
+          "formula": null,
+          "value": 4641.702782189861
+        },
+        {
+          "cell": "A7",
+          "formula": null,
+          "value": "2024"
+        },
+        {
+          "cell": "B7",
+          "formula": null,
+          "value": "1팀 1파트"
+        },
+        {
+          "cell": "C7",
+          "formula": null,
+          "value": 12
+        },
+        {
+          "cell": "D7",
+          "formula": null,
+          "value": 73320540345
+        },
+        {
+          "cell": "E7",
+          "formula": null,
+          "value": 14464466
+        },
+        {
+          "cell": "F7",
+          "formula": null,
+          "value": 5069.011213065176
+        },
+        {
+          "cell": "A8",
+          "formula": null,
+          "value": "2024"
+        },
+        {
+          "cell": "B8",
+          "formula": null,
+          "value": "1팀 2파트"
+        },
+        {
+          "cell": "C8",
+          "formula": null,
+          "value": 12
+        },
+        {
+          "cell": "D8",
+          "formula": null,
+          "value": 88546336335
+        },
+        {
+          "cell": "E8",
+          "formula": null,
+          "value": 19368755.5
+        },
+        {
+          "cell": "F8",
+          "formula": null,
+          "value": 4571.606902415594
+        },
+        {
+          "cell": "A9",
+          "formula": null,
+          "value": "2024"
+        },
+        {
+          "cell": "B9",
+          "formula": null,
+          "value": "2팀"
+        },
+        {
+          "cell": "C9",
+          "formula": null,
+          "value": 12
+        },
+        {
+          "cell": "D9",
+          "formula": null,
+          "value": 3617866800
+        },
+        {
+          "cell": "E9",
+          "formula": null,
+          "value": 4293113.699999999
+        },
+        {
+          "cell": "F9",
+          "formula": null,
+          "value": 842.7139490854856
+        },
+        {
+          "cell": "A10",
+          "formula": null,
+          "value": "2024"
+        },
+        {
+          "cell": "B10",
+          "formula": null,
+          "value": "3팀"
+        },
+        {
+          "cell": "C10",
+          "formula": null,
+          "value": 12
+        },
+        {
+          "cell": "D10",
+          "formula": null,
+          "value": 14297087025
+        },
+        {
+          "cell": "E10",
+          "formula": null,
+          "value": 2984142.7000000007
+        },
+        {
+          "cell": "F10",
+          "formula": null,
+          "value": 4791.019888224513
+        },
+        {
+          "cell": "A11",
+          "formula": null,
+          "value": "2025"
+        },
+        {
+          "cell": "B11",
+          "formula": null,
+          "value": "1팀 1파트"
+        },
+        {
+          "cell": "C11",
+          "formula": null,
+          "value": 12
+        },
+        {
+          "cell": "D11",
+          "formula": null,
+          "value": 71242681995
+        },
+        {
+          "cell": "E11",
+          "formula": null,
+          "value": 13395878
+        },
+        {
+          "cell": "F11",
+          "formula": null,
+          "value": 5318.254017765764
+        },
+        {
+          "cell": "A12",
+          "formula": null,
+          "value": "2025"
+        },
+        {
+          "cell": "B12",
+          "formula": null,
+          "value": "1팀 2파트"
+        },
+        {
+          "cell": "C12",
+          "formula": null,
+          "value": 12
+        },
+        {
+          "cell": "D12",
+          "formula": null,
+          "value": 72327107570
+        },
+        {
+          "cell": "E12",
+          "formula": null,
+          "value": 15397662.9
+        },
+        {
+          "cell": "F12",
+          "formula": null,
+          "value": 4697.278284355738
+        },
+        {
+          "cell": "A13",
+          "formula": null,
+          "value": "2025"
+        },
+        {
+          "cell": "B13",
+          "formula": null,
+          "value": "2팀"
+        },
+        {
+          "cell": "C13",
+          "formula": null,
+          "value": 12
+        },
+        {
+          "cell": "D13",
+          "formula": null,
+          "value": 2907072000
+        },
+        {
+          "cell": "E13",
+          "formula": null,
+          "value": 4307029
+        },
+        {
+          "cell": "F13",
+          "formula": null,
+          "value": 674.9599317766376
+        },
+        {
+          "cell": "A14",
+          "formula": null,
+          "value": "2025"
+        },
+        {
+          "cell": "B14",
+          "formula": null,
+          "value": "3팀"
+        },
+        {
+          "cell": "C14",
+          "formula": null,
+          "value": 12
+        },
+        {
+          "cell": "D14",
+          "formula": null,
+          "value": 14889507795
+        },
+        {
+          "cell": "E14",
+          "formula": null,
+          "value": 3257123
+        },
+        {
+          "cell": "F14",
+          "formula": null,
+          "value": 4571.367981804801
+        },
+        {
+          "cell": "A15",
+          "formula": null,
+          "value": "2026"
+        },
+        {
+          "cell": "B15",
+          "formula": null,
+          "value": "1팀 1파트"
+        },
+        {
+          "cell": "C15",
+          "formula": null,
+          "value": 9
+        },
+        {
+          "cell": "D15",
+          "formula": null,
+          "value": 52860610035
+        },
+        {
+          "cell": "E15",
+          "formula": null,
+          "value": 9959633
+        },
+        {
+          "cell": "F15",
+          "formula": null,
+          "value": 5307.485731150937
+        },
+        {
+          "cell": "A16",
+          "formula": null,
+          "value": "2026"
+        },
+        {
+          "cell": "B16",
+          "formula": null,
+          "value": "1팀 2파트"
+        },
+        {
+          "cell": "C16",
+          "formula": null,
+          "value": 9
+        },
+        {
+          "cell": "D16",
+          "formula": null,
+          "value": 49432307995.79999
+        },
+        {
+          "cell": "E16",
+          "formula": null,
+          "value": 10459934
+        },
+        {
+          "cell": "F16",
+          "formula": null,
+          "value": 4725.871883684925
+        },
+        {
+          "cell": "A17",
+          "formula": null,
+          "value": "2026"
+        },
+        {
+          "cell": "B17",
+          "formula": null,
+          "value": "2팀"
+        },
+        {
+          "cell": "C17",
+          "formula": null,
+          "value": 9
+        },
+        {
+          "cell": "D17",
+          "formula": null,
+          "value": 4962511152
+        },
+        {
+          "cell": "E17",
+          "formula": null,
+          "value": 3239110.6999999993
+        },
+        {
+          "cell": "F17",
+          "formula": null,
+          "value": 1532.0597570191105
+        },
+        {
+          "cell": "A18",
+          "formula": null,
+          "value": "2026"
+        },
+        {
+          "cell": "B18",
+          "formula": null,
+          "value": "3팀"
+        },
+        {
+          "cell": "C18",
+          "formula": null,
+          "value": 9
+        },
+        {
+          "cell": "D18",
+          "formula": null,
+          "value": 12049717590
+        },
+        {
+          "cell": "E18",
+          "formula": null,
+          "value": 2642610.4
+        },
+        {
+          "cell": "F18",
+          "formula": null,
+          "value": 4559.778312383846
+        }
+      ]
+    },
+    "전년 대비 비교": {
+      "rows": 45,
+      "columns": 17,
+      "state": "visible",
+      "cells": [
+        {
+          "cell": "B1",
+          "formula": null,
+          "value": "전년 대비 에너지 비용 · kJ 원단위 비교 (1~9월 누계)"
+        },
+        {
+          "cell": "B2",
+          "formula": null,
+          "value": "연동: 원자료 · 팀별 원단위 시트  |  비용 단위: 원  |  원단위: kJ/kg  |  ▲ 증가  ▼ 감소"
+        },
+        {
+          "cell": "B4",
+          "formula": null,
+          "value": "비교 연도"
+        },
+        {
+          "cell": "C4",
+          "formula": null,
+          "value": 2025
+        },
+        {
+          "cell": "D4",
+          "formula": null,
+          "value": 2026
+        },
+        {
+          "cell": "E4",
+          "formula": null,
+          "value": "← 연도 변경 시 전체 자동 갱신"
+        },
+        {
+          "cell": "B6",
+          "formula": "=\"▶ \"&D4&\"년 1~9월 총 에너지 비용  \"&TEXT(D15,\"#,##0\")&\"원   |   전년 대비 \"&IF(E15>=0,\"▲ \",\"▼ \")&TEXT(ABS(E15),\"#,##0\")&\"원 (\"&TEXT(ABS(F15),\"0.0%\")&\")\"",
+          "value": "▶ 2026년 1~9월 총 에너지 비용  3,256,746,082원   |   전년 대비 ▲ 187,183,458원 (6.1%)"
+        },
+        {
+          "cell": "B7",
+          "formula": "=\"▶ \"&D4&\"년 전체 kJ 원단위  \"&TEXT(D36,\"#,##0\")&\" kJ/kg   |   전년 대비 \"&IF(E36>=0,\"▲ \",\"▼ \")&TEXT(ABS(E36),\"#,##0\")&\" kJ/kg (\"&TEXT(ABS(F36),\"0.0%\")&\")\"",
+          "value": "▶ 2026년 전체 kJ 원단위  4,536 kJ/kg   |   전년 대비 ▲ 98 kJ/kg (2.2%)"
+        },
+        {
+          "cell": "B9",
+          "formula": null,
+          "value": "① 에너지원별 비용 비교 (1~9월 누계, 원)"
+        },
+        {
+          "cell": "B10",
+          "formula": null,
+          "value": "구분"
+        },
+        {
+          "cell": "C10",
+          "formula": "=C$4&\"년\"",
+          "value": "2025년"
+        },
+        {
+          "cell": "D10",
+          "formula": "=D$4&\"년\"",
+          "value": "2026년"
+        },
+        {
+          "cell": "E10",
+          "formula": null,
+          "value": "증감액"
+        },
+        {
+          "cell": "F10",
+          "formula": null,
+          "value": "증감률"
+        },
+        {
+          "cell": "B11",
+          "formula": null,
+          "value": "전기"
+        },
+        {
+          "cell": "C11",
+          "formula": "=SUMPRODUCT(SUMIFS(원자료!$C$2:$C$37,원자료!$A$2:$A$37,C$4&\"-\"&TEXT($B$19:$B$27,\"00\")))",
+          "value": 1149071647
+        },
+        {
+          "cell": "D11",
+          "formula": "=SUMPRODUCT(SUMIFS(원자료!$C$2:$C$37,원자료!$A$2:$A$37,D$4&\"-\"&TEXT($B$19:$B$27,\"00\")))",
+          "value": 1280126614
+        },
+        {
+          "cell": "E11",
+          "formula": "=D11-C11",
+          "value": 131054967
+        },
+        {
+          "cell": "F11",
+          "formula": "=IFERROR(E11/C11,0)",
+          "value": 0.11405291161970511
+        },
+        {
+          "cell": "B12",
+          "formula": null,
+          "value": "LNG"
+        },
+        {
+          "cell": "C12",
+          "formula": "=SUMPRODUCT(SUMIFS(원자료!$E$2:$E$37,원자료!$A$2:$A$37,C$4&\"-\"&TEXT($B$19:$B$27,\"00\")))",
+          "value": 1190135081
+        },
+        {
+          "cell": "D12",
+          "formula": "=SUMPRODUCT(SUMIFS(원자료!$E$2:$E$37,원자료!$A$2:$A$37,D$4&\"-\"&TEXT($B$19:$B$27,\"00\")))",
+          "value": 1242044449
+        },
+        {
+          "cell": "E12",
+          "formula": "=D12-C12",
+          "value": 51909368
+        },
+        {
+          "cell": "F12",
+          "formula": "=IFERROR(E12/C12,0)",
+          "value": 0.04361636660301084
+        },
+        {
+          "cell": "B13",
+          "formula": null,
+          "value": "LPG"
+        },
+        {
+          "cell": "C13",
+          "formula": "=SUMPRODUCT(SUMIFS(원자료!$G$2:$G$37,원자료!$A$2:$A$37,C$4&\"-\"&TEXT($B$19:$B$27,\"00\")))",
+          "value": 730355896
+        },
+        {
+          "cell": "D13",
+          "formula": "=SUMPRODUCT(SUMIFS(원자료!$G$2:$G$37,원자료!$A$2:$A$37,D$4&\"-\"&TEXT($B$19:$B$27,\"00\")))",
+          "value": 734575019
+        },
+        {
+          "cell": "E13",
+          "formula": "=D13-C13",
+          "value": 4219123
+        },
+        {
+          "cell": "F13",
+          "formula": "=IFERROR(E13/C13,0)",
+          "value": 0.005776804189720678
+        },
+        {
+          "cell": "B14",
+          "formula": null,
+          "value": "가스 소계 (LNG+LPG)"
+        },
+        {
+          "cell": "C14",
+          "formula": "=C12+C13",
+          "value": 1920490977
+        },
+        {
+          "cell": "D14",
+          "formula": "=D12+D13",
+          "value": 1976619468
+        },
+        {
+          "cell": "E14",
+          "formula": "=D14-C14",
+          "value": 56128491
+        },
+        {
+          "cell": "F14",
+          "formula": "=IFERROR(E14/C14,0)",
+          "value": 0.029226115442457505
+        },
+        {
+          "cell": "B15",
+          "formula": null,
+          "value": "총 에너지 비용"
+        },
+        {
+          "cell": "C15",
+          "formula": "=C11+C14",
+          "value": 3069562624
+        },
+        {
+          "cell": "D15",
+          "formula": "=D11+D14",
+          "value": 3256746082
+        },
+        {
+          "cell": "E15",
+          "formula": "=D15-C15",
+          "value": 187183458
+        },
+        {
+          "cell": "F15",
+          "formula": "=IFERROR(E15/C15,0)",
+          "value": 0.06098049817797104
+        },
+        {
+          "cell": "B17",
+          "formula": null,
+          "value": "② 월별 총 에너지 비용 비교 (전기+가스, 원)"
+        },
+        {
+          "cell": "B18",
+          "formula": null,
+          "value": "월"
+        },
+        {
+          "cell": "C18",
+          "formula": "=C$4&\"년\"",
+          "value": "2025년"
+        },
+        {
+          "cell": "D18",
+          "formula": "=D$4&\"년\"",
+          "value": "2026년"
+        },
+        {
+          "cell": "E18",
+          "formula": null,
+          "value": "증감액"
+        },
+        {
+          "cell": "F18",
+          "formula": null,
+          "value": "증감률"
+        },
+        {
+          "cell": "B19",
+          "formula": null,
+          "value": 1
+        },
+        {
+          "cell": "C19",
+          "formula": "=SUMIFS(원자료!$C$2:$C$37,원자료!$A$2:$A$37,C$4&\"-\"&TEXT($B19,\"00\"))+SUMIFS(원자료!$H$2:$H$37,원자료!$A$2:$A$37,C$4&\"-\"&TEXT($B19,\"00\"))",
+          "value": 360245574
+        },
+        {
+          "cell": "D19",
+          "formula": "=SUMIFS(원자료!$C$2:$C$37,원자료!$A$2:$A$37,D$4&\"-\"&TEXT($B19,\"00\"))+SUMIFS(원자료!$H$2:$H$37,원자료!$A$2:$A$37,D$4&\"-\"&TEXT($B19,\"00\"))",
+          "value": 434519723
+        },
+        {
+          "cell": "E19",
+          "formula": "=D19-C19",
+          "value": 74274149
+        },
+        {
+          "cell": "F19",
+          "formula": "=IFERROR(E19/C19,0)",
+          "value": 0.20617643729885216
+        },
+        {
+          "cell": "B20",
+          "formula": null,
+          "value": 2
+        },
+        {
+          "cell": "C20",
+          "formula": "=SUMIFS(원자료!$C$2:$C$37,원자료!$A$2:$A$37,C$4&\"-\"&TEXT($B20,\"00\"))+SUMIFS(원자료!$H$2:$H$37,원자료!$A$2:$A$37,C$4&\"-\"&TEXT($B20,\"00\"))",
+          "value": 384712837
+        },
+        {
+          "cell": "D20",
+          "formula": "=SUMIFS(원자료!$C$2:$C$37,원자료!$A$2:$A$37,D$4&\"-\"&TEXT($B20,\"00\"))+SUMIFS(원자료!$H$2:$H$37,원자료!$A$2:$A$37,D$4&\"-\"&TEXT($B20,\"00\"))",
+          "value": 331342670
+        },
+        {
+          "cell": "E20",
+          "formula": "=D20-C20",
+          "value": -53370167
+        },
+        {
+          "cell": "F20",
+          "formula": "=IFERROR(E20/C20,0)",
+          "value": -0.13872728400794174
+        },
+        {
+          "cell": "B21",
+          "formula": null,
+          "value": 3
+        },
+        {
+          "cell": "C21",
+          "formula": "=SUMIFS(원자료!$C$2:$C$37,원자료!$A$2:$A$37,C$4&\"-\"&TEXT($B21,\"00\"))+SUMIFS(원자료!$H$2:$H$37,원자료!$A$2:$A$37,C$4&\"-\"&TEXT($B21,\"00\"))",
+          "value": 360192999
+        },
+        {
+          "cell": "D21",
+          "formula": "=SUMIFS(원자료!$C$2:$C$37,원자료!$A$2:$A$37,D$4&\"-\"&TEXT($B21,\"00\"))+SUMIFS(원자료!$H$2:$H$37,원자료!$A$2:$A$37,D$4&\"-\"&TEXT($B21,\"00\"))",
+          "value": 334973478
+        },
+        {
+          "cell": "E21",
+          "formula": "=D21-C21",
+          "value": -25219521
+        },
+        {
+          "cell": "F21",
+          "formula": "=IFERROR(E21/C21,0)",
+          "value": -0.07001668846983891
+        },
+        {
+          "cell": "B22",
+          "formula": null,
+          "value": 4
+        },
+        {
+          "cell": "C22",
+          "formula": "=SUMIFS(원자료!$C$2:$C$37,원자료!$A$2:$A$37,C$4&\"-\"&TEXT($B22,\"00\"))+SUMIFS(원자료!$H$2:$H$37,원자료!$A$2:$A$37,C$4&\"-\"&TEXT($B22,\"00\"))",
+          "value": 371545449
+        },
+        {
+          "cell": "D22",
+          "formula": "=SUMIFS(원자료!$C$2:$C$37,원자료!$A$2:$A$37,D$4&\"-\"&TEXT($B22,\"00\"))+SUMIFS(원자료!$H$2:$H$37,원자료!$A$2:$A$37,D$4&\"-\"&TEXT($B22,\"00\"))",
+          "value": 291908094
+        },
+        {
+          "cell": "E22",
+          "formula": "=D22-C22",
+          "value": -79637355
+        },
+        {
+          "cell": "F22",
+          "formula": "=IFERROR(E22/C22,0)",
+          "value": -0.21434081675429162
+        },
+        {
+          "cell": "B23",
+          "formula": null,
+          "value": 5
+        },
+        {
+          "cell": "C23",
+          "formula": "=SUMIFS(원자료!$C$2:$C$37,원자료!$A$2:$A$37,C$4&\"-\"&TEXT($B23,\"00\"))+SUMIFS(원자료!$H$2:$H$37,원자료!$A$2:$A$37,C$4&\"-\"&TEXT($B23,\"00\"))",
+          "value": 276011269
+        },
+        {
+          "cell": "D23",
+          "formula": "=SUMIFS(원자료!$C$2:$C$37,원자료!$A$2:$A$37,D$4&\"-\"&TEXT($B23,\"00\"))+SUMIFS(원자료!$H$2:$H$37,원자료!$A$2:$A$37,D$4&\"-\"&TEXT($B23,\"00\"))",
+          "value": 279374834
+        },
+        {
+          "cell": "E23",
+          "formula": "=D23-C23",
+          "value": 3363565
+        },
+        {
+          "cell": "F23",
+          "formula": "=IFERROR(E23/C23,0)",
+          "value": 0.012186332145735687
+        },
+        {
+          "cell": "B24",
+          "formula": null,
+          "value": 6
+        },
+        {
+          "cell": "C24",
+          "formula": "=SUMIFS(원자료!$C$2:$C$37,원자료!$A$2:$A$37,C$4&\"-\"&TEXT($B24,\"00\"))+SUMIFS(원자료!$H$2:$H$37,원자료!$A$2:$A$37,C$4&\"-\"&TEXT($B24,\"00\"))",
+          "value": 311501575
+        },
+        {
+          "cell": "D24",
+          "formula": "=SUMIFS(원자료!$C$2:$C$37,원자료!$A$2:$A$37,D$4&\"-\"&TEXT($B24,\"00\"))+SUMIFS(원자료!$H$2:$H$37,원자료!$A$2:$A$37,D$4&\"-\"&TEXT($B24,\"00\"))",
+          "value": 382625309
+        },
+        {
+          "cell": "E24",
+          "formula": "=D24-C24",
+          "value": 71123734
+        },
+        {
+          "cell": "F24",
+          "formula": "=IFERROR(E24/C24,0)",
+          "value": 0.22832543944601244
+        },
+        {
+          "cell": "B25",
+          "formula": null,
+          "value": 7
+        },
+        {
+          "cell": "C25",
+          "formula": "=SUMIFS(원자료!$C$2:$C$37,원자료!$A$2:$A$37,C$4&\"-\"&TEXT($B25,\"00\"))+SUMIFS(원자료!$H$2:$H$37,원자료!$A$2:$A$37,C$4&\"-\"&TEXT($B25,\"00\"))",
+          "value": 312642528
+        },
+        {
+          "cell": "D25",
+          "formula": "=SUMIFS(원자료!$C$2:$C$37,원자료!$A$2:$A$37,D$4&\"-\"&TEXT($B25,\"00\"))+SUMIFS(원자료!$H$2:$H$37,원자료!$A$2:$A$37,D$4&\"-\"&TEXT($B25,\"00\"))",
+          "value": 355361708
+        },
+        {
+          "cell": "E25",
+          "formula": "=D25-C25",
+          "value": 42719180
+        },
+        {
+          "cell": "F25",
+          "formula": "=IFERROR(E25/C25,0)",
+          "value": 0.1366390563474461
+        },
+        {
+          "cell": "B26",
+          "formula": null,
+          "value": 8
+        },
+        {
+          "cell": "C26",
+          "formula": "=SUMIFS(원자료!$C$2:$C$37,원자료!$A$2:$A$37,C$4&\"-\"&TEXT($B26,\"00\"))+SUMIFS(원자료!$H$2:$H$37,원자료!$A$2:$A$37,C$4&\"-\"&TEXT($B26,\"00\"))",
+          "value": 320562392
+        },
+        {
+          "cell": "D26",
+          "formula": "=SUMIFS(원자료!$C$2:$C$37,원자료!$A$2:$A$37,D$4&\"-\"&TEXT($B26,\"00\"))+SUMIFS(원자료!$H$2:$H$37,원자료!$A$2:$A$37,D$4&\"-\"&TEXT($B26,\"00\"))",
+          "value": 320695309
+        },
+        {
+          "cell": "E26",
+          "formula": "=D26-C26",
+          "value": 132917
+        },
+        {
+          "cell": "F26",
+          "formula": "=IFERROR(E26/C26,0)",
+          "value": 0.00041463691099484935
+        },
+        {
+          "cell": "B27",
+          "formula": null,
+          "value": 9
+        },
+        {
+          "cell": "C27",
+          "formula": "=SUMIFS(원자료!$C$2:$C$37,원자료!$A$2:$A$37,C$4&\"-\"&TEXT($B27,\"00\"))+SUMIFS(원자료!$H$2:$H$37,원자료!$A$2:$A$37,C$4&\"-\"&TEXT($B27,\"00\"))",
+          "value": 372148001
+        },
+        {
+          "cell": "D27",
+          "formula": "=SUMIFS(원자료!$C$2:$C$37,원자료!$A$2:$A$37,D$4&\"-\"&TEXT($B27,\"00\"))+SUMIFS(원자료!$H$2:$H$37,원자료!$A$2:$A$37,D$4&\"-\"&TEXT($B27,\"00\"))",
+          "value": 525944957
+        },
+        {
+          "cell": "E27",
+          "formula": "=D27-C27",
+          "value": 153796956
+        },
+        {
+          "cell": "F27",
+          "formula": "=IFERROR(E27/C27,0)",
+          "value": 0.41326825775425835
+        },
+        {
+          "cell": "B28",
+          "formula": null,
+          "value": "합계"
+        },
+        {
+          "cell": "C28",
+          "formula": "=SUM(C19:C27)",
+          "value": 3069562624
+        },
+        {
+          "cell": "D28",
+          "formula": "=SUM(D19:D27)",
+          "value": 3256746082
+        },
+        {
+          "cell": "E28",
+          "formula": "=D28-C28",
+          "value": 187183458
+        },
+        {
+          "cell": "F28",
+          "formula": "=IFERROR(E28/C28,0)",
+          "value": 0.06098049817797104
+        },
+        {
+          "cell": "B30",
+          "formula": null,
+          "value": "③ 팀별 kJ 원단위 비교 (kJ/kg)"
+        },
+        {
+          "cell": "B31",
+          "formula": null,
+          "value": "팀"
+        },
+        {
+          "cell": "C31",
+          "formula": "=C$4&\"년 (\"&SUMIFS('팀별 원단위'!$C$3:$C$18,'팀별 원단위'!$A$3:$A$18,C$4&\"\",'팀별 원단위'!$B$3:$B$18,$B$32)&\"개월)\"",
+          "value": "2025년 (12개월)"
+        },
+        {
+          "cell": "D31",
+          "formula": "=D$4&\"년 (\"&SUMIFS('팀별 원단위'!$C$3:$C$18,'팀별 원단위'!$A$3:$A$18,D$4&\"\",'팀별 원단위'!$B$3:$B$18,$B$32)&\"개월)\"",
+          "value": "2026년 (9개월)"
+        },
+        {
+          "cell": "E31",
+          "formula": null,
+          "value": "증감"
+        },
+        {
+          "cell": "F31",
+          "formula": null,
+          "value": "증감률"
+        },
+        {
+          "cell": "B32",
+          "formula": null,
+          "value": "1팀 1파트"
+        },
+        {
+          "cell": "C32",
+          "formula": "=SUMIFS('팀별 원단위'!$F$3:$F$18,'팀별 원단위'!$A$3:$A$18,C$4&\"\",'팀별 원단위'!$B$3:$B$18,$B32)",
+          "value": 5318.254017765764
+        },
+        {
+          "cell": "D32",
+          "formula": "=SUMIFS('팀별 원단위'!$F$3:$F$18,'팀별 원단위'!$A$3:$A$18,D$4&\"\",'팀별 원단위'!$B$3:$B$18,$B32)",
+          "value": 5307.485731150937
+        },
+        {
+          "cell": "E32",
+          "formula": "=D32-C32",
+          "value": -10.768286614827048
+        },
+        {
+          "cell": "F32",
+          "formula": "=IFERROR(E32/C32,0)",
+          "value": -0.002024778541764893
+        },
+        {
+          "cell": "B33",
+          "formula": null,
+          "value": "1팀 2파트"
+        },
+        {
+          "cell": "C33",
+          "formula": "=SUMIFS('팀별 원단위'!$F$3:$F$18,'팀별 원단위'!$A$3:$A$18,C$4&\"\",'팀별 원단위'!$B$3:$B$18,$B33)",
+          "value": 4697.278284355738
+        },
+        {
+          "cell": "D33",
+          "formula": "=SUMIFS('팀별 원단위'!$F$3:$F$18,'팀별 원단위'!$A$3:$A$18,D$4&\"\",'팀별 원단위'!$B$3:$B$18,$B33)",
+          "value": 4725.871883684925
+        },
+        {
+          "cell": "E33",
+          "formula": "=D33-C33",
+          "value": 28.593599329186873
+        },
+        {
+          "cell": "F33",
+          "formula": "=IFERROR(E33/C33,0)",
+          "value": 0.006087269605553862
+        },
+        {
+          "cell": "B34",
+          "formula": null,
+          "value": "2팀"
+        },
+        {
+          "cell": "C34",
+          "formula": "=SUMIFS('팀별 원단위'!$F$3:$F$18,'팀별 원단위'!$A$3:$A$18,C$4&\"\",'팀별 원단위'!$B$3:$B$18,$B34)",
+          "value": 674.9599317766376
+        },
+        {
+          "cell": "D34",
+          "formula": "=SUMIFS('팀별 원단위'!$F$3:$F$18,'팀별 원단위'!$A$3:$A$18,D$4&\"\",'팀별 원단위'!$B$3:$B$18,$B34)",
+          "value": 1532.0597570191105
+        },
+        {
+          "cell": "E34",
+          "formula": "=D34-C34",
+          "value": 857.0998252424729
+        },
+        {
+          "cell": "F34",
+          "formula": "=IFERROR(E34/C34,0)",
+          "value": 1.2698528977659524
+        },
+        {
+          "cell": "B35",
+          "formula": null,
+          "value": "3팀"
+        },
+        {
+          "cell": "C35",
+          "formula": "=SUMIFS('팀별 원단위'!$F$3:$F$18,'팀별 원단위'!$A$3:$A$18,C$4&\"\",'팀별 원단위'!$B$3:$B$18,$B35)",
+          "value": 4571.367981804801
+        },
+        {
+          "cell": "D35",
+          "formula": "=SUMIFS('팀별 원단위'!$F$3:$F$18,'팀별 원단위'!$A$3:$A$18,D$4&\"\",'팀별 원단위'!$B$3:$B$18,$B35)",
+          "value": 4559.778312383846
+        },
+        {
+          "cell": "E35",
+          "formula": "=D35-C35",
+          "value": -11.589669420955033
+        },
+        {
+          "cell": "F35",
+          "formula": "=IFERROR(E35/C35,0)",
+          "value": -0.0025352737883025047
+        },
+        {
+          "cell": "B36",
+          "formula": null,
+          "value": "전체 (총열량÷총생산량)"
+        },
+        {
+          "cell": "C36",
+          "formula": "=IFERROR(SUMIFS('팀별 원단위'!$D$3:$D$18,'팀별 원단위'!$A$3:$A$18,C$4&\"\")/SUMIFS('팀별 원단위'!$E$3:$E$18,'팀별 원단위'!$A$3:$A$18,C$4&\"\"),0)",
+          "value": 4438.300576547309
+        },
+        {
+          "cell": "D36",
+          "formula": "=IFERROR(SUMIFS('팀별 원단위'!$D$3:$D$18,'팀별 원단위'!$A$3:$A$18,D$4&\"\")/SUMIFS('팀별 원단위'!$E$3:$E$18,'팀별 원단위'!$A$3:$A$18,D$4&\"\"),0)",
+          "value": 4536.095202607206
+        },
+        {
+          "cell": "E36",
+          "formula": "=D36-C36",
+          "value": 97.79462605989738
+        },
+        {
+          "cell": "F36",
+          "formula": "=IFERROR(E36/C36,0)",
+          "value": 0.022034250356242173
+        },
+        {
+          "cell": "B37",
+          "formula": null,
+          "value": "※ 팀별 원단위는 '팀별 원단위' 시트의 연도별 합계 기준입니다. 전년은 월별 팀 데이터가 없어 1~12월 연간 값으로 비교합니다."
+        }
+      ]
+    }
+  },
+  "externalLinks": [],
+  "years": {
+    "2024": {
+      "janSep": {
+        "months": [
+          "2024-01",
+          "2024-02",
+          "2024-03",
+          "2024-04",
+          "2024-05",
+          "2024-06",
+          "2024-07",
+          "2024-08",
+          "2024-09"
+        ],
+        "electricityKWh": 6606739,
+        "electricityCost": 1098708172,
+        "lngM3": 1452410,
+        "lngCost": 1311471051,
+        "lpgKg": 929272,
+        "lpgCost": 899081830,
+        "gasCost": 2210552881,
+        "totalCost": 3309261053,
+        "lngPriceWonM3": 902.9620086614661,
+        "lpgPriceWonKg": 967.5120201620193,
+        "electricityPriceWonKWh": 166.30113161727746
+      },
+      "completeMonths": {
+        "months": [
+          "2024-01",
+          "2024-02",
+          "2024-03",
+          "2024-04",
+          "2024-05",
+          "2024-06",
+          "2024-07",
+          "2024-08",
+          "2024-09",
+          "2024-10",
+          "2024-11",
+          "2024-12"
+        ],
+        "electricityKWh": 8838710,
+        "electricityCost": 1495967804,
+        "lngM3": 2007961,
+        "lngCost": 1820967967,
+        "lpgKg": 1244250,
+        "lpgCost": 1218815497,
+        "gasCost": 3039783464,
+        "totalCost": 4535751268,
+        "lngPriceWonM3": 906.8741708628803,
+        "lpgPriceWonKg": 979.5583660839864,
+        "electricityPriceWonKWh": 169.25182566234213
+      },
+      "teamTotal": {
+        "months": 12,
+        "energyKJ": 179781830505,
+        "productionKg": 41110477.9,
+        "intensityKJkg": 4373.1389098009
+      }
+    },
+    "2025": {
+      "janSep": {
+        "months": [
+          "2025-01",
+          "2025-02",
+          "2025-03",
+          "2025-04",
+          "2025-05",
+          "2025-06",
+          "2025-07",
+          "2025-08",
+          "2025-09"
+        ],
+        "electricityKWh": 6152484,
+        "electricityCost": 1149071647,
+        "lngM3": 1376262,
+        "lngCost": 1190135081,
+        "lpgKg": 727956,
+        "lpgCost": 730355896,
+        "gasCost": 1920490977,
+        "totalCost": 3069562624,
+        "lngPriceWonM3": 864.7590945619366,
+        "lpgPriceWonKg": 1003.2967596942673,
+        "electricityPriceWonKWh": 186.76548317720128
+      },
+      "completeMonths": {
+        "months": [
+          "2025-01",
+          "2025-02",
+          "2025-03",
+          "2025-04",
+          "2025-05",
+          "2025-06",
+          "2025-07",
+          "2025-08",
+          "2025-09",
+          "2025-10",
+          "2025-11",
+          "2025-12"
+        ],
+        "electricityKWh": 8145140,
+        "electricityCost": 1524180180,
+        "lngM3": 1895392,
+        "lngCost": 1583686551,
+        "lpgKg": 1022023,
+        "lpgCost": 1000543186,
+        "gasCost": 2584229737,
+        "totalCost": 4108409917,
+        "lngPriceWonM3": 835.5456554633554,
+        "lpgPriceWonKg": 978.9830424559917,
+        "electricityPriceWonKWh": 187.12756072946567
+      },
+      "teamTotal": {
+        "months": 12,
+        "energyKJ": 161366369360,
+        "productionKg": 36357692.9,
+        "intensityKJkg": 4438.300576547309
+      }
+    },
+    "2026": {
+      "janSep": {
+        "months": [
+          "2026-01",
+          "2026-02",
+          "2026-03",
+          "2026-04",
+          "2026-05",
+          "2026-06",
+          "2026-07",
+          "2026-08",
+          "2026-09"
+        ],
+        "electricityKWh": 6584744.998,
+        "electricityCost": 1280126614,
+        "lngM3": 1404316,
+        "lngCost": 1242044449,
+        "lpgKg": 712575,
+        "lpgCost": 734575019,
+        "gasCost": 1976619468,
+        "totalCost": 3256746082,
+        "lngPriceWonM3": 884.4479796570002,
+        "lpgPriceWonKg": 1030.8739697575693,
+        "electricityPriceWonKWh": 194.40792534696726
+      },
+      "completeMonths": {
+        "months": [
+          "2026-01",
+          "2026-02",
+          "2026-03",
+          "2026-04",
+          "2026-05",
+          "2026-06",
+          "2026-07",
+          "2026-08",
+          "2026-09"
+        ],
+        "electricityKWh": 6584744.998,
+        "electricityCost": 1280126614,
+        "lngM3": 1404316,
+        "lngCost": 1242044449,
+        "lpgKg": 712575,
+        "lpgCost": 734575019,
+        "gasCost": 1976619468,
+        "totalCost": 3256746082,
+        "lngPriceWonM3": 884.4479796570002,
+        "lpgPriceWonKg": 1030.8739697575693,
+        "electricityPriceWonKWh": 194.40792534696726
+      },
+      "teamTotal": {
+        "months": 9,
+        "energyKJ": 119305146772.79999,
+        "productionKg": 26301288.099999998,
+        "intensityKJkg": 4536.095202607206
+      }
+    }
+  },
+  "teams": [
+    {
+      "period": "2024~2026",
+      "team": "1팀 1파트",
+      "months": 33,
+      "energyKJ": 197423832375,
+      "productionKg": 37819977,
+      "intensityKJkg": 5220.093930120582,
+      "cells": {
+        "energyKJ": "D3",
+        "productionKg": "E3",
+        "intensityKJkg": "F3"
+      }
+    },
+    {
+      "period": "2024~2026",
+      "team": "1팀 2파트",
+      "months": 33,
+      "energyKJ": 210305751900.80005,
+      "productionKg": 45226352.4,
+      "intensityKJkg": 4650.071047976004,
+      "cells": {
+        "energyKJ": "D4",
+        "productionKg": "E4",
+        "intensityKJkg": "F4"
+      }
+    },
+    {
+      "period": "2024~2026",
+      "team": "2팀",
+      "months": 33,
+      "energyKJ": 11487449952,
+      "productionKg": 11839253.399999997,
+      "intensityKJkg": 970.2849971941646,
+      "cells": {
+        "energyKJ": "D5",
+        "productionKg": "E5",
+        "intensityKJkg": "F5"
+      }
+    },
+    {
+      "period": "2024~2026",
+      "team": "3팀",
+      "months": 33,
+      "energyKJ": 41236312410,
+      "productionKg": 8883876.099999998,
+      "intensityKJkg": 4641.702782189861,
+      "cells": {
+        "energyKJ": "D6",
+        "productionKg": "E6",
+        "intensityKJkg": "F6"
+      }
+    },
+    {
+      "period": "2024",
+      "team": "1팀 1파트",
+      "months": 12,
+      "energyKJ": 73320540345,
+      "productionKg": 14464466,
+      "intensityKJkg": 5069.011213065176,
+      "cells": {
+        "energyKJ": "D7",
+        "productionKg": "E7",
+        "intensityKJkg": "F7"
+      }
+    },
+    {
+      "period": "2024",
+      "team": "1팀 2파트",
+      "months": 12,
+      "energyKJ": 88546336335,
+      "productionKg": 19368755.5,
+      "intensityKJkg": 4571.606902415594,
+      "cells": {
+        "energyKJ": "D8",
+        "productionKg": "E8",
+        "intensityKJkg": "F8"
+      }
+    },
+    {
+      "period": "2024",
+      "team": "2팀",
+      "months": 12,
+      "energyKJ": 3617866800,
+      "productionKg": 4293113.699999999,
+      "intensityKJkg": 842.7139490854856,
+      "cells": {
+        "energyKJ": "D9",
+        "productionKg": "E9",
+        "intensityKJkg": "F9"
+      }
+    },
+    {
+      "period": "2024",
+      "team": "3팀",
+      "months": 12,
+      "energyKJ": 14297087025,
+      "productionKg": 2984142.7000000007,
+      "intensityKJkg": 4791.019888224513,
+      "cells": {
+        "energyKJ": "D10",
+        "productionKg": "E10",
+        "intensityKJkg": "F10"
+      }
+    },
+    {
+      "period": "2025",
+      "team": "1팀 1파트",
+      "months": 12,
+      "energyKJ": 71242681995,
+      "productionKg": 13395878,
+      "intensityKJkg": 5318.254017765764,
+      "cells": {
+        "energyKJ": "D11",
+        "productionKg": "E11",
+        "intensityKJkg": "F11"
+      }
+    },
+    {
+      "period": "2025",
+      "team": "1팀 2파트",
+      "months": 12,
+      "energyKJ": 72327107570,
+      "productionKg": 15397662.9,
+      "intensityKJkg": 4697.278284355738,
+      "cells": {
+        "energyKJ": "D12",
+        "productionKg": "E12",
+        "intensityKJkg": "F12"
+      }
+    },
+    {
+      "period": "2025",
+      "team": "2팀",
+      "months": 12,
+      "energyKJ": 2907072000,
+      "productionKg": 4307029,
+      "intensityKJkg": 674.9599317766376,
+      "cells": {
+        "energyKJ": "D13",
+        "productionKg": "E13",
+        "intensityKJkg": "F13"
+      }
+    },
+    {
+      "period": "2025",
+      "team": "3팀",
+      "months": 12,
+      "energyKJ": 14889507795,
+      "productionKg": 3257123,
+      "intensityKJkg": 4571.367981804801,
+      "cells": {
+        "energyKJ": "D14",
+        "productionKg": "E14",
+        "intensityKJkg": "F14"
+      }
+    },
+    {
+      "period": "2026",
+      "team": "1팀 1파트",
+      "months": 9,
+      "energyKJ": 52860610035,
+      "productionKg": 9959633,
+      "intensityKJkg": 5307.485731150937,
+      "cells": {
+        "energyKJ": "D15",
+        "productionKg": "E15",
+        "intensityKJkg": "F15"
+      }
+    },
+    {
+      "period": "2026",
+      "team": "1팀 2파트",
+      "months": 9,
+      "energyKJ": 49432307995.79999,
+      "productionKg": 10459934,
+      "intensityKJkg": 4725.871883684925,
+      "cells": {
+        "energyKJ": "D16",
+        "productionKg": "E16",
+        "intensityKJkg": "F16"
+      }
+    },
+    {
+      "period": "2026",
+      "team": "2팀",
+      "months": 9,
+      "energyKJ": 4962511152,
+      "productionKg": 3239110.6999999993,
+      "intensityKJkg": 1532.0597570191105,
+      "cells": {
+        "energyKJ": "D17",
+        "productionKg": "E17",
+        "intensityKJkg": "F17"
+      }
+    },
+    {
+      "period": "2026",
+      "team": "3팀",
+      "months": 9,
+      "energyKJ": 12049717590,
+      "productionKg": 2642610.4,
+      "intensityKJkg": 4559.778312383846,
+      "cells": {
+        "energyKJ": "D18",
+        "productionKg": "E18",
+        "intensityKJkg": "F18"
+      }
+    }
+  ],
+  "rawMonthly": [
+    {
+      "month": "2024-01",
+      "electricityKWh": 743235,
+      "electricityCost": 132330441,
+      "lngM3": 210744,
+      "lngCost": 209328224,
+      "lpgKg": 126322,
+      "lpgCost": 121269120,
+      "gasCost": 330597344
+    },
+    {
+      "month": "2024-02",
+      "electricityKWh": 633155,
+      "electricityCost": 116459151,
+      "lngM3": 158001,
+      "lngCost": 144147387,
+      "lpgKg": 83794,
+      "lpgCost": 80442240,
+      "gasCost": 224589627
+    },
+    {
+      "month": "2024-03",
+      "electricityKWh": 683939,
+      "electricityCost": 103999756,
+      "lngM3": 175458,
+      "lngCost": 164362589,
+      "lpgKg": 115880,
+      "lpgCost": 111244800,
+      "gasCost": 275607389
+    },
+    {
+      "month": "2024-04",
+      "electricityKWh": 734327,
+      "electricityCost": 109292959,
+      "lngM3": 167504,
+      "lngCost": 140038103,
+      "lpgKg": 130412,
+      "lpgCost": 125195520,
+      "gasCost": 265233623
+    },
+    {
+      "month": "2024-05",
+      "electricityKWh": 816048,
+      "electricityCost": 119011713,
+      "lngM3": 194015,
+      "lngCost": 169675460,
+      "lpgKg": 130114,
+      "lpgCost": 124909440,
+      "gasCost": 294584900
+    },
+    {
+      "month": "2024-06",
+      "electricityKWh": 830642,
+      "electricityCost": 138269365,
+      "lngM3": 166198,
+      "lngCost": 140472451,
+      "lpgKg": 116155,
+      "lpgCost": 111508800,
+      "gasCost": 251981251
+    },
+    {
+      "month": "2024-07",
+      "electricityKWh": 793836,
+      "electricityCost": 143578047,
+      "lngM3": 144178,
+      "lngCost": 125707372,
+      "lpgKg": 99673,
+      "lpgCost": 95686080,
+      "gasCost": 221393452
+    },
+    {
+      "month": "2024-08",
+      "electricityKWh": 722993,
+      "electricityCost": 131290113,
+      "lngM3": 133431,
+      "lngCost": 122267757,
+      "lpgKg": 76012,
+      "lpgCost": 77152180,
+      "gasCost": 199419937
+    },
+    {
+      "month": "2024-09",
+      "electricityKWh": 648564,
+      "electricityCost": 104476627,
+      "lngM3": 102881,
+      "lngCost": 95471708,
+      "lpgKg": 50910,
+      "lpgCost": 51673650,
+      "gasCost": 147145358
+    },
+    {
+      "month": "2024-10",
+      "electricityKWh": 723420,
+      "electricityCost": 110368822,
+      "lngM3": 181161,
+      "lngCost": 163678011,
+      "lpgKg": 95184,
+      "lpgCost": 95088816,
+      "gasCost": 258766827
+    },
+    {
+      "month": "2024-11",
+      "electricityKWh": 757290,
+      "electricityCost": 142103836,
+      "lngM3": 177218,
+      "lngCost": 159604071,
+      "lpgKg": 107113,
+      "lpgCost": 107005887,
+      "gasCost": 266609958
+    },
+    {
+      "month": "2024-12",
+      "electricityKWh": 751261,
+      "electricityCost": 144786974,
+      "lngM3": 197172,
+      "lngCost": 186214834,
+      "lpgKg": 112681,
+      "lpgCost": 117638964,
+      "gasCost": 303853798
+    },
+    {
+      "month": "2025-01",
+      "electricityKWh": 656040,
+      "electricityCost": 128251811,
+      "lngM3": 158576,
+      "lngCost": 146643631,
+      "lpgKg": 81753,
+      "lpgCost": 85350132,
+      "gasCost": 231993763
+    },
+    {
+      "month": "2025-02",
+      "electricityKWh": 645587,
+      "electricityCost": 129799492,
+      "lngM3": 173543,
+      "lngCost": 158069817,
+      "lpgKg": 92762,
+      "lpgCost": 96843528,
+      "gasCost": 254913345
+    },
+    {
+      "month": "2025-03",
+      "electricityKWh": 683494,
+      "electricityCost": 117239381,
+      "lngM3": 166073,
+      "lngCost": 147233434,
+      "lpgKg": 91686,
+      "lpgCost": 95720184,
+      "gasCost": 242953618
+    },
+    {
+      "month": "2025-04",
+      "electricityKWh": 725958,
+      "electricityCost": 122722753,
+      "lngM3": 167494,
+      "lngCost": 154924292,
+      "lpgKg": 89941,
+      "lpgCost": 93898404,
+      "gasCost": 248822696
+    },
+    {
+      "month": "2025-05",
+      "electricityKWh": 607401,
+      "electricityCost": 103648913,
+      "lngM3": 125043,
+      "lngCost": 107334728,
+      "lpgKg": 62287,
+      "lpgCost": 65027628,
+      "gasCost": 172362356
+    },
+    {
+      "month": "2025-06",
+      "electricityKWh": 643492,
+      "electricityCost": 127053369,
+      "lngM3": 135681,
+      "lngCost": 113082983,
+      "lpgKg": 70193,
+      "lpgCost": 71365223,
+      "gasCost": 184448206
+    },
+    {
+      "month": "2025-07",
+      "electricityKWh": 717304,
+      "electricityCost": 141976825,
+      "lngM3": 134220,
+      "lngCost": 106719564,
+      "lpgKg": 67905,
+      "lpgCost": 63946139,
+      "gasCost": 170665703
+    },
+    {
+      "month": "2025-08",
+      "electricityKWh": 676466,
+      "electricityCost": 140932590,
+      "lngM3": 141279,
+      "lngCost": 111188929,
+      "lpgKg": 72678,
+      "lpgCost": 68440873,
+      "gasCost": 179629802
+    },
+    {
+      "month": "2025-09",
+      "electricityKWh": 796742,
+      "electricityCost": 137446513,
+      "lngM3": 174353,
+      "lngCost": 144937703,
+      "lpgKg": 98751,
+      "lpgCost": 89763785,
+      "gasCost": 234701488
+    },
+    {
+      "month": "2025-10",
+      "electricityKWh": 583850,
+      "electricityCost": 100751316,
+      "lngM3": 128179,
+      "lngCost": 101004829,
+      "lpgKg": 79586,
+      "lpgCost": 77047150,
+      "gasCost": 178051979
+    },
+    {
+      "month": "2025-11",
+      "electricityKWh": 664458,
+      "electricityCost": 129075095,
+      "lngM3": 174639,
+      "lngCost": 129566719,
+      "lpgKg": 91368,
+      "lpgCost": 82276884,
+      "gasCost": 211843603
+    },
+    {
+      "month": "2025-12",
+      "electricityKWh": 744348,
+      "electricityCost": 145282122,
+      "lngM3": 216312,
+      "lngCost": 162979922,
+      "lpgKg": 123113,
+      "lpgCost": 110863256,
+      "gasCost": 273843178
+    },
+    {
+      "month": "2026-01",
+      "electricityKWh": 778168,
+      "electricityCost": 150033113,
+      "lngM3": 220863,
+      "lngCost": 170303536,
+      "lpgKg": 125407,
+      "lpgCost": 114183074,
+      "gasCost": 284486610
+    },
+    {
+      "month": "2026-02",
+      "electricityKWh": 578456,
+      "electricityCost": 115252823,
+      "lngM3": 161499,
+      "lngCost": 127198642,
+      "lpgKg": 97629,
+      "lpgCost": 88891205,
+      "gasCost": 216089847
+    },
+    {
+      "month": "2026-03",
+      "electricityKWh": 651113,
+      "electricityCost": 110436464,
+      "lngM3": 178230,
+      "lngCost": 136647574,
+      "lpgKg": 95532,
+      "lpgCost": 87889440,
+      "gasCost": 224537014
+    },
+    {
+      "month": "2026-04",
+      "electricityKWh": 553302.951,
+      "electricityCost": 103748921,
+      "lngM3": 160777,
+      "lngCost": 127046953,
+      "lpgKg": 65013,
+      "lpgCost": 61112220,
+      "gasCost": 188159173
+    },
+    {
+      "month": "2026-05",
+      "electricityKWh": 531018.665,
+      "electricityCost": 97465491,
+      "lngM3": 129084,
+      "lngCost": 111794843,
+      "lpgKg": 66833,
+      "lpgCost": 70114500,
+      "gasCost": 181909343
+    },
+    {
+      "month": "2026-06",
+      "electricityKWh": 710016.917,
+      "electricityCost": 150175458,
+      "lngM3": 154466,
+      "lngCost": 146202249,
+      "lpgKg": 77512,
+      "lpgCost": 86247602,
+      "gasCost": 232449851
+    },
+    {
+      "month": "2026-07",
+      "electricityKWh": 714005.822,
+      "electricityCost": 151946963,
+      "lngM3": 141711,
+      "lngCost": 137110713,
+      "lpgKg": 57292,
+      "lpgCost": 66304032,
+      "gasCost": 203414745
+    },
+    {
+      "month": "2026-08",
+      "electricityKWh": 602323.2220000001,
+      "electricityCost": 128574972,
+      "lngM3": 110573,
+      "lngCost": 118449071,
+      "lpgKg": 60565,
+      "lpgCost": 73671266,
+      "gasCost": 192120337
+    },
+    {
+      "month": "2026-09",
+      "electricityKWh": 1466340.421,
+      "electricityCost": 272492409,
+      "lngM3": 147113,
+      "lngCost": 167290868,
+      "lpgKg": 66792,
+      "lpgCost": 86161680,
+      "gasCost": 253452548
+    },
+    {
+      "month": "2026-10",
+      "electricityKWh": 1207063.170999,
+      "electricityCost": 0,
+      "lngM3": 46113,
+      "lngCost": null,
+      "lpgKg": 96654,
+      "lpgCost": null,
+      "gasCost": null
+    },
+    {
+      "month": "2026-11",
+      "electricityKWh": 21155.306001,
+      "electricityCost": 0,
+      "lngM3": null,
+      "lngCost": null,
+      "lpgKg": null,
+      "lpgCost": null,
+      "gasCost": null
+    },
+    {
+      "month": "2026-12",
+      "electricityKWh": null,
+      "electricityCost": null,
+      "lngM3": null,
+      "lngCost": null,
+      "lpgKg": null,
+      "lpgCost": null,
+      "gasCost": null
+    }
+  ]
+}

@@ -1,0 +1,170 @@
+@media (max-width: 720px) {
+  .detail-panel {
+    left: 10px;
+    right: 10px;
+    top: auto;
+    bottom: 10px;
+    max-height: 85svh;
+    width: auto;
+    border-radius: 14px;
+  }
+
+  .detail-top {
+    padding: 15px 18px 12px;
+  }
+
+  .detail-caption {
+    margin-bottom: 4px;
+  }
+
+  .detail-name h2 {
+    font-size: 18px;
+  }
+
+  .detail-status {
+    margin-top: 9px;
+  }
+
+  .detail-scroll {
+    padding: 12px 18px;
+  }
+
+  .detail-content {
+    max-height: 85svh;
+  }
+
+  .part-photo {
+    height: 135px;
+  }
+
+  .detail-bottom {
+    padding: 12px 18px;
+  }
+
+  .detail-bottom p {
+    font-size: 9px;
+  }
+
+  .spec-row {
+    font-size: 12px;
+  }
+
+  .resource-copy strong {
+    font-size: 12px;
+  }
+
+  .resource-copy small {
+    font-size: 10px;
+  }
+
+  .detail-scroll .summary {
+    font-size: 12px;
+  }
+
+  .inventory-open .sidebar {
+    display: flex;
+    position: fixed;
+    inset: 74px 13px 14px;
+    z-index: 40;
+    border-radius: 12px;
+    box-shadow: 0 20px 70px #213b2b30;
+  }
+
+  .mobile-close {
+    display: inline-flex;
+  }
+
+  .sidebar-top {
+    padding: 16px 20px 12px;
+  }
+
+  .sidebar h2 {
+    font-size: 16px;
+  }
+
+  .search-field {
+    margin: 0 18px;
+    padding: 12px;
+  }
+
+  .search-field input {
+    font-size: 13px;
+  }
+
+  .filters {
+    padding: 12px 18px;
+  }
+
+  .filters button {
+    font-size: 12px;
+    padding: 7px;
+  }
+
+  .part-row {
+    padding: 12px 15px;
+    gap: 12px;
+  }
+
+  .part-row-text strong {
+    font-size: 13px;
+  }
+
+  .part-row-text small {
+    font-size: 10px;
+  }
+
+  .part-group-title {
+    font-size: 11px;
+    padding: 14px 15px 8px;
+  }
+
+  .part-mini-icon {
+    width: 33px;
+    height: 35px;
+  }
+
+  .sidebar-note {
+    font-size: 11px;
+    padding: 12px 22px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dialog-heading {
+    padding: 20px;
+  }
+
+  .dialog-heading h2 {
+    font-size: 18px;
+  }
+
+  .edit-body {
+    padding: 4px 20px 16px;
+  }
+
+  .edit-body input,
+  .edit-body textarea {
+    font-size: 16px;
+  }
+
+  .dialog-actions {
+    padding: 14px 20px;
+  }
+
+  .edit-dialog {
+    max-height: calc(100svh - 28px);
+  }
+
+  .reference-wrap {
+    inset: 15px 14px 35px;
+  }
+
+  .reference-photo button {
+    width: 23px;
+    height: 23px;
+    font-size: 9px;
+  }
+}
+

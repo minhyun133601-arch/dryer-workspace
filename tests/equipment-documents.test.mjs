@@ -1,14 +1,14 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { createHash } from 'node:crypto';
 import { readFile, mkdtemp, realpath, rm } from 'node:fs/promises';
 import { spawnSync } from 'node:child_process';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { OUTDOOR_EQUIPMENT } from '../apps/site/outdoor-data.js';
+import { SITE_ASSETS } from '../apps/site/asset-catalog.js';
 
-test('document presentation is removed from both model viewers while its source evidence is preserved', async () => {
+test('both model viewers omit document controls and retain their registered history-card photographs', async () => {
   for (const file of ['apps/site/index.html', 'apps/site/app.js', 'apps/site/share/index.html', 'apps/site/share/app.js', 'apps/site/scene.js']) {
     const source = await readFile(new URL(`../${file}`, import.meta.url), 'utf8');
     assert.doesNotMatch(source, /equipment-document|equipment-documents|getEquipmentDocuments|renderEquipmentDocuments|openEquipmentDocument|has-documents|_documentMarkers/, file);
@@ -17,8 +17,7 @@ test('document presentation is removed from both model viewers while its source 
   const ahu = OUTDOOR_EQUIPMENT.find((item) => item.id === 'outdoor-ahu');
   assert.equal(ahu.historyCardNumber, 84);
   assert.equal(ahu.photos[0], './assets/equipment-cards/outdoor/084-cheerpack-stick-air-handler/front.jpg');
-  const source = await readFile(new URL('../references/equipment-document-archive-20261110/documents/cheerpack-ahu-history.pdf', import.meta.url));
-  assert.equal(createHash('sha256').update(source).digest('hex'), 'fcbdcbd3e110100c32c6fbc99a41afc7b81872ec37b4a0b10818524fe2bc2cf3');
+  assert.ok(SITE_ASSETS.some(asset => asset.path === ahu.photos[0] && asset.category === 'card-outdoor'));
 });
 
 test('the offline model omits document controls, popup code and embedded equipment PDFs', async () => {

@@ -1,0 +1,117 @@
+@media (max-width: 720px) {
+  .canvas-card {
+    height: 100%;
+    min-height: 450px;
+    border-radius: 9px;
+  }
+
+  .canvas-toolbar {
+    height: 51px;
+    padding: 10px 11px;
+    gap: 6px;
+  }
+
+  .canvas-title {
+    gap: 5px;
+  }
+
+  .canvas-title strong {
+    font-size: 12px;
+  }
+
+  .canvas-title > .icon {
+    display: none;
+  }
+
+  .tiny-badge {
+    display: none;
+  }
+
+  .view-switch {
+    padding: 2px;
+  }
+
+  .view-switch button {
+    font-size: 11px;
+    padding: 6px 7px;
+    gap: 4px;
+  }
+
+  .view-switch .icon {
+    width: 11px;
+    height: 11px;
+  }
+
+  .canvas-footer {
+    height: 43px;
+    padding: 0 11px;
+  }
+
+  .canvas-caption {
+    padding: 10px 12px 0;
+  }
+
+  .canvas-caption span {
+    font-size: 10px;
+    letter-spacing: 1.1px;
+  }
+
+  .canvas-caption small {
+    font-size: 10px;
+  }
+
+  .drawing-wrap {
+    padding: 10px 4px 40px;
+  }
+
+  .canvas-hint {
+    bottom: 9px;
+    font-size: 10px;
+    padding: 6px 9px;
+    gap: 5px;
+    max-width: calc(100% - 16px);
+  }
+
+  .canvas-hint .icon {
+    width: 10px;
+    height: 10px;
+  }
+
+  .legend {
+    font-size: 10px;
+    gap: 9px;
+  }
+
+  .legend i {
+    height: 6px;
+    width: 6px;
+  }
+
+  .zoom-controls {
+    gap: 1px;
+  }
+
+  .zoom-controls .icon-button {
+    width: 27px;
+  }
+
+  .zoom-controls > span {
+    font-size: 11px;
+    min-width: 34px;
+  }
+
+  .zoom-controls .zoom-divider {
+    margin: 0 3px;
+  }
+
+  .page-footer {
+    font-size: 8px;
+    line-height: 1.7;
+    padding: 11px 4px 18px;
+  }
+
+  .page-footer > span:first-child {
+    align-items: baseline;
+  }
+
+}

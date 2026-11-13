@@ -90,7 +90,8 @@ test('overhead ducts and pipe runs have ceiling hangers while the reduced hall a
     const passage=new THREE.Box3(new THREE.Vector3(.8,7.45,-5.1),new THREE.Vector3(2,9.1,10.5)),b=h.spec.mainBounds;
     const added=[h.environment.architectureFixtures.getObjectByName('dryer-route-3-details'),...h.environment.ducts.children.filter(node=>node.name.startsWith('dryer-route-3-')),ceiling];
     for(const root of added)meshBoxes(root,(node,volume)=>{
-      assert.ok(volume.min.x>=b.minX-.0001&&volume.max.x<=b.maxX+.0001&&volume.min.z>=b.minZ-.0001&&volume.max.z<=b.maxZ+.0001,`${node.name} stays inside the 17.2 by 26.8 metre interior`);
+      const inside=region=>volume.min.x>=region.minX-.0001&&volume.max.x<=region.maxX+.0001&&volume.min.z>=region.minZ-.0001&&volume.max.z<=region.maxZ+.0001;
+      assert.ok(inside(b)||inside(h.spec.northEastBay),`${node.name} stays inside the tower or its real adjoining stair bay`);
       assert.ok(!volume.intersectsBox(passage),`${node.name} leaves the central person route unobstructed`);
       assert.ok(volume.max.y<=h.spec.elevation+h.spec.height+.0001);
     });
@@ -102,7 +103,7 @@ test('the yellow room uses a narrow real glazed door and the unseen shutter dest
   const h=fixture();
   try{
     const doorway=h.environment.architectureFixtures.getObjectByName('dryer-route-3-yellow-storage-doorway'),leaf=doorway.children.find(node=>node.userData.doorLeaf),glass=named(leaf,'door-upper-window')[0];
-    const ratio=box(glass).getSize(new THREE.Vector3()).z/box(named(leaf,'door-lower-panel')[0]).getSize(new THREE.Vector3()).z;
+    const ratio=glass.scale.x/named(leaf,'door-lower-panel')[0].scale.x;
     assert.ok(ratio>.57&&ratio<.63,'the filmed upper pane occupies about sixty percent of the leaf width');
     const normal=new THREE.Vector3(0,0,1).transformDirection(leaf.matrixWorld);
     for(const [x,transparent]of [[.525,true],[.125,false],[.925,false]]){

@@ -1,0 +1,56 @@
+[
+  {
+    "id": "front",
+    "sourceFile": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-01-21 유산)건조기 열교환기(폐열회수 장치) 설치\\첨부파일\\열회수장치 설치 정면도.pdf",
+    "sourcePage": 1,
+    "pdfRect": [
+      0.0,
+      0.0,
+      1191.0,
+      842.0
+    ],
+    "pdfVectorPaths": 22410,
+    "embeddedRasterImages": 0,
+    "svg": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_heat_exchanger\\full_reconstruction\\source_assets\\front.svg",
+    "render": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_heat_exchanger\\full_reconstruction\\source_assets\\front-6x.png",
+    "renderScale": 6,
+    "colors": {
+      "(0.0, 0.0, 0.0)": 15112,
+      "(1.0, 0.0, 0.0)": 3691,
+      "(1.0, 0.0, 1.0)": 736,
+      "(1.0, 1.0, 0.0)": 126,
+      "(0.0, 1.0, 0.0)": 1406,
+      "(0.0, 1.0, 1.0)": 295,
+      "(0.0, 0.0, 1.0)": 336,
+      "(1.0, 0.49803999066352844, 0.0)": 386,
+      "(0.3882400095462799, 0.39215999841690063, 0.4000000059604645)": 322
+    }
+  },
+  {
+    "id": "plan",
+    "sourceFile": "C:\\Users\\user\\Desktop\\근거 자료\\사업자료\\2026-01-21 유산)건조기 열교환기(폐열회수 장치) 설치\\첨부파일\\열회수장치설치 평면도.pdf",
+    "sourcePage": 1,
+    "pdfRect": [
+      0.0,
+      0.0,
+      1191.0,
+      842.0
+    ],
+    "pdfVectorPaths": 13922,
+    "embeddedRasterImages": 0,
+    "svg": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_heat_exchanger\\full_reconstruction\\source_assets\\plan.svg",
+    "render": "C:\\Users\\user\\Desktop\\근거 자료\\관리자료\\수집·검토\\_work_heat_exchanger\\full_reconstruction\\source_assets\\plan-6x.png",
+    "renderScale": 6,
+    "colors": {
+      "(0.0, 0.0, 0.0)": 7741,
+      "(1.0, 0.0, 0.0)": 3565,
+      "(0.0, 1.0, 0.0)": 1801,
+      "(1.0, 0.0, 1.0)": 298,
+      "(0.0, 1.0, 1.0)": 157,
+      "(1.0, 1.0, 0.0)": 22,
+      "(0.5019599795341492, 0.5019599795341492, 0.5019599795341492)": 1,
+      "(0.3882400095462799, 0.39215999841690063, 0.4000000059604645)": 69,
+      "(0.0, 0.0, 1.0)": 268
+    }
+  }
+]

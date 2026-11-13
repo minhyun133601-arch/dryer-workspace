@@ -1,0 +1,157 @@
+/* Header and page heading */
+.site-header {
+  height: 62px;
+  padding: 0 26px;
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 17px;
+  letter-spacing: -0.6px;
+  white-space: nowrap;
+}
+
+.brand-icon {
+  width: 37px;
+  height: 37px;
+  border-radius: 10px;
+  background: var(--green);
+  color: #d7f2e8;
+  display: grid;
+  place-items: center;
+}
+
+.brand-icon .icon {
+  width: 23px;
+  height: 23px;
+}
+
+.brand-en {
+  font: 9px var(--mono);
+  display: block;
+  letter-spacing: 1.9px;
+  color: #80908d;
+  margin-top: 2px;
+}
+
+.header-path {
+  display: flex;
+  gap: 13px;
+  align-items: center;
+  font-size: 12px;
+  color: #8a969a;
+}
+
+.header-path .icon {
+  width: 11px;
+  height: 11px;
+  color: #b8c1c2;
+}
+
+.header-path strong {
+  font-weight: 500;
+  color: #415354;
+}
+
+.prototype-badge {
+  margin-left: auto;
+  font-size: 11px;
+  font-weight: 500;
+  border: 1px solid #dce8e3;
+  background: #f6faf7;
+  color: #497461;
+  border-radius: 30px;
+  padding: 6px 11px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.prototype-badge span {
+  width: 5px;
+  height: 5px;
+  background: #71a084;
+  border-radius: 50%;
+}
+
+main {
+  max-width: 1900px;
+  margin: auto;
+  padding: 0 26px;
+}
+
+.page-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 18px 0;
+}
+
+.eyebrow {
+  font: 10px var(--mono);
+  font-weight: 600;
+  letter-spacing: 1.6px;
+  color: #598777;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.eyebrow span {
+  color: #8eaaa1;
+  border-left: 1px solid #c7d3ce;
+  padding-left: 10px;
+}
+
+h1 {
+  margin: 5px 0 4px;
+  font-size: 27px;
+  letter-spacing: -1.25px;
+  font-weight: 700;
+}
+
+h1 span {
+  font-weight: 400;
+  color: #748780;
+  margin-left: 5px;
+}
+
+.page-heading p {
+  margin: 0;
+  font-size: 13px;
+  color: #697e77;
+}
+
+.heading-actions {
+  display: flex;
+  align-items: center;
+  gap: 19px;
+}
+
+.connection-count {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 11px;
+  color: #86938f;
+}
+
+.connection-count .icon {
+  width: 15px;
+  height: 15px;
+}
+
+.connection-count strong {
+  color: #315d4e;
+}
+

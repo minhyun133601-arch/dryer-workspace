@@ -9,7 +9,7 @@ import {createLiquidModel} from '../apps/site/liquid-models.js';
 import {createProximityDoorController} from '../apps/site/proximity-doors.js';
 
 test('all 52 liquid cards retain their identities, eight indoor rooms and four-side references without duplicating outdoor or team 2 equipment',async()=>{
-  const cards=JSON.parse(await readFile(new URL('../references/team3-liquid-20261110/cards.json',import.meta.url),'utf8'));
+  const cards=JSON.parse(await readFile(new URL('./fixtures/evidence/liquid-cards.json',import.meta.url),'utf8'));
   assert.equal(LIQUID_EQUIPMENT.length,52);assert.equal(LIQUID_ROOMS.length,8);assert.equal(new Set(LIQUID_EQUIPMENT.map(e=>e.id)).size,52);
   assert.deepEqual(LIQUID_EQUIPMENT.map(e=>e.cardNumber).sort((a,b)=>a-b),cards.map(c=>c._archiveNumber).sort((a,b)=>a-b));
   const rooms=new Set(LIQUID_ROOMS.map(r=>r.id));

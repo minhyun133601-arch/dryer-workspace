@@ -1,10 +1,11 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile, readdir } from 'node:fs/promises';
-import { createHash } from 'node:crypto';
 import path from 'node:path';
 import { isRetainedEvidenceImage } from '../apps/site/evidence-assets.js';
 import { SITE_ASSETS } from '../apps/site/asset-catalog.js';
+import { LIQUID_ASSETS } from '../apps/site/liquid-assets.js';
+import { OUTDOOR_HISTORY_CARDS } from '../apps/site/outdoor-card-data.js';
 
 test('runtime evidence accepts retained drawings and team 3 cards while rejecting ordinary photos and team 2 cards', () => {
   for (const reference of [
@@ -57,18 +58,20 @@ test('active asset folders contain exactly the registered viewer images and shar
   assert.deepEqual([...actual].sort(), [...expected].sort(), 'every image has an explicit catalog entry and role');
 });
 
-test('all 66 team 3 card originals and the standalone team 3 PDF retain their source bytes', async () => {
-  let count = 0;
-  for (const base of ['team3-liquid-20261110', 'team3-outdoor-cards-20261110']) {
-    const manifest = JSON.parse(await readFile(new URL(`../references/${base}/source-manifest.json`, import.meta.url), 'utf8'));
-    for (const record of manifest.files) {
-      const reference = record.path || record.localPath;
-      const bytes = await readFile(new URL(`../${reference}`, import.meta.url));
-      assert.equal(createHash('sha256').update(bytes).digest('hex'), record.sha256, reference);
-      count++;
-    }
+test('all 66 team 3 card groups retain accessible registered viewer images', async () => {
+  const liquid = Object.values(LIQUID_ASSETS);
+  assert.equal(liquid.length, 52); assert.equal(OUTDOOR_HISTORY_CARDS.length, 14);
+  const outdoor = OUTDOOR_HISTORY_CARDS.flatMap(card => {
+    assert.equal(card.views.length, 4, `card ${card.number} keeps all four views`);
+    return [card.photo, ...card.views];
+  });
+  const references = [...liquid, ...outdoor];
+  assert.equal(new Set(references).size, 122, '52 combined indoor images and five images for each of 14 outdoor cards');
+  const registered = new Map(SITE_ASSETS.map(asset => [asset.path, asset.category]));
+  for (const reference of references) {
+    assert.ok(['card-liquid', 'card-outdoor'].includes(registered.get(reference)), reference);
+    assert.equal(isRetainedEvidenceImage(reference), true, reference);
+    const bytes = await readFile(new URL(`../apps/site/${reference.slice(2)}`, import.meta.url));
+    assert.ok(bytes.length > 1000, reference); assert.equal(bytes.readUInt16BE(0), 0xffd8, reference);
   }
-  assert.equal(count, 200, '52 indoor and 14 outdoor cards include 200 source files and attachments');
-  const pdf = await readFile(new URL('../references/설비이력카드/3팀/03_3팀 설비이력카드.pdf', import.meta.url));
-  assert.equal(createHash('sha256').update(pdf).digest('hex'), 'ab1587f06fff1db15403e44a9f7b3be66a34219f6b068d5314d7a1516dadd66f');
 });

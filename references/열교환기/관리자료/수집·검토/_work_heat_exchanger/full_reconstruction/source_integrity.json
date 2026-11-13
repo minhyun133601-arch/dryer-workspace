@@ -1,0 +1,166 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "name": "survey IDs unique",
+      "passed": true,
+      "detail": 33
+    },
+    {
+      "name": "P&ID IDs unique",
+      "passed": true,
+      "detail": 213
+    },
+    {
+      "name": "connections IDs unique",
+      "passed": true,
+      "detail": 175
+    },
+    {
+      "name": "ducts IDs unique",
+      "passed": true,
+      "detail": 7
+    },
+    {
+      "name": "all connection endpoints exist",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all node source coordinates normalized",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all route coordinates normalized",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all survey coordinates finite or explicitly unknown",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "E01 major equipment x registration within 0.10m",
+      "passed": true,
+      "detail": {
+        "frontXM": 6.0037945863900815,
+        "planXM": 5.995564754583088,
+        "differenceM": 0.008229831806993104
+      }
+    },
+    {
+      "name": "E11 major equipment x registration within 0.10m",
+      "passed": true,
+      "detail": {
+        "frontXM": 16.001011889704024,
+        "planXM": 15.998817267888823,
+        "differenceM": 0.0021946218152013586
+      }
+    },
+    {
+      "name": "E12 major equipment x registration within 0.10m",
+      "passed": true,
+      "detail": {
+        "frontXM": 18.875411080192258,
+        "planXM": 18.872856298048497,
+        "differenceM": 0.0025547821437612583
+      }
+    },
+    {
+      "name": "E13 major equipment x registration within 0.10m",
+      "passed": true,
+      "detail": {
+        "frontXM": 21.92625853781938,
+        "planXM": 21.919869899467773,
+        "differenceM": 0.0063886383516056355
+      }
+    },
+    {
+      "name": "N01 major equipment x registration within 0.10m",
+      "passed": true,
+      "detail": {
+        "frontXM": 17.702883885656462,
+        "planXM": 17.644293317563573,
+        "differenceM": 0.05859056809288887
+      }
+    },
+    {
+      "name": "E20 major equipment x registration within 0.10m",
+      "passed": true,
+      "detail": {
+        "frontXM": 2.391727801669617,
+        "planXM": 2.342696629213483,
+        "differenceM": 0.04903117245613364
+      }
+    },
+    {
+      "name": "E21 major equipment x registration within 0.10m",
+      "passed": true,
+      "detail": {
+        "frontXM": 24.356691120667843,
+        "planXM": 24.408042578356003,
+        "differenceM": 0.05135145768815974
+      }
+    },
+    {
+      "name": "survey total agrees with coverage",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "P&ID total agrees with coverage",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "P&ID connections agree with coverage",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "P&ID does not claim fabrication completeness",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "E04 ambiguous correspondence retained",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "P02 ambiguous correspondence retained",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "surveyItems": 33,
+  "ductRoutes": 7,
+  "pidComponents": 213,
+  "pidConnections": 175,
+  "pidConfidence": {
+    "confirmed": 34,
+    "visual-trace": 173,
+    "uncertain": 6
+  },
+  "sourceHashes": {
+    "front_plan_survey.json": {
+      "bytes": 74370,
+      "sha256": "5bfe7c80e78840b750b03bc6d9d52efd9388da0ddfa429094e8c06690ba544c4"
+    },
+    "pid_catalog.json": {
+      "bytes": 329273,
+      "sha256": "7582626fb03db91a7ab29d3240bc670bfe0411e844a567f1ce99d724bf269dc5"
+    },
+    "source_assets/front.svg": {
+      "bytes": 3971660,
+      "sha256": "30dcf588f9fa74d1b96d6c698d6be5b0d80c9081b0e98a705d0cab6db6c262c6"
+    },
+    "source_assets/plan.svg": {
+      "bytes": 2521406,
+      "sha256": "b27202ee542567e0f7e0ecf0e1f4b325bf2348dd1544ffdad558b65e73c666d0"
+    }
+  },
+  "scope": "Data structure and cross-view coordinate registration; visual fidelity is reviewed separately."
+}

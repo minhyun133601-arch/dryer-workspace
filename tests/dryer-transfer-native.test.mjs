@@ -62,7 +62,7 @@ test('two visible carton machine silhouettes fill separate bays with a real belt
   try{
     const root=h.roots.get('f1-conveyor-a');
     assert.equal(root.userData.visibleCartonMachineSilhouettes,2);
-    for(const [i,x]of [[1,-5.4],[2,-1.7]]){
+    for(const [i,x]of [[1,-5.3],[2,-1.6]]){
       const machine=find(root,`observed-carton-machine-${i}`),p=machine.getWorldPosition(new THREE.Vector3());
       assert.ok(Math.abs(p.x-x)<1e-5&&Math.abs(p.z-10.3)<1e-5);
       assert.ok(bounds(machine).max.y<3.0,'the carton stations fit below the gallery');

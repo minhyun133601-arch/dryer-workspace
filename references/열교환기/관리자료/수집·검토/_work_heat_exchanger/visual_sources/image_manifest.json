@@ -1,0 +1,54 @@
+{
+  "slide2Dimensions": [
+    2560,
+    1440
+  ],
+  "installationRouteCropPx": [
+    208,
+    598,
+    2298,
+    1311
+  ],
+  "files": {
+    "elevation-full.png": {
+      "width": 2621,
+      "height": 1853,
+      "bytes": 301767
+    },
+    "install-slide-2.png": {
+      "width": 2560,
+      "height": 1440,
+      "bytes": 626020
+    },
+    "install-slide-3.png": {
+      "width": 2560,
+      "height": 1440,
+      "bytes": 166461
+    },
+    "installation-route.png": {
+      "width": 2090,
+      "height": 713,
+      "bytes": 421725
+    },
+    "pid-original.png": {
+      "width": 1160,
+      "height": 786,
+      "bytes": 122152
+    },
+    "pid-recovery-detail.png": {
+      "width": 960,
+      "height": 870,
+      "bytes": 85257
+    },
+    "plan-full.png": {
+      "width": 2621,
+      "height": 1853,
+      "bytes": 403549
+    },
+    "supply-fan-photo.jpeg": {
+      "width": 424,
+      "height": 196,
+      "bytes": 40798
+    }
+  }
+}

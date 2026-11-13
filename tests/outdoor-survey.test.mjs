@@ -11,34 +11,32 @@ import { isRetainedEvidenceImage } from '../apps/site/evidence-assets.js';
 const observationKey = ({ time, lat, lon, heading, pitch, accuracy }) =>
   JSON.stringify([time, lat, lon, heading, pitch, accuracy]);
 
-test('all 128 camera observations match the source manifest and any remaining original GPS filenames', async () => {
-  // Source media can be removed after modeling. The complete filename/GPS
-  // manifest and all 128 browser-sized observations remain available in the app.
-  const metadata = JSON.parse(await readFile(new URL('../workspace/outdoor-survey/metadata.json', import.meta.url), 'utf8'));
+test('all 128 camera observations match the retained capture filenames and any remaining original GPS files', async () => {
+  // Capture filenames encode the source GPS fields independently of the app.
+  // Keep only those small strings, rather than requiring archived source media.
+  const filenames = JSON.parse(await readFile(new URL('./fixtures/evidence/outdoor-survey.json', import.meta.url), 'utf8'));
   const retainedOriginals = (await readdir(new URL('../실외기실/', import.meta.url)).catch((error) => {
     if (error.code === 'ENOENT') return [];
     throw error;
   }))
     .filter((filename) => /\.jpg$/i.test(filename));
-  assert.equal(metadata.length, 128);
-  assert.equal(SURVEY_PHOTOS.length, metadata.length);
-  assert.deepEqual(metadata.map(({ index }) => index), Array.from({ length: metadata.length }, (_, index) => index));
-  const sourceFiles = new Set(metadata.map(({ file }) => file));
-  assert.equal(sourceFiles.size, metadata.length);
-  assert.ok(retainedOriginals.length <= metadata.length);
+  assert.equal(filenames.length, 128);
+  assert.equal(SURVEY_PHOTOS.length, filenames.length);
+  const sourceFiles = new Set(filenames);
+  assert.equal(sourceFiles.size, filenames.length);
+  assert.ok(retainedOriginals.length <= filenames.length);
   for (const filename of retainedOriginals) assert.ok(sourceFiles.has(filename), `retained original has no source metadata: ${filename}`);
   const filenamePattern = /^20261030_(\d{6})KST_GPS-VALID_LAT(-?[\d.]+)_LON(-?[\d.]+)_H([\d.]+)-TN_DIR-AVAILABLE_P(-?[\d.]+)_ACC([\d.]+)m_.+\.jpg$/;
-  const originalObservations = metadata.map((record) => {
-    const match = record.file.match(filenamePattern);
-    assert.ok(match, `unexpected original metadata: ${record.file}`);
+  const originalObservations = filenames.map((filename) => {
+    const match = filename.match(filenamePattern);
+    assert.ok(match, `unexpected original metadata: ${filename}`);
     const [, time, lat, lon, heading, pitch, accuracy] = match;
     const observation = { time, lat: Number(lat), lon: Number(lon), heading: Number(heading), pitch: Number(pitch), accuracy: Number(accuracy) };
-    assert.equal(observationKey(record), observationKey(observation), `manifest GPS must match the preserved filename: ${record.file}`);
     return observation;
   });
   assert.deepEqual(SURVEY_PHOTOS.map(observationKey), originalObservations.map(observationKey));
-  assert.equal(new Set(SURVEY_PHOTOS.map((photo) => photo.id)).size, metadata.length);
-  assert.deepEqual(SURVEY_PHOTOS.map((photo) => photo.index), metadata.map(({ index }) => index));
+  assert.equal(new Set(SURVEY_PHOTOS.map((photo) => photo.id)).size, filenames.length);
+  assert.deepEqual(SURVEY_PHOTOS.map((photo) => photo.index), Array.from({ length: filenames.length }, (_, index) => index));
 
   for (const photo of SURVEY_PHOTOS) {
     assert.equal(photo.position[1], 0, 'an unmeasured altitude must not be fabricated');

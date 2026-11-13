@@ -8,8 +8,9 @@ export function buildDryerRouteEnvironment(s, environment, spec) {
   if(environment.architectureFixtures.getObjectByName(`dryer-route-${level}-details`))return;
   const source='dryer-entrance-mezzanine-20261112',cache=s.dryerRouteGeometry ||=new Map();
   const geo=(key,make)=>{if(!cache.has(key)){const value=make();cache.set(key,value);s.geometries?.add(value);}return cache.get(key);};
-  const colors={wall:0xe1e0d2,green:0x267858,trim:0xb5bfba,steel:0xa8b8b4,dark:0x263b39,black:0x1c2829,wood:0xb6945e,woodFloor:0xd0bb96,gray:0x9fa7a1,white:0xe5e8df,blue:0x507589,yellow:0xc6ad43,red:0xa84235,teal:0x2f706b,paper:0xd9dbce};
+  const colors={wall:0xe1e0d2,green:0x267858,corridorGreen:0x195a3f,skirting:0x124631,wornGreen:0x5b8066,trim:0xb5bfba,steel:0xa8b8b4,dark:0x263b39,black:0x1c2829,wood:0xb6945e,woodFloor:0xd0bb96,gray:0x9fa7a1,white:0xe5e8df,blue:0x507589,yellow:0xc6ad43,red:0xa84235,teal:0x2f706b,paper:0xd9dbce};
   const m=s.dryerRouteMaterials ||=Object.fromEntries(Object.entries(colors).map(([key,color])=>[key,s._material(color,key==='steel'?.35:.8,key==='steel'?.65:.04)]));
+  m.ceilingPanel ||=s._material(0xdfe1d6,.94,0,{emissive:0xaeb1a2,emissiveIntensity:.16});
   m.glass ||=s._material(0x9abcb7,.24,.04,{transparent:true,opacity:.2,depthWrite:false,side:THREE.DoubleSide});
   m.yellowGlass ||=s._material(0xe1be39,.42,.03,{transparent:true,opacity:.58,depthWrite:false,side:THREE.DoubleSide});
   m.violet ||=s._material(0x9471c1,.45,.03,{emissive:0x522681,emissiveIntensity:.45});
@@ -23,6 +24,24 @@ export function buildDryerRouteEnvironment(s, environment, spec) {
   const details=group(environment.architectureFixtures,'details');
   Object.assign(details.userData,{drawingPolicy:'reference-only',roomUsesFromCurrentVideo:true});
   const floorFinish=(name,bounds,paint='green',top=.018)=>{const node=box(environment.deck,name,[bounds.maxX-bounds.minX,.012,bounds.maxZ-bounds.minZ],[(bounds.minX+bounds.maxX)/2,top-.006,(bounds.minZ+bounds.maxZ)/2],paint);node.userData.floorFinish=true;return node;};
+  const skirting=(parent,name,a,b,height=.16)=>{
+    const length=Math.hypot(b[0]-a[0],b[1]-a[1]),root=group(parent,name,[a[0],0,a[1]]);root.rotation.y=-Math.atan2(b[1]-a[1],b[0]-a[0]);
+    box(root,'green-wall-skirting',[length,height,.025],[length/2,height/2,0],'skirting');return root;
+  };
+  const suspendedCeiling=(name,bounds,{height=2.84,tileX=.6,tileZ=1.2}={})=>{
+    const root=group(environment.facade,`${name}-suspended-ceiling`),width=bounds.maxX-bounds.minX,depth=bounds.maxZ-bounds.minZ;
+    Object.assign(root.userData,{cutawayWithFacade:true,sourceTimesSeconds:[150,210,222,246,294,314,378,414],ceilingHeightMeasured:false});
+    const panel=box(root,'off-white-acoustic-ceiling',[width,.035,depth],[(bounds.minX+bounds.maxX)/2,height+.0175,(bounds.minZ+bounds.maxZ)/2],'wall');panel.material=m.ceilingPanel;
+    const alongX=[],alongZ=[];
+    for(let x=bounds.minX+tileX;x<bounds.maxX-.01;x+=tileX)alongZ.push([x,height-.004,(bounds.minZ+bounds.maxZ)/2]);
+    for(let z=bounds.minZ+tileZ;z<bounds.maxZ-.01;z+=tileZ)alongX.push([(bounds.minX+bounds.maxX)/2,height-.004,z]);
+    repeats(root,'ceiling-long-tile-joints',[.012,.008,depth],alongZ,'gray');repeats(root,'ceiling-cross-tile-joints',[width,.008,.012],alongX,'gray');
+    m.ceilingLight ||=s._material(0xf4f3e6,.55,0,{emissive:0xf4f0dc,emissiveIntensity:.65});
+    const horizontal=width>depth,length=horizontal?width:depth,count=Math.max(1,Math.floor(length/3.4)),positions=[];
+    for(let i=0;i<count;i++)positions.push([horizontal?bounds.minX+length*(i+.5)/count:(bounds.minX+bounds.maxX)/2,height-.035,horizontal?(bounds.minZ+bounds.maxZ)/2:bounds.minZ+length*(i+.5)/count]);
+    const lights=repeats(root,'flush-fluorescent-ceiling-fixtures',horizontal?[1.12,.035,.3]:[.3,.035,1.12],positions,'white');if(lights)lights.material=m.ceilingLight;
+    return root;
+  };
   const sign=(parent,text,p,width=.8)=>{
     const node=group(parent,'room-sign',p);node.userData.text=text;
     box(node,'room-sign-back',[width,.18,.025],[0,0,0],'white');box(node,'room-sign-blue-rule',[width,.025,.028],[0,-.078,.003],'blue');
@@ -115,8 +134,23 @@ export function buildDryerRouteEnvironment(s, environment, spec) {
       repeats(hvac,'cabinet-louver-blades',[.82,.014,.02],Array.from({length:9},(_,i)=>[1.37,.38+i*.043,.485]),'gray');
       box(hvac,'cabinet-upright-service-duct',[.3,2.65,.4],[2.6,3.1,.08],'white');
       box(hvac,'cabinet-duct-top-elbow',[.94,.35,.4],[2.28,4.27,.08],'white');
+      // The OP overlook is into an enclosed clean room, not an open bay with
+      // the elevator and green production floor continuing behind the machines.
+      // Keep its south observation face open to the existing OP glazing, and
+      // leave the unfilmed south-east approach free rather than inventing a door.
+      const shell=group(details,'blue-clean-room-boundary');Object.assign(shell.userData,{sourceTimesSeconds:[338,344,348,354,390],southObservationFaceOpen:true,unseenDoorAdded:false});
+      wallLine('blue-clean-room-rear',[-7.55,-6.5],[8.4,-6.5],{height:6.15});
+      wallLine('blue-clean-room-east',[8.4,-6.5],[8.4,1.35],{height:6.15});
+      wallLine('blue-clean-room-west-lower',[-8.4,3],[-8.4,-6.5],{height:3.5});
+      wallLine('blue-clean-room-west',[-7.55,3],[-7.55,-6.5],{height:6.15,openings:[{offset:4.75,width:9.5,sill:0,height:3.5},{offset:4.75,width:9.1,sill:4.55,height:1.6}]});
+      const observation=glazedLine('blue-clean-room-upper-observation',[-7.55,2.8],[-7.55,-6.3],{sill:4.55,top:6.15,pitch:1.3});
+      observation.userData.sourceTimesSeconds=[378,384,390,396,402];
+      for(const x of [-8.3,8.3])skirting(shell,'clean-room-side-skirting',[x,-6.4],[x,1.35],.12);
+      skirting(shell,'clean-room-rear-skirting',[-8.3,-6.4],[8.3,-6.4],.12);
       const ceiling=group(environment.facade,'blue-room-ceiling');
-      box(ceiling,'clean-room-ceiling',[16.8,.08,9.5],[0,6.15,-1.75],'wall');
+      box(ceiling,'clean-room-ceiling',[15.95,.08,9.5],[.425,6.15,-1.75],'wall');
+      repeats(ceiling,'clean-room-ceiling-panel-joints-long',[.015,.012,9.5],Array.from({length:13},(_,i)=>[-7.2+i*1.2,6.102,-1.75]),'trim');
+      repeats(ceiling,'clean-room-ceiling-panel-joints-cross',[15.95,.012,.015],Array.from({length:7},(_,i)=>[.425,6.102,-5.3+i*1.2]),'trim');
       m.ceilingLight ||=s._material(0xf4f3e6,.55,0,{emissive:0xf4f0dc,emissiveIntensity:.25});
       const lightPositions=[];for(const x of [-5.8,-1.8,2.2,6.2])for(const z of [-5.0,-2.0,1.0])lightPositions.push([x,6.1,z]);
       const lights=repeats(ceiling,'recessed-ceiling-lights',[1.1,.025,.42],lightPositions,'white');lights.material=m.ceilingLight;
@@ -154,15 +188,58 @@ export function buildDryerRouteEnvironment(s, environment, spec) {
 
   if(level===2 && spec.routeSurvey){
     const route=spec.routeSurvey;
-    floorFinish('south-observation-corridor-floor',{minX:-5.3,maxX:28.2,minZ:18.4,maxZ:21.4});
-    floorFinish('west-observation-corridor-floor',{minX:-8.45,maxX:-5.55,minZ:3,maxZ:18.35});
-    floorFinish('west-blue-hall-corridor-floor',{minX:-8.45,maxX:-7.55,minZ:-6.7,maxZ:3});
-    floorFinish('north-observation-corridor-floor',{minX:-5.4,maxX:13.4,minZ:-8.4,maxZ:-6.7});
+    const corridorRuns=[
+      ['south-observation-corridor',{minX:-5.3,maxX:28.2,minZ:18.4,maxZ:21.4}],
+      ['west-observation-corridor',{minX:-8.45,maxX:-5.55,minZ:3,maxZ:18.35}],
+      ['west-blue-hall-corridor',{minX:-8.45,maxX:-7.55,minZ:-6.7,maxZ:3}],
+      ['north-observation-corridor',{minX:-5.4,maxX:13.4,minZ:-8.4,maxZ:-6.7}],
+    ];
+    for(const [name,bounds]of corridorRuns){floorFinish(`${name}-floor`,bounds,'corridorGreen');suspendedCeiling(name,name==='north-observation-corridor'?{...bounds,maxX:8.6}:bounds);}
+    const corridorTrim=group(details,'corridor-wall-finishes');
+    skirting(corridorTrim,'south-inner-skirting',[-5.3,18.425],[28.2,18.425]);
+    skirting(corridorTrim,'south-outer-skirting',[-5.3,21.49],[28.2,21.49]);
+    skirting(corridorTrim,'west-outer-skirting',[-8.49,3],[-8.49,18.35]);
+    skirting(corridorTrim,'west-op-skirting',[-5.42,3],[-5.42,8.55]);
+    skirting(corridorTrim,'west-op-skirting',[-5.42,9.65],[-5.42,13.4]);
+    const wayfinding=group(details,'observed-corridor-wayfinding');wayfinding.userData.sourceTimesSeconds=[150,222,246,294,408];
+    const arrowShape=new THREE.Shape();arrowShape.moveTo(-.09,-.4);arrowShape.lineTo(.09,-.4);arrowShape.lineTo(.09,.08);arrowShape.lineTo(.25,.08);arrowShape.lineTo(0,.4);arrowShape.lineTo(-.25,.08);arrowShape.lineTo(-.09,.08);arrowShape.closePath();
+    const arrowGeometry=geo('corridor-yellow-direction-arrow',()=>{const geometry=new THREE.ShapeGeometry(arrowShape);geometry.rotateX(-Math.PI/2);return geometry;});
+    for(const [x,z,angle]of [[26.5,19.7,Math.PI/2],[12,19.7,Math.PI/2],[-7,16.5,0],[-8,0,0],[-1,-7.5,-Math.PI/2]]){
+      const arrow=s._mesh(arrowGeometry,m.yellow,wayfinding,[x,.027,z]);arrow.rotation.y=angle;arrow.name='dryer-route-yellow-floor-direction-arrow';
+    }
+    for(const x of [5.5,17.4]){
+      const board=group(wayfinding,'corridor-noticeboard',[x,1.6,21.46]);box(board,'noticeboard-frame',[1.25,.85,.04],[0,0,0],'gray');box(board,'noticeboard-dark-backing',[1.16,.76,.015],[0,0,-.028],'dark');
+      for(let row=0;row<2;row++)for(let col=0;col<3;col++)box(board,'anonymous-wall-notice',[.28,.27,.012],[-.37+col*.37,-.18+row*.35,-.042],'paper');
+      board.userData.readablePersonalInformationAdded=false;
+    }
+    const upperStair=route.upperStair;
+    if(upperStair){
+      const b=upperStair.bounds,window=upperStair.window,height=6.35,room=group(details,'upper-stairwell-context');
+      Object.assign(room.userData,{sourceTimesSeconds:upperStair.sourceTimes,compassOrientationConfirmed:false,topology:upperStair.topology,entryStairUnchanged:true});
+      wallLine('upper-stairwell-west',[b.minX,b.minZ],[b.minX,b.maxZ],{height:3.5,openings:[{offset:upperStair.lowerDoor[1]-b.minZ,width:1.15,height:2.3}]});
+      wallLine('upper-stairwell-east',[b.maxX,b.minZ],[b.maxX,b.maxZ],{height,openings:[{offset:window.position[1]-b.minZ,width:window.width,sill:window.sill,height:window.height}]});
+      wallLine('upper-stairwell-south',[b.minX,b.maxZ],[b.maxX,b.maxZ],{height});
+      wallLine('upper-stairwell-north',[b.minX,b.minZ],[b.maxX,b.minZ],{height});
+      box(environment.facade,'upper-stairwell-ceiling',[b.maxX-b.minX,.06,b.maxZ-b.minZ],[(b.minX+b.maxX)/2,height+.03,(b.minZ+b.maxZ)/2],'wall');
+      // 420–432s shows diffuse daylight through pale frosted panes, rather
+      // than a clear view into the surrounding model's unmeasured low wing.
+      m.stairFrostedGlass ||=s._material(0xe1e7df,.72,0,{transparent:true,opacity:.82,emissive:0xcbd9da,emissiveIntensity:.35,depthWrite:false,side:THREE.DoubleSide});
+      const glazing=glazedLine('upper-stairwell-tall-landing-window',[b.maxX,window.position[1]-window.width/2],[b.maxX,window.position[1]+window.width/2],{sill:window.sill,top:window.sill+window.height,pitch:1.17,paint:'stairFrostedGlass'});
+      Object.assign(glazing.userData,{sourceTimesSeconds:[420,424,428,432,443],landingFacingWindow:true});
+      for(const y of [1.8,2.25,2.7])bar(room,'stair-window-safety-bar',[b.maxX-.13,y,window.position[1]-window.width/2],[b.maxX-.13,y,window.position[1]+window.width/2],.025,'steel');
+      const lowerDoor=door('upper-stair-entrance',upperStair.lowerDoor,1.15,{rotation:Math.PI/2,label:'3층 연결 계단',glazed:false,paint:'gray',times:[414,418,420]});
+      lowerDoor.userData.routeStairEntry=true;
+      const approach={minX:7.55,maxX:8.6,minZ:-8.5,maxZ:-6.7};floorFinish('upper-stair-approach-floor',approach,'corridorGreen');suspendedCeiling('upper-stair-approach',approach);
+      for(const [a,c]of [[[b.minX+.07,b.minZ+.07],[b.maxX-.07,b.minZ+.07]],[[b.maxX-.07,b.minZ+.07],[b.maxX-.07,b.maxZ-.07]],[[b.minX+.07,b.maxZ-.07],[b.maxX-.07,b.maxZ-.07]]]){
+        const length=Math.hypot(c[0]-a[0],c[1]-a[1]),trim=group(room,'stairwell-black-skirting',[a[0],0,a[1]]);trim.rotation.y=-Math.atan2(c[1]-a[1],c[0]-a[0]);box(trim,'black-stairwell-skirting',[length,.14,.025],[length/2,.07,0],'black');
+      }
+    }
     wallLine('south-observation',[ -5.3,18.35],[28.2,18.35],{height:2.9,openings:[{offset:16.75,width:33.5,sill:.85,height:1.8}]});
     glazedLine('south-observation',[-5.3,18.35],[28.2,18.35]);
     wallLine('west-return-observation',[-5.35,13.7],[-5.35,18.35],{height:2.9,openings:[{offset:2.325,width:4.65,sill:.85,height:1.8}]});
     glazedLine('west-return-observation',[-5.35,13.7],[-5.35,18.35]);
     const dressing=route.dressingRoom,b=dressing.bounds;
+    suspendedCeiling('dressing-room',b,{height:2.6,tileX:.6,tileZ:.6});
     floorFinish('dressing-raised-wood-floor',b,'woodFloor',.08);
     const dressingRoot=group(details,'dressing-room-furnishings',[0,.08,0]);Object.assign(dressingRoot.userData,{sourceTimesSeconds:dressing.sourceTimes,lockerCountBasis:'tan minimum six columns by two tiers observed; partly filmed gray bank represented proportionally'});
     const doorOffset=dressing.door[0]-b.minX;
@@ -187,6 +264,7 @@ export function buildDryerRouteEnvironment(s, environment, spec) {
     const roller=cylinder(dressingRoot,'loose-floor-roller',.085,.26,[b.maxX-.95,.085,b.maxZ-1.35],'gray','z');roller.userData.movableContext=true;
 
     const op=route.opRoom,o=op.bounds,opRoot=group(details,'op-room-furnishings');opRoot.userData.sourceTimesSeconds=op.sourceTimes;
+    suspendedCeiling('op-room',o,{height:2.84,tileX:.6,tileZ:1.2});
     floorFinish('op-room-green-floor',o);
     const windowSides=[['north',[o.minX,o.minZ],[o.maxX,o.minZ]],['south',[o.minX,o.maxZ],[o.maxX,o.maxZ]],['east',[o.maxX,o.minZ],[o.maxX,o.maxZ]]];
     for(const [name,a,c]of windowSides){const length=Math.hypot(c[0]-a[0],c[1]-a[1]);wallLine(`op-${name}`,a,c,{openings:[{offset:length/2,width:length-.32,sill:.85,height:1.8}]});const start=[a[0]+(c[0]-a[0])*.16/length,a[1]+(c[1]-a[1])*.16/length],end=[c[0]-(c[0]-a[0])*.16/length,c[1]-(c[1]-a[1])*.16/length];glazedLine(`op-${name}`,start,end);}
@@ -214,19 +292,45 @@ export function buildDryerRouteEnvironment(s, environment, spec) {
   }
 
   if(level===3 && spec.routeSurvey?.glazedEnclosure){
-    const b=spec.routeSurvey.glazedEnclosure,w=b.maxX-b.minX,d=b.maxZ-b.minZ,doorZ=(b.minZ+b.maxZ)/2;
+    // The filmed 3F is a worn epoxy workshop floor. Its scuffed grey patches
+    // distinguish it from the clean blue packing room and the glossy corridor.
+    if(!m.wornGreen.map && typeof document!=='undefined'){
+      const canvas=document.createElement('canvas');canvas.width=canvas.height=512;const ctx=canvas.getContext?.('2d');
+      if(ctx){
+        let seed=931;const random=()=>{seed=(seed*16807)%2147483647;return(seed-1)/2147483646;};
+        ctx.fillStyle='#49755c';ctx.fillRect(0,0,512,512);
+        for(let i=0;i<140;i++){
+          const x=random()*512,y=random()*512,r=10+random()*35;ctx.fillStyle=i%3===0?'rgba(142,147,131,.11)':'rgba(106,135,110,.08)';ctx.beginPath();
+          for(let side=0;side<7;side++){const angle=side*Math.PI*2/7,length=r*(.45+random()*.55);const px=x+Math.cos(angle)*length,py=y+Math.sin(angle)*length;if(side===0)ctx.moveTo(px,py);else ctx.lineTo(px,py);}
+          ctx.closePath();ctx.fill();
+        }
+        for(let i=0;i<30;i++){ctx.strokeStyle='rgba(169,174,150,.06)';ctx.lineWidth=.5+random();ctx.beginPath();const x=random()*512,y=random()*512;ctx.moveTo(x,y);ctx.lineTo(x+(random()-.5)*35,y+random()*42);ctx.stroke();}
+        const texture=new THREE.CanvasTexture(canvas);texture.colorSpace=THREE.SRGBColorSpace;texture.wrapS=texture.wrapT=THREE.RepeatWrapping;texture.repeat.set(4,6);s.textures?.add(texture);m.wornGreen.map=texture;m.wornGreen.color.set(0xffffff);m.wornGreen.needsUpdate=true;
+      }
+    }
+    const wornFloor=floorFinish('third-worn-green-epoxy-floor',spec.mainBounds,'wornGreen',.001);Object.assign(wornFloor.userData,{sourceTimesSeconds:[450,486,538,588,617,678],wearPatternRepresentative:true});
+    const stairEntry=spec.routeSurvey.entryFromStair;
+    if(stairEntry){
+      const p=stairEntry.door,arrival=group(details,'third-stair-arrival-context');Object.assign(arrival.userData,{sourceTimesSeconds:stairEntry.sourceTimes,straightAheadOfUpperFlight:true});
+      box(arrival,'brown-stair-door-mat',[.85,.018,1.05],[p[0]+.43,.009,p[1]],'wood');
+      const marker=sign(arrival,'3F',[p[0]+.09,1.65,p[1]-1.0],.45);marker.rotation.y=Math.PI/2;
+    }
+    const b=spec.routeSurvey.glazedEnclosure,w=b.maxX-b.minX,d=b.maxZ-b.minZ,doorPosition=spec.routeSurvey.storageDoor?.position||[b.maxX,(b.minZ+b.maxZ)/2];
     const root=group(details,'yellow-glazed-storage-room');Object.assign(root.userData,{sourceTimesSeconds:[450,462,474,480],roomFunction:'storage-context',functionInferred:true,interiorObserved:true});
     floorFinish('yellow-room-green-floor',b);
-    wallLine('yellow-room-east',[b.maxX,b.maxZ],[b.maxX,b.minZ],{openings:[{offset:d/2,width:1.05,height:2.32},{offset:d-.8,width:1.15,sill:1.0,height:1.3}]});
-    glazedLine('yellow-room-east-fixed',[b.maxX,b.minZ+.225],[b.maxX,b.minZ+1.375],{sill:1.0,top:2.3,pitch:2,paint:'yellowGlass'});
+    wallLine('yellow-room-east',[b.maxX,b.maxZ],[b.maxX,b.minZ],{openings:[{offset:d/2,width:2.05,sill:1.0,height:1.3}]});
+    glazedLine('yellow-room-east-fixed',[b.maxX,b.minZ+d/2-1.025],[b.maxX,b.minZ+d/2+1.025],{sill:1.0,top:2.3,pitch:2.5,paint:'yellowGlass'});
     wallLine('yellow-room-south',[b.minX,b.maxZ],[b.maxX,b.maxZ],{openings:[{offset:w/2,width:2.05,sill:1.0,height:1.3}]});glazedLine('yellow-room-side',[b.minX+w/2-1.025,b.maxZ],[b.minX+w/2+1.025,b.maxZ],{sill:1.0,top:2.3,pitch:2.5,paint:'yellowGlass'});
-    wallLine('yellow-room-west',[b.minX,b.minZ],[b.minX,b.maxZ]);wallLine('yellow-room-north',[b.minX,b.minZ],[b.maxX,b.minZ]);
-    door('yellow-storage',[b.maxX,doorZ],1.05,{rotation:Math.PI/2,label:'3층 보관 구획',glassPaint:'yellowGlass',windowWidth:.6,times:[450,462,474,480]});
+    wallLine('yellow-room-west',[b.minX,b.minZ],[b.minX,b.maxZ]);
+    wallLine('yellow-room-north',[b.minX,b.minZ],[b.maxX,b.minZ],{openings:[{offset:doorPosition[0]-b.minX,width:1.05,height:2.32},{offset:1.4,width:1.15,sill:1.0,height:1.3}]});
+    glazedLine('yellow-room-entry-facing-window',[b.minX+.825,b.minZ],[b.minX+1.975,b.minZ],{sill:1.0,top:2.3,pitch:2,paint:'yellowGlass'});
+    door('yellow-storage',doorPosition,1.05,{rotation:Math.PI,label:'3층 보관 구획',glassPaint:'yellowGlass',windowWidth:.6,times:[450,462,474,480]});
     const shelf=group(root,'observed-storage-shelving',[b.minX+.36,0,b.minZ+1.9]);
     for(const x of [-.26,.26])for(const z of [-1.15,1.15])box(shelf,'storage-shelf-upright',[.035,1.85,.035],[x,.945,z],'steel');for(const y of [.12,.65,1.18,1.75])box(shelf,'storage-shelf-deck',[.6,.035,2.4],[0,y,0],'steel');
     for(let i=0;i<3;i++){box(shelf,'yellow-storage-bin',[.48,.31,.61],[0,.82,-.8+i*.8],'yellow');box(shelf,'anonymous-tool-case',[.46,.18,.54],[0,.23,-.8+i*.8],'teal');box(shelf,'tool-case-handle',[.025,.07,.15],[.25,.24,-.8+i*.8],'dark');}
-    const bench=group(root,'small-storage-workbench',[b.minX+w/2,0,b.minZ+.37]);box(bench,'storage-bench-top',[1.45,.05,.62],[0,.8,0],'steel');for(const x of [-.62,.62])for(const z of [-.24,.24])box(bench,'storage-bench-leg',[.04,.77,.04],[x,.385,z],'steel');box(bench,'unlabelled-toolbox',[.6,.22,.36],[0,.935,0],'dark');
-    const boundary=group(details,'closed-gray-service-door',[spec.mainBounds.maxX-.07,0,-3.0]);boundary.rotation.y=-Math.PI/2;Object.assign(boundary.userData,{sourceTimesSeconds:[450,480],destinationUnconfirmed:true,unseenInteriorAdded:false});
+    const bench=group(root,'small-storage-workbench',[b.minX+w*.37,0,b.minZ+.37]);box(bench,'storage-bench-top',[1.45,.05,.62],[0,.8,0],'steel');for(const x of [-.62,.62])for(const z of [-.24,.24])box(bench,'storage-bench-leg',[.04,.77,.04],[x,.385,z],'steel');box(bench,'unlabelled-toolbox',[.6,.22,.36],[0,.935,0],'dark');
+    const boundary=group(details,'closed-gray-service-door',[.8,0,spec.routeSurvey.entryFromStair?.door[1]??-9.235]);boundary.rotation.y=Math.PI/2;Object.assign(boundary.userData,{sourceTimesSeconds:[450,480],destinationUnconfirmed:true,unseenInteriorAdded:false,registrationBasis:'entry-relative room-and-end-door topology; approximate'});
+    box(boundary,'closed-service-corridor-end-wall',[2.1,2.9,.08],[0,1.45,-.05],'wall');
     box(boundary,'fixed-gray-service-door',[.95,2.18,.025],[0,1.11,0],'gray');for(const x of [-.51,.51])box(boundary,'service-door-jamb',[.05,2.27,.05],[x,1.135,0],'trim');box(boundary,'service-door-handle',[.14,.025,.055],[.32,1.0,.055],'steel');box(boundary,'blank-door-notice',[.54,.24,.012],[0,1.72,.022],'paper');box(boundary,'exit-sign',[.45,.14,.045],[0,2.4,0],'green');
     const insect=group(boundary,'violet-wall-insect-trap',[-.9,1.95,.05]);box(insect,'insect-trap-case',[.46,.24,.09],[0,0,0],'dark');for(const y of [-.055,.055])box(insect,'insect-light-tube',[.39,.018,.015],[0,y,.054],'violet');
 
@@ -283,9 +387,12 @@ export function buildDryerRouteEnvironment(s, environment, spec) {
     const overhead=group(environment.ducts,'third-hall-overhead-services');Object.assign(overhead.userData,{sourceTimesSeconds:[590,617,648,720],utilityServiceConfirmed:false,connectsToEquipment:false,unseenConnectionsAdded:false,minimumClearHeight:4.81});
     const ceiling=group(environment.facade,'third-exposed-ceiling-context');ceiling.userData.cutawayWithFacade=true;
     repeats(ceiling,'third-white-ceiling-support-beams',[.16,.2,26.2],[-6,-2,2,6].map(x=>[x,5.86,0]),'white');
+    repeats(ceiling,'third-white-ceiling-cross-beams',[16.8,.3,.23],[-10,-3.5,3.1,9.7].map(z=>[0,5.68,z]),'white');
     box(ceiling,'third-west-longitudinal-support',[1.3,.18,26.2],[-7.45,5.86,0],'white');
-    repeats(ceiling,'third-gray-overhead-panel-strips',[1.025,.035,26.2],Array.from({length:16},(_,i)=>[-7.6875+i*1.025,5.9825,0]),'gray');
+    const panels=repeats(ceiling,'third-gray-overhead-panel-strips',[1.025,.035,26.2],Array.from({length:16},(_,i)=>[-7.6875+i*1.025,5.9825,0]),'gray');panels.material=m.ceilingPanel;
     repeats(ceiling,'third-overhead-panel-seams',[.022,.016,26.2],Array.from({length:33},(_,i)=>[-8.2+i*.5125,5.958,0]),'trim');
+    m.thirdCeilingLight ||=s._material(0xf1f1e7,.7,0,{emissive:0xeceee0,emissiveIntensity:.75});
+    const hallLights=repeats(ceiling,'third-surface-ceiling-light-fixtures',[1.1,.07,.35],[-4,4].flatMap(x=>[-8,-1,6,11.5].map(z=>[x,5.68,z])),'white');hallLights.material=m.thirdCeilingLight;
     const duct=s._mesh(geo('third-open-spiral-duct',()=>new THREE.CylinderGeometry(1,1,1,32,1,true)),m.steel,overhead,[0,5.15,-11.95]);duct.scale.set(.28,15.5,.28);duct.rotation.z=Math.PI/2;duct.name='dryer-route-third-galvanized-open-spiral-duct';
     const turns=15.5/.28,pointCount=Math.ceil(turns*8)+1,points=Array.from({length:pointCount},(_,i)=>{const ratio=i/(pointCount-1),angle=ratio*turns*Math.PI*2;return new THREE.Vector3(-7.75+ratio*15.5,5.15+Math.cos(angle)*.285,-11.95+Math.sin(angle)*.285);});
     const seam=s._mesh(geo('third-spiral-duct-seam',()=>new THREE.TubeGeometry(new THREE.CatmullRomCurve3(points),Math.ceil(turns*16),.006,4,false)),m.trim,overhead);seam.name='dryer-route-third-helical-duct-seam';

@@ -355,8 +355,9 @@ test('the real southeast and northeast stairs support the complete entry–mezza
       scene.view = 'person'; scene._visibility(); scene.scene.updateMatrixWorld(true);
       for (const environment of scene.buildingEnvironments.values()) assert.equal(environment.deck.visible, true, 'all filmed route floors remain visible during the walk');
       const walkLeg = (yaw, distance) => { scene.person.yaw = yaw; scene.setPersonInput('forward', true); walkDistance(scene, distance); scene._stopPerson(); };
-      const climb = (level, id, firstDirection) => {
+      const climb = (level, id) => {
         const spec = FLOORS.find(floor => floor.id === level), core = spec.stairs.find(stair => stair.id === id);
+        const firstDirection=core.startDirection??1;
         const stair = scene.buildingEnvironments.get(level).architectureFixtures.getObjectByName(`dryer-building-${level}-${id}`);
         const spanX = core.bounds.maxX - core.bounds.minX, spanZ = core.bounds.maxZ - core.bounds.minZ;
         const lane = Math.min(1.25, ((core.runAxis === 'x' ? spanZ : spanX) - .25) / 2);
@@ -375,8 +376,8 @@ test('the real southeast and northeast stairs support the complete entry–mezza
         for (let tick = 0; tick < 30; tick++) scene._advancePerson(1 / 60);
         close(scene.person.position[1], spec.elevation + spec.height, `${id} stationary landing support`, .02);
       };
-      climb(1, 'southeast-stair', 1);
-      climb(2, 'northeast-stair', -1);
+      climb(1, 'southeast-stair');
+      climb(2, 'northeast-stair');
       assert.equal(scene.activeFloor, selected, 'walking preserves the selected context instead of resetting the person on each landing');
       for (const level of [1, 2, 3]) {
         scene.activeFloor = level; scene.personSupportCache = null;

@@ -1,0 +1,158 @@
+{
+  "mode": "historical-plan and card-family correspondence; no present survey or exact card-to-plan equipment identification",
+  "columns": [
+    {
+      "position": [
+        10.1506,
+        0,
+        -0.0057
+      ],
+      "width": 0.2058,
+      "depth": 0.4002,
+      "height": 4.5,
+      "section": "I",
+      "pdfPathIndices": [
+        9726,
+        9730
+      ],
+      "source": "2022-05-03 PDF I-column vector outline",
+      "confidence": "historical-plan-geometry; current height unmeasured"
+    },
+    {
+      "position": [
+        4.1494,
+        0,
+        -0.0057
+      ],
+      "width": 0.2058,
+      "depth": 0.4002,
+      "height": 4.5,
+      "section": "I",
+      "pdfPathIndices": [
+        9735,
+        9739
+      ],
+      "source": "2022-05-03 PDF I-column vector outline",
+      "confidence": "historical-plan-geometry; current height unmeasured"
+    },
+    {
+      "position": [
+        -37.8476,
+        0,
+        -19.6057
+      ],
+      "width": 0.2058,
+      "depth": 0.4002,
+      "height": 4.5,
+      "section": "I",
+      "pdfPathIndices": [
+        9850,
+        9854
+      ],
+      "source": "2022-05-03 PDF I-column vector outline",
+      "confidence": "historical-plan-geometry; current height unmeasured"
+    },
+    {
+      "position": [
+        -43.8488,
+        0,
+        -19.6057
+      ],
+      "width": 0.2058,
+      "depth": 0.4002,
+      "height": 4.5,
+      "section": "I",
+      "pdfPathIndices": [
+        9859,
+        9863
+      ],
+      "source": "2022-05-03 PDF I-column vector outline",
+      "confidence": "historical-plan-geometry; current height unmeasured"
+    },
+    {
+      "position": [
+        -49.85,
+        0,
+        -19.6057
+      ],
+      "width": 0.2058,
+      "depth": 0.4002,
+      "height": 4.5,
+      "section": "I",
+      "pdfPathIndices": [
+        9868,
+        9872
+      ],
+      "source": "2022-05-03 PDF I-column vector outline",
+      "confidence": "historical-plan-geometry; current height unmeasured"
+    },
+    {
+      "position": [
+        10.1506,
+        0,
+        19.6057
+      ],
+      "width": 0.2058,
+      "depth": 0.4002,
+      "height": 4.5,
+      "section": "I",
+      "pdfPathIndices": [
+        10031,
+        10033
+      ],
+      "source": "2022-05-03 PDF I-column vector outline",
+      "confidence": "historical-plan-geometry; current height unmeasured"
+    },
+    {
+      "position": [
+        10.1506,
+        0,
+        -19.6057
+      ],
+      "width": 0.2058,
+      "depth": 0.4002,
+      "height": 4.5,
+      "section": "I",
+      "pdfPathIndices": [
+        18721,
+        18725
+      ],
+      "source": "2022-05-03 PDF I-column vector outline",
+      "confidence": "historical-plan-geometry; current height unmeasured"
+    },
+    {
+      "position": [
+        4.1494,
+        0,
+        -19.6057
+      ],
+      "width": 0.2058,
+      "depth": 0.4002,
+      "height": 4.5,
+      "section": "I",
+      "pdfPathIndices": [
+        18731,
+        18799
+      ],
+      "source": "2022-05-03 PDF I-column vector outline",
+      "confidence": "historical-plan-geometry; current height unmeasured"
+    },
+    {
+      "position": [
+        20.4498,
+        0,
+        -0.0057
+      ],
+      "width": 0.2058,
+      "depth": 0.4002,
+      "height": 4.5,
+      "section": "I",
+      "pdfPathIndices": [
+        31324,
+        31328
+      ],
+      "source": "2022-05-03 PDF I-column vector outline",
+      "confidence": "historical-plan-geometry; current height unmeasured"
+    }
+  ]
+}

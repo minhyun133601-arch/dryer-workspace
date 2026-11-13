@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "components": 213,
+  "connections": 175,
+  "unknownLabels": 121,
+  "sha256": "7582626fb03db91a7ab29d3240bc670bfe0411e844a567f1ce99d724bf269dc5",
+  "checks": {
+    "componentIdsUnique": true,
+    "edgeIdsUnique": true,
+    "allEndpointsExist": true,
+    "nodePositionsNormalized": true,
+    "edgePositionsNormalized": true,
+    "questionTagCleared": true,
+    "instrumentsPreserved": true,
+    "cyclonesParallelThree": true,
+    "hoistsTwo": true,
+    "equipmentTable15Occupied": true,
+    "inlineRoutesExist": true,
+    "unknownLabelsPreserved": true,
+    "imageSourceExists": true,
+    "allCropsPresent": true
+  },
+  "frozen": true
+}

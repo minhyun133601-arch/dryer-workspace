@@ -1,0 +1,23 @@
+/* Ordered stylesheet entry point: keep imports in cascade order. */
+@import url("base/tokens.css");
+@import url("components/header.css");
+@import url("base/controls-layout.css");
+@import url("components/inventory.css");
+@import url("components/canvas-layout.css");
+@import url("components/canvas-selection.css");
+@import url("components/canvas-controls.css");
+@import url("components/detail-header.css");
+@import url("components/detail-content.css");
+@import url("components/detail-resources.css");
+@import url("components/footer.css");
+@import url("components/dialogs.css");
+@import url("components/feedback.css");
+@import url("responsive/desktop.css");
+@import url("responsive/tablet.css");
+@import url("responsive/mobile-shell.css");
+@import url("responsive/mobile-canvas.css");
+@import url("responsive/mobile-panels.css");
+@import url("base/reduced-motion.css");
+@import url("components/detail-density.css");
+@import url("components/canvas-fullscreen.css");
+@import url("components/visibility.css");

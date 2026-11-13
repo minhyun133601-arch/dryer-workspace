@@ -33,6 +33,14 @@ test('native538 hopper feeds retain one inclined metal route and one wide flexib
     assert.equal(named(root,'observed-round-drive-motor-fan-cap').length,2);
     assert.equal(named(root,'observed-round-drive-fixed-side-guard').length,4);
     assert.equal(named(root,'observed-covered-transfer-trough').length,3);
+    const lid=named(root,'observed-hopper-sloping-cover')[0],sleeve=named(root,'observed-hopper-wide-flexible-coupling')[0];
+    assert.ok(lid.geometry.parameters.radiusTop<lid.geometry.parameters.radiusBottom*.3,'the hopper roof slopes inward instead of ending in a flat drum cap');
+    assert.ok(sleeve.geometry.parameters.radiusTop>.35,'the pale flexible feed keeps its visibly broad diameter');
+    for(const trough of named(root,'observed-covered-transfer-trough')){
+      const covers=named(trough,'observed-trough-removable-cover');
+      assert.equal(covers.length,3);
+      assert.ok(box(covers[0]).max.x<box(covers[1]).min.x,'the separate removable lids retain visible seams');
+    }
   }finally{h.dispose();}
 });
 
@@ -60,13 +68,19 @@ test('native708 tank necks retain open bores, attached tilted lids, screw latche
     const hinges=named(root,'observed-cip-manhole-lid-hinge'),pins=named(root,'observed-cip-lid-hinge-pin');
     assert.equal(hinges.length,2);
     for(const [i,hinge]of hinges.entries()){
-      assert.ok(Math.abs(hinge.rotation.x)>.8);
+      assert.ok(Math.abs(hinge.rotation.x)>.1&&Math.abs(hinge.rotation.x)<.35,'the filmed lid lies just above the far rim rather than standing almost upright');
       const lid=box(named(hinge,'observed-open-manhole-lid')[0]),pin=pins[i].getWorldPosition(new THREE.Vector3());
       assert.ok(pin.distanceTo(lid.clampPoint(pin,new THREE.Vector3()))<.04,'the open lid remains attached at the rim hinge');
     }
     for(const z of[-1.15,1.15]){
       const ray=new THREE.Raycaster(new THREE.Vector3(item.position[0]+.33,12,item.position[2]+z+.25),new THREE.Vector3(0,-1,0),0,10),hits=ray.intersectObject(root,true);
       assert.ok(hits.length&&hits[0].point.y<item.position[1]+1,'new latches, flanges and hinged lids do not secretly close the manhole');
+    }
+    for(const cap of named(root,'observed-tank-cap-with-open-manhole')){
+      const center=cap.localToWorld(new THREE.Vector3(-.15,0,0)),edge=cap.localToWorld(new THREE.Vector3(-.78,0,0));
+      const cast=p=>new THREE.Raycaster(new THREE.Vector3(p.x,13,p.z),new THREE.Vector3(0,-1,0),0,10).intersectObject(cap)[0].point.y;
+      assert.ok(cast(center)-cast(edge)>.055,'the pierced stainless roof has a broad shallow crown rather than a flat plate');
+      assert.ok(cap.material.metalness>.3&&cap.material.roughness<.4,'large vessel faces retain the observed metallic surface');
     }
   }finally{h.dispose();}
 });

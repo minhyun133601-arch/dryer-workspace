@@ -1,0 +1,46 @@
+{
+  "decks": [
+    {
+      "id": "combustion-fan-replacement",
+      "documentDate": "2026-05-04",
+      "widthPt": 720,
+      "heightPt": 540,
+      "pageCount": 2,
+      "slides": [
+        {
+          "number": 1,
+          "imagePath": "apps/site/assets/documents/dryer-burner/combustion-fan-replacement/slide-001.jpg",
+          "bytes": 500293,
+          "sha256": "8b18edc4bd661d972eb97a8b2db0861248b3ca77030f2f798fc4acf95aed17cb",
+          "width": 1920,
+          "height": 1440
+        },
+        {
+          "number": 2,
+          "imagePath": "apps/site/assets/documents/dryer-burner/combustion-fan-replacement/slide-002.jpg",
+          "bytes": 574330,
+          "sha256": "5c954859a2796ab3b04e4bdf7979ea120a81123c61ea662083800f6d4d9ec5a5",
+          "width": 1920,
+          "height": 1440
+        }
+      ]
+    },
+    {
+      "id": "motor-coil-damage",
+      "documentDate": "2024-12-30",
+      "widthPt": 960,
+      "heightPt": 540,
+      "pageCount": 1,
+      "slides": [
+        {
+          "number": 1,
+          "imagePath": "apps/site/assets/documents/dryer-burner/motor-coil-damage/slide-001.jpg",
+          "bytes": 450055,
+          "sha256": "20488cd0e2d80e88a4974db1585ef598769c19f9861f06e6a4405a10511a4559",
+          "width": 1920,
+          "height": 1080
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,997 @@
+{
+  "output": "C:\\Users\\user\\Desktop\\근거 자료\\최종자료\\건조기 열교환기 시뮬레이터.html",
+  "checks": [
+    {
+      "name": "WebGL rendered",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "model has canvas",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no duplicate IDs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "baseline.Q",
+      "passed": true,
+      "detail": {
+        "actual": 598.8124999999999,
+        "expected": 598.8125
+      }
+    },
+    {
+      "name": "baseline.coldOut",
+      "passed": true,
+      "detail": {
+        "actual": 59,
+        "expected": 59.0
+      }
+    },
+    {
+      "name": "baseline.hotOut",
+      "passed": true,
+      "detail": {
+        "actual": 61.935483870967744,
+        "expected": 61.935483870967744
+      }
+    },
+    {
+      "name": "baseline.gas",
+      "passed": true,
+      "detail": {
+        "actual": 21.449999999999996,
+        "expected": 21.45
+      }
+    },
+    {
+      "name": "baseline.annual",
+      "passed": true,
+      "detail": {
+        "actual": 277991999.99999994,
+        "expected": 277992000.0
+      }
+    },
+    {
+      "name": "baseline.payback",
+      "passed": true,
+      "detail": {
+        "actual": 2.604391493280383,
+        "expected": 2.604391493280382
+      }
+    },
+    {
+      "name": "hot90.Q",
+      "passed": true,
+      "detail": {
+        "actual": 644.8749999999999,
+        "expected": 644.875
+      }
+    },
+    {
+      "name": "hot90.coldOut",
+      "passed": true,
+      "detail": {
+        "actual": 62,
+        "expected": 62.0
+      }
+    },
+    {
+      "name": "hot90.hotOut",
+      "passed": true,
+      "detail": {
+        "actual": 65.16129032258064,
+        "expected": 65.16129032258064
+      }
+    },
+    {
+      "name": "hot90.gas",
+      "passed": true,
+      "detail": {
+        "actual": 23.099999999999994,
+        "expected": 23.1
+      }
+    },
+    {
+      "name": "hot90.annual",
+      "passed": true,
+      "detail": {
+        "actual": 299375999.99999994,
+        "expected": 299376000.0
+      }
+    },
+    {
+      "name": "hot90.payback",
+      "passed": true,
+      "detail": {
+        "actual": 2.4183635294746413,
+        "expected": 2.4183635294746404
+      }
+    },
+    {
+      "name": "cold35.Q",
+      "passed": true,
+      "detail": {
+        "actual": 460.62499999999994,
+        "expected": 460.625
+      }
+    },
+    {
+      "name": "cold35.coldOut",
+      "passed": true,
+      "detail": {
+        "actual": 65,
+        "expected": 65.0
+      }
+    },
+    {
+      "name": "cold35.hotOut",
+      "passed": true,
+      "detail": {
+        "actual": 67.25806451612902,
+        "expected": 67.25806451612904
+      }
+    },
+    {
+      "name": "cold35.gas",
+      "passed": true,
+      "detail": {
+        "actual": 16.499999999999996,
+        "expected": 16.5
+      }
+    },
+    {
+      "name": "cold35.annual",
+      "passed": true,
+      "detail": {
+        "actual": 213839999.99999994,
+        "expected": 213840000.0
+      }
+    },
+    {
+      "name": "cold35.payback",
+      "passed": true,
+      "detail": {
+        "actual": 3.3857089412644976,
+        "expected": 3.3857089412644967
+      }
+    },
+    {
+      "name": "cold0.Q",
+      "passed": true,
+      "detail": {
+        "actual": 783.0624999999999,
+        "expected": 783.0625
+      }
+    },
+    {
+      "name": "cold0.coldOut",
+      "passed": true,
+      "detail": {
+        "actual": 51,
+        "expected": 51.0
+      }
+    },
+    {
+      "name": "cold0.hotOut",
+      "passed": true,
+      "detail": {
+        "actual": 54.83870967741935,
+        "expected": 54.83870967741935
+      }
+    },
+    {
+      "name": "cold0.gas",
+      "passed": true,
+      "detail": {
+        "actual": 28.049999999999994,
+        "expected": 28.05
+      }
+    },
+    {
+      "name": "cold0.annual",
+      "passed": true,
+      "detail": {
+        "actual": 363527999.9999999,
+        "expected": 363528000.0
+      }
+    },
+    {
+      "name": "cold0.payback",
+      "passed": true,
+      "detail": {
+        "actual": 1.9915934948614693,
+        "expected": 1.9915934948614686
+      }
+    },
+    {
+      "name": "effectiveness0.Q",
+      "passed": true,
+      "detail": {
+        "actual": 0,
+        "expected": 0.0
+      }
+    },
+    {
+      "name": "effectiveness0.coldOut",
+      "passed": true,
+      "detail": {
+        "actual": 20,
+        "expected": 20.0
+      }
+    },
+    {
+      "name": "effectiveness0.hotOut",
+      "passed": true,
+      "detail": {
+        "actual": 85,
+        "expected": 85.0
+      }
+    },
+    {
+      "name": "effectiveness0.gas",
+      "passed": true,
+      "detail": {
+        "actual": 0,
+        "expected": 0.0
+      }
+    },
+    {
+      "name": "effectiveness0.annual",
+      "passed": true,
+      "detail": {
+        "actual": 0,
+        "expected": 0.0
+      }
+    },
+    {
+      "name": "effectiveness0.payback",
+      "passed": true,
+      "detail": {
+        "actual": null,
+        "expected": null
+      }
+    },
+    {
+      "name": "effectiveness1.Q",
+      "passed": true,
+      "detail": {
+        "actual": 998.0208333333331,
+        "expected": 998.0208333333334
+      }
+    },
+    {
+      "name": "effectiveness1.coldOut",
+      "passed": true,
+      "detail": {
+        "actual": 85,
+        "expected": 85.0
+      }
+    },
+    {
+      "name": "effectiveness1.hotOut",
+      "passed": true,
+      "detail": {
+        "actual": 46.55913978494624,
+        "expected": 46.55913978494624
+      }
+    },
+    {
+      "name": "effectiveness1.gas",
+      "passed": true,
+      "detail": {
+        "actual": 35.74999999999999,
+        "expected": 35.75
+      }
+    },
+    {
+      "name": "effectiveness1.annual",
+      "passed": true,
+      "detail": {
+        "actual": 463319999.9999999,
+        "expected": 463320000.0
+      }
+    },
+    {
+      "name": "effectiveness1.payback",
+      "passed": true,
+      "detail": {
+        "actual": 1.5626348959682297,
+        "expected": 1.5626348959682292
+      }
+    },
+    {
+      "name": "coldMassDouble.Q",
+      "passed": true,
+      "detail": {
+        "actual": 1012.5374999999998,
+        "expected": 1012.5375
+      }
+    },
+    {
+      "name": "coldMassDouble.coldOut",
+      "passed": true,
+      "detail": {
+        "actual": 52.97272727272727,
+        "expected": 52.972727272727276
+      }
+    },
+    {
+      "name": "coldMassDouble.hotOut",
+      "passed": true,
+      "detail": {
+        "actual": 46,
+        "expected": 46.0
+      }
+    },
+    {
+      "name": "coldMassDouble.gas",
+      "passed": true,
+      "detail": {
+        "actual": 36.269999999999996,
+        "expected": 36.27
+      }
+    },
+    {
+      "name": "coldMassDouble.annual",
+      "passed": true,
+      "detail": {
+        "actual": 470059199.99999994,
+        "expected": 470059200.0
+      }
+    },
+    {
+      "name": "coldMassDouble.payback",
+      "passed": true,
+      "detail": {
+        "actual": 1.5402315282840973,
+        "expected": 1.540231528284097
+      }
+    },
+    {
+      "name": "coldMassHalf.Q",
+      "passed": true,
+      "detail": {
+        "actual": 299.40624999999994,
+        "expected": 299.40625
+      }
+    },
+    {
+      "name": "coldMassHalf.coldOut",
+      "passed": true,
+      "detail": {
+        "actual": 59,
+        "expected": 59.0
+      }
+    },
+    {
+      "name": "coldMassHalf.hotOut",
+      "passed": true,
+      "detail": {
+        "actual": 73.46774193548387,
+        "expected": 73.46774193548387
+      }
+    },
+    {
+      "name": "coldMassHalf.gas",
+      "passed": true,
+      "detail": {
+        "actual": 10.724999999999998,
+        "expected": 10.725
+      }
+    },
+    {
+      "name": "coldMassHalf.annual",
+      "passed": true,
+      "detail": {
+        "actual": 138995999.99999997,
+        "expected": 138996000.0
+      }
+    },
+    {
+      "name": "coldMassHalf.payback",
+      "passed": true,
+      "detail": {
+        "actual": 5.208782986560766,
+        "expected": 5.208782986560764
+      }
+    },
+    {
+      "name": "hotMassHalf.Q",
+      "passed": true,
+      "detail": {
+        "actual": 506.2687499999999,
+        "expected": 506.26875
+      }
+    },
+    {
+      "name": "hotMassHalf.coldOut",
+      "passed": true,
+      "detail": {
+        "actual": 52.97272727272727,
+        "expected": 52.972727272727276
+      }
+    },
+    {
+      "name": "hotMassHalf.hotOut",
+      "passed": true,
+      "detail": {
+        "actual": 46,
+        "expected": 46.0
+      }
+    },
+    {
+      "name": "hotMassHalf.gas",
+      "passed": true,
+      "detail": {
+        "actual": 18.134999999999998,
+        "expected": 18.135
+      }
+    },
+    {
+      "name": "hotMassHalf.annual",
+      "passed": true,
+      "detail": {
+        "actual": 235029599.99999997,
+        "expected": 235029600.0
+      }
+    },
+    {
+      "name": "hotMassHalf.payback",
+      "passed": true,
+      "detail": {
+        "actual": 3.0804630565681945,
+        "expected": 3.080463056568194
+      }
+    },
+    {
+      "name": "bothMassHalf.Q",
+      "passed": true,
+      "detail": {
+        "actual": 299.40624999999994,
+        "expected": 299.40625
+      }
+    },
+    {
+      "name": "bothMassHalf.coldOut",
+      "passed": true,
+      "detail": {
+        "actual": 59,
+        "expected": 59.0
+      }
+    },
+    {
+      "name": "bothMassHalf.hotOut",
+      "passed": true,
+      "detail": {
+        "actual": 61.935483870967744,
+        "expected": 61.935483870967744
+      }
+    },
+    {
+      "name": "bothMassHalf.gas",
+      "passed": true,
+      "detail": {
+        "actual": 10.724999999999998,
+        "expected": 10.725
+      }
+    },
+    {
+      "name": "bothMassHalf.annual",
+      "passed": true,
+      "detail": {
+        "actual": 138995999.99999997,
+        "expected": 138996000.0
+      }
+    },
+    {
+      "name": "bothMassHalf.payback",
+      "passed": true,
+      "detail": {
+        "actual": 5.208782986560766,
+        "expected": 5.208782986560764
+      }
+    },
+    {
+      "name": "equalMass.Q",
+      "passed": true,
+      "detail": {
+        "actual": 598.8124999999999,
+        "expected": 598.8125
+      }
+    },
+    {
+      "name": "equalMass.coldOut",
+      "passed": true,
+      "detail": {
+        "actual": 59,
+        "expected": 59.0
+      }
+    },
+    {
+      "name": "equalMass.hotOut",
+      "passed": true,
+      "detail": {
+        "actual": 46,
+        "expected": 46.0
+      }
+    },
+    {
+      "name": "equalMass.gas",
+      "passed": true,
+      "detail": {
+        "actual": 21.449999999999996,
+        "expected": 21.45
+      }
+    },
+    {
+      "name": "equalMass.annual",
+      "passed": true,
+      "detail": {
+        "actual": 277991999.99999994,
+        "expected": 277992000.0
+      }
+    },
+    {
+      "name": "equalMass.payback",
+      "passed": true,
+      "detail": {
+        "actual": 2.604391493280383,
+        "expected": 2.604391493280382
+      }
+    },
+    {
+      "name": "sameInletTemperature.Q",
+      "passed": true,
+      "detail": {
+        "actual": 0,
+        "expected": 0.0
+      }
+    },
+    {
+      "name": "sameInletTemperature.coldOut",
+      "passed": true,
+      "detail": {
+        "actual": 20,
+        "expected": 20.0
+      }
+    },
+    {
+      "name": "sameInletTemperature.hotOut",
+      "passed": true,
+      "detail": {
+        "actual": 20,
+        "expected": 20.0
+      }
+    },
+    {
+      "name": "sameInletTemperature.gas",
+      "passed": true,
+      "detail": {
+        "actual": 0,
+        "expected": 0.0
+      }
+    },
+    {
+      "name": "sameInletTemperature.annual",
+      "passed": true,
+      "detail": {
+        "actual": 0,
+        "expected": 0.0
+      }
+    },
+    {
+      "name": "sameInletTemperature.payback",
+      "passed": true,
+      "detail": {
+        "actual": null,
+        "expected": null
+      }
+    },
+    {
+      "name": "reverseTemperature.Q",
+      "passed": true,
+      "detail": {
+        "actual": 0,
+        "expected": 0.0
+      }
+    },
+    {
+      "name": "reverseTemperature.coldOut",
+      "passed": true,
+      "detail": {
+        "actual": 40,
+        "expected": 40.0
+      }
+    },
+    {
+      "name": "reverseTemperature.hotOut",
+      "passed": true,
+      "detail": {
+        "actual": 20,
+        "expected": 20.0
+      }
+    },
+    {
+      "name": "reverseTemperature.gas",
+      "passed": true,
+      "detail": {
+        "actual": 0,
+        "expected": 0.0
+      }
+    },
+    {
+      "name": "reverseTemperature.annual",
+      "passed": true,
+      "detail": {
+        "actual": 0,
+        "expected": 0.0
+      }
+    },
+    {
+      "name": "reverseTemperature.payback",
+      "passed": true,
+      "detail": {
+        "actual": null,
+        "expected": null
+      }
+    },
+    {
+      "name": "zeroOperatingDays.Q",
+      "passed": true,
+      "detail": {
+        "actual": 598.8124999999999,
+        "expected": 598.8125
+      }
+    },
+    {
+      "name": "zeroOperatingDays.coldOut",
+      "passed": true,
+      "detail": {
+        "actual": 59,
+        "expected": 59.0
+      }
+    },
+    {
+      "name": "zeroOperatingDays.hotOut",
+      "passed": true,
+      "detail": {
+        "actual": 61.935483870967744,
+        "expected": 61.935483870967744
+      }
+    },
+    {
+      "name": "zeroOperatingDays.gas",
+      "passed": true,
+      "detail": {
+        "actual": 21.449999999999996,
+        "expected": 21.45
+      }
+    },
+    {
+      "name": "zeroOperatingDays.annual",
+      "passed": true,
+      "detail": {
+        "actual": 0,
+        "expected": 0.0
+      }
+    },
+    {
+      "name": "zeroOperatingDays.payback",
+      "passed": true,
+      "detail": {
+        "actual": null,
+        "expected": null
+      }
+    },
+    {
+      "name": "zeroGasPrice.Q",
+      "passed": true,
+      "detail": {
+        "actual": 598.8124999999999,
+        "expected": 598.8125
+      }
+    },
+    {
+      "name": "zeroGasPrice.coldOut",
+      "passed": true,
+      "detail": {
+        "actual": 59,
+        "expected": 59.0
+      }
+    },
+    {
+      "name": "zeroGasPrice.hotOut",
+      "passed": true,
+      "detail": {
+        "actual": 61.935483870967744,
+        "expected": 61.935483870967744
+      }
+    },
+    {
+      "name": "zeroGasPrice.gas",
+      "passed": true,
+      "detail": {
+        "actual": 21.449999999999996,
+        "expected": 21.45
+      }
+    },
+    {
+      "name": "zeroGasPrice.annual",
+      "passed": true,
+      "detail": {
+        "actual": 0,
+        "expected": 0.0
+      }
+    },
+    {
+      "name": "zeroGasPrice.payback",
+      "passed": true,
+      "detail": {
+        "actual": null,
+        "expected": null
+      }
+    },
+    {
+      "name": "baseline financial visible",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "baseline payback visible",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "blank rejected",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "effectiveness out of range rejected",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "zero mass rejected",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "net scenario",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "net payback",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown power stays unknown",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "camera rotates with drag",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "camera reset",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "component picking",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source locator shown",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "smooth focus heat",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "smooth focus exhaust",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "smooth focus supply",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report mode opens",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report hides controls",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report retains financial inputs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "investment in first card",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tour starts",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tour enters report mode",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tour pauses",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tour step 1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tour keeps inputs 1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tour step 2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tour keeps inputs 2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tour step 3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tour keeps inputs 3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tour step 4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tour keeps inputs 4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tour previous",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tour resumes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tour escape",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tour retains all custom values",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source tab install",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source tab front",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source tab plan",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source tab pid",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source image expands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop first-screen results",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "compact first-screen results",
+      "passed": true,
+      "detail": "{'x': 24, 'y': 530.0625, 'width': 1318, 'height': 123}"
+    },
+    {
+      "name": "mobile no global overflow",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "original 문서 본문.pdf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "original 열교환기 설치도.pptx",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "original 열회수장치 설치 정면도.pdf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "original 열회수장치 제작 스케줄.xlsx",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "original 열회수장치 제작설치 견적서 2025.09.10.pdf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "original 열회수장치설치 평면도.pdf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "original 온도근거 산출도.xls",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "JavaScript errors",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "name": "no outside requests",
+      "passed": true,
+      "detail": "[]"
+    }
+  ],
+  "errors": [],
+  "outsideRequests": []
+}

@@ -244,6 +244,7 @@ export function buildDryerBuildingEnvironment(s, options = {}) {
     Object.assign(stairRoot.userData, { architecturalFixture: true, fromY: elevation, toY: elevation + spec.height, geometryBasis: core.geometryBasis, stepsRepresentative: true,currentVideoReference:!!core.observed,sourceTimes:core.sourceTimes || [] });
     const flights = core.flights || (spec.height > 4.5 ? 4 : 2), lane = Math.min(1.25, (width - .25) / (flights === 1 ? 1 : 2)), run = Math.max(1.8, Math.min(flights === 1 ? 10 : 4, depth - 1.7)), count = Math.ceil(spec.height / flights / .18);
     const steel=m.trim,handrail=s.dryerBuildingHandrail ||= s._material(0x936739,.65,.05);
+    const treadMaterial=core.id==='northeast-stair'&&core.observed?(s.dryerStairTerrazzo ||=s._material(0xcbd0c1,.9,.02)):steel;
     const rail=(a,b,radius=.025,material=steel,name='architectural-stair-handrail')=>{
       const start=new THREE.Vector3(...a),end=new THREE.Vector3(...b),delta=end.clone().sub(start);
       const value=mesh(stairRoot,geometry(`stair-rail:${radius}:${delta.length()}`,()=>new THREE.CylinderGeometry(radius,radius,delta.length(),10)),material,start.add(end).multiplyScalar(.5).toArray());
@@ -251,18 +252,18 @@ export function buildDryerBuildingEnvironment(s, options = {}) {
     };
     const landingWidth=lane*(flights===1?1:2)+.2;
     const firstDirection=core.startDirection ?? 1;
-    const lowerLanding=box(stairRoot,[landingWidth,.1,.9],[0,-.05,-firstDirection*(run/2+.45)],steel);
+    const lowerLanding=box(stairRoot,[landingWidth,.1,.9],[0,-.05,-firstDirection*(run/2+.45)],treadMaterial);
     lowerLanding.name='architectural-stair-landing';
     for (let flight = 0; flight < flights; flight++) {
       const direction = (flight % 2 ? -1 : 1)*firstDirection, x = flights === 1 ? 0 : flight % 2 ? lane / 2 + .06 : -lane / 2 - .06;
       const y0=spec.height/flights*flight,rise=spec.height/flights;
       for (let index = 0; index < count; index++) {
         const y = spec.height / flights * (flight + (index + 1) / count), z = direction * (-run / 2 + (index + .5) * run / count);
-        const tread=box(stairRoot,[lane,.075,run/count+.025],[x,y-.0375,z],steel);tread.name='architectural-stair-tread';
-        const riser=box(stairRoot,[lane,rise/count,.035],[x,y-rise/count/2,direction*(-run/2+index*run/count)],steel);riser.name='architectural-stair-riser';
+        const tread=box(stairRoot,[lane,.075,run/count+.025],[x,y-.0375,z],treadMaterial);tread.name='architectural-stair-tread';
+        const riser=box(stairRoot,[lane,rise/count,.035],[x,y-rise/count/2,direction*(-run/2+index*run/count)],treadMaterial);riser.name='architectural-stair-riser';
         if(core.observed){const nosing=box(stairRoot,[lane,.009,.045],[x,y+.0045,direction*(-run/2+index*run/count+.0225)],m.dark);nosing.name='architectural-stair-nosing';}
       }
-      const landing=box(stairRoot,[landingWidth,.1,.8],[0,y0+rise-.05,direction*(run/2+.4)],steel);landing.name='architectural-stair-landing';
+      const landing=box(stairRoot,[landingWidth,.1,.8],[0,y0+rise-.05,direction*(run/2+.4)],treadMaterial);landing.name='architectural-stair-landing';
       for(const side of [-1,1]) {
         const edge=x+side*(lane/2-.035);
         rail([edge,y0+1,-direction*run/2],[edge,y0+rise+1,direction*run/2],.035,core.id==='southeast-stair'?handrail:steel);
@@ -273,7 +274,9 @@ export function buildDryerBuildingEnvironment(s, options = {}) {
       }
       // Open return landing: the crossing between lanes remains clear.
       const endZ=direction*(run/2+.77);
-      rail([-landingWidth/2,y0+rise+1,endZ],[landingWidth/2,y0+rise+1,endZ],.03,core.id==='southeast-stair'?handrail:steel);
+      // The observed upper return lands directly at a doorway. A rail across
+      // that final edge would physically block the filmed exit.
+      if(!(core.id==='northeast-stair'&&core.observed&&flight===flights-1))rail([-landingWidth/2,y0+rise+1,endZ],[landingWidth/2,y0+rise+1,endZ],.03,core.id==='southeast-stair'?handrail:steel);
       for(const side of [-1,1])rail([side*landingWidth/2,y0+rise,endZ],[side*landingWidth/2,y0+rise+1,endZ],.02,steel,'architectural-stair-baluster');
     }
     return stairRoot;

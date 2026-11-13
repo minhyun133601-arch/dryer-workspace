@@ -12,6 +12,13 @@ const cores = Object.freeze({
   northEastStair: { id: 'northeast-stair', name: '북동측 계단실', bounds: northEastBay, drawingLabel: 'UP/DN', geometryBasis: 'plan-proportion; tread count representative' },
   elevator: { id: 'north-elevator', name: 'ELEV', bounds: rectangle(13.6, 17.2, 0, 3.2), geometryBasis: 'plan-proportion; no invented car or mechanism' },
 });
+// The video establishes a window-facing first flight, a 180-degree return,
+// and a perforated door straight ahead of the upper flight. Register that
+// topology east-west inside the architectural north-east stair bay; compass
+// orientation and the bay dimensions remain drawing-proportion estimates.
+const upperStairBounds = Object.freeze({...northEastBay,minZ:-10.4});
+const upperStairLowerDoor = [8.6, -7.865], upperStairUpperDoor = [8.6, -9.235];
+const observedUpperStair = Object.freeze({...cores.northEastStair,bounds:upperStairBounds,runAxis:'x',startDirection:1,flights:2,observed:true,sourceTimes:[414,418,420,426,434,438,440,443],geometryBasis:'20261112 observed window-return-door topology; approximate registration in south part of northeast architectural bay, clear of historical ELEV shaft'});
 const lowWingStairs = [
   { id: 'southwest-stair', name: '계단-2', bounds: rectangle(3.2, 9.3, 31.8, 35), runAxis: 'x', geometryBasis: 'A013/A014 plan-proportion; tread count representative' },
   { id: 'southeast-stair', name: '계단-1', bounds: rectangle(36.8, 43, 31.8, 35), runAxis: 'x', geometryBasis: 'A013/A014 plan-proportion; tread count representative' },
@@ -124,7 +131,6 @@ export const DRYER_BUILDING_FLOORS = Object.freeze({
       { side: 'east', offset: 31, width: 2.6, height: 2.65, label: '1팀 2파트 출입구', doorKind:'custom' },
       { side:'east',offset:33.4,width:1.1,sill:.65,height:2.4,doorKind:'none',label:'계단 황색창' },
       ...mezzanineWindows.map(window=>({...window,sill:3.9})),
-      {side:'north',offset:19.6,width:3.1,sill:3.6,height:3.25,doorKind:'none',label:'3층 연결 계단 세로창'},
     ],
   })),
   2: Object.freeze(basic(2, 3.8, 3.5, {
@@ -135,11 +141,12 @@ export const DRYER_BUILDING_FLOORS = Object.freeze({
     personStart:{position:[28.8,3.8,19.3],yaw:Math.PI/2},
     routeSurvey:{source:'dryer-entrance-mezzanine-20261112',sourceTimes:[150,162,174,198,216,222,246,282,298,314,330,348,376,414],drawingPolicy:'reference-only',
       topology:['입구 계단 상부','탈의실','조제실 관찰창','외포장 관찰 통로','OP실','3층 계단'],
-      route:[[28.8,19.3],[28.8,18.075],[30.4,18.075],[27.5,19.4],[16,19.4],[0,19.4],[-7,16],[-7,9],[-8,2.5],[-8,-7.5],[10.3,-7.5]],
+      route:[[28.8,19.3],[28.8,18.075],[30.4,18.075],[27.5,19.4],[16,19.4],[0,19.4],[-7,16],[-7,9],[-8,2.5],[-8,-7.5],[8,-7.5],[8,-7.865],[9.1,-7.865]],
       dimensionsMeasured:false, axesConfirmed:false, observedStairIds:['northeast-stair'],
       exteriorWindows:mezzanineWindows,
       dressingRoom:{bounds:rectangle(36.9,41.2,27.4,31.1),door:[30.4,17.7],width:.95,sourceTimes:[162,168,174,180],genderConfirmed:false},
       opRoom:{bounds:rectangle(3.2,9.3,16.5,26.8),door:[-5.4,9.1],width:1.05,sourceTimes:[298,304,314,330,348,362]},
+      upperStair:{bounds:upperStairBounds,lowerDoor:upperStairLowerDoor,upperDoor:upperStairUpperDoor,window:{side:'east',position:[13.4,-8.55],width:3.5,sill:.65,height:4.1},sourceTimes:[414,418,420,426,434,438,440,443],topology:'enclosed stair; window-facing first flight; half-turn; upper perforated door straight ahead',compassOrientationConfirmed:false,dimensionsMeasured:false},
     },
     slabs: [full],
     // Inset traces preserve the narrow structural/circulation strips between
@@ -148,13 +155,13 @@ export const DRYER_BUILDING_FLOORS = Object.freeze({
       rectangle(9.4, 22.1, 16.7, 31.7), rectangle(3.3, 9.1, 27, 31.7),
       rectangle(30.9, 42.85, .15, 9.6), rectangle(25.2, 42.85, 10, 17.8), rectangle(25.2, 36.6, 18.2, 31.7),
       {minX:29.3,maxX:34.2,minZ:18.45,maxZ:21.5}],
-    slabPatches:[rectangle(13.6,22,0,3.4),{minX:-5.4,maxX:13.4,minZ:-8.4,maxZ:-6.7}],
+    slabPatches:[rectangle(13.6,22,0,3.4),{minX:-5.4,maxX:13.4,minZ:-8.4,maxZ:-6.7},{minX:7.55,maxX:9.35,minZ:-8.5,maxZ:-6.7}],
     rooms:[room('west-dry-walkway','생산 관찰 통로',0,3.2,6.7,31.8,{positionBasis:'current-continuous-walk'}),
       room('op','OP실',3.2,9.3,16.5,26.8,{positionBasis:'current-video-room-use; approximate-registration'}),
       room('dressing','탈의실 · 탈의장',36.9,41.2,27.4,31.1,{positionBasis:'current-video-room-use; approximate-registration',sourceTimes:[162,174]})],
     partitions:[],
-    stairs:[{...cores.northEastStair,startDirection:-1,observed:true,sourceTimes:[414,420,426,436,440]}],
-    roofZones:[],openings:[...mezzanineWindows.map(window=>({...window,sill:.4})),{side:'north',offset:19.6,width:3.1,sill:.1,height:3.25,doorKind:'none',label:'3층 연결 계단 세로창'}],
+    stairs:[observedUpperStair],
+    roofZones:[],openings:[...mezzanineWindows.map(window=>({...window,sill:.4}))],
   })),
   3: Object.freeze(basic(3, 7.3, 6, {
     name:'3층 · 축소된 설비 홀',shortName:'축소된 설비 홀',
@@ -162,20 +169,22 @@ export const DRYER_BUILDING_FLOORS = Object.freeze({
     summary:'계단 벽의 3F 표시를 지나면 1·1.5층보다 작은 타워 설비 홀로 들어갑니다. 황색 유리 구획과 원추 호퍼 2기, 하부 이송부·탱크·펌프·판형 장치·상부 탱크 작업대를 촬영 순서로 대조했습니다. 동·남측 저층 지붕은 실내 바닥과 구분합니다. 구도면만의 수조·콤프레샤실은 현재 모델에 확정 배치하지 않습니다.',
     positionConfidence:'video-observed-room-sequence; historical-dimensions-retained-as-reference',
     source:'2026-11-12 연속 촬영 414–724초; 440초 3F 표기',
-    personStart:{position:[7.7,7.3,-7.65],yaw:Math.PI/2},
+    personStart:{position:[7.7,7.3,-9.235],yaw:-Math.PI/2},
     routeSurvey:{source:'dryer-entrance-mezzanine-20261112',sourceTimes:[440,450,466,502,520,538,554,586,612,648,686,704,724],drawingPolicy:'reference-only',
       smallerFloorPlateConfirmed:true,dimensionsMeasured:false,axesConfirmed:false,
-      glazedEnclosure:{minX:2.5,maxX:6.8,minZ:-10.1,maxZ:-5.2},
+      glazedEnclosure:{minX:2.5,maxX:6.8,minZ:-8.6,maxZ:-5.2},
+      storageDoor:{position:[5.8,-8.6],side:'north',registrationBasis:'entry-relative topology; not a compass survey'},
       exteriorWindowBands:thirdFloorWindowBands,
       ibcRow:[[-5.8,-10.5],[-3.9,-10.5],[-2.0,-10.5]],
       drainSegments:[{a:[1.4,-4.5],b:[1.4,10.5],width:.18},{a:[-6,10.7],b:[1.4,10.7],width:.18}],
       shutter:{position:[3.3,13.4],width:2.3,height:2.7,sourceTimes:[567],interiorUnconfirmed:true},
-      route:[[7.7,-7.65],[7.7,-3.4],[.8,-3.4],[.8,3],[1,10.6],[-3.5,10.6]]},
+      entryFromStair:{door:upperStairUpperDoor,sourceTimes:[434,438,440,443,450],positionMeasured:false},
+      route:[[7.7,-9.235],[1.5,-9.235],[1.5,-3.4],[.8,-3.4],[.8,3],[1,10.6],[-3.5,10.6]]},
     slabs: [main, northEastBay], voids: [],
-    slabOpenings:[{bounds:northEastBay,holes:[{minX:9.0,maxX:13.1,minZ:-13.15,maxZ:-8.1}]}],
+    slabOpenings:[{bounds:northEastBay,holes:[{minX:9.35,maxX:13.31,minZ:-10.1,maxZ:-7.0}]}],
     roofZones: [rectangle(17.2, 43, 6.7, 35), rectangle(0, 17.2, 26.8, 35), rectangle(22, 43, 0, 6.7)],
     rooms:[room('factory','3층 설비 홀',0,17.2,6.7,26.8,{positionBasis:'current-video; reduced-envelope-proportion'})],
-    partitions:[],openings:[{side:'east',offset:5.75,width:1.2,height:2.3,label:'3층 계단 출입문',doorStyle:'perforated'},...thirdFloorWindowBands,{side:'south',offset:11.9,width:2.3,height:2.7,doorKind:'custom',label:'3층 회색 셔터'}],
+    partitions:[],openings:[{side:'east',offset:4.165,width:1.2,height:2.3,label:'3층 계단 출입문',doorStyle:'perforated'},...thirdFloorWindowBands,{side:'south',offset:11.9,width:2.3,height:2.7,doorKind:'custom',label:'3층 회색 셔터'}],
     archivedDrawingFixtures: [
       { id: 'historical-roof-tank-a', name: '도면상 옥상수조 A · 30ton 표기 · 현재 미확인', type: 'reference-water-tank', position: point(27.8, 21.5), width: 5.6, depth: 3.2, height: 1.8 },
       { id: 'historical-roof-tank-b', name: '도면상 옥상수조 B · 30ton 표기 · 현재 미확인', type: 'reference-water-tank', position: point(27.8, 29.4), width: 5.6, depth: 3.2, height: 1.8 },

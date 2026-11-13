@@ -1,0 +1,17 @@
+{
+  "output": "C:\\Users\\user\\Desktop\\근거 자료\\최종자료\\건조기 열교환기 시뮬레이터.html",
+  "bytes": 14885936,
+  "sha256": "0b7809ce3ff34a3c411b60e82342e41b5de4ac9734b6e399697d7291ddbf4c10",
+  "library": "three.js 0.160.1 / MIT",
+  "librarySHA256": "170c6789f43217c96b3170f4b42fafe135de7f7cd48497a4218f9757ee1d49fa",
+  "model": "front/plan source-aligned explanatory recreation; not surveyed or fabrication CAD",
+  "surveyItems": 33,
+  "surveyDucts": 7,
+  "pidNodes": 213,
+  "pidConnections": 175,
+  "sourceLinkedPID": 16,
+  "separateConceptEquipment": 49,
+  "conceptLayout": "display arrangement only; physical positions and dimensions unknown",
+  "originalDownloads": 7,
+  "builder": "python build_oneglance_3d.py [--root ROOT]"
+}

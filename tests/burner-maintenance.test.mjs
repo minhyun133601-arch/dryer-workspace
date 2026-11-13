@@ -9,16 +9,6 @@ import { isRetainedEvidenceImage } from '../apps/site/evidence-assets.js';
 
 const root = new URL('../', import.meta.url);
 const digest = bytes => createHash('sha256').update(bytes).digest('hex');
-const originalSources = {
-  'combustion-fan-replacement': {
-    bytes: 9809920, pages: 2,
-    sha256: 'bbfb33821cdcc3d49b0853acaed31aebfe2d39056073c3a542141ddcb2fea076',
-  },
-  'motor-coil-damage': {
-    bytes: 1066304, pages: 1,
-    sha256: '8b33cd39947c6b75c17f8232159a5195bd4e08a7f8dd39a86b776577619daa72',
-  },
-};
 
 function jpegDimensions(bytes) {
   assert.equal(bytes.readUInt16BE(0), 0xffd8, 'slide export is a JPEG');
@@ -34,22 +24,16 @@ function jpegDimensions(bytes) {
   assert.fail('JPEG has no supported frame dimensions');
 }
 
-test('both original burner decks and all three displayed pages preserve their source bytes, sequence and native aspect ratios', async () => {
-  const manifest = JSON.parse(await readFile(new URL('references/dryer-burner-maintenance-20261112/manifest.json', root), 'utf8'));
-  assert.deepEqual(BURNER_MAINTENANCE_DOCUMENTS.map(record => record.id), Object.keys(originalSources));
+test('all three displayed burner pages preserve their registered bytes, sequence and native aspect ratios', async () => {
+  const manifest = JSON.parse(await readFile(new URL('./fixtures/evidence/burner-pages.json', import.meta.url), 'utf8'));
+  assert.deepEqual(BURNER_MAINTENANCE_DOCUMENTS.map(record => record.id), manifest.decks.map(deck => deck.id));
   assert.equal(manifest.decks.length, 2);
   const registered = new Set(SITE_ASSETS.map(asset => asset.path));
   let pageCount = 0;
   for (const record of BURNER_MAINTENANCE_DOCUMENTS) {
-    const deck = manifest.decks.find(entry => entry.id === record.id), expected = originalSources[record.id];
+    const deck = manifest.decks.find(entry => entry.id === record.id);
     assert.ok(deck, record.id);
-    const source = await readFile(new URL(deck.currentPath, root));
-    assert.equal(source.length, expected.bytes, deck.originalName);
-    assert.equal(digest(source), expected.sha256, deck.originalName);
-    assert.equal(deck.sha256, expected.sha256);
-    assert.equal(deck.bytes, expected.bytes);
-    assert.equal(deck.pageCount, expected.pages);
-    assert.equal(record.slides.length, expected.pages);
+    assert.equal(record.slides.length, deck.pageCount);
     assert.equal(record.date.replaceAll('.', '-'), deck.documentDate);
     for (const [index, slide] of record.slides.entries()) {
       const original = deck.slides[index];

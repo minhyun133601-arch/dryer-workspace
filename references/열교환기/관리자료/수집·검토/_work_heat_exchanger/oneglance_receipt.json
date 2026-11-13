@@ -1,0 +1,81 @@
+{
+  "output": "C:/Users/user/Desktop/근거 자료/열교환기 한눈에.html",
+  "bytes": 5224847,
+  "drawings": [
+    {
+      "id": "install",
+      "label": "설치 개요",
+      "title": "5층 열교환기 → 4층 송풍기",
+      "caption": "열교환기 설치도.pptx · 슬라이드 2 도면 부분 · 원문의 붉은 원·연결선"
+    },
+    {
+      "id": "front",
+      "label": "정면도",
+      "title": "열회수장치 설치 정면도",
+      "caption": "열회수장치 설치 정면도.pdf · 1쪽 · 계획도면"
+    },
+    {
+      "id": "plan",
+      "label": "평면도",
+      "title": "열회수장치 설치 평면도",
+      "caption": "열회수장치설치 평면도.pdf · 1쪽 · 계획도면"
+    },
+    {
+      "id": "pid",
+      "label": "기존 배관도",
+      "title": "기존 건조기 P&ID",
+      "caption": "열교환기 설치도.pptx · 슬라이드 2 삽입 P&ID · 기존 설비 참고"
+    }
+  ],
+  "files": [
+    {
+      "id": "0",
+      "name": "문서 본문.pdf",
+      "size": 265992,
+      "mime": "application/pdf",
+      "sha256": "95fd227a78b6d2afef3d72859dee900016c9d1df733bc292a314db77ad3b7be2"
+    },
+    {
+      "id": "1",
+      "name": "열교환기 설치도.pptx",
+      "size": 1308596,
+      "mime": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "sha256": "6fb84e239f126df1e56c21135d1312586b52491d6c45e4168e925052a0b19137"
+    },
+    {
+      "id": "2",
+      "name": "열회수장치 설치 정면도.pdf",
+      "size": 206448,
+      "mime": "application/pdf",
+      "sha256": "8d910505a28cd714a5cb025b79052dc93cfbfc70ffaa123f40ff38bfdd1ff51c"
+    },
+    {
+      "id": "3",
+      "name": "열회수장치 제작 스케줄.xlsx",
+      "size": 21603,
+      "mime": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "sha256": "36b4f946732c0a19eb318fe88d1101655837fa6a04f73e7203e241433afe897b"
+    },
+    {
+      "id": "4",
+      "name": "열회수장치 제작설치 견적서 2025.09.10.pdf",
+      "size": 222496,
+      "mime": "application/pdf",
+      "sha256": "be6f646eb9c64e691251e6e8323193249fddd6e34c5d7c440b25f1d192791beb"
+    },
+    {
+      "id": "5",
+      "name": "열회수장치설치 평면도.pdf",
+      "size": 150542,
+      "mime": "application/pdf",
+      "sha256": "0baded04e8573181b9e76d85f65084df8937feece52ba80452c2c1e868ad2779"
+    },
+    {
+      "id": "6",
+      "name": "온도근거 산출도.xls",
+      "size": 47616,
+      "mime": "application/vnd.ms-excel",
+      "sha256": "fa13b7a87b5dcb343c6025d2f4eb43a9299fcec2f6c1570826efa8bd5afbff50"
+    }
+  ]
+}

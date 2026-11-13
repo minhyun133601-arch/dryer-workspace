@@ -1,0 +1,76 @@
+/* Keep both resource actions visible in the single-screen desktop layout. */
+@media (min-width: 1061px) {
+  .detail-top {
+    padding: 16px 19px 12px;
+  }
+
+  .detail-caption {
+    margin-bottom: 10px;
+  }
+
+  .detail-status {
+    margin-top: 8px;
+  }
+
+  .part-photo {
+    height: 100px;
+  }
+
+  .info-tabs {
+    margin-top: 12px;
+  }
+
+  .spec-row {
+    padding: 8px 0;
+  }
+
+  .summary {
+    margin: 10px 0 12px;
+  }
+
+  .section-label {
+    margin: 12px 0 7px;
+  }
+
+  .detail-bottom {
+    padding-top: 11px;
+    padding-bottom: 12px;
+  }
+}
+
+/* Paired document and supplier actions */
+.resource-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7px;
+}
+
+.resource-grid .resource-card {
+  padding: 10px 8px;
+  gap: 6px;
+  min-width: 0;
+  margin-top: 0;
+  min-height: 53px;
+}
+
+.resource-grid .resource-card > .icon {
+  width: 14px;
+  height: 14px;
+}
+
+.resource-grid .resource-copy strong {
+  font-size: 12px;
+}
+
+.resource-grid .resource-copy small {
+  font-size: 10px;
+}
+
+.resource-grid .resource-end {
+  width: 10px !important;
+  height: 10px !important;
+}
+
+.resource-grid .resource-copy {
+  gap: 5px;
+}

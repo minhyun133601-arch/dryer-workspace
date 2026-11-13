@@ -8,12 +8,12 @@ import { LIQUID_ROOM, LIQUID_ROOMS, LIQUID_EQUIPMENT } from '../apps/site/liquid
 import { LIQUID_ASSETS } from '../apps/site/liquid-assets.js';
 import { SITE_ASSETS } from '../apps/site/asset-catalog.js';
 
-const evidence = async (name) => JSON.parse(await readFile(new URL(`../references/team3-liquid-20261110/${name}`, import.meta.url), 'utf8'));
+const evidence = async (name) => JSON.parse(await readFile(new URL(`./fixtures/evidence/${name}`, import.meta.url), 'utf8'));
 const roomById = new Map(LIQUID_ROOMS.map((room) => [room.id, room]));
 
 test('card appearance refinement preserves all 52 registered identities, poses and envelopes while exposing distinct four-view observations', async () => {
   const baseline=JSON.parse(await readFile(new URL('./fixtures/liquid-registered-poses-20261110.json',import.meta.url),'utf8'));
-  const observations=await evidence('card-photo-observations-20261110.json');
+  const observations=await evidence('liquid-observations.json');
   for(const expected of baseline){
     const item=LIQUID_EQUIPMENT.find(e=>e.id===expected.id);
     assert.deepEqual(Object.fromEntries(Object.keys(expected).map(k=>[k,item[k]])),expected);
@@ -47,7 +47,7 @@ function intersects(a, b) {
 }
 
 test('the liquid catalog contains every one of the 52 preserved indoor cards once and keeps its original identity', async () => {
-  const cards = await evidence('cards.json');
+  const cards = await evidence('liquid-cards.json');
   assert.equal(cards.length, 52); assert.equal(LIQUID_EQUIPMENT.length, 52);
   assert.equal(new Set(LIQUID_EQUIPMENT.map((item) => item.id)).size, 52);
   assert.deepEqual(LIQUID_EQUIPMENT.map((item) => item.cardNumber).sort((a, b) => a - b), cards.map((card) => card._archiveNumber).sort((a, b) => a - b));
@@ -131,7 +131,7 @@ test('each equipment card has one accessible four-side reflow asset while the da
 });
 
 test('drawn columns and transport lines retain their historical evidence and never become extra card equipment or invented process pipes', async () => {
-  const receipt = await evidence('placement-confidence.json');
+  const receipt = await evidence('liquid-columns.json');
   assert.deepEqual(LIQUID_ROOM.columns, receipt.columns);
   assert.equal(LIQUID_ROOM.columns.length, 9, 'only the inspected matching I-column vectors are included');
   for (const column of LIQUID_ROOM.columns) {

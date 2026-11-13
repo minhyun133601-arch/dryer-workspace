@@ -1,3 +1,0 @@
-bz 7.36(Beta,x64) - Bandizip console tool. Copyright(C) 2023 Bandisoft
-Listing archive: Z:\@ 공무환경팀 ! 김민규\works\원가계산(공무)\추진업무\2014년 업무자료\2014년 업무역량\업무프로그램\Windows_8.1_RTM_KO.rar
-  Enter password:ERROR: Invalid password

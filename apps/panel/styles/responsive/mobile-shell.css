@@ -1,0 +1,107 @@
+/* Mobile inventory and detail sheets */
+@media (max-width: 720px) {
+  .site-header {
+    height: 61px;
+    padding: 0 16px;
+    gap: 10px;
+  }
+
+  .brand {
+    font-size: 15px;
+    gap: 8px;
+  }
+
+  .brand-icon {
+    width: 33px;
+    height: 33px;
+    border-radius: 8px;
+  }
+
+  .brand-en {
+    font-size: 7px;
+    letter-spacing: 1.4px;
+  }
+
+  .header-path {
+    display: none;
+  }
+
+  .prototype-badge {
+    font-size: 9px;
+    padding: 5px 8px;
+    gap: 5px;
+  }
+
+  .prototype-badge span {
+    width: 4px;
+    height: 4px;
+  }
+
+  main {
+    padding: 0 12px;
+  }
+
+  .page-heading {
+    padding: 18px 3px 16px;
+    gap: 10px;
+    align-items: flex-end;
+  }
+
+  .eyebrow {
+    font-size: 8px;
+    letter-spacing: 1.1px;
+  }
+
+  h1 {
+    font-size: 23px;
+    margin: 5px 0 4px;
+    letter-spacing: -1px;
+  }
+
+  h1 span {
+    font-size: 20px;
+    margin-left: 1px;
+  }
+
+  .page-heading p {
+    font-size: 10px;
+    max-width: 235px;
+    line-height: 1.7;
+  }
+
+  .heading-actions {
+    display: block;
+    margin-bottom: 3px;
+    flex-shrink: 0;
+  }
+
+  .heading-actions #topEdit,
+  .heading-actions .connection-count {
+    display: none;
+  }
+
+  .mobile-list {
+    display: inline-flex;
+    font-size: 10px;
+    padding: 8px 10px;
+    min-height: 34px;
+    gap: 5px;
+  }
+
+  .mobile-list .icon {
+    width: 14px;
+    height: 14px;
+  }
+
+  .workspace {
+    display: block;
+    min-height: 0;
+    height: calc(100svh - 224px);
+    max-height: none;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+}

@@ -1,0 +1,262 @@
+[
+  {
+    "_archiveNumber": 42,
+    "name": "28파이 Pet 충진기",
+    "room": "Pet실"
+  },
+  {
+    "_archiveNumber": 43,
+    "name": "Pet실 1",
+    "room": "Pet실"
+  },
+  {
+    "_archiveNumber": 44,
+    "name": "Pet 라인",
+    "room": "Pet실"
+  },
+  {
+    "_archiveNumber": 45,
+    "name": "38파이 라벨러",
+    "room": "외포장실"
+  },
+  {
+    "_archiveNumber": 46,
+    "name": "파스텔 라이저",
+    "room": "Pet실"
+  },
+  {
+    "_archiveNumber": 47,
+    "name": "88파이 자동 충진기",
+    "room": "Pet실"
+  },
+  {
+    "_archiveNumber": 48,
+    "name": "HIPE 16 스틱 충진기-2",
+    "room": "스틱실"
+  },
+  {
+    "_archiveNumber": 49,
+    "name": "Hipe 16 스틱 충진기-1",
+    "room": "스틱실"
+  },
+  {
+    "_archiveNumber": 50,
+    "name": "병뚜껑 조립기",
+    "room": "Pet실"
+  },
+  {
+    "_archiveNumber": 51,
+    "name": "연수기",
+    "room": "보일러실"
+  },
+  {
+    "_archiveNumber": 52,
+    "name": "병 라인 중량 선별기",
+    "room": "외포장실"
+  },
+  {
+    "_archiveNumber": 53,
+    "name": "카토너",
+    "room": "외포장실"
+  },
+  {
+    "_archiveNumber": 54,
+    "name": "3팀용 제함기 1호기",
+    "room": "외포장실"
+  },
+  {
+    "_archiveNumber": 55,
+    "name": "10입 자동 포장기",
+    "room": "외포장실"
+  },
+  {
+    "_archiveNumber": 56,
+    "name": "파우치 후살균수조",
+    "room": "후살균실"
+  },
+  {
+    "_archiveNumber": 57,
+    "name": "파우치 냉각수조",
+    "room": "후살균실"
+  },
+  {
+    "_archiveNumber": 58,
+    "name": "후살균기",
+    "room": "후살균실"
+  },
+  {
+    "_archiveNumber": 59,
+    "name": "치어팩 언로더",
+    "room": "파우치실"
+  },
+  {
+    "_archiveNumber": 60,
+    "name": "스틱 냉각기",
+    "room": "스틱실"
+  },
+  {
+    "_archiveNumber": 61,
+    "name": "파우치 충진기 3호기",
+    "room": "파우치실"
+  },
+  {
+    "_archiveNumber": 62,
+    "name": "파우치 충진기 2호기",
+    "room": "파우치실"
+  },
+  {
+    "_archiveNumber": 63,
+    "name": "파우치 충진기 1호기",
+    "room": "파우치실"
+  },
+  {
+    "_archiveNumber": 64,
+    "name": "치어팩 충진기 3호기",
+    "room": "파우치실"
+  },
+  {
+    "_archiveNumber": 65,
+    "name": "치어팩 충진기 2호기",
+    "room": "파우치실"
+  },
+  {
+    "_archiveNumber": 66,
+    "name": "치어팩 충진기 1호기",
+    "room": "파우치실"
+  },
+  {
+    "_archiveNumber": 67,
+    "name": "믹서탱크",
+    "room": "배합실"
+  },
+  {
+    "_archiveNumber": 68,
+    "name": "배합탱크 10",
+    "room": "배합실"
+  },
+  {
+    "_archiveNumber": 69,
+    "name": "배합탱크 7",
+    "room": "배합실"
+  },
+  {
+    "_archiveNumber": 70,
+    "name": "배합탱크 9",
+    "room": "배합실"
+  },
+  {
+    "_archiveNumber": 71,
+    "name": "3번 탱크",
+    "room": "배합실"
+  },
+  {
+    "_archiveNumber": 77,
+    "name": "4번 배합탱크",
+    "room": "배합실"
+  },
+  {
+    "_archiveNumber": 78,
+    "name": "3번 배합탱크",
+    "room": "배합실"
+  },
+  {
+    "_archiveNumber": 79,
+    "name": "2번 배합탱크",
+    "room": "배합실"
+  },
+  {
+    "_archiveNumber": 80,
+    "name": "A라인 1-4",
+    "room": "배합실"
+  },
+  {
+    "_archiveNumber": 81,
+    "name": "A라인 1-3",
+    "room": "배합실"
+  },
+  {
+    "_archiveNumber": 82,
+    "name": "A라인 1-2",
+    "room": "배합실"
+  },
+  {
+    "_archiveNumber": 83,
+    "name": "A라인 1-1",
+    "room": "배합실"
+  },
+  {
+    "_archiveNumber": 93,
+    "name": "호모 믹서탱크",
+    "room": "배합실"
+  },
+  {
+    "_archiveNumber": 94,
+    "name": "펄 진동채",
+    "room": "배합실"
+  },
+  {
+    "_archiveNumber": 95,
+    "name": "살균기 1호기",
+    "room": "배합실"
+  },
+  {
+    "_archiveNumber": 96,
+    "name": "살균기 2호기",
+    "room": "배합실"
+  },
+  {
+    "_archiveNumber": 97,
+    "name": "살균기 3호기",
+    "room": "배합실"
+  },
+  {
+    "_archiveNumber": 98,
+    "name": "펄 이송호퍼",
+    "room": "배합실"
+  },
+  {
+    "_archiveNumber": 99,
+    "name": "HCPE - 5 균질기",
+    "room": "배합실"
+  },
+  {
+    "_archiveNumber": 100,
+    "name": "B라인 열수탱크",
+    "room": "배합실"
+  },
+  {
+    "_archiveNumber": 101,
+    "name": "에어 콤프레셔",
+    "room": "보일러실"
+  },
+  {
+    "_archiveNumber": 102,
+    "name": "핫멜트",
+    "room": "외포장실"
+  },
+  {
+    "_archiveNumber": 103,
+    "name": "보일러 3호기",
+    "room": "보일러실"
+  },
+  {
+    "_archiveNumber": 104,
+    "name": "보일러 1,2호기",
+    "room": "보일러실"
+  },
+  {
+    "_archiveNumber": 105,
+    "name": "티칭 로봇",
+    "room": "외포장실"
+  },
+  {
+    "_archiveNumber": 106,
+    "name": "제환기",
+    "room": "제환실"
+  },
+  {
+    "_archiveNumber": 107,
+    "name": "반죽기",
+    "room": "제환실"
+  }
+]

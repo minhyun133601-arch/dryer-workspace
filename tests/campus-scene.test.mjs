@@ -13,6 +13,7 @@ import { floorElevation } from '../apps/site/facility-data.js';
 import { buildCampusEnvironment, buildCampusEquipment } from '../apps/site/campus-models.js';
 import { createProximityDoorController } from '../apps/site/proximity-doors.js';
 import { isRetainedEvidenceImage } from '../apps/site/evidence-assets.js';
+import { SITE_ASSETS } from '../apps/site/asset-catalog.js';
 import { PLACEMENT_REGIONS, constrainPlacement, fromRoomPosition, toRoomPosition } from '../apps/site/placement-rules.js';
 
 async function sceneHarness() {
@@ -524,20 +525,13 @@ test('the employee-visible building names, recessed tower rooftop, single readab
   }
 });
 
-test('the tower uses the verified official SVG bytes and preserves the original source receipt', async () => {
-  const evidence = JSON.parse(await readFile(new URL('../references/yusan-campus/location-evidence.json', import.meta.url), 'utf8'));
-  const source = evidence.official_logo;
-  assert.equal(source.url, 'https://www.heechang.com/theme/basic/images/top_logo.svg');
-  const organization = JSON.parse(await readFile(new URL('../docs/asset-organization-20261112.json', import.meta.url), 'utf8'));
-  const moved = organization.moves.find(entry => entry.originalPath === source.app_local_file);
-  assert.ok(moved, 'the historical logo receipt resolves through the recorded asset move');
-  const app = await readFile(new URL(`../${moved.currentPath}`, import.meta.url));
-  const original = await readFile(new URL(`../${source.local_file}`, import.meta.url));
-  assert.deepEqual(app, original, 'the runtime brand asset is an exact copy of the retained official source');
-  assert.equal(app.length, 4448); assert.equal(source.bytes, app.length);
+test('the tower retains the verified official SVG in the current asset catalog', async () => {
+  const logo = SITE_ASSETS.find(asset => asset.id === 'brand-heechang-official-logo');
+  assert.ok(logo); assert.equal(logo.category, 'brand');
+  const app = await readFile(new URL(`../apps/site/${logo.path.slice(2)}`, import.meta.url));
+  assert.equal(app.length, 4448);
   const hash = createHash('sha256').update(app).digest('hex');
   assert.equal(hash, '952b4f4bca7b514acbd239e8fcc38019187423d769b79148950cd4d77a6589f8');
-  assert.equal(source.sha256, hash);
 });
 
 test('the seven-floor dryer, separate three-floor packaging building and terrace cyclone retain the employee-confirmed height and adjacency', async () => {

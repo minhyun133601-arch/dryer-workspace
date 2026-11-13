@@ -12,6 +12,12 @@ export const MODULES = Object.freeze([
     detail: '전체 미리보기 · 이전·다음 · 사용 후보 · 논의 기록', entry: 'apps/drawings/index.html',
     icon: 'drawings', accent: 'blue',
   }),
+  Object.freeze({
+    id: 'presentation', name: '발표용', kicker: 'DRYER PRESENTATION', number: '03',
+    description: '건조실 1층부터 1.5층과 상부층을 둘러보고, 7층 버너의 구조 분해까지 자동으로 시연합니다.',
+    detail: '건조실 전용 · 사람 시점 · 자동 시연', entry: 'apps/presentation/index.html',
+    icon: 'presentation', accent: 'green',
+  }),
 ]);
 
 export function validateModules(modules) {

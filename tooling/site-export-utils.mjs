@@ -49,3 +49,16 @@ export async function bundleBurnerMaintenance() {
     'const { createBurnerMaintenance } = burnerMaintenanceModule;',
   ].join('\n');
 }
+
+export async function bundlePersonAvatar() {
+  const reference = './assets/branding/company-logo.jpg';
+  const [source, bytes] = await Promise.all([
+    readProjectText('apps/site/person-avatar.js'),
+    readFile(new URL(`apps/site/${reference.slice(2)}`, projectRoot)),
+  ]);
+  if (bytes[0] !== 0xff || bytes[1] !== 0xd8) throw new Error('Invalid company logo JPEG.');
+  return [
+    namespaceModule(replaceRequired(source, reference, `data:image/jpeg;base64,${bytes.toString('base64')}`), 'personAvatarModule', ["import * as THREE from '../shared/vendor/three.module.js';"]),
+    'const { buildPersonAvatar } = personAvatarModule;',
+  ].join('\n');
+}

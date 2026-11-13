@@ -91,7 +91,7 @@ test('the real stamped Edge hall defaults restore once and remain unchanged by a
       const actual = fixture.state.find(value => value.id === item.id);
       assert.deepEqual(actual.position, item.position, `${item.id} must reach its registered hall pose without another automatic shift`);
       assert.ok(item.position.every((value, index) => index === 1 || value * 4 === Math.round(value * 4)));
-      assert.equal(JSON.parse(fixture.saved.get(fixture.key)).placementRevisions[item.id], 'dryer-hall-saved-defaults-20261113');
+      assert.equal(JSON.parse(fixture.saved.get(fixture.key)).placementRevisions[item.id], item.placementRevision);
     }
     assert.equal(fixture.writes, 1);
     const first = fixture.state; fixture.open();

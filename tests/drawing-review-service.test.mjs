@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
-import { copyFile, mkdir, mkdtemp, readFile, rm, stat, writeFile } from 'node:fs/promises';
+import { copyFile, mkdir, mkdtemp, readFile, rename, rm, stat, writeFile } from 'node:fs/promises';
 import http from 'node:http';
 import os from 'node:os';
 import path from 'node:path';
@@ -55,13 +55,13 @@ async function closeServer(server) {
 
 async function makeFixture() {
   const root = await mkdtemp(path.join(os.tmpdir(), 'heechang-drawing-review-'));
-  const app = path.join(root, '근거 자료', '도면검토앱');
+  const app = path.join(root, 'tooling', 'drawing-review');
   const drawings = path.join(root, '근거 자료', '건물3D 후보도면');
   const original = Buffer.concat([png, Buffer.alloc(300000)]);
   const id = createHash('sha256').update(original).digest('hex');
   const cache = path.join(app, 'cache', id);
   await Promise.all([mkdir(path.join(app, 'public'), { recursive: true }),
-    mkdir(path.join(app, 'data'), { recursive: true }), mkdir(drawings, { recursive: true }),
+    mkdir(path.join(app, 'data'), { recursive: true }), mkdir(path.join(app, 'tools'), { recursive: true }), mkdir(drawings, { recursive: true }),
     mkdir(cache, { recursive: true })]);
   const metadata = JSON.stringify({ status: 'ready', kind: 'png', pages: [
     { src: `/cache/${id}/page-001.png`, width: 1, height: 1, label: '1' },
@@ -71,29 +71,39 @@ async function makeFixture() {
     [id, '전체 배치도.png', '전체 배치도.png', '.png', '희창유업', '본관', '01_전체배치', String(original.length), '1'],
   ].map((row) => row.map((value) => `"${value.replaceAll('"', '""')}"`).join(',')).join('\r\n');
   await Promise.all([
-    copyFile(path.join(PROJECT_ROOT, '근거 자료', '도면검토앱', 'server.py'), path.join(app, 'server.py')),
+    copyFile(path.join(PROJECT_ROOT, 'tooling', 'drawing-review', 'server.py'), path.join(app, 'server.py')),
     writeFile(path.join(root, 'index.html'), '<title>작업실</title>'),
     writeFile(path.join(app, 'public', 'index.html'), '<title>도면 검토</title>'),
     writeFile(path.join(app, 'public', 'app.js'), 'window.drawingReview = true;'),
     writeFile(path.join(app, 'public', 'style.css'), 'body { color: black; }'),
     writeFile(path.join(app, 'data', 'private-notes.txt'), 'private fixture notes'),
+    writeFile(path.join(app, 'tools', 'fixture-tool.txt'), 'conversion tools are not launched during browsing'),
     writeFile(path.join(app, 'build_previews.py'), "from pathlib import Path\nPath(__file__).with_name('unexpected-conversion.txt').write_text('started')\n"),
     writeFile(path.join(drawings, '00_도면목록.csv'), '\ufeff' + csv),
     writeFile(path.join(drawings, '전체 배치도.png'), original),
     writeFile(path.join(cache, 'page-001.png'), png),
     writeFile(path.join(cache, 'meta.json'), metadata),
   ]);
+  const backend = path.join(app, 'server.py'), source = await readFile(backend, 'utf8');
+  const observedSource = source.replace('    args = parser.parse_args()',
+    '    args = parser.parse_args()\n    atomic_json(args.data / "fixture-tools.json", {"tools": os.environ.get("DRAWING_REVIEW_TOOLS")})');
+  assert.notEqual(observedSource, source, 'observe the owned helper environment without invoking a converter');
+  await writeFile(backend, observedSource);
   return { root, app, drawings, id, original, metadata, cache };
 }
 
 test('drawing review works through the workspace with persistent discussion and an owned private helper', { timeout: 30000 }, async (t) => {
   const fixture = await makeFixture();
-  let server, pid, token;
+  let server, pid, token, archive;
   t.after(async () => {
     await closeServer(server);
     await server?.drawingReview.close();
     assert.ok(path.basename(fixture.root).startsWith('heechang-drawing-review-'));
     await rm(fixture.root, { recursive: true, force: true, maxRetries: 5, retryDelay: 150 });
+    if (archive) {
+      assert.ok(path.basename(archive).startsWith('heechang-drawing-archive-'));
+      await rm(archive, { recursive: true, force: true, maxRetries: 5, retryDelay: 150 });
+    }
   });
   server = await startServer({ root: fixture.root, port: 0 });
   const port = server.address().port;
@@ -127,6 +137,8 @@ test('drawing review works through the workspace with persistent discussion and 
     assert.equal(path.resolve(info.root), path.resolve(fixture.drawings));
     assert.ok(info.port > 0);
     assert.equal(alive(pid), true);
+    const observed = JSON.parse(await readFile(path.join(fixture.app, 'data', 'fixture-tools.json'), 'utf8'));
+    assert.equal(observed.tools, path.join(fixture.app, 'tools'));
     assert.equal((await request(port, `${prefix}/`)).body.toString(), '<title>도면 검토</title>');
     assert.match((await request(port, `${prefix}/app.js`)).headers['content-type'], /javascript/);
     assert.match((await request(port, `${prefix}/style.css`)).headers['content-type'], /css/);
@@ -200,22 +212,119 @@ test('drawing review works through the workspace with persistent discussion and 
     await assert.rejects(stat(path.join(fixture.app, 'unexpected-conversion.txt')), { code: 'ENOENT' });
   });
 
-  await t.test('closing the common server stops its helper and preserves saved discussion for restart', async () => {
+  await t.test('moving originals, previews, discussion and tools outside the project retains files and saved discussion after restart', async () => {
     await closeServer(server);
     await waitUntil(() => !alive(pid), 'The drawing helper remained alive after the workspace closed.');
+    archive = await mkdtemp(path.join(os.tmpdir(), 'heechang-drawing-archive-'));
+    const originals = path.join(archive, 'originals'), cache = path.join(archive, 'previews');
+    const data = path.join(archive, 'discussion'), tools = path.join(archive, 'converters');
+    await rename(fixture.drawings, originals);
+    await rename(path.dirname(fixture.cache), cache);
+    await rename(path.join(fixture.app, 'data'), data);
+    await rename(path.join(fixture.app, 'tools'), tools);
+    await mkdir(path.join(fixture.root, 'docs'));
+    await writeFile(path.join(fixture.root, 'docs', 'drawing-storage.json'), JSON.stringify({
+      originals: path.relative(fixture.root, originals), cache: path.relative(fixture.root, cache),
+      data: path.relative(fixture.root, data), tools: path.relative(fixture.root, tools),
+    }));
     server = await startServer({ root: fixture.root, port: 0 });
     const nextPort = server.address().port;
     const bootstrap = json(await request(nextPort, `${prefix}/api/bootstrap`));
     assert.equal(bootstrap.token, token, 'reopening the workspace must retain its access state');
+    assert.equal(bootstrap.catalogCount, 1);
+    assert.equal(bootstrap.root, undefined, 'the public bootstrap exposes an identity instead of the external filesystem path');
+    assert.equal(JSON.stringify(bootstrap).includes(archive), false);
+    const catalog = json(await request(nextPort, `${prefix}/api/catalog`, { headers: auth() }));
+    assert.equal(catalog.items[0].id, fixture.id, 'the content identity is unchanged by its storage location');
+    assert.equal(JSON.stringify(catalog).includes(archive), false);
+    const original = await request(nextPort, prefix + catalog.items[0].originalUrl, { headers: auth() });
+    assert.deepEqual(original.body, fixture.original);
+    const thumbnail = await request(nextPort, prefix + catalog.items[0].thumbnailUrl, { headers: auth() });
+    assert.equal(thumbnail.status, 200);
+    assert.ok(thumbnail.body.length > 0);
     const detail = json(await request(nextPort, `${prefix}/api/drawings/${fixture.id}`, { headers: auth() }));
+    assert.equal(detail.preview.status, 'ready');
+    assert.deepEqual((await request(nextPort, prefix + detail.preview.pages[0].src, { headers: auth() })).body, png);
     assert.equal(detail.state.starred, true);
     assert.equal(detail.state.status, 'discuss');
     assert.equal(detail.comments.length, 1);
-    const nextPid = JSON.parse(await readFile(infoFile, 'utf8')).pid;
+    assert.equal(await readFile(path.join(cache, fixture.id, 'meta.json'), 'utf8'), fixture.metadata);
+    const info = JSON.parse(await readFile(path.join(data, 'server.json'), 'utf8')), nextPid = info.pid;
+    assert.equal(path.resolve(info.root), path.resolve(originals));
+    assert.equal((await stat(path.join(data, 'review.sqlite3'))).isFile(), true, 'the exact discussion database follows its selected external location');
+    assert.equal(await readFile(path.join(data, 'private-notes.txt'), 'utf8'), 'private fixture notes');
+    const observed = JSON.parse(await readFile(path.join(data, 'fixture-tools.json'), 'utf8'));
+    assert.equal(observed.tools, tools, 'the owned Python helper receives the selected tool directory');
+    await assert.rejects(stat(path.join(fixture.app, 'data')), { code: 'ENOENT' });
+    for (const privatePath of ['/tooling/drawing-review/server.py', '/tooling/drawing-review/data/access.json', '/tooling/drawing-review/tools/fixture-tool.txt']) {
+      assert.equal((await request(nextPort, privatePath, { headers: auth() })).status, 404, 'backend sources and helper state stay outside public static routes');
+    }
     assert.equal(alive(nextPid), true);
     await closeServer(server);
     await waitUntil(() => !alive(nextPid), 'The reopened drawing helper remained alive after close.');
   });
+});
+
+test('external drawing storage environment overrides the optional project configuration', { timeout: 30000 }, async (t) => {
+  const fixture = await makeFixture();
+  const keys = ['DRAWING_REVIEW_ROOT', 'DRAWING_REVIEW_CACHE', 'DRAWING_REVIEW_DATA', 'DRAWING_REVIEW_TOOLS'];
+  const previous = Object.fromEntries(keys.map(key => [key, process.env[key]]));
+  let server;
+  t.after(async () => {
+    await closeServer(server); await server?.drawingReview.close();
+    for (const [key, value] of Object.entries(previous)) {
+      if (value === undefined) delete process.env[key]; else process.env[key] = value;
+    }
+    assert.ok(path.basename(fixture.root).startsWith('heechang-drawing-review-'));
+    await rm(fixture.root, { recursive: true, force: true, maxRetries: 5, retryDelay: 150 });
+  });
+  await mkdir(path.join(fixture.root, 'docs'));
+  await writeFile(path.join(fixture.root, 'docs', 'drawing-storage.json'), JSON.stringify({
+    originals: 'missing-config-originals', cache: 'missing-config-cache', data: 'missing-config-data', tools: 'missing-config-tools',
+  }));
+  process.env.DRAWING_REVIEW_ROOT = path.relative(fixture.root, fixture.drawings);
+  process.env.DRAWING_REVIEW_CACHE = path.dirname(fixture.cache);
+  process.env.DRAWING_REVIEW_DATA = 'selected-private-state';
+  process.env.DRAWING_REVIEW_TOOLS = path.join(fixture.app, 'tools');
+  server = await startServer({ root: fixture.root, port: 0 });
+  const port = server.address().port;
+  const bootstrap = json(await request(port, `${prefix}/api/bootstrap`));
+  const headers = { 'X-Review-Token': bootstrap.token };
+  const detail = json(await request(port, `${prefix}/api/drawings/${fixture.id}`, { headers }));
+  assert.equal(detail.preview.status, 'ready');
+  assert.deepEqual((await request(port, prefix + detail.preview.pages[0].src, { headers })).body, png);
+  assert.deepEqual((await request(port, `${prefix}/original/${fixture.id}`, { headers })).body, fixture.original);
+  const observed = JSON.parse(await readFile(path.join(fixture.root, 'selected-private-state', 'fixture-tools.json'), 'utf8'));
+  assert.equal(observed.tools, path.join(fixture.app, 'tools'));
+  await assert.rejects(stat(path.join(fixture.root, 'missing-config-cache')), { code: 'ENOENT' });
+  await assert.rejects(stat(path.join(fixture.root, 'missing-config-data')), { code: 'ENOENT' });
+});
+
+test('invalid external drawing storage reports a clear error without falling back or leaking filesystem paths', { timeout: 30000 }, async (t) => {
+  const fixture = await makeFixture(); let server;
+  t.after(async () => {
+    await closeServer(server); await server?.drawingReview.close();
+    assert.ok(path.basename(fixture.root).startsWith('heechang-drawing-review-'));
+    await rm(fixture.root, { recursive: true, force: true, maxRetries: 5, retryDelay: 150 });
+  });
+  await mkdir(path.join(fixture.root, 'docs'));
+  const config = path.join(fixture.root, 'docs', 'drawing-storage.json');
+  server = await startServer({ root: fixture.root, port: 0 }); const port = server.address().port;
+  for (const [content, message] of [
+    ['{ broken json', /설정/],
+    [JSON.stringify({ originals: fixture.drawings, cache: '' }), /cache/],
+    [JSON.stringify({ originals: fixture.drawings, cache: path.dirname(fixture.cache), data: [] }), /data/],
+    [JSON.stringify({ originals: fixture.drawings, cache: path.dirname(fixture.cache), tools: '' }), /tools/],
+    [JSON.stringify({ originals: path.join(fixture.root, 'missing-private-originals'), cache: path.dirname(fixture.cache) }), /원본 보관 폴더/],
+  ]) {
+    await writeFile(config, content);
+    const response = await request(port, `${prefix}/api/bootstrap`), error = json(response, 503);
+    assert.match(error.error, message);
+    assert.equal(response.body.toString().includes(fixture.root), false);
+    await assert.rejects(stat(path.join(fixture.app, 'data', 'server.json')), { code: 'ENOENT' });
+  }
+  await writeFile(config, JSON.stringify({ originals: fixture.drawings, cache: path.dirname(fixture.cache) }));
+  assert.equal(json(await request(port, `${prefix}/api/bootstrap`)).catalogCount, 1, 'a corrected configuration can recover without restarting the workspace');
 });
 
 const windowsVenv = path.join(os.homedir(), 'venvs', 'workstation-tools', 'Scripts', 'python.exe');

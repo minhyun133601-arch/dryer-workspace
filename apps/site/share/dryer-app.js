@@ -4,7 +4,7 @@ import { createFurnaceDetail } from '../furnace-detail.js';
 import { BURNER_MAINTENANCE_DOCUMENTS } from '../burner-maintenance-data.js';
 
 const $ = (id) => document.getElementById(id);
-const CATALOG = EQUIPMENT.filter(item => Number.isFinite(item.floor) && item.id !== 'f1-boiler-room');
+const CATALOG = EQUIPMENT.filter(item => Number.isFinite(item.floor));
 const items = new Map(CATALOG.map(item => [item.id, item]));
 // Capture the pristine, bundled document before dialogs, labels and controls are
 // created. Saving it avoids duplicating those runtime elements on the next open.
@@ -80,7 +80,9 @@ function select(id) {
 function setFloor(value, { overview = true } = {}) {
   floor = normalizeFloor(value);
   const shown = CATALOG.filter(item => onFloor(item, floor));
-  $('area-summary').textContent = `${floor === 'all' ? '건조실 전체·옥상' : `건조실 ${levelName(floor)}`} · 설비 ${shown.length}개`;
+  const floorInfo = FLOORS.find(entry => entry.id === floor);
+  const contents = floorInfo?.shortName ? ` · ${floorInfo.shortName}` : '';
+  $('area-summary').textContent = `${floor === 'all' ? '건조실 전체·옥상' : `건조실 ${levelName(floor)}${contents}`}${shown.length ? ` · 설비 ${shown.length}개` : ''}`;
   if (overview) select(null);
   document.querySelectorAll('[data-floor]').forEach(button => {
     button.setAttribute('aria-pressed', String(button.dataset.floor === String(floor)));
@@ -195,6 +197,7 @@ try {
     floor,
     enabledAreas: ['dryer'],
     personEnabled: false,
+    includeAdjacentBoilerRoom: true,
     onSelect: select,
     onViewChange: setViewIndicator,
     onFloorChange: setFloor,

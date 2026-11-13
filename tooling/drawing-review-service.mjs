@@ -7,14 +7,16 @@ import { randomUUID } from 'node:crypto';
 const PREFIX = '/drawing-review';
 const APPLICATION = 'heechang-drawing-review';
 
-// The original drawings, SQLite notes and rendered pages stay in their existing
-// folder. Only this private loopback helper is started, on demand; no converter
-// or second user-facing port is launched by the workspace.
+// The app source stays private in tooling. Drawings, previews, discussions and
+// conversion tools may live in the external archive; this loopback helper is
+// started on demand without launching a converter or another public port.
 export function createDrawingReviewService({ root }) {
   let child = null, servicePid = null, opening = null, endpoint = null, closed = false, hasExitHook = false;
   const project = path.resolve(root);
-  const app = path.join(project, '근거 자료', '도면검토앱');
-  const drawings = path.join(project, '근거 자료', '건물3D 후보도면');
+  const app = path.join(project, 'tooling', 'drawing-review');
+  const storageConfig = path.join(project, 'docs', 'drawing-storage.json');
+  const storageOverrides = { originals: process.env.DRAWING_REVIEW_ROOT, cache: process.env.DRAWING_REVIEW_CACHE,
+    data: process.env.DRAWING_REVIEW_DATA, tools: process.env.DRAWING_REVIEW_TOOLS };
   const readyFile = path.join(project, 'tmp', `drawing-review-${process.pid}-${randomUUID()}.json`);
   const removeReady = () => unlink(readyFile).catch(() => {});
   const stopServiceProcess = () => {
@@ -23,19 +25,46 @@ export function createDrawingReviewService({ root }) {
   };
   const onProcessExit = () => { stopServiceProcess(); };
 
+  async function storagePaths() {
+    let config;
+    try { config = JSON.parse((await readFile(storageConfig, 'utf8')).replace(/^\uFEFF/, '')); }
+    catch (error) {
+      if (error.code !== 'ENOENT') throw new Error('도면 보관 설정을 읽지 못했습니다. docs/drawing-storage.json을 확인해 주세요.');
+    }
+    if (config !== undefined && (!config || typeof config !== 'object' || Array.isArray(config))) {
+      throw new Error('도면 보관 설정 형식이 올바르지 않습니다. docs/drawing-storage.json을 확인해 주세요.');
+    }
+    const defaults = { originals: path.join(project, '근거 자료', '건물3D 후보도면'),
+      cache: path.join(app, 'cache'), data: path.join(app, 'data'), tools: path.join(app, 'tools') };
+    const paths = {};
+    for (const field of ['originals', 'cache', 'data', 'tools']) {
+      const required = field === 'originals' || field === 'cache';
+      const configured = config !== undefined && (required || Object.hasOwn(config, field));
+      const value = storageOverrides[field] !== undefined ? storageOverrides[field] : configured ? config[field] : defaults[field];
+      if (typeof value !== 'string' || !value.trim() || value.includes('\0')) {
+        throw new Error(`도면 보관 설정의 ${field} 경로를 확인해 주세요.`);
+      }
+      paths[field] = path.resolve(project, value);
+    }
+    try { paths.originals = await realpath(paths.originals); }
+    catch { throw new Error('도면 원본 보관 폴더를 찾지 못했습니다. 보관 위치와 도면 경로 설정을 확인해 주세요.'); }
+    return paths;
+  }
+
   async function open() {
     if (closed) throw new Error('도면 검토실이 종료되었습니다.');
     if (endpoint && child && child.exitCode === null && child.signalCode === null) return endpoint;
     if (opening) return opening;
     opening = (async () => {
-      const actualRoot = await realpath(drawings);
+      const storage = await storagePaths(), actualRoot = storage.originals;
       await mkdir(path.dirname(readyFile), { recursive: true });
       if (!hasExitHook) { process.once('exit', onProcessExit); hasExitHook = true; }
       const executable = process.env.DRAWING_REVIEW_PYTHON || 'python';
       child = spawn(executable, [path.join(app, 'server.py'), '--root', actualRoot,
-        '--data', path.join(app, 'data'), '--cache', path.join(app, 'cache'),
+        '--data', storage.data, '--cache', storage.cache,
         '--host', '127.0.0.1', '--port', '0', '--ready-file', readyFile], {
         cwd: app, windowsHide: true, stdio: ['ignore', 'pipe', 'pipe'],
+        env: { ...process.env, DRAWING_REVIEW_TOOLS: storage.tools },
       });
       let failure = null;
       child.once('error', (error) => { failure = error; });
@@ -60,7 +89,7 @@ export function createDrawingReviewService({ root }) {
       }
       startedChild.kill();
       await removeReady();
-      throw new Error('도면 검토실을 준비하지 못했습니다. Python 실행 환경과 근거 자료 폴더를 확인해 주세요.');
+      throw new Error('도면 검토실을 준비하지 못했습니다. Python 실행 환경과 도면 보관 경로를 확인해 주세요.');
     })();
     try { return await opening; }
     finally { opening = null; }

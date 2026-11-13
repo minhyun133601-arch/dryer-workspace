@@ -60,8 +60,12 @@ test('one shared HTML contains only the site model with inline resources', () =>
   const mapModels = documents.site.match(/^const EQUIPMENT = (\[[^\n]+\]);$/m);
   assert.ok(mapModels, 'the map must contain its model data');
   const equipment = JSON.parse(mapModels[1]);
-  assert.equal(equipment.length, 47, 'the active export includes nine observed preparation assemblies and retires three duplicate hall approximations');
-  assert.equal(new Set(equipment.map(({ id }) => id)).size, 47);
+  assert.equal(equipment.length, 48, 'the active export includes ten observed preparation assemblies and retires three duplicate hall approximations');
+  assert.equal(new Set(equipment.map(({ id }) => id)).size, 48);
+  const whiteUnits = equipment.filter(({ id }) => id === 'f1-prep-mobile-white-unit');
+  assert.equal(whiteUnits.length, 1, 'the observed mobile cabinet is exported once');
+  assert.equal(whiteUnits[0].floor, 1);
+  assert.equal(whiteUnits[0].preparation.kind, 'mobile-cabinet');
   assert.deepEqual([...new Set(equipment.map(({ floor }) => floor))].sort((a, b) => a - b), [1, 3, 4, 5, 6, 7, 8]);
   assert.deepEqual(equipment.map(({ id }) => id), EQUIPMENT.map(({ id }) => id));
   assert.ok(equipment.every((item) => !('photo' in item) && !('photos' in item)), 'source photos must stay outside the shared file');
@@ -71,7 +75,7 @@ test('one shared HTML contains only the site model with inline resources', () =>
 test('the shared catalog preserves original identities and physical levels while exposing a same-height roof service selector', () => {
   const equipment = JSON.parse(documents.site.match(/^const EQUIPMENT = (\[[^\n]+\]);$/m)[1]);
   const floors = JSON.parse(documents.site.match(/^const FLOORS = (\[[^\n]+\]);$/m)[1]);
-  assert.equal(equipment.length, 47);
+  assert.equal(equipment.length, 48);
   assert.deepEqual(equipment.map(({ id }) => id), EQUIPMENT.map(({ id }) => id));
   assert.deepEqual(floors.map(({ id }) => id), [1, 2, 3, 4, 5, 6, 7, 8]);
   assert.equal(floors.find(({ id }) => id === 2).displayLevel, 1.5, 'the canonical integer floor key carries the current 1.5층 name');

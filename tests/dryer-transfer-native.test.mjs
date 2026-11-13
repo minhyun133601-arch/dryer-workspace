@@ -65,7 +65,7 @@ test('two visible carton machine silhouettes fill separate bays with a real belt
     for(const [i,x]of [[1,-5.3],[2,-1.6]]){
       const machine=find(root,`observed-carton-machine-${i}`),p=machine.getWorldPosition(new THREE.Vector3());
       assert.ok(Math.abs(p.x-x)<1e-5&&Math.abs(p.z-10.3)<1e-5);
-      assert.ok(bounds(machine).max.y<3.0,'the carton stations fit below the gallery');
+      assert.ok(bounds(machine).max.y<DRYER_BUILDING_FLOORS[2].elevation-.16-.05,'the observed upright motor and cable loop retain clearance below the real gallery slab underside');
       const target=machine.localToWorld(new THREE.Vector3(0,.81,-1.8)),direction=new THREE.Vector3(0,0,1).transformDirection(machine.matrixWorld);
       const frame=all(machine,'observed-carton-machine-body');
       assert.equal(new THREE.Raycaster(target,direction,0,3.6).intersectObjects(frame,true).length,0,'side cabinets do not fill the belt corridor through the carton machine');

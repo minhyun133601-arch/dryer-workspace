@@ -136,12 +136,7 @@ export function buildPreparationEnvironment(s, environment, spec) {
   const daily = group(architectureFixtures, 'daily-raw-material-storage');
   for (const [x, z, tiers, color] of [[29.2, -2.55, 6, 'paper'], [33.1, -2.5, 6, 'white'], [33.15, 3.65, 4, 'paper']]) palletStack(daily, x, z, tiers, color);
   const weigh = group(architectureFixtures, 'weighing-raw-material-storage');
-  for (const [x, z, tiers, color] of [[20.2, -2.6, 3, 'white'], [22, -2.6, 5, 'paper'], [24, -2.6, 5, 'white'], [26.35, 3.5, 4, 'paper']]) palletStack(weigh, x, z, tiers, color);
-  const highWindow = group(facade, 'raw-rooms-high-partition-window', [28.2, 3.9, 2.6]);
-  highWindow.userData.sourceTimesSeconds = [45,47];
-  box(highWindow, [.035,1.38,1.36], [0,0,0], 'glass');
-  for (const y of [-.7,.7]) box(highWindow, [.1,.045,1.46], [0,y,0], 'trim');
-  for (const z of [-.7,0,.7]) box(highWindow, [.1,1.4,.045], [0,0,z], 'trim');
+  for (const [x, z, tiers, color] of [[20.2, -2.6, 3, 'white'], [22, -2.6, 5, 'paper'], [24, -2.6, 5, 'white'], [24, 2.8, 4, 'paper']]) palletStack(weigh, x, z, tiers, color);
 
   function ibc(x, z) {
     const root = group(daily, 'caged-ibc', [x, 0, z]);
@@ -195,7 +190,8 @@ export function buildPreparationEnvironment(s, environment, spec) {
     const upper = group(architectureFixtures, `${name}-raised-orange-rapid-door`, position);
     lower.rotation.y = rotation; upper.rotation.y = rotation;
     const wallPlane = name === 'outer' ? .15 : 0, rollPlane = wallPlane - .28;
-    for (const z of [-1.46, 1.46]) {
+    // The guides and operating box remain outside the full curtain width.
+    for (const z of [-1.49, 1.49]) {
       box(lower, [.11, .95, .105], [rollPlane, .475, z]);
       box(upper, [.11, 1.6, .105], [rollPlane, 1.75, z]);
       for(const y of [.65,1.95]) box(upper,[.17,.09,.08],[wallPlane-.145,y,z]);
@@ -214,11 +210,14 @@ export function buildPreparationEnvironment(s, environment, spec) {
       slat.userData.proximityDoor = { enterable: true, groupId: `preparation:${name}-rapid-door`, label: name === 'inner' ? '조제실 안쪽 고속문' : '원료 반입 고속문', accessBasis: 'registered floor-plan opening with modelled room floor on the interior side', kind: 'lift', axis: 'y', closed, open: 2.62 + i * .004,
         trigger: [rollPlane, 0, 0], normal: [-1, 0, 0], width: 2.85, height: 2.4, openDistance: 2.2, closeDistance: 3.1 };
     }
-    box(lower, [.14, .34, .25], [rollPlane-.12, 1.12, 1.52], 'cream');
-    cylinder(lower, .04, .04, [rollPlane-.21, 1.13, 1.52], 'red', 'x');
+    box(lower, [.14, .34, .25], [rollPlane-.12, 1.12, 1.58], 'cream');
+    cylinder(lower, .04, .04, [rollPlane-.21, 1.13, 1.58], 'red', 'x');
     Object.assign(lower.userData, { customArchitecturalDoor: true, doorId: name === 'inner' ? 'raw-inner-shutter' : 'raw-exterior', proximityOperated: true, sourceTimesSeconds: name === 'inner' ? [49, 53] : [30] });
   }
-  rapidDoor([28.6, 0, 4.6], 'inner', Math.PI / 2);
+  // Keep the complete shutter inside the weighing-to-preparation boundary,
+  // clear of the open daily-store approach and the parked pallets.
+  const innerShutter = spec.preparationSurvey.doors.find(door => door.id === 'raw-inner-shutter');
+  rapidDoor([innerShutter.position[0], 0, innerShutter.position[1]], 'inner', Math.PI / 2);
   rapidDoor([34.25, 0, .6], 'outer');
 
   const office = group(architectureFixtures, 'glass-office-furnishings', [25, 0, 18.4]);
@@ -339,9 +338,22 @@ export function buildPreparationEnvironment(s, environment, spec) {
   box(air, [3.16, .025, 1.22], [1.6, .028, .7], 'dark');
   repeats(air, 'air-shower-floor-grating', [.035, .026, 1.19], Array.from({ length: 35 }, (_, i) => [.07 + i * .09, .046, .7]), 'steel');
   const airProcessDoor = doorway('air-shower-process', [28.2, 0, 17.6], 1.15, 2.3, { normal: 'x', style: 'oval', handle: 'pull', sourceTimesSeconds: [165, 170, 480] });
-  doorway('air-shower-hygiene', [31.4, 0, 17.6], 1.15, 2.3, { normal: 'x', style: 'oval', handle: 'pull', angle: -Math.PI / 2, sourceTimesSeconds: [170, 481, 486, 489] });
+  const airHygieneDoor=doorway('air-shower-hygiene', [31.4, 0, 17.6], 1.15, 2.3, { normal: 'x', style: 'oval', handle: 'pull', angle: -Math.PI / 2, sourceTimesSeconds: [170, 481, 486, 489] });
+  const preparationSign=group(airHygieneDoor,'observed-preparation-room-entry-sign',[0,2.48,.045]);
+  box(preparationSign,[.66,.15,.018],[0,0,0],'white');
+  Object.assign(preparationSign.userData,{label:'조제실',sourceReferences:[{clipId:'first-floor-20261113-clip1',seconds:[0,6]}],roomIdentityConfirmed:true});
+  if(typeof document!=='undefined'&&typeof document.createElement==='function'){
+    const signCanvas=document.createElement('canvas');signCanvas.width=512;signCanvas.height=116;
+    const ctx=signCanvas.getContext?.('2d');
+    if(ctx?.fillRect&&ctx?.fillText){
+      ctx.fillStyle='#eff0e8';ctx.fillRect(0,0,512,116);ctx.fillStyle='#263b3a';ctx.font='600 64px "Malgun Gothic",sans-serif';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText('조 제 실',256,58);
+      const texture=new THREE.CanvasTexture(signCanvas);texture.colorSpace=THREE.SRGBColorSpace;s.textures?.add(texture);
+      const paint=new THREE.MeshBasicMaterial({map:texture,toneMapped:false});s.materials.add(paint);
+      s._mesh(geo('preparation-entry-nameplate',()=>new THREE.PlaneGeometry(.64,.145)),paint,preparationSign,[0,0,.011]);
+    }
+  }
   panel(airProcessDoor, [.12, .25, .04], [.69, 1.6, -.06], 'dark');
-  Object.assign(air.userData, { openPassageAxis: 'x', centerLineZ: 17.6, sourceTimesSeconds: [165, 170, 483], firstVisitStayedProcessSide: true, nozzleQuantityRepresentative: true });
+  Object.assign(air.userData, { openPassageAxis: 'x', centerLineZ: 17.6, sourceTimesSeconds: [165, 170, 483], sourceReferences:[{clipId:'first-floor-20261113-clip1',seconds:[0,6,12]}], firstVisitStayedProcessSide: true, nozzleQuantityRepresentative: true });
   const extinguisher = group(architectureFixtures, 'air-shower-extinguisher', [27.85, 0, 18.55]);
   cylinder(extinguisher, .105, .48, [0, .33, 0], 'red'); cylinder(extinguisher, .045, .1, [0, .62, 0], 'dark');
   bar(extinguisher, [0, .6, 0], [.15, .62, 0], .022, 'black');
@@ -384,7 +396,7 @@ export function buildPreparationEnvironment(s, environment, spec) {
   for (const y of [-.11, 0, .11]) { const tube = s._mesh(boxGeo, violet, insectLight, [-.083, y, 0]); tube.scale.set(.02, .018, .42); }
   repeats(insectLight, 'wall-light-grille', [.02, .3, .012], Array.from({ length: 8 }, (_, i) => [-.102, 0, -.21 + i * .06]), 'steel');
   // Lockers occupy the high side under the existing southeast stair; no new stairs.
-  const lockers = group(hygiene, 'under-existing-stair-lockers', [29.35, 0, 19.35]);
+  const lockers = group(hygiene, 'under-existing-stair-lockers', [30.65, 0, 19.35]);
   box(lockers, [3.2, 1.94, .44], [1.1, .98, 0], 'trim');
   const doors = [], tags = [], handles = [];
   for (let col = 0; col < 6; col++) for (let row = 0; row < 5; row++) {
@@ -394,17 +406,22 @@ export function buildPreparationEnvironment(s, environment, spec) {
   repeats(lockers, 'locker-dark-doors', [.46, .33, .023], doors, 'dark');
   repeats(lockers, 'anonymous-locker-tags', [.14, .035, .008], tags, 'white');
   repeats(lockers, 'locker-handles', [.025, .09, .022], handles, 'steel');
-  for (const x of [28.6, 29.05]) {
-    box(hygiene, [.4, 1.85, .47], [x, .94, 19.35], 'cream');
-    box(hygiene, [.33, 1.7, .022], [x, .94, 19.1], 'wood');
-    cylinder(hygiene, .025, .035, [x + .11, .94, 19.07], 'dark', 'z');
+  // These tall cupboards belong outside the chamber, under the high stair
+  // flight. The former estimate straddled the air-shower wall and protruded
+  // into its interior; simply moving south would hit the return landing.
+  const tallCupboards=group(hygiene,'under-stair-tall-cupboards');
+  Object.assign(tallCupboards.userData,{observedCount:2,positionEstimated:true,placementBasis:'under existing high stair flight, beside the filmed storage and outside the air-shower shell'});
+  for (const x of [30.1, 30.55]) {
+    box(tallCupboards, [.4, 1.85, .47], [x, .94, 18.75], 'cream');
+    box(tallCupboards, [.33, 1.7, .022], [x, .94, 18.5], 'wood');
+    cylinder(tallCupboards, .025, .035, [x + .11, .94, 18.47], 'dark', 'z');
   }
   panel(hygiene, [.68, 1.15, .02], [32.9, 1.3, 19.05], 'white');
   box(hygiene, [.68, .08, .025], [32.9, 1.86, 19.035], 'blue');
 
   // 11/12 walk100–114s: the small table and two clear lidded boxes stand
   // beside the locker bank under the upper flight, outside the lower run.
-  const entryTable=group(hygiene,'entry-folding-table-and-storage-boxes',[32.75,.085,19.3]);
+  const entryTable=group(hygiene,'entry-folding-table-and-storage-boxes',[29.45,.085,19.3]);
   Object.assign(entryTable.userData,{source:'dryer-entrance-mezzanine-20261112',sourceTimesSeconds:[100,102,114],observedStorageBoxCount:2,movableContext:true});
   box(entryTable,[1.1,.035,.5],[0,.65,0],'cream');
   for(const x of [-.44,.44])for(const z of [-.18,.18])box(entryTable,[.035,.63,.035],[x,.315,z],'white');

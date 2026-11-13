@@ -18,10 +18,45 @@ import { buildPackagingEnvironment, buildPackagingEquipment } from './packaging-
 import { PLACEMENT_RULES, PLACEMENT_REGIONS, constrainPlacement, toRoomPosition, fromRoomPosition, rotatedFootprint } from './placement-rules.js';
 import { WALK_RULES, createPersonState, advancePerson, lookPerson, isPersonPositionFree } from './person-walk.js';
 import { createProximityDoorController } from './proximity-doors.js';
+import { buildPersonAvatar } from './person-avatar.js';
 
 const TAU = Math.PI * 2;
 const Y = new THREE.Vector3(0, 1, 0);
 const clamp = THREE.MathUtils.clamp;
+
+// Narrow-phase walking collision uses the rendered triangles, rather than an
+// equipment group's bounding box (which can contain a real room or stair).
+const personTriangle = new THREE.Triangle(), personClosest = new THREE.Vector3(), personPlane = new THREE.Plane();
+const personDelta = new THREE.Vector3(), personIntersection = new THREE.Vector3();
+function personSegmentDistanceSq(p, q, a, b) {
+  const ux=q.x-p.x,uy=q.y-p.y,uz=q.z-p.z,vx=b.x-a.x,vy=b.y-a.y,vz=b.z-a.z,wx=p.x-a.x,wy=p.y-a.y,wz=p.z-a.z;
+  const aa=ux*ux+uy*uy+uz*uz,bb=ux*vx+uy*vy+uz*vz,cc=vx*vx+vy*vy+vz*vz,dd=ux*wx+uy*wy+uz*wz,ee=vx*wx+vy*wy+vz*wz;
+  if(aa<1e-14&&cc<1e-14)return wx*wx+wy*wy+wz*wz;
+  let s=aa<1e-14?0:cc<1e-14?clamp(-dd/aa,0,1):Math.abs(aa*cc-bb*bb)>1e-14?clamp((bb*ee-cc*dd)/(aa*cc-bb*bb),0,1):0;
+  let t=cc<1e-14?0:(bb*s+ee)/cc;
+  if(t<0){t=0;s=aa<1e-14?0:clamp(-dd/aa,0,1);}else if(t>1){t=1;s=aa<1e-14?0:clamp((bb-dd)/aa,0,1);}
+  const x=wx+s*ux-t*vx,y=wy+s*uy-t*vy,z=wz+s*uz-t*vz;return x*x+y*y+z*z;
+}
+function personTriangleDistanceSq(start,end,a,b,c) {
+  personTriangle.set(a,b,c);personTriangle.getPlane(personPlane);personDelta.subVectors(end,start);
+  const denominator=personPlane.normal.dot(personDelta);
+  if(Math.abs(denominator)>1e-12){const t=-personPlane.distanceToPoint(start)/denominator;if(t>=0&&t<=1&&personTriangle.containsPoint(personIntersection.copy(start).addScaledVector(personDelta,t)))return 0;}
+  return Math.min(personTriangle.closestPointToPoint(start,personClosest).distanceToSquared(start),personTriangle.closestPointToPoint(end,personClosest).distanceToSquared(end),personSegmentDistanceSq(start,end,a,b),personSegmentDistanceSq(start,end,b,c),personSegmentDistanceSq(start,end,c,a));
+}
+function personInsideCollider(collider,world,local,a,b,c) {
+  const geometry=collider.mesh.geometry,p=geometry.parameters||{};
+  local.copy(world).applyMatrix4(collider.inverse);
+  if(!geometry.boundingBox.containsPoint(local))return false;
+  if(geometry.type==='BoxGeometry')return true;
+  if(geometry.type==='CylinderGeometry'&&!p.openEnded&&p.thetaLength>=TAU-1e-6){const radius=p.radiusBottom+(p.radiusTop-p.radiusBottom)*(local.y/p.height+.5);return Math.hypot(local.x,local.z)<radius;}
+  if(geometry.type==='SphereGeometry'&&p.phiLength>=TAU-1e-6&&p.thetaLength>=Math.PI-1e-6)return local.lengthSq()<p.radius*p.radius;
+  if(geometry.type==='TorusGeometry'&&p.arc>=TAU-1e-6)return (Math.hypot(local.x,local.y)-p.radius)**2+local.z*local.z<p.tube*p.tube;
+  const profile=p.points;
+  if(geometry.type!=='ExtrudeGeometry'&&!(geometry.type==='LatheGeometry'&&profile?.[0]?.x<1e-6&&profile.at(-1)?.x<1e-6))return false;
+  const ray=new THREE.Ray(world,new THREE.Vector3(1,.371,.217).normalize()),hits=[];
+  for(let i=0;i<collider.vertices.length;i+=9){a.fromArray(collider.vertices,i);b.fromArray(collider.vertices,i+3);c.fromArray(collider.vertices,i+6);if(ray.intersectTriangle(a,b,c,false,personIntersection))hits.push(world.distanceTo(personIntersection));}
+  hits.sort((x,y)=>x-y);return hits.filter((distance,i)=>!i||distance-hits[i-1]>1e-6).length%2===1;
+}
 
 // Dimensions and connections are illustrative. Photo observations live in data.js.
 export function createFacilityScene(canvas, options = {}) {
@@ -29,16 +64,19 @@ export function createFacilityScene(canvas, options = {}) {
 }
 
 class FacilityScene {
-  constructor(canvas, { equipment = [], floor = 7, packagingLevel = 'all', enabledAreas = ['dryer', 'outdoor', 'campus', 'packaging'], personEnabled = true, survey = [], onTransformChange = () => {}, onSurveyPhoto = () => {}, onSelect = () => {}, onViewChange = () => {}, onFloorChange = () => {}, onPackagingLevelChange = () => {}, onNavigationChange = () => {}, onDoorInteraction = () => {} } = {}) {
+  constructor(canvas, { equipment = [], floor = 7, packagingLevel = 'all', enabledAreas = ['dryer', 'outdoor', 'campus', 'packaging'], personEnabled = true, controlledPresentation = false, includeAdjacentBoilerRoom = false, survey = [], onTransformChange = () => {}, onSurveyPhoto = () => {}, onSelect = () => {}, onViewChange = () => {}, onFloorChange = () => {}, onPackagingLevelChange = () => {}, onNavigationChange = () => {}, onDoorInteraction = () => {} } = {}) {
     this.canvas = canvas;
-    this.enabledAreas = new Set(enabledAreas);
+    this.presentationOnly = !!controlledPresentation;
+    this.presentationInspection = false;
+    this.enabledAreas = new Set(this.presentationOnly ? ['dryer'] : enabledAreas);
     this.personEnabled = !!personEnabled;
+    this.controlledPresentation = !!controlledPresentation;
     this.autoOpenDoors = false; this.personViewScale = 1;
     this.onDoorInteraction = onDoorInteraction;
     // A floor owns the vertical datum. Legacy photo-layout items have no floor
     // field and must stay on the seventh-floor drawing instead of world Y=0.
-    this.equipment = equipment.filter(item => this._areaEnabled(typeof item.floor === 'string' ? item.floor : 'dryer') &&
-      (this._areaEnabled('campus') || !item.samePhysicalRoomAs?.startsWith('campus-'))).map((item) => {
+    this.equipment = equipment.filter(item => (!this.presentationOnly || ([1, 2, 3, 4, 5, 6, 7, 8].includes(item.floor) && item.id !== 'f1-boiler-room' && !item.samePhysicalRoomAs)) && this._areaEnabled(typeof item.floor === 'string' ? item.floor : 'dryer') &&
+      (this._areaEnabled('campus') || !item.samePhysicalRoomAs?.startsWith('campus-') || (includeAdjacentBoilerRoom && !this.presentationOnly && item.id === 'f1-boiler-room'))).map((item) => {
       const level = item.floor ?? 7;
       return { ...item, floor: level, position: [item.position[0], ['outdoor', 'campus', 'packaging'].includes(level) ? item.position[1] : floorElevation(level), item.position[2]] };
     });
@@ -153,7 +191,7 @@ class FacilityScene {
     this._draw();
   }
 
-  _areaEnabled(area) { return !this.enabledAreas || this.enabledAreas.has(area); }
+  _areaEnabled(area) { return this.presentationOnly ? area === 'dryer' : !this.enabledAreas || this.enabledAreas.has(area); }
 
   _material(color, roughness = .55, metalness = .1, extra = {}) {
     const material = new THREE.MeshStandardMaterial({ color, roughness, metalness, ...extra });
@@ -708,29 +746,8 @@ class FacilityScene {
 
   _personModel() {
     if (this.personEnabled === false) return;
-    const root = this._group(this.scene);
-    root.name = 'facility-person';
-    const blue = this._material(0x267bb5), dark = this._material(0x244253), skin = this._material(0xe8b78e), helmet = this._material(0xffcd53);
-    this._box(root, [.4, .58, .24], [0, 1.08, 0], blue);
-    this._mesh(new THREE.SphereGeometry(.15, 14, 10), skin, root, [0, 1.56, 0]);
-    this._mesh(new THREE.SphereGeometry(.17, 14, 10, 0, TAU, 0, Math.PI / 2), helmet, root, [0, 1.58, 0]);
-    this._box(root, [.38, .045, .31], [0, 1.58, -.035], helmet);
-    this.personLimbs = [];
-    for (const side of [-1, 1]) {
-      const arm = this._group(root, [side * .27, 1.3, 0]);
-      this._box(arm, [.12, .45, .14], [0, -.21, 0], blue);
-      this._mesh(new THREE.SphereGeometry(.065, 10, 8), skin, arm, [0, -.46, 0]);
-      const leg = this._group(root, [side * .115, .79, 0]);
-      this._box(leg, [.16, .64, .18], [0, -.31, 0], dark);
-      this._box(leg, [.18, .12, .29], [0, -.71, -.045], dark);
-      this.personLimbs.push({ arm, leg, side });
-    }
-    const ring = this._mesh(new THREE.RingGeometry(.48, .58, 32), blue, root, [0, .025, 0]);
-    ring.rotation.x = -Math.PI / 2;
-    const arrow = this._mesh(new THREE.ConeGeometry(.17, .44, 3), helmet, root, [0, .045, -.82]);
-    arrow.rotation.x = -Math.PI / 2;
-    root.traverse((node) => { node.userData.person = true; });
-    this.personAvatar = root;
+    const { root, limbs } = buildPersonAvatar(this);
+    this.personAvatar = root; this.personLimbs = limbs;
     this.personMarker = document.createElement('span');
     this.personMarker.className = 'person-marker'; this.personMarker.textContent = '사람';
     this.personMarker.setAttribute('aria-hidden', 'true'); this.personMarker.hidden = true;
@@ -739,26 +756,28 @@ class FacilityScene {
 
   _personFrame() {
     if (this.activeFloor === 'campus') return PLACEMENT_REGIONS.campus;
-    if (this.activeFloor === 'outdoor') return PLACEMENT_REGIONS.outdoor;
+    if (this.activeFloor === 'outdoor') {
+      // The modelled 100RT rear service apron is part of the same walking
+      // space, although equipment placement uses a separate registration box.
+      const room=PLACEMENT_REGIONS.outdoor,apron=PLACEMENT_REGIONS.apron;
+      return apron?{...room,minX:Math.min(room.minX,apron.minX),maxX:Math.max(room.maxX,apron.maxX),minZ:Math.min(room.minZ,apron.minZ),maxZ:Math.max(room.maxZ,apron.maxZ)}:room;
+    }
     if (this.activeFloor === 'packaging') return this._packagingRoom().bounds || PLACEMENT_REGIONS.packaging;
     if (this.activeFloor === 8) return PLACEMENT_REGIONS.roof;
     return typeof this.activeFloor === 'number' && this.activeFloor >= 3 ? PLACEMENT_REGIONS.upper : PLACEMENT_REGIONS.building;
   }
 
   _personWalkLimits() {
-    // Inspection can cross walls in every space. Ground support is resolved
-    // separately, so this freedom does not turn the walking view into flight.
-    return undefined;
+    return this._personFrame();
   }
 
   _dryerRouteContextLevels() {
     if (this.isolated || this.placementMode || ![1, 2, 3].includes(this.activeFloor)) return [];
-    const route = FLOORS.filter(floor => [1, 2, 3].includes(floor.id) && floor.routeSurvey).map(floor => floor.id);
-    if (this.view === 'person') return route;
-    // The mezzanine's observation windows look down into the actual 1F hall.
-    // A plan view keeps its own floor clear for reading room boundaries.
-    if (this.activeFloor === 2 && ['perspective', 'aisle'].includes(this.view)) return route.filter(level => level <= 2);
-    return [];
+    // Floor cutaways show only their own deck, rooms and equipment. Keep the
+    // adjoining levels at their real elevations only while walking through
+    // the stairs or looking down through the mezzanine's observation windows.
+    if (this.view !== 'person') return [];
+    return FLOORS.filter(floor => [1, 2, 3].includes(floor.id) && floor.routeSurvey).map(floor => floor.id);
   }
 
   _personSupportMeshes() {
@@ -854,45 +873,112 @@ class FacilityScene {
   }
 
   _personObstacles() {
-    const outdoor = this.activeFloor === 'outdoor', roomAngle = outdoor ? OUTDOOR_ROOM.rotation : 0;
-    const level = this.activeFloor === 'all' ? 1 : this.activeFloor;
-    const ground = this.person?.position[1] ?? (typeof level === 'number' ? floorElevation(level) : 0);
-    const routeLevels = this._dryerRouteContextLevels();
-    const key = `${this.activeFloor}:${this.activeFloor === 'packaging' ? this.getPackagingLevel() : ''}:${routeLevels.join(',')}:${ground}`;
-    if (this.personObstacleCache && this.personObstacleCacheKey === key) return this.personObstacleCache;
-    this.scene.updateMatrixWorld(true);
-    const obstacles = [];
-    for (const item of this.equipment) {
-      if ((item.floor !== level && !routeLevels.includes(item.floor)) || (item.floor === 'packaging' && (item.floorLevel ?? 3) !== (this.getPackagingLevel() === 'all' ? 1 : this.getPackagingLevel())) || item.id === 'campus-outdoor-area') continue;
-      const footprint = this.placementFootprints.get(item.id);
-      if (!footprint) continue;
-      if (routeLevels.length) {
-        const object = this.objects.get(item.id), bounds = object && new THREE.Box3().setFromObject(object);
-        if (bounds && !bounds.isEmpty() && (bounds.max.y < ground + .35 || bounds.min.y > ground + WALK_RULES.eyeHeight)) continue;
-      }
-      const extent = rotatedFootprint(footprint, item.rotation || 0, roomAngle);
-      const p = outdoor ? toRoomPosition(item.position, OUTDOOR_ROOM) : item.position;
-      obstacles.push({ minX: p[0] + extent.minX, maxX: p[0] + extent.maxX, minZ: p[2] + extent.minZ, maxZ: p[2] + extent.maxZ });
-    }
-    // Low structural meshes include walls and columns. High beams and thin
-    // floor plates do not block a person at the floor's eye height.
-    const structures = new Set([this.activeFloor === 'packaging' ? this.packaging?.structure : this.floorStructures?.get(level)]);
-    const building = this.buildingEnvironments?.get(level), upper = this.upperEnvironments?.get(level);
-    structures.add(building?.facade); structures.add(upper?.facade);
-    for (const contextLevel of routeLevels) {
-      const environment = this.buildingEnvironments?.get(contextLevel);
-      structures.add(environment?.structure); structures.add(environment?.facade);
-    }
-    for (const structure of structures) structure?.traverse((mesh) => {
-      if (!mesh.isMesh) return;
-      const box = new THREE.Box3().setFromObject(mesh);
-      if (box.isEmpty() || box.max.y < ground + .35 || box.min.y > ground + WALK_RULES.eyeHeight || box.max.y - box.min.y < .25) return;
-      const corners = [[box.min.x, ground, box.min.z], [box.max.x, ground, box.min.z], [box.min.x, ground, box.max.z], [box.max.x, ground, box.max.z]]
-        .map((point) => outdoor ? toRoomPosition(point, OUTDOOR_ROOM) : point);
-      obstacles.push({ minX: Math.min(...corners.map(p => p[0])), maxX: Math.max(...corners.map(p => p[0])), minZ: Math.min(...corners.map(p => p[2])), maxZ: Math.max(...corners.map(p => p[2])) });
+    const ground=this.person?.position[1]??0;
+    return this._personCollisionBodies().flatMap(body=>this._personCollisionInstances(body)).filter(body=>body.bounds.max.y>ground+.03&&body.bounds.min.y<ground+WALK_RULES.height).map(body=>{
+      const corners=[[body.bounds.min.x,ground,body.bounds.min.z],[body.bounds.max.x,ground,body.bounds.min.z],[body.bounds.min.x,ground,body.bounds.max.z],[body.bounds.max.x,ground,body.bounds.max.z]].map(point=>this.activeFloor==='outdoor'?toRoomPosition(point,OUTDOOR_ROOM):point);
+      return {minX:Math.min(...corners.map(p=>p[0])),maxX:Math.max(...corners.map(p=>p[0])),minZ:Math.min(...corners.map(p=>p[2])),maxZ:Math.max(...corners.map(p=>p[2]))};
     });
-    this.personObstacleCacheKey = key;
-    return this.personObstacleCache = obstacles;
+  }
+
+  _personCollisionBodies() {
+    this.scene.updateMatrixWorld(true);
+    const level = this.activeFloor === 'all' ? 1 : this.activeFloor;
+    const routeLevels=this._dryerRouteContextLevels(),levels=new Set([level,...routeLevels]);
+    if(this.activeFloor==='all')for(const floor of FLOORS)levels.add(floor.id);
+    if(level===7){levels.add(6);levels.add(8);}else if(level===6)levels.add(7);
+    const key=`${this.activeFloor}:${this.activeFloor==='packaging'?this.getPackagingLevel():''}:${[...levels]}`;
+    let cache=this.personCollisionMeshCache;
+    if(!cache||cache.key!==key){
+      const roots=new Set([this.floorDecks?.get(level),this.floorStructures?.get(level)]);
+      const addEnvironment=environment=>{for(const root of Object.values(environment||{}))if(root?.isObject3D)roots.add(root);};
+      for(const floor of levels){addEnvironment(this.buildingEnvironments?.get(floor));addEnvironment(this.upperEnvironments?.get(floor));}
+      if(level==='campus')addEnvironment(this.campus);
+      if(level==='outdoor')addEnvironment(this.outdoor);
+      if(level==='packaging'){
+        if(this.getPackagingLevel()==='all')for(const environment of this.packagingEnvironments?.values()||[])addEnvironment(environment);
+        else addEnvironment(this.packaging);
+      }
+      for(const item of this.equipment||[]){
+        if(!levels.has(item.floor)||item.id==='campus-outdoor-area'||(level==='packaging'&&this.getPackagingLevel()!=='all'&&(item.floorLevel??3)!==this.getPackagingLevel()))continue;
+        roots.add(this.objects?.get(item.id));
+      }
+      const bodies=[],seen=new Set();
+      for(const root of roots)root?.traverse(mesh=>{
+        if(!mesh.isMesh||seen.has(mesh)||!mesh.geometry?.attributes?.position||mesh.userData.personCollision===false)return;
+        for(let node=mesh;node;node=node.parent)if(node.userData.preparationEnvelopeOmitted||node.userData.personCollision===false)return;
+        // Text/decal planes are annotations, while transparent physical glass
+        // and door glazing still take part in collision.
+        const paints=Array.isArray(mesh.material)?mesh.material:[mesh.material];
+        if(paints.every(p=>!p||p.visible===false)||(mesh.geometry.type==='PlaneGeometry'&&paints.every(p=>p?.isMeshBasicMaterial&&p.map&&p.transparent&&p.depthWrite===false)))return;
+        let stepDetail=/architectural-stair-(?:nosing|riser)|packaging-building-stair-nosing/.test(mesh.name);
+        for(let node=mesh;node&&node!==root;node=node.parent)if(node.name==='preparation-platform-cream-beams-and-column-haunches')stepDetail=true;
+        seen.add(mesh);bodies.push({mesh,root,stepDetail,matrix:new THREE.Matrix4().set(...Array(16).fill(0)),bounds:new THREE.Box3(),instances:null});
+      });
+      cache=this.personCollisionMeshCache={key,bodies};
+    }
+    for(const body of cache.bodies){
+      if(body.matrix.equals(body.mesh.matrixWorld))continue;
+      body.matrix.copy(body.mesh.matrixWorld);body.instances=null;
+      if(body.mesh.isInstancedMesh){body.mesh.computeBoundingBox();body.bounds.copy(body.mesh.boundingBox).applyMatrix4(body.matrix);}
+      else {body.mesh.geometry.computeBoundingBox();body.bounds.copy(body.mesh.geometry.boundingBox).applyMatrix4(body.matrix);}
+    }
+    return cache.bodies;
+  }
+
+  _personCollisionInstances(body) {
+    if(body.instances)return body.instances;
+    const instances=[],temporary=new THREE.Matrix4();
+    for(let index=0;index<(body.mesh.isInstancedMesh?body.mesh.count:1);index++){
+      const matrix=body.matrix.clone();if(body.mesh.isInstancedMesh){body.mesh.getMatrixAt(index,temporary);matrix.multiply(temporary);}
+      instances.push({mesh:body.mesh,stepDetail:body.stepDetail,matrix,inverse:matrix.clone().invert(),bounds:body.mesh.geometry.boundingBox.clone().applyMatrix4(matrix),vertices:null});
+    }
+    return body.instances=instances;
+  }
+
+  _personBodyPenetrations(position,bodies,supports) {
+    const world=this.activeFloor==='outdoor'?fromRoomPosition(position,OUTDOOR_ROOM):[...position];
+    if(this.activeFloor==='packaging')world[1]+=this._packagingDisplayOffset({floor:'packaging',floorLevel:this.getPackagingLevel()==='all'?1:this.getPackagingLevel()});
+    const radius=WALK_RULES.radius-.002,feet=new THREE.Vector3(...world),start=feet.clone().addScaledVector(Y,WALK_RULES.radius),end=feet.clone().addScaledVector(Y,WALK_RULES.height-WALK_RULES.radius);
+    const bodyBounds=new THREE.Box3(new THREE.Vector3(world[0]-radius,world[1]+.015,world[2]-radius),new THREE.Vector3(world[0]+radius,world[1]+WALK_RULES.height,world[2]+radius));
+    const a=new THREE.Vector3(),b=new THREE.Vector3(),c=new THREE.Vector3(),point=new THREE.Vector3(),result=new Map();
+    for(const body of bodies){
+      if(!body.bounds.intersectsBox(bodyBounds))continue;
+      for(const collider of this._personCollisionInstances(body)){
+        // The same reachable-step allowance applies to low door thresholds,
+        // floor markings and small floor-level fittings, not only stair treads.
+        if(!collider.bounds.intersectsBox(bodyBounds)||collider.bounds.max.y<=world[1]+WALK_RULES.maxStep+.001)continue;
+        // Reachable tread noses and risers enter the lower leg space before
+        // the support sample reaches their centre; railings remain solid.
+        if((supports.has(collider.mesh)||collider.stepDetail)&&collider.bounds.max.y<=world[1]+WALK_RULES.maxStep+WALK_RULES.radius+.01)continue;
+        if(!collider.vertices){
+          const attr=collider.mesh.geometry.attributes.position,index=collider.mesh.geometry.index,count=index?index.count:attr.count;
+          collider.vertices=new Float64Array(count*3);
+          for(let i=0;i<count;i++){point.fromBufferAttribute(attr,index?index.getX(i):i).applyMatrix4(collider.matrix);point.toArray(collider.vertices,i*3);}
+        }
+        const vertices=collider.vertices;
+        const inside=personInsideCollider(collider,point.copy(start).lerp(end,.5),new THREE.Vector3(),a,b,c);
+        let distance=Infinity;
+        for(let i=0;i<vertices.length;i+=9){
+          a.fromArray(vertices,i);b.fromArray(vertices,i+3);c.fromArray(vertices,i+6);
+          if(!inside&&(Math.max(a.y,b.y,c.y)<world[1]-.01||Math.min(a.y,b.y,c.y)>world[1]+WALK_RULES.height||Math.max(a.x,b.x,c.x)<bodyBounds.min.x||Math.min(a.x,b.x,c.x)>bodyBounds.max.x||Math.max(a.z,b.z,c.z)<bodyBounds.min.z||Math.min(a.z,b.z,c.z)>bodyBounds.max.z))continue;
+          distance=Math.min(distance,personTriangleDistanceSq(start,end,a,b,c));
+        }
+        // A moved solid box may already contain the avatar. Distinguish its
+        // interior from an empty room-shaped group so escape can reduce the
+        // overlap without permitting a crossing to the opposite wall.
+        if(distance<radius*radius-1e-8||inside)result.set(collider,inside?radius+Math.sqrt(distance):radius-Math.sqrt(distance));
+      }
+    }
+    return result;
+  }
+
+  _personCanOccupy(position,previous,bodies=this._personCollisionBodies(),supports=new Set(this._personSupportMeshes())) {
+    const next=this._personBodyPenetrations(position,bodies,supports);
+    if(!next.size)return true;
+    if(!previous)return false;
+    const before=this._personBodyPenetrations(previous,bodies,supports);
+    for(const [body,depth]of next)if(!before.has(body)||!(depth<before.get(body)-1e-6))return false;
+    return true;
   }
 
   _ensurePerson() {
@@ -922,14 +1008,15 @@ class FacilityScene {
       else position = [Math.min(frame.maxX - 1, 5.5), position[1], frame.maxZ - 1.2];
     }
     this.person = createPersonState({ position, yaw }); this.personObstacleCache = null;
-    const obstacles = this._personObstacles();
+    const bodies=this._personCollisionBodies(),supports=new Set(this._personSupportMeshes());
     // Search from the entrance for a clear footprint, including after the user
     // has moved equipment. Never start the eye inside a machine or wall.
-    if (!isPersonPositionFree(position, { bounds: frame, obstacles })) {
+    const available=candidate=>isPersonPositionFree(candidate,{bounds:frame})&&this._personCanOccupy(candidate,null,bodies,supports);
+    if (!available(position)) {
       const candidates = [];
       for (let x = frame.minX + .6; x <= frame.maxX - .6; x += .8) for (let z = frame.minZ + .6; z <= frame.maxZ - .6; z += .8) candidates.push([x, position[1], z]);
       candidates.sort((a, b) => Math.hypot(a[0] - position[0], a[2] - position[2]) - Math.hypot(b[0] - position[0], b[2] - position[2]));
-      const free = candidates.find((candidate) => isPersonPositionFree(candidate, { bounds: frame, obstacles }));
+      const free = candidates.find(available);
       if (free) this.person = createPersonState({ position: free, yaw });
     }
     this.personStride = 0; this.personEyeY = null; this._updatePersonCamera();
@@ -981,7 +1068,7 @@ class FacilityScene {
   _updateProximityDoors(elapsed) {
     if (!this.proximityDoors) return false;
     const position = this.person && this.view === 'person' && !this.placementMode && !this.isolated ? this._personWorldPosition() : null;
-    const animating=this.proximityDoors.update(position, elapsed, { autoOpen: !!this.autoOpenDoors, reducedMotion: this.reducedMotion });
+    const animating=this.proximityDoors.update(position, elapsed, { autoOpen: !(this.presentationOnly || this.controlledPresentation) && !!this.autoOpenDoors, reducedMotion: this.reducedMotion });
     this._syncDoorInteraction(position);
     return animating;
   }
@@ -998,7 +1085,7 @@ class FacilityScene {
   }
 
   setAutomaticDoors(value) {
-    this.autoOpenDoors=!!value;this._doorInteractionKey=null;this._updateProximityDoors(0);this._invalidate();
+    this.autoOpenDoors=!(this.presentationOnly || this.controlledPresentation) && !!value;this._doorInteractionKey=null;this._updateProximityDoors(0);this._invalidate();
   }
 
   interactDoor() {
@@ -1008,11 +1095,81 @@ class FacilityScene {
     this._syncDoorInteraction(position);if(changed)this._invalidate();return changed;
   }
 
+  getPresentationDoorState(nextPose) {
+    if (!(this.presentationOnly || this.controlledPresentation) || !this.person || this.view !== 'person' || this.disposed) return null;
+    const valid = value => Array.isArray(value) && value.length === 3 && value.every(Number.isFinite);
+    if (nextPose && nextPose.floor !== this.activeFloor) return null;
+    const current = this._personWorldPosition().toArray();
+    const next = valid(nextPose?.position) ? nextPose.position : current;
+    const facing = valid(nextPose?.lookAt) ? new THREE.Vector3(nextPose.lookAt[0]-next[0],0,nextPose.lookAt[2]-next[2]).normalize() : new THREE.Vector3(...this._personDoorDirection());
+    let nearest = null;
+    for (const door of this.proximityDoors?.getPassages?.({ includeAll: true }) || []) {
+      const p = door.point, n = new THREE.Vector3(door.normal[0],0,door.normal[2]).normalize();
+      if (n.lengthSq() < .5 || Math.abs(current[1]-p[1]) > Math.min(1.3,door.height/2+.2)) continue;
+      const distance = Math.hypot(current[0]-p[0],current[2]-p[2]);
+      if (distance > (door.interactionDistance || 2.2)) continue;
+      const da = (current[0]-p[0])*n.x+(current[2]-p[2])*n.z;
+      const db = (next[0]-p[0])*n.x+(next[2]-p[2])*n.z;
+      const lateral = (current[0]-p[0])*-n.z+(current[2]-p[2])*n.x;
+      const toward = new THREE.Vector3(p[0]-current[0],0,p[2]-current[2]).normalize();
+      const ahead = facing.lengthSq() > .5 && toward.dot(facing) > .55;
+      const aligned = Math.abs(lateral) <= door.width/2+.08;
+      let crossing = false;
+      if (da*db <= 0 && Math.abs(da-db) > 1e-8) {
+        const fraction = da/(da-db);
+        const x = current[0]+fraction*(next[0]-current[0]), z = current[2]+fraction*(next[2]-current[2]);
+        crossing = Math.abs((x-p[0])*-n.z+(z-p[2])*n.x) <= door.width/2+.08;
+      }
+      // Leave room for a hinged leaf to sweep past the person's 0.3m body
+      // radius before the explicit presentation action starts opening it.
+      const waitingDistance = 1.35;
+      const towardPlane = aligned && Math.abs(db) < Math.abs(da)-1e-6;
+      if (nextPose && !crossing && !towardPlane) continue;
+      const approaching = towardPlane && Math.min(Math.abs(da),Math.abs(db)) <= waitingDistance;
+      const inFront = aligned && ahead && Math.abs(da) <= waitingDistance;
+      const blocked = !door.open && (crossing || approaching || inFront);
+      // Only the doorway on the walking line opens ahead. Passing along a
+      // corridor must not open side-room doors such as the dressing room.
+      if (!blocked && !(aligned && ahead) && !door.requestedOpen) continue;
+      const state = { id:door.id,label:door.label,action:door.action,blocked,distance,open:door.open,progress:door.progress };
+      if (!nearest || (blocked && !nearest.blocked) || (blocked === nearest.blocked && distance < nearest.distance)) nearest = state;
+    }
+    return nearest;
+  }
+
+  interactPresentationDoor(id = this.getPresentationDoorState()?.id) {
+    if (!(this.presentationOnly || this.controlledPresentation) || !this.person || this.view !== 'person' || this.disposed || !id) return false;
+    const position = this._personWorldPosition();
+    const door = this.proximityDoors?.getPassages?.({ includeAll: true }).find(item => item.id === id);
+    if (!door || Math.abs(position.y-door.point[1]) > Math.min(1.3,door.height/2+.2) || Math.hypot(position.x-door.point[0],position.z-door.point[2]) > (door.interactionDistance || 2.2)) return false;
+    const changed = this.proximityDoors.toggleById(id);
+    this._syncDoorInteraction(position); if (changed) this._invalidate();
+    return changed;
+  }
+
+  resetPresentationDoors() {
+    if (!this.presentationOnly || this.disposed) return false;
+    this.proximityDoors?.reset();
+    this.autoOpenDoors = false; this._doorInteractionKey = null;
+    this._invalidate();
+    return true;
+  }
+
   setPersonViewScale(value) {
     const scale=Number(value);if(!Number.isFinite(scale))return false;
     this.personViewScale=clamp(scale,.75,1.25);
-    if(this.personCamera){this.personCamera.fov=2*Math.atan(Math.tan(70*Math.PI/360)/this.personViewScale)*180/Math.PI;this.personCamera.updateProjectionMatrix();}
+    this._syncPersonFieldOfView();
     this._invalidate();return true;
+  }
+
+  _syncPersonFieldOfView() {
+    if (!this.personCamera) return;
+    const aspect = Math.max(.01, this.personCamera.aspect || 1);
+    const vertical = Math.tan(WALK_RULES.verticalFov * Math.PI / 360);
+    const horizontal = Math.tan(WALK_RULES.horizontalFov * Math.PI / 360) / aspect;
+    const scale = clamp(this.personViewScale || 1, .75, 1.25);
+    this.personCamera.fov = 2 * Math.atan(Math.min(vertical, horizontal) / scale) * 180 / Math.PI;
+    this.personCamera.updateProjectionMatrix();
   }
 
   _resolvePersonDoorCrossing(before) {
@@ -1054,7 +1211,7 @@ class FacilityScene {
   }
 
   setPersonInput(action, pressed) {
-    if (this.personEnabled === false) return;
+    if (this.personEnabled === false || this.controlledPresentation) return;
     if (!this.personInputs || !['forward', 'backward', 'left', 'right', 'fast'].includes(action)) return;
     if (!pressed) { this.personInputs.delete(action); if (!this.personInputs.size) this._stopPerson(); else this._invalidate(); return; }
     if (this.disposed || !this.active || this.placementMode || this.canvas.ownerDocument?.hidden || this.canvas.checkVisibility?.() === false || this.canvas.ownerDocument?.querySelector('dialog[open]')) return;
@@ -1062,7 +1219,7 @@ class FacilityScene {
   }
 
   _advancePerson(elapsed) {
-    if (!this.person) return false;
+    if (!this.person || this.controlledPresentation) return false;
     const eyeGoal = this._personWorldPosition().y + WALK_RULES.eyeHeight;
     const settling = this.person.verticalVelocity < 0 || (Number.isFinite(this.personEyeY) && Math.abs(this.personEyeY - eyeGoal) > .001);
     if (!this.personInputs?.size && !settling) return false;
@@ -1070,8 +1227,9 @@ class FacilityScene {
     const before = this.person;
     const meshes = this._personSupportMeshes();
     this.scene.updateMatrixWorld(true);
+    const bodies=this._personCollisionBodies(),supports=new Set(meshes);
     if (!Number.isFinite(this.personEyeY)) this.personEyeY = eyeGoal;
-    this.person = advancePerson(before, { forward: Number(this.personInputs.has('forward')) - Number(this.personInputs.has('backward')), turn: Number(this.personInputs.has('right')) - Number(this.personInputs.has('left')), fast: this.personInputs.has('fast'), delta: elapsed, groundHeight: position => this._personGroundHeight(position, meshes) });
+    this.person = advancePerson(before, { forward: Number(this.personInputs.has('forward')) - Number(this.personInputs.has('backward')), turn: Number(this.personInputs.has('right')) - Number(this.personInputs.has('left')), fast: this.personInputs.has('fast'), delta: elapsed, bounds:this._personWalkLimits(), groundHeight: position => this._personGroundHeight(position, meshes), canOccupy:(position,previous)=>this._personCanOccupy(position,previous,bodies,supports) });
     if(this._resolvePersonDoorCrossing(before))return true;
     const nextEye = this._personWorldPosition().y + WALK_RULES.eyeHeight;
     this.personEyeY += (nextEye - this.personEyeY) * (this.reducedMotion ? 1 : 1 - Math.exp(-Math.min(Math.max(elapsed, 0), WALK_RULES.maxDelta) * WALK_RULES.eyeResponse));
@@ -1079,6 +1237,26 @@ class FacilityScene {
     const distance = Math.hypot(this.person.position[0] - before.position[0], this.person.position[2] - before.position[2]);
     this.personStride = distance > 1e-6 ? (this.personStride || 0) + distance * 5 : 0;
     this._updatePersonCamera();
+    return true;
+  }
+
+  setPresentationPose({ floor, position, lookAt, walkDistance = 0 } = {}) {
+    const point = value => Array.isArray(value) && value.length === 3 && value.every(Number.isFinite);
+    if (!this.controlledPresentation || !this.personCamera || ![1, 2, 3, 4, 5, 6, 7, 8].includes(floor) || !point(position) || !point(lookAt)) return false;
+    if (this.activeFloor !== floor) this.setFloor(floor);
+    this._stopPerson();
+    const eyeY = position[1] + WALK_RULES.eyeHeight;
+    const dx = lookAt[0] - position[0], dz = lookAt[2] - position[2];
+    this.person = createPersonState({ position, yaw: Math.atan2(dx, -dz), pitch: Math.atan2(lookAt[1] - eyeY, Math.hypot(dx, dz)) });
+    const stride = Number.isFinite(walkDistance) ? Math.max(0, walkDistance) : 0;
+    this.personEyeY = eyeY + Math.sin(stride * Math.PI * 2 / .72) * .012;
+    this.personStride = stride * 5;
+    this.autoOpenDoors = false;
+    if (this.view !== 'person') {
+      this.view = 'person'; this.isolated = false; this.explosion = this.amount = 0;
+      this._visibility(); this.onViewChange('person');
+    }
+    this._updatePersonCamera(); this._invalidate();
     return true;
   }
 
@@ -1128,10 +1306,10 @@ class FacilityScene {
   }
 
   _controls() {
+    if (this.controlsBound) return;
+    this.controlsBound = true;
     const canvas = this.canvas;
     canvas.style.touchAction = 'none';
-    const pointers = new Map();
-    let gesture = null, travel = 0, multiTouch = false, lastTap = null, lastTouchZoomAt = 0;
     this._listen(canvas, 'contextmenu', (event) => event.preventDefault());
     // A dropped GPU context (long background tab, sleep, driver reset) left a
     // black or half-drawn model after returning. Pause while it is lost and
@@ -1145,8 +1323,23 @@ class FacilityScene {
       this.contextLost = false; clearTimeout(this.contextRestoreTimer);
       this.resize(); this.dirty = true; this._invalidate();
     });
+    if (this.controlledPresentation) return;
+    this._bindNavigationControls();
+  }
+
+  _bindNavigationControls() {
+    if (this.navigationControlsBound) return;
+    this.navigationControlsBound = true;
+    const canvas = this.canvas, pointers = new Map();
+    let gesture = null, travel = 0, multiTouch = false, lastTap = null, lastTouchZoomAt = 0;
+    this._cancelNavigationGesture = () => {
+      const captured = [...pointers.keys()]; pointers.clear();
+      gesture = null; travel = 0; multiTouch = false; lastTap = null; lastTouchZoomAt = 0;
+      for (const id of captured) if (canvas.hasPointerCapture?.(id)) canvas.releasePointerCapture(id);
+      this._cancelPendingPick(); this._clearHover();
+    };
     this._listen(canvas, 'pointerdown', (event) => {
-      if (event.button > 2) return;
+      if (this.controlledPresentation || event.button > 2) return;
       canvas.focus?.({ preventScroll: true });
       this._cancelPendingPick();
       if (event.button === 1) event.preventDefault?.();
@@ -1176,6 +1369,7 @@ class FacilityScene {
       }
     });
     this._listen(canvas, 'pointermove', (event) => {
+      if (this.controlledPresentation) return;
       if (!pointers.has(event.pointerId) || !gesture) {
         if (this.view !== 'person' && !pointers.size && event.pointerType !== 'touch') this._hoverFromPointer(event);
         return;
@@ -1222,7 +1416,7 @@ class FacilityScene {
       if (!pointers.has(event.pointerId)) return;
       const placing = !!this.dragPlacement;
       if (placing) this._endPlacement();
-      if (!placing && !cancelled && !multiTouch && travel < 6 && pointers.size === 1 && event.button === 0) {
+      if (!this.controlledPresentation && !placing && !cancelled && !multiTouch && travel < 6 && pointers.size === 1 && event.button === 0) {
         const now = event.timeStamp || Date.now();
         if (event.pointerType === 'touch' && lastTap && now - lastTap.time < 320 && lastTap.floor === this.activeFloor && Math.hypot(event.clientX - lastTap.x, event.clientY - lastTap.y) < 24) {
           this._cancelPendingPick(); this.zoomToPoint(event); lastTap = null; lastTouchZoomAt = now;
@@ -1241,11 +1435,13 @@ class FacilityScene {
     this._listen(canvas, 'pointerleave', () => this._clearHover());
     this._listen(canvas, 'lostpointercapture', (e) => { if (this.dragPlacement?.pointerId === e.pointerId) this._endPlacement(); pointers.delete(e.pointerId); if (!pointers.size) gesture = null; this._clearHover(); });
     this._listen(canvas, 'dblclick', (event) => {
+      if (this.controlledPresentation) return;
       event.preventDefault(); this._cancelPendingPick();
       if (lastTouchZoomAt && (event.timeStamp || Date.now()) - lastTouchZoomAt < 400) return;
       this.zoomToPoint(event);
     });
     this._listen(canvas, 'wheel', (event) => {
+      if (this.controlledPresentation) return;
       event.preventDefault(); this._cancelPendingPick();
       if (this.view === 'person') return;
       const pixels = event.deltaY * (event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? this.height : 1);
@@ -1253,7 +1449,7 @@ class FacilityScene {
     }, { passive: false });
     const actions = { ArrowUp: 'forward', ArrowDown: 'backward', ArrowLeft: 'left', ArrowRight: 'right' };
     this._listen(canvas, 'keydown', (event) => {
-      if (!this.personCamera || this.placementMode || event.altKey || event.ctrlKey || event.metaKey ||
+      if (this.controlledPresentation || this.presentationOnly || !this.personCamera || this.placementMode || event.altKey || event.ctrlKey || event.metaKey ||
           canvas.ownerDocument?.querySelector('dialog[open]')) return;
       if (event.key === 'Escape' && this.view === 'person') { event.preventDefault(); this.setView('perspective'); return; }
       if ((event.code==='KeyF'||event.key?.toLowerCase()==='f')&&this.view==='person') {event.preventDefault();if(!event.repeat)this.interactDoor();return;}
@@ -1262,6 +1458,7 @@ class FacilityScene {
       else if (event.key === 'Shift' && this.personInputs?.size) this.setPersonInput('fast', true);
     });
     this._listen(canvas, 'keyup', (event) => {
+      if (this.controlledPresentation || this.presentationOnly) return;
       if (actions[event.key]) this.setPersonInput(actions[event.key], false);
       if (event.key === 'Shift') this.setPersonInput('fast', false);
     });
@@ -1270,6 +1467,27 @@ class FacilityScene {
     const win = doc?.defaultView || (typeof window !== 'undefined' ? window : null);
     if (win?.addEventListener) this._listen(win, 'blur', () => this._stopPerson());
     if (doc?.addEventListener) this._listen(doc, 'visibilitychange', () => { if (doc.hidden) this._stopPerson(); });
+  }
+
+  setPresentationInspection(enabled) {
+    if (!this.presentationOnly || this.disposed) return false;
+    this.autoOpenDoors = false;
+    const inspecting = !!enabled;
+    if (this.presentationInspection === inspecting) return true;
+    this._cancelNavigationGesture?.();
+    this._cancelPendingPick(); this._stopPerson(); this._clearHover();
+    this.presentationInspection = inspecting;
+    this.controlledPresentation = !inspecting;
+    if (inspecting) {
+      this._bindNavigationControls();
+      this.select(null); this.isolated = false; this.explosion = this.amount = 0;
+      this.view = 'perspective'; this.navigationEdited = false;
+      this.setFloor(7); this.resetView();
+      this.target.copy(this.goalTarget); Object.assign(this.orbit, this.goalOrbit);
+      this._updateCamera();
+    }
+    this._visibility(); this._invalidate();
+    return true;
   }
 
   _cancelPendingPick() {
@@ -1859,6 +2077,7 @@ class FacilityScene {
 
   setView(view) {
     if (!['perspective', 'top', 'aisle', 'person'].includes(view)) return;
+    if (this.presentationInspection && !['perspective', 'top'].includes(view)) return;
     if (view === 'person' && this.personEnabled === false) return;
     this._stopPerson();
     if (view === 'person') {
@@ -2002,6 +2221,8 @@ class FacilityScene {
   }
   setFloor(value) {
     if (value === 'roof') value = 8;
+    const presentationOverview = this.presentationInspection && value === 'all';
+    if ((this.presentationOnly || this.controlledPresentation) && !presentationOverview && ![1, 2, 3, 4, 5, 6, 7, 8].includes(Number(value))) return;
     const next = value === 'all' || value === 'outdoor' || value === 'campus' || value === 'packaging' ? value : Number(value);
     if (!this._areaEnabled(typeof next === 'string' && next !== 'all' ? next : 'dryer')) return;
     if (next !== 'all' && !this.floorDecks.has(next)) return;
@@ -2084,7 +2305,21 @@ class FacilityScene {
       const context = inContext(level) && !this.isolated;
       environment.facade.visible = context && this.structureEnabled && (this.partitionsEnabled || ['aisle', 'person'].includes(this.view));
       environment.cover.visible = context && this.structureEnabled && this.activeFloor !== 'all';
-      environment.architectureFixtures.visible = context && this.structureEnabled;
+      // A shared stair can remain visible from its other landing without
+      // revealing the rooms, doors or furnishings on the adjoining floor.
+      const hiddenFixtures = this._hiddenArchitecturalFixtures ||= new WeakMap();
+      let sharedStairsVisible = false;
+      for (const child of environment.architectureFixtures.children) {
+        const shared = child.userData.stepsRepresentative && child.userData.visibleFloors?.includes(this.activeFloor) && !this.isolated;
+        if (context || shared) {
+          if (hiddenFixtures.has(child)) { child.visible = hiddenFixtures.get(child); hiddenFixtures.delete(child); }
+          if (shared && child.visible) sharedStairsVisible = true;
+        } else {
+          if (!hiddenFixtures.has(child)) hiddenFixtures.set(child, child.visible);
+          child.visible = false;
+        }
+      }
+      environment.architectureFixtures.visible = (context || sharedStairsVisible) && this.structureEnabled;
       environment.ducts.visible = context && this.ductsEnabled;
     }
     if (this.upperEnvironments) {
@@ -2182,7 +2417,7 @@ class FacilityScene {
     this.renderer.setSize(this.width, this.height, false);
     const aspect = this.width / this.height;
     this.camera.aspect = aspect; this.camera.updateProjectionMatrix();
-    if (this.personCamera) { this.personCamera.aspect = aspect; this.personCamera.updateProjectionMatrix(); }
+    if (this.personCamera) { this.personCamera.aspect = aspect; this._syncPersonFieldOfView(); }
     const halfHeight = Math.max(15.5, 16 / aspect);
     Object.assign(this.topCamera, { left: -halfHeight * aspect, right: halfHeight * aspect, top: halfHeight, bottom: -halfHeight });
     this.topCamera.updateProjectionMatrix();

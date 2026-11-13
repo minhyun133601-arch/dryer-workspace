@@ -4,20 +4,23 @@ import { spawnSync } from 'node:child_process';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import path from 'node:path';
 import { EQUIPMENT, FLOORS, FLOOR_HEIGHT, floorElevation, floorHeight } from '../apps/site/building-data.js';
+import { dryerStairWalkPoints } from '../apps/site/dryer-building-data.js';
 import { PLACEMENT_REGIONS } from '../apps/site/placement-rules.js';
 import { SITE_ASSETS } from '../apps/site/asset-catalog.js';
-import { readProjectText as read, namespaceModule as namespace, replaceRequired, bundleBurnerMaintenance } from './site-export-utils.mjs';
+import { readProjectText as read, namespaceModule as namespace, replaceRequired, bundleBurnerMaintenance, bundlePersonAvatar } from './site-export-utils.mjs';
 
 const root = new URL('../', import.meta.url);
-const modelFields = ['id', 'floor', 'name', 'type', 'tag', 'position', 'rotation', 'previousRotation', 'previousPlacements', 'placementRevision', 'parts', 'labelHeight', 'height', 'length', 'radius', 'variant', 'visibleFloors', 'width', 'depth', 'belowFloor', 'stations', 'positionBasis', 'positionConfidence', 'preparation', 'dryerRoute'];
+const modelFields = ['id', 'floor', 'name', 'type', 'tag', 'position', 'rotation', 'previousRotation', 'previousPlacements', 'placementRevision', 'parts', 'labelHeight', 'height', 'length', 'radius', 'variant', 'visibleFloors', 'width', 'depth', 'belowFloor', 'stations', 'positionBasis', 'positionConfidence', 'preparation', 'dryerRoute', 'inspectableInterior', 'interiorView', 'physicalRoomId', 'samePhysicalRoomAs'];
 const sceneDependencies = new Set([
   '../shared/vendor/three.module.js', './furnace-model.js', './facility-data.js', './facility-models.js', './dryer-process-models.js',
   './preparation-models.js', './boiler-models.js', './preparation-environment.js', './dryer-upper-models.js', './dryer-building-envelope.js', './dryer-route-environment.js',
   './outdoor-data.js', './outdoor-models.js', './campus-data.js', './campus-models.js', './packaging-data.js', './packaging-models.js',
-  './placement-rules.js', './person-walk.js', './proximity-doors.js',
+  './placement-rules.js', './person-walk.js', './person-avatar.js', './proximity-doors.js',
 ]);
 
-export async function exportDryerPresentation({ output } = {}) {
+export async function exportDryerPresentation({ output, profile = 'dryer' } = {}) {
+  if (!['dryer', 'presentation'].includes(profile)) throw new Error(`Unknown dryer export profile: ${profile}`);
+  const automatic = profile === 'presentation';
   const filenames = [
     'share/dryer-index.html', 'share/dryer-app.js', 'share/styles.css', 'share/dryer-styles.css', 'layout-editor.css', 'furnace-detail.css',
     'scene.js', 'facility-models.js', 'furnace-model.js', 'furnace-drawing-data.js', 'furnace-drawing-model.js', 'furnace-detail.js',
@@ -26,6 +29,9 @@ export async function exportDryerPresentation({ output } = {}) {
   ];
   const values = await Promise.all(filenames.map(name => read(`apps/site/${name}`)));
   const sources = Object.fromEntries(filenames.map((name, index) => [name, values[index]]));
+  const presentation = automatic ? Object.fromEntries(await Promise.all(['index.html', 'app.js', 'styles.css', 'tour.js', 'upper-route.js'].map(async name => [name, await read(`apps/presentation/${name}`)]))) : null;
+  const personWalk = automatic ? await read('apps/site/person-walk.js') : null;
+  const boilerModels = automatic ? null : await read('apps/site/boiler-models.js');
   const [three, license, threeManifest] = await Promise.all([
     read('apps/shared/vendor/three.export.min.js'), read('apps/shared/vendor/THREE-LICENSE.txt'), read('apps/shared/vendor/three.export.min.meta.json').then(JSON.parse),
   ]);
@@ -34,20 +40,20 @@ export async function exportDryerPresentation({ output } = {}) {
     if (createHash('sha256').update(bytes).digest('hex') !== entry.sha256) throw new Error(`Three.js offline derivative hash mismatch: ${entry.file}`);
   }
 
-  // Keep the dryer building and its equipment, including the roof service bay.
-  // The adjacent boiler room has a numeric-floor proxy but is a separate room.
-  const equipment = EQUIPMENT.filter(item => Number.isFinite(item.floor) && item.id !== 'f1-boiler-room' && !item.samePhysicalRoomAs)
+  // The manual first-floor view includes the adjacent boiler interior. The
+  // automatic presentation stays on the dryer route and excludes that room.
+  const equipment = EQUIPMENT.filter(item => Number.isFinite(item.floor) && ((!automatic && item.id === 'f1-boiler-room') || (item.id !== 'f1-boiler-room' && !item.samePhysicalRoomAs)))
     .map(item => Object.fromEntries(modelFields.filter(field => field in item).map(field => [field, item[field]])));
-  const floors = FLOORS.map(({ reference, photos, source, sourceReference, summary, personStart, ...floor }) => floor);
+  const floors = FLOORS.map(({ reference, photos, source, sourceReference, summary, personStart, ...floor }) => automatic ? { ...floor, personStart } : floor);
   const data = `const FLOORS = ${JSON.stringify(floors)};\nconst FLOOR_HEIGHT = ${FLOOR_HEIGHT};\nconst EQUIPMENT = ${JSON.stringify(equipment)};\nconst floorElevation = ${floorElevation.toString()};\nconst floorHeight = ${floorHeight.toString()};`;
-  // Generic scene methods retain harmless room identifiers. No external room
-  // layout, equipment catalog or builder is included in this presentation.
-  const disabledRooms = 'const OUTDOOR_ROOM = Object.freeze({}); const CAMPUS_ROOM = Object.freeze({}); const PACKAGING_ROOM = Object.freeze({}); const PACKAGING_ROOMS = Object.freeze({}); const PACKAGING_OVERVIEW = Object.freeze({}); const PACKAGING_FLOOR_ELEVATIONS = Object.freeze({});\nconst buildPreparationBoilerRoom = () => false;';
+  // Generic scene methods retain harmless identifiers for disabled areas.
+  // Only the manual profile includes the adjacent boiler interior builder.
+  const disabledRooms = 'const OUTDOOR_ROOM = Object.freeze({}); const CAMPUS_ROOM = Object.freeze({}); const PACKAGING_ROOM = Object.freeze({}); const PACKAGING_ROOMS = Object.freeze({}); const PACKAGING_OVERVIEW = Object.freeze({}); const PACKAGING_FLOOR_ELEVATIONS = Object.freeze({});' + (automatic ? '\nconst buildPreparationBoilerRoom = () => false;' : '');
   let scene = sources['scene.js'].replace(/^import\s+[^\n]+?\s+from\s+['"]([^'"]+)['"];?\s*$/gm, (statement, dependency) => {
     if (!sceneDependencies.has(dependency)) throw new Error(`Unknown scene dependency in dryer profile: ${dependency}`);
     return '';
   });
-  scene = replaceRequired(scene, 'return new FacilityScene(canvas, options);', "return new FacilityScene(canvas, { ...options, enabledAreas: ['dryer'], personEnabled: false });");
+  scene = replaceRequired(scene, 'return new FacilityScene(canvas, options);', `return new FacilityScene(canvas, { ...options, enabledAreas: ['dryer'], personEnabled: ${automatic}, controlledPresentation: ${automatic}, includeAdjacentBoilerRoom: ${!automatic} });`);
   let placementRules = sources['placement-rules.js'];
   const regionsStart = placementRules.indexOf('export const PLACEMENT_REGIONS =');
   const regionsEnd = placementRules.indexOf('\nconst EPS =', regionsStart);
@@ -62,8 +68,13 @@ export async function exportDryerPresentation({ output } = {}) {
     if (bytes[0] !== 0xff || bytes[1] !== 0xd8) throw new Error(`Invalid furnace JPEG: ${asset.path}`);
     furnaceDetail = furnaceDetail.replaceAll(asset.path, `data:image/jpeg;base64,${bytes.toString('base64')}`);
   }
-  let app = sources['share/dryer-app.js'];
-  for (const statement of [
+  let app = automatic ? presentation['app.js'] : sources['share/dryer-app.js'];
+  for (const statement of automatic ? [
+    "import { EQUIPMENT, FLOORS } from '../site/building-data.js';",
+    "import { createFacilityScene } from '../site/scene.js';",
+    "import { createFurnaceDetail } from '../site/furnace-detail.js';",
+    "import { TOUR_STEPS, createPresentationTour } from './tour.js';",
+  ] : [
     "import { EQUIPMENT, FLOORS } from '../building-data.js';",
     "import { createLayoutEditor } from '../layout-editor.js';",
     "import { createFurnaceDetail } from '../furnace-detail.js';",
@@ -106,26 +117,53 @@ export async function exportDryerPresentation({ output } = {}) {
     'const { buildPreparationEnvironment } = preparationEnvironmentModule;',
     namespace(sources['dryer-route-environment.js'], 'dryerRouteEnvironmentModule', ["import * as THREE from '../shared/vendor/three.module.js';"]),
     'const { buildDryerRouteEnvironment } = dryerRouteEnvironmentModule;',
+    ...(!automatic ? [
+      namespace(boilerModels, 'boilerModelsModule', ["import * as THREE from '../shared/vendor/three.module.js';"]),
+      'const { buildCampusBoilerRoom, buildPreparationBoilerRoom } = boilerModelsModule;',
+    ] : []),
+    ...(automatic ? [
+      namespace(personWalk, 'personWalkModule'), 'const { WALK_RULES, createPersonState, advancePerson, lookPerson, isPersonPositionFree } = personWalkModule;',
+      await bundlePersonAvatar(),
+    ] : []),
     namespace(scene, 'sceneModule'), 'const { createFacilityScene } = sceneModule;',
-    namespace(layoutEditor, 'layoutEditorModule'), 'const { createLayoutEditor } = layoutEditorModule;', app,
+    ...(automatic ? [
+      `const dryerStairWalkPoints = ${dryerStairWalkPoints.toString()};`,
+      namespace(presentation['upper-route.js'], 'presentationUpperRouteModule'), 'const { UPPER_STAIR_PATH } = presentationUpperRouteModule;',
+      namespace(presentation['tour.js'], 'presentationTourModule', [
+        "import { FLOORS } from '../site/building-data.js';",
+        "import { dryerStairWalkPoints } from '../site/dryer-building-data.js';",
+        "import { UPPER_STAIR_PATH } from './upper-route.js';",
+      ]), 'const { TOUR_STEPS, createPresentationTour } = presentationTourModule;',
+      '// BEGIN PRESENTATION APP',
+    ] : [namespace(layoutEditor, 'layoutEditorModule'), 'const { createLayoutEditor } = layoutEditorModule;']), app,
   ].join('\n');
   const check = spawnSync(process.execPath, ['--check', '--input-type=module'], { input: code, encoding: 'utf8', windowsHide: true });
   if (check.status !== 0) throw new Error(check.stderr || 'Dryer presentation JavaScript syntax check failed.');
-  let html = sources['share/dryer-index.html'];
-  for (const [href, source] of [
+  let html = automatic ? presentation['index.html'] : sources['share/dryer-index.html'];
+  for (const [href, source] of automatic ? [
+    ['./styles.css', presentation['styles.css']], ['../site/furnace-detail.css', sources['furnace-detail.css']],
+  ] : [
     ['./styles.css', sources['share/styles.css']], ['./dryer-styles.css', sources['share/dryer-styles.css']],
     ['../layout-editor.css', sources['layout-editor.css']], ['../furnace-detail.css', sources['furnace-detail.css']],
   ]) {
     if (/@import\b|url\(\s*['"]?(?:https?:|\/\/)/i.test(source)) throw new Error(`Viewer stylesheet must remain offline: ${href}`);
     html = replaceRequired(html, `<link rel="stylesheet" href="${href}">`, `<style>\n${source.replace(/<\/style/gi, '<\\/style')}\n</style>`);
   }
-  html = replaceRequired(html, '<script type="module" src="./dryer-app.js"></script>', '');
+  if (automatic) {
+    const [logo, icon] = await Promise.all([
+      readFile(new URL('apps/site/assets/branding/company-logo.jpg', root)),
+      readFile(new URL('apps/shared/favicon.svg', root)),
+    ]);
+    html = html.replaceAll('../site/assets/branding/company-logo.jpg', `data:image/jpeg;base64,${logo.toString('base64')}`);
+    html = replaceRequired(html, '../shared/favicon.svg', `data:image/svg+xml;base64,${icon.toString('base64')}`);
+  }
+  html = replaceRequired(html, `<script type="module" src="./${automatic ? 'app' : 'dryer-app'}.js"></script>`, '');
   html = replaceRequired(html, '</body>', `<!-- Three.js license:\n${license.replace(/--/g, '- -')}\n-->\n<script type="module">\n${code.replace(/<\/script/gi, '<\\/script')}\n</script>\n</body>`);
   if (/\b(?:src|href)\s*=\s*["'](?:\.\.?\/|https?:|\/\/)/i.test(html)) throw new Error('Dryer presentation still depends on another file.');
   const target = output ? pathToFileURL(path.resolve(output)) : new URL('exports/건조실-발표용.html', root);
   await mkdir(new URL('./', target), { recursive: true });
   await writeFile(target, html, 'utf8');
-  console.log(`Created dryer-only ${fileURLToPath(target)} (${Buffer.byteLength(html).toLocaleString()} bytes, ${equipment.length} dryer models).`);
+  console.log(`Created dryer-only ${automatic ? 'automatic presentation' : 'viewer'} ${fileURLToPath(target)} (${Buffer.byteLength(html).toLocaleString()} bytes, ${equipment.length} dryer models).`);
   return html;
 }
 

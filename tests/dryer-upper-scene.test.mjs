@@ -110,6 +110,37 @@ test('actual scene shows eight lower-hall groups, thirteen upper-context groups 
   } finally { h.dispose(); }
 });
 
+test('lower floor cutaways keep each deck, rooms and equipment separate from the mezzanine', async () => {
+  const h = await harness();
+  try {
+    const { scene } = h;
+    const mezzanine = scene.buildingEnvironments.get(2).architectureFixtures;
+    assert.ok(mezzanine.getObjectByName('dryer-route-2-dressing-room-furnishings'));
+    assert.ok(mezzanine.getObjectByName('dryer-route-2-op-room-furnishings'));
+    assert.ok(scene.equipment.some(item => item.floor === 1));
+    assert.equal(scene.equipment.some(item => item.floor === 2), false, 'the production machinery below the observation windows belongs to 1F');
+    for (const floor of [1, 2, 3, 4, 5]) for (const view of ['perspective', 'top', 'aisle']) {
+      scene.setFloor(floor); scene.setView(view);
+      for (const [level, environment] of scene.buildingEnvironments) {
+        for (const key of ['deck', 'structure', 'architectureFixtures']) {
+          const shared = key === 'architectureFixtures' && environment.architectureFixtures.children.some(child => child.visible && child.userData.stepsRepresentative && child.userData.visibleFloors?.includes(floor));
+          assert.equal(environment[key].visible, level === floor || shared, `${floor}F ${view}: ${level}F ${key}`);
+        }
+        if (level !== floor) for (const child of environment.architectureFixtures.children.filter(child => child.visible)) assert.ok(child.userData.stepsRepresentative && child.userData.visibleFloors?.includes(floor), 'adjoining fixtures contain shared stairs without revealing rooms, doors or furniture');
+      }
+      for (const item of scene.equipment) {
+        assert.equal(scene.objects.get(item.id).visible, item.floor === floor || (item.visibleFloors || []).includes(floor), `${floor}F ${view}: ${item.id}`);
+      }
+    }
+    scene.setFloor(1); scene.setFloor(2); scene.resize();
+    assert.equal(scene.floorDecks.get(1).visible, false, 'switching floors and resizing cannot restore the lower hall in the mezzanine cutaway');
+    assert.equal(scene.floorDecks.get(2).visible, true);
+    scene.setPlacementMode(true);
+    assert.equal(scene.floorDecks.get(1).visible, false, 'editing the mezzanine cannot reveal first-floor equipment');
+    assert.equal([...scene.objects.values()].filter(root => root.visible).length, 0);
+  } finally { h.dispose(); }
+});
+
 test('real upper decks retain the chamber holes and open middle while the shell joins its upper observation well', async () => {
   const h = await harness();
   try {
@@ -260,7 +291,9 @@ test('historical room envelopes cut away independently and selecting the elevato
     const { scene } = h;
     scene.setFloor(1);
     for (const [level, env] of scene.buildingEnvironments) {
-      assert.equal(env.architectureFixtures.visible, level === 1);
+      const shared = env.architectureFixtures.children.filter(child => child.userData.stepsRepresentative && child.userData.visibleFloors?.includes(1));
+      assert.equal(env.architectureFixtures.visible, level === 1 || shared.some(child => child.visible));
+      if (level !== 1) for (const child of env.architectureFixtures.children.filter(child => child.visible)) assert.ok(shared.includes(child), 'only explicitly shared stairs may appear from an adjacent floor');
       assert.equal(env.facade.visible, false);
       assert.equal(env.cover.visible, level === 1);
     }

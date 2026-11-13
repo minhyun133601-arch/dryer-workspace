@@ -808,6 +808,40 @@ function transferDetailCasePacker(s,parent,local,index) {
   box(s,root,[.33,.64,.19],[.98,1.15,.49],s.mat.trim,'observed-carton-local-control');box(s,root,[.23,.22,.022],[.98,1.27,.596],s.mat.screen,'observed-carton-control-screen');
   for(const x of [.91,1.05])cyl(s,root,.025,.03,[x,1.0,.605],x>.98?s.mat.red:s.mat.mint,.025,'observed-carton-control-button',10).rotation.x=PI/2;
   cyl(s,root,.055,.14,[.66,2.36,.65],s.mat.red,.055,'observed-carton-status-lamp',12);
+  const detail=tag(s._group(root),'clip2-observed-carton-detail');
+  Object.assign(detail.userData,{sourceReferences:[{clipId:'first-floor-20261113-clip2',times:index===1?[138,141,144]:[30,36,42,60]}],machineFunctionConfirmed:false,mechanismsAnimate:false,dimensionsMeasured:false});
+  if(index===1){
+    // The close walk shows an open upright motor/guide assembly and exposed
+    // cable loops, rather than another repeated closed cream cabinet.
+    for(const x of [-.48,-.18])box(s,detail,[.075,2.95,.09],[x,1.6,-.62],s.mat.trim,'clip2-vertical-guide-column');
+    box(s,detail,[.7,.52,.4],[-.33,2.37,-.62],cream,'clip2-upright-sliding-head');
+    motor(s,detail,[-.33,2.93,-.62],.17,.4,true);
+    pipe(s,detail,[[-.38,2.45,-.6],[-.62,3.04,-.55],[-.08,3.15,-.48],[.15,2.98,-.38],[.05,2.35,-.35]],.025,s.mat.black,'clip2-upright-cable-loop');
+    box(s,detail,[.64,.2,.48],[.12,1.63,.4],material(s,'clip2-observed-orange',0xc17b32),'clip2-observed-tool-head');
+    const belt=box(s,detail,[.6,.035,2.65],[0,.88,.15],material(s,'clip2-green-belt',0x2c6c52),'clip2-green-visible-belt');belt.userData.completeLineConnectionConfirmed=false;
+    for(const side of [-1,1])box(s,detail,[.035,.12,2.68],[side*.34,.92,.15],s.mat.trim,'clip2-belt-side-guide');
+    for(const x of [-.18,0,.18])pipe(s,detail,[[x+.9,1.65,.48],[x+.91,.8,.45],[x+.75,.3,.3],[x+.4,.25,.1]],.015,s.mat.black,'clip2-exposed-control-cable');
+  }else{
+    const cardboard=material(s,'clip2-corrugated-cardboard',0xac9472),orange=material(s,'clip2-observed-orange',0xc17b32);
+    box(s,detail,[1.28,.15,1.7],[0,.84,1.68],s.mat.trim,'clip2-flat-carton-magazine-tray');
+    const sheets=Array.from({length:36},(_,i)=>[[0,1.4,1.03+i*.034],[1.15,.95,.013]]);
+    transferDetailInstances(s,detail,sheets,cardboard,'clip2-upright-carton-blanks');
+    for(const side of [-1,1])box(s,detail,[.04,.22,1.7],[side*.63,.98,1.68],s.mat.trim,'clip2-carton-magazine-guide');
+    for(const x of [-.53,.53])box(s,detail,[.07,2.07,.1],[x,1.14,2.67],s.mat.trim,'clip2-carton-pick-guide');
+    box(s,detail,[1.18,.38,.34],[0,1.83,2.67],orange,'clip2-orange-carton-pick-head');
+    box(s,detail,[.34,.6,.34],[.6,.8,2.67],orange,'clip2-orange-drive-cover');
+    pipe(s,detail,[[.55,1.92,2.66],[.92,2.1,2.64],[1.0,1.52,2.52],[.72,1.1,2.5]],.025,s.mat.black,'clip2-magazine-service-hose');
+    const opened=tag(s._group(detail,[-.84,.76,.9]),'clip2-fixed-open-teal-service-leaf');opened.rotation.y=-1.1;
+    Object.assign(opened.userData,{fixedFilmedPose:true,sourceReferences:[{clipId:'first-floor-20261113-clip2',times:[60]}],notAnInterRoomDoor:true});
+    for(const x of [.025,.695])box(s,opened,[.05,1.1,.035],[x,.55,0],cream,'clip2-service-leaf-frame');
+    for(const y of [.025,1.075])box(s,opened,[.72,.05,.035],[.36,y,0],cream,'clip2-service-leaf-frame');
+    box(s,opened,[.59,.94,.045],[.36,.55,.015],material(s,'clip2-teal-service-glass',0x38938e,{transparent:true,opacity:.48,depthWrite:false}),'clip2-teal-service-window');
+    box(s,opened,[.025,.2,.04],[.64,.53,.045],s.mat.trim,'clip2-service-leaf-handle');
+    for(const [i,color]of [s.mat.mint,s.mat.yellow,s.mat.red].entries())cyl(s,detail,.055,.13,[.55,2.36+i*.13,2.66],color,.055,'clip2-three-color-status-lens',12);
+    const bag=tag(s._group(detail,[1.18,0,1.8]),'clip2-blue-lined-waste-stand'),blue=material(s,'clip2-blue-polyethylene',0x2e74b2,{roughness:.58});
+    cyl(s,bag,.24,.67,[0,.38,0],blue,.19,'clip2-blue-bag-body',20);ring(s,bag,.24,[0,.73,0],s.mat.trim,.012);
+    for(const x of [-.25,.25])bar(s,bag,[x,.02,0],[x,.76,0],.012,s.mat.trim,'clip2-waste-stand-leg');
+  }
   return root;
 }
 function transferDetailCurve(s,parent,center,radius=1.05,width=.75,height=.78) {
@@ -851,6 +885,11 @@ function overlookedRollerReturn(s, root, item, g) {
   transferDetailBed(s,g[0],[1.05,2.45],[2.45,2.45],.75,.78,'observed-green-arm-infeed');
   transferDetailBed(s,g[0],[2.45,2.45],[3.1,1.9],.66,.78,'observed-green-short-merge');
   motor(s,g[2],[-.52,.43,-1.8],.13,.35);
+  const carton=tag(s._group(g[1],[.3,.84,2.1]),'clip2-open-carton-on-curve'),cardboard=material(s,'clip2-corrugated-cardboard',0xac9472);
+  Object.assign(carton.userData,{sourceReferences:[{clipId:'first-floor-20261113-clip2',times:[48]}],staticObservedProp:true,brandAndContentsConfirmed:false});
+  box(s,carton,[.55,.025,.5],[0,.0125,0],cardboard,'clip2-carton-base');
+  for(const x of [-.265,.265])box(s,carton,[.025,.42,.5],[x,.23,0],cardboard,'clip2-carton-side');
+  for(const z of [-.24,.24])box(s,carton,[.55,.42,.025],[0,.23,z],cardboard,'clip2-carton-side');
   Object.assign(root.userData,{hiddenBlueToGreenConnectionConfirmed:false,visibleCurveDegrees:90,fullReturnLoopConfirmed:false,sourceTimes:[234,264,270,282]});
 }
 function overlookedArticulatedArm(s, root, item, g) {

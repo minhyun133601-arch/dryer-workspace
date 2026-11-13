@@ -1,6 +1,7 @@
 // Current viewer images and their optional compact offline variants.
 // Edit paths here together with the consuming data file; npm run assets:check validates both.
 export const SITE_ASSETS = Object.freeze([
+  {"id":"brand-company-person-logo","path":"./assets/branding/company-logo.jpg","label":"사용자 제공 희창유업 회사 로고 · 사람 캐릭터 작업복","category":"brand"},
   {"id":"drawings-campus-entrance-site-guide-2026","path":"./assets/drawings/campus/entrance-site-guide-2026.jpg","label":"2026 현장 출입구 안내도 · 경비실·창고·건조실·소포장 배치","category":"drawing-campus"},
   {"id":"drawings-wastewater-process-flow-2022","path":"./assets/drawings/wastewater/process-flow-2022.png","label":"2022 폐수처리장 개선 후 계통도","category":"drawing-wastewater"},
   {"id":"drawings-wastewater-structure-section-2022","path":"./assets/drawings/wastewater/structure-section-2022.png","label":"2022 폐수처리장 측면 구조물 배치도","category":"drawing-wastewater"},
@@ -188,4 +189,16 @@ export const SITE_ASSETS = Object.freeze([
   {"id":"burner-fan-replacement-slide-001","path":"./assets/documents/dryer-burner/combustion-fan-replacement/slide-001.jpg","label":"연소팬 교체 작업 · 수리카드 1쪽","category":"document-burner"},
   {"id":"burner-fan-replacement-slide-002","path":"./assets/documents/dryer-burner/combustion-fan-replacement/slide-002.jpg","label":"연소팬 교체 작업 · 작업 사진 2쪽","category":"document-burner"},
   {"id":"burner-motor-coil-damage-slide-001","path":"./assets/documents/dryer-burner/motor-coil-damage/slide-001.jpg","label":"연소팬 모터코일 소손 · 정비 기록 1쪽","category":"document-burner"},
+  {"id":"survey-dryer-first-floor-20261113-142059-031s","path":"./assets/evidence/dryer-first-floor-20261113/clip-142059-frame-031s.jpg","label":"조제실 작업대·계단과 크림색 철골 · first-floor-20261113-clip1 31초","category":"survey-dryer-first-floor"},
+  {"id":"survey-dryer-first-floor-20261113-142059-038s","path":"./assets/evidence/dryer-first-floor-20261113/clip-142059-frame-038s.jpg","label":"조제실 백색 이동식 장치와 상부 덕트 · first-floor-20261113-clip1 38초","category":"survey-dryer-first-floor"},
+  {"id":"survey-dryer-first-floor-20261113-142059-042s","path":"./assets/evidence/dryer-first-floor-20261113/clip-142059-frame-042s.jpg","label":"Fristam 포대 투입부·흡입 후드·하부 펌프 · first-floor-20261113-clip1 42초","category":"survey-dryer-first-floor"},
+  {"id":"survey-dryer-first-floor-20261113-142059-065s","path":"./assets/evidence/dryer-first-floor-20261113/clip-142059-frame-065s.jpg","label":"균질기 전면 펌프 헤드·압력계·조작반 · first-floor-20261113-clip1 65초","category":"survey-dryer-first-floor"},
+  {"id":"survey-dryer-first-floor-20261113-142059-072s","path":"./assets/evidence/dryer-first-floor-20261113/clip-142059-frame-072s.jpg","label":"균질기 측면 캐비닛·손잡이·위험 표지 · first-floor-20261113-clip1 72초","category":"survey-dryer-first-floor"},
+  {"id":"survey-dryer-first-floor-20261113-142059-078s","path":"./assets/evidence/dryer-first-floor-20261113/clip-142059-frame-078s.jpg","label":"균질기 앞 외포장실 출입구·세로 황색창 · first-floor-20261113-clip1 78초","category":"survey-dryer-first-floor"},
+  {"id":"survey-dryer-first-floor-20261113-142223-010s","path":"./assets/evidence/dryer-first-floor-20261113/clip-142223-frame-010s.jpg","label":"외포장실 전경·팔레트·황색 펜스·청색 로봇 · first-floor-20261113-clip2 10초","category":"survey-dryer-first-floor"},
+  {"id":"survey-dryer-first-floor-20261113-142223-042s","path":"./assets/evidence/dryer-first-floor-20261113/clip-142223-frame-042s.jpg","label":"골판지 매거진·주황 헤드·삼색등·청색 봉투통 · first-floor-20261113-clip2 42초","category":"survey-dryer-first-floor"},
+  {"id":"survey-dryer-first-floor-20261113-142223-048s","path":"./assets/evidence/dryer-first-floor-20261113/clip-142223-frame-048s.jpg","label":"외포장 곡선 롤러·프레임·상부 관찰창 · first-floor-20261113-clip2 48초","category":"survey-dryer-first-floor"},
+  {"id":"survey-dryer-first-floor-20261113-142223-108s","path":"./assets/evidence/dryer-first-floor-20261113/clip-142223-frame-108s.jpg","label":"1층 엘리베이터 양개문·다중 버튼 패널 · first-floor-20261113-clip2 108초","category":"survey-dryer-first-floor"},
+  {"id":"survey-dryer-first-floor-20261113-142223-141s","path":"./assets/evidence/dryer-first-floor-20261113/clip-142223-frame-141s.jpg","label":"컨베이어 횡단 발판·양쪽 황색 난간 · first-floor-20261113-clip2 141초","category":"survey-dryer-first-floor"},
+  {"id":"survey-dryer-first-floor-20261113-142223-162s","path":"./assets/evidence/dryer-first-floor-20261113/clip-142223-frame-162s.jpg","label":"통로 끝 우측 백색 계단·황색 난간 · first-floor-20261113-clip2 162초","category":"survey-dryer-first-floor"},
 ]);

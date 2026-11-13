@@ -7,9 +7,11 @@
 | 경로 | 용도 |
 | --- | --- |
 | `apps/site/assets/brand/` | 공식 로고 |
+| `apps/site/assets/branding/` | 사용자가 제공한 회사 로고 원본 사본·안내자 작업복과 안전모 |
 | `apps/site/assets/drawings/` | 공장·건조실·조제실·스틱소포장·실외기실·폐수처리장·버너·냉동기 도면 |
 | `apps/site/assets/equipment-cards/` | 액상·실외기실 설비이력카드 이미지 |
 | `apps/site/assets/documents/dryer-burner/` | 버너에서 여는 정비자료 이미지 |
+| `apps/site/assets/evidence/dryer-first-floor-20261113/` | 1층 조제실·외포장실 보완 영상에서 선정한 제작 검토용 근거 사진 |
 | `apps/site/assets/share/` | 공유 HTML용 최적화 이미지 |
 
 각 폴더와 파일 이름은 영문 소문자·숫자·하이픈으로 작성합니다. 코드의 자산 경로는 `./assets/...` 형식입니다. 자산 ID는 고유하게 유지하고 기존 파일을 바꿀 때 경로·대소문자·이미지 형식을 확인합니다.
@@ -24,4 +26,8 @@
 
 `evidence-assets.js`가 화면에 허용하는 이미지 종류를 정합니다. 경로를 옮길 때는 기준 목록과 사용하는 데이터 모듈을 함께 수정하세요. 공유본에 자산을 넣는 코드는 `tooling/export-site.mjs`, `export-dryer-presentation.mjs`, `site-export-utils.mjs`에 있습니다.
 
-과거 원본·영상·검토 화면·작업 기록은 바탕화면 `프로젝트_정리자료_20261113`에 모았습니다. [보관 위치 안내](archived-materials.json)의 `archiveRoot`와 `manifestPath`에서 보관 폴더와 이동 목록을 찾습니다. 보관 폴더의 `정리내역.csv`·`정리내역.json`에 원래 경로와 현재 경로가 있습니다.
+1층 보완 영상의 선정 사진 12장은 `survey-dryer-first-floor` 분류로 등록합니다. 원본 MP4·TXT, 클립별 시점, 추출 경로·해시·구조 근거는 [1층 영상 근거 목록](first-floor-supplement-20261113.json)에서 확인합니다. 활성 JPEG는 높이 1600px·품질 90입니다. MP4·TXT는 프로젝트 밖 `../프로젝트_현장영상_보관/`으로 옮겼으며, 사용하지 않는 임시 검토 JPEG와 디코딩 PNG 100장은 삭제 상태를 기록한 뒤 정리했습니다. 재검토에는 보관한 원본 영상과 기록된 클립 시점을 사용합니다.
+
+도면 원본·미리보기·검토 기록·변환 도구는 `../프로젝트_도면자료/`에 별도 보관합니다. [저장 경로 설정](drawing-storage.json)으로 도면 메뉴에 연결합니다. [정리 기록](material-storage-20261113.json)과 [추가 정리 기록](material-cleanup-followup-20261113.json)에 이동 전후 경로·파일 수·바이트·SHA256과 삭제한 생성 이미지 목록이 있습니다. `apps/site/assets/`의 활성 사진·도면·로고는 이 외부 원본과 별도로 필요하므로 유지합니다. 루트의 중복 `회사로고.jpg`는 제거했으며 앱에서 사용하는 로고는 `apps/site/assets/branding/company-logo.jpg`입니다.
+
+이전 자료 정리 작업의 보관 경로와 이동 기록은 [과거 보관 위치 안내](archived-materials.json)에 남아 있습니다. 현재 도면·현장영상의 이동 전후 경로와 파일별 검증은 위의 자료 정리 기록을 기준으로 확인합니다.

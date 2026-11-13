@@ -204,7 +204,7 @@ test('outdoor equipment remains separate from seven physical dryer stories and t
   assert.equal(OUTDOOR_ROOM.id, 'outdoor');
   assert.deepEqual(FLOORS.map(({ id }) => id), [1, 2, 3, 4, 5, 6, 7, 8]);
   assert.deepEqual(FLOORS.filter(({ kind }) => kind !== 'roof').map(({ id }) => id), [1, 2, 3, 4, 5, 6, 7]);
-  assert.equal(EQUIPMENT.length, 47);
+  assert.equal(EQUIPMENT.length, 48);
   assert.ok(OUTDOOR_EQUIPMENT.length >= 5, 'the room needs its distinct visible equipment groups');
   const all = [...EQUIPMENT, ...OUTDOOR_EQUIPMENT];
   assert.equal(new Set(all.map(({ id }) => id)).size, all.length, 'selection IDs must remain unique across both spaces');
@@ -1256,8 +1256,12 @@ test('inline liquid keeps R and Escape from resetting or clearing the hidden mai
 test('the reviewed dryer catalog preserves seven source identities and all original photos while replacing three duplicate approximations', async () => {
   const sourceIds = ['chamber', 'blower', 'heater', 'cyclone-1', 'cyclone-2', 'cyclone-3', 'panel'];
   assert.deepEqual(SOURCE_PHOTO_EQUIPMENT.map(({ id }) => id), sourceIds);
-  assert.equal(EQUIPMENT.length, 47, 'the active catalog adds nine filmed preparation assemblies to the 38 registered groups');
-  assert.equal(new Set(EQUIPMENT.map(({ id }) => id)).size, 47);
+  assert.equal(EQUIPMENT.length, 48, 'the active catalog adds ten filmed preparation assemblies to the 38 registered groups');
+  assert.equal(new Set(EQUIPMENT.map(({ id }) => id)).size, 48);
+  const whiteUnits = EQUIPMENT.filter(({ id }) => id === 'f1-prep-mobile-white-unit');
+  assert.equal(whiteUnits.length, 1, 'the newly observed mobile cabinet has one independent identity');
+  assert.equal(whiteUnits[0].floor, 1);
+  assert.equal(whiteUnits[0].preparation.kind, 'mobile-cabinet');
   for (const id of ['f6-dryer-shell', 'f6-cyclone-bank', 'f6-exhaust-riser']) {
     assert.equal(EQUIPMENT.some((item) => item.id === id), false, `${id} must not duplicate the photo-backed hall equipment`);
   }
@@ -1325,8 +1329,8 @@ test('local and shared dryer controls distinguish the lower hall, upper observat
     h.areaButtons.find((button) => button.dataset.area === 'dryer').click();
     assert.equal(h.context.ui.getFloor(), 8, 'returning from another area must restore the roof selector without inventing an eighth story');
     h.context.ui.setFloor('all');
-    if (factory === localViewerHarness) assert.equal(shownIds().length, 47);
-    else assert.match(h.element('area-summary').textContent, /설비 47개$/);
+    if (factory === localViewerHarness) assert.equal(shownIds().length, 48);
+    else assert.match(h.element('area-summary').textContent, /설비 48개$/);
   }
 });
 

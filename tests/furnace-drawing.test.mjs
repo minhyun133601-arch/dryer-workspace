@@ -187,7 +187,7 @@ async function detailCameraHarness(width = 1000, height = 700) {
   const document = { body: { append() {} }, createElement: (tag) => node(tag), createElementNS: (_, tag) => node(tag), addEventListener() {}, removeEventListener() {}, hidden: false };
   const source = (await readFile(new URL('../apps/site/furnace-detail.js', import.meta.url), 'utf8'))
     .replace(/^import .*;\r?\n/gm, '').replace('export function createFurnaceDetail', 'function createFurnaceDetail')
-    .replace('return { open, close, dispose };', `return { open, close, dispose, test: {
+    .replace('return { open, close, dispose, setPresentationState };', `return { open, close, dispose, setPresentationState, test: {
       setup(root, photoRoot) {
         renderer = { render() {}, setSize() {}, dispose() {} };
         camera = new THREE.PerspectiveCamera(30, ${width / height}, .02, 300);

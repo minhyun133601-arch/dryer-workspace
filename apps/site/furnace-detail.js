@@ -9,10 +9,13 @@ const furnacePhotos = {
   sheetburner: './assets/drawings/furnace/burner-assembly-drawing.jpg',
   sheetpiping: './assets/drawings/furnace/gas-piping-drawing.jpg',
 };
-// The shared viewer sits one folder deeper, except when photos are embedded.
+// Resolve the same drawings in the workbench, shared viewer and presentation.
 const assetUrl = (key) => {
   const source = furnacePhotos[key];
-  return source && !source.startsWith('data:') && location.pathname.includes('/site/share/') ? `.${source}` : source;
+  if (!source || source.startsWith('data:')) return source;
+  if (location.pathname.includes('/site/share/')) return `.${source}`;
+  if (location.pathname.includes('/presentation/')) return `../site/${source.slice(2)}`;
+  return source;
 };
 const sheetKey = (key) => `sheet${key}`;
 const furnaceParts = [
@@ -44,10 +47,10 @@ const ORBIT_DEFAULTS = { drawing: { ...VIEW_PRESETS.iso, distance: 7.5 }, photo:
 const ORBIT_LIMITS = { drawing: { top: 1.56, near: .35, far: 45 }, photo: { top: 1.56, near: .65, far: 70 } };
 const DRAWING_TARGET = { assembled: new THREE.Vector3(-.42, .72, .3), exploded: new THREE.Vector3(-.98, 1.02, .62) };
 
-export function createFurnaceDetail({ documents = [] } = {}) {
+export function createFurnaceDetail({ documents = [], presentation = false, onClose = () => {} } = {}) {
   const maintenance = documents.length ? createBurnerMaintenance(documents) : null;
   const dialog = document.createElement('dialog');
-  dialog.className = 'furnace-dialog';
+  dialog.className = `furnace-dialog${presentation ? ' is-presentation' : ''}`;
   dialog.setAttribute('aria-labelledby', 'furnace-title');
   dialog.innerHTML = `
     <header class="furnace-header">
@@ -159,6 +162,7 @@ export function createFurnaceDetail({ documents = [] } = {}) {
     const narrow = camera.aspect < .85;
     const isDrawing = mode === 'drawing';
     if (isDrawing) target.lerpVectors(DRAWING_TARGET.assembled, DRAWING_TARGET.exploded, amount); else target.copy(PHOTO_TARGET);
+    if (presentation && isDrawing) target.y += .2;
     target.add(panOffsets[mode]);
     // The drawing is wide: on a squarer stage the camera backs off to keep the inlet in view.
     const distance = isDrawing ? orbit.distance * Math.max(1, 1.62 / camera.aspect) * (.74 + amount * .26) : orbit.distance * (narrow ? 1.35 : 1);
@@ -498,8 +502,9 @@ export function createFurnaceDetail({ documents = [] } = {}) {
     view.scrollLeft = centerX * view.scrollWidth - view.clientWidth * anchorX;
     view.scrollTop = centerY * view.scrollHeight - view.clientHeight * anchorY;
   }
-  function close() { maintenance?.close(); cancelGesture(); if (dialog.open) dialog.close(); }
-  function open() {
+  let notifyClose = true;
+  function close({ notify = true } = {}) { maintenance?.close(); cancelGesture(); if (dialog.open) { notifyClose = notify; dialog.close(); } }
+  function open({ spread: initialSpread = 1 } = {}) {
     if (disposed) return;
     if (dialog.open) return;
     previousFocus = document.activeElement;
@@ -509,13 +514,19 @@ export function createFurnaceDetail({ documents = [] } = {}) {
     filter = 'all'; selected = null;
     dialog.querySelectorAll('[data-fd-filter]').forEach((button) => button.setAttribute('aria-pressed', String(button.dataset.fdFilter === 'all')));
     Object.assign(orbits.drawing, ORBIT_DEFAULTS.drawing); Object.assign(orbits.photo, ORBIT_DEFAULTS.photo);
+    if (presentation) orbits.drawing.distance = 9.5;
     panOffsets.drawing.set(0, 0, 0); panOffsets.photo.set(0, 0, 0);
-    selectPart(0); setSpread(1); amount = 1;
+    const initial = Number.isFinite(initialSpread) ? Math.max(0, Math.min(1, initialSpread)) : 1;
+    selectPart(0); setSpread(initial); amount = initial;
+    if (presentation) {
+      showNumbers = false; showDimensions = false;
+      dialog.querySelectorAll('[data-furnace-toggle]').forEach(input => { input.checked = false; });
+    }
     renderList(); selectDrawingPart(null); setMode('drawing'); markView('iso'); schedule();
     $('.furnace-close').focus();
   }
   $('.furnace-close').addEventListener('click', close);
-  dialog.addEventListener('close', () => { cancelGesture(); cancelAnimationFrame(frame); frame = null; $('.furnace-lightbox').hidden = true; previousFocus?.focus?.(); });
+  dialog.addEventListener('close', () => { cancelGesture(); cancelAnimationFrame(frame); frame = null; $('.furnace-lightbox').hidden = true; previousFocus?.focus?.(); const notify = notifyClose; notifyClose = true; if (notify) onClose(); });
   dialog.addEventListener('click', (event) => { if (event.target === dialog) close(); });
   dialog.addEventListener('cancel', (event) => { if (!$('.furnace-lightbox').hidden) { event.preventDefault(); $('.furnace-lightbox').hidden = true; $('.furnace-photo-button').focus(); } });
   $('#furnace-spread').addEventListener('input', (event) => setSpread(Number(event.target.value) / 100));
@@ -625,9 +636,17 @@ export function createFurnaceDetail({ documents = [] } = {}) {
     const pixels = event.deltaY * (event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? canvas.getBoundingClientRect().height : 1);
     zoomCamera(Math.exp(-Math.max(-600, Math.min(600, pixels)) * (event.ctrlKey ? .006 : .0015)), event);
   }, { passive: false });
-  canvas.addEventListener('keydown', (event) => { if (event.key === 'ArrowLeft') orbit.azimuth -= .12; else if (event.key === 'ArrowRight') orbit.azimuth += .12; else if (event.key === 'ArrowUp') orbit.elevation = Math.min(ORBIT_LIMITS[mode].top, orbit.elevation + .1); else if (event.key === 'ArrowDown') orbit.elevation = Math.max(-.9, orbit.elevation - .1); else if (event.key.toLowerCase() === 'r') reset(); else return; event.preventDefault(); orbitGoal = null; draw(); });
+  canvas.addEventListener('keydown', (event) => { if (presentation) return; if (event.key === 'ArrowLeft') orbit.azimuth -= .12; else if (event.key === 'ArrowRight') orbit.azimuth += .12; else if (event.key === 'ArrowUp') orbit.elevation = Math.min(ORBIT_LIMITS[mode].top, orbit.elevation + .1); else if (event.key === 'ArrowDown') orbit.elevation = Math.max(-.9, orbit.elevation - .1); else if (event.key.toLowerCase() === 'r') reset(); else return; event.preventDefault(); orbitGoal = null; draw(); });
   const resume = () => { if (dialog.open) schedule(); };
   document.addEventListener('visibilitychange', resume);
   function dispose() { maintenance?.dispose(); close(); disposed = true; cancelAnimationFrame(frame); cancelAnimationFrame(hoverFrame); observer?.disconnect(); document.removeEventListener('visibilitychange', resume); drawing?.dispose(); grid?.geometry.dispose(); grid?.material.dispose(); for (const geometry of geometrySet) geometry.dispose(); for (const mat of materialSet) mat.dispose(); renderer?.dispose(); dialog.remove(); }
-  return { open, close, dispose };
+  function setPresentationState({ spread: value = spread, partId = null, view = 'iso' } = {}) {
+    if (!dialog.open || disposed) return false;
+    if (Number.isFinite(value)) { setSpread(value); amount = spread; }
+    if (VIEW_PRESETS[view]) { Object.assign(orbit, VIEW_PRESETS[view]); orbitGoal = null; markView(view); }
+    const id = partId && PART_BY_ID[partId] ? partId : null;
+    if (id !== selected) selectDrawingPart(id); else draw();
+    return true;
+  }
+  return { open, close, dispose, setPresentationState };
 }

@@ -8,7 +8,7 @@ import { inspectSiteAssets } from './check-assets.mjs';
 const root = fileURLToPath(new URL('../', import.meta.url));
 const failures = [];
 // These URLs are served by the common server rather than a same-named folder.
-const serverRoutes = new Map([['/drawing-review/', '근거 자료/도면검토앱/public/index.html']]);
+const serverRoutes = new Map([['/drawing-review/', 'tooling/drawing-review/public/index.html']]);
 // production-pc-offload-before-metadata is a receipt: the catalog as it stood just
 // before its 4,295 local files were moved to Drive. Its links are meant to be dead.
 const skipped = new Set(['vendor', 'node_modules', '.sites-runtime', '.openai', '.backups', 'production-pc-offload-before-metadata']);

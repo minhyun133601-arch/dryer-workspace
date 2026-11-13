@@ -19,6 +19,25 @@ const previousPreparationRevision = 'preparation-room-current-layout-20261111';
 const completedPreparationRevision = 'preparation-complete-20261111';
 const missingTankRevision = 'preparation-missing-tank-20261112';
 const currentRevision = 'preparation-tank-openings-20261112';
+
+test('the new mobile cabinet repairs only its exact aisle-blocking saved default once', () => {
+  const item = EQUIPMENT.find(item => item.id === 'f1-prep-mobile-white-unit');
+  const old = { id:item.id, position:[25.65,.3,6.5], rotation:0 };
+  const payload = {version:1,catalogRevision:currentRevision,placementRevisions:{},items:[old]};
+  const options = {migrateDefaults:true,migrateDryerDefaults:false};
+  assert.deepEqual(validateLayout(payload,[item],options),[{id:item.id,position:[...item.position],rotation:0}]);
+  const snapped = {...payload,items:[{...old,position:[25.75,.3,6.5]}]};
+  assert.deepEqual(validateLayout(snapped,[item],options),[{id:item.id,position:[...item.position],rotation:0}], 'the original default saved on the automatic quarter-grid is also repaired');
+  for (const changed of [{...old,position:[25.5,.3,6.5]},{...old,rotation:.1}]) {
+    const manual={...payload,items:[changed]};
+    const [restored]=validateLayout(manual,[item],options);
+    assert.deepEqual(restored.position,changed.position,'a manual move preserves its complete saved position');
+    assert.ok(Math.abs(restored.rotation-changed.rotation)<1e-10,'a manual turn preserves its saved facing');
+  }
+  assert.deepEqual(validateLayout(payload,[item]),payload.items,'an explicit file import stays intentional');
+  const stamped={...payload,placementRevisions:{[item.id]:item.placementRevision}};
+  assert.deepEqual(validateLayout(stamped,[item],options),payload.items,'the item correction never replays after it was saved once');
+});
 // A hanging tank pose is "on the deck" when its centre lies within the deck rectangle.
 const onDeck = (item, position) => position[0] >= item.hangingDeck.minX && position[0] <= item.hangingDeck.maxX && position[2] >= item.hangingDeck.minZ && position[2] <= item.hangingDeck.maxZ;
 const oldPositions = new Map([

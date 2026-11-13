@@ -5,7 +5,7 @@ import { DRYER_BUILDING_FLOORS } from '../apps/site/dryer-building-data.js';
 import { EQUIPMENT } from '../apps/site/building-data.js';
 import { buildDryerBuildingEnvironment } from '../apps/site/dryer-building-envelope.js';
 import { buildPreparationEquipment } from '../apps/site/preparation-models.js';
-import { createLayoutEditor } from '../apps/site/layout-editor.js';
+import { createLayoutEditor, validateLayout } from '../apps/site/layout-editor.js';
 import { PLACEMENT_REGIONS } from '../apps/site/placement-rules.js';
 
 // 11/12 user correction with screenshot 262: the preparation hall reaches the
@@ -49,7 +49,7 @@ test('the west wall keeps one outer-packaging door south of the deck edge and no
   assert.ok(Math.abs(z - DOOR_Z) < 1e-8, `door centre at local z${z}`);
   assert.ok(z - gap.width / 2 > deckSouthZ + .3, 'the door clears the deck corner column and edge beam');
   assert.ok(z + gap.width / 2 < first.bounds.maxZ - .9, 'the door stays clear of the south facade corner');
-  assert.ok(gap.width >= 1.5 && gap.height >= 2.2 && !gap.doorKind, 'an ordinary paired personnel door');
+  assert.ok(gap.width >= 1.5 && gap.height >= 2.2 && gap.doorKind === 'slide' && gap.slideLeaves === 2, 'the user-confirmed sliding entrance retains the same doorway');
   const weighing = room('preparation').bounds;
   assert.ok(!(z + gap.width / 2 > weighing.minZ && z - gap.width / 2 < weighing.maxZ), 'no door opens from the raw-material weighing store');
   const hall = room('dispensing');
@@ -73,7 +73,7 @@ test('the built wall is solid at the old historical gaps and open at the new doo
     assert.ok(Math.abs(doors[0].position.z - DOOR_Z) < 1e-6);
     const leaves = []; doors[0].traverse(node => { if (node.userData.proximityDoor) leaves.push(node); });
     assert.equal(leaves.length, 2, 'paired leaves');
-    assert.ok(leaves.every(leaf => leaf.userData.proximityDoor.enterable && leaf.rotation.y === 0), 'closed by default and walkable');
+    assert.ok(leaves.every(leaf => leaf.userData.proximityDoor.enterable && leaf.userData.proximityDoor.kind === 'slide' && leaf.userData.proximityDoor.axis === 'x' && leaf.position.x === leaf.userData.proximityDoor.closed && leaf.rotation.y === 0), 'closed sliding panels move sideways instead of swinging into the approach');
     const label = h.labels.find(item => item.text === '외포장실 출입구');
     assert.ok(label && label.position[0] - label.width / 2 > WEST_X + .05, 'the floor label does not straddle the wall');
     assert.ok(label.position[2] > DOOR_Z - .9 && label.position[2] < DOOR_Z + .9, 'the floor label sits in front of the door');
@@ -100,14 +100,33 @@ test('the feed pump stands directly behind the homogenizer, whose front faces th
     const inlet = riserBox.getCenter(new THREE.Vector3());
     assert.ok(inlet.x > bodyBox.min.x && inlet.x < bodyBox.max.x && riserBox.max.y > bodyBox.min.y && riserBox.max.y < bodyBox.max.y + .1, 'the feed line enters the homogenizer body');
     const region = PLACEMENT_REGIONS.building;
-    for (const box of [hBox, pBox]) assert.ok(box.max.z <= region.maxZ && box.max.z < first.bounds.maxZ - .06 && box.min.x > WEST_X + 1.5 && box.max.x < 21.54, 'inside the south strip and clear of the walls');
-    // Clear space in front of the paired door on the preparation side.
-    const approach = new THREE.Box3(new THREE.Vector3(WEST_X + .06, .3, DOOR_Z - .9), new THREE.Vector3(WEST_X + 1.8, 2.7, DOOR_Z + .9));
+    for (const box of [hBox, pBox]) assert.ok(box.max.z <= region.maxZ && box.max.z < first.bounds.maxZ - .06 && box.min.x >= WEST_X + 2.6 - 1e-6 && box.max.x < 21.3, 'the relocated pair keeps a wider door approach and clearance from the CIP wall');
+    // The west-wall approach remains free across the whole sliding doorway.
+    const approach = new THREE.Box3(new THREE.Vector3(WEST_X + .06, .3, DOOR_Z - .9), new THREE.Vector3(WEST_X + 2.55, 2.7, DOOR_Z + .9));
     for (const [id, box] of [[homogenizer.id, hBox], [pump.id, pBox]]) assert.ok(!approach.intersectsBox(box), `${id} keeps the door approach free`);
     const deckRoot = built(h.s, deck), deckSupports = [];
     deckRoot.traverse(node => { if (node.name === 'preparation-platform-support-column') deckSupports.push(new THREE.Box3().setFromObject(node)); });
     assert.ok(deckSupports.every(box => !approach.intersectsBox(box)), 'no deck column stands in the doorway');
   } finally { h.dispose(); }
+});
+
+test('the latest saved default shifts the connected pair once while imports and manual changes keep their complete poses', () => {
+  const catalog = [homogenizer, pump];
+  const items = [
+    { id: homogenizer.id, position: [19.5, .3, 20], rotation: -Math.PI },
+    { id: pump.id, position: [19.75, .3, 21], rotation: -Math.PI },
+  ];
+  const payload = { version: 1, catalogRevision: 'preparation-tank-openings-20261112',
+    placementRevisions: Object.fromEntries(catalog.map(item => [item.id, 'preparation-outer-door-pump-20261112'])), items };
+  const restored = validateLayout(payload, catalog, { migrateDefaults: true, migrateDryerDefaults: false });
+  assert.deepEqual(restored, catalog.map(pose), 'the exact stored defaults migrate even when the overall building layout was already reviewed');
+  assert.equal(restored[0].position[0] - items[0].position[0], .5);
+  assert.equal(restored[1].position[0] - items[1].position[0], .5);
+  assert.deepEqual(validateLayout(payload, catalog), items, 'an explicit import does not apply the correction');
+  const stamped = { ...payload, placementRevisions: Object.fromEntries(catalog.map(item => [item.id, item.placementRevision])) };
+  assert.deepEqual(validateLayout(stamped, catalog, { migrateDefaults: true }), items, 'later intentional returns to an old pose do not replay the migration');
+  const manual = { ...payload, items: items.map(item => ({ ...item, position: [item.position[0] - .25, item.position[1], item.position[2]] })) };
+  assert.deepEqual(validateLayout(manual, catalog, { migrateDefaults: true }), manual.items, 'nearby manually moved equipment is preserved');
 });
 
 class EditorNode {

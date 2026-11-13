@@ -5,8 +5,16 @@ const instances = new Map();
 const icons = {
   drawings: '<rect x="17" y="10" width="46" height="60" rx="5"/><path d="M27 24h26M27 34h26M27 44h16M27 56h20M48 45v16"/>',
   site: '<path d="M10 68V38l20 10V30l20 12V24h12v44H10M15 68h56M56 24V12h9v56"/><rect x="19" y="55" width="8" height="7"/><rect x="35" y="55" width="8" height="7"/><path d="M50 51h12M50 59h12M10 38V27h12v17"/>',
+  presentation: '<rect x="9" y="13" width="62" height="43" rx="4"/><path d="m34 25 17 10-17 10V25M40 56v13M27 69h26"/>',
 };
 let current = 'home';
+let presentationActive = false;
+
+function setPresentationActive(active) {
+  presentationActive = active;
+  document.querySelector('.workspace-header').hidden = active;
+  document.body.dataset.presentationActive = String(active);
+}
 
 for (const module of MODULES) {
   const nav = document.createElement('a');
@@ -73,6 +81,7 @@ function createInstance(module) {
     renderStatus();
   }
   frame.addEventListener('load', () => {
+    if (module.id === 'presentation') setPresentationActive(false);
     sendVisibility(instance, current === module.id);
     try {
       if (!frame.contentDocument?.querySelector('html[lang="ko"]')) {
@@ -88,7 +97,9 @@ function createInstance(module) {
 }
 
 function showRoute() {
-  const next = resolveRoute(location.hash);
+  const requested = resolveRoute(location.hash);
+  const next = presentationActive ? 'presentation' : requested;
+  if (presentationActive && requested !== next) history.replaceState(null, '', '#/presentation');
   const changed = current !== next;
   current = next;
   const module = MODULES.find((item) => item.id === current);
@@ -122,7 +133,11 @@ window.addEventListener('message', (event) => {
     sendVisibility(instance, current === instance.module.id);
     renderStatus();
   } else if (event.data?.type === 'dryer-workspace:navigate' && MODULES.some((item) => item.id === event.data.moduleId)) {
+    if (presentationActive) return;
     location.hash = `#/${event.data.moduleId}`;
+  } else if (event.data?.type === 'dryer-workspace:presentation-active' && instance.module.id === 'presentation' && typeof event.data.active === 'boolean') {
+    if (event.data.active && current !== 'presentation') return;
+    setPresentationActive(event.data.active);
   }
 });
 window.addEventListener('hashchange', showRoute);
@@ -132,6 +147,7 @@ document.addEventListener('visibilitychange', () => {
 $('retry-module').addEventListener('click', () => {
   const instance = instances.get(current);
   if (!instance) return;
+  if (instance.module.id === 'presentation') setPresentationActive(false);
   clearTimeout(instance.timer);
   sendVisibility(instance, false);
   instance.frame.remove();

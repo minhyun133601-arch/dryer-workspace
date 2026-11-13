@@ -81,7 +81,9 @@ test('the two lidded foyer boxes rest on their table beside the lower stair appr
       assert.ok(body.min.x>=top.min.x&&body.max.x<=top.max.x&&body.min.z>=top.min.z&&body.max.z<=top.max.z);
     }
     const tableBox=bounds(table),lockers=bounds(env.architectureFixtures.getObjectByName('preparation-under-existing-stair-lockers'));
-    assert.ok(tableBox.min.x-lockers.max.x>.1,'the table stands beside the retained locker bank');
+    const sideGap=Math.max(tableBox.min.x-lockers.max.x,lockers.min.x-tableBox.max.x);
+    assert.ok(sideGap>.1&&sideGap<.5,'the table stands beside the retained locker bank on either side of the reversed stair');
+    assert.ok(Math.min(tableBox.max.z,lockers.max.z)-Math.max(tableBox.min.z,lockers.min.z)>.1,'the neighboring table and lockers share the same under-stair pocket');
     assert.ok(tableBox.max.z<20.06,'the first flight along Z20.685 remains clear of the table and its boxes');
     const stair=env.architectureFixtures.getObjectByName('dryer-building-1-southeast-stair');
     stair.traverse(node=>{if(node.isMesh)assert.equal(bounds(node).intersectsBox(tableBox),false,'the table and boxes remain below the upper flight without intersecting it');});

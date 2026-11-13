@@ -61,15 +61,15 @@ function runtime() {
   return { ...result, canvas };
 }
 
-test('dryer profile includes the building and roof with no external room models, registries or detail modules', () => {
+test('manual dryer profile includes the building, roof and adjacent first-floor boiler interior while excluding other areas', () => {
   assert.match(html, /data-profile="dryer"/);
   assert.ok(Buffer.byteLength(html) < 25 * 1024 * 1024, 'the index fits static hosting limits');
   const equipment = JSON.parse(code.match(/^const EQUIPMENT = (\[[^\n]+\]);$/m)[1]);
   const floors = JSON.parse(code.match(/^const FLOORS = (\[[^\n]+\]);$/m)[1]);
-  const expected = EQUIPMENT.filter(item => Number.isFinite(item.floor) && item.id !== 'f1-boiler-room' && !item.samePhysicalRoomAs);
+  const expected = EQUIPMENT.filter(item => Number.isFinite(item.floor) && (item.id === 'f1-boiler-room' || !item.samePhysicalRoomAs));
   assert.deepEqual(equipment.map(item => item.id), expected.map(item => item.id));
   assert.ok(equipment.every(item => Number.isFinite(item.floor)));
-  assert.equal(equipment.some(item => item.id === 'f1-boiler-room'), false);
+  assert.equal(equipment.some(item => item.id === 'f1-boiler-room' && item.inspectableInterior), true);
   assert.equal(floors.find(floor => floor.id === 2).displayLevel, 1.5, 'the historical integer key keeps its current mezzanine name in the offline presentation');
   const filmed = expected.filter(item => item.dryerRoute);
   assert.ok(filmed.length > 0, 'the observed third-floor equipment must reach the presentation');
@@ -81,7 +81,8 @@ test('dryer profile includes the building and roof with no external room models,
   const markup = html.replace(/<(script|style)\b[^>]*>[\s\S]*?<\/\1>/gi, '');
   assert.doesNotMatch(markup, /data-area="(?:campus|outdoor|packaging|liquid)"|data-view="person"|data-person-|id="person-controls"/);
   assert.doesNotMatch(code, /const (?:OUTDOOR_EQUIPMENT|CAMPUS_EQUIPMENT|PACKAGING_EQUIPMENT|LIQUID_EQUIPMENT|CHILLER_ASSETS|LIQUID_ASSETS)\s*=/);
-  assert.doesNotMatch(code, /const (?:campusModelsModule|outdoorModelsModule|packagingModelsModule|liquidModelsModule|boilerModelsModule|personWalkModule|chillerDetailModule|liquidDetailModule)\s*=/);
+  assert.doesNotMatch(code, /const (?:campusModelsModule|outdoorModelsModule|packagingModelsModule|liquidModelsModule|personWalkModule|chillerDetailModule|liquidDetailModule)\s*=/);
+  assert.match(code, /const boilerModelsModule\s*=/);
   assert.doesNotMatch(code, /^\s*(?:import|export)\s|\bimport\s*\(/m);
   assert.doesNotMatch(markup, /<(?:script|link|img)\b[^>]+(?:src|href)=["'](?!data:|#)/i);
   assert.match(code, /const STORAGE_KEY = 'dryer-presentation-layout-v1'/, 'presentation saves cannot overwrite the full workspace layout');
@@ -123,6 +124,13 @@ test('the bundled scene creates real dryer geometry while enforcing its floor an
     assert.equal(scene.personAvatar, undefined);
     assert.equal(scene.personMarker, undefined);
     assert.equal(scene.scene.getObjectByName('facility-person'), undefined);
+    scene.setFloor(1); scene.setView('top');
+    const boilerRoom = scene.objects.get('f1-boiler-room');
+    assert.equal(boilerRoom.visible, true, 'the adjacent boiler interior is present in the manual first-floor plan');
+    assert.ok(boilerRoom.getObjectByName('preparation-boiler-room-interior'));
+    const boilers = []; boilerRoom.traverseVisible(node => { if (node.userData.boilerId) boilers.push(node.userData.boilerId); });
+    assert.deepEqual(boilers, ['firetube-3t', 'once-through-1.5t']);
+    scene.setFloor('all');
     assert.deepEqual(Object.keys(model.regions).sort(), ['building', 'roof', 'upper']);
     for (const floor of ['campus', 'outdoor', 'packaging', 'liquid']) { scene.setFloor(floor); assert.equal(scene.activeFloor, 'all'); }
     scene.setView('person'); assert.equal(scene.view, 'perspective');

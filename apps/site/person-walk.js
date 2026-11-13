@@ -1,8 +1,9 @@
-// Walking uses the model's own units; the avatar is a navigation aid, not a
-// measured clearance or a simulation of a person's safe route through the site.
+// Model units are metres. The person uses a fixed adult body and eye height;
+// walking support and clearance follow the visible model geometry.
 export const WALK_RULES = Object.freeze({
-  speed: 6, fastSpeed: 12, turnSpeed: 1.8,
+  speed: 1.35, fastSpeed: 2.7, turnSpeed: 1.8,
   eyeHeight: 1.65, height: 1.75, radius: .3,
+  verticalFov: 70, horizontalFov: 110,
   lookSensitivity: .004, maxPitch: Math.PI * .44, maxDelta: .1,
   maxStep: .32, maxHorizontalStep: .06, gravity: 9.8, eyeResponse: 18,
 });
@@ -49,21 +50,30 @@ function moveAxis(position, axis, distance, bounds, obstacles) {
   let end = start + distance;
   if (bounds) {
     const min = bounds[`min${axis}`] + radius, max = bounds[`max${axis}`] - radius;
-    end = min <= max ? clamp(end, min, max) : (min + max) / 2;
+    if (min > max) end = start;
+    // An older saved position can lie outside revised bounds. It can walk
+    // inward at normal speed, rather than teleporting to the new boundary.
+    else if (start < min) end = distance > 0 ? Math.min(end, max) : start;
+    else if (start > max) end = distance < 0 ? Math.max(end, min) : start;
+    else end = clamp(end, min, max);
   }
   for (const obstacle of obstacles) {
     const min = obstacle[`min${axis}`] - radius, max = obstacle[`max${axis}`] + radius;
     if (other <= obstacle[`min${otherAxis}`] - radius + EPS || other >= obstacle[`max${otherAxis}`] + radius - EPS) continue;
-    // An equipment edit may leave an existing avatar inside a new footprint.
-    // Let it leave that overlap instead of trapping it permanently.
-    if (start > min + EPS && start < max - EPS) continue;
+    // A moved object or closing door can overlap an existing avatar. Allow
+    // retreat toward the nearer face, never continue through the far face.
+    if (start > min + EPS && start < max - EPS) {
+      const low = start - min, high = max - start;
+      if ((end > start && high > low + EPS) || (end < start && low > high + EPS)) end = start;
+      continue;
+    }
     if (end > start && start <= min + EPS && end > min) end = Math.min(end, min);
     if (end < start && start >= max - EPS && end < max) end = Math.max(end, max);
   }
   position[index] = end;
 }
 
-export function advancePerson(state, { forward = 0, turn = 0, delta = 0, bounds, obstacles = [], fast = false, groundHeight } = {}) {
+export function advancePerson(state, { forward = 0, turn = 0, delta = 0, bounds, obstacles = [], fast = false, groundHeight, canOccupy } = {}) {
   const next = createPersonState(state);
   if (!Number.isFinite(delta) || delta <= 0) return next;
   const duration = Math.min(delta, WALK_RULES.maxDelta);
@@ -78,22 +88,39 @@ export function advancePerson(state, { forward = 0, turn = 0, delta = 0, bounds,
     const previousYaw = next.yaw, yaw = previousYaw + turnRate * dt;
     const dx = Math.abs(turnRate) > EPS ? speed * (Math.cos(previousYaw) - Math.cos(yaw)) / turnRate : Math.sin(yaw) * speed * dt;
     const dz = Math.abs(turnRate) > EPS ? speed * (Math.sin(previousYaw) - Math.sin(yaw)) / turnRate : -Math.cos(yaw) * speed * dt;
-    moveAxis(next.position, 'X', dx, frame, walls);
-    moveAxis(next.position, 'Z', dz, frame, walls);
-    if (typeof groundHeight === 'function') {
-      const surface = groundHeight(next.position);
-      const gap = next.position[1] - surface;
-      if (Number.isFinite(surface) && gap >= -WALK_RULES.maxStep - EPS) {
-        if (gap <= WALK_RULES.maxStep + EPS) {
-          next.position[1] = surface;
-          next.verticalVelocity = 0;
-        } else {
-          const velocity = next.verticalVelocity - WALK_RULES.gravity * dt;
-          next.position[1] = Math.max(surface, next.position[1] + (next.verticalVelocity + velocity) * dt / 2);
-          next.verticalVelocity = next.position[1] === surface ? 0 : velocity;
-        }
-      } else next.verticalVelocity = 0;
+    const baseHeight = next.position[1], baseVelocity = next.verticalVelocity;
+    // Both axes inspect the same instant. Sampling from the initial vertical
+    // state avoids applying gravity twice while still testing each reachable
+    // stair height before the complete body enters its new position.
+    const surfaceAt = (position) => {
+      if (typeof groundHeight !== 'function') return { height: baseHeight, velocity: baseVelocity, blocked: false };
+      const surface = groundHeight(position), gap = baseHeight - surface;
+      if (!Number.isFinite(surface)) return { height: baseHeight, velocity: 0, blocked: false };
+      if (gap < -WALK_RULES.maxStep - EPS) return { height: baseHeight, velocity: 0, blocked: true };
+      if (gap <= WALK_RULES.maxStep + EPS) return { height: surface, velocity: 0, blocked: false };
+      const velocity = baseVelocity - WALK_RULES.gravity * dt;
+      const height = Math.max(surface, baseHeight + (baseVelocity + velocity) * dt / 2);
+      return { height, velocity: height === surface ? 0 : velocity, blocked: false };
+    };
+    const permits = (position, previous) => typeof canOccupy !== 'function' || canOccupy([...position], [...previous]) !== false;
+    for (const [axis, distance] of [['X', dx], ['Z', dz]]) {
+      if (Math.abs(distance) < EPS) continue;
+      const previous = [...next.position], candidate = [...previous];
+      moveAxis(candidate, axis, distance, frame, walls);
+      const surface = surfaceAt(candidate);
+      if (surface.blocked) continue;
+      candidate[1] = surface.height;
+      if (permits(candidate, previous)) {
+        next.position = candidate;
+        next.verticalVelocity = surface.velocity;
+      }
     }
+    const surface = surfaceAt(next.position), settled = [...next.position];
+    settled[1] = surface.height;
+    if (!surface.blocked && (Math.abs(settled[1] - next.position[1]) < EPS || permits(settled, next.position))) {
+      next.position[1] = settled[1];
+      next.verticalVelocity = surface.velocity;
+    } else next.verticalVelocity = 0;
     next.yaw = normalize(yaw);
   }
   return next;

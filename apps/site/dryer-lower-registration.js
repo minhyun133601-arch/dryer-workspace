@@ -1,8 +1,8 @@
 // Stable catalog IDs preserve saved layouts. Registered 3F shapes follow the
 // current walk; remaining approximate process poses retain historical context.
 const placements = {
-  'f1-ica-1': [-5.5, -2.5], 'f1-ica-2': [0, -2.5], 'f1-ica-3': [5, -2.5],
-  'f1-xray-1': [-5.5, 1], 'f1-xray-2': [0, 1], 'f1-xray-3': [5, 1],
+  'f1-ica-1': [-3.5, -2.5], 'f1-ica-2': [0, -2.5], 'f1-ica-3': [5, -2.5],
+  'f1-xray-1': [-3.5, 1], 'f1-xray-2': [0, 1], 'f1-xray-3': [5, 1],
   'f1-mix-a': [21.2, -1.3], 'f1-mix-b': [25.3, -1.3],
   'f1-melting': [21.2, 3.3], 'f1-oil-water': [25.5, 3.3], 'f1-s1': [23.5, 10],
   'f1-conveyor-a': [-2, 14.5], 'f1-conveyor-b': [6.75, 12.25], 'f1-palletizer': [10.75, 13.75],
@@ -20,6 +20,7 @@ const observedIntermediateClamps = Object.freeze({
 });
 const quarter = value => Math.round(value / .25) * .25;
 const routeSource = 'dryer-entrance-mezzanine-video-20261112';
+const supplementalClip2Times=Object.freeze({'f1-conveyor-a':[36,42,138,141,144],'f1-conveyor-b':[48],'f1-palletizer':[10,14,156]});
 const routeShape = (kind, sourceTimes, observedCounts = {}) => Object.freeze({
   kind, source: routeSource, sourceTimes, observedCounts, nominalDimensionsMeasured: false,
   positionBasis: kind.startsWith('overlook-') ? 'mezzanine-overlook-relative-topology-in-1f-envelope' : 'continuous-video-relative-topology-in-reduced-3f-envelope',
@@ -76,6 +77,13 @@ const previousRoutePoses = {
 // clipped by their newer body footprints; the others are the old catalog's
 // quarter-grid/clipped results. Do not treat nearby positions as defaults.
 const hallPlacementRevision = 'dryer-hall-saved-defaults-20261113';
+// The user confirmed a constant-width overlook instead of the old narrow
+// western pinch. Shift only the first machine/inspection pair far enough east
+// to keep its raised service deck inside the production void. Repair only the
+// exact previous defaults, once; edited poses and explicit imports stay owned
+// by the user.
+const corridorPlacementRevision = 'dryer-mezzanine-width-defaults-20261113';
+const previousCorridorDefaults = Object.freeze({ 'f1-ica-1': [-5.5,-2.5], 'f1-xray-1': [-5.5,1] });
 const savedHallDefaultPoses = Object.freeze({
   'f1-ica-1': [-7.25, -2.75], 'f1-xray-1': [-7.75, 1.5],
   'f1-conveyor-a': [-2.75, 6], 'f1-conveyor-b': [5.5, 5.5], 'f1-palletizer': [10, 6.75],
@@ -139,10 +147,14 @@ export function registerDryerLowerEquipment(item) {
     const historicalPoses = [...(previousRoutePoses[item.id] || []), ...(savedHallPose ? [savedHallPose] : [])];
     const qualifiedPoses = reviewedRouteRevisions.flatMap(catalogRevision =>
       historicalPoses.map(([x, z]) => ({ position: [x, item.position[1], z], rotation: item.rotation || 0, catalogRevision, migrationBasis: 'dryer-route-video-default' })));
+    const corridorDefault=previousCorridorDefaults[item.id];
+    const corridorPoses=corridorDefault?reviewedRouteRevisions.map(catalogRevision=>({position:[corridorDefault[0],item.position[1],corridorDefault[1]],rotation:item.rotation||0,catalogRevision,migrationBasis:'dryer-route-video-default'})):[];
     return Object.freeze({
       ...item, ...observed, position: pose ? [pose[0], item.position[1], pose[1]] : item.position,
+      ...(supplementalClip2Times[item.id]?{sourceReferences:[{clipId:'first-floor-20261113-clip2',times:supplementalClip2Times[item.id]}]}:{}),
       ...(savedHallPose ? { placementRevision: hallPlacementRevision } : {}),
-      previousPlacements: [...previousPlacements, ...qualifiedPoses],
+      ...(corridorDefault ? { placementRevision: corridorPlacementRevision } : {}),
+      previousPlacements: [...previousPlacements, ...qualifiedPoses, ...corridorPoses],
       positionBasis: observed.dryerRoute.positionBasis, positionConfidence: 'approximate',
       confidence: '2026-11-12 연속 영상 관찰 · 치수·좌표 비실측',
       details: [item.floor === 1 ? '1.5층 복도와 OP실에서 아래를 내려다본 창 장면의1층 외형·상대 배치를 우선했습니다.' : '1.5층에서 3F 표기 계단을 지나 촬영한 연속 영상의 외형·상대 배치를 우선했습니다.',

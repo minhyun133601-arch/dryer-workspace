@@ -26,8 +26,8 @@ const photoLayout = new Map([
 test('assembled facility follows architectural datums and keeps the roof service area at the seventh-floor level', () => {
   assert.deepEqual(FLOORS.map((floor) => floor.id), actualFloors);
   assert.equal(FLOOR_HEIGHT, 7.5);
-  assert.equal(EQUIPMENT.length, 47);
-  assert.equal(PREPARATION_EQUIPMENT.length, 9, 'the filmed preparation additions include the lower services and the adjacent boiler-room view');
+  assert.equal(EQUIPMENT.length, 48);
+  assert.equal(PREPARATION_EQUIPMENT.length, 10, 'the filmed preparation additions include the mobile white unit, lower services and adjacent boiler-room view');
   assert.equal(LOWER_EQUIPMENT.length, 28, 'the original lower-floor records remain available as source references');
   assert.equal(EQUIPMENT.length, LOWER_EQUIPMENT.length - 3 + PHOTO_EQUIPMENT.length + 6 + PREPARATION_EQUIPMENT.length);
   for (const id of ['f1-prep-under-services', 'f1-boiler-room']) assert.equal(EQUIPMENT.find(item => item.id === id)?.floor, 1, `${id} must be selectable with the preparation room`);
@@ -71,7 +71,9 @@ test('the original seven source layouts and photos stay intact while the assembl
     assert.equal(assembled.photo, original.photo, original.id);
     assert.deepEqual(assembled.photos.slice(0, original.photos.length), original.photos, original.id);
     assert.ok(assembled.photos.length > original.photos.length, 'new video views supplement the preserved source photos');
-    assert.deepEqual(assembled.previousPlacements, [{ position: [expected.position[0], 37.5, expected.position[2]], rotation: expected.rotation }]);
+    const previous = [{ position: [expected.position[0], 37.5, expected.position[2]], rotation: expected.rotation }];
+    if (original.id === 'panel') previous.push({ position: [6.5, 26.2, 6.5], rotation: 0 });
+    assert.deepEqual(assembled.previousPlacements, previous, 'preserve the photo pose and migrate the earlier stair-obstructing panel default');
     assert.equal(assembled.positionConfidence, 'approximate');
   }
 });

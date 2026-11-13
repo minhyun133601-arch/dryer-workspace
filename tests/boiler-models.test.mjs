@@ -33,6 +33,41 @@ test('the boiler service mains clear the equipment shutter and roller housing wh
   }
 });
 
+test('the rear blue wall pipe preserves its riser and clears the real wall and a full-height stair walker in each room scale',()=>{
+  for(const [kind,width,depth]of [['campus',13.5,14],['campus',11,11],['campus',8.2,9.8],['preparation',8.2,9.8]]){
+    const {s,root,dispose}=harness();
+    try{
+      const build=kind==='campus'?buildCampusBoilerRoom:buildPreparationBoilerRoom;
+      build(s,root,{type:kind==='campus'?'campus-boiler-room':'preparation-boiler-room',width,depth,height:6.6});root.updateMatrixWorld(true);
+      const pipe=root.getObjectByName('campus-boiler-stair-clear-blue-wall-pipe'),stair=root.getObjectByName('campus-boiler-internal-concrete-stair');
+      assert.ok(pipe&&stair);
+      const riser=pipe.children[0];
+      assert.ok(Math.abs(riser.position.x-1.4*(kind==='campus'?width:11)/13.5)<1e-8);
+      assert.ok(Math.abs(riser.position.z-(-6.35*(kind==='campus'?depth:11)/14))<1e-8,'the existing riser stays in its photographed approximate position');
+      assert.ok(Math.abs(riser.position.y-3.175)<1e-8&&Math.abs(riser.scale.y-1.35)<1e-8,'the correction changes neither riser elevation nor its height');
+      const pipeBounds=new THREE.Box3().setFromObject(pipe);
+      if(kind==='campus'){
+        const wall=new THREE.Box3().setFromObject(root.getObjectByName('campus-boiler-room-back-wall'));
+        assert.ok(pipeBounds.min.z-wall.max.z>=.005-1e-6,'the full pipe and enlarged elbow clear the inside face of the actual 150mm wall');
+      }else assert.ok(pipeBounds.min.x-(-width/2+.075)>=.005-1e-6,'the uniformly fitted pipe uses the actual registered room wall, not its omitted reference shell');
+      const points=Array.from({length:13},(_,i)=>{
+        const tread=stair.children[i*2],p=tread.getWorldPosition(new THREE.Vector3());p.y=new THREE.Box3().setFromObject(tread).max.y;return p;
+      });
+      for(let leg=1;leg<points.length;leg++){
+        const from=points[leg-1],to=points[leg],count=Math.max(1,Math.ceil(from.distanceTo(to)/.05));
+        for(let i=0;i<=count;i++){
+          const feet=from.clone().lerp(to,i/count);
+          for(let side=0;side<=12;side++){
+            const offset=side?new THREE.Vector3(Math.sin(side*Math.PI/6)*.3,.35,Math.cos(side*Math.PI/6)*.3):new THREE.Vector3(0,.35,0);
+            const hits=new THREE.Raycaster(feet.clone().add(offset),new THREE.Vector3(0,1,0),.001,1.75-.35).intersectObject(pipe,true);
+            assert.equal(hits.length,0,`${kind} ${width}x${depth}: the blue pipe must not enter the 1.75m / 0.3m-radius stair walking body`);
+          }
+        }
+      }
+    }finally{dispose();}
+  }
+});
+
 test('the boiler personnel leaf and shutter open independently of their fixed frames and return closed', () => {
   const { s, root, dispose } = harness();
   let controller;

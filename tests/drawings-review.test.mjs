@@ -3,8 +3,8 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import vm from 'node:vm';
 
-const appUrl = new URL('../근거 자료/도면검토앱/public/app.js', import.meta.url);
-const htmlUrl = new URL('../근거 자료/도면검토앱/public/index.html', import.meta.url);
+const appUrl = new URL('../tooling/drawing-review/public/app.js', import.meta.url);
+const htmlUrl = new URL('../tooling/drawing-review/public/index.html', import.meta.url);
 
 class Element {
   constructor(id='') {

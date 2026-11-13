@@ -64,9 +64,12 @@ export const DRYER_UPPER_OVERRIDES = Object.freeze({
   'cyclone-1': pose(-3.4, -8.3, 7, -5, { radius: 1.2, upperRadius: .8, width: 2.4, depth: 2.4, height: 5.3, labelHeight: 5.5, additionalPhotos: [frame(174), frame(192), frame(219)] }),
   'cyclone-2': pose(-3.4, -5.3, 7, 0, { radius: 1.2, upperRadius: .8, width: 2.4, depth: 2.4, height: 5.3, labelHeight: 5.5, additionalPhotos: [frame(213), frame(216), frame(264)] }),
   'cyclone-3': pose(-3.4, -2.3, 7, 5, { radius: 1.2, upperRadius: .8, width: 2.4, depth: 2.4, height: 5.3, labelHeight: 5.5, additionalPhotos: [frame(216), frame(219), frame(276)] }),
-  panel: pose(6.5, 6.5, -10.5, 3.8, {
+  panel: pose(4.9, 6.5, -10.5, 3.8, {
     width: 1.6, depth: .87, height: 2.83, labelHeight: 3,
-    summary: '6층 홀의 챔버 인접 현장 제어반입니다. 전면 외형만 사진으로 재현하며 기존 별도 제어반 자료와의 동일성은 확정하지 않습니다.',
+    // The earlier approximate position crossed the registered stair lane.
+    // Exact old defaults can migrate; independently moved saved poses remain.
+    previousPlacements: [{ position: [-10.5, 37.5, 3.8], rotation: 0 }, { position: [6.5, 26.2, 6.5], rotation: 0 }],
+    summary: '6층 홀의 챔버 인접 현장 제어반입니다. 계단 보행 폭과 겹치지 않도록 인접한 위치에 개략 배치했습니다. 전면 외형만 사진으로 재현하며 기존 별도 제어반 자료와의 동일성은 확정하지 않습니다.',
     additionalPhotos: [frame(174)],
   }),
 });

@@ -43,12 +43,13 @@ test('the native platform has three machinery landings, two real front recesses 
   try{
     const root=h.roots.get('f1-ica-1'),deck=named(root,'observed-packing-common-service-deck')[0];
     assert.equal(deck.userData.observedFrontNotches,2);assert.equal(deck.userData.rearConnectingWalkway,true);
-    for(const x of[-2.75,2.5]){
+    const centers=['f1-ica-1','f1-ica-2','f1-ica-3'].map(id=>EQUIPMENT.find(item=>item.id===id).position[0]);
+    for(const x of centers.slice(1).map((value,index)=>(centers[index]+value)/2)){
       assert.equal(down(deck,x,-4.15).length,0,'the visible recess is not filled by a full rectangular slab');
       assert.ok(down(deck,x,-5.5).length>0,'the rear strip links the individual machinery landings');
     }
-    for(const x of[-5.5,0,5])assert.ok(down(deck,x+1.2,-4.1).length>0,'each feed retains its adjacent working landing');
-    const b=bounds(deck);assert.ok(Math.abs(b.min.x+7.25)<1e-5&&Math.abs(b.max.x-6.75)<1e-5&&Math.abs(b.min.z+5.9)<1e-5&&Math.abs(b.max.z+3.7)<1e-5,'the refined outline retains the registered mezzanine-void footprint');
+    for(const x of centers)assert.ok(down(deck,x+1.2,-4.1).length>0,'each feed retains its adjacent working landing');
+    const b=bounds(deck);assert.ok(Math.abs(b.min.x-(centers[0]-1.75))<1e-5&&Math.abs(b.max.x-(centers.at(-1)+1.75))<1e-5&&Math.abs(b.min.z+5.9)<1e-5&&Math.abs(b.max.z+3.7)<1e-5,'the refined outline follows the three actual machine positions inside the mezzanine void');
     assert.equal(named(root,'observed-packing-deck-diagonal-brace').length,6);
     assert.equal(named(root,'observed-packing-ladder-safety-hoop').length,4);
     assert.equal(named(root,'observed-packing-service-ladder').length,1);

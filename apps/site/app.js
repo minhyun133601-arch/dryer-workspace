@@ -76,7 +76,7 @@ function setViewIndicator(view) {
   });
   $('person-controls').hidden = view !== 'person';
   document.querySelectorAll('[data-person-rule]').forEach((label) => {
-    label.textContent = '계단 오르내리기 · 눈높이 1.65m';
+    label.textContent = '키 1.75m · 눈높이 1.65m';
   });
   if (view !== 'person') releasePersonControls();
 }

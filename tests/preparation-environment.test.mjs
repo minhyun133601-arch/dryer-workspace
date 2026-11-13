@@ -6,6 +6,8 @@ import { DRYER_BUILDING_FLOORS } from '../apps/site/dryer-building-data.js';
 import { buildDryerBuildingEnvironment } from '../apps/site/dryer-building-envelope.js';
 import { buildPreparationEnvironment } from '../apps/site/preparation-environment.js';
 import { createProximityDoorController } from '../apps/site/proximity-doors.js';
+import { EQUIPMENT } from '../apps/site/building-data.js';
+import { buildPreparationEquipment } from '../apps/site/preparation-models.js';
 
 function fixture() {
   const s = {
@@ -28,6 +30,57 @@ function customDoors(environment) {
   return result;
 }
 
+test('the complete raw-shutter opening and both approaches stay free of equipment, supports and parked context', () => {
+  const { s, environment } = fixture();
+  s._part = (root, name) => { const part = s._group(root); part.name = name; return part; };
+  for (const item of EQUIPMENT.filter(item => item.preparation)) {
+    const root = s._group(s.scene, item.position); root.name = item.id; root.rotation.y = item.rotation || 0;
+    assert(buildPreparationEquipment(s, root, item));
+  }
+  environment.architectureFixtures.traverse(node => {
+    const data = node.userData.proximityDoor;
+    if (data) node[data.kind === 'hinge' ? 'rotation' : 'position'][data.axis] = data.open;
+  });
+  s.scene.updateMatrixWorld(true);
+  const curtain = environment.architectureFixtures.getObjectByName('preparation-inner-orange-rapid-door-curtain');
+  const center = curtain.localToWorld(new THREE.Vector3(-.28, 0, 0));
+  // Full 2.85m curtain width, 2.2m on each side of the actual curtain plane,
+  // and continuous standing-person headroom above the walking surface.
+  const passage = new THREE.Box3(new THREE.Vector3(center.x - 1.425, center.y + .15, center.z - 2.2), new THREE.Vector3(center.x + 1.425, center.y + 2.1, center.z + 2.2));
+  const temporary = new THREE.Matrix4(), collisions = [];
+  s.scene.traverse(mesh => {
+    if (!mesh.isMesh || mesh.material.transparent && mesh.material.opacity < .99) return;
+    mesh.geometry.computeBoundingBox();
+    for (let i = 0; i < (mesh.isInstancedMesh ? mesh.count : 1); i++) {
+      const matrix = mesh.matrixWorld.clone();
+      if (mesh.isInstancedMesh) { mesh.getMatrixAt(i, temporary); matrix.multiply(temporary); }
+      const bounds = mesh.geometry.boundingBox.clone().applyMatrix4(matrix);
+      if (passage.intersectsBox(bounds)) collisions.push(mesh.name || mesh.parent.name || mesh.geometry.type);
+    }
+  });
+  assert.deepEqual(collisions, [], 'the full opening works without steering a person around a column or movable cabinet');
+  const white = EQUIPMENT.find(item => item.id === 'f1-prep-mobile-white-unit');
+  assert.deepEqual(white.position, [25.65, .3, 9.8], 'the filmed mobile cabinet stands to the right of the working-platform stair');
+  assert.equal(white.placementRevision, 'preparation-mobile-cabinet-shutter-clearance-20261113');
+});
+
+test('the tall entrance cupboards remain outside the air shower and clear its real stair, table and lockers', () => {
+  const { environment }=fixture(),root=environment.architectureFixtures;
+  const cupboards=root.getObjectByName('preparation-under-stair-tall-cupboards');
+  assert.equal(cupboards.userData.observedCount,2);
+  const bounds=new THREE.Box3().setFromObject(cupboards);
+  assert.ok(bounds.min.z>18.31,'cupboard fronts and handles do not pierce the south air-shower shell');
+  for(const name of ['preparation-air-shower-lower-shell-and-nozzles','preparation-entry-folding-table-and-storage-boxes','preparation-under-existing-stair-lockers']){
+    assert.ok(!bounds.intersectsBox(new THREE.Box3().setFromObject(root.getObjectByName(name))),`${name} stays separate from the tall cupboards`);
+  }
+  root.getObjectByName('dryer-building-1-southeast-stair').traverse(node=>{
+    if(node.isMesh)assert.ok(!bounds.intersectsBox(new THREE.Box3().setFromObject(node)),`${node.name} does not enter the tall cupboards`);
+  });
+  const chamber=root.getObjectByName('preparation-air-shower-lower-shell-and-nozzles');
+  let nozzles=0;chamber.traverse(node=>{if(node.geometry?.type==='CylinderGeometry'&&node.geometry.parameters.radiusTop===1)nozzles++;});
+  assert.ok(nozzles>=36,'the photographed chamber nozzles and their small fittings are retained');
+});
+
 test('preparation passage doors start closed with independent proximity-operated leaves and fixed frames', () => {
   const { s, environment } = fixture(), doors = customDoors(environment);
   for (const id of ['raw-exterior', 'raw-inner-shutter', 'air-shower-process', 'air-shower-hygiene', 'sanitation-workroom', 'cip-utility', 'toilet', 'corridor-unconfirmed-support', 'team1-part2']) assert(doors.has(id), id);
@@ -46,7 +99,7 @@ test('preparation passage doors start closed with independent proximity-operated
     }
   }
   const inner = doors.get('raw-inner-shutter');
-  assert.deepEqual(inner.position.toArray(), [28.6, 0, 4.6]);
+  assert.deepEqual(inner.position.toArray(), [26.6, 0, 4.6]);
   assert.equal(inner.rotation.y, Math.PI / 2);
   for (const id of ['raw-exterior', 'raw-inner-shutter']) {
     const strips = []; doors.get(id).traverse(node => { if (node.userData.proximityDoor?.kind === 'lift') strips.push(node); });
@@ -135,8 +188,7 @@ test('opening the movable door leaves clears the filmed routes without moving th
   });
   const segments = [
     ['external raw door', [35, .6], [32, .6]],
-    ['daily/weighing connection', [27.5, .8], [29, .8]],
-    ['inner orange shutter', [28.6, 3.9], [28.6, 5.3]],
+    ['inner orange shutter', [26.6, 3.9], [26.6, 5.3]],
     ['air shower aligned with entry', [27.6, 17.6], [33.7, 17.6]],
     ['northbound washroom corridor', [33.85, 17.6], [33.85, 12.5]],
     ['west-side washroom door', [33.85, 15.2], [32.5, 15.2]],
@@ -155,6 +207,71 @@ test('opening the movable door leaves clears the filmed routes without moving th
   }
 });
 
+test('the daily and weighing stores connect openly while the fast shutter leads into preparation with a clear approach', () => {
+  const { s, spec, environment } = fixture(), doors = customDoors(environment);
+  const weighing = spec.rooms.find(room => room.id === 'preparation'), gate = spec.preparationSurvey.doors.find(door => door.id === 'raw-inner-shutter');
+  assert.deepEqual(weighing.connectsTo, ['dispensing', 'raw-storage']);
+  assert.deepEqual(weighing.doorConnections, ['dispensing']);
+  assert.deepEqual(weighing.openConnections, ['raw-storage']);
+  assert.deepEqual(spec.rooms.find(room => room.id === 'raw-storage').openConnections, ['preparation']);
+  assert.deepEqual(gate.connects, ['preparation', 'dispensing']);
+  assert.ok(gate.position[0] - gate.width / 2 > weighing.bounds.minX);
+  assert.ok(gate.position[0] + gate.width / 2 < weighing.bounds.maxX, 'the shutter no longer straddles the daily-store divider');
+  const south = spec.partitions.find(wall => wall.a[1] === weighing.bounds.maxZ && wall.b[1] === weighing.bounds.maxZ);
+  assert.ok(south.openings.some(opening => Math.abs(south.a[0] + opening.offset - gate.position[0]) < 1e-7));
+  for (const root of doors.values()) root.traverse(node => {
+    const data = node.userData.proximityDoor;
+    if (data) node[data.kind === 'hinge' ? 'rotation' : 'position'][data.axis] = data.open;
+  });
+  s.scene.updateMatrixWorld(true);
+  const opaque = [];
+  for (const layer of ['structure', 'facade', 'architectureFixtures']) environment[layer].traverse(node => {
+    if (node.isMesh && !(node.material.transparent && node.material.opacity < .99)) opaque.push(node);
+  });
+  const cast = (from, to) => {
+    const a = new THREE.Vector3(...from), delta = new THREE.Vector3(...to).sub(a);
+    return new THREE.Raycaster(a, delta.clone().normalize(), .001, delta.length()).intersectObjects(opaque, false);
+  };
+  for (const x of [25.3, 25.6, 26, 26.4, 26.8, 27.2, 27.6, 27.9]) for (const height of [.35, 1.4, 2.2]) for (const reverse of [false, true]) {
+    const a = [x, spec.elevation + height, 2.8], b = [x, spec.elevation + height, 6.2];
+    const hits = cast(...(reverse ? [b, a] : [a, b]));
+    assert.equal(hits.length, 0, `shutter x=${x} h=${height}: ${hits.map(hit => hit.object.parent.name).join(', ')}`);
+  }
+  assert.equal(spec.partitions.some(wall => Math.abs(wall.a[0] - weighing.bounds.maxX) < 1e-7 && Math.abs(wall.b[0] - weighing.bounds.maxX) < 1e-7 && Math.abs(wall.a[1] - weighing.bounds.minZ) < 1e-7 && Math.abs(wall.b[1] - weighing.bounds.maxZ) < 1e-7), false, 'no architectural divider remains between the two stores');
+  assert.equal(environment.facade.getObjectByName('preparation-raw-rooms-high-partition-window'), undefined, 'the removed divider leaves no floating glass or frame');
+  for (const z of [-3.3, -2.7, -2, -1, 0, .8, 1.8, 2.6, 2.8, 3.6, 4.25]) for (const height of [.35, 1.4, 2.2, 3.9, 5.7]) {
+    const a = [27.95, spec.elevation + height, z], b = [28.45, spec.elevation + height, z];
+    assert.equal(cast(a, b).length, 0, `daily-to-weighing boundary is open at z${z}, height${height}`);
+    assert.equal(cast(b, a).length, 0, 'the opening also works from the weighing side');
+  }
+  const northA = [20.2, spec.elevation + 1.4, -4.3], northB = [20.2, spec.elevation + 1.4, -2.9];
+  assert.ok(cast(northA, northB).length, 'the northern hall boundary stays solid');
+  assert.ok(cast(northB, northA).length, 'the northern wall stays solid from either side');
+});
+
+test('the preparation boundary to the boiler room remains a solid wall after all real passage doors open', () => {
+  const { s, spec, environment } = fixture();
+  const boiler = spec.rooms.find(room => room.id === 'boiler').bounds;
+  const boundary = spec.partitions.find(wall => wall.a[0] === boiler.minX && wall.b[0] === boiler.minX && wall.a[1] === boiler.minZ && wall.b[1] === boiler.maxZ);
+  assert(boundary, 'the boiler room retains its preparation-side boundary');
+  assert.deepEqual(boundary.openings, [], 'user-confirmed solid wall has no inferred doorway');
+  const formerThreshold = new THREE.Vector3(boiler.minX, spec.elevation, boiler.minZ + 6.7);
+  environment.architectureFixtures.traverse(node => {
+    if (node.userData.architecturalDoor) {
+      const position = node.getWorldPosition(new THREE.Vector3());
+      assert(Math.hypot(position.x - formerThreshold.x, position.z - formerThreshold.z) > .2, 'no door frame remains at the former preparation-to-boiler threshold');
+    }
+    const data = node.userData.proximityDoor;
+    if (data) node[data.kind === 'hinge' ? 'rotation' : 'position'][data.axis] = data.open;
+  });
+  s.scene.updateMatrixWorld(true);
+  for (const [layer, eyeHeight] of [['structure', .35], ['facade', 1.4]]) {
+    const from = formerThreshold.clone().add(new THREE.Vector3(-.8, eyeHeight, 0));
+    const ray = new THREE.Raycaster(from, new THREE.Vector3(1, 0, 0), .001, 1.6);
+    assert(ray.intersectObject(environment[layer], true).length > 0, `${layer}: the removed connection remains blocked with every real door open`);
+  }
+});
+
 test('filmed sanitation details include the actual cabinet, work table, concave cylinder basins and one air shower', () => {
   const { environment, originalCoverCount } = fixture(), root = environment.architectureFixtures;
   const cabinet = root.getObjectByName('preparation-visible-sterilizing-cabinet');
@@ -165,6 +282,9 @@ test('filmed sanitation details include the actual cabinet, work table, concave 
   assert(rackCount >= 20);
   assert(root.getObjectByName('preparation-plastic-covered-work-table'));
   assert(root.getObjectByName('preparation-round-work-stool'));
+  const sign=root.getObjectByName('preparation-observed-preparation-room-entry-sign');
+  assert.equal(sign.userData.label,'조제실');
+  assert.equal(sign.userData.sourceReferences[0].clipId,'first-floor-20261113-clip1');
   assert(root.getObjectByName('preparation-office-west-glazed-partition'));
   assert.equal(environment.cover.children.length, originalCoverCount, 'office ceiling must disappear with upper facade in top/3D cutaway');
   let chambers = 0, basins = 0;
@@ -204,14 +324,14 @@ test('actual scene visibility keeps complete custom doors in top/3D, switches up
   state.structureEnabled = true; state.ductsEnabled = false; visibility.call(state, THREE);
   assert.equal(environment.ducts.visible, false);
   state.activeFloor = 2;
-  for (const view of ['perspective', 'aisle', 'person']) {
-    state.view = view; visibility.call(state, THREE);
-    assert.equal(environment.deck.visible, true, 'the mezzanine can look down into the actual first-floor hall');
-    assert.equal(environment.architectureFixtures.visible, true);
-  }
-  for (const [floor, view] of [[2, 'top'], ['campus', 'person'], [3, 'perspective']]) {
+  state.view = 'person'; visibility.call(state, THREE);
+  assert.equal(environment.deck.visible, true, 'the mezzanine can look down into the actual first-floor hall');
+  assert.equal(environment.architectureFixtures.visible, true);
+  for (const [floor, view] of [[2, 'top'], [2, 'perspective'], [2, 'aisle'], ['campus', 'person'], [3, 'perspective']]) {
     state.activeFloor = floor; state.view = view; visibility.call(state, THREE);
-    for (const root of Object.values(environment)) assert.equal(root.visible, false);
+    const shared = environment.architectureFixtures.children.filter(child => child.userData.stepsRepresentative && child.userData.visibleFloors?.includes(floor));
+    for (const [key, root] of Object.entries(environment)) assert.equal(root.visible, key === 'architectureFixtures' && shared.some(child => child.visible));
+    for (const child of environment.architectureFixtures.children.filter(child => child.visible)) assert.ok(shared.includes(child), 'the adjoining landing reveals only its shared stair, keeping preparation rooms and doors hidden');
   }
   state.activeFloor = 1; state.isolated = true; visibility.call(state, THREE);
   for (const root of Object.values(environment)) assert.equal(root.visible, false);

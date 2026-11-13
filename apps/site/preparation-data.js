@@ -5,6 +5,7 @@ const frame = second => [76, 78].includes(second)
   ? `./assets/drawings/preparation/current-room-plan-frame-${String(second).padStart(3, '0')}s.jpg`
   : `./photos/preparation-room/frame-${String(second).padStart(3, '0')}s.jpg`;
 const basis = '20261111-continuous-walk-and-current-room-plan';
+const supplementReferences = seconds => [{ clipId: 'first-floor-20261113-clip1', seconds }];
 const knownRevisions = ['dryer-full-envelope-20261110', 'dryer-full-envelope-final-20261110', 'liquid-card-detail-spacing-20261110', 'campus-rear-video-placement-20261111', 'campus-rear-identities-20261111', 'campus-valve-interior-20261111', 'campus-office-lpg-restoration-20261111', 'preparation-room-current-layout-20261111'];
 const originalTankPositions = { 'f1-mix-a': [-8.8,.3,-8], 'f1-mix-b': [-3.8,.3,-8], 'f1-melting': [1.2,.3,-8], 'f1-oil-water': [8,.3,-7.5], 'f1-s1': [8.8,.3,-1.8] };
 // A saved layout snaps every body to the 0.25 placement grid. The deck, its
@@ -99,36 +100,53 @@ function equipment(id, name, kind, position, dimensions, seconds, summary, prepa
 // 11/12 user correction with screenshot 262: the outer-packaging door is in
 // the west wall beside the homogenizer, and the feed pump stands directly
 // behind the homogenizer instead of 2.5 m away in the aisle. Browsers that
-// still hold the 11/11 default (grid-snapped) pose move once; any manual move,
-// turn or later save under this placement revision is kept.
-const OUTER_DOOR_PLACEMENT_REVISION = 'preparation-outer-door-pump-20261112';
-const relocatedFrom = (...poses) => ({ placementRevision: OUTER_DOOR_PLACEMENT_REVISION,
-  previousPlacements: ['preparation-complete-20261111', 'preparation-missing-tank-20261112', 'preparation-tank-openings-20261112'].flatMap(catalogRevision =>
-    poses.map(([x, z]) => ({ position: [x, .3, z], rotation: 0, catalogRevision, migrationBasis: 'preparation-video-default' }))),
+// still hold a reviewed default move once. The 11/13 correction moves the
+// connected pair sideways while keeping clearance from the CIP-room wall.
+// Manual moves, turns and later saves under this revision remain intentional.
+const OUTER_DOOR_PLACEMENT_REVISION = 'preparation-outer-door-clearance-20261113';
+const relocatedFrom = (previousDefault, ...poses) => ({ placementRevision: OUTER_DOOR_PLACEMENT_REVISION,
+  previousPlacements: ['preparation-complete-20261111', 'preparation-missing-tank-20261112', 'preparation-tank-openings-20261112'].flatMap(catalogRevision => [
+    ...poses.map(([x, z]) => ({ position: [x, .3, z], rotation: 0, catalogRevision, migrationBasis: 'preparation-video-default' })),
+    { position: [previousDefault[0], .3, previousDefault[1]], rotation: -Math.PI, catalogRevision, migrationBasis: 'preparation-video-default' },
+  ]),
 });
 export const PREPARATION_EQUIPMENT = Object.freeze([
   equipment('f1-prep-platform', '조제실 작업대·계단', 'platform', DECK_ORIGIN, { width: 10.5, depth: 13.5, height: 3.5 }, [177, 183, 237, 333, 339],
     '서측 일렬 5기와 남측 S-1을 잇는 철골 작업대입니다. 탱크 개구부, 체크무늬 철판, 지지 기둥, 계단과 스테인리스 난간을 구분했습니다.',
     { elevation: 2.45, outline: DECK_OUTLINE.map(point => [...point]),
       holes: deckOpenings,
+      // Approximate supports remain beneath the deck, west of the complete
+      // raw-shutter aisle rather than across its 2.85m clear opening.
+      supports: [[-5.22,-6.57],[2.6,-6.57],[2.6,-4.48],[-1.42,-4.48],[-1.42,2.38],[4.72,2.38],[4.72,6.57],[-5.22,6.57]],
       stairs: { x: 2.6, z: -1.7, rotation: Math.PI, width: .9, run: 2.6 },
       railEdges: [{a:[-1.6,-4.3],b:[1.9,-4.3]},{a:[3.3,-4.3],b:[4.9,-4.3]},{a:[4.9,-6.75],b:[4.9,-4.3]},{a:[-1.6,-4.3],b:[-1.6,2.2]},{a:[-1.6,2.2],b:[4.9,2.2]},{a:[4.9,2.2],b:[4.9,6.75]}], sourceTimes: [177,183,237,333,339] }),
   equipment('f1-prep-console', '조제실 조작반', 'control-panel', [24.25, 14.5], { width: 2.7, depth: .85, height: 1.45 }, [232, 236],
     '탱크 작업대 위의 경사 조작반입니다. 공정 선도, 상부 표시기, 누름 버튼·선택 스위치와 비상정지를 표현했습니다.', { elevation: 2.45, width: 2.7, height: 1.45, depth: .85, console: true, sourceTimes: [232,236] }),
   equipment('f1-prep-main-panel', '조제실 메인 제어반', 'control-panel', [24.5, 5.5], { width: 3.5, depth: .65, height: 2.2 }, [177, 315, 321, 327],
-    '북측 작업대 위 회색·크림색 제어반 열과 미믹 배관 선도, 표시창, 계기 및 회전 스위치를 재현했습니다. 표시 숫자는 운전값으로 만들지 않았습니다.', { elevation: 2.45, width: 3.5, height: 2.2, depth: .65, sourceTimes: [177,315,321,327] }),
+    '북측 작업대 위 회색·크림색 제어반 열과 미믹 배관 선도, 표시창, 계기 및 회전 스위치를 재현했습니다. 표시 숫자는 운전값으로 만들지 않았습니다.', { elevation: 2.45, width: 3.5, height: 2.2, depth: .65, conduitSide:-1, sourceTimes: [177,315,321,327] }),
   equipment('f1-prep-bag-dump', '원료 투입·분말 용해부', 'powder-hopper', [22.2, 6.4], { width: 1.6, depth: 1.2, height: 1.9 }, [57, 105, 333, 471],
-    '계량 공간과 조제 작업대 사이에서 보이는 스테인리스 포대 투입함·경사 후드·하부 구동부입니다. 작업대를 받치는 삼각 보강재와 구분했습니다.', { width: 1.6, depth: 1.2, height: 1.9, sourceTimes: [57,105,333,471] }),
-  // Front (pump heads, gauges, panel) faces the hall; its west end keeps 2.1 m
+    '작업대 아래 Fristam 표기가 보이는 포대 투입·펌프 장치입니다. 원형 투입구, 경사진 스테인리스 흡입 후드와 검정 주름 덕트, 하부 펌프 덮개·통풍 조작함·캐스터를 11월 13일 근접 영상으로 보강했습니다. 가려진 덕트 연결과 내부 용해 방식은 확정하지 않았습니다.', { width: 1.6, depth: 1.2, height: 1.9, sourceTimes: [57,105,333,471], supplementaryExterior:true, sourceReferences:supplementReferences([42,46,50,55]) }),
+  Object.freeze({ id:'f1-prep-mobile-white-unit',name:'조제실 이동식 백색 장치',floor:1,type:'preparation-equipment',tag:'백색 이동식 장치',position:[25.65,.3,9.8],rotation:0,
+    width:.85,depth:.75,height:2.5,labelHeight:2.7,parts:['백색 외함·캐스터','표시판·청색 덮개','상부 주름 금속관'],
+    preparation:{kind:'mobile-cabinet',width:.82,depth:.7,height:1.55,sourceReferences:supplementReferences([31,35,38])},
+    sourceReferences:supplementReferences([31,35,38]),
+    photo:'./assets/evidence/dryer-first-floor-20261113/clip-142059-frame-031s.jpg',
+    photos:['./assets/evidence/dryer-first-floor-20261113/clip-142059-frame-031s.jpg','./assets/evidence/dryer-first-floor-20261113/clip-142059-frame-038s.jpg'],
+    placementRevision:'preparation-mobile-cabinet-shutter-clearance-20261113',
+    previousPlacements:[25.65,25.75].map(x=>({position:[x,.3,6.5],rotation:0,catalogRevision:'preparation-tank-openings-20261112',migrationBasis:'preparation-video-default'})),
+    summary:'조제실 작업대 계단 옆에서 보이는 백색 3구획 외함·캐스터 장치입니다. 상부 금속 주름관, 표시판, 옆에 걸린 청색 덮개를 재현했습니다. 정확한 장치 기능·정격과 가려진 배관 연결은 미확정이며 위치·치수는 영상 비례입니다.',
+    confidence:'2026-11-13 근접 영상 외형 확인 · 기능 미확정 · 치수·좌표 개략',positionBasis:'20261113-video-relative-to-platform-stair-and-bag-dump',positionConfidence:'approximate',
+  }),
+  // Front (pump heads, gauges, panel) faces the hall; its west end keeps 2.6 m
   // clear in front of the outer-packaging door at local z19.5.
-  equipment('f1-prep-homogenizer', '조제실 균질기', 'homogenizer', [19.5, 20], { width: 2, depth: 1.1, height: 1.6 }, [363, 375],
-    '균질기 표지와 전면 펌프 헤드·압력계·상부 조작부가 보이는 1층 장치입니다. 작업대 남쪽 띠 공간에서 앞면이 조제실 쪽을 향하고, 서쪽 외포장실 출입구 앞은 비워 두었습니다. 3층의 과거 참고 장치와 위치를 혼동하지 않았습니다.', { width: 2, depth: 1.1, height: 1.6, sourceTimes: [363,375] },
-    { rotation: -Math.PI, ...relocatedFrom([18.4, 20], [18.5, 20]) }),
+  equipment('f1-prep-homogenizer', '조제실 균질기', 'homogenizer', [20, 20], { width: 2, depth: 1.1, height: 1.6 }, [363, 375],
+    '균질기 표지와 전면 3개 펌프 헤드·압력계·검정 조절 캡·상부 조작반이 보이는 1층 장치입니다. 11월 13일 영상의 넓은 반대편 서비스 커버·검정 손잡이·위험 표지와 좌측 수직관·흰 양동이를 보강했습니다. 외포장실 미닫이 출입문 앞 공간과 조제실 쪽을 향한 앞면을 유지하며, 내부 기구는 추가하지 않았습니다.', { width: 2, depth: 1.1, height: 1.6, sourceTimes: [363,375], supplementaryExterior:true, sourceReferences:supplementReferences([62,65,68,72]) },
+    { rotation: -Math.PI, ...relocatedFrom([19.5, 20], [18.4, 20], [18.5, 20]) }),
   // Directly behind the homogenizer (south side); the discharge riser turns
   // north and meets the homogenizer's back face.
-  equipment('f1-prep-transfer-pump', '조제실 이송 펌프', 'service-pump', [19.75, 21], { width: 1.5, depth: .7, height: .9 }, [369, 387, 435],
+  equipment('f1-prep-transfer-pump', '조제실 이송 펌프', 'service-pump', [20.25, 21], { width: 1.5, depth: .7, height: .9 }, [369, 387,435],
     '노란 커플링 보호대가 있는 바닥 펌프와 전동기, 위생 배관·받침 프레임을 재현했습니다. 사용자 확인에 따라 균질기 바로 뒤에 두고 토출관을 균질기 뒷면에 연결했습니다.', { width: 1.5, depth: .7, height: .9, sourceTimes: [369,387,435], dischargeLength: .43 },
-    { rotation: -Math.PI, ...relocatedFrom([20, 18.1], [20, 18]) }),
+    { rotation: -Math.PI, ...relocatedFrom([19.75, 21], [20, 18.1], [20, 18]) }),
   equipment('f1-prep-filter-pot', '조제실 소형 배관 용기', 'filter-pot', [19.75, 15.6], { width: .9, depth: .9, height: 1.3 }, [411, 417],
     '탱크 하부 배관 옆 작은 스테인리스 뚜껑 용기입니다. 뚜껑 손잡이·잠금부·다리·양측 연결관을 재현했으며 내부 여과 방식은 미확인입니다.', { radius: .4, height: 1.3, sourceTimes: [411,417] }),
   equipment('f1-prep-under-services', '조제실 탱크 하부 공통 배관', 'under-platform-services', DECK_ORIGIN, { width: 2.2, depth: 10.8, height: 1.3 }, [387,399,411,429],

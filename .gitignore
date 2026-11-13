@@ -29,6 +29,9 @@ __pycache__/
 /근거 자료/도면검토앱/cache/
 /근거 자료/도면검토앱/data/access.json
 /근거 자료/도면검토앱/data/server.json
+/tooling/drawing-review/cache/
+/tooling/drawing-review/data/access.json
+/tooling/drawing-review/data/server.json
 *.sqlite3-wal
 *.sqlite3-shm
 

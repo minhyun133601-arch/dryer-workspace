@@ -120,9 +120,11 @@ export function createProximityDoorController(root) {
         const localNormal=coordinates(door.data.normal),normal=new THREE.Vector3(...(localNormal||[0,0,1]));
         if(normal.lengthSq()<1e-12)normal.set(0,0,1);
         normal.transformDirection(door.parent.matrixWorld);
-        passages.push({id:group.id,point:info.point.toArray(),normal:normal.toArray(),
-          width:info.width,height:info.height,
-          open:group.doors.filter(leaf=>visible(leaf.node)).every(leaf=>leaf.progress>.85),portal:door.data.portal});
+        const leaves=group.doors.filter(leaf=>visible(leaf.node)),requestedOpen=leaves.some(leaf=>leaf.requestedOpen);
+        passages.push({id:group.id,label:group.label,point:info.point.toArray(),normal:normal.toArray(),
+          width:info.width,height:info.height,interactionDistance:info.interactionDistance,
+          requestedOpen,action:requestedOpen?'close':'open',progress:Math.min(...leaves.map(leaf=>leaf.progress)),
+          open:leaves.every(leaf=>leaf.progress>.85),portal:door.data.portal});
       }
       return passages;
     },
@@ -134,6 +136,13 @@ export function createProximityDoorController(root) {
       const found=nearest(position,options);if(!found)return false;
       const open=!found.group.doors.some(door=>door.requestedOpen);
       for(const door of found.group.doors){door.requestedOpen=open;door.hold=0;}
+      return true;
+    },
+    toggleById(id) {
+      const group=!disposed && groups.find(item=>item.id===id && item.doors.some(leaf=>visible(leaf.node)));
+      if(!group)return false;
+      const open=!group.doors.some(door=>door.requestedOpen);
+      for(const door of group.doors){door.requestedOpen=open;door.hold=0;}
       return true;
     },
     setPassageOpen(id, open, { immediate = false } = {}) {

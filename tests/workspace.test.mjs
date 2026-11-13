@@ -5,9 +5,10 @@ import { MODULES, resolveRoute, validateModules } from '../workspace/module-regi
 
 test('every registered space has a canonical entry and a stable route', async () => {
   assert.equal(validateModules(MODULES), MODULES);
-  assert.deepEqual(MODULES.map(({ id }) => id), ['site', 'drawings']);
+  assert.deepEqual(MODULES.map(({ id }) => id), ['site', 'drawings', 'presentation']);
   assert.ok(MODULES.some((module) => module.id === 'site' && module.entry === 'apps/site/index.html'));
   assert.ok(MODULES.some((module) => module.id === 'drawings' && module.entry === 'apps/drawings/index.html'));
+  assert.ok(MODULES.some((module) => module.id === 'presentation' && module.name === '발표용' && module.entry === 'apps/presentation/index.html'));
   for (const module of MODULES) {
     await access(new URL(`../${module.entry}`, import.meta.url));
     assert.equal(resolveRoute(`#/${module.id}`), module.id);
@@ -22,7 +23,7 @@ test('unknown routes fall back to the overview, including malformed deep links',
   assert.equal(resolveRoute('#/drawings?view=review'), 'drawings');
 });
 
-test('the active home links only to modeling and drawing review', async () => {
+test('the active home keeps modeling, drawing review and the dryer presentation separate from retired tools', async () => {
   const home = await readFile(new URL('../index.html', import.meta.url), 'utf8');
   assert.match(home, /href="#\/drawings"/);
   assert.doesNotMatch(home, /references\/열교환기\/|apps\/(?:panel|motor|heat-exchanger)\/|#\/(?:panel|motor|heat-exchanger)/);

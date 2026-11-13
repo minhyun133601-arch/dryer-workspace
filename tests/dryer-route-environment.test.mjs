@@ -83,7 +83,7 @@ test('OP observation glazing has no opaque backing while the tall production voi
     const pane=north.children.find(node=>node.name==='dryer-route-observation-window-glass'),point=pane.getWorldPosition(new THREE.Vector3());
     assert.equal(cast([point.x,point.y,point.z-.5],[0,0,1],[h.environment.structure,h.environment.facade],1).length,0,'the north OP windows overlook the blue-floor filling hall through a genuine opening');
     assert.ok(cast([point.x,point.y,point.z-.5],[0,0,1],[north],1).some(hit=>hit.object.material.transparent));
-    assert.equal(cast([-6.5,20,0],[0,-1,0],[h.environment.deck],25).length,0,'the high blue packing hall stays genuinely double-height');
+    assert.equal(cast([-4.5,20,0],[0,-1,0],[h.environment.deck],25).length,0,'the high blue packing hall stays genuinely double-height');
     assert.ok(cast([-8,20,0],[0,-1,0],[h.environment.deck],25).length,'the narrow west route retains a supported walkway');
     const op=h.environment.architectureFixtures.getObjectByName('dryer-route-2-op-room-furnishings');
     const controls=op.getObjectByName('dryer-route-2-observed-control-cabinet-row');
@@ -124,7 +124,7 @@ test('room furniture leaves the recorded door approaches and usable interior ais
       assert.deepEqual(collisions,[],`${root.name} retains the modelled walking aisle`);
     };
     const base=two.spec.elevation;
-    for(const [x,z]of [[28.8,19.3],[28.8,18.075],[30.4,18.075]])assert.ok(cast([x,10,z],[0,-1,0],[two.environment.deck],12).length,'the stair landing and dressing-room approach remain on real floor beside the open stairwell');
+    for(const [x,z]of [[33.7,19.3],[33.7,17.8],[30.4,17.8]])assert.ok(cast([x,10,z],[0,-1,0],[two.environment.deck],12).length,'the stair landing and dressing-room approach remain on real floor beside the open stairwell');
     inspect(two.environment.architectureFixtures.getObjectByName('dryer-route-2-dressing-room-furnishings'),new THREE.Box3(new THREE.Vector3(29.95,base+.1,15.1),new THREE.Vector3(30.85,base+1.8,18.2)));
     const op=two.environment.architectureFixtures.getObjectByName('dryer-route-2-op-room-furnishings');
     inspect(op,new THREE.Box3(new THREE.Vector3(-5.35,base+.1,8.65),new THREE.Vector3(-1,base+1.8,9.55)));
@@ -159,11 +159,11 @@ test('the packing clean room has a closed rear wall, an open observation face an
   try{
     assert.ok(cast([0,one.spec.elevation+3,-5.8],[0,0,-1],[one.environment.facade],1.2).length,'the green hall and elevator behind the packing machines are screened by the clean-room rear wall');
     const upper=one.environment.facade.getObjectByName('dryer-route-1-blue-clean-room-west-upper-wall');
-    assert.equal(cast([-8,one.spec.elevation+5.1,0],[1,0,0],[upper],.8).length,0,'the elevated west observation window is cut through the inner corridor wall');
+    assert.equal(cast([-6,one.spec.elevation+5.1,0],[1,0,0],[upper],1).length,0,'the elevated west observation window is cut through the inner corridor wall');
     const glazing=one.environment.architectureFixtures.getObjectByName('dryer-route-1-blue-clean-room-upper-observation-glazing');
-    assert.ok(cast([-8,one.spec.elevation+5.1,0],[1,0,0],[glazing],.8).some(hit=>hit.object.name==='dryer-route-observation-window-glass'));
+    assert.ok(cast([-6,one.spec.elevation+5.1,0],[1,0,0],[glazing],1).some(hit=>hit.object.name==='dryer-route-observation-window-glass'));
     assert.equal(cast([0,one.spec.elevation+2.5,2.6],[0,0,1],[one.environment.structure,one.environment.facade],.7).length,0,'no extra wall closes the existing OP observation face');
-    for(const [name,point]of [['south-observation-corridor',[10,19.8]],['west-observation-corridor',[-7,15]],['op-room',[-2,8]]]){
+    for(const [name,point]of [['south-observation-corridor',[10,17.8]],['west-observation-corridor',[-7,15]],['op-room',[-2,8]]]){
       const ceiling=two.environment.facade.getObjectByName(`dryer-route-2-${name}-suspended-ceiling`);
       assert.ok(ceiling);assert.equal(ceiling.userData.cutawayWithFacade,true);
       assert.ok(cast([point[0],two.spec.elevation+2,point[1]],[0,1,0],[ceiling],1).length,'a person in the corridor sees the tiled ceiling rather than the upper floor machinery');
@@ -177,29 +177,52 @@ test('the upper stair faces its landing window and returns straight to the third
   const two=fixture(2),three=fixture(3);let controller;
   try{
     const core=two.spec.stairs[0],stair=two.environment.architectureFixtures.getObjectByName('dryer-building-2-northeast-stair');
-    assert.equal(core.runAxis,'x');assert.equal(core.startDirection,1);
-    const width=core.bounds.maxZ-core.bounds.minZ,depth=core.bounds.maxX-core.bounds.minX,lane=Math.min(1.25,(width-.25)/2),offset=lane/2+.06,run=Math.max(1.8,Math.min(4,depth-1.7)),rise=two.spec.height/2,count=Math.ceil(rise/.18);
+    assert.equal(core.runAxis,'z');assert.equal(core.startDirection,-1);
+    const width=core.bounds.maxX-core.bounds.minX,depth=core.bounds.maxZ-core.bounds.minZ,lane=Math.min(1.25,(width-.25)/2),offset=lane/2+.06,run=Math.max(1.8,Math.min(4,depth-1.7)),rise=two.spec.height/2,count=Math.ceil(rise/.18);
     const roots=[two.environment.deck,two.environment.architectureFixtures,three.environment.deck];
     const supported=(point,y,label)=>{const hits=cast([point.x,y+.12,point.z],[0,-1,0],roots,.25);assert.ok(hits.some(hit=>Math.abs(hit.point.y-y)<.012),label);};
     const world=local=>stair.localToWorld(new THREE.Vector3(...local));
     const lowerZ=two.spec.routeSurvey.upperStair.lowerDoor[1];
-    for(const [x,z]of [[8,-7.5],[8,lowerZ],[8.7,lowerZ]])supported(new THREE.Vector3(x,0,z),two.spec.elevation,'the lower corridor reaches the stair door on real floor');
+    for(const [x,z]of [[-8,-5.6],[-7,-6],[-7,lowerZ],[-7,-7.25]])supported(new THREE.Vector3(x,0,z),two.spec.elevation,'the lower corridor reaches the stair door on real floor');
     for(let flight=0;flight<2;flight++){
-      const direction=flight===0?1:-1;
+      const direction=flight===0?-1:1;
       for(let step=0;step<count;step++){
         const point=world([flight===0?-offset:offset,0,direction*(-run/2+(step+.5)*run/count)]),y=two.spec.elevation+rise*(flight+(step+1)/count);
         supported(point,y,`flight ${flight+1} tread ${step+1} supports the person`);
       }
     }
-    for(let i=0;i<=8;i++)supported(world([-offset+2*offset*i/8,0,run/2+.4]),two.spec.elevation+rise,'the window landing supports the half-turn between flights');
+    for(let i=0;i<=8;i++)supported(world([-offset+2*offset*i/8,0,-run/2-.4]),two.spec.elevation+rise,'the window landing supports the half-turn between flights');
     const door=three.environment.architectureFixtures.children.find(node=>node.userData.observedDoorStyle==='perforated'),doorPosition=door.getWorldPosition(new THREE.Vector3());
     const elevator=three.spec.cores.elevator.bounds,start=three.spec.personStart.position;
     assert.ok(start[0]<elevator.minX||start[0]>elevator.maxX||start[2]<elevator.minZ||start[2]>elevator.maxZ,'the third-floor arrival stands in the hall, clear of the historical elevator shaft');
-    const upper=world([offset,0,-run/2-.4]);assert.ok(Math.abs(upper.z-doorPosition.z)<1e-6,'the upper flight points directly at the perforated door');
-    for(let i=0;i<=12;i++){const x=upper.x+(7.7-upper.x)*i/12;supported(new THREE.Vector3(x,0,upper.z),three.spec.elevation,'the upper landing reaches the door and indoor hall without a floor hole');}
-    controller=createProximityDoorController(three.s.scene);for(let i=0;i<10;i++)controller.update(new THREE.Vector3(doorPosition.x+.4,three.spec.elevation,doorPosition.z),.1,{autoOpen:true});three.s.scene.updateMatrixWorld(true);
+    const upper=world([offset,0,run/2+.4]);assert.ok(Math.abs(upper.x-doorPosition.x)<1e-6,'the upper flight points directly at the perforated door');
+    for(let i=0;i<=12;i++){const z=upper.z+(start[2]-upper.z)*i/12;supported(new THREE.Vector3(upper.x,0,z),three.spec.elevation,'the upper landing reaches the door and indoor hall without a floor hole');}
+    controller=createProximityDoorController(three.s.scene);const at=new THREE.Vector3(doorPosition.x,three.spec.elevation,doorPosition.z-.4);assert.ok(controller.toggleNearest(at));for(let i=0;i<10;i++)controller.update(at,.1,{autoOpen:false});three.s.scene.updateMatrixWorld(true);
     const leaf=door.getObjectByName('architectural-open-door-leaf');assert.equal(leaf.rotation.y,leaf.userData.proximityDoor.open,'the upper door responds from the actual stair landing');
-    assert.equal(cast([doorPosition.x+.4,three.spec.elevation+1.2,doorPosition.z],[-1,0,0],[door],.8).length,0,'the opened upper door leaves the arrival passage clear');
+    assert.equal(cast([doorPosition.x,three.spec.elevation+1.2,doorPosition.z-.4],[0,0,1],[door],.8).length,0,'the opened upper door leaves the arrival passage clear');
     assert.equal(DRYER_BUILDING_FLOORS[1].stairs[0].id,'southeast-stair');assert.equal(DRYER_BUILDING_FLOORS[1].stairs[0].runAxis,'x','the confirmed entrance stair is retained');
   }finally{controller?.dispose();two.dispose();three.dispose();}
+});
+
+test('the corrected mezzanine keeps a full-width overlook, a shared dressing landing and separate down/up stair choices',()=>{
+  const two=fixture(2),three=fixture(3);
+  try{
+    const base=two.spec.elevation;
+    for(const z of [-5.8,-3,0,2.8,4,8,12,16])for(const x of [-8.1,-7,-5.9]){
+      const hits=cast([x,base+.12,z],[0,-1,0],[two.environment.deck],.25);
+      assert.ok(hits.some(hit=>Math.abs(hit.point.y-base)<.03),`the same 2.9 m corridor supports ${x},${z}`);
+    }
+    const dressing=two.spec.routeSurvey.dressingRoom,entry=DRYER_BUILDING_FLOORS[1].stairs[0],landing=dressing.arrivalLanding;
+    assert.equal(dressing.adjacentStairId,entry.id);
+    assert.ok(landing.minZ>=dressing.bounds.maxZ-1e-6&&landing.maxZ<=entry.bounds.minZ+1e-6,'the landing fits between the room wall and stair opening');
+    assert.ok(landing.maxZ-landing.minZ>=1.2-1e-6,'the dressing door has usable landing depth instead of overlapping the stair');
+    for(const id of ['route-turn-down-stair','route-end-down-stair']){
+      const stair=two.environment.architectureFixtures.getObjectByName(`dryer-building-2-${id}`);
+      assert.equal(stair.userData.fromY,.3);assert.equal(stair.userData.toY,base);
+      assert.deepEqual(stair.userData.visibleFloors,[1,2]);
+    }
+    assert.equal(cast([-7,8,-10],[0,-1,0],[three.environment.deck],1).length,0,'neither the 3F slab nor its floor finish fills the return stair opening');
+    const ibcs=three.environment.architectureFixtures.getObjectByName('dryer-route-3-three-observed-ibc-containers');
+    assert.ok(bounds(ibcs).min.x>-5.5,'the IBC row stands beside the new stair opening instead of above its ascending lane');
+  }finally{two.dispose();three.dispose();}
 });

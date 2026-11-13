@@ -113,6 +113,34 @@ export function buildDryerBuildingEnvironment(s, options = {}) {
     for (const x of [-width/2,width/2]) box(root,[.065,height,.15],[x,height/2,0],m.trim);
     box(root,[width+.13,.075,.15],[0,height+.0375,0],m.trim);
     box(root,[width,.018,.23],[0,.009,0],m.dark);
+    if (opening.doorKind === 'slide') {
+      const count = opening.slideLeaves === 1 ? 1 : 2, leafWidth = width / count, plane = .18;
+      const travel = width / count + .1, railWidth = count === 2 ? width * 2 + .4 : width + travel + .2;
+      Object.assign(root.userData, { doorId: opening.id, slidingDoor: true, slideLeafCount: count, slideLayoutEstimated: !!opening.slideLayoutEstimated, operationBasis: opening.operationBasis });
+      const rail = box(root, [railWidth, .11, .15], [count === 2 ? 0 : -travel / 2, height + .15, plane], m.trim);
+      rail.name = 'architectural-sliding-door-fixed-rail';
+      for (let index = 0; index < count; index++) {
+        const side = count === 1 ? -1 : index === 0 ? -1 : 1;
+        const closed = count === 1 ? 0 : side * width / 4;
+        const leaf = group(root, [closed, 0, plane]); leaf.name = 'architectural-sliding-door-leaf';
+        leaf.userData.proximityDoor = {
+          enterable: width >= .75 && height >= 1.9, groupId: opening.id ? `dryer-building-${level}-${opening.id}-slide` : root.name,
+          label: opening.label || `건조실 ${spec.displayLevel ?? level}층 미닫이문`, accessBasis: 'user-confirmed lateral sliding operation in the registered wall opening',
+          kind: 'slide', axis: 'x', closed, open: closed + side * travel, trigger: [0, 0, plane], normal: [0, 0, 1],
+          width, height, openDistance: 2.2, closeDistance: 3.1,
+        };
+        box(leaf, [leafWidth, height - .05, .055], [0, height / 2, 0], m.wall);
+        if (count === 2 && index === 0) {
+          const seal = box(leaf, [.018, height - .05, .025], [leafWidth / 2, height / 2, .025], m.trim);
+          seal.name = 'architectural-sliding-door-centre-seal';
+        }
+        for (const y of [.14, height - .14]) box(leaf, [leafWidth, .055, .065], [0, y, 0], m.trim);
+        for (const x of [-leafWidth / 2 + .025, leafWidth / 2 - .025]) box(leaf, [.045, height - .05, .065], [x, height / 2, 0], m.trim);
+        for (const z of [-.06, .06]) box(leaf, [.05, .25, .04], [-side * (leafWidth / 2 - .14), 1.04, z], m.dark);
+        for (const x of [-leafWidth * .3, leafWidth * .3]) box(leaf, [.06, .07, .08], [x, height + .06, 0], m.dark);
+      }
+      return;
+    }
     if (width >= 2.5 || opening.doorKind === 'roller') {
       // The roll sits on the wall face, rather than half buried in the lintel.
       // Keep the gathered curtain and its guides in this same mounting plane.
@@ -195,12 +223,13 @@ export function buildDryerBuildingEnvironment(s, options = {}) {
 
   const elevator = spec.cores.elevator, elevatorGroup = group(architectureFixtures);
   elevatorGroup.name = `dryer-building-${level}-elevator-shaft`;
-  elevatorGroup.userData = { architecturalFixture: true, currentMechanismConfirmed: false, basis: elevator.geometryBasis };
+  const elevatorService = spec.elevatorService !== false;
+  elevatorGroup.userData = { architecturalFixture: true, currentMechanismConfirmed: false, elevatorService, basis: elevator.geometryBasis };
   traceRect(elevatorGroup, elevator.bounds, .08, m.dark, .13);
   for (const x of [elevator.bounds.minX, elevator.bounds.maxX]) for (const z of [elevator.bounds.minZ, elevator.bounds.maxZ]) box(structure, [.15, spec.height, .15], [x, spec.height / 2, z], m.column);
   const elevatorDoor = { offset: (elevator.bounds.maxX - elevator.bounds.minX) / 2, width: 1.4, height: 2.2, doorKind: 'custom' };
-  wallSegment(facade, [elevator.bounds.minX, elevator.bounds.maxZ], [elevator.bounds.maxX, elevator.bounds.maxZ], Math.min(spec.height, 3), [elevatorDoor]);
-  // User, 11/11: show the elevator clearly on every floor. A tinted shaft
+  wallSegment(facade, [elevator.bounds.minX, elevator.bounds.maxZ], [elevator.bounds.maxX, elevator.bounds.maxZ], Math.min(spec.height, 3), elevatorService ? [elevatorDoor] : []);
+  // Show the shaft clearly, with landing doors only on served floors. A tinted shaft
   // volume, closed stainless landing doors and an upright sign mark the
   // drawn ELEV core; no car, rope or machine is invented inside it.
   const shaftWidth = elevator.bounds.maxX - elevator.bounds.minX, shaftDepth = elevator.bounds.maxZ - elevator.bounds.minZ;
@@ -213,38 +242,61 @@ export function buildDryerBuildingEnvironment(s, options = {}) {
   shaftVolume.name = `dryer-building-${level}-elevator-shaft-volume`; shaftVolume.castShadow = false; shaftVolume.userData.marker = 'elevator-shaft';
   for (const x of [elevator.bounds.minX + .06, elevator.bounds.maxX - .06]) for (const z of [elevator.bounds.minZ + .06, elevator.bounds.maxZ - .06]) box(elevatorGroup, [.09, spec.height, .09], [x, spec.height / 2, z], elevatorPaint.edge);
   traceRect(elevatorGroup, elevator.bounds, spec.height - .04, elevatorPaint.edge, .08);
-  const landing = group(architectureFixtures, [shaftX, 0, elevator.bounds.maxZ + .07]); landing.name = `dryer-building-${level}-elevator-landing-doors`;
-  Object.assign(landing.userData, { architecturalDoor: true, elevatorLanding: true, openingWidth: elevatorDoor.width, openingHeight: elevatorDoor.height, illustratedOpen: false, closedLandingDoors: true, carAdded: false, source: 'A013-A018 ELEV core; user request to mark elevators clearly 20261111' });
-  box(landing, [1.58, 2.36, .08], [0, 1.18, -.03], elevatorPaint.frame);
-  for (const side of [-1, 1]) box(landing, [.68, 2.18, .05], [side * .35, 1.09, .03], elevatorPaint.door).name = 'architectural-closed-elevator-doors';
-  box(landing, [.012, 2.18, .06], [0, 1.09, .04], m.dark);
-  box(landing, [.12, .26, .04], [1.0, 1.15, .02], elevatorPaint.frame);
-  for (const y of [1.2, 1.1]) box(landing, [.05, .05, .02], [1.0, y, .05], m.sign);
-  if (typeof document !== 'undefined' && typeof document.createElement === 'function') {
-    const canvas = document.createElement('canvas'); canvas.width = 512; canvas.height = 160;
-    const ctx = canvas.getContext?.('2d');
-    if (ctx) {
-      ctx.fillStyle = '#2f5f8f'; ctx.fillRect(0, 0, 512, 160); ctx.fillStyle = '#ffffff'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-      ctx.font = '700 70px "Malgun Gothic", sans-serif'; ctx.fillText('엘리베이터', 256, 62, 480);
-      ctx.font = '600 34px "Malgun Gothic", sans-serif'; ctx.fillText(`ELEV · ${spec.displayLevel ?? level}F`, 256, 128, 480);
-      const texture = new THREE.CanvasTexture(canvas); texture.colorSpace = THREE.SRGBColorSpace; s.textures?.add(texture);
-      const signMaterial = new THREE.MeshBasicMaterial({ map: texture, side: THREE.DoubleSide }); s.materials?.add(signMaterial);
-      const sign = mesh(landing, geometry('elevator-sign-plane', () => new THREE.PlaneGeometry(1.5, .47)), signMaterial, [0, 2.68, .06]);
-      sign.name = `dryer-building-${level}-elevator-sign`; sign.castShadow = false; sign.userData.text = '엘리베이터';
+  if (elevatorService) {
+    const landing = group(architectureFixtures, [shaftX, 0, elevator.bounds.maxZ + .07]); landing.name = `dryer-building-${level}-elevator-landing-doors`;
+    Object.assign(landing.userData, { architecturalDoor: true, elevatorLanding: true, openingWidth: elevatorDoor.width, openingHeight: elevatorDoor.height, illustratedOpen: false, closedLandingDoors: true, carAdded: false, source: 'A013-A018 ELEV core; user request to mark elevators clearly 20261111' });
+    box(landing, [1.58, 2.36, .08], [0, 1.18, -.03], elevatorPaint.frame);
+    for (const side of [-1, 1]) box(landing, [.68, 2.18, .05], [side * .35, 1.09, .03], elevatorPaint.door).name = 'architectural-closed-elevator-doors';
+    box(landing, [.012, 2.18, .06], [0, 1.09, .04], m.dark);
+    box(landing, [.12, .26, .04], [1.0, 1.15, .02], elevatorPaint.frame);
+    for (const y of [1.2, 1.1]) box(landing, [.05, .05, .02], [1.0, y, .05], m.sign);
+    if(level===1&&spec.routeSurvey?.supplementalPackagingWalk){
+      Object.assign(landing.userData,{sourceReferences:[{clipId:'first-floor-20261113-clip2',times:[90,108]}],sameObservedElevator:'north-elevator',observedDoorFinish:'two closed stainless leaves with a separate adjacent button cabinet'});
+      const panel=group(landing,[-1.35,0,.03]);panel.name='architectural-observed-elevator-adjacent-button-cabinet';
+      Object.assign(panel.userData,{sourceReferences:[{clipId:'first-floor-20261113-clip2',times:[108]}],internalControlFunctionsConfirmed:false,liveValuesAdded:false,minimumVisibleButtonColumns:4});
+      const observedRed=s.dryerElevatorObservedRed ||=s._material(0xc44d43,.45,.08,{emissive:0x8d2520,emissiveIntensity:.35}),observedGreen=s.dryerElevatorObservedGreen ||=s._material(0x305c48,.6,.08);
+      box(panel,[.86,1.9,.12],[0,1.05,0],elevatorPaint.door);
+      box(panel,[.68,.34,.014],[0,1.76,.068],m.sign);
+      for(let row=0;row<4;row++)for(let col=0;col<4;col++){
+        box(panel,[.085,.105,.018],[-.275+col*.18,1.43-row*.24,.073],elevatorPaint.frame).name='architectural-elevator-button-backplate';
+        box(panel,[.047,.043,.018],[-.275+col*.18,1.43-row*.24,.09],row%2?observedGreen:observedRed).name='architectural-elevator-observed-indicator';
+      }
+      box(panel,[.7,.12,.016],[0,.46,.071],m.sign);
     }
+    if (typeof document !== 'undefined' && typeof document.createElement === 'function') {
+      const canvas = document.createElement('canvas'); canvas.width = 512; canvas.height = 160;
+      const ctx = canvas.getContext?.('2d');
+      if (ctx) {
+        ctx.fillStyle = '#2f5f8f'; ctx.fillRect(0, 0, 512, 160); ctx.fillStyle = '#ffffff'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+        ctx.font = '700 70px "Malgun Gothic", sans-serif'; ctx.fillText('엘리베이터', 256, 62, 480);
+        ctx.font = '600 34px "Malgun Gothic", sans-serif'; ctx.fillText(`ELEV · ${spec.displayLevel ?? level}F`, 256, 128, 480);
+        const texture = new THREE.CanvasTexture(canvas); texture.colorSpace = THREE.SRGBColorSpace; s.textures?.add(texture);
+        const signMaterial = new THREE.MeshBasicMaterial({ map: texture, side: THREE.DoubleSide }); s.materials?.add(signMaterial);
+        const sign = mesh(landing, geometry('elevator-sign-plane', () => new THREE.PlaneGeometry(1.5, .47)), signMaterial, [0, 2.68, .06]);
+        sign.name = `dryer-building-${level}-elevator-sign`; sign.castShadow = false; sign.userData.text = '엘리베이터';
+      }
+    }
+    label('엘리베이터 · ELEV', elevator.bounds, elevatorGroup);
+  } else {
+    // 11/13 user confirmation: the lift passes 1.5F without a stop. Retain
+    // its registered shaft axis, but no invented landing, buttons or sign.
+    const wall = wallSegment(structure, [elevator.bounds.minX, elevator.bounds.maxZ], [elevator.bounds.maxX, elevator.bounds.maxZ], Math.min(.95, spec.height));
+    wall.name = `dryer-building-${level}-nonstop-shaft-wall`;
+    Object.assign(wall.userData, { elevatorService: false, noLandingDoor: true });
   }
-  label('엘리베이터 · ELEV', elevator.bounds, elevatorGroup);
 
   function stair(core) {
+    const stairHeight = core.height ?? spec.height, fromY = core.fromElevation ?? elevation;
     const bounds = core.bounds, spanX = bounds.maxX - bounds.minX, spanZ = bounds.maxZ - bounds.minZ;
     const width = core.runAxis === 'x' ? spanZ : spanX, depth = core.runAxis === 'x' ? spanX : spanZ;
-    const stairRoot = group(architectureFixtures, [(bounds.minX + bounds.maxX) / 2, 0, (bounds.minZ + bounds.maxZ) / 2]);
+    const stairRoot = group(architectureFixtures, [(bounds.minX + bounds.maxX) / 2, fromY - elevation, (bounds.minZ + bounds.maxZ) / 2]);
     stairRoot.name = `dryer-building-${level}-${core.id}`;
     if (core.runAxis === 'x') stairRoot.rotation.y = Math.PI / 2;
-    Object.assign(stairRoot.userData, { architecturalFixture: true, fromY: elevation, toY: elevation + spec.height, geometryBasis: core.geometryBasis, stepsRepresentative: true,currentVideoReference:!!core.observed,sourceTimes:core.sourceTimes || [] });
-    const flights = core.flights || (spec.height > 4.5 ? 4 : 2), lane = Math.min(1.25, (width - .25) / (flights === 1 ? 1 : 2)), run = Math.max(1.8, Math.min(flights === 1 ? 10 : 4, depth - 1.7)), count = Math.ceil(spec.height / flights / .18);
-    const steel=m.trim,handrail=s.dryerBuildingHandrail ||= s._material(0x936739,.65,.05);
-    const treadMaterial=core.id==='northeast-stair'&&core.observed?(s.dryerStairTerrazzo ||=s._material(0xcbd0c1,.9,.02)):steel;
+    Object.assign(stairRoot.userData, { architecturalFixture: true, stairId: core.id, visibleFloors: core.visibleFloors || [level], fromY, toY: fromY + stairHeight, geometryBasis: core.geometryBasis, stepsRepresentative: true,currentVideoReference:!!core.observed,sourceTimes:core.sourceTimes || [],sourceReferences:core.sourceReferences||[],connectionBasis:core.connectionBasis });
+    const flights = core.flights || (stairHeight > 4.5 ? 4 : 2), lane = Math.min(1.25, (width - .25) / (flights === 1 ? 1 : 2)), run = Math.max(1.8, Math.min(flights === 1 ? 10 : 4, depth - 1.7)), count = Math.ceil(stairHeight / flights / .18);
+    const observedWhite=core.appearance==='white-stringer-yellow-rail';
+    const steel=m.trim,handrail=observedWhite?(s.dryerObservedYellowHandrail ||=s._material(0xe2bd36,.62,.06)):(s.dryerBuildingHandrail ||= s._material(0x936739,.65,.05));
+    const treadMaterial=observedWhite?(s.dryerObservedWhiteStair ||=s._material(0xe1e0d2,.75,.12)):core.id==='northeast-stair'&&core.observed?(s.dryerStairTerrazzo ||=s._material(0xcbd0c1,.9,.02)):steel;
     const rail=(a,b,radius=.025,material=steel,name='architectural-stair-handrail')=>{
       const start=new THREE.Vector3(...a),end=new THREE.Vector3(...b),delta=end.clone().sub(start);
       const value=mesh(stairRoot,geometry(`stair-rail:${radius}:${delta.length()}`,()=>new THREE.CylinderGeometry(radius,radius,delta.length(),10)),material,start.add(end).multiplyScalar(.5).toArray());
@@ -252,13 +304,15 @@ export function buildDryerBuildingEnvironment(s, options = {}) {
     };
     const landingWidth=lane*(flights===1?1:2)+.2;
     const firstDirection=core.startDirection ?? 1;
-    const lowerLanding=box(stairRoot,[landingWidth,.1,.9],[0,-.05,-firstDirection*(run/2+.45)],treadMaterial);
-    lowerLanding.name='architectural-stair-landing';
+    if (!core.omitLowerLanding) {
+      const lowerLanding=box(stairRoot,[landingWidth,.1,.9],[0,-.05,-firstDirection*(run/2+.45)],treadMaterial);
+      lowerLanding.name='architectural-stair-landing';
+    }
     for (let flight = 0; flight < flights; flight++) {
       const direction = (flight % 2 ? -1 : 1)*firstDirection, x = flights === 1 ? 0 : flight % 2 ? lane / 2 + .06 : -lane / 2 - .06;
-      const y0=spec.height/flights*flight,rise=spec.height/flights;
+      const y0=stairHeight/flights*flight,rise=stairHeight/flights;
       for (let index = 0; index < count; index++) {
-        const y = spec.height / flights * (flight + (index + 1) / count), z = direction * (-run / 2 + (index + .5) * run / count);
+        const y = stairHeight / flights * (flight + (index + 1) / count), z = direction * (-run / 2 + (index + .5) * run / count);
         const tread=box(stairRoot,[lane,.075,run/count+.025],[x,y-.0375,z],treadMaterial);tread.name='architectural-stair-tread';
         const riser=box(stairRoot,[lane,rise/count,.035],[x,y-rise/count/2,direction*(-run/2+index*run/count)],treadMaterial);riser.name='architectural-stair-riser';
         if(core.observed){const nosing=box(stairRoot,[lane,.009,.045],[x,y+.0045,direction*(-run/2+index*run/count+.0225)],m.dark);nosing.name='architectural-stair-nosing';}
@@ -266,22 +320,26 @@ export function buildDryerBuildingEnvironment(s, options = {}) {
       const landing=box(stairRoot,[landingWidth,.1,.8],[0,y0+rise-.05,direction*(run/2+.4)],treadMaterial);landing.name='architectural-stair-landing';
       for(const side of [-1,1]) {
         const edge=x+side*(lane/2-.035);
-        rail([edge,y0+1,-direction*run/2],[edge,y0+rise+1,direction*run/2],.035,core.id==='southeast-stair'?handrail:steel);
+        rail([edge,y0+1,-direction*run/2],[edge,y0+rise+1,direction*run/2],.035,core.id==='southeast-stair'||observedWhite?handrail:steel);
+        if(observedWhite){
+          rail([edge,y0+.55,-direction*run/2],[edge,y0+rise+.55,direction*run/2],.022,handrail,'architectural-observed-yellow-midrail');
+          const cheek=box(stairRoot,[.065,.27,Math.hypot(run,rise)],[x+side*lane/2,y0+rise/2-.16,0],treadMaterial);cheek.rotation.x=Math.atan2(-rise,direction*run);cheek.name='architectural-observed-white-stair-stringer';
+        }
         for(let post=0;post<=4;post++){
           const ratio=post/4,z=direction*(-run/2+ratio*run),y=y0+rise*ratio;
-          rail([edge,y,z],[edge,y+1,z],.018,steel,'architectural-stair-baluster');
+          rail([edge,y,z],[edge,y+1,z],.018,observedWhite?handrail:steel,'architectural-stair-baluster');
         }
       }
       // Open return landing: the crossing between lanes remains clear.
       const endZ=direction*(run/2+.77);
       // The observed upper return lands directly at a doorway. A rail across
       // that final edge would physically block the filmed exit.
-      if(!(core.id==='northeast-stair'&&core.observed&&flight===flights-1))rail([-landingWidth/2,y0+rise+1,endZ],[landingWidth/2,y0+rise+1,endZ],.03,core.id==='southeast-stair'?handrail:steel);
+      if(!((core.openUpperLanding || (core.id==='northeast-stair'&&core.observed))&&flight===flights-1))rail([-landingWidth/2,y0+rise+1,endZ],[landingWidth/2,y0+rise+1,endZ],.03,core.id==='southeast-stair'?handrail:steel);
       for(const side of [-1,1])rail([side*landingWidth/2,y0+rise,endZ],[side*landingWidth/2,y0+rise+1,endZ],.02,steel,'architectural-stair-baluster');
     }
     return stairRoot;
   }
-  for (const core of spec.stairs || [spec.cores.westStair, spec.cores.northEastStair]) { stair(core); label(core.name, core.bounds); }
+  for (const core of spec.stairs || [spec.cores.westStair, spec.cores.northEastStair]) { stair(core); if (core.label !== false) label(core.name, core.labelBounds || core.bounds); }
 
   // Two cistern symbols belong to the historical low-wing roof drawing. They
   // are translucent architectural references, not new selectable machines.

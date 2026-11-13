@@ -130,6 +130,36 @@ test('lower shared services retain visibly separate insulated and sanitary runs 
   }finally{dispose();}
 });
 
+test('the November 13 close-up adds one mobile white appliance and the observed Fristam and homogenizer exterior details',()=>{
+  const {s,dispose}=harness();
+  try{
+    const ids=['f1-prep-bag-dump','f1-prep-homogenizer','f1-prep-mobile-white-unit'],roots=new Map();
+    for(const id of ids){
+      const item=EQUIPMENT.find(value=>value.id===id),root=new THREE.Group();
+      assert(item);assert.equal(buildPreparationEquipment(s,root,item),true);roots.set(id,root);
+      assert.equal(root.userData.observedVesselBodies,0,'close-up accessories never introduce another preparation tank');
+      assert.equal(root.userData.hiddenMechanismsAdded,false);assert.equal(root.userData.liveOperatingStateAdded,false);
+      assert.equal(root.userData.sourceReferences[0].clipId,'first-floor-20261113-clip1');
+      root.traverse(node=>{if(node.geometry)assert(s.geometries.has(node.geometry));if(node.material)assert(s.materials.has(node.material));});
+    }
+    const hopper=roots.get(ids[0]),table=hopper.getObjectByName('preparation-bag-dump-filmed-round-inlet-table');
+    assert(table);table.updateWorldMatrix(true,false);
+    assert.equal(new THREE.Raycaster(new THREE.Vector3(1.6*.28,3,1.2*.12),new THREE.Vector3(0,-1,0)).intersectObject(table).length,0,'the filmed round inlet is a real opening in the tabletop');
+    assert(hopper.getObjectByName('preparation-bag-dump-observed-extraction-hood'));
+    assert.equal(hopper.getObjectByName('preparation-bag-dump-extraction-hose-corrugations').count,28);
+    assert(hopper.getObjectByName('preparation-fristam-observed-vented-control-box'));
+    const homogenizer=roots.get(ids[1]),cover=homogenizer.getObjectByName('preparation-homogenizer-observed-rear-service-cover');
+    assert.equal(cover.userData.closedServiceCover,true);assert.equal(cover.userData.internalMechanismAdded,false);
+    assert(homogenizer.getObjectByName('preparation-homogenizer-observed-triangular-warning'));
+    assert.equal(homogenizer.getObjectByName('preparation-homogenizer-observed-white-bucket').userData.capacityUnconfirmed,true);
+    const pulls=[];homogenizer.traverse(node=>{if(node.name==='preparation-homogenizer-rear-cover-black-pull')pulls.push(node);});assert.equal(pulls.length,2);
+    const white=roots.get(ids[2]);assert.equal(white.userData.photographedMobileWhiteCabinetCount,1);assert.equal(white.userData.applianceFunctionConfirmed,false);
+    assert(white.getObjectByName('preparation-mobile-cabinet-observed-corrugated-upriser'));
+    assert(white.getObjectByName('preparation-mobile-cabinet-hanging-blue-cover'));
+    assert.equal(white.userData.sourceTimes.length,0,'new-clip seconds are not mixed into the older continuous-walk timeline');
+  }finally{dispose();}
+});
+
 test('the assembled current catalog keeps every vessel within the double-height room and aligned to its real platform opening', () => {
   const { s, dispose } = harness();
   try {

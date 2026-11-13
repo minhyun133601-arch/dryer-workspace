@@ -8,7 +8,7 @@ export function buildDryerRouteEnvironment(s, environment, spec) {
   if(environment.architectureFixtures.getObjectByName(`dryer-route-${level}-details`))return;
   const source='dryer-entrance-mezzanine-20261112',cache=s.dryerRouteGeometry ||=new Map();
   const geo=(key,make)=>{if(!cache.has(key)){const value=make();cache.set(key,value);s.geometries?.add(value);}return cache.get(key);};
-  const colors={wall:0xe1e0d2,green:0x267858,corridorGreen:0x195a3f,skirting:0x124631,wornGreen:0x5b8066,trim:0xb5bfba,steel:0xa8b8b4,dark:0x263b39,black:0x1c2829,wood:0xb6945e,woodFloor:0xd0bb96,gray:0x9fa7a1,white:0xe5e8df,blue:0x507589,yellow:0xc6ad43,red:0xa84235,teal:0x2f706b,paper:0xd9dbce};
+  const colors={wall:0xe1e0d2,green:0x267858,corridorGreen:0x195a3f,skirting:0x124631,wornGreen:0x5b8066,trim:0xb5bfba,steel:0xa8b8b4,dark:0x263b39,black:0x1c2829,wood:0xb6945e,woodFloor:0xd0bb96,gray:0x9fa7a1,white:0xe5e8df,blue:0x507589,yellow:0xc6ad43,red:0xa84235,teal:0x2f706b,paper:0xd9dbce,orange:0xcd8c38};
   const m=s.dryerRouteMaterials ||=Object.fromEntries(Object.entries(colors).map(([key,color])=>[key,s._material(color,key==='steel'?.35:.8,key==='steel'?.65:.04)]));
   m.ceilingPanel ||=s._material(0xdfe1d6,.94,0,{emissive:0xaeb1a2,emissiveIntensity:.16});
   m.glass ||=s._material(0x9abcb7,.24,.04,{transparent:true,opacity:.2,depthWrite:false,side:THREE.DoubleSide});
@@ -81,13 +81,13 @@ export function buildDryerRouteEnvironment(s, environment, spec) {
     for(let i=0;i<=count;i++)box(root,'window-mullion',[.035,top-sill,.065],[i*length/count,(sill+top)/2,0],'trim');
     return root;
   };
-  const door=(name,point,width,{rotation=0,label=name,threshold=.02,height=2.3,paint='wall',glazed=true,glassPaint='glass',windowWidth,enterable=true,times=[]}={})=>{
+  const door=(name,point,width,{rotation=0,label=name,threshold=.02,height=2.3,paint='wall',glazed=true,glassPaint='glass',windowWidth,enterable=true,openAngle=Math.PI*.48,times=[]}={})=>{
     const root=group(details,`${name}-doorway`,[point[0],threshold,point[1]]);root.rotation.y=rotation;
     Object.assign(root.userData,{customArchitecturalDoor:true,doorId:name,openingWidth:width,openingHeight:height,sourceTimesSeconds:times});
     for(const x of [-width/2-.025,width/2+.025])box(root,'door-jamb',[.065,height+.08,.12],[x,height/2,0],'trim');
     box(root,'door-head',[width+.12,.08,.12],[0,height+.02,0],'trim');box(root,'door-threshold',[width+.1,.025,.14],[0,.0125,0],'steel');
     const pivot=group(root,`${name}-door-leaf`,[-width/2,0,0]);
-    Object.assign(pivot.userData,{doorLeaf:true,proximityDoor:{enterable,kind:'hinge',axis:'y',closed:0,open:Math.PI*.48,trigger:[0,0,0],width,height,label,groupId:`dryer-route:${level}:${name}`,accessBasis:enterable?'current continuous walk enters the modelled room':'unconfirmed destination; closed exterior face only'}});
+    Object.assign(pivot.userData,{doorLeaf:true,proximityDoor:{enterable,kind:'hinge',axis:'y',closed:0,open:openAngle,trigger:[0,0,0],width,height,label,groupId:`dryer-route:${level}:${name}`,accessBasis:enterable?'current continuous walk enters the modelled room':'unconfirmed destination; closed exterior face only'}});
     const leafWidth=width-.045;
     box(pivot,'door-lower-panel',[leafWidth,glazed?1.06:height-.05,.04],[width/2,glazed?.53:height/2,0],paint);
     if(glazed){
@@ -117,7 +117,7 @@ export function buildDryerRouteEnvironment(s, environment, spec) {
       // six jet outlets and a separate lower cabinet. These belong to the room,
       // never to one movable packing-machine assembly.
       const context=group(details,'blue-packing-room-context');context.userData.sourceTimesSeconds=[344,348,354,390];
-      wallLine('blue-room-back',[blueFloor.minX,-6.65],[blueFloor.maxX,-6.65],{height:6.15});
+      wallLine('blue-room-back',[blueFloor.minX,-6.65],[blueFloor.maxX,-6.65],{height:6.15,openings:[{offset:(-5.5-blueFloor.minX)/2,width:-5.5-blueFloor.minX,sill:3.5,height:2.65}]});
       const hvac=group(context,'six-jet-plenum-and-lower-cabinet',[5.25,0,-6.2]);
       Object.assign(hvac.userData,{observedJetOutlets:6,functionAndCapacityUnconfirmed:true,dimensionsMeasured:false});
       box(hvac,'wall-plenum',[4.0,.72,.38],[0,4.65,0],'gray');
@@ -139,11 +139,11 @@ export function buildDryerRouteEnvironment(s, environment, spec) {
       // Keep its south observation face open to the existing OP glazing, and
       // leave the unfilmed south-east approach free rather than inventing a door.
       const shell=group(details,'blue-clean-room-boundary');Object.assign(shell.userData,{sourceTimesSeconds:[338,344,348,354,390],southObservationFaceOpen:true,unseenDoorAdded:false});
-      wallLine('blue-clean-room-rear',[-7.55,-6.5],[8.4,-6.5],{height:6.15});
+      wallLine('blue-clean-room-rear',[-7.55,-6.5],[8.4,-6.5],{height:6.15,openings:[{offset:1.025,width:2.05,sill:3.5,height:2.65}]});
       wallLine('blue-clean-room-east',[8.4,-6.5],[8.4,1.35],{height:6.15});
       wallLine('blue-clean-room-west-lower',[-8.4,3],[-8.4,-6.5],{height:3.5});
-      wallLine('blue-clean-room-west',[-7.55,3],[-7.55,-6.5],{height:6.15,openings:[{offset:4.75,width:9.5,sill:0,height:3.5},{offset:4.75,width:9.1,sill:4.55,height:1.6}]});
-      const observation=glazedLine('blue-clean-room-upper-observation',[-7.55,2.8],[-7.55,-6.3],{sill:4.55,top:6.15,pitch:1.3});
+      wallLine('blue-clean-room-west',[-5.5,3],[-5.5,-6.5],{height:6.15,openings:[{offset:4.75,width:9.5,sill:0,height:3.5},{offset:4.75,width:9.1,sill:4.55,height:1.6}]});
+      const observation=glazedLine('blue-clean-room-upper-observation',[-5.5,2.8],[-5.5,-6.3],{sill:4.55,top:6.15,pitch:1.3});
       observation.userData.sourceTimesSeconds=[378,384,390,396,402];
       for(const x of [-8.3,8.3])skirting(shell,'clean-room-side-skirting',[x,-6.4],[x,1.35],.12);
       skirting(shell,'clean-room-rear-skirting',[-8.3,-6.4],[8.3,-6.4],.12);
@@ -176,6 +176,76 @@ export function buildDryerRouteEnvironment(s, environment, spec) {
       }
       wraps.userData.observedMinimumTallBundles=2;
     }
+    if(spec.routeSurvey?.supplementalPackagingWalk){
+      const supplementary=group(details,'clip2-outer-packaging-context');
+      const evidence=(node,times,extra={})=>Object.assign(node.userData,{sourceReferences:[{clipId:'first-floor-20261113-clip2',times}],dimensionsMeasured:false,registration:'observed relative position; approximate existing-hall coordinates',...extra});
+      evidence(supplementary,[10,42,48,64,108,138,141,144,162],{endStairId:'route-turn-down-stair',hiddenProcessConnectionsAdded:false});
+      // Keep the wall-side return to the one registered elevator outside the
+      // blue clean room; fittings sit on its existing east-facing wall.
+      const helmets=group(supplementary,'clip2-wall-helmet-rack',[8.5,0,-1.2]);evidence(helmets,[62],{minimumVisibleHelmets:6,wearerIdentityAdded:false});
+      box(helmets,'clip2-helmet-rack-board',[.035,.76,2.1],[0,1.58,0],'white');
+      const cap=geo('clip2-hardhat-shell',()=>new THREE.SphereGeometry(.135,14,8,0,Math.PI*2,0,Math.PI/2));
+      for(const [y,z]of [[1.76,-.75],[1.76,-.25],[1.76,.25],[1.76,.75],[1.4,-.5],[1.4,.5]]){
+        const shell=s._mesh(cap,m.white,helmets,[.15,y,z]);shell.name='dryer-route-clip2-white-hardhat';
+        cylinder(helmets,'clip2-hardhat-brim',.155,.018,[.15,y,z],'white');
+        bar(helmets,'clip2-helmet-hook',[.02,y-.04,z],[.15,y-.04,z],.012,'steel');
+      }
+      const services=group(supplementary,'clip2-exposed-aisle-services');evidence(services,[78,96,102,114,120,138,162]);
+      for(const [index,z]of [19.05,19.28,19.51,19.74].entries()){
+        const paint=['red','blue','yellow','steel'][index];
+        bar(services,'clip2-long-colored-pipe',[1.2,3.22+index*.025,z],[15.8,3.22+index*.025,z],index===0?.055:.035,paint);
+      }
+      for(const x of [2,5.2,8.4,11.6,14.8]){
+        box(services,'clip2-overhead-pipe-hanger',[.045,.3,1.05],[x,3.42,19.4],'steel');
+        box(services,'clip2-black-cable-tray',[2.9,.08,.28],[x,3.42,20.08],'dark');
+        repeats(services,'clip2-tray-rungs',[.035,.045,.32],Array.from({length:14},(_,i)=>[x-1.3+i*.2,3.36,20.08]),'steel');
+        const light=box(services,'clip2-twin-strip-light',[1.05,.04,.18],[x,3.48,18.7],'white');light.userData.staticObservedFixture=true;
+      }
+      // A low machine crossover is separate from the building stair. Both
+      // short flights and the open checkerplate bridge remain explicit.
+      const crossover=group(supplementary,'clip2-roller-crossover',[-3.4,0,14.5]);
+      evidence(crossover,[138,141,144],{interFloorConnection:false,serves:'local machine access only',topHeight:1.1,representativeStepCount:5});
+      box(crossover,'clip2-crossover-top',[.86,.065,1.2],[0,1.0675,0],'steel');
+      for(const direction of [-1,1]){
+        for(let step=0;step<5;step++){
+          const z=direction*(2-(step+.5)*.28),y=(step+1)*.22;
+          box(crossover,'clip2-crossover-tread',[.86,.055,.3],[0,y-.0275,z],'white');
+          repeats(crossover,'clip2-crossover-antislip-bars',[.8,.006,.022],[-.08,0,.08].map(dz=>[0,y+.003,z+dz]),'gray');
+        }
+        for(const x of [-.47,.47]){
+          bar(crossover,'clip2-crossover-yellow-rail',[x,1.0,direction*2],[x,2.1,direction*.6],.028,'yellow');
+          for(let post=0;post<=2;post++){const t=post/2,y=1.1*t,z=direction*(2-1.4*t);bar(crossover,'clip2-crossover-yellow-post',[x,y,z],[x,y+1,z],.023,'yellow');}
+        }
+      }
+      for(const x of [-.47,.47]){
+        bar(crossover,'clip2-crossover-top-guard',[x,2.1,-.6],[x,2.1,.6],.028,'yellow');
+        box(crossover,'clip2-crossover-toeboard',[.04,.12,1.2],[x,1.16,0],'yellow');
+      }
+      // Storage stays beside the aisle, never in the clear route to the
+      // confirmed 1F-to-1.5F stair and its upper return landing.
+      const rack=group(supplementary,'clip2-end-aisle-parts-rack',[2.7,0,21.05]);evidence(rack,[138,162],{contentsAndLabelTextConfirmed:false});
+      for(const x of [-1.2,1.2])for(const z of [-.25,.25])box(rack,'clip2-parts-rack-upright',[.045,1.8,.045],[x,.92,z],'white');
+      for(const y of [.2,.72,1.24,1.76])box(rack,'clip2-parts-shelf',[2.45,.035,.55],[0,y,0],'white');
+      for(let row=0;row<3;row++)for(let col=0;col<6;col++){
+        const x=-1+col*.4,y=.37+row*.52;
+        box(rack,'clip2-orange-open-bin-base',[.34,.025,.38],[x,y-.12,0],'orange');
+        for(const side of [-1,1])box(rack,'clip2-orange-bin-side',[.025,.25,.38],[x+side*.16,y,0],'orange');
+        box(rack,'clip2-orange-bin-back',[.34,.25,.025],[x,y,.18],'orange');
+      }
+      const vacuum=group(supplementary,'clip2-end-aisle-vacuum',[4.3,0,20.55]);evidence(vacuum,[162],{functionBasis:'visible wheeled cleaning canister and hose'});
+      cylinder(vacuum,'clip2-vacuum-stainless-canister',.23,.48,[0,.41,0],'steel');cylinder(vacuum,'clip2-vacuum-black-lid',.25,.12,[0,.72,0],'dark');
+      for(const x of [-.24,.24])for(const z of [-.2,.2])cylinder(vacuum,'clip2-vacuum-wheel',.065,.06,[x,.08,z],'black','x');
+      for(const side of [-1,1])bar(vacuum,'clip2-vacuum-handle',[side*.2,.28,.2],[side*.2,.95,.25],.018,'dark');
+      bar(vacuum,'clip2-vacuum-handle',[.2,.95,.25],[-.2,.95,.25],.02,'dark');
+      const hose=s._mesh(geo('clip2-vacuum-hose',()=>new THREE.TorusGeometry(.35,.025,8,30,Math.PI*1.5)),m.dark,vacuum,[.1,.35,-.12]);hose.name='dryer-route-clip2-vacuum-hose';
+      const chair=group(supplementary,'clip2-end-aisle-chair',[1,0,20.6]);evidence(chair,[138,162]);
+      box(chair,'clip2-chair-seat',[.42,.075,.42],[0,.46,0],'dark');box(chair,'clip2-chair-back',[.4,.43,.055],[0,.78,.19],'dark');cylinder(chair,'clip2-chair-pedestal',.035,.43,[0,.23,0],'steel');
+      for(let i=0;i<5;i++){const a=i*Math.PI*2/5;bar(chair,'clip2-chair-base',[0,.08,0],[Math.cos(a)*.28,.06,Math.sin(a)*.28],.018,'dark');}
+      const arrowShape=new THREE.Shape();arrowShape.moveTo(-.075,-.3);arrowShape.lineTo(-.075,-.15);arrowShape.lineTo(-.18,-.15);arrowShape.lineTo(0,-.45);arrowShape.lineTo(.18,-.15);arrowShape.lineTo(.075,-.15);arrowShape.lineTo(.075,.15);arrowShape.lineTo(.18,.15);arrowShape.lineTo(0,.45);arrowShape.lineTo(-.18,.15);arrowShape.lineTo(-.075,.15);arrowShape.closePath();
+      const arrows=geo('clip2-double-ended-aisle-arrow',()=>{const g=new THREE.ShapeGeometry(arrowShape);g.rotateX(-Math.PI/2);return g;});
+      for(const x of [12,6,-.5]){const arrow=s._mesh(arrows,m.yellow,supplementary,[x,.012,19.5]);arrow.rotation.y=Math.PI/2;arrow.name='dryer-route-clip2-yellow-two-way-aisle-arrow';}
+      for(const [x,z,w,d]of [[2.7,21.05,2.6,.65],[4.3,20.55,.72,.72]])for(const [size,p]of [[[w,.006,.035],[x,.008,z-d/2]],[[w,.006,.035],[x,.008,z+d/2]],[[.035,.006,d],[x-w/2,.008,z]],[[.035,.006,d],[x+w/2,.008,z]]])box(supplementary,'clip2-yellow-storage-outline',size,p,'yellow');
+    }
     const opening=spec.openings?.find(o=>o.label==='계단 황색창');
     if(opening){
       const z=spec.bounds.minZ+opening.offset,x=spec.bounds.maxX,sill=opening.sill||0,top=sill+opening.height;
@@ -189,14 +259,14 @@ export function buildDryerRouteEnvironment(s, environment, spec) {
   if(level===2 && spec.routeSurvey){
     const route=spec.routeSurvey;
     const corridorRuns=[
-      ['south-observation-corridor',{minX:-5.3,maxX:28.2,minZ:18.4,maxZ:21.4}],
-      ['west-observation-corridor',{minX:-8.45,maxX:-5.55,minZ:3,maxZ:18.35}],
-      ['west-blue-hall-corridor',{minX:-8.45,maxX:-7.55,minZ:-6.7,maxZ:3}],
-      ['north-observation-corridor',{minX:-5.4,maxX:13.4,minZ:-8.4,maxZ:-6.7}],
+      ['south-observation-corridor',{minX:-8.45,maxX:33.3,minZ:17.05,maxZ:18.4}],
+      ['west-observation-corridor',{minX:-8.45,maxX:-5.55,minZ:3,maxZ:17.05}],
+      ['west-blue-hall-corridor',{minX:-8.45,maxX:-5.55,minZ:-6.7,maxZ:3}],
+      ['north-observation-corridor',{minX:-8.35,maxX:-5.65,minZ:-7.4,maxZ:-6.4}],
     ];
     for(const [name,bounds]of corridorRuns){floorFinish(`${name}-floor`,bounds,'corridorGreen');suspendedCeiling(name,name==='north-observation-corridor'?{...bounds,maxX:8.6}:bounds);}
     const corridorTrim=group(details,'corridor-wall-finishes');
-    skirting(corridorTrim,'south-inner-skirting',[-5.3,18.425],[28.2,18.425]);
+    skirting(corridorTrim,'south-inner-skirting',[-5.3,17.065],[28.15,17.065]);
     skirting(corridorTrim,'south-outer-skirting',[-5.3,21.49],[28.2,21.49]);
     skirting(corridorTrim,'west-outer-skirting',[-8.49,3],[-8.49,18.35]);
     skirting(corridorTrim,'west-op-skirting',[-5.42,3],[-5.42,8.55]);
@@ -204,7 +274,7 @@ export function buildDryerRouteEnvironment(s, environment, spec) {
     const wayfinding=group(details,'observed-corridor-wayfinding');wayfinding.userData.sourceTimesSeconds=[150,222,246,294,408];
     const arrowShape=new THREE.Shape();arrowShape.moveTo(-.09,-.4);arrowShape.lineTo(.09,-.4);arrowShape.lineTo(.09,.08);arrowShape.lineTo(.25,.08);arrowShape.lineTo(0,.4);arrowShape.lineTo(-.25,.08);arrowShape.lineTo(-.09,.08);arrowShape.closePath();
     const arrowGeometry=geo('corridor-yellow-direction-arrow',()=>{const geometry=new THREE.ShapeGeometry(arrowShape);geometry.rotateX(-Math.PI/2);return geometry;});
-    for(const [x,z,angle]of [[26.5,19.7,Math.PI/2],[12,19.7,Math.PI/2],[-7,16.5,0],[-8,0,0],[-1,-7.5,-Math.PI/2]]){
+    for(const [x,z,angle]of [[26.5,17.8,Math.PI/2],[12,17.8,Math.PI/2],[-8,15,0],[-8,9.1,0],[-8,0,0],[-7,-5.6,0]]){
       const arrow=s._mesh(arrowGeometry,m.yellow,wayfinding,[x,.027,z]);arrow.rotation.y=angle;arrow.name='dryer-route-yellow-floor-direction-arrow';
     }
     for(const x of [5.5,17.4]){
@@ -215,30 +285,31 @@ export function buildDryerRouteEnvironment(s, environment, spec) {
     const upperStair=route.upperStair;
     if(upperStair){
       const b=upperStair.bounds,window=upperStair.window,height=6.35,room=group(details,'upper-stairwell-context');
-      Object.assign(room.userData,{sourceTimesSeconds:upperStair.sourceTimes,compassOrientationConfirmed:false,topology:upperStair.topology,entryStairUnchanged:true});
-      wallLine('upper-stairwell-west',[b.minX,b.minZ],[b.minX,b.maxZ],{height:3.5,openings:[{offset:upperStair.lowerDoor[1]-b.minZ,width:1.15,height:2.3}]});
-      wallLine('upper-stairwell-east',[b.maxX,b.minZ],[b.maxX,b.maxZ],{height,openings:[{offset:window.position[1]-b.minZ,width:window.width,sill:window.sill,height:window.height}]});
-      wallLine('upper-stairwell-south',[b.minX,b.maxZ],[b.maxX,b.maxZ],{height});
-      wallLine('upper-stairwell-north',[b.minX,b.minZ],[b.maxX,b.minZ],{height});
+      Object.assign(room.userData,{sourceTimesSeconds:upperStair.sourceTimes,compassOrientationConfirmed:false,topology:upperStair.topology,routeEndBeyondOp:true});
+      wallLine('upper-stairwell-west',[b.minX,b.minZ],[b.minX,b.maxZ],{height});
+      wallLine('upper-stairwell-east',[b.maxX,b.minZ],[b.maxX,b.maxZ],{height});
+      wallLine('upper-stairwell-south',[b.minX,b.maxZ],[b.maxX,b.maxZ],{height,openings:[{offset:upperStair.lowerDoor[0]-b.minX,width:1.15,height:2.3},{offset:upperStair.upperDoor[0]-b.minX,width:1.2,sill:3.5,height:2.3}]});
+      wallLine('upper-stairwell-north',[b.minX,b.minZ],[b.maxX,b.minZ],{height,openings:[{offset:window.position[0]-b.minX,width:window.width,sill:window.sill,height:window.height}]});
       box(environment.facade,'upper-stairwell-ceiling',[b.maxX-b.minX,.06,b.maxZ-b.minZ],[(b.minX+b.maxX)/2,height+.03,(b.minZ+b.maxZ)/2],'wall');
       // 420–432s shows diffuse daylight through pale frosted panes, rather
       // than a clear view into the surrounding model's unmeasured low wing.
       m.stairFrostedGlass ||=s._material(0xe1e7df,.72,0,{transparent:true,opacity:.82,emissive:0xcbd9da,emissiveIntensity:.35,depthWrite:false,side:THREE.DoubleSide});
-      const glazing=glazedLine('upper-stairwell-tall-landing-window',[b.maxX,window.position[1]-window.width/2],[b.maxX,window.position[1]+window.width/2],{sill:window.sill,top:window.sill+window.height,pitch:1.17,paint:'stairFrostedGlass'});
+      const glazing=glazedLine('upper-stairwell-tall-landing-window',[window.position[0]-window.width/2,b.minZ],[window.position[0]+window.width/2,b.minZ],{sill:window.sill,top:window.sill+window.height,pitch:1.17,paint:'stairFrostedGlass'});
       Object.assign(glazing.userData,{sourceTimesSeconds:[420,424,428,432,443],landingFacingWindow:true});
-      for(const y of [1.8,2.25,2.7])bar(room,'stair-window-safety-bar',[b.maxX-.13,y,window.position[1]-window.width/2],[b.maxX-.13,y,window.position[1]+window.width/2],.025,'steel');
-      const lowerDoor=door('upper-stair-entrance',upperStair.lowerDoor,1.15,{rotation:Math.PI/2,label:'3층 연결 계단',glazed:false,paint:'gray',times:[414,418,420]});
+      for(const y of [1.8,2.25,2.7])bar(room,'stair-window-safety-bar',[window.position[0]-window.width/2,y,b.minZ+.13],[window.position[0]+window.width/2,y,b.minZ+.13],.025,'steel');
+      const lowerDoor=door('upper-stair-entrance',upperStair.lowerDoor,1.15,{label:'통로 끝 상·하행 계단',glazed:false,paint:'gray',openAngle:-Math.PI*.48,times:[414,418,420]});
       lowerDoor.userData.routeStairEntry=true;
-      const approach={minX:7.55,maxX:8.6,minZ:-8.5,maxZ:-6.7};floorFinish('upper-stair-approach-floor',approach,'corridorGreen');suspendedCeiling('upper-stair-approach',approach);
+      const approach={minX:-8.35,maxX:-5.65,minZ:-7.4,maxZ:-6.4};floorFinish('upper-stair-approach-floor',approach,'corridorGreen');suspendedCeiling('upper-stair-approach',approach);
       for(const [a,c]of [[[b.minX+.07,b.minZ+.07],[b.maxX-.07,b.minZ+.07]],[[b.maxX-.07,b.minZ+.07],[b.maxX-.07,b.maxZ-.07]],[[b.minX+.07,b.maxZ-.07],[b.maxX-.07,b.maxZ-.07]]]){
         const length=Math.hypot(c[0]-a[0],c[1]-a[1]),trim=group(room,'stairwell-black-skirting',[a[0],0,a[1]]);trim.rotation.y=-Math.atan2(c[1]-a[1],c[0]-a[0]);box(trim,'black-stairwell-skirting',[length,.14,.025],[length/2,.07,0],'black');
       }
     }
-    wallLine('south-observation',[ -5.3,18.35],[28.2,18.35],{height:2.9,openings:[{offset:16.75,width:33.5,sill:.85,height:1.8}]});
-    glazedLine('south-observation',[-5.3,18.35],[28.2,18.35]);
-    wallLine('west-return-observation',[-5.35,13.7],[-5.35,18.35],{height:2.9,openings:[{offset:2.325,width:4.65,sill:.85,height:1.8}]});
-    glazedLine('west-return-observation',[-5.35,13.7],[-5.35,18.35]);
+    wallLine('south-observation',[-5.3,17],[28.2,17],{height:2.9,openings:[{offset:16.75,width:33.5,sill:.85,height:1.8}]});
+    glazedLine('south-observation',[-5.3,17],[28.2,17]);
+    wallLine('west-return-observation',[-5.35,13.7],[-5.35,17],{height:2.9,openings:[{offset:1.65,width:3.3,sill:.85,height:1.8}]});
+    glazedLine('west-return-observation',[-5.35,13.7],[-5.35,17]);
     const dressing=route.dressingRoom,b=dressing.bounds;
+    floorFinish('entry-stair-dressing-shared-landing',dressing.arrivalLanding,'corridorGreen');
     suspendedCeiling('dressing-room',b,{height:2.6,tileX:.6,tileZ:.6});
     floorFinish('dressing-raised-wood-floor',b,'woodFloor',.08);
     const dressingRoot=group(details,'dressing-room-furnishings',[0,.08,0]);Object.assign(dressingRoot.userData,{sourceTimesSeconds:dressing.sourceTimes,lockerCountBasis:'tan minimum six columns by two tiers observed; partly filmed gray bank represented proportionally'});
@@ -308,12 +379,21 @@ export function buildDryerRouteEnvironment(s, environment, spec) {
         const texture=new THREE.CanvasTexture(canvas);texture.colorSpace=THREE.SRGBColorSpace;texture.wrapS=texture.wrapT=THREE.RepeatWrapping;texture.repeat.set(4,6);s.textures?.add(texture);m.wornGreen.map=texture;m.wornGreen.color.set(0xffffff);m.wornGreen.needsUpdate=true;
       }
     }
-    const wornFloor=floorFinish('third-worn-green-epoxy-floor',spec.mainBounds,'wornGreen',.001);Object.assign(wornFloor.userData,{sourceTimesSeconds:[450,486,538,588,617,678],wearPatternRepresentative:true});
+    const wornFloor=group(environment.deck,'third-worn-green-epoxy-floor');
+    const floorHoles=(spec.slabOpenings||[]).flatMap(opening=>opening.holes||[]),floorBounds=spec.mainBounds;
+    const xs=[floorBounds.minX,floorBounds.maxX,...floorHoles.flatMap(hole=>[hole.minX,hole.maxX])].sort((a,b)=>a-b);
+    const zs=[floorBounds.minZ,floorBounds.maxZ,...floorHoles.flatMap(hole=>[hole.minZ,hole.maxZ])].sort((a,b)=>a-b);
+    for(let xi=1;xi<xs.length;xi++)for(let zi=1;zi<zs.length;zi++){
+      const minX=xs[xi-1],maxX=xs[xi],minZ=zs[zi-1],maxZ=zs[zi],x=(minX+maxX)/2,z=(minZ+maxZ)/2;
+      if(maxX-minX<.001||maxZ-minZ<.001||floorHoles.some(hole=>x>hole.minX&&x<hole.maxX&&z>hole.minZ&&z<hole.maxZ))continue;
+      const finish=floorFinish('third-worn-green-epoxy-panel',{minX,maxX,minZ,maxZ},'wornGreen',.001);wornFloor.attach(finish);
+    }
+    Object.assign(wornFloor.userData,{sourceTimesSeconds:[450,486,538,588,617,678],wearPatternRepresentative:true,slabOpeningsPreserved:true});
     const stairEntry=spec.routeSurvey.entryFromStair;
     if(stairEntry){
       const p=stairEntry.door,arrival=group(details,'third-stair-arrival-context');Object.assign(arrival.userData,{sourceTimesSeconds:stairEntry.sourceTimes,straightAheadOfUpperFlight:true});
-      box(arrival,'brown-stair-door-mat',[.85,.018,1.05],[p[0]+.43,.009,p[1]],'wood');
-      const marker=sign(arrival,'3F',[p[0]+.09,1.65,p[1]-1.0],.45);marker.rotation.y=Math.PI/2;
+      box(arrival,'brown-stair-door-mat',[.85,.018,1.05],[p[0],.009,p[1]+.43],'wood');
+      sign(arrival,'3F',[p[0]+1,1.65,p[1]+.09],.45);
     }
     const b=spec.routeSurvey.glazedEnclosure,w=b.maxX-b.minX,d=b.maxZ-b.minZ,doorPosition=spec.routeSurvey.storageDoor?.position||[b.maxX,(b.minZ+b.maxZ)/2];
     const root=group(details,'yellow-glazed-storage-room');Object.assign(root.userData,{sourceTimesSeconds:[450,462,474,480],roomFunction:'storage-context',functionInferred:true,interiorObserved:true});

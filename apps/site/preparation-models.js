@@ -4,7 +4,7 @@ import * as THREE from '../shared/vendor/three.module.js';
 // metadata owns identities and counts; a second view from below a tank does
 // not create another vessel. Dimensions and hidden connections are unmeasured.
 const PI = Math.PI, TAU = PI * 2, UP = new THREE.Vector3(0, 1, 0);
-export const PREPARATION_MODEL_KINDS = Object.freeze(['tank-group', 'platform', 'control-panel', 'powder-hopper', 'homogenizer', 'service-pump', 'filter-pot', 'under-platform-services']);
+export const PREPARATION_MODEL_KINDS = Object.freeze(['tank-group', 'platform', 'control-panel', 'powder-hopper', 'homogenizer', 'service-pump', 'filter-pot', 'under-platform-services', 'mobile-cabinet']);
 
 function resources(s) {
   if (s._preparationResources) return s._preparationResources;
@@ -324,7 +324,10 @@ function controlPanel(s, g, item, config, t) {
     for (let row = 0; row < rows; row++) for (let col = 0; col < cols; col++) t.cylinder(face, .024, .02, [w * .24 + (col - (cols - 1) / 2) * w * .055, h * .38 - row * h * .075, d / 2 + .028], row === rows - 1 && col === 0 ? 'red' : row === 1 ? 'dark' : 'green', 'z');
     t.box(face, [w * .12, h * .19, .01], [-w * .02, h * .46, d / 2 + .018], 'white', 'visible-paper-instruction');
   }
-  const route = g[2] || g[0]; t.pipe(route, [[w / 2 - .12, elevation + .12, -d / 2], [w / 2 + .13, elevation + .12, -d / 2], [w / 2 + .13, .12, -d / 2]], .018, 'black', 'cabinet-visible-conduit');
+  // Keep the approximate conduit registration alongside its cabinet instead
+  // of dropping through the confirmed raw-shutter opening.
+  const route = g[2] || g[0], conduitSide = config.conduitSide === -1 ? -1 : 1;
+  t.pipe(route, [[conduitSide * (w / 2 - .12), elevation + .12, -d / 2], [conduitSide * (w / 2 + .13), elevation + .12, -d / 2], [conduitSide * (w / 2 + .13), .12, -d / 2]], .018, 'black', 'cabinet-visible-conduit');
   face.userData.liveOperatingStateAdded = false; return { observedVesselBodies: 0 };
 }
 
@@ -333,11 +336,33 @@ function powderHopper(s, g, item, config, t) {
   const body = g[0];
   for (const x of [-w / 2 + .1, w / 2 - .1]) for (const z of [-d / 2 + .1, d / 2 - .1]) t.box(body, [.055, y, .055], [x, y / 2, z], 'steel');
   const openingW = w * .55, openingD = d * .58;
-  for (const x of [-1, 1]) t.box(body, [(w - openingW) / 2, .07, d], [x * (w + openingW) / 4, y, 0], 'steel', 'bag-dump-opening-rim');
-  for (const z of [-1, 1]) t.box(body, [openingW, .07, (d - openingD) / 2], [0, y, z * (d + openingD) / 4], 'steel', 'bag-dump-opening-rim');
-  t.box(g[1] || body, [w, .7, .045], [0, y + .39, -d / 2], 'steel');
-  for (const x of [-w / 2, w / 2]) t.box(g[1] || body, [.045, .55, d], [x, y + .3, 0], 'steel');
-  const shape = new THREE.CylinderGeometry(.52, .12, .58, 4, 1, true); shape.rotateY(PI / 4); const funnel = t.mesh(body, shape, [0, y - .25, 0], 'steel', 'filmed-bag-dump-hopper'); funnel.scale.set(w / 1.5, 1, d / 1.1);
+  if (config.supplementaryExterior) {
+    const inletX = w * .28, inletZ = d * .12, radius = .22;
+    const plate = new THREE.Shape([new THREE.Vector2(-w/2,-d/2),new THREE.Vector2(w/2,-d/2),new THREE.Vector2(w/2,d/2),new THREE.Vector2(-w/2,d/2)]);
+    const mouth = new THREE.Path(); mouth.absarc(inletX,-inletZ,radius,0,TAU,true); plate.holes.push(mouth);
+    const tabletop = new THREE.ExtrudeGeometry(plate,{depth:.045,bevelEnabled:false,curveSegments:32}); tabletop.rotateX(-PI/2);
+    t.mesh(body,tabletop,[0,y-.045,0],'steel','bag-dump-filmed-round-inlet-table');
+    t.ring(body,radius+.016,[inletX,y+.012,inletZ],'trim','y',.021,'bag-dump-open-circular-inlet-rim');
+    t.mesh(body,new THREE.CylinderGeometry(radius,.08,.58,28,1,true),[inletX,y-.28,inletZ],'steel','filmed-bag-dump-hopper');
+    const hood = s._group(g[1] || body); hood.name='preparation-bag-dump-observed-extraction-hood';
+    const hoodX=-w*.18, hoodW=w*.61, back=-d*.43, front=d*.28;
+    t.box(hood,[hoodW,.9,.026],[hoodX,y+.49,back],'steel');
+    const side = new THREE.Shape(); side.moveTo(-back,.04); side.lineTo(-back,.94); side.lineTo(-front,.58); side.lineTo(-front,.04); side.closePath();
+    const sheet = new THREE.ExtrudeGeometry(side,{depth:.024,bevelEnabled:false}); sheet.rotateY(PI/2);
+    for(const sign of [-1,1]) t.mesh(hood,sheet,[hoodX+sign*hoodW/2,y,0],'steel','bag-dump-sloped-hood-cheek');
+    const top=t.box(hood,[hoodW+.025,.025,Math.hypot(front-back,.36)],[hoodX,y+.76,(front+back)/2],'steel','bag-dump-sloped-hood-top'); top.rotation.x=Math.atan2(.36,front-back);
+    const duct=t.pipe(hood,[[hoodX-hoodW/2,y+.62,-.2],[-w*.66,y+.77,-.2],[-w*.9,y+1.22,-.2]],.14,'dark','bag-dump-visible-ribbed-extraction-hose');
+    const curve=duct.geometry.parameters.path;
+    const rings=Array.from({length:28},(_,i)=>{const at=(i+.5)/28;return{position:curve.getPointAt(at).toArray(),scale:[1,1,1],rotation:new THREE.Euler().setFromQuaternion(new THREE.Quaternion().setFromUnitVectors(new THREE.Vector3(0,0,1),curve.getTangentAt(at))).toArray().slice(0,3)};});
+    t.repeated(hood,rings,'black','bag-dump-extraction-hose-corrugations',t.geo('bag-dump-duct-rib',()=>new THREE.TorusGeometry(.143,.009,5,24)));
+    Object.assign(hood.userData,{sourceReferences:config.sourceReferences,hiddenDuctDestinationAdded:false});
+  } else {
+    for (const x of [-1, 1]) t.box(body, [(w - openingW) / 2, .07, d], [x * (w + openingW) / 4, y, 0], 'steel', 'bag-dump-opening-rim');
+    for (const z of [-1, 1]) t.box(body, [openingW, .07, (d - openingD) / 2], [0, y, z * (d + openingD) / 4], 'steel', 'bag-dump-opening-rim');
+    t.box(g[1] || body, [w, .7, .045], [0, y + .39, -d / 2], 'steel');
+    for (const x of [-w / 2, w / 2]) t.box(g[1] || body, [.045, .55, d], [x, y + .3, 0], 'steel');
+    const shape = new THREE.CylinderGeometry(.52, .12, .58, 4, 1, true); shape.rotateY(PI / 4); const funnel = t.mesh(body, shape, [0, y - .25, 0], 'steel', 'filmed-bag-dump-hopper'); funnel.scale.set(w / 1.5, 1, d / 1.1);
+  }
   t.cylinder(body, .11, .25, [0, y - .62, 0]);
   const pump = s._group(g[2] || body); pump.name = 'preparation-bag-dump-filmed-fristam-pump-exterior';
   Object.assign(pump.userData, { sourceTimes: [435,472], samePumpInRepeatedViews: true, hiddenMotorAdded: false });
@@ -352,6 +377,16 @@ function powderHopper(s, g, item, config, t) {
   t.pipe(pump, [[-.49,.34,0],[-.49,.34,.44],[.15,.34,.44]], .05);
   t.sanitaryValve(pump, [-.49,.34,.3], 'z', 'blue');
   t.pipe(pump, [[-.33,.43,.12],[.05,.44,.22],[.56,.3,.22]], .011, 'blue', 'bag-dump-visible-blue-airline');
+  if(config.supplementaryExterior){
+    const panel=s._group(pump,[-w*.61,.46,d*.26]);panel.name='preparation-fristam-observed-vented-control-box';
+    t.box(panel,[.37,.74,.28],[0,0,0],'steel');
+    t.repeated(panel,Array.from({length:10},(_,i)=>({position:[-.135+i*.03,-.1,.148],scale:[.012,.29,.012]})),'dark','fristam-control-box-vertical-vents');
+    t.box(panel,[.085,.085,.025],[-.085,.23,.154],'green');
+    for(const [x,paint]of[[.045,'green'],[.115,'red']])t.cylinder(panel,.018,.025,[x,.23,.16],paint,'z');
+    t.cylinder(panel,.053,.025,[.06,.11,.159],'yellow','z');t.cylinder(panel,.031,.045,[.06,.11,.18],'red','z');
+    for(const x of [-w/2+.1,w/2-.1])for(const z of [-d/2+.1,d/2-.1]){t.cylinder(body,.06,.04,[x,.065,z],'black','x','bag-dump-observed-caster');t.box(body,[.055,.065,.05],[x,.11,z],'trim');}
+    Object.assign(pump.userData,{sourceReferences:config.sourceReferences,visiblePumpUnitOnly:true});
+  }
   rootMark(body, 'confirmed-sack-tip-station-not-structural-column-haunch'); return { observedVesselBodies: 0, photographedIntegratedPumpCount: 1 };
 }
 
@@ -379,7 +414,47 @@ function homogenizer(s, g, item, config, t) {
   for (const [x, y, r] of [[-w * .16, h * 1.08, .12], [w * .04, h * 1.07, .105], [-w * .12, h * .91, .09]]) t.gauge(pipes, [x, y, d * .22], r);
   t.pipe(pipes, [[-w * .25, h * .44, d / 2 + .29], [-w * .25, .22, d / 2 + .29], [w * .38, .22, d / 2 + .29], [w * .38, h * .44, d / 2 + .29]], .045);
   t.pipe(g[2] || g[0], [[-w / 2, .5, 0], [-w / 2 - .2, .5, 0], [-w / 2 - .2, 1.2, 0]], .052);
+  if(config.supplementaryExterior){
+    const casework=s._group(g[0]);casework.name='preparation-homogenizer-observed-rear-service-cover';
+    t.box(casework,[w-.04,h*.72,.018],[0,h*.55,-d/2-.016],'steel');
+    for(const x of [-w*.37,w*.37])t.bar(casework,[x,h*.43,-d/2-.065],[x,h*.65,-d/2-.065],.022,'black','homogenizer-rear-cover-black-pull');
+    const warning=new THREE.Shape();warning.moveTo(-.15,-.09);warning.lineTo(.15,-.09);warning.lineTo(0,.17);warning.closePath();
+    const sign=t.mesh(casework,new THREE.ShapeGeometry(warning),[0,h*.61,-d/2-.028],'yellow','homogenizer-observed-triangular-warning');sign.rotation.y=PI;
+    const icon=s._group(casework,[0,h*.61,-d/2-.035]);icon.rotation.y=PI;
+    for(const [x,y,r]of[[-.037,.005,.037],[.041,-.019,.025]]){t.ring(icon,r,[x,y,0],'black','z',.008);for(let i=0;i<7;i++){const a=i*TAU/7;t.box(icon,[.014,.016,.005],[x+Math.cos(a)*(r+.009),y+Math.sin(a)*(r+.009),0],'black');}}
+    for(const x of [-w*.15,w*.12,w*.39]){
+      t.box(face,[.27,.27,.025],[x,h*.68,d/2+.265],'steel','homogenizer-front-square-pump-cover');
+      for(const dx of [-.102,.102])for(const dy of [-.102,.102])t.cylinder(face,.018,.023,[x+dx,h*.68+dy,d/2+.29],'trim','z','homogenizer-observed-cover-bolt');
+      t.cylinder(face,.048,.1,[x,h*.84,d*.32],'steel','y','homogenizer-top-valve-boss');
+    }
+    const drain=s._group(pipes);drain.name='preparation-homogenizer-filmed-drain-and-bucket';
+    const drainX=-w*.52,drainZ=d*.8;
+    t.pipe(drain,[[drainX,.35,drainZ],[drainX,2.2,drainZ],[-w*.46,2.35,drainZ]],.036,'steel','homogenizer-visible-vertical-drain');
+    const bucket=t.mesh(drain,new THREE.CylinderGeometry(.2,.16,.37,28,1,true),[drainX,.205,drainZ],'white','homogenizer-observed-white-bucket');
+    t.ring(drain,.2,[drainX,.39,drainZ],'white','y',.018);t.cylinder(drain,.16,.018,[drainX,.026,drainZ],'white');
+    Object.assign(bucket.userData,{movableContext:true,capacityUnconfirmed:true});
+    Object.assign(casework.userData,{sourceReferences:config.sourceReferences,closedServiceCover:true,internalMechanismAdded:false});
+  }
   return { observedVesselBodies: 0, photographedMachine: 'homogenizer' };
+}
+
+function mobileCabinet(s,g,item,config,t){
+  const w=config.width||item.width||.82,d=config.depth||item.depth||.7,h=config.height||item.height||1.55;
+  const body=s._group(g[0]);body.name='preparation-filmed-mobile-white-cabinet';
+  t.box(body,[w,h,d],[0,h/2+.14,0],'cream');
+  for(const x of [-w*.37,w*.37])for(const z of [-d*.35,d*.35]){t.cylinder(body,.065,.042,[x,.075,z],'black','x');t.box(body,[.05,.065,.05],[x,.12,z],'trim');}
+  for(const y of [h*.34+.14,h*.67+.14])t.box(body,[w-.025,.012,.018],[0,y,d/2+.012],'trim','mobile-cabinet-three-compartment-seam');
+  for(const y of [h*.24,h*.54,h*.83])for(const x of [-w*.46,w*.46])t.box(body,[.026,.075,.038],[x,y+.14,d/2+.018],'trim','mobile-cabinet-observed-side-latch');
+  t.box(g[1]||body,[w*.56,.27,.025],[0,h*.85,d/2+.022],'blue','mobile-cabinet-static-upper-display');
+  t.box(g[1]||body,[w*.48,.19,.012],[-.025,h*.86,d/2+.04],'white');
+  for(const [x,paint]of[[w*.2,'green'],[w*.27,'red']])t.box(g[1]||body,[.023,.09,.014],[x,h*.88,d/2+.047],paint);
+  const duct=s._group(g[2]||body,[-w*.13,h+.14,-d*.2]);duct.name='preparation-mobile-cabinet-observed-corrugated-upriser';
+  t.cylinder(duct,.14,.78,[0,.39,0],'steel');for(let i=0;i<26;i++)t.ring(duct,.145,[0,.015+i*.03,0],'trim','y',.009);
+  t.cylinder(duct,.075,.035,[.11,.49,.1],'white','x','mobile-cabinet-visible-round-side-cap');
+  const cover=new THREE.Shape();cover.moveTo(-.21,.35);cover.lineTo(.18,.43);cover.lineTo(.22,-.46);cover.lineTo(-.12,-.38);cover.closePath();
+  const cloth=t.mesh(g[1]||body,new THREE.ShapeGeometry(cover),[w/2+.03,.96,.05],'blue','mobile-cabinet-hanging-blue-cover');cloth.rotation.y=PI/2;cloth.material=t.materials.blue.clone();cloth.material.side=THREE.DoubleSide;s.materials?.add(cloth.material);
+  Object.assign(body.userData,{sourceReferences:config.sourceReferences,applianceFunctionConfirmed:false,independentFromUpperControlPanel:true});
+  return {observedVesselBodies:0,photographedMobileWhiteCabinetCount:1,applianceFunctionConfirmed:false};
 }
 
 function servicePump(s, g, item, config, t) {
@@ -446,8 +521,8 @@ export function buildPreparationEquipment(s, root, item) {
   const config = item.preparation, kind = config?.kind;
   if (item.floor !== 1 || !PREPARATION_MODEL_KINDS.includes(kind) || (kind === 'tank-group' && (!Array.isArray(config.vessels) || !config.vessels.length)) || (kind === 'under-platform-services' && !config.runs?.length)) return false;
   const t = resources(s), g = parts(s, root, item);
-  const build = { 'tank-group': tankGroup, platform, 'control-panel': controlPanel, 'powder-hopper': powderHopper, homogenizer, 'service-pump': servicePump, 'filter-pot': filterPot, 'under-platform-services': underPlatformServices }[kind];
+  const build = { 'tank-group': tankGroup, platform, 'control-panel': controlPanel, 'powder-hopper': powderHopper, homogenizer, 'service-pump': servicePump, 'filter-pot': filterPot, 'under-platform-services': underPlatformServices, 'mobile-cabinet': mobileCabinet }[kind];
   const details = build(s, g, item, config, t);
-  Object.assign(root.userData, { preparationKind: kind, currentVideoReference: true, source: 'preparation-video-20261111', sourceTimes: config.sourceTimes || [], nominalDimensionsMeasured: false, hiddenMechanismsAdded: false, liveOperatingStateAdded: false, ...details });
+  Object.assign(root.userData, { preparationKind: kind, currentVideoReference: true, source: config.sourceReferences?.length && !config.sourceTimes?.length ? config.sourceReferences[0].clipId : 'preparation-video-20261111', sourceTimes: config.sourceTimes || [], sourceReferences: config.sourceReferences || [], nominalDimensionsMeasured: false, hiddenMechanismsAdded: false, liveOperatingStateAdded: false, ...details });
   return true;
 }

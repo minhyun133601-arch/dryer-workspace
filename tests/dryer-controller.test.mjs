@@ -11,7 +11,8 @@ const equipment = [
   { id: 'f1-boiler-room', name: '인접 보일러실', floor: 1, position: [0, 0, 0] },
   { id: 'outside-building', name: '다른 건물', floor: 'campus', position: [0, 0, 0] },
 ];
-const floors = Array.from({ length: 8 }, (_, index) => ({ id: index + 1, displayLevel: index === 1 ? 1.5 : index + 1 }));
+const floors = Array.from({ length: 8 }, (_, index) => ({ id: index + 1, displayLevel: index === 1 ? 1.5 : index + 1,
+  shortName: index === 0 ? '충전·외포장·조제실' : index === 1 ? '탈의실·OP실·관찰 통로' : undefined }));
 const documents = [{ id: 'replacement', title: '연소팬 교체', slides: [{ image: 'data:image/jpeg;base64,/9j/', caption: '교체 작업' }] }];
 
 async function harness(url = 'https://example.invalid/index.html', { framed = false, injectView } = {}) {
@@ -106,7 +107,8 @@ test('dryer presentation starts with the whole building, puts roof next and supp
   assert.equal(h.options.floor, 'all');
   assert.deepEqual(Array.from(h.options.enabledAreas), ['dryer']);
   assert.equal(h.options.personEnabled, false);
-  assert.deepEqual(Array.from(h.options.equipment, item => item.id), ['heater', 'dryer-roof-drive', 'upper-duct', 'f1-tank']);
+  assert.deepEqual(Array.from(h.options.equipment, item => item.id), ['heater', 'dryer-roof-drive', 'upper-duct', 'f1-tank', 'f1-boiler-room']);
+  assert.equal(h.options.includeAdjacentBoilerRoom, true, 'the manual first-floor plan includes the adjacent boiler interior');
   assert.deepEqual(h.node('floor-selector').children.slice(0, 2).map(button => button.dataset.floor), ['all', '8']);
   assert.equal(h.node('site-canvas').dataset.ready, 'true');
   assert.equal(h.node('scene-loading').hidden, true);
@@ -131,7 +133,8 @@ test('roof links and buttons work while unrelated floors, equipment and scene fl
     assert.equal(h.ui.state().floor, 'all');
   }
   const boiler = await harness('https://example.invalid/?equipment=f1-boiler-room');
-  assert.equal(boiler.ui.state().selectedId, null);
+  assert.equal(boiler.ui.state().selectedId, 'f1-boiler-room');
+  assert.equal(boiler.ui.state().floor, 1);
 });
 
 test('legacy floor 2 links and 1.5 aliases share the mezzanine button, scene key and readable snapshot name', async () => {
@@ -143,6 +146,10 @@ test('legacy floor 2 links and 1.5 aliases share the mezzanine button, scene key
     assert.equal(button.textContent, '1.5층');
     assert.equal(button.getAttribute('aria-pressed'), 'true');
     assert.match(h.node('area-summary').textContent, /건조실 1\.5층/);
+    assert.match(h.node('area-summary').textContent, /탈의실·OP실·관찰 통로/);
+    assert.doesNotMatch(h.node('area-summary').textContent, /충전·외포장·조제실|설비 0개/);
+    h.ui.setFloor(1);
+    assert.match(h.node('area-summary').textContent, /건조실 1층 · 충전·외포장·조제실 · 설비 2개/);
     h.ui.setFloor(3); button.click();
     assert.equal(h.ui.state().floor, 2);
     h.ui.setFloor(1.5);

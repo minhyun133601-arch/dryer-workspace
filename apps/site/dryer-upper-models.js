@@ -372,7 +372,9 @@ export function buildDryerUpperEnvironment(s, options = {}) {
         for (const t of [0, .33, .66, 1]) h.bar(group, [xx, base + rise * t, direction * (-run / 2 + t * run)], [xx, base + rise * t + 1.02, direction * (-run / 2 + t * run)], .017, 'trim');
       }
       h.box(group, [lane * 2 + .15, .1, landing], [0, base + rise - .05, direction * (run / 2 + landing / 2)], 'cream');
-      rail(group, [-lane - .075, direction * (run / 2 + landing)], [lane + .075, direction * (run / 2 + landing)], base + rise, 1.05, 'trim');
+      // The final landing joins the upper walking deck; a guard across its
+      // exit would close the only route out of the fourth flight.
+      if (f !== flights - 1) rail(group, [-lane - .075, direction * (run / 2 + landing)], [lane + .075, direction * (run / 2 + landing)], base + rise, 1.05, 'trim');
     }
     Object.assign(group.userData, { observedFlights: 4, stepsPerFlight: steps, stepCountBasis: 'representative-unmeasured', fromY, toY }); return group;
   }

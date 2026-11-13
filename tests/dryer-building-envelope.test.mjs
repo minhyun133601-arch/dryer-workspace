@@ -24,14 +24,14 @@ test('ordinary architectural doorways start closed with independent proximity le
   try {
     for (const spec of Object.values(DRYER_BUILDING_FLOORS)) {
       const openings=[...(spec.openings||[]),...(spec.partitions||[]).flatMap(wall=>wall.openings||[])];
-      const expected=openings.filter(gap=>!['custom','none'].includes(gap.doorKind)&&!(gap.sill>0)).length+1;
+      const expected=openings.filter(gap=>!['custom','none'].includes(gap.doorKind)&&!(gap.sill>0)).length+(spec.elevatorService === false ? 0 : 1);
       const doors=h.environments.get(spec.id).architectureFixtures.children.filter(node=>node.userData.architecturalDoor);
       assert.equal(doors.length,expected,`${spec.id}F models every ordinary gap and its elevator entrance`);
       for(const door of doors) {
         const bounds=new THREE.Box3().setFromObject(door);
         assert.ok(bounds.getSize(new THREE.Vector3()).y>=door.userData.openingHeight, 'door heads retain the full opening height in cutaway views');
         const names=[];door.traverse(node=>names.push(node.name));
-        assert.ok(names.includes('architectural-open-door-leaf')||names.includes('architectural-raised-roller-door')||(door.userData.elevatorLanding&&names.includes('architectural-closed-elevator-doors')), 'elevator landings show closed sliding doors instead of swing leaves');
+        assert.ok(names.includes('architectural-open-door-leaf')||names.includes('architectural-sliding-door-leaf')||names.includes('architectural-raised-roller-door')||(door.userData.elevatorLanding&&names.includes('architectural-closed-elevator-doors')), 'each opening uses its declared swing, slide, roller or fixed elevator door');
         const leaves=[];door.traverse(node=>{if(node.userData.proximityDoor)leaves.push(node);});
         if(door.userData.elevatorLanding) assert.equal(leaves.length,0,'lift landing doors do not open simply because someone approaches');
         else {
@@ -41,6 +41,26 @@ test('ordinary architectural doorways start closed with independent proximity le
       }
     }
   } finally {h.dispose();}
+});
+
+test('the mezzanine retains the registered lift shaft without a landing door, call buttons or elevator sign', () => {
+  const h = harness();
+  try {
+    const spec = DRYER_BUILDING_FLOORS[2], environment = h.environments.get(2), bounds = spec.cores.elevator.bounds;
+    assert.equal(spec.elevatorService, false);
+    const shaft = environment.architectureFixtures.getObjectByName('dryer-building-2-elevator-shaft');
+    assert.ok(shaft.getObjectByName('dryer-building-2-elevator-shaft-volume'), 'the continuous shaft stays at its original axis');
+    assert.equal(shaft.userData.elevatorService, false);
+    assert.equal(environment.architectureFixtures.getObjectByName('dryer-building-2-elevator-landing-doors'), undefined);
+    assert.equal(environment.architectureFixtures.getObjectByName('dryer-building-2-elevator-sign'), undefined);
+    assert.equal(h.labels.some(label => label.parent === shaft), false, 'there is no misleading served-floor elevator label');
+    const centerX = (bounds.minX + bounds.maxX) / 2;
+    for (const [layer, height] of [['structure', .35], ['facade', 1.4]]) {
+      const ray = new THREE.Raycaster(new THREE.Vector3(centerX, spec.elevation + height, bounds.maxZ + .6), new THREE.Vector3(0, 0, -1), .001, 1.2);
+      assert.ok(ray.intersectObject(environment[layer], true).length, `${layer}: the non-stop level has a solid shaft boundary`);
+    }
+    for (const level of [1, 3, 4, 5]) assert.ok(h.environments.get(level).architectureFixtures.getObjectByName(`dryer-building-${level}-elevator-landing-doors`), `${level}F still has its landing`);
+  } finally { h.dispose(); }
 });
 
 test('historical low-wing registration preserves the complete outer dimensions and distinguishes the partial second floor', () => {
@@ -65,9 +85,9 @@ test('the first-floor mesh covers the missing eastern and southern wings, while 
     assert.ok(down(one, 30, 10).length > 0, 'the original narrow model omitted the east wing');
     assert.ok(down(one, 0, 19).length > 0, 'the south strip extends beyond the tower');
     for (const [x, z] of [[0, -2], [29, -8], [26, 0], [21, 10]]) assert.equal(down(two, x, z).length, 0, `2F VOID at ${x},${z}`);
-    for (const [x, z] of [[-8, 0], [15, 10], [0, 20], [28.8, 19.3]]) assert.ok(down(two, x, z).length > 0, `1.5F corridor at ${x},${z}`);
+    for (const [x, z] of [[-8, 0], [15, 10], [-8, 17.8], [33.7, 19.3]]) assert.ok(down(two, x, z).length > 0, `1.5F corridor at ${x},${z}`);
     assert.equal(down(two,31,20).length,0,'the actual entrance stair has an open upper slab instead of a ceiling through its flights');
-    assert.equal(down(two,-7.3,-4.5).length,0,'the visible tall packing service deck is not cut by the mezzanine slab');
+    assert.ok(down(two,-7,-4.5).length,'the production overlook has the same full-width walking slab as the OP approach');
     const voidArea = DRYER_BUILDING_FLOORS[2].voids.reduce((sum, b) => sum + (b.maxX - b.minX) * (b.maxZ - b.minZ), 0);
     assert.ok(voidArea > 43 * 35 * .55, 'the partial floor must not become a large solid intermediate slab');
   } finally { h.dispose(); }
@@ -87,9 +107,9 @@ test('the third floor shrinks to the tower and keeps unconfirmed drawing-only ci
       assert.equal(tank.referenceOnly,true);assert.equal(tank.selectableEquipment,false);
     }
     assert.ok(!h.labels.some(label=>label.text==='콤프레샤실'),'an unconfirmed historical room is reference-only');
-    assert.equal(down(three.deck,10.3,-10).length,0,'the filmed return stair has a real opening in the 3F bay');
+    assert.equal(down(three.deck,-7,-10).length,0,'the filmed return stair has a real opening in the 3F bay');
     const [doorX,doorZ]=DRYER_BUILDING_FLOORS[3].routeSurvey.entryFromStair.door;
-    assert.ok(down(three.deck,doorX+.35,doorZ).length>0,'the top stair landing joins the reduced 3F slab at the observed return door');
+    assert.ok(down(three.deck,doorX,doorZ+.35).length>0,'the top stair landing joins the reduced 3F slab at the observed return door');
     assert.ok(!h.labels.some(label => /펌프기계실|사장.*대기|용도 미확정|세부명 판독/.test(label.text)), 'uncertain room names cannot be invented');
   } finally { h.dispose(); }
 });
@@ -147,8 +167,9 @@ test('elevator/stair axes continue between datums and all real meshes and instan
       const stairs = env.architectureFixtures.children.filter(root => root.userData.stepsRepresentative);
       assert.equal(stairs.length,DRYER_BUILDING_FLOORS[floor].stairs.length,'only the selected physical stair cores are built');
       for (const root of stairs) {
-        assert.equal(root.userData.fromY, DRYER_BUILDING_FLOORS[floor].elevation);
-        close(root.userData.toY, DRYER_BUILDING_FLOORS[floor].elevation + DRYER_BUILDING_FLOORS[floor].height, 'next stair landing');
+        const spec=DRYER_BUILDING_FLOORS[floor],core=spec.stairs.find(item=>item.id===root.userData.stairId);
+        assert.equal(root.userData.fromY,core.fromElevation??spec.elevation);
+        close(root.userData.toY,(core.fromElevation??spec.elevation)+(core.height??spec.height), 'next stair landing');
       }
     }
     assert.ok(instances >= 100, 'repeated structural columns use instances');
@@ -169,7 +190,8 @@ test('the filmed upper stair door has real perforations and the two observed fli
     assert.ok(hitsAt(.07).length>0,'the neighboring metal rib retains real thickness');
     for(const level of [1,2]){
       const nodes=[];h.environments.get(level).architectureFixtures.traverse(node=>{if(node.name==='architectural-stair-nosing')nodes.push(node);});
-      assert.equal(nodes.length,20,'each observed two-flight route has a dark strip on its representative treads');
+      const spec=DRYER_BUILDING_FLOORS[level],expected=spec.stairs.filter(core=>core.observed).reduce((total,core)=>{const height=core.height??spec.height,flights=core.flights||(height>4.5?4:2);return total+flights*Math.ceil(height/flights/.18);},0);
+      assert.equal(nodes.length,expected,'each observed flight has a dark strip on its representative treads');
     }
   }finally{h.dispose();}
 });

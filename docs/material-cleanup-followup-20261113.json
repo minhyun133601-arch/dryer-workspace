@@ -1,0 +1,363 @@
+{
+  "date": "2026-11-13T08:00:26.711380+00:00",
+  "status": "complete-with-empty-directory-retained",
+  "files": [
+    {
+      "source": "C:\\Users\\user\\Desktop\\프로젝트\\근거 자료\\도면검토앱\\__pycache__\\build_previews.cpython-312.pyc",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트\\tooling\\drawing-review\\__pycache__\\build_previews.cpython-312.pyc",
+      "bytes": 37518,
+      "sha256": "59058993609f5b1809513c06a89c373227db5cb179e00d49ebc42103f30b6127"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\프로젝트\\근거 자료\\도면검토앱\\__pycache__\\cleanup_derived_pdfs.cpython-312.pyc",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트\\tooling\\drawing-review\\__pycache__\\cleanup_derived_pdfs.cpython-312.pyc",
+      "bytes": 27686,
+      "sha256": "867bcf087a806576932c398296e4a58947feffc2d0ecf95df5668c61f3ab1e8d"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\프로젝트\\근거 자료\\도면검토앱\\__pycache__\\server.cpython-312.pyc",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트\\tooling\\drawing-review\\__pycache__\\server.cpython-312.pyc",
+      "bytes": 37051,
+      "sha256": "60fcddf68acf94ed5a3bd0a5e80d484280631c83ca05e0215ee4daaf39d5b493"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\프로젝트\\근거 자료\\도면검토앱\\audit_office_images.py",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트\\tooling\\drawing-review\\audit_office_images.py",
+      "bytes": 2063,
+      "sha256": "e5f007df1a9ef0f8589bbad8ea62fe98a2e0ee3eceb24b77840fb82129a07a15"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\프로젝트\\근거 자료\\도면검토앱\\batch_office_previews.py",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트\\tooling\\drawing-review\\batch_office_previews.py",
+      "bytes": 6505,
+      "sha256": "b8caacb796580bd7f73b78ce0386a5bbc4c982fb2d4425c26a4d8ffa7c2d9291"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\프로젝트\\근거 자료\\도면검토앱\\build_previews.py",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트\\tooling\\drawing-review\\build_previews.py",
+      "bytes": 24880,
+      "sha256": "8d16f8868c23d02f773bb5389954954497b81e91540f7756da6c4b2204c1b094"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\프로젝트\\근거 자료\\도면검토앱\\cleanup_derived_pdfs.py",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트\\tooling\\drawing-review\\cleanup_derived_pdfs.py",
+      "bytes": 18693,
+      "sha256": "ecf12200133c56df3878ca64d89d25d810387c453835ac31b70f7d126783dd9b"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\프로젝트\\근거 자료\\도면검토앱\\data\\access.json",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트_도면자료\\검토기록\\access.json",
+      "bytes": 45,
+      "sha256": "57a70d532d788e86c05732bba568b7477bc7279142ff6c467250b3152ca3b8e9"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\프로젝트\\근거 자료\\도면검토앱\\data\\legacy_도면목록.csv",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트_도면자료\\검토기록\\legacy_도면목록.csv",
+      "bytes": 1074561,
+      "sha256": "90e75359a926f7fb4aa86dfc6eab005acf2e7bab274e35cf772279897570ed29"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\프로젝트\\근거 자료\\도면검토앱\\data\\legacy_도면목록.html",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트_도면자료\\검토기록\\legacy_도면목록.html",
+      "bytes": 2201260,
+      "sha256": "320f225dce449b1c3e3278092274963cc5e0eb67557d6a642164a82b4de7aa8f"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\프로젝트\\근거 자료\\도면검토앱\\data\\legacy_안내.txt",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트_도면자료\\검토기록\\legacy_안내.txt",
+      "bytes": 2339,
+      "sha256": "6cc362ec8ace06f7bf942d673bab13d9dd26ec76e54c6dc4484846b0295b4335"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\프로젝트\\근거 자료\\도면검토앱\\data\\pdf_cleanup_receipt.json",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트_도면자료\\검토기록\\pdf_cleanup_receipt.json",
+      "bytes": 95580,
+      "sha256": "fbc425527f7a3d5900745c214558c9d6deaa9c297906d632f4f60346b42afc3a"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\프로젝트\\근거 자료\\도면검토앱\\data\\review.sqlite3",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트_도면자료\\검토기록\\review.sqlite3",
+      "bytes": 24576,
+      "sha256": "588fbb411fdacedf93296efdd6e4afb89a3cb78ccf39da75a3beae11c6aa24f6"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\프로젝트\\근거 자료\\도면검토앱\\data\\server.json",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트_도면자료\\검토기록\\server.json",
+      "bytes": 434,
+      "sha256": "cc63277042f4720d4a4f41673045d2e76755a1235f4b6e2cdcc1e4ce63ddd0b6"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\프로젝트\\근거 자료\\도면검토앱\\public\\app.js",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트\\tooling\\drawing-review\\public\\app.js",
+      "bytes": 51349,
+      "sha256": "a6a1897f893b7dd141d5979dc6f55f3c2abe00a9b73843dfdfad0e24790d22a9"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\프로젝트\\근거 자료\\도면검토앱\\public\\index.html",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트\\tooling\\drawing-review\\public\\index.html",
+      "bytes": 14897,
+      "sha256": "97ddb448df39d683c93cdb2c065e31fce4ff0c1dbe5d997d66cf1dd8fdf406a3"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\프로젝트\\근거 자료\\도면검토앱\\public\\style.css",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트\\tooling\\drawing-review\\public\\style.css",
+      "bytes": 41505,
+      "sha256": "af3f366b8f9911379a93ac1d66003518330dcc16fc1826623c9cc84b2f27efa5"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\프로젝트\\근거 자료\\도면검토앱\\server.py",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트\\tooling\\drawing-review\\server.py",
+      "bytes": 27831,
+      "sha256": "43caf8cd899ce5b2b11e18314e43595f2a121a3e452b74827dc71f441823cab8"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\프로젝트\\근거 자료\\도면검토앱\\start.ps1",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트\\tooling\\drawing-review\\start.ps1",
+      "bytes": 387,
+      "sha256": "9d6fc5b1291687fe3483f36597be9b940850e5a4d5bb658c1b4119695e22fb3b"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\프로젝트\\근거 자료\\도면검토앱\\tools\\cad-node\\cad-renderer.js",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트_도면자료\\변환도구\\cad-node\\cad-renderer.js",
+      "bytes": 27114,
+      "sha256": "55e83a349d400142f445eabfa35f6afa60774f2b1162870a63c37f00b4fe6314"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\프로젝트\\근거 자료\\도면검토앱\\tools\\cad-node\\COPYING",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트_도면자료\\변환도구\\cad-node\\COPYING",
+      "bytes": 35147,
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\프로젝트\\근거 자료\\도면검토앱\\tools\\cad-node\\engine.js",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트_도면자료\\변환도구\\cad-node\\engine.js",
+      "bytes": 14722131,
+      "sha256": "0ae750b729226b5c31422301887b958d2edc89363a47dd0197a842f75a7cc9f7"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\프로젝트\\근거 자료\\도면검토앱\\tools\\cad-node\\inspect-engine.cjs",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트_도면자료\\변환도구\\cad-node\\inspect-engine.cjs",
+      "bytes": 336,
+      "sha256": "bb4b33200b2de852b46ab47ed54ceb597fef4dda7705065204849daad0b2a9e4"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\프로젝트\\근거 자료\\도면검토앱\\tools\\cad-node\\node_modules\\.package-lock.json",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트_도면자료\\변환도구\\cad-node\\node_modules\\.package-lock.json",
+      "bytes": 1806,
+      "sha256": "5078da34c750ba780f07605c60457f36d74a61b79bf5c796ecc38b0c07059c8f"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\프로젝트\\근거 자료\\도면검토앱\\tools\\cad-node\\node_modules\\@napi-rs\\canvas\\geometry.js",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트_도면자료\\변환도구\\cad-node\\node_modules\\@napi-rs\\canvas\\geometry.js",
+      "bytes": 25102,
+      "sha256": "03bbea0d0b5647032169e72c7d17d18a805ecc087f2eb4094252dcc81ead89f8"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\프로젝트\\근거 자료\\도면검토앱\\tools\\cad-node\\node_modules\\@napi-rs\\canvas\\index.d.ts",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트_도면자료\\변환도구\\cad-node\\node_modules\\@napi-rs\\canvas\\index.d.ts",
+      "bytes": 43340,
+      "sha256": "e754bd600181d9b5c74cf3776a4d6318fd1c0d0b1117a1bcdd00c85d33a149e9"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\프로젝트\\근거 자료\\도면검토앱\\tools\\cad-node\\node_modules\\@napi-rs\\canvas\\index.js",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트_도면자료\\변환도구\\cad-node\\node_modules\\@napi-rs\\canvas\\index.js",
+      "bytes": 29245,
+      "sha256": "e5eb3b4212c48956f7e5657497753bd9de8100b1b5dd085a201fb09aac6c5e89"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\프로젝트\\근거 자료\\도면검토앱\\tools\\cad-node\\node_modules\\@napi-rs\\canvas\\js-binding.js",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트_도면자료\\변환도구\\cad-node\\node_modules\\@napi-rs\\canvas\\js-binding.js",
+      "bytes": 12925,
+      "sha256": "f4cbf254a53245d251aed3f773b80a6c9b8a2efeb898f99a141e078748a2b50b"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\프로젝트\\근거 자료\\도면검토앱\\tools\\cad-node\\node_modules\\@napi-rs\\canvas\\LICENSE",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트_도면자료\\변환도구\\cad-node\\node_modules\\@napi-rs\\canvas\\LICENSE",
+      "bytes": 2705,
+      "sha256": "0b8e3b4f0042f33677406344854c1dcce3a2878eb3a3f6baee58c6f5752655ce"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\프로젝트\\근거 자료\\도면검토앱\\tools\\cad-node\\node_modules\\@napi-rs\\canvas\\load-image.js",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트_도면자료\\변환도구\\cad-node\\node_modules\\@napi-rs\\canvas\\load-image.js",
+      "bytes": 6180,
+      "sha256": "3c60508c387c93504cd5bee7b6cd09e7b76c5f20e75d1e1dd7cac18abacab28e"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\프로젝트\\근거 자료\\도면검토앱\\tools\\cad-node\\node_modules\\@napi-rs\\canvas\\node-canvas.d.ts",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트_도면자료\\변환도구\\cad-node\\node_modules\\@napi-rs\\canvas\\node-canvas.d.ts",
+      "bytes": 9093,
+      "sha256": "dfa642006e9e595128688b198fa0c2637ed6b73acce9160929a7b20e01cf595a"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\프로젝트\\근거 자료\\도면검토앱\\tools\\cad-node\\node_modules\\@napi-rs\\canvas\\node-canvas.js",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트_도면자료\\변환도구\\cad-node\\node_modules\\@napi-rs\\canvas\\node-canvas.js",
+      "bytes": 12689,
+      "sha256": "a475c4f2a292028debd124c0fa0b150d1ef722883778ebbecc5d0e9832a73511"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\프로젝트\\근거 자료\\도면검토앱\\tools\\cad-node\\node_modules\\@napi-rs\\canvas\\package.json",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트_도면자료\\변환도구\\cad-node\\node_modules\\@napi-rs\\canvas\\package.json",
+      "bytes": 4784,
+      "sha256": "d73dc3efb77c1d3895654af96ba8b57269489cb86926d9094089f672dc9ca4a9"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\프로젝트\\근거 자료\\도면검토앱\\tools\\cad-node\\node_modules\\@napi-rs\\canvas\\README.md",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트_도면자료\\변환도구\\cad-node\\node_modules\\@napi-rs\\canvas\\README.md",
+      "bytes": 20070,
+      "sha256": "b176dfd1668e8efe705646dac52743f8d780a0a40adc69ef494ee655390d762a"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\프로젝트\\근거 자료\\도면검토앱\\tools\\cad-node\\node_modules\\@napi-rs\\canvas-win32-x64-msvc\\icudtl.dat",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트_도면자료\\변환도구\\cad-node\\node_modules\\@napi-rs\\canvas-win32-x64-msvc\\icudtl.dat",
+      "bytes": 10876560,
+      "sha256": "9f48c7f9c7c94d516a14870707e910ab94d75ae640ff6842c4af53276cd26ebe"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\프로젝트\\근거 자료\\도면검토앱\\tools\\cad-node\\node_modules\\@napi-rs\\canvas-win32-x64-msvc\\package.json",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트_도면자료\\변환도구\\cad-node\\node_modules\\@napi-rs\\canvas-win32-x64-msvc\\package.json",
+      "bytes": 831,
+      "sha256": "7d8cba2b0d1cf6db42c094364858d42916111ef606e0f8b72553079ecdf3fbed"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\프로젝트\\근거 자료\\도면검토앱\\tools\\cad-node\\node_modules\\@napi-rs\\canvas-win32-x64-msvc\\README.md",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트_도면자료\\변환도구\\cad-node\\node_modules\\@napi-rs\\canvas-win32-x64-msvc\\README.md",
+      "bytes": 104,
+      "sha256": "852850d7f55f076f7b710882592132c6f75943875c81832eae136523a7801b59"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\프로젝트\\근거 자료\\도면검토앱\\tools\\cad-node\\node_modules\\@napi-rs\\canvas-win32-x64-msvc\\sbom.cdx.json",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트_도면자료\\변환도구\\cad-node\\node_modules\\@napi-rs\\canvas-win32-x64-msvc\\sbom.cdx.json",
+      "bytes": 92903,
+      "sha256": "aeac95a194675fd79d3c66c58ca9fe1653e4239568d5642c80981ab362430b56"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\프로젝트\\근거 자료\\도면검토앱\\tools\\cad-node\\node_modules\\@napi-rs\\canvas-win32-x64-msvc\\skia.win32-x64-msvc.node",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트_도면자료\\변환도구\\cad-node\\node_modules\\@napi-rs\\canvas-win32-x64-msvc\\skia.win32-x64-msvc.node",
+      "bytes": 28813312,
+      "sha256": "c107b078985f5c61d101e54353545c8bcede5dbe7e0973b9820e452cbfa6ba30"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\프로젝트\\근거 자료\\도면검토앱\\tools\\cad-node\\package-lock.json",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트_도면자료\\변환도구\\cad-node\\package-lock.json",
+      "bytes": 8177,
+      "sha256": "5c6a8c4cd7a486f62a4597b0a4ca70b4877e04ee6bf265bb261f7c11ba7f0926"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\프로젝트\\근거 자료\\도면검토앱\\tools\\cad-node\\package.json",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트_도면자료\\변환도구\\cad-node\\package.json",
+      "bytes": 60,
+      "sha256": "efbeeedf216cf73e986c05da55356d4a257a69befddd92c60072de9f60704f4c"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\프로젝트\\근거 자료\\도면검토앱\\tools\\cad-node\\README.md",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트_도면자료\\변환도구\\cad-node\\README.md",
+      "bytes": 2445,
+      "sha256": "669eb9b126f2c9da9ddece88feb17ed041e19a0b0c9fb0e6b21e0f291aa2873e"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\프로젝트\\근거 자료\\도면검토앱\\tools\\cad-node\\render.cjs",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트_도면자료\\변환도구\\cad-node\\render.cjs",
+      "bytes": 2752,
+      "sha256": "f0fa38fa22c046dece39d4c0a1214b6dc3ed125e0abea64b6067bde5a8207dfc"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\프로젝트\\근거 자료\\도면검토앱\\tools\\convert-office-batch.ps1",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트_도면자료\\변환도구\\convert-office-batch.ps1",
+      "bytes": 7603,
+      "sha256": "2efd8498259eebbbfa7b3ed11b23d5f9996db513f9b7edc933cf98d5bc1d7dcb"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\프로젝트\\근거 자료\\도면검토앱\\tools\\convert-office.ps1",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트_도면자료\\변환도구\\convert-office.ps1",
+      "bytes": 12083,
+      "sha256": "653a14cc27f38f4775a82d10791b748a9de95075baefe6062d9c65bbd9fe62cf"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\프로젝트\\근거 자료\\도면검토앱\\tools\\libredwg\\dwg2dxf.exe",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트_도면자료\\변환도구\\libredwg\\dwg2dxf.exe",
+      "bytes": 335290,
+      "sha256": "955f5f2855bc0c5a8bd7a93424ea259ab14405799638b889b2b3c5918c529e3e"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\프로젝트\\근거 자료\\도면검토앱\\tools\\libredwg\\dwg2SVG.exe",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트_도면자료\\변환도구\\libredwg\\dwg2SVG.exe",
+      "bytes": 352996,
+      "sha256": "8fee6b73e3357c8cdeb45948a18e0f960b3e78108081d49ef329361df61bcc0d"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\프로젝트\\근거 자료\\도면검토앱\\tools\\libredwg\\dwgbmp.exe",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트_도면자료\\변환도구\\libredwg\\dwgbmp.exe",
+      "bytes": 323283,
+      "sha256": "c7cba0aecec86c8f06cbba261b6b3a81bced85b724842353e6b1e07ac94a805e"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\프로젝트\\근거 자료\\도면검토앱\\tools\\libredwg\\libiconv-2.dll",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트_도면자료\\변환도구\\libredwg\\libiconv-2.dll",
+      "bytes": 1136529,
+      "sha256": "ff31fa811f9c07cc7fdaa68c9e8bca3a7b4fdf6e0a079a58175ea58ba139c7ae"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\프로젝트\\근거 자료\\도면검토앱\\tools\\libredwg\\libpcre2-16-0.dll",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트_도면자료\\변환도구\\libredwg\\libpcre2-16-0.dll",
+      "bytes": 653924,
+      "sha256": "3e8dbd40f92e96ae24f7386bd129fb055865da8f55f2fb03eb7744315976942f"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\프로젝트\\근거 자료\\도면검토앱\\tools\\libredwg\\libpcre2-8-0.dll",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트_도면자료\\변환도구\\libredwg\\libpcre2-8-0.dll",
+      "bytes": 717955,
+      "sha256": "a499fb8a7eff453d6e4f0842576bc5171d40a1505d8f7f13fff6cee51b738a62"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\프로젝트\\근거 자료\\도면검토앱\\tools\\libredwg\\libredwg-0.dll",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트_도면자료\\변환도구\\libredwg\\libredwg-0.dll",
+      "bytes": 31171427,
+      "sha256": "cc86e25e755ac225eadc839eaa232c2f2233c7a1b60fcd77b2cd1915761aef12"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\프로젝트\\근거 자료\\도면검토앱\\tools\\libredwg\\README.txt",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트_도면자료\\변환도구\\libredwg\\README.txt",
+      "bytes": 9791,
+      "sha256": "e98369952f4a7b8ddbe29e3e4531034eadbdd521eb93cd1641f0adb8586c6948"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\프로젝트\\근거 자료\\도면검토앱\\verify_server.py",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트\\tooling\\drawing-review\\verify_server.py",
+      "bytes": 13992,
+      "sha256": "68abedbf65d0551d521f37643985a307fdb5cada9e380a72bc231e064db9f8fc"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\프로젝트\\근거 자료\\도면검토앱\\도면 검토 시작.cmd",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트\\tooling\\drawing-review\\도면 검토 시작.cmd",
+      "bytes": 90,
+      "sha256": "50d0bc692e2c75296cb35ecadec72c794b1f98b68f168004a6c03f73646befde"
+    },
+    {
+      "source": "C:\\Users\\user\\Desktop\\프로젝트\\근거 자료\\도면검토앱\\사용안내.txt",
+      "destination": "C:\\Users\\user\\Desktop\\프로젝트\\tooling\\drawing-review\\사용안내.txt",
+      "bytes": 2077,
+      "sha256": "f824e8c6ce075252b043b76751eda986ed3d2d7cfd1ac4540a0dc033b2937595"
+    }
+  ],
+  "duplicateLogoRemoved": {
+    "path": "C:\\Users\\user\\Desktop\\프로젝트\\회사로고.jpg",
+    "retained": "C:\\Users\\user\\Desktop\\프로젝트\\apps\\site\\assets\\branding\\company-logo.jpg",
+    "bytes": 5844,
+    "sha256": "36b344981b0aa368919cc2f8427317d4bc2955bb43b382bcabc18e228e7cbc80"
+  },
+  "sha256Verified": 56,
+  "externalBytes": 92869487,
+  "rootMaterialsFolderRemoved": false,
+  "emptyDirectoryRemoval": "automatic-approval-review-blocked-by-policy",
+  "validation": {
+    "testsPassed": 509,
+    "testsFailed": 0,
+    "sourceCheckPassed": true,
+    "drawingCatalogCount": 758,
+    "externalOriginalSha256Matched": true,
+    "thumbnailStatus": 200,
+    "previewStatus": 200,
+    "applicationPagesStatus": 200,
+    "referencePathsExist": true
+  }
+}

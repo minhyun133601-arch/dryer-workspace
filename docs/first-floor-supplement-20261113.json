@@ -1,0 +1,566 @@
+{
+  "schemaVersion": 1,
+  "reviewDate": "2026-11-13",
+  "title": "건조기 1층 조제실·외포장실 보완 영상 근거",
+  "sourcePolicy": {
+    "rawVideosAndTelemetryPreserved": true,
+    "selectedFrameCount": 12,
+    "assetCategory": "survey-dryer-first-floor",
+    "purpose": "형상·공간 연결 검토를 위한 제작 근거",
+    "existingRuntimePhotoFieldsChanged": false,
+    "newEquipmentEvidenceLinked": [
+      "f1-prep-mobile-white-unit"
+    ],
+    "presentationPhotoPopupsAdded": false,
+    "archivedReceiptChanged": false,
+    "extraction": "원본 MP4의 회전 메타데이터를 적용해 검토한 뒤 높이 1600px 이하 JPEG quality 90을 활성 자산으로 저장. 임시 검토 JPG와 디코딩 PNG는 2026-11-13 정리했고 원본 MP4·TXT는 프로젝트 밖에 보관.",
+    "temporaryReviewFramesRemoved": true,
+    "decodedMastersRemoved": true,
+    "storageReceipt": "docs/material-storage-20261113.json"
+  },
+  "limitations": [
+    "휴대폰 GPS는 촬영자 위치의 추정값이며 설비 실측 좌표로 사용하지 않습니다.",
+    "파일명의 H와 heading_degrees는 방위각이며 층 높이나 표고가 아닙니다.",
+    "각 TXT의 영상 시간 연결은 estimated_camera_recording_frame이며 두 클립의 초수를 합치지 않습니다.",
+    "장치 치수·절대 위치·지리 방향은 영상만으로 확정하지 않습니다.",
+    "관찰 외형과 사용자가 확인한 공간 연결을 구분하며 가려진 내부 기능·배관 경로를 추정해 추가하지 않습니다."
+  ],
+  "sources": [
+    {
+      "id": "first-floor-20261113-clip1",
+      "videoCode": "FV-66b9c3cb-cb69-4549-92ae-bbc918f9366c",
+      "captureStartUtc": "2026-11-13T05:20:59.609756Z",
+      "durationMs": 80219,
+      "timeBase": "seconds from this clip start",
+      "sourceFile": "../프로젝트_현장영상_보관/1층 보완 조제실 시작/20261113_142059KST_GPS-VALID_LAT35.3646167_LON129.0316867_H37.0-TN_DIR-AVAILABLE_P-43.4_ACC6.2m_FV-66b9c3cb-cb69-4549-92ae-bbc918f9366c.mp4",
+      "sourceBytes": 120267312,
+      "sourceSha256": "baad27743ad51e2084c20e2854932d25f971378fc5ea510d24ee026c168bb481",
+      "telemetryFile": "../프로젝트_현장영상_보관/1층 보완 조제실 시작/20261113_142059KST_GPS-VALID_LAT35.3646167_LON129.0316867_H37.0-TN_DIR-AVAILABLE_P-43.4_ACC6.2m_FV-66b9c3cb-cb69-4549-92ae-bbc918f9366c.txt",
+      "telemetrySha256": "d0817f537e736ff8caf7170fefd64ba83db9fdb3a0e155713621c619905e295e",
+      "telemetryTimeAlignment": "estimated_camera_recording_frame",
+      "telemetryCoordinateReference": "WGS84_EPSG4326_phone_location_no_local_origin",
+      "frames": [
+        {
+          "assetId": "survey-dryer-first-floor-20261113-142059-031s",
+          "assetPath": "./assets/evidence/dryer-first-floor-20261113/clip-142059-frame-031s.jpg",
+          "timestampSeconds": 31,
+          "label": "조제실 작업대·계단과 크림색 철골",
+          "supports": [
+            "preparation-overview"
+          ],
+          "reviewFrame": "tmp/first-floor-20261113/clip1/at-031s.jpg",
+          "decodedMaster": "tmp/first-floor-20261113/official-masters/clip-142059-frame-031s.png",
+          "nativeDimensionsPx": [
+            1080,
+            1920
+          ],
+          "dimensionsPx": [
+            900,
+            1600
+          ],
+          "jpegQuality": 90,
+          "bytes": 205270,
+          "sha256": "2f99b19ebaef2b66105b63d9dd72962b86d0c2cc4baaf70e5f76c49ca01a787c",
+          "reviewFrameStatus": "removed-generated-file-20261113",
+          "decodedMasterStatus": "removed-generated-file-20261113"
+        },
+        {
+          "assetId": "survey-dryer-first-floor-20261113-142059-038s",
+          "assetPath": "./assets/evidence/dryer-first-floor-20261113/clip-142059-frame-038s.jpg",
+          "timestampSeconds": 38,
+          "label": "조제실 백색 이동식 장치와 상부 덕트",
+          "supports": [
+            "white-three-section-unit"
+          ],
+          "reviewFrame": "tmp/first-floor-20261113/clip1/at-038s.jpg",
+          "decodedMaster": "tmp/first-floor-20261113/official-masters/clip-142059-frame-038s.png",
+          "nativeDimensionsPx": [
+            1080,
+            1920
+          ],
+          "dimensionsPx": [
+            900,
+            1600
+          ],
+          "jpegQuality": 90,
+          "bytes": 219085,
+          "sha256": "2cc85b061567d9ee317ee7a58cddb4c302cbc89f3133e7e416fb22b2cc850484",
+          "reviewFrameStatus": "removed-generated-file-20261113",
+          "decodedMasterStatus": "removed-generated-file-20261113"
+        },
+        {
+          "assetId": "survey-dryer-first-floor-20261113-142059-042s",
+          "assetPath": "./assets/evidence/dryer-first-floor-20261113/clip-142059-frame-042s.jpg",
+          "timestampSeconds": 42,
+          "label": "Fristam 포대 투입부·흡입 후드·하부 펌프",
+          "supports": [
+            "fristam-feed-hood"
+          ],
+          "reviewFrame": "tmp/first-floor-20261113/clip1/at-042s.jpg",
+          "decodedMaster": "tmp/first-floor-20261113/official-masters/clip-142059-frame-042s.png",
+          "nativeDimensionsPx": [
+            1080,
+            1920
+          ],
+          "dimensionsPx": [
+            900,
+            1600
+          ],
+          "jpegQuality": 90,
+          "bytes": 268526,
+          "sha256": "dd5c5e73b0e4fa4a79ff546ef56d6d134bbcee22311e0ae776411d1115b94ac0",
+          "reviewFrameStatus": "removed-generated-file-20261113",
+          "decodedMasterStatus": "removed-generated-file-20261113"
+        },
+        {
+          "assetId": "survey-dryer-first-floor-20261113-142059-065s",
+          "assetPath": "./assets/evidence/dryer-first-floor-20261113/clip-142059-frame-065s.jpg",
+          "timestampSeconds": 65,
+          "label": "균질기 전면 펌프 헤드·압력계·조작반",
+          "supports": [
+            "homogenizer-front"
+          ],
+          "reviewFrame": "tmp/first-floor-20261113/clip1/at-065s.jpg",
+          "decodedMaster": "tmp/first-floor-20261113/official-masters/clip-142059-frame-065s.png",
+          "nativeDimensionsPx": [
+            1080,
+            1920
+          ],
+          "dimensionsPx": [
+            900,
+            1600
+          ],
+          "jpegQuality": 90,
+          "bytes": 225013,
+          "sha256": "1b36968a239db6f59696f749217e4481a162e6821cbb94559c2e8d3223727708",
+          "reviewFrameStatus": "removed-generated-file-20261113",
+          "decodedMasterStatus": "removed-generated-file-20261113"
+        },
+        {
+          "assetId": "survey-dryer-first-floor-20261113-142059-072s",
+          "assetPath": "./assets/evidence/dryer-first-floor-20261113/clip-142059-frame-072s.jpg",
+          "timestampSeconds": 72,
+          "label": "균질기 측면 캐비닛·손잡이·위험 표지",
+          "supports": [
+            "homogenizer-side-cabinet"
+          ],
+          "reviewFrame": "tmp/first-floor-20261113/clip1/at-072s.jpg",
+          "decodedMaster": "tmp/first-floor-20261113/official-masters/clip-142059-frame-072s.png",
+          "nativeDimensionsPx": [
+            1080,
+            1920
+          ],
+          "dimensionsPx": [
+            900,
+            1600
+          ],
+          "jpegQuality": 90,
+          "bytes": 180281,
+          "sha256": "1e0f2e70c2973f7d05c386367d417364ef32547929ce7524c35820bf4f9ffc89",
+          "reviewFrameStatus": "removed-generated-file-20261113",
+          "decodedMasterStatus": "removed-generated-file-20261113"
+        },
+        {
+          "assetId": "survey-dryer-first-floor-20261113-142059-078s",
+          "assetPath": "./assets/evidence/dryer-first-floor-20261113/clip-142059-frame-078s.jpg",
+          "timestampSeconds": 78,
+          "label": "균질기 앞 외포장실 출입구·세로 황색창",
+          "supports": [
+            "preparation-packing-door"
+          ],
+          "reviewFrame": "tmp/first-floor-20261113/clip1/at-078s.jpg",
+          "decodedMaster": "tmp/first-floor-20261113/official-masters/clip-142059-frame-078s.png",
+          "nativeDimensionsPx": [
+            1080,
+            1920
+          ],
+          "dimensionsPx": [
+            900,
+            1600
+          ],
+          "jpegQuality": 90,
+          "bytes": 220347,
+          "sha256": "5a170c904ba2bb298ed051db6c60e09145258e161c511691a19339b0245b81d8",
+          "reviewFrameStatus": "removed-generated-file-20261113",
+          "decodedMasterStatus": "removed-generated-file-20261113"
+        }
+      ],
+      "originalSourceFile": "1층 보완 조제실 시작/20261113_142059KST_GPS-VALID_LAT35.3646167_LON129.0316867_H37.0-TN_DIR-AVAILABLE_P-43.4_ACC6.2m_FV-66b9c3cb-cb69-4549-92ae-bbc918f9366c.mp4",
+      "originalTelemetryFile": "1층 보완 조제실 시작/20261113_142059KST_GPS-VALID_LAT35.3646167_LON129.0316867_H37.0-TN_DIR-AVAILABLE_P-43.4_ACC6.2m_FV-66b9c3cb-cb69-4549-92ae-bbc918f9366c.txt"
+    },
+    {
+      "id": "first-floor-20261113-clip2",
+      "videoCode": "FV-93e6e734-ad96-4ad2-a5e2-c9334718083b",
+      "captureStartUtc": "2026-11-13T05:22:23.924128Z",
+      "durationMs": 163002,
+      "timeBase": "seconds from this clip start",
+      "sourceFile": "../프로젝트_현장영상_보관/1층 보완 조제실 시작/20261113_142223KST_GPS-VALID_LAT35.3629883_LON129.0303867_H135.3-TN_DIR-AVAILABLE_P-19.4_ACC3.2m_FV-93e6e734-ad96-4ad2-a5e2-c9334718083b.mp4",
+      "sourceBytes": 244581285,
+      "sourceSha256": "f31e421eb32aebfb64aa2216db0e8ec6d62fc0ad12be3eda2daf1ea4824d21dc",
+      "telemetryFile": "../프로젝트_현장영상_보관/1층 보완 조제실 시작/20261113_142223KST_GPS-VALID_LAT35.3629883_LON129.0303867_H135.3-TN_DIR-AVAILABLE_P-19.4_ACC3.2m_FV-93e6e734-ad96-4ad2-a5e2-c9334718083b.txt",
+      "telemetrySha256": "52f61f974f697ba17f34b8bed9254c33184400d53ef0fb0e248730e7f524d91c",
+      "telemetryTimeAlignment": "estimated_camera_recording_frame",
+      "telemetryCoordinateReference": "WGS84_EPSG4326_phone_location_no_local_origin",
+      "frames": [
+        {
+          "assetId": "survey-dryer-first-floor-20261113-142223-010s",
+          "assetPath": "./assets/evidence/dryer-first-floor-20261113/clip-142223-frame-010s.jpg",
+          "timestampSeconds": 10,
+          "label": "외포장실 전경·팔레트·황색 펜스·청색 로봇",
+          "supports": [
+            "packing-overview"
+          ],
+          "reviewFrame": "tmp/first-floor-20261113/clip2/exact-010s.jpg",
+          "decodedMaster": "tmp/first-floor-20261113/official-masters/clip-142223-frame-010s.png",
+          "nativeDimensionsPx": [
+            1080,
+            1920
+          ],
+          "dimensionsPx": [
+            900,
+            1600
+          ],
+          "jpegQuality": 90,
+          "bytes": 211053,
+          "sha256": "6bb23eab73ed26f8222f739acfc9d9fef0ca8328bdd4fb41f3f58ccab8d82a10",
+          "reviewFrameStatus": "removed-generated-file-20261113",
+          "decodedMasterStatus": "removed-generated-file-20261113"
+        },
+        {
+          "assetId": "survey-dryer-first-floor-20261113-142223-042s",
+          "assetPath": "./assets/evidence/dryer-first-floor-20261113/clip-142223-frame-042s.jpg",
+          "timestampSeconds": 42,
+          "label": "골판지 매거진·주황 헤드·삼색등·청색 봉투통",
+          "supports": [
+            "carton-magazine"
+          ],
+          "reviewFrame": "tmp/first-floor-20261113/clip2/exact-042s.jpg",
+          "decodedMaster": "tmp/first-floor-20261113/official-masters/clip-142223-frame-042s.png",
+          "nativeDimensionsPx": [
+            1080,
+            1920
+          ],
+          "dimensionsPx": [
+            900,
+            1600
+          ],
+          "jpegQuality": 90,
+          "bytes": 204102,
+          "sha256": "e6caf173aaeb79cb60addbc807f3815befedf8267ab02075e410fe1e26d1bbc8",
+          "reviewFrameStatus": "removed-generated-file-20261113",
+          "decodedMasterStatus": "removed-generated-file-20261113"
+        },
+        {
+          "assetId": "survey-dryer-first-floor-20261113-142223-048s",
+          "assetPath": "./assets/evidence/dryer-first-floor-20261113/clip-142223-frame-048s.jpg",
+          "timestampSeconds": 48,
+          "label": "외포장 곡선 롤러·프레임·상부 관찰창",
+          "supports": [
+            "curved-roller"
+          ],
+          "reviewFrame": "tmp/first-floor-20261113/clip2/exact-048s.jpg",
+          "decodedMaster": "tmp/first-floor-20261113/official-masters/clip-142223-frame-048s.png",
+          "nativeDimensionsPx": [
+            1080,
+            1920
+          ],
+          "dimensionsPx": [
+            900,
+            1600
+          ],
+          "jpegQuality": 90,
+          "bytes": 217293,
+          "sha256": "4b701dc5d229f67d1100a074f725f91f171720aaa0fb8880f7b252c5cecbd4c3",
+          "reviewFrameStatus": "removed-generated-file-20261113",
+          "decodedMasterStatus": "removed-generated-file-20261113"
+        },
+        {
+          "assetId": "survey-dryer-first-floor-20261113-142223-108s",
+          "assetPath": "./assets/evidence/dryer-first-floor-20261113/clip-142223-frame-108s.jpg",
+          "timestampSeconds": 108,
+          "label": "1층 엘리베이터 양개문·다중 버튼 패널",
+          "supports": [
+            "first-floor-elevator"
+          ],
+          "reviewFrame": "tmp/first-floor-20261113/clip2/exact-108s.jpg",
+          "decodedMaster": "tmp/first-floor-20261113/official-masters/clip-142223-frame-108s.png",
+          "nativeDimensionsPx": [
+            1080,
+            1920
+          ],
+          "dimensionsPx": [
+            900,
+            1600
+          ],
+          "jpegQuality": 90,
+          "bytes": 159666,
+          "sha256": "3b9ab58d24b5f9333225b31cf9318bf5aa1337d49e0f5461a54d6006bb18db68",
+          "reviewFrameStatus": "removed-generated-file-20261113",
+          "decodedMasterStatus": "removed-generated-file-20261113"
+        },
+        {
+          "assetId": "survey-dryer-first-floor-20261113-142223-141s",
+          "assetPath": "./assets/evidence/dryer-first-floor-20261113/clip-142223-frame-141s.jpg",
+          "timestampSeconds": 141,
+          "label": "컨베이어 횡단 발판·양쪽 황색 난간",
+          "supports": [
+            "conveyor-crossing-platform"
+          ],
+          "reviewFrame": "tmp/first-floor-20261113/clip2/exact-141s.jpg",
+          "decodedMaster": "tmp/first-floor-20261113/official-masters/clip-142223-frame-141s.png",
+          "nativeDimensionsPx": [
+            1080,
+            1920
+          ],
+          "dimensionsPx": [
+            900,
+            1600
+          ],
+          "jpegQuality": 90,
+          "bytes": 265893,
+          "sha256": "9fa042e82f8d99d4c65878bc7fa896cd2442b936ce9a3f471ff5d7dc2ebae373",
+          "reviewFrameStatus": "removed-generated-file-20261113",
+          "decodedMasterStatus": "removed-generated-file-20261113"
+        },
+        {
+          "assetId": "survey-dryer-first-floor-20261113-142223-162s",
+          "assetPath": "./assets/evidence/dryer-first-floor-20261113/clip-142223-frame-162s.jpg",
+          "timestampSeconds": 162,
+          "label": "통로 끝 우측 백색 계단·황색 난간",
+          "supports": [
+            "turn-down-stair"
+          ],
+          "reviewFrame": "tmp/first-floor-20261113/clip2/exact-162s.jpg",
+          "decodedMaster": "tmp/first-floor-20261113/official-masters/clip-142223-frame-162s.png",
+          "nativeDimensionsPx": [
+            1080,
+            1920
+          ],
+          "dimensionsPx": [
+            900,
+            1600
+          ],
+          "jpegQuality": 90,
+          "bytes": 235492,
+          "sha256": "461ceba591466f7807fc035ff07ad4b8317536727479d7cf6ddcb54a4fd93ff6",
+          "reviewFrameStatus": "removed-generated-file-20261113",
+          "decodedMasterStatus": "removed-generated-file-20261113"
+        }
+      ],
+      "originalSourceFile": "1층 보완 조제실 시작/20261113_142223KST_GPS-VALID_LAT35.3629883_LON129.0303867_H135.3-TN_DIR-AVAILABLE_P-19.4_ACC3.2m_FV-93e6e734-ad96-4ad2-a5e2-c9334718083b.mp4",
+      "originalTelemetryFile": "1층 보완 조제실 시작/20261113_142223KST_GPS-VALID_LAT35.3629883_LON129.0303867_H135.3-TN_DIR-AVAILABLE_P-19.4_ACC3.2m_FV-93e6e734-ad96-4ad2-a5e2-c9334718083b.txt"
+    }
+  ],
+  "structuralEvidence": [
+    {
+      "id": "preparation-overview",
+      "observation": "스테인리스 작업대 계단, 크림색 철골과 인접 이동식 장치의 상대 배치",
+      "sourceReferences": [
+        {
+          "sourceId": "first-floor-20261113-clip1",
+          "seconds": [
+            31
+          ]
+        }
+      ],
+      "modelReferences": [
+        "apps/site/preparation-models.js",
+        "f1-prep-platform"
+      ],
+      "status": "visible-shape; dimensions-and-registration-approximate"
+    },
+    {
+      "id": "white-three-section-unit",
+      "observation": "백색 3구획 외함, 표시판·청색 덮개·바퀴와 상부 주름 덕트",
+      "sourceReferences": [
+        {
+          "sourceId": "first-floor-20261113-clip1",
+          "seconds": [
+            38
+          ]
+        }
+      ],
+      "modelReferences": [
+        "apps/site/preparation-models.js"
+      ],
+      "status": "visible-shape; internal-function-unconfirmed"
+    },
+    {
+      "id": "fristam-feed-hood",
+      "observation": "포대 투입 테이블, 큰 흡입 후드, 검정 주름 덕트와 하부 단일 펌프·덮개·캐스터",
+      "sourceReferences": [
+        {
+          "sourceId": "first-floor-20261113-clip1",
+          "seconds": [
+            42
+          ]
+        }
+      ],
+      "modelReferences": [
+        "apps/site/preparation-models.js",
+        "f1-prep-bag-dump"
+      ],
+      "status": "visible-shape; hidden-flow-unconfirmed"
+    },
+    {
+      "id": "homogenizer-front",
+      "observation": "전면 펌프 헤드 3개, 압력계와 검정 캡, 주황 테두리 조작반",
+      "sourceReferences": [
+        {
+          "sourceId": "first-floor-20261113-clip1",
+          "seconds": [
+            65
+          ]
+        }
+      ],
+      "modelReferences": [
+        "apps/site/preparation-models.js",
+        "f1-prep-homogenizer"
+      ],
+      "status": "visible-shape; displayed-values-not-operating-data"
+    },
+    {
+      "id": "homogenizer-side-cabinet",
+      "observation": "균질기 반대편 넓은 스테인리스 캐비닛 문, 검정 손잡이와 삼각 위험 표지",
+      "sourceReferences": [
+        {
+          "sourceId": "first-floor-20261113-clip1",
+          "seconds": [
+            72
+          ]
+        }
+      ],
+      "modelReferences": [
+        "apps/site/preparation-models.js",
+        "f1-prep-homogenizer"
+      ],
+      "status": "visible-shape; internal-mechanism-unconfirmed"
+    },
+    {
+      "id": "preparation-packing-door",
+      "observation": "균질기 앞 출입구와 세로 황색창을 지나 외포장실로 연결",
+      "sourceReferences": [
+        {
+          "sourceId": "first-floor-20261113-clip1",
+          "seconds": [
+            78
+          ]
+        },
+        {
+          "sourceId": "first-floor-20261113-clip2",
+          "seconds": [
+            0,
+            10
+          ]
+        }
+      ],
+      "modelReferences": [
+        "apps/site/dryer-building-data.js",
+        "outer-packaging",
+        "apps/site/dryer-building-envelope.js"
+      ],
+      "status": "continuous-topology-plus-user-identification; absolute-pose-approximate"
+    },
+    {
+      "id": "packing-overview",
+      "observation": "외포장실 팔레트, 황색 망 펜스와 청색 로봇의 상대 배치",
+      "sourceReferences": [
+        {
+          "sourceId": "first-floor-20261113-clip2",
+          "seconds": [
+            10
+          ]
+        }
+      ],
+      "modelReferences": [
+        "apps/site/dryer-process-models.js",
+        "apps/site/dryer-route-environment.js"
+      ],
+      "status": "visible-shape; counts-limited-to-observed-units"
+    },
+    {
+      "id": "carton-magazine",
+      "observation": "수직 골판지 매거진, 주황 헤드와 삼색등, 청색 봉투통",
+      "sourceReferences": [
+        {
+          "sourceId": "first-floor-20261113-clip2",
+          "seconds": [
+            42
+          ]
+        }
+      ],
+      "modelReferences": [
+        "apps/site/dryer-process-models.js"
+      ],
+      "status": "visible-shape; operating-sequence-unconfirmed"
+    },
+    {
+      "id": "curved-roller",
+      "observation": "곡선 롤러와 스테인리스 프레임, 위쪽 관찰창",
+      "sourceReferences": [
+        {
+          "sourceId": "first-floor-20261113-clip2",
+          "seconds": [
+            48
+          ]
+        }
+      ],
+      "modelReferences": [
+        "apps/site/dryer-process-models.js",
+        "apps/site/dryer-route-environment.js"
+      ],
+      "status": "visible-shape; dimensions-unmeasured"
+    },
+    {
+      "id": "first-floor-elevator",
+      "observation": "기존 1층 엘리베이터의 양개문과 별도 다중 버튼 패널",
+      "sourceReferences": [
+        {
+          "sourceId": "first-floor-20261113-clip2",
+          "seconds": [
+            108
+          ]
+        }
+      ],
+      "modelReferences": [
+        "apps/site/dryer-building-envelope.js",
+        "dryer-building-1-elevator-landing-doors"
+      ],
+      "status": "existing-elevator-detail; not-an-additional-elevator; no-1.5F-stop"
+    },
+    {
+      "id": "conveyor-crossing-platform",
+      "observation": "컨베이어를 가로지르는 낮은 금속 발판과 양쪽 황색 난간",
+      "sourceReferences": [
+        {
+          "sourceId": "first-floor-20261113-clip2",
+          "seconds": [
+            141
+          ]
+        }
+      ],
+      "modelReferences": [
+        "apps/site/dryer-process-models.js"
+      ],
+      "status": "local-crossing-platform; not-an-interfloor-stair"
+    },
+    {
+      "id": "turn-down-stair",
+      "observation": "통로 끝 우측 백색 계단과 황색 난간, 주변 주황 소품함·청소 장비",
+      "sourceReferences": [
+        {
+          "sourceId": "first-floor-20261113-clip2",
+          "seconds": [
+            162
+          ]
+        }
+      ],
+      "modelReferences": [
+        "apps/site/dryer-building-data.js",
+        "route-turn-down-stair",
+        "apps/site/dryer-route-environment.js"
+      ],
+      "status": "stair-visible; link-to-1.5F-before-OP-turn-user-confirmed; placement-approximate"
+    }
+  ]
+}

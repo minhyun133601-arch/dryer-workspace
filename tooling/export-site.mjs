@@ -9,17 +9,17 @@ import { CAMPUS_EQUIPMENT, CAMPUS_ROOM } from '../apps/site/campus-data.js';
 import { PACKAGING_EQUIPMENT, PACKAGING_ROOM, PACKAGING_ROOMS, PACKAGING_OVERVIEW, PACKAGING_FLOOR_ELEVATIONS } from '../apps/site/packaging-data.js';
 import { isRetainedEvidenceImage } from '../apps/site/evidence-assets.js';
 import { SITE_ASSETS } from '../apps/site/asset-catalog.js';
-import { namespaceModule as namespace, replaceRequired, bundleBurnerMaintenance } from './site-export-utils.mjs';
+import { namespaceModule as namespace, replaceRequired, bundleBurnerMaintenance, bundlePersonAvatar } from './site-export-utils.mjs';
 
 const argumentsList = process.argv.slice(2);
 let profile = 'full', outputArgument;
 for (let index = 0; index < argumentsList.length; index++) {
   const value = argumentsList[index];
   if (value === '--profile') profile = argumentsList[++index];
-  else if (value.startsWith('--') || outputArgument !== undefined) throw new Error('Usage: node tooling/export-site.mjs [--profile full|dryer] [output.html]');
+  else if (value.startsWith('--') || outputArgument !== undefined) throw new Error('Usage: node tooling/export-site.mjs [--profile full|dryer|presentation] [output.html]');
   else outputArgument = value;
 }
-if (!['full', 'dryer'].includes(profile)) throw new Error(`Unknown site export profile: ${profile}`);
+if (!['full', 'dryer', 'presentation'].includes(profile)) throw new Error(`Unknown site export profile: ${profile}`);
 
 const root = new URL('../', import.meta.url);
 const read = async (name) => (await readFile(new URL(name, root), 'utf8')).replace(/\r\n/g, '\n');
@@ -30,9 +30,9 @@ async function readShareImage(reference) {
   return readFile(new URL('apps/site/' + (asset.sharePath || asset.path).slice(2), root));
 }
 
-if (profile === 'dryer') {
+if (profile !== 'full') {
   const { exportDryerPresentation } = await import('./export-dryer-presentation.mjs');
-  await exportDryerPresentation({ output: outputArgument });
+  await exportDryerPresentation({ output: outputArgument, profile });
 } else {
 const [template, css, editorCss, furnaceCss, appSource, scene, models, outdoorModels, campusModels, furnaceModel, furnaceDrawingData, furnaceDrawingModel, furnaceDetailSource, layoutEditor, placementRules, three, license, packagingModels, packagingEquipmentV2, packagingEnvironmentV2, packagingLineModels, packagingRoutes, chillerDataSource, chillerModel, detailCamera, chillerDetail, chillerCss, liquidData, liquidModels, liquidAssetsSource, liquidDetail, liquidCss, upperModels, upperReferenceSource, upperReferenceCss] = await Promise.all([
   'apps/site/share/index.html', 'apps/site/share/styles.css', 'apps/site/layout-editor.css', 'apps/site/furnace-detail.css', 'apps/site/share/app.js',
@@ -259,6 +259,7 @@ const code = [
   'const { PLACEMENT_RULES, PLACEMENT_REGIONS, constrainPlacement, toRoomPosition, fromRoomPosition, rotatedFootprint } = placementRulesModule;',
   namespace(personWalk, 'personWalkModule'),
   'const { WALK_RULES, createPersonState, advancePerson, lookPerson, isPersonPositionFree } = personWalkModule;',
+  await bundlePersonAvatar(),
   namespace(proximityDoors, 'proximityDoorsModule', ["import * as THREE from '../shared/vendor/three.module.js';"]),
   'const { createProximityDoorController } = proximityDoorsModule;',
   namespace(upperModels, 'dryerUpperModelsModule', [
@@ -297,6 +298,7 @@ const code = [
     "import { buildPackagingEnvironment, buildPackagingEquipment } from './packaging-models.js';",
     "import { PLACEMENT_RULES, PLACEMENT_REGIONS, constrainPlacement, toRoomPosition, fromRoomPosition, rotatedFootprint } from './placement-rules.js';",
     "import { WALK_RULES, createPersonState, advancePerson, lookPerson, isPersonPositionFree } from './person-walk.js';",
+    "import { buildPersonAvatar } from './person-avatar.js';",
     "import { createProximityDoorController } from './proximity-doors.js';",
     "import { buildFurnace } from './furnace-model.js';",
   ]),

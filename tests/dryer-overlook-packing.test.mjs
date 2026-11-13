@@ -54,6 +54,9 @@ test('one common stainless service deck spans all three observed bays and remain
     const owners = packingIds.filter(id => h.roots.get(id).userData.sharedPackingPlatformOwner); assert.deepEqual(owners, ['f1-ica-1']);
     const root = h.roots.get(owners[0]), deck = named(root, 'observed-packing-common-service-deck')[0];
     const bounds = box(deck);
+    assert.ok(bounds.min.x>-5.3,'the complete service deck stays east of the constant-width observation corridor');
+    const firstBody=box(named(h.roots.get('f1-ica-1'),'observed-packing-base')[0]),secondBody=box(named(h.roots.get('f1-ica-2'),'observed-packing-base')[0]);
+    assert.ok(secondBody.min.x-firstBody.max.x>1,'the shifted first machine retains usable separation from the second body');
     for (const id of packingIds) {
       const item = items.find(item => item.id === id);
       assert.ok(item.position[0] > bounds.min.x && item.position[0] < bounds.max.x);
@@ -117,4 +120,19 @@ test('overlook placement corrections update only exact prior six defaults once a
   const values = prep.map(item => ({ id: item.id, position: [...item.position], rotation: item.rotation || 0 }));
   const result = validateLayout({ version: 1, catalogRevision: 'preparation-tank-openings-20261112', items: values }, prep, { migrateDefaults: true, migrateDryerDefaults: false });
   assert.deepEqual(result, values, 'the overlook release never resets independently registered preparation tanks');
+});
+
+test('the wider overlook repairs only the first machine pair at its exact previous defaults once',()=>{
+  for(const [id,z]of [['f1-ica-1',-2.5],['f1-xray-1',1]]){
+    const item=items.find(value=>value.id===id),old=[-5.5,.3,z];
+    const payload=(position=old,rotation=0,stamp='dryer-hall-saved-defaults-20261113')=>({version:1,catalogRevision:'preparation-tank-openings-20261112',placementRevisions:{[id]:stamp},items:[{id,position,rotation}]});
+    const restore=value=>validateLayout(value,[item],{migrateDefaults:true,migrateDryerDefaults:false})[0];
+    assert.deepEqual(item.position,[-3.5,.3,z]);
+    assert.deepEqual(restore(payload()).position,item.position,'the exact earlier default moves east clear of the confirmed corridor');
+    for(const value of [payload([-5.25,.3,z]),payload(old,.2),payload(old,0,item.placementRevision)]){
+      const actual=restore(value);assert.deepEqual(actual.position,value.items[0].position);assert.ok(Math.abs(actual.rotation-value.items[0].rotation)<1e-8);
+    }
+    assert.deepEqual(validateLayout(payload(),[item])[0].position,old,'an explicit import keeps its complete requested pose');
+    const current=payload(item.position,0,item.placementRevision);assert.deepEqual(restore(current).position,item.position,'a stamped save remains stable');
+  }
 });

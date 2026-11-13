@@ -139,6 +139,18 @@ function run(t, parent, points, radius = .06, paint = 'steel') {
   for (let i = 1; i < points.length - 1; i++) t.mesh(parent, elbow, points[i], paint).scale.setScalar(radius * 1.05);
 }
 
+function placeBlueWallLeg(pipe,wallZ){
+  const points=pipe.userData.routingPoints.map(point=>[...point]);
+  points[2][2]=points[3][2]=wallZ;
+  for(let i=1;i<points.length;i++){
+    const a=new THREE.Vector3(...points[i-1]),b=new THREE.Vector3(...points[i]),delta=b.clone().sub(a),segment=pipe.children[i-1];
+    segment.position.copy(a.add(b).multiplyScalar(.5));segment.scale.y=delta.length();
+    segment.quaternion.setFromUnitVectors(new THREE.Vector3(0,1,0),delta.normalize());
+  }
+  for(let i=1;i<points.length-1;i++)pipe.children[points.length+i-2].position.set(...points[i]);
+  pipe.userData.routingPoints=points;
+}
+
 // 동양 보일러 연관식 DBHI-SS 300형 (nameplate clip002 2:42.5, 3,000 kg/h).
 // The burner end faces the side-road wall: clip002 0:22 looks along that wall
 // from the personnel door with the shutter on the left and the burner,
@@ -525,7 +537,15 @@ export function buildCampusBoilerRoom(s, root, item, { materials } = {}) {
   }
   run(t, pipes, [P(-2.13, 3.25, 1.85), P(-2.13, 3.95, 1.85), P(.55, 3.95, 1.85), P(.55, 2.0, 1.85)], .075, 'steel');
   run(t, pipes, [P(.55, 2.6, .3), P(.55, 3.1, .3), P(2.25, 3.1, -1.5)], .05, 'blue');
-  run(t, pipes, [P(1.4, 2.5, -6.35), P(1.4, 3.85, -6.35), [endX, 3.85, -6.35 * sz]], .06, 'blue');
+  // The photographed wall pipe keeps its original riser. Only its long
+  // horizontal leg sits against the rear wall, clear of the stair headroom.
+  // Elbows are 1.05 times the nominal pipe radius, so include their full
+  // envelope as well as the 150mm wall's inside face and a 5mm mounting gap.
+  const blueRadius=.06,blueWallZ=-d/2+.15/2+blueRadius*1.05+.005;
+  const blueWallPipe=s._group(pipes);blueWallPipe.name='campus-boiler-stair-clear-blue-wall-pipe';
+  const bluePoints=[P(1.4,2.5,-6.35),P(1.4,3.85,-6.35),[1.4*sx,3.85,blueWallZ],[endX,3.85,blueWallZ]];
+  run(t,blueWallPipe,bluePoints,blueRadius,'blue');
+  Object.assign(blueWallPipe.userData,{routingMeasured:false,nominalRadius:blueRadius,wallInsideZ:-d/2+.075,mountingGap:.005,routingPoints:bluePoints,stairHeadroomCorrection:true,originalRiserPreserved:true});
   // Visible silver exhaust routes end at the roof. Hidden paths between
   // processes and the internal tubes/burners are deliberately not fabricated.
   const flues = s._group(roof); flues.name = 'campus-boiler-visible-exhaust-flues';
@@ -622,6 +642,16 @@ export function buildPreparationBoilerRoom(s, root, item, { materials } = {}) {
   const localScale = Math.min((width - .24) / localSize.x, (depth - .24) / localSize.z, height / localSize.y);
   content.scale.setScalar(Number.isFinite(localScale) && localScale > 0 ? localScale : scale);
   content.position.set(-localCenter.x * content.scale.x, -bounds.min.y * content.scale.y, -localCenter.z * content.scale.z);
+  // A person's radius stays 0.3m when the same room is uniformly fitted to
+  // the smaller 1F registration. Mount this wall leg against that real room
+  // wall, rather than the hidden 11m reference envelope. Its riser stays put.
+  const blueWallPipe=content.getObjectByName('campus-boiler-stair-clear-blue-wall-pipe');
+  if(blueWallPipe){
+    const radius=blueWallPipe.userData.nominalRadius,wallInsideX=-width/2+.075;
+    const wallLegX=wallInsideX+radius*1.05*content.scale.x+.005;
+    placeBlueWallLeg(blueWallPipe,(wallLegX-content.position.x)/content.scale.x);
+    Object.assign(blueWallPipe.userData,{registeredWallInsideX:wallInsideX,registeredWallMountingGap:.005,wallRegistrationBasis:'actual 1F room after uniform fit; omitted reference envelope is not a physical wall'});
+  }
   content.updateMatrixWorld(true);
   Object.assign(root.userData, {
     ...content.userData,

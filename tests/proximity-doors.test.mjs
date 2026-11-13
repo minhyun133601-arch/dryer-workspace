@@ -66,6 +66,29 @@ test('a manual action opens and closes the whole telescopic or paired-leaf entra
   controller.dispose();
 });
 
+test('presentation door actions target one visible group and expose its actual animation clearance', () => {
+  const root=new THREE.Group(),frame=new THREE.Group();root.add(frame);
+  const left=leaf(frame,{groupId:'manual-entry',label:'에어커튼 출입문'}),right=leaf(frame,{groupId:'manual-entry',kind:'slide',axis:'x',closed:.5,open:1.5});
+  const controller=createProximityDoorController(root);
+  try {
+    let passage=controller.getPassages({includeAll:true})[0];
+    assert.equal(passage.label,'에어커튼 출입문');assert.equal(passage.action,'open');assert.equal(passage.progress,0);
+    assert.equal(controller.toggleById('missing'),false);
+    assert.equal(controller.toggleById(passage.id),true);
+    near(left.rotation.y,0);near(right.position.x,.5);
+    controller.update([0,0,.8],.1,{autoOpen:false});
+    passage=controller.getPassages({includeAll:true})[0];
+    assert.equal(passage.action,'close');assert.equal(passage.requestedOpen,true);
+    assert.ok(passage.progress>0 && passage.progress<.85);assert.equal(passage.open,false);
+    advance(controller,[0,0,.8],1,{autoOpen:false});
+    assert.equal(controller.getPassages({includeAll:true})[0].open,true);
+    assert.equal(controller.toggleById(passage.id),true);
+    advance(controller,[0,0,.8],1,{autoOpen:false});
+    near(left.rotation.y,0);near(right.position.x,.5);
+    frame.visible=false;assert.equal(controller.toggleById(passage.id),false);
+  } finally {controller.dispose();}
+});
+
 test('a linked passage can open its entire reviewed group immediately or animate without affecting other doors', () => {
   const root=new THREE.Group(),frame=new THREE.Group();root.add(frame);
   const portal={area:'campus',entry:'team2-rear'};

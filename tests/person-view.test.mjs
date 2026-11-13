@@ -14,7 +14,7 @@ import { PREPARATION_EQUIPMENT } from '../apps/site/preparation-data.js';
 import { buildPackagingEnvironment } from '../apps/site/packaging-models.js';
 import { packagingEntryStairPlan } from '../apps/site/packaging-routes.js';
 import { buildDryerUpperEnvironment } from '../apps/site/dryer-upper-models.js';
-import { buildCampusBoilerRoom } from '../apps/site/boiler-models.js';
+import { buildCampusBoilerRoom, buildPreparationBoilerRoom } from '../apps/site/boiler-models.js';
 import { buildDryerBuildingEnvironment } from '../apps/site/dryer-building-envelope.js';
 
 function eventTarget() {
@@ -181,7 +181,7 @@ test('held arrows and looking change only the person, retaining equipment and or
   } finally { h.dispose(); }
 });
 
-test('person navigation passes through walls and equipment and beyond room bounds while retaining floor height and layout', async () => {
+test('person navigation stops the complete body at real walls, equipment and floor boundaries without editing their poses', async () => {
   const h = await harness();
   let geometry, material;
   try {
@@ -191,46 +191,53 @@ test('person navigation passes through walls and equipment and beyond room bound
     scene.equipment[0].position = [2, ground, 3]; scene.equipment[0].rotation = 0;
     scene.placementFootprints.set('fixture', { minX: -1, maxX: 1, minZ: -.5, maxZ: .5 });
     geometry = new THREE.BoxGeometry(12, 2, .2); material = new THREE.MeshBasicMaterial();
+    const machine=new THREE.Mesh(new THREE.BoxGeometry(2,1.6,1),material);
+    machine.position.y=.8;scene.objects.get('fixture').position.set(2,ground,3);scene.objects.get('fixture').add(machine);
     const wall = new THREE.Mesh(geometry, material); wall.position.set(2, ground + 1, 5);
     scene.scene.add(wall); scene.floorStructures.set(7, wall);
     const obstacles = scene._personObstacles();
-    assert.equal(obstacles.length, 2, 'the walking path contains both a structural wall and an equipment footprint');
+    assert.equal(obstacles.length, 2, 'the walking path contains actual structural and equipment meshes');
     const layout = scene.getLayout(), wallPosition = wall.position.clone();
     scene.setPersonInput('forward', true);
     walkDistance(scene, 8);
-    assert.ok(scene.person.position[2] < 2, 'a held arrow crosses the wall and the equipment instead of stopping at either');
-    walkDistance(scene, 36);
+    assert.ok(scene.person.position[2]>=5.39&&scene.person.position[2]<5.45,'a held arrow stops the body in front of the wall');
+    scene.person=walking.createPersonState({position:[2,ground,4.5]});walkDistance(scene,3);
+    assert.ok(scene.person.position[2]>=3.79&&scene.person.position[2]<3.85,'the actual machine body also blocks movement');
+    scene.person=walking.createPersonState({position:[-5,ground,frame.minZ+1]});walkDistance(scene,3);
     scene.setPersonInput('forward', false);
-    assert.ok(scene.person.position[2] < frame.minZ - 1, 'the navigation person can continue outside the former room fence');
-    close(scene.person.position[0], 2, 'free walking retains the requested heading');
+    close(scene.person.position[2],frame.minZ+walking.WALK_RULES.radius,'the complete body remains within its floor boundary');
+    close(scene.person.position[0], -5, 'walking retains the requested heading');
     close(scene.person.position[1], ground, 'walking stays on the selected floor height');
     close(scene.personCamera.position.y, ground + walking.WALK_RULES.eyeHeight, 'the eye retains its floor-relative height');
-    assert.deepEqual(scene.getLayout(), layout, 'passing through a facility does not move it');
-    assert.ok(wall.position.equals(wallPosition), 'passing through the wall leaves its model unchanged');
+    assert.deepEqual(scene.getLayout(), layout, 'walking never moves facility equipment');
+    assert.ok(wall.position.equals(wallPosition), 'collision leaves the wall model unchanged');
+    machine.geometry.dispose();
   } finally { geometry?.dispose(); material?.dispose(); h.dispose(); }
 });
 
-test('outdoor walking crosses the former perimeter and factory corner in room-local coordinates', async () => {
+test('outdoor walking respects its room-local perimeter and keeps the world camera aligned with the rotated room', async () => {
   const h = await harness({ floor: 'outdoor' });
   try {
     const { scene } = h, frame = scene._personFrame(), layout = scene.getLayout();
     scene.view = 'person';
-    assert.equal(scene._personWalkLimits(), undefined);
+    assert.deepEqual(scene._personWalkLimits(),frame);
     for (const fast of [false, true]) {
-      scene.person = walking.createPersonState({ position: [frame.maxX - .2, 0, 1.5], yaw: Math.PI / 2 });
+      scene.person = walking.createPersonState({ position: [frame.maxX - .6, 0, 1.5], yaw: Math.PI / 2 });
       scene.setPersonInput('forward', true); scene.setPersonInput('fast', fast);
       walkDistance(scene, 2.4);
       scene._stopPerson();
-      assert.ok(scene.person.position[0] > frame.maxX + 1, 'inspection crosses the outer wall');
+      close(scene.person.position[0],frame.maxX-walking.WALK_RULES.radius,'the person remains inside the room-local boundary');
       const feet = scene.personCamera.position.clone(); feet.y -= walking.WALK_RULES.eyeHeight;
       toRoomPosition(feet.toArray(), OUTDOOR_ROOM).forEach((value, index) => close(value, scene.person.position[index], 'the camera follows transformed feet'));
     }
-    scene.person = walking.createPersonState({ position: [2.4, 0, -5.7], yaw: Math.PI / 2 });
+    scene.person = walking.createPersonState({ position: [frame.minX+.6, 0, 1.5], yaw: -Math.PI / 2 });
     scene.setPersonInput('forward', true);
     walkDistance(scene, 8);
     scene._stopPerson();
-    assert.ok(scene.person.position[0] > 9, 'the old factory-corner rectangle no longer traps the person');
-    close(scene.person.position[2], -5.7, 'the former boundary does not redirect the heading');
+    close(scene.person.position[0],frame.minX+walking.WALK_RULES.radius,'the opposite room-local boundary also stops the body');
+    close(scene.person.position[2], 1.5, 'a boundary does not redirect the heading');
+    scene.person=walking.createPersonState({position:[2.4,0,-5.7],yaw:Math.PI/2});scene.setPersonInput('forward',true);walkDistance(scene,1);scene._stopPerson();
+    assert.ok(scene.person.position[0]>3.3,'the real 100RT rear service apron remains in the walking space');
     assert.deepEqual(scene.getLayout(), layout);
   } finally { h.dispose(); }
 });
@@ -323,13 +330,14 @@ test('the filmed preparation stair reaches its real checkerplate deck, holds hei
     scene._stopPerson();
     close(scene.person.position[1], base, 'walking back descends all filmed steps');
     assert.equal(scene.activeFloor, 1, 'climbing a work platform does not switch the selected floor');
-    // A side exit from the raised deck descends under gravity, even after keys release.
+    // The real side guardrail prevents stepping off the raised platform.
     scene.person = walking.createPersonState({ position: [24.7, deckY, 6.9], yaw: Math.PI / 2 }); scene.personEyeY = null;
     scene.setPersonInput('forward', true);
     walkDistance(scene, 4.4);
     scene._stopPerson();
     for (let i = 0; i < 20; i++) scene._advancePerson(.05);
-    close(scene.person.position[1], base, 'leaving the deck returns to the floor');
+    close(scene.person.position[1], deckY, 'the side guardrail keeps the person on the deck');
+    assert.ok(scene.person.position[0]<=26.9-walking.WALK_RULES.radius+.02,'the full body stops before the real side rail');
   } finally { s.dispose(); h.dispose(); }
 });
 
@@ -346,11 +354,11 @@ test('the real southeast and northeast stairs support the complete entry–mezza
       }));
       if (selected === 2) {
         scene.view = 'perspective'; scene._visibility(); scene.navigationEdited = true;
-        assert.equal(scene.floorDecks.get(1).visible, true, 'the mezzanine perspective includes its observed lower hall');
+        assert.equal(scene.floorDecks.get(1).visible, false, 'the mezzanine perspective keeps the first-floor hall separate');
         scene.setView('top');
         assert.equal(scene.floorDecks.get(1).visible, false, 'switching an edited camera to plan mode removes the lower context');
         scene.setView('perspective');
-        assert.equal(scene.floorDecks.get(1).visible, true, 'switching back restores the same lower hall');
+        assert.equal(scene.floorDecks.get(1).visible, false, 'switching back keeps the mezzanine cutaway separate');
       }
       scene.view = 'person'; scene._visibility(); scene.scene.updateMatrixWorld(true);
       for (const environment of scene.buildingEnvironments.values()) assert.equal(environment.deck.visible, true, 'all filmed route floors remain visible during the walk');
@@ -480,4 +488,70 @@ test('the real rotated boiler stair starts on its floor and excludes the pumps u
     const pumps = root.getObjectByName('campus-boiler-under-stair-vertical-pumps');
     pumps.traverse(mesh => { if (mesh.isMesh) assert.ok(!meshes.includes(mesh), 'pump components are not walkable surfaces'); });
   } finally { s.dispose(); h.dispose(); }
+});
+
+test('fast walking collides with thin physical glass and refreshes a moved wall without using equipment group bounds', async () => {
+  const h=await harness(),s=modelTools(h.scene);
+  try{
+    const {scene}=h,ground=floorElevation(7),structure=s._group(scene.scene);
+    const glass=s._box(structure,[5,3,.008],[0,ground+1.5,2],s._material(0xaaccdd,.2,.05,{transparent:true,opacity:.15}));
+    scene.floorStructures.set(7,structure);scene.view='person';scene.person=walking.createPersonState({position:[0,ground,6]});
+    scene.setPersonInput('forward',true);scene.setPersonInput('fast',true);walkDistance(scene,10);
+    assert.ok(scene.person.position[2]>=2.299&&scene.person.position[2]<2.36,'the full body stops before a glass pane thinner than one movement substep');
+    glass.position.z=-2;scene.person=walking.createPersonState({position:[0,ground,6]});walkDistance(scene,10);scene._stopPerson();
+    assert.ok(scene.person.position[2]<-1.64&&scene.person.position[2]>=-1.701,'a moved wall refreshes its actual world-space collision shape');
+  }finally{s.dispose();h.dispose();}
+});
+
+test('real narrow openings respect the body diameter and an opened rotated leaf leaves its real empty passage', async () => {
+  const h=await harness(),s=modelTools(h.scene);
+  try{
+    const {scene}=h,ground=floorElevation(7),structure=s._group(scene.scene),left=s._box(structure,[.2,3,.2],[-.41,ground+1.5,0],s.mat.white),right=s._box(structure,[.2,3,.2],[.41,ground+1.5,0],s.mat.white);
+    scene.floorStructures.set(7,structure);scene.view='person';scene.person=walking.createPersonState({position:[0,ground,2]});scene.setPersonInput('forward',true);walkDistance(scene,4);
+    assert.ok(scene.person.position[2]<-1.9,'a 62cm real opening stays passable rather than using the whole frame group rectangle');
+    left.position.x=-.39;right.position.x=.39;scene.person=walking.createPersonState({position:[0,ground,2]});walkDistance(scene,4);
+    assert.ok(scene.person.position[2]>.1,'a 58cm gap cannot fit the 60cm body');
+    left.position.x=-2;right.position.x=2;
+    const hinge=s._group(structure,[-.6,ground,0]);s._box(hinge,[1.2,2.3,.025],[.6,1.15,0],s.mat.white);
+    // Clear only the collider list after introducing a new model object.
+    scene.personCollisionMeshCache=null;scene.person=walking.createPersonState({position:[0,ground,2]});walkDistance(scene,4);
+    assert.ok(scene.person.position[2]>.29,'a real closed leaf blocks the body');
+    hinge.rotation.y=Math.PI/2;scene.person=walking.createPersonState({position:[0,ground,2]});walkDistance(scene,4);scene._stopPerson();
+    assert.ok(scene.person.position[2]<-1.9,'rotation of the same leaf opens the real passage without dropping collision from the leaf');
+  }finally{s.dispose();h.dispose();}
+});
+
+test('full standing height blocks a low ceiling above eye level while a raised ceiling permits the same route', async () => {
+  const h=await harness(),s=modelTools(h.scene);
+  try{
+    const {scene}=h,ground=floorElevation(7),structure=s._group(scene.scene),ceiling=s._box(structure,[5,.12,4],[0,ground+1.76,0],s.mat.white);
+    scene.floorStructures.set(7,structure);scene.view='person';scene.person=walking.createPersonState({position:[0,ground,4]});scene.setPersonInput('forward',true);walkDistance(scene,7);
+    assert.ok(scene.person.position[2]>2,'a ceiling above the eye but below the top of the head blocks entry');
+    ceiling.position.y+=.3;scene.person=walking.createPersonState({position:[0,ground,4]});walkDistance(scene,7);scene._stopPerson();
+    assert.ok(scene.person.position[2]<-2.9,'the raised ceiling permits the same walking route');
+  }finally{s.dispose();h.dispose();}
+});
+
+test('outdoor physical wall collision uses the rotated room frame rather than its conservative world rectangle', async () => {
+  const h=await harness({floor:'outdoor'}),s=modelTools(h.scene);
+  try{
+    const {scene}=h,structure=s._group(scene.scene,OUTDOOR_ROOM.anchor);structure.rotation.y=OUTDOOR_ROOM.rotation;
+    s._box(structure,[4,3,.01],[20,1.5,0],s.mat.white);scene.floorStructures.set('outdoor',structure);
+    scene.view='person';scene.person=walking.createPersonState({position:[20,0,2]});scene.setPersonInput('forward',true);walkDistance(scene,4);scene._stopPerson();
+    assert.ok(scene.person.position[2]>=.299&&scene.person.position[2]<.35,'the body stops at the actual room-local glass/wall plane');
+    close(scene.person.position[0],20,'collision keeps the requested local heading');
+  }finally{s.dispose();h.dispose();}
+});
+
+test('the fitted preparation boiler keeps its physical equipment without restoring its explicitly omitted reference envelope as collision',async()=>{
+  const h=await harness({floor:1}),s=modelTools(h.scene);
+  try{
+    const {scene}=h,item=PREPARATION_EQUIPMENT.find(item=>item.id==='f1-boiler-room'),root=s._group(scene.scene,item.position);
+    scene.equipment.push(item);scene.objects.set(item.id,root);buildPreparationBoilerRoom(s,root,item);scene.view='person';
+    const omitted=[];root.traverse(mesh=>{if(!mesh.isMesh)return;for(let node=mesh;node&&node!==root;node=node.parent)if(node.userData.preparationEnvelopeOmitted){omitted.push(mesh);break;}});
+    assert.ok(omitted.length>0,'the actual fitted room deliberately omits its superseded reference walls');
+    const bodies=scene._personCollisionBodies();
+    assert.ok(bodies.some(body=>body.mesh.parent.name==='campus-boiler-visible-wall-and-overhead-pipes'),'the real fitted equipment and pipes remain physical');
+    assert.equal(bodies.some(body=>omitted.includes(body.mesh)),false,'omitted reference walls must never become invisible physical barriers');
+  }finally{s.dispose();h.dispose();}
 });

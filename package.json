@@ -13,7 +13,7 @@
     "assets:index": "node tooling/index-assets.mjs",
     "export:site": "node tooling/export-site.mjs",
     "export:share": "node tooling/export-share.mjs",
-    "export:presentation": "node tooling/export-site.mjs --profile dryer",
+    "export:presentation": "node tooling/export-site.mjs --profile presentation",
     "test": "node tooling/test.mjs"
   },
   "engines": { "node": ">=20" }

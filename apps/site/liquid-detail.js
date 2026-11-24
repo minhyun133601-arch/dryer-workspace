@@ -15,14 +15,18 @@ export function createLiquidDetail({ host = null, onOpen = () => {}, onClose = (
     <div class="cd-stage ld-stage"><canvas tabindex="0" aria-label="3팀 액상 3D. 클릭해 설비 선택, 더블클릭·두 번 탭 확대, 드래그 회전. 우클릭·가운데·Shift 드래그 이동, 두 손가락 이동·확대, R 초기화."></canvas><div class="ld-labels"></div><p class="cd-fallback" hidden>3D 화면을 사용할 수 없습니다. 설비 목록에서 실제 사진을 확인해 주세요.</p><span class="cd-gesture">두 번 눌러 확대 · 우클릭 이동 · 휠 줌</span></div>
     <div class="ld-selection"><strong class="ld-current">액상 전체 · 설비 52건</strong><button type="button" class="ld-focus" disabled>선택 설비 확대</button><label><input type="checkbox" class="ld-isolate">선택 설비만</label><button type="button" class="ld-clear">선택 해제</button></div></div></section>
     <aside class="cd-sidebar"><div class="cd-sidehead"><h3>3팀 액상 설비 <span class="ld-count">52</span></h3><input type="search" class="ld-search" aria-label="액상 설비 검색" placeholder="설비명·카드 번호 검색"><p class="ld-room-note"></p></div><div class="ld-list">${LIQUID_EQUIPMENT.map((e)=>`<button type="button" data-liquid-equipment="${e.id}" aria-pressed="false"><span>${String(e.cardNumber).padStart(3,'0')}</span><div><strong>${e.name}</strong><small>${LIQUID_ROOMS.find(r=>r.id===e.roomId)?.name || e.room || ''}</small></div></button>`).join('')}</div>
-      <section class="cd-part-detail ld-detail" aria-live="polite"><h3>액상 공장 전체</h3><small class="ld-basis"></small><p class="ld-description"></p><button type="button" class="ld-photo" aria-label="액상 설비 4방향 사진 확대" hidden><img alt=""></button><small class="ld-photo-caption"></small><ul class="ld-notes"></ul></section>
-    </aside></div><footer class="cd-footer"><strong>3팀 = 액상 · 2팀 스틱·소포장과 별도</strong><span>도면 구획·배치와 카드의 정면·좌측·우측·후면을 대조했습니다. 제작도·실측이 없는 높이와 가려진 연결부는 개략입니다. 카드에 기록된 가동률·상태를 실시간 상태로 표시하지 않습니다.</span></footer>`;
+      <section class="cd-part-detail ld-detail"><h3 aria-live="polite" aria-atomic="true">액상 공장 전체</h3><small class="ld-basis"></small>
+        <p class="ld-description"></p>
+        <button type="button" class="ld-photo" aria-label="액상 설비 4방향 사진 확대" hidden><img alt=""></button><small class="ld-photo-caption"></small>
+        <ul class="ld-notes"></ul></section>
+    </aside></div><footer class="cd-footer"><strong>생산3팀 액상 구역</strong><span>도면 구획·배치와 카드의 정면·좌측·우측·후면을 대조했습니다. 제작도·실측이 없는 높이와 가려진 연결부는 개략입니다. 카드에 기록된 가동률·상태를 실시간 상태로 표시하지 않습니다.</span></footer>`;
   const photoDialog = document.createElement('dialog'); photoDialog.className = 'ld-photo-dialog';
+  photoDialog.setAttribute('aria-label', '선택 설비의 네 방향 사진');
   photoDialog.innerHTML = '<header><strong></strong><button type="button">닫기 ×</button></header><div tabindex="0"><img alt=""></div><footer>정면·좌측면·우측면·후면 · 사진을 두 번 누르면 확대</footer>';
   (host || document.body).append(dialog); document.body.append(photoDialog);
   const $ = (s) => dialog.querySelector(s), items = new Map(LIQUID_EQUIPMENT.map(e=>[e.id,e]));
   const labels = new Map(), roomLabels = new Map(); let renderer, camera, scene, model, controls, observer, selected = null, roomId = 'all', disposed = false, framingWhole = true, opened = false;
-  let doorController, doorFrame = null, doorLastTick = null;
+  let doorController, doorFrame = null, doorLastTick = null, photoTrigger = null;
   const isOpen = () => inline ? opened : !!dialog.open;
   function stopDoorAnimation() {
     if (doorFrame !== null) cancelAnimationFrame(doorFrame);
@@ -30,11 +34,13 @@ export function createLiquidDetail({ host = null, onOpen = () => {}, onClose = (
   }
   function notifyClosed() {
     stopDoorAnimation();
+    photoTrigger = null;
     if (photoDialog.open) photoDialog.close();
     if (!opened) return;
     opened = false; onClose();
   }
   function closeView() {
+    photoTrigger = null;
     photoDialog.close();
     if (inline) dialog.hidden = true;
     else if (dialog.open) dialog.close();
@@ -115,14 +121,15 @@ export function createLiquidDetail({ host = null, onOpen = () => {}, onClose = (
     const item=items.get(id);if(item&&!visibleItem(item))return;selected=item?.id||null;dialog.classList.toggle('has-liquid-selection',Boolean(item));model?.setHighlight(selected);model?.setIsolation($('.ld-isolate').checked?selected:null);
     dialog.querySelectorAll('[data-liquid-equipment]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.liquidEquipment===selected)));
     $('.ld-focus').disabled=!item;$('.ld-current').textContent=item?item.name:`${roomId==='all'?'액상 전체':LIQUID_ROOMS.find(r=>r.id===roomId)?.name} · 설비 ${LIQUID_EQUIPMENT.filter(visibleItem).length}건`;
-    $('.ld-detail h3').textContent=item?.name||'3팀 액상 전체';$('.ld-basis').textContent=item?`카드 ${String(item.cardNumber).padStart(3,'0')} · ${item.confidence||'카드 사진 외형 / 도면 상대 배치'}`:LIQUID_ROOM.source||'액상 장비배치도 + 3팀 설비이력카드';
-    $('.ld-description').textContent=item?.summary||LIQUID_ROOM.summary||'작업실이나 설비를 선택해 실제 4방향 사진과 함께 살펴보세요.';
+    const room = LIQUID_ROOMS.find(entry => entry.id === roomId);
+    $('.ld-detail h3').textContent=item?.name||room?.name||'3팀 액상 전체';$('.ld-basis').textContent=item?`카드 ${String(item.cardNumber).padStart(3,'0')} · ${item.confidence||'카드 사진 외형 / 도면 상대 배치'}`:LIQUID_ROOM.source||'액상 장비배치도 + 3팀 설비이력카드';
+    $('.ld-description').textContent=item?.summary||room?.summary||LIQUID_ROOM.summary||'작업실이나 설비를 선택해 실제 4방향 사진과 함께 살펴보세요.';
     $('.ld-photo').hidden=!item;$('.ld-photo-caption').textContent=item?'설비이력카드 · 정면 / 좌측 / 우측 / 후면':'';
     if(item){$('.ld-photo img').src=liquidAsset(item.cardNumber);$('.ld-photo img').alt=`${item.name} 4방향 사진`;}
     $('.ld-notes').replaceChildren(...(item?.details||[]).map(text=>{const li=document.createElement('li');li.textContent=text;return li;})); draw();
   }
   function filterList(){const q=$('.ld-search').value.trim().toLowerCase();let count=0;
-    dialog.querySelectorAll('[data-liquid-equipment]').forEach(b=>{const e=items.get(b.dataset.liquidEquipment);b.hidden=!visibleItem(e)||(q&&!`${e.name} ${e.cardNumber} ${e.room||''}`.toLowerCase().includes(q));if(!b.hidden)count++;});$('.ld-count').textContent=String(count);}
+    dialog.querySelectorAll('[data-liquid-equipment]').forEach(b=>{const e=items.get(b.dataset.liquidEquipment);b.hidden=!visibleItem(e)||(q&&!`${e.name} ${String(e.cardNumber).padStart(3,'0')} ${e.room||''}`.toLowerCase().includes(q));if(!b.hidden)count++;});$('.ld-count').textContent=String(count);}
   function setRoom(id){roomId=LIQUID_ROOMS.some(r=>r.id===id)?id:'all';$('.ld-search').value='';$('.ld-isolate').checked=false;model?.setIsolation(null);model?.setRoom(roomId==='all'?null:roomId);$('.ld-structure').checked=roomId==='all';model?.setStructureVisible($('.ld-structure').checked);
     dialog.querySelectorAll('[data-liquid-room]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.liquidRoom===roomId)));
     $('.ld-room-note').textContent=LIQUID_ROOMS.find(r=>r.id===roomId)?.summary||'전체 8개 작업 구역 · 설비 52건';filterList();selectItem(null);fit();}
@@ -136,7 +143,25 @@ export function createLiquidDetail({ host = null, onOpen = () => {}, onClose = (
   $('.ld-names').addEventListener('change',draw);$('.ld-structure').addEventListener('change',()=>{model?.setStructureVisible($('.ld-structure').checked);draw();});
   $('.ld-isolate').addEventListener('change',()=>{model?.setIsolation($('.ld-isolate').checked?selected:null);draw();});
   $('.ld-focus').addEventListener('click',()=>{const object=model?.objects.get(selected);if(!object)return;framingWhole=false;const box=new THREE.Box3().setFromObject(object);controls.focus(box.getCenter(new THREE.Vector3()),Math.max(2.5,box.getSize(new THREE.Vector3()).length()*1.8));});
-  $('.ld-photo').addEventListener('click',()=>{const item=items.get(selected);if(!item)return;photoDialog.querySelector('strong').textContent=`${item.name} · 카드 ${item.cardNumber}`;photoDialog.querySelector('img').src=liquidAsset(item.cardNumber);photoDialog.querySelector('img').alt=`${item.name} 정면·좌측·우측·후면`;photoDialog.querySelector('img').style.width='';photoDialog.showModal();});
+  function openPhoto(trigger, src, title, caption) {
+    photoTrigger = trigger;
+    photoDialog.setAttribute('aria-label', title);
+    photoDialog.querySelector('strong').textContent = title;
+    photoDialog.querySelector('img').src = src;
+    photoDialog.querySelector('img').alt = title;
+    photoDialog.querySelector('img').style.width = '';
+    photoDialog.querySelector('footer').textContent = `${caption} · 사진을 두 번 누르면 확대`;
+    photoDialog.showModal();
+  }
+  $('.ld-photo').addEventListener('click', () => {
+    const item = items.get(selected);
+    if (item) openPhoto($('.ld-photo'), liquidAsset(item.cardNumber), `${item.name} · 카드 ${item.cardNumber}`, '정면·좌측면·우측면·후면');
+  });
+  photoDialog.addEventListener('close', () => {
+    if (photoDialog.open) return;
+    if (isOpen()) photoTrigger?.focus();
+    photoTrigger = null;
+  });
   photoDialog.querySelector('button').addEventListener('click',()=>photoDialog.close());photoDialog.querySelector('img').addEventListener('dblclick',e=>{e.target.style.width=e.target.style.width?'':'1600px';});
   return {open({equipmentId}={}){if(disposed)return;if(!isOpen()){if(inline)dialog.hidden=false;else dialog.showModal();opened=true;onOpen();}init();resize();setRoom('all');if(items.has(equipmentId))selectItem(equipmentId);},close:closeView,dispose(){if(disposed)return;closeView();disposed=true;document.removeEventListener?.('visibilitychange',documentVisibilityChanged);doorController?.dispose();doorController=null;observer?.disconnect();controls?.dispose();model?.dispose();renderer?.dispose();photoDialog.remove();dialog.remove();}};
 }

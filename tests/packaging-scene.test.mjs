@@ -10,7 +10,8 @@ import { SITE_ASSETS } from '../apps/site/asset-catalog.js';
 import { PACKAGING_STAIR_PROFILES } from '../apps/site/packaging-routes.js';
 import { CAMPUS_ROOM } from '../apps/site/campus-data.js';
 import { OUTDOOR_ROOM } from '../apps/site/outdoor-data.js';
-import { floorElevation } from '../apps/site/facility-data.js';
+import { FLOORS, floorElevation } from '../apps/site/facility-data.js';
+import { WALK_RULES } from '../apps/site/person-walk.js';
 import { buildPackagingEnvironment, buildPackagingEquipment } from '../apps/site/packaging-models.js';
 import { createProximityDoorController } from '../apps/site/proximity-doors.js';
 import { PLACEMENT_REGIONS, constrainPlacement, fromRoomPosition, toRoomPosition } from '../apps/site/placement-rules.js';
@@ -18,7 +19,7 @@ import { PLACEMENT_REGIONS, constrainPlacement, fromRoomPosition, toRoomPosition
 async function harness() {
   const source = (await readFile(new URL('../apps/site/scene.js', import.meta.url), 'utf8'))
     .replace(/^import .*;\r?\n/gm, '').replace(/^export\s+(?=(?:function|class|const|let)\b)/gm, '');
-  const context = vm.createContext({ THREE, PACKAGING_ROOM, PACKAGING_ROOMS, PACKAGING_OVERVIEW, PACKAGING_FLOOR_ELEVATIONS, CAMPUS_ROOM, OUTDOOR_ROOM, floorElevation,
+  const context = vm.createContext({ THREE, PACKAGING_ROOM, PACKAGING_ROOMS, PACKAGING_OVERVIEW, PACKAGING_FLOOR_ELEVATIONS, CAMPUS_ROOM, OUTDOOR_ROOM, FLOORS, WALK_RULES, floorElevation,
     PLACEMENT_REGIONS, constrainPlacement, fromRoomPosition, toRoomPosition });
   new vm.Script(`${source}\nglobalThis.FacilityScene = FacilityScene;`).runInContext(context);
   const scene = Object.create(context.FacilityScene.prototype);
@@ -90,12 +91,11 @@ test('all packaging floors use their own drawing catalog and third-floor materia
   assert.equal(floor(2).filter(i=>i.type==='packaging-hopper').length,4);
   assert.equal(floor(2).filter(i=>i.type==='packaging-v-mixer').length,2);
   assert.equal(PACKAGING_EQUIPMENT.filter((item) => item.type === 'packaging-mixer').length, 3);
-  assert.equal(floor(3).filter(i=>i.type==='packaging-ribbon-mixer').length,0,'card 001 corrects the old ribbon-mixer guess');
-  assert.equal(floor(3).filter(i=>i.type==='packaging-card-agitator').length,1);
-  assert.equal(floor(3).filter(i=>i.type==='packaging-card-hopper').length,3);
+  assert.equal(floor(3).filter(i=>i.type==='packaging-ribbon-mixer').length,1,'the 로타리2호기 hood stands over the 500 kg ribbon mixer');
+  assert.equal(floor(3).filter(i=>/card-agitator|card-hopper/.test(i.type)).length,0,'round agitator hoppers belong to the second floor');
   assert.equal(floor(3).filter(i=>i.type==='packaging-stick-mixer').length,2);
-  assert.equal(floor(3).filter(i=>i.type==='packaging-sieve').length,5,'the fourth main sieve is integrated into agitator #4');
-  assert.equal(floor(3).find(i=>i.type==='packaging-stick-hoppers').hopperLayout.length,8);
+  assert.equal(floor(3).filter(i=>i.type==='packaging-sieve').length,4,'one sieve stands at each main mixer');
+  assert.equal(floor(3).filter(i=>i.type==='packaging-stick-hoppers').flatMap(i=>i.boxes).length,8);
   assert.ok(floor(3).every(i=>i.type!=='packaging-stick-filler'));
   const images = new Set(Object.values(PACKAGING_ROOMS).flatMap(r=>r.photos));
   for (const item of PACKAGING_EQUIPMENT) {
@@ -143,7 +143,7 @@ test('all three floors have finite three-part assemblies, bounded placement and 
     let meshes = 0, repeated = 0;
     scene.scene.traverse((mesh) => { if (mesh.isMesh) meshes++; if (mesh.isInstancedMesh) repeated += mesh.count; });
     assert.ok(repeated > 300, 'rails, steps and repeated fittings should use instances');
-    assert.ok(meshes < 2500, `three packaging floors use ${meshes} meshes`);
+    assert.ok(meshes < 2700, `three packaging floors use ${meshes} meshes`);
     for (const item of scene.equipment) {
       const root = scene.objects.get(item.id), parts = scene.parts.filter((part) => part.root === root);
       assert.equal(parts.length, 3);
@@ -239,6 +239,66 @@ test('all floor walking routes stay clear of fixed geometry and preserve camera 
       assert.equal(scene.getPackagingProgress(), progress);
       resize(1100, 760); settled(scene);
     }
+    }
+  } finally { dispose(); }
+});
+
+test('a pedestrian can walk the full main mixing deck aisle with storage loaded', async () => {
+  const { scene, dispose } = await harness();
+  try {
+    scene.setPackagingCargoVisible(true);
+    const route = PACKAGING_ROOMS[3].path;
+    const index = route.findIndex(([x, , z]) => x === -8.5 && z === -9.85);
+    assert.ok(index >= 0);
+    const [a, b] = route.slice(index, index + 2);
+    assert.equal(b[0], a[0]);
+    assert.equal(b[2], 6.4);
+    const deck = a[1] - WALK_RULES.eyeHeight;
+    const supports = scene._personSupportMeshes(), supportSet = new Set(supports), bodies = scene._personCollisionBodies();
+    for (const offset of [-.1, 0, .1]) {
+      const count = Math.ceil((b[2] - a[2]) / .05);
+      for (let n = 0; n <= count; n++) {
+        const at = [a[0] + offset, deck, a[2] + (b[2] - a[2]) * n / count];
+        assert.ok(Math.abs(scene._personGroundHeight(at, supports) - deck) < .05, `deck beneath ${at}`);
+        assert.ok(scene._personCanOccupy(at, null, bodies, supportSet), `body clearance at ${at}`);
+      }
+    }
+  } finally { dispose(); }
+});
+
+test('the posted third-floor labels and six PDA stations remain readable when cargo is hidden', async () => {
+  const { scene, dispose } = await harness();
+  const items = scene.equipment.filter(item => item.floorLevel === 3);
+  try {
+    const pda = [];
+    scene.packaging.structure.traverse(node => {
+      if (!node.userData.pda) return;
+      const label = node.getObjectByName('packaging-pda-location-plate');
+      assert.equal(label?.userData.printedText, `PDA|${node.userData.pda}`);
+      pda.push(node.userData.pda);
+    });
+    assert.deepEqual(pda.sort(), ['배합(소)', '배합(소)', '배합(소)', '배합(스)', '계량실', '원부자재 보관창고'].sort());
+    const hopperSigns = [];
+    for (const item of items.filter(item => item.type === 'packaging-stick-hoppers')) {
+      scene.objects.get(item.id).traverse(node => {
+        if (node.name === 'packaging-hopper-line-nameplate') hopperSigns.push(node.userData.printedText);
+      });
+    }
+    assert.deepEqual(hopperSigns, ['1,2호기 호퍼', '1,2호기 호퍼', '1,2호기 호퍼', '3,4호기 호퍼|(커피)', '3,4호기 호퍼', '3,4호기 호퍼', '5호기 호퍼', '6호기 호퍼', '7호기 호퍼|(커피)', '7호기 호퍼']);
+    const locations = items.filter(item => item.locationLabel);
+    const letters = [...'ABCDEFGHIJKL'].map(letter => `P3-3층-${letter}`);
+    assert.deepEqual([...new Set(locations.map(item => item.locationLabel))].sort(), letters);
+    for (const visible of [false, true, false]) {
+      scene.setPackagingCargoVisible(visible);
+      assert.equal(scene.packaging.cargo.visible, visible);
+      for (const item of locations) {
+        const root = scene.objects.get(item.id), cargo = root.userData.packagingCargo;
+        assert.ok(cargo.children.length > 0, item.id);
+        assert.equal(cargo.visible, visible, item.id);
+        const plates = [];
+        root.traverseVisible(node => { if (node.name === 'packaging-location-label-plate') plates.push(node.userData.printedText); });
+        assert.ok(plates.length >= 2 && plates.every(label => label === item.locationLabel), item.id);
+      }
     }
   } finally { dispose(); }
 });

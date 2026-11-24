@@ -5,22 +5,52 @@ import { buildLiquidCardExterior } from './liquid-card-models.js';
 // item dimensions/positions remain the explicitly qualified data-layer values.
 export const LIQUID_MODEL_EXTENT = Object.freeze({ width: 99.7, depth: 39.2 });
 const PAINT = {
-  steel: { color: 0xb9c3c1, roughness: .36, metalness: .72 },
-  hopperSteel: { color: 0xb9c3c1, roughness: .36, metalness: .72, side: THREE.DoubleSide },
+  steel: { color: 0xc7cbc8, roughness: .31, metalness: .79 },
+  hopperSteel: { color: 0xc7cbc8, roughness: .31, metalness: .79, side: THREE.DoubleSide },
   edge: { color: 0x879593, roughness: .4, metalness: .68 },
   white: { color: 0xd4d7cc, roughness: .68, metalness: .17 },
   blue: { color: 0x366c9c, roughness: .49, metalness: .28 },
+  brineBlue: { color: 0x4596aa, roughness: .72, metalness: .02 },
   dark: { color: 0x394344, roughness: .65, metalness: .25 },
   black: { color: 0x273030, roughness: .88, metalness: .02 },
   green: { color: 0x347c61, roughness: .73, metalness: .05 },
   orange: { color: 0xc37c35, roughness: .63, metalness: .19 },
   red: { color: 0xa7473c, roughness: .63, metalness: .14 },
   yellow: { color: 0xcab948, roughness: .68, metalness: .12 },
-  glass: { color: 0x667e7b, transparent: true, opacity: .28, roughness: .2, metalness: .02, depthWrite: false },
+  glass: { color: 0xbaccc8, transparent: true, opacity: .18, roughness: .16, metalness: .04, depthWrite: false },
   screen: { color: 0x244644, roughness: .5, metalness: .08 },
   floor: { color: 0x839178, roughness: .98, metalness: 0 },
   wall: { color: 0xd4d7d0, roughness: .96, metalness: 0 },
 };
+
+// Reflected ceiling strips and the muted green floor give round stainless
+// shells a readable highlight as the camera moves around the machine.
+function processingRoomReflection() {
+  const width = 256, height = 128, pixels = new Uint8Array(width * height * 4);
+  for (let y = 0; y < height; y++) {
+    const elevation = ((y + .5) / height - .5) * Math.PI;
+    for (let x = 0; x < width; x++) {
+      const azimuth = (x + .5) / width * Math.PI * 2;
+      const vertical = Math.sin(elevation), horizontal = Math.cos(elevation);
+      const floor = Math.max(0, -vertical);
+      const walls = .45 + (.20 * Math.cos(azimuth * 4) + .075 * Math.cos(azimuth * 8)) * horizontal;
+      const lightStrip = Math.exp(-Math.pow((vertical - .62) / .07, 2));
+      const ceiling = .19 * Math.max(0, vertical) + .5 * lightStrip * (.74 + .26 * Math.cos(azimuth * 2));
+      const brightness = walls + ceiling - .16 * floor;
+      const offset = (y * width + x) * 4;
+      pixels[offset] = Math.round(255 * Math.min(1, brightness - .035 * floor));
+      pixels[offset + 1] = Math.round(255 * Math.min(1, brightness + .027 * floor));
+      pixels[offset + 2] = Math.round(255 * Math.min(1, brightness - .025 * floor));
+      pixels[offset + 3] = 255;
+    }
+  }
+  const texture = new THREE.DataTexture(pixels, width, height);
+  texture.mapping = THREE.EquirectangularReflectionMapping;
+  texture.colorSpace = THREE.SRGBColorSpace;
+  texture.magFilter = texture.minFilter = THREE.LinearFilter;
+  texture.needsUpdate = true;
+  return texture;
+}
 
 export function createLiquidModel({ equipment = [], rooms = [], detail = true, columns = [], walls = [], routes = [] } = {}) {
   const root = new THREE.Group(); root.name = 'liquid-factory-card-models';
@@ -28,11 +58,17 @@ export function createLiquidModel({ equipment = [], rooms = [], detail = true, c
   environment.root.name = 'liquid-plan-environment'; root.add(environment.root); environment.root.add(environment.deck, environment.structure, environment.routes);
   const objects = new Map(), records = new Map(), geometryCache = new Map(), geometries = new Set(), materials = new Set();
   let highlighted = null, isolated = null, selectedRoom = null, structureVisible = true, disposed = false;
+  let metalReflection;
   const geo = (key, create) => { if (!geometryCache.has(key)) { const value = create(); geometryCache.set(key, value); geometries.add(value); } return geometryCache.get(key); };
   const palette = () => new Map();
-  const mat = (map, name) => {
+  const mat = (map, name, equipmentMaterial) => {
     if (!map.has(name)) {
       const value = new THREE.MeshStandardMaterial(PAINT[name] || PAINT.steel);
+      if (equipmentMaterial && value.metalness > .6) {
+        metalReflection ??= processingRoomReflection();
+        value.envMap = metalReflection;
+        value.envMapIntensity = .85;
+      }
       value.name = `liquid-${name}`; value.userData.base = { opacity: value.opacity, transparent: value.transparent, depthWrite: value.depthWrite };
       map.set(name, value); materials.add(value);
     }
@@ -40,7 +76,7 @@ export function createLiquidModel({ equipment = [], rooms = [], detail = true, c
   };
   function helpers(parent, paints, id = null) {
     const mesh = (geometry, position, paint = 'steel', into = parent) => {
-      const object = new THREE.Mesh(geometry, mat(paints, paint)); object.position.set(...position); into.add(object);
+      const object = new THREE.Mesh(geometry, mat(paints, paint, id)); object.position.set(...position); into.add(object);
       if (id) object.userData.equipment = object.userData.liquidId = id;
       return object;
     };
@@ -81,10 +117,10 @@ export function createLiquidModel({ equipment = [], rooms = [], detail = true, c
       box([.23 * scale, .15 * scale, .23 * scale], [x, y - .27 * scale, z], 'edge');
       return body;
     };
-    const belt = (width = 2.5, depth = .5, y = .85, position = [0, 0, 0], rollers = false) => {
+    const belt = (width = 2.5, depth = .5, y = .85, position = [0, 0, 0], rollers = false, surface = rollers ? 'edge' : 'green') => {
       const [x, , z] = position; box([width, .12, depth], [x, y - .08, z]);
-      if (rollers) for (let q = -width / 2 + .07; q < width / 2; q += .14) cyl(.045, depth - .04, [x + q, y, z], 'edge', 'z');
-      else box([width - .07, .025, depth - .06], [x, y, z], 'green');
+      if (rollers) for (let q = -width / 2 + .07; q < width / 2; q += .14) cyl(.045, depth - .04, [x + q, y, z], surface, 'z');
+      else box([width - .07, .025, depth - .06], [x, y, z], surface);
       for (const side of [-1, 1]) { box([width, .035, .03], [x, y + .16, z + side * depth / 2]); for (const end of [-1, 1]) box([.03, .2, .035], [x + end * width * .4, y + .08, z + side * depth / 2]); }
       for (const xx of [x - width * .36, x + width * .36]) for (const zz of [z - depth * .4, z + depth * .4]) cyl(.03, y - .12, [xx, (y - .12) / 2, zz]);
     };
@@ -342,7 +378,7 @@ export function createLiquidModel({ equipment = [], rooms = [], detail = true, c
     return raycaster.intersectObjects(targets, false)[0]?.object.userData.equipment ?? null;
   }
   function anchorOf(id, into = new THREE.Vector3()) { const record = records.get(id); if (!record) return null; root.updateWorldMatrix(true, true); return into.copy(record.anchor).applyMatrix4(record.group.matrixWorld); }
-  function dispose() { if (disposed) return; disposed = true; geometries.forEach((g) => g.dispose()); materials.forEach((m) => m.dispose()); root.removeFromParent(); root.clear(); }
+  function dispose() { if (disposed) return; disposed = true; geometries.forEach((g) => g.dispose()); materials.forEach((m) => m.dispose()); metalReflection?.dispose(); root.removeFromParent(); root.clear(); }
   root.updateWorldMatrix(true, true); applyLook();
   return { root, environment, objects, records, setHighlight, setIsolation, setRoom, setStructureVisible, pick, anchorOf, dispose };
 }

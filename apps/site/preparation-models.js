@@ -59,12 +59,23 @@ function resources(s) {
     bar(g, [0, 0, .03], [-r * .4, r * .35, .03], .005, 'dark'); g.userData.readingConfirmed = false; return g;
   };
   const wheel = (parent, p, r = .12, paint = 'red') => { const g = s._group(parent, p); ring(g, r, [0, 0, 0], paint, 'z'); for (let i = 0; i < 4; i++) { const a = i * PI / 2; bar(g, [0, 0, 0], [Math.cos(a) * r, Math.sin(a) * r, 0], .012, paint); } cylinder(g, .026, .09, [0, 0, -.045], 'trim', 'z'); return g; };
+  const spun = (parent, profile, position, paint, name) => mesh(parent,
+    geo(`spun:${profile.join(';')}`, () => new THREE.LatheGeometry(profile.map(([r, y]) => new THREE.Vector2(r, y)), 36)),
+    position, paint, name);
   const motor = (parent, p, radius = .16, length = .45, vertical = true, paint = 'dark') => {
     const g = s._group(parent, p); g.name = 'preparation-observed-motor'; cylinder(g, radius, length, [0, 0, 0], paint, vertical ? 'y' : 'x');
     const fins = Array.from({ length: 14 }, (_, i) => { const a = i * TAU / 14; return vertical
       ? { position: [Math.cos(a) * (radius + .008), 0, Math.sin(a) * (radius + .008)], scale: [.018, length * .8, .012], rotation: [0, -a, 0] }
       : { position: [0, Math.cos(a) * (radius + .008), Math.sin(a) * (radius + .008)], scale: [length * .8, .018, .012], rotation: [a, 0, 0] }; });
-    repeated(g, fins, paint, 'instanced-motor-fins'); box(g, [.14, .12, .13], vertical ? [radius + .06, 0, 0] : [0, radius + .05, 0], paint); return g;
+    repeated(g, fins, paint, 'instanced-motor-fins');
+    const cowl = s._group(g);
+    if (!vertical) cowl.rotation.z = PI / 2;
+    const end = length / 2;
+    spun(cowl, [[radius * .88, end - .055], [radius * 1.06, end - .045], [radius * 1.06, end],
+      [radius * .94, end + .035], [radius * .63, end + .052], [0, end + .052]], [0, 0, 0], paint, 'cast-motor-end-bell');
+    ring(cowl, radius * .94, [0, end + .032, 0], paint, 'y', .009);
+    box(g, [.14, .12, .13], vertical ? [radius + .06, 0, 0] : [0, radius + .05, 0], paint);
+    return g;
   };
   const sanitaryValve = (parent, p, axis = 'y', paint = 'blue') => {
     const group = s._group(parent, p); group.name = 'preparation-filmed-sanitary-butterfly-valve';
@@ -95,7 +106,7 @@ function resources(s) {
     for (const y of [-height * .27, height * .27]) cylinder(group, .11, .13, [0, y, 0], 'dark');
     return group;
   };
-  return s._preparationResources = { materials, geo, mesh, box, cylinder, bar, pipe, ring, repeated, flange, gauge, wheel, motor, guard, sanitaryValve, flex };
+  return s._preparationResources = { materials, geo, mesh, box, cylinder, bar, pipe, ring, repeated, flange, gauge, wheel, motor, guard, sanitaryValve, flex, spun };
 }
 
 function parts(s, root, item) {
@@ -164,7 +175,9 @@ function tankGroup(s, g, item, config, t) {
     Object.assign(body.userData, { preparationVesselId: unit.id || `${item.id}-${index + 1}`, label: unit.label || '', sourceTimes: unit.sourceTimes || config.sourceTimes || [], currentDimensionsMeasured: false });
     const profile = [[0, base - .12], [r * .2, base - .1], [r * .5, base + .02], [r * .8, base + .18], [r * .96, base + .36], [r, base + .48], [r, base + h - .2], [r * .94, base + h - .04], [r * .65, base + h + .11], [r * .25, base + h + .17], [0, base + h + .17]];
     t.mesh(body, t.geo(`vessel:${r}:${h}:${base}`, () => new THREE.LatheGeometry(profile.map(p => new THREE.Vector2(...p)), 36)), [0, 0, 0], 'steel', 'closed-dished-vessel-shell');
-    for (const y of [base + .27, base + h - .18]) t.ring(body, r + .008, [0, y, 0]);
+    // Roll the bottom seam onto the dished head; a full-diameter hoop here would float clear of the steel.
+    t.ring(body, r * .88, [0, base + .27, 0], 'trim', 'y', .012);
+    t.ring(body, r + .002, [0, base + h - .21, 0], 'trim', 'y', .012);
     const deckY = Number.isFinite(unit.deckElevation) ? unit.deckElevation : null;
     if (deckY !== null && deckY > base + .3 && deckY < base + h - .25) {
       // 11/11 prep clip 4:31, 4:51, 6:40: the vessels hang from the platform on
@@ -201,7 +214,9 @@ function tankGroup(s, g, item, config, t) {
     const cap = s._group(g[1] || g[0], [x, base + h + .16, z]); cap.name = 'preparation-tank-domed-top-exterior'; cap.rotation.y = unit.rotation || 0;
     const lidR = Math.min(.37, r * .41), lidZ = r * .4;
     const lid = s._group(cap, [0, .025, lidZ]); lid.name = 'preparation-filmed-hinged-manway-and-clamps';
-    t.cylinder(lid, lidR, .065, [0, .035, 0]); t.ring(lid, lidR + .012, [0, .069, 0]);
+    t.spun(lid, [[0, .012], [lidR * .94, .012], [lidR, .027], [lidR, .054],
+      [lidR * .91, .071], [lidR * .62, .087], [0, .093]], [0, 0, 0], 'steel', 'rolled-manway-lid');
+    t.ring(lid, lidR + .005, [0, .048, 0], 'trim', 'y', .012);
     for (const x of [lidR * .74, -lidR * .74]) {
       t.box(lid, [.09, .055, .16], [x, .09, -.18], 'trim');
       t.cylinder(lid, .025, .13, [x, .12, -.18], 'trim', 'x');
@@ -213,6 +228,19 @@ function tankGroup(s, g, item, config, t) {
       const motorZ = -r * .3;
       t.cylinder(cap, .28, .12, [0, .08, motorZ], 'trim');
       t.guard(cap, .22, .86, [0, .58, motorZ]);
+      if (unit.id === 'homo-a' || unit.id === 'homo-b') {
+        // The MSD homomix repair photograph shows the cast, webbed drive pedestal.
+        const foot = s._group(cap, [0, .12, motorZ]);
+        t.spun(foot, [[.24, 0], [.26, .025], [.26, .05], [.17, .075], [.14, .19]],
+          [0, 0, 0], 'trim', 'homomix-drive-pedestal');
+        const web = t.geo('homomix-cast-gusset', () => {
+          const profile = new THREE.Shape([new THREE.Vector2(.14, .04), new THREE.Vector2(.244, .04), new THREE.Vector2(.14, .17)]);
+          return new THREE.ExtrudeGeometry(profile, { depth: .015, bevelEnabled: false });
+        });
+        t.repeated(foot, Array.from({ length: 6 }, (_, i) => ({
+          position: [0, 0, 0], scale: [1, 1, 1], rotation: [0, i * TAU / 6, 0],
+        })), 'trim', 'homomix-cast-support-webs', web);
+      }
       t.cylinder(cap, .3, .18, [0, 1.09, motorZ], 'trim');
       t.motor(cap, [0, 1.48, motorZ], .23, .56, true, unit.motorColor || 'dark');
       t.repeated(cap, Array.from({ length: 8 }, (_, i) => { const a = i * TAU / 8; return { position: [Math.cos(a) * .255, 1.19, motorZ + Math.sin(a) * .255], scale: [.028, .035, .028] }; }), 'dark', 'mixer-base-flange-fasteners');
@@ -397,6 +425,11 @@ function homogenizer(s, g, item, config, t) {
   t.box(g[0], [w, h * .67, d], [0, h * .335 + .12, 0], 'steel', 'filmed-homogenizer-body');
   for (const x of [-w * .4, w * .4]) for (const z of [-d * .38, d * .38]) t.cylinder(g[0], .055, .2, [x, .1, z], 'trim');
   const face = g[1] || g[0], pipes = g[2] || g[0];
+  // Separate folded service panels keep the broad stainless front readable below the three pump heads.
+  const panels = s._group(g[0], [0, .14, d / 2]);
+  for (const [centre, width] of [[-.382, .226], [-.033, .458], [.343, .278]]) {
+    t.box(panels, [w * width, h * .36, .016], [w * centre, h * .18, .014], 'steel', 'homogenizer-lower-service-panel');
+  }
   t.box(g[0], [w * .72, h * .28, d * .78], [w * .12, h * .78, d * .13], 'steel');
   for (const x of [-w * .15, w * .12, w * .39]) { t.cylinder(face, .14, .24, [x, h * .68, d / 2 + .14], 'trim', 'z', 'homogenizer-front-round-head'); t.flange(face, [x, h * .68, d / 2 + .28], .16); }
   t.box(face, [.57, .57, .07], [-w * .34, h * .49, d / 2 + .07], 'trim');

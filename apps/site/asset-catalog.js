@@ -1,6 +1,15 @@
 // Current viewer images and their optional compact offline variants.
 // Edit paths here together with the consuming data file; npm run assets:check validates both.
+import { COMPRESSOR_MEDIA, COMPRESSOR_WALK_FRAMES } from './dryer-compressor-media.js';
+
 export const SITE_ASSETS = Object.freeze([
+  ...COMPRESSOR_WALK_FRAMES.map(({id,path,date,time,caption}) => ({
+    id: 'dryer-compressor-' + id, path, category: 'dryer-compressor-survey', label: date+' '+time+' · '+caption,
+  })),
+  ...COMPRESSOR_MEDIA.map(({number, original, path}) => ({
+    id: 'dryer-compressor-field-' + number, path, category: 'dryer-compressor-survey',
+    label: '건조실 3층 현장 사진 ' + number + ' · ' + original,
+  })),
   {"id":"brand-company-person-logo","path":"./assets/branding/company-logo.jpg","label":"사용자 제공 희창유업 회사 로고 · 사람 캐릭터 작업복","category":"brand"},
   {"id":"drawings-campus-entrance-site-guide-2026","path":"./assets/drawings/campus/entrance-site-guide-2026.jpg","label":"2026 현장 출입구 안내도 · 경비실·창고·건조실·소포장 배치","category":"drawing-campus"},
   {"id":"drawings-wastewater-process-flow-2022","path":"./assets/drawings/wastewater/process-flow-2022.png","label":"2022 폐수처리장 개선 후 계통도","category":"drawing-wastewater"},
@@ -32,6 +41,7 @@ export const SITE_ASSETS = Object.freeze([
   {"id":"drawings-packaging-floor-1-workplace-2025","path":"./assets/drawings/packaging/floor-1-workplace-2025.png","label":"2025 스틱·소포장 1층 작업장 배치도","category":"drawing-packaging"},
   {"id":"drawings-packaging-floor-2-workplace-2025","path":"./assets/drawings/packaging/floor-2-workplace-2025.png","label":"2025 스틱·소포장 2층 작업장 배치도","category":"drawing-packaging"},
   {"id":"drawings-packaging-floor-3-workplace-2025","path":"./assets/drawings/packaging/floor-3-workplace-2025.png","label":"2025 스틱·소포장 3층 작업장 배치도","category":"drawing-packaging"},
+  {"id":"drawings-packaging-floor-3-location-plan-2026","path":"./assets/drawings/packaging/floor-3-location-plan-2026.jpg","label":"2팀 3층 작업장 · Location 라벨·PDA 위치도 (2026-11-24)","category":"drawing-packaging"},
   {"id":"drawings-packaging-floor-2-auger-proposal","path":"./assets/drawings/packaging/floor-2-auger-proposal.png","label":"스틱·소포장 2층 오거 제안도","category":"drawing-packaging"},
   {"id":"drawings-packaging-floor-2-materials-route-20231018","path":"./assets/drawings/packaging/floor-2-materials-route-20231018.png","label":"2023-10-18 스틱·소포장 2층 물류 동선도","category":"drawing-packaging"},
   {"id":"drawings-packaging-floor-2-workers-route-20231018","path":"./assets/drawings/packaging/floor-2-workers-route-20231018.png","label":"2023-10-18 스틱·소포장 2층 작업자 동선도","category":"drawing-packaging"},

@@ -51,12 +51,25 @@ export const TOUR_STEPS = freeze([
         pose([-7, 3.8, 1], [-.7, 2.4, -1]), pose([-7, 3.8, -5.3], [-7, 5.45, -8.5])], '생산설비 관찰 구간'),
       pathShot(14, upperStair, '3층 연결 계단', { stairs: true }),
     ] },
-  { id: 'third', floor: 3, kind: 'walk', title: '3층 · 타워 설비 홀', caption: '호퍼·점검대·이송 설비', duration: 18,
+  { id: 'third', floor: 3, kind: 'walk', title: '3층 · 타워 설비 홀', caption: '작업 구역 연결문과 디스크 컨베이어', duration: 18,
     shots: [
-      { ...shot(18, pose([-6.315, 7.3, -6.05], [-1, 8.95, -6.05]), pose([.8, 7.3, -.5], [5.5, 10.2, 1]), '원추 호퍼와 점검대·이송부'), path: [
-        pose([-6.315, 7.3, -6.05], [-1, 8.95, -6.05]), pose([-3.7, 7.3, -6.05], [-3.7, 8.95, -.9]), pose([-3.7, 7.3, -3.4], [1, 8.95, -3.4]),
-        pose([.8, 7.3, -3.4], [5.5, 10.1, 1]), pose([.8, 7.3, -.5], [5.5, 10.2, 1]),
-      ] },
+      pathShot(8, [
+        pose([-6.315,7.3,-6.05],[-1,8.95,-6.05]),
+        pose([-4.48,7.3,-6.05],[-3.35,8.85,-5.15]),
+        pose([-4.43,7.3,-5.68],[-2.5,8.95,-5.12]),
+        pose([-4.05,7.3,-5.15],[-1.7,8.9,-5.15]),
+        pose([-2.48,7.3,-5.15],[.55,8.9,-6.8]),
+        pose([-2.15,7.3,-4.15],[.65,9.65,-7]),
+      ], '흰 연결문에서 본 호퍼와 반환부'),
+      pathShot(10, [
+        pose([-2.15,7.3,-4.15],[.65,9.65,-7]),
+        pose([.8,7.3,-3.65],[1.5,9.9,-7]),
+        pose([3.5,7.3,-3.65],[1.85,9.15,-7]),
+        pose([6.75,7.3,-3.65],[6.75,8.45,-7.1]),
+        pose([7.75,7.3,-5.05],[6.75,8.55,-7.15]),
+        pose([7.75,7.3,-8.65],[4.9,8.55,-7]),
+        pose([6.8,7.3,-9.48],[4.9,8.55,-6.9]),
+      ], '엘리베이터 앞 구동부 두 대와 이송로 네 열'),
     ] },
   { id: 'fourth', floor: 4, kind: 'walk', title: '4층 · V/F와 화인리턴', caption: 'V/F 수평 장치와 화인리턴', duration: 10,
     shots: [shot(10, pose([.2, 13.3, 7], [-4.4, 15.2, -1.7]), pose([.2, 13.3, 4], [4.9, 15.3, -3.1]))] },
@@ -126,11 +139,11 @@ function walkingSample(at) {
 
 export function createPresentationTour({ scene, furnace, onChange = () => {}, onTransition = () => {},
   now = () => performance.now(), requestFrame = callback => requestAnimationFrame(callback), cancelFrame = id => cancelAnimationFrame(id) } = {}) {
-  let elapsed = 0, playbackRate = 1, status = 'ready', active = true, disposed = false, frame = null, lastTime = null;
+  let elapsed = 0, playbackRate = 1, status = 'ready', active = true, inspecting = false, disposed = false, frame = null, lastTime = null;
   let enteredStep = -1, enteredShot = -1, transitionKey = '', transitionUntil = -1, transitionActive = false;
   let caption = TOUR_STEPS[0].caption, title = TOUR_STEPS[0].title;
   let stepIndex = 0, doorInteraction = null, doorWait = null, doorAction = null, lastPose = null;
-  const state = () => ({ status, stepIndex, step: TOUR_STEPS[stepIndex], title, caption, elapsed,
+  const state = () => ({ status, inspecting, stepIndex, step: TOUR_STEPS[stepIndex], title, caption, elapsed,
     doorInteraction, waitingDoor: !!doorWait, doorAction,
     totalDuration: total, progress: elapsed / total, playbackRate,
     playbackDuration: total / playbackRate, playbackElapsed: elapsed / playbackRate, remainingDuration: (total - elapsed) / playbackRate });
@@ -194,7 +207,11 @@ export function createPresentationTour({ scene, furnace, onChange = () => {}, on
       if (!doorWait) doorInteraction = scene.getPresentationDoorState?.() || null;
       caption = current.caption || step.caption;
     }
-    if (status === 'finished') { clearDoorWait(); doorInteraction = null; title = '건조기 시연을 마쳤습니다'; caption = '층과 시점을 선택해 평면·입체로 직접 둘러보세요.'; }
+    if (status === 'finished') {
+      clearDoorWait(); doorInteraction = null;
+      title = '건조기 시연을 마쳤습니다'; caption = '층과 시점을 선택해 평면·입체로 직접 둘러보세요.';
+      furnace?.close({ notify: false }); inspecting = true; scene.setPresentationInspection?.(true);
+    }
     notify();
   }
   function schedule() { if (frame === null && active && status === 'playing' && !disposed) frame = requestFrame(tick); }
@@ -209,27 +226,39 @@ export function createPresentationTour({ scene, furnace, onChange = () => {}, on
     lastTime = at;
     if (elapsed >= total) { status = 'finished'; lastTime = null; }
     render();
-    if (status === 'finished') { furnace?.close({ notify: false }); scene.setPresentationInspection?.(true); }
     schedule();
   }
   const controller = {
     play() {
       if (disposed || !active) return false;
       if (status === 'finished') controller.restart();
-      if (TOUR_STEPS[stepIndex].kind === 'burner') furnace?.open({ spread: burnerSpread(elapsed - starts[stepIndex]) });
+      const wasInspecting = inspecting;
+      if (wasInspecting) {
+        inspecting = false; scene.setPresentationInspection?.(false);
+        enteredStep = -1; enteredShot = -1; transitionKey = '';
+      }
+      if (!wasInspecting && TOUR_STEPS[stepIndex].kind === 'burner') furnace?.open({ spread: burnerSpread(elapsed - starts[stepIndex]) });
       status = 'playing'; lastTime = now();
-      render(); schedule(); return true;
+      render({ fade: !wasInspecting }); schedule(); return true;
     },
     pause() { if (disposed || status !== 'playing') return; status = 'paused'; stopFrame(); shade(false); notify(); },
+    inspect() {
+      if (disposed) return false;
+      if (inspecting) return true;
+      stopFrame(); clearDoorWait(); doorInteraction = null;
+      status = 'paused'; inspecting = true;
+      furnace?.close({ notify: false }); shade(false); scene.setPresentationInspection?.(true);
+      notify(); return true;
+    },
     restart() {
       if (disposed) return;
-      stopFrame(); clearDoorWait(); scene.setPresentationInspection?.(false); scene.resetPresentationDoors?.(); elapsed = 0; status = 'ready'; enteredStep = -1; enteredShot = -1; transitionKey = '';
+      stopFrame(); clearDoorWait(); inspecting = false; scene.setPresentationInspection?.(false); scene.resetPresentationDoors?.(); elapsed = 0; status = 'ready'; enteredStep = -1; enteredShot = -1; transitionKey = '';
       shade(false); render({ fade: false });
     },
     seek(index) {
       if (disposed || !Number.isInteger(index) || index < 0 || index >= TOUR_STEPS.length) return false;
       const wasPlaying = status === 'playing' && active;
-      stopFrame(); clearDoorWait(); scene.setPresentationInspection?.(false); elapsed = starts[index]; status = wasPlaying ? 'playing' : 'paused'; enteredStep = -1; transitionKey = '';
+      stopFrame(); clearDoorWait(); inspecting = false; scene.setPresentationInspection?.(false); elapsed = starts[index]; status = wasPlaying ? 'playing' : 'paused'; enteredStep = -1; transitionKey = '';
       render({ fade: wasPlaying }); if (wasPlaying) { lastTime = now(); schedule(); } return true;
     },
     setActive(value) { active = !!value; if (!active) controller.pause(); },

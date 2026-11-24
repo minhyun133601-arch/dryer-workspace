@@ -20,6 +20,20 @@ export const MODULES = Object.freeze([
   }),
 ]);
 
+// A standalone export can be installed as apps/<id>/index.html at any time.
+export const OPTIONAL_MODULES = Object.freeze([
+  { id: 'motor', name: '모터 분해도', kicker: 'MOTOR LAB', description: '전동기 내부 부품과 조립 순서를 확인합니다.', detail: '3D 분해도 · 단면도', accent: 'blue' },
+  { id: 'panel', name: '제어판', kicker: 'CONTROL PANEL', description: '제어반 부품의 위치와 실물 사진을 확인합니다.', detail: '부품 배치 · 사양', accent: 'green' },
+  { id: 'heat-exchanger', name: '열교환기 시뮬레이터', kicker: 'HEAT RECOVERY', description: '공기 흐름과 운전 조건에 따른 열회수 효과를 확인합니다.', detail: '설비 구조 · 운전 조건', accent: 'blue' },
+].map(module => Object.freeze({ ...module, entry: `apps/${module.id}/index.html` })));
+
+export function installedModules(optionalIds = []) {
+  const optional = OPTIONAL_MODULES.filter(module => optionalIds.includes(module.id));
+  return [...MODULES, ...optional.map((module, i) => ({
+    ...module, number: String(MODULES.length + i + 1).padStart(2, '0'),
+  }))];
+}
+
 export function validateModules(modules) {
   const ids = new Set();
   for (const module of modules) {
@@ -35,6 +49,7 @@ export function validateModules(modules) {
 }
 
 validateModules(MODULES);
+validateModules([...MODULES, ...OPTIONAL_MODULES]);
 
 export function resolveRoute(hash, modules = MODULES) {
   const id = hash.replace(/^#\/?/, '').split(/[/?]/)[0];

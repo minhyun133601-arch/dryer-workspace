@@ -1,4 +1,5 @@
 import * as THREE from '../shared/vendor/three.module.js';
+import { equipmentReflection } from './equipment-lighting.js';
 import { buildFurnace } from './furnace-model.js';
 import { FLOORS, FLOOR_HEIGHT, floorElevation, floorHeight } from './facility-data.js';
 import { buildFacilityEquipment } from './facility-models.js';
@@ -7,8 +8,10 @@ import { buildPreparationEquipment } from './preparation-models.js';
 import { buildPreparationBoilerRoom } from './boiler-models.js';
 import { buildPreparationEnvironment } from './preparation-environment.js';
 import { buildDryerRouteEnvironment } from './dryer-route-environment.js';
+import { buildDryerCompressorEnvironment } from './dryer-compressor-environment.js';
+import { buildDryerCompressorInteriorDetails } from './dryer-compressor-interior-details.js';
 import { buildDryerUpperEnvironment, buildDryerUpperEquipment } from './dryer-upper-models.js';
-import { buildDryerBuildingEnvironment } from './dryer-building-envelope.js';
+import { buildDryerBuildingEnvironment, alignDryerCompressorEntrance } from './dryer-building-envelope.js';
 import { OUTDOOR_ROOM } from './outdoor-data.js';
 import { buildOutdoorEnvironment, buildOutdoorEquipment } from './outdoor-models.js';
 import { CAMPUS_ROOM } from './campus-data.js';
@@ -113,7 +116,7 @@ class FacilityScene {
     this.partitionsEnabled = false;
     this.ductsEnabled = true;
     this.packagingLevel = packagingLevel === 'all' ? 'all' : PACKAGING_ROOMS[Number(packagingLevel)] ? Number(packagingLevel) : 'all';
-    this.packagingCargoVisible = false;
+    this.packagingCargoVisible = true;
     this.active = true;
     this.disposed = false;
     this._pickTimer = null;
@@ -314,6 +317,7 @@ class FacilityScene {
   }
 
   _lights() {
+    this.textures.add(equipmentReflection(this.scene));
     this.scene.add(new THREE.HemisphereLight(0xf4fbff, 0x668278, 2.8));
     const sun = new THREE.DirectionalLight(0xfff3d9, 3.6);
     sun.position.set(-28, 85, 35); sun.castShadow = true;
@@ -353,6 +357,15 @@ class FacilityScene {
       const environment = buildDryerBuildingEnvironment(this, { floor: floor.id, elevation, spec: floor });
       buildPreparationEnvironment(this, environment, floor);
       buildDryerRouteEnvironment(this, environment, floor);
+      buildDryerCompressorEnvironment(this, environment, floor);
+      alignDryerCompressorEntrance(environment);
+      buildDryerCompressorInteriorDetails(this, environment, floor);
+      if (floor.id === 3) {
+        environment.mapCaptions = [];
+        environment.architectureFixtures.traverse(node => {
+          if (node.userData.floorMapCaption) environment.mapCaptions.push(node);
+        });
+      }
       this.buildingEnvironments.set(floor.id, environment);
       this.floorDecks.set(floor.id, environment.deck); this.floorStructures.set(floor.id, environment.structure);
       for (const item of this.equipment.filter(entry => entry.floor === floor.id)) {
@@ -372,6 +385,7 @@ class FacilityScene {
     const map = new THREE.CanvasTexture(canvas); map.colorSpace = THREE.SRGBColorSpace; this.textures.add(map);
     const mat = new THREE.MeshBasicMaterial({ map, transparent: true, depthWrite: false, side: THREE.DoubleSide }); this.materials.add(mat);
     const mesh = this._mesh(new THREE.PlaneGeometry(width, height), mat, parent, position);
+    mesh.userData.floorMapCaption = true;
     mesh.castShadow = false; mesh.receiveShadow = false;
     mesh.rotation.x = -Math.PI / 2;
   }
@@ -768,6 +782,24 @@ class FacilityScene {
   }
 
   _personWalkLimits() {
+    // On 3F, the 2026-11-24 walk confirms continuous passage from the 3F hall
+    // through the NE stairwell landing and green outdoor roof into the air
+    // compressor room. Keep the walking rectangle bounded to that confirmed
+    // envelope so unfilmed south/far-east roof zones remain off-limits.
+    if (this.activeFloor === 3) {
+      const floor = FLOORS.find(entry => entry.id === 3);
+      const room = floor?.rooms?.find(entry => entry.id === 'compressor-room')?.bounds;
+      const walk = floor?.routeSurvey?.compressorWalk?.walkwayBounds;
+      if (room && walk) {
+        const frame = this._personFrame();
+        return {
+          ...frame,
+          maxX: Math.max(frame.maxX, room.maxX, walk.maxX),
+          minZ: Math.min(frame.minZ, room.minZ, walk.minZ),
+          maxZ: Math.max(frame.maxZ, walk.maxZ),
+        };
+      }
+    }
     return this._personFrame();
   }
 
@@ -837,6 +869,12 @@ class FacilityScene {
   _personGroundHeight(position, meshes) {
     const level = this.activeFloor === 'all' ? 1 : this.activeFloor;
     const floorY = typeof level === 'number' ? floorElevation(level) : 0;
+    // Lower storeys are visible through the 3F cutaway. Their floors must
+    // not catch a walker stepping off the surveyed compressor roof apron.
+    if ((this.activeFloor === 3 || this.activeFloor === 'all') && Math.abs(position[1] - floorElevation(3)) <= WALK_RULES.maxStep) {
+      const roofs = this.buildingEnvironments?.get(3)?.deck.userData.lowWingRoofZones;
+      if (roofs?.some(r => position[0] > r.minX && position[0] < r.maxX && position[2] > r.minZ && position[2] < r.maxZ)) return null;
+    }
     const world = this.activeFloor === 'outdoor' ? fromRoomPosition(position, OUTDOOR_ROOM) : [...position];
     const offset = level === 'packaging' ? this._packagingDisplayOffset({ floor: 'packaging', floorLevel: this.getPackagingLevel() === 'all' ? 1 : this.getPackagingLevel() }) : 0;
     world[1] += offset;
@@ -1034,6 +1072,24 @@ class FacilityScene {
     const position = this.activeFloor === 'outdoor' ? fromRoomPosition(this.person.position, OUTDOOR_ROOM) : [...this.person.position];
     if (this.activeFloor === 'packaging') position[1] += this._packagingDisplayOffset({ floor: 'packaging', floorLevel: this.getPackagingLevel() === 'all' ? 1 : this.getPackagingLevel() });
     return new THREE.Vector3(...position);
+  }
+
+  visitDryerInspectionPoint(origin, target) {
+    if (this.activeFloor !== 3 || this.placementMode || !this.personCamera) return false;
+    const y = floorElevation(3);
+    const [x,z] = origin;
+    const previousView = this.view;
+    this.setView('person');
+    const bodies = this._personCollisionBodies(), supports = new Set(this._personSupportMeshes());
+    const offsets = [[0,0],[0,-.35],[0,.35],[-.3,0],[.3,0],[0,-.7],[0,.7],[-.55,0],[.55,0]];
+    const position = offsets.map(([dx,dz]) => [x+dx,y,z+dz]).find(p => this._personCanOccupy(p,null,bodies,supports));
+    if (!position) { this.setView(previousView); return false; }
+    const dx = target[0]-position[0], dz = target[2]-position[2];
+    this.person = createPersonState({position, yaw: Math.atan2(dx,-dz),
+      pitch: Math.atan2(target[1]-y-WALK_RULES.eyeHeight,Math.hypot(dx,dz))});
+    this.personEyeY = null;
+    this.personStride = 0;
+    this._updatePersonCamera(); this._invalidate(); return true;
   }
 
   _updatePersonCamera() {
@@ -1577,6 +1633,8 @@ class FacilityScene {
     const camera = this._currentCamera();
     this.raycaster.setFromCamera(pointer, camera);
     this.raycaster.near = camera.near; this.raycaster.far = camera.far;
+    const station = this.compressorSurveyPick?.(this.raycaster);
+    if (station) return station;
     const visible = this.pickables.filter((object) => {
       let item = object;
       while (item) { if (!item.visible) return false; item = item.parent; }
@@ -1587,7 +1645,8 @@ class FacilityScene {
   }
 
   _pick(event, hit = this._hit(event)) {
-    if (Number.isInteger(hit?.userData.surveyIndex)) this.onSurveyPhoto(hit.userData.surveyIndex);
+    if (hit?.userData.compressorRecord) this.onCompressorSurvey?.(hit.userData.compressorRecord);
+    else if (Number.isInteger(hit?.userData.surveyIndex)) this.onSurveyPhoto(hit.userData.surveyIndex);
     else this.onSelect(hit?.userData.equipment || null);
   }
 
@@ -2270,6 +2329,8 @@ class FacilityScene {
       const visible = (inContext(item.floor) || (item.visibleFloors || []).includes(this.activeFloor)) && (item.floor !== 'packaging' || this.getPackagingLevel() === 'all' || (item.floorLevel ?? 3) === this.getPackagingLevel()) && (!this.isolated || item.id === this.selected);
       const object = this.objects.get(item.id); if (object) {
         object.visible = visible;
+        // 렉·평치의 적재물은 설비에 속하지만 「적재물 표시」를 따른다.
+        if (object.userData.packagingCargo) object.userData.packagingCargo.visible = !!this.packagingCargoVisible;
         if (object.userData.hasInspectableInterior) object.traverse((node) => {
           if (node.userData.campusInteriorCover) node.visible = !(this.selected === item.id && this.campusInteriorEnabled);
         });
@@ -2305,6 +2366,9 @@ class FacilityScene {
       const context = inContext(level) && !this.isolated;
       environment.facade.visible = context && this.structureEnabled && (this.partitionsEnabled || ['aisle', 'person'].includes(this.view));
       environment.cover.visible = context && this.structureEnabled && this.activeFloor !== 'all';
+      const compressorRoof = environment.cover.getObjectByName('dryer-building-3-compressor-room-roof');
+      for (const caption of environment.mapCaptions || []) caption.visible = this.view !== 'person' && this.view !== 'aisle';
+      if (compressorRoof) compressorRoof.visible = this.partitionsEnabled || ['aisle', 'person'].includes(this.view);
       // A shared stair can remain visible from its other landing without
       // revealing the rooms, doors or furnishings on the adjoining floor.
       const hiddenFixtures = this._hiddenArchitecturalFixtures ||= new WeakMap();

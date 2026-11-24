@@ -517,6 +517,7 @@ async function localViewerHarness(url = 'https://example.invalid/apps/site/index
     createChillerDetail: () => ({ open: () => chillerCalls.push('open'), close: () => chillerCalls.push('close'), dispose: () => chillerCalls.push('dispose') }),
     createLiquidDetail: (lifecycle = {}) => { liquidLifecycle = lifecycle; let opened=false; liquidInstance={open(options){liquidCalls.push(options||{});if(!opened){opened=true;lifecycle.onOpen?.();}},close(){if(opened){opened=false;lifecycle.onClose?.();}},dispose(){}};return liquidInstance; },
     createDryerUpperReference: () => ({ open: (time) => upperReferenceCalls.push(['open', time]), close: () => upperReferenceCalls.push(['close']), dispose: () => upperReferenceCalls.push(['dispose']) }),
+    createCompressorSurvey: () => ({ open() {}, attach() {}, dispose() {} }),
     createLayoutEditor: () => ({ select() {}, startMoving: (id) => moving.push(id), stopMoving: () => calls.push(['stopMoving']), dispose() {} }),
     createFacilityScene: (canvas, options) => { sceneOptions = options; return scene; },
   });
@@ -607,6 +608,7 @@ async function sharedViewerHarness(url = 'https://example.invalid/?floor=outdoor
     createChillerDetail: () => ({ open: () => chillerCalls.push('open'), close: () => chillerCalls.push('close'), dispose: () => chillerCalls.push('dispose') }),
     createLiquidDetail: (lifecycle = {}) => { liquidLifecycle = lifecycle; let opened=false; liquidInstance={open(options){liquidCalls.push(options||{});if(!opened){opened=true;lifecycle.onOpen?.();}},close(){if(opened){opened=false;lifecycle.onClose?.();}},dispose(){}};return liquidInstance; },
     createDryerUpperReference: () => ({ open: (time) => upperReferenceCalls.push(['open', time]), close: () => upperReferenceCalls.push(['close']), dispose: () => upperReferenceCalls.push(['dispose']) }),
+    createCompressorSurvey: () => ({ open() {}, attach() {}, dispose() {} }),
     createLayoutEditor: (options) => {
       editorOptions = options;
       return { select: (id) => editorSelections.push(id), startMoving: (id) => editorMoving.push(id), stopMoving: () => calls.push(['stopMoving']), handleTransform: (event) => editorTransforms.push(event), dispose() {} };

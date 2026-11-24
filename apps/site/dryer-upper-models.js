@@ -68,7 +68,14 @@ function accessDoor(s, h, parent, width, height, position) {
   for (const x of [-width * .32, width * .32]) for (const y of [-height / 2 - .02, height / 2 + .02]) h.box(group, [.16, .035, .09], [x, y, .1], 'trim');
   const x = width * .31;
   h.bar(group, [x, -.25, .11], [x, -.25, .22], .02); h.bar(group, [x, -.25, .22], [x, .3, .22], .025); h.bar(group, [x, .3, .22], [x, .3, .11], .02);
-  h.cyl(group, .12, .1, [-width * .4, -height * .4, .16], 'trim', 'z'); h.ring(group, .12, .018, [-width * .4, -height * .4, .22], 'trim', 'z');
+  const port = s._group(group, [-width * .4, -height * .4, .16]);
+  h.cyl(port, .12, .1, [0, 0, 0], 'trim', 'z');
+  h.cyl(port, .092, .012, [0, 0, .055], 'dark', 'z');
+  h.ring(port, .116, .012, [0, 0, .059], 'trim', 'z');
+  h.bolts(port, Array.from({ length: 6 }, (_, i) => {
+    const a = i * TAU / 6;
+    return [.103 * Math.cos(a), .103 * Math.sin(a), .06];
+  }), 'z', .011);
   // The warning plaque colors are visible; unreadable lettering is not invented.
   h.box(group, [.18, .24, .012], [-width * .7, .1, .08], 'white'); h.box(group, [.18, .045, .014], [-width * .7, .01, .09], 'blue');
   return group;
@@ -269,8 +276,18 @@ function blower(s, root, item, h) {
   for (let i = 0; i < 12; i++) { const a = i * TAU / 12; h.bar(motor, [Math.cos(a) * .42, Math.sin(a) * .42, -.38], [Math.cos(a) * .42, Math.sin(a) * .42, .35], .015, 'motor'); }
   h.box(motor, [.24, .27, .2], [.36, -.03, 0], 'motor');
   const guard = s._part(root, '황색 구동 보호커버·외부 연결', [0, .2, 1.2]);
-  h.box(guard, [2.8, .75, .16], [.35, 2.65, 1.36], 'yellow');
-  for (let x = -.9; x < 1.65; x += .14) h.box(guard, [.025, .51, .025], [x, 2.65, 1.46], 'dark');
+  const cover = h.geo('blower-folded-belt-cover', () => {
+    const outline = new THREE.Shape();
+    outline.moveTo(-1.39, -.24); outline.quadraticCurveTo(-1.39, -.36, -1.22, -.36);
+    outline.lineTo(1.17, -.36); outline.quadraticCurveTo(1.39, -.36, 1.39, -.13);
+    outline.lineTo(1.39, .14); outline.quadraticCurveTo(1.39, .36, 1.17, .36);
+    outline.lineTo(-1.22, .36); outline.quadraticCurveTo(-1.39, .36, -1.39, .22); outline.closePath();
+    return new THREE.ExtrudeGeometry(outline, { depth: .12, bevelEnabled: true, bevelThickness: .012, bevelSize: .012, bevelSegments: 2, curveSegments: 6 });
+  });
+  h.mesh(guard, cover, h.m.yellow, [.35, 2.65, 1.30]);
+  const guardSlots = Array.from({ length: 18 }, (_, i) => ({ position: [-.86 + i * .14, 2.65, 1.436] }));
+  h.instances(guard, h.geo('blower-guard-slot', () => new THREE.BoxGeometry(.023, .48, .005)), 'dark', guardSlots);
+  h.bolts(guard, [-.83, 1.54].flatMap(x => [2.37, 2.93].map(y => [x, y, 1.436])), 'z', .022);
   const access = s._part(root, '점검 보행면·난간·사다리', [.2, 0, .5]);
   h.box(access, [4.8, .06, .7], [0, 1.56, 1.83], 'trim');
   for (const x of [-2.35, 0, 2.35]) h.bar(access, [x, 1.6, 2.14], [x, 2.65, 2.14], .025, 'red');
@@ -286,7 +303,11 @@ function cyclone(s, root, item, h) {
   h.cyl(lower, r, height * .59, [0, height * .295, 0]);
   for (const y of [.08, .5, height * .58]) h.ring(lower, r + .01, .025, [0, y, 0]); h.flange(lower, r + .025, [0, .12, 0], 'y', 'trim', 20);
   const upper = s._part(root, '상부 단차 외통·연결부', [0, .9, 0]);
-  h.cyl(upper, upperR, .28, [0, height * .59 + .14, 0], 'steel', 'y', r);
+  const shoulder = h.geo(`cyclone-rolled-shoulder:${r}:${upperR}`, () => new THREE.LatheGeometry(
+    [[r, 0], [r, .025], [r - .025, .052], [upperR + .045, .218], [upperR + .012, .247], [upperR, .28]]
+      .map(([radius, y]) => new THREE.Vector2(radius, y)), 48));
+  h.mesh(upper, shoulder, h.m.steel, [0, height * .59, 0]);
+  h.ring(upper, upperR + .008, .013, [0, height * .59 + .275, 0]);
   h.cyl(upper, upperR, height * .41 - .33, [0, height * .795 + .025, 0]); h.ring(upper, upperR + .01, .025, [0, height - .04, 0]);
   h.cyl(upper, upperR + .02, .045, [0, height - .02, 0]);
   const outlet = s._part(root, '가시 접속 덕트·플랜지', [.7, .2, 0]);

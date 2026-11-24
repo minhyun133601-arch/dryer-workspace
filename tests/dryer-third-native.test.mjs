@@ -32,13 +32,13 @@ test('native538 hopper feeds retain one inclined metal route and one wide flexib
     assert.equal(named(root,'observed-hopper-underdeck-knee-brace').length,4);
     assert.equal(named(root,'observed-round-drive-motor-fan-cap').length,2);
     assert.equal(named(root,'observed-round-drive-fixed-side-guard').length,4);
-    assert.equal(named(root,'observed-covered-transfer-trough').length,3);
+    assert.equal(named(root,'observed-covered-transfer-trough').length,4);
     const lid=named(root,'observed-hopper-sloping-cover')[0],sleeve=named(root,'observed-hopper-wide-flexible-coupling')[0];
     assert.ok(lid.geometry.parameters.radiusTop<lid.geometry.parameters.radiusBottom*.3,'the hopper roof slopes inward instead of ending in a flat drum cap');
-    assert.ok(sleeve.geometry.parameters.radiusTop>.35,'the pale flexible feed keeps its visibly broad diameter');
+    assert.ok(sleeve.geometry.parameters.radiusTop > lid.geometry.parameters.radiusBottom*.35,'the pale flexible feed is broad relative to the rescaled hopper');
     for(const trough of named(root,'observed-covered-transfer-trough')){
       const covers=named(trough,'observed-trough-removable-cover');
-      assert.equal(covers.length,3);
+      assert.equal(covers.length,7);
       assert.ok(box(covers[0]).max.x<box(covers[1]).min.x,'the separate removable lids retain visible seams');
     }
   }finally{h.dispose();}

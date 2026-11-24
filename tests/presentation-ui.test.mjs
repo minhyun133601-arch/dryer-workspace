@@ -108,17 +108,18 @@ async function harness({ embedded = false, failScene = false } = {}) {
       return { dispose() { calls.push(['furnace.dispose']); } };
     },
     createPresentationTour(options) {
-      let state = { status: 'ready', stepIndex: 0, step: steps[0], title: steps[0].title, caption: steps[0].caption, elapsed: 0, totalDuration: 210, progress: 0, playbackRate: 1, doorInteraction: null, waitingDoor: false, doorAction: null };
+      let state = { status: 'ready', inspecting: false, stepIndex: 0, step: steps[0], title: steps[0].title, caption: steps[0].caption, elapsed: 0, totalDuration: 210, progress: 0, playbackRate: 1, doorInteraction: null, waitingDoor: false, doorAction: null };
       const publish = () => options.onChange({ ...state, playbackDuration: state.totalDuration / state.playbackRate, playbackElapsed: state.elapsed / state.playbackRate, remainingDuration: (state.totalDuration - state.elapsed) / state.playbackRate });
       api = {
-        play() { calls.push(['tour.play']); state.status = 'playing'; publish(); },
+        play() { calls.push(['tour.play']); state.status = 'playing'; state.inspecting = false; publish(); },
         pause() { calls.push(['tour.pause']); if (state.status === 'playing') state.status = 'paused'; publish(); },
-        restart() { calls.push(['tour.restart']); state = { ...state, status: 'ready', stepIndex: 0, step: steps[0], title: steps[0].title, caption: steps[0].caption, progress: 0, doorInteraction: null, waitingDoor: false, doorAction: null }; publish(); },
-        seek(index) { calls.push(['tour.seek', index]); state = { ...state, stepIndex: index, step: steps[index], title: steps[index].title, caption: steps[index].caption, progress: index / steps.length }; publish(); },
+        inspect() { calls.push(['tour.inspect']); state.status = 'paused'; state.inspecting = true; state.doorInteraction = null; state.waitingDoor = false; state.doorAction = null; publish(); return true; },
+        restart() { calls.push(['tour.restart']); state = { ...state, status: 'ready', inspecting: false, stepIndex: 0, step: steps[0], title: steps[0].title, caption: steps[0].caption, elapsed: 0, progress: 0, doorInteraction: null, waitingDoor: false, doorAction: null }; publish(); },
+        seek(index) { calls.push(['tour.seek', index]); state = { ...state, status: state.status === 'playing' ? 'playing' : 'paused', inspecting: false, stepIndex: index, step: steps[index], title: steps[index].title, caption: steps[index].caption, elapsed: index * 10, progress: index / steps.length }; publish(); },
         setActive(active) { calls.push(['tour.setActive', active]); if (!active && state.status === 'playing') { state.status = 'paused'; publish(); } },
         dispose() { calls.push(['tour.dispose']); },
         state: () => state,
-        finish() { state.status = 'finished'; state.progress = 1; state.doorInteraction = null; state.waitingDoor = false; state.doorAction = null; publish(); },
+        finish() { state.status = 'finished'; state.inspecting = true; state.elapsed = state.totalDuration; state.progress = 1; state.doorInteraction = null; state.waitingDoor = false; state.doorAction = null; publish(); },
         shot(title, caption) { state.title = title; state.caption = caption; publish(); },
         advance(elapsed) { state.elapsed = elapsed; state.progress = elapsed / state.totalDuration; publish(); },
         setPlaybackRate(rate) { calls.push(['tour.setPlaybackRate', rate]); if (![.5, 1, 1.5, 2, 3].includes(rate)) return false; state.playbackRate = rate; publish(); return true; },
@@ -160,7 +161,77 @@ test('presentation starts ready at 1F with only dryer equipment, a visible start
   assert.equal(h.nodes('.route-stop')[1].children[1].textContent, '1.5층');
   assert.equal(h.node('[data-duration]').textContent, '3:30');
   assert.equal(h.node('[data-playback-rate]').value, '1');
-  assert.equal(h.node('#presentation-inspector').hidden, true);
+  assert.equal(h.node('#presentation-inspector').hidden, false);
+  assert.equal(h.document.body.dataset.inspecting, 'false');
+  assert.equal(h.node('[data-inspection-floor="1"]').getAttribute('aria-pressed'), 'true');
+  assert.ok(h.nodes('[data-inspection-view]').every((node) => node.getAttribute('aria-pressed') === 'false'), 'the walking camera is distinct from manual plan and 3D views');
+});
+
+test('plans and floor inspection are available before starting and resume the original first-floor scene', async () => {
+  const h = await harness();
+  h.node('[data-inspection-view="top"]').click();
+  assert.equal(h.api.state().status, 'paused'); assert.equal(h.api.state().inspecting, true);
+  assert.equal(h.document.body.dataset.inspecting, 'true'); assert.equal(h.api.state().elapsed, 0);
+  assert.equal(h.node('#tour-route').hidden, true);
+  assert.equal(h.node('[data-location]').textContent, '1층');
+  assert.equal(h.node('[data-scene-title]').textContent, '1층 · 평면 도면');
+  assert.equal(h.node('[data-view-label]').textContent, '평면 보기');
+  assert.equal(h.node('[data-inspection-view="top"]').getAttribute('aria-pressed'), 'true');
+  assert.equal(h.calls.filter(([name]) => name === 'tour.inspect').length, 1);
+  h.node('[data-inspection-floor="2"]').click();
+  assert.deepEqual(h.calls.slice(-2), [['scene.setFloor', 2], ['scene.setView', 'top']]);
+  assert.equal(h.node('[data-location]').textContent, '1.5층');
+  h.node('[data-inspection-reset]').click();
+  assert.deepEqual(h.calls.at(-1), ['scene.resetView']);
+  assert.equal(h.node('[data-inspection-view="perspective"]').getAttribute('aria-pressed'), 'true');
+  h.node('[data-inspection-all]').click();
+  assert.equal(h.node('[data-location]').textContent, '전체');
+  assert.equal(h.node('[data-inspection-all]').getAttribute('aria-pressed'), 'true');
+  assert.equal(h.calls.filter(([name]) => name === 'tour.inspect').length, 1, 'manual view changes keep the existing inspection session');
+  h.node('[data-action="resume"]').click();
+  assert.equal(h.api.state().status, 'playing'); assert.equal(h.api.state().inspecting, false);
+  assert.equal(h.document.body.dataset.inspecting, 'false'); assert.equal(h.node('#tour-route').hidden, false);
+  assert.equal(h.node('#presentation-inspector').hidden, false);
+  assert.equal(h.node('[data-location]').textContent, '1층');
+  assert.equal(h.node('[data-view-label]').textContent, '사람 시점');
+  assert.equal(h.node('[data-scene-title]').textContent, '장면 1');
+  assert.equal(h.node('[data-inspection-floor="1"]').getAttribute('aria-pressed'), 'true');
+  assert.equal(h.node('[data-inspection-all]').getAttribute('aria-pressed'), 'false');
+});
+
+test('plans open on the current floor while playing or paused and preserve progress through rate changes and resume', async () => {
+  for (const paused of [false, true]) {
+    const h = await harness();
+    h.node('[data-action="play"]').click(); h.api.seek(3); h.api.advance(50);
+    if (paused) h.node('[data-action="play"]').click();
+    const { elapsed, progress, stepIndex } = h.api.state();
+    h.node('[data-inspection-view="top"]').click();
+    assert.equal(h.api.state().status, 'paused'); assert.equal(h.api.state().inspecting, true);
+    assert.equal(h.node('[data-location]').textContent, '4층');
+    assert.equal(h.node('[data-scene-title]').textContent, '4층 · 평면 도면');
+    assert.equal(h.node('[data-inspection-floor="4"]').getAttribute('aria-pressed'), 'true');
+    assert.deepEqual(h.calls.slice(-3), [['scene.setFloor', 4], ['scene.setView', 'perspective'], ['scene.setView', 'top']]);
+    const count = h.calls.length;
+    h.node('[data-playback-rate]').change('2');
+    assert.deepEqual(h.calls.slice(count), [['tour.setPlaybackRate', 2]]);
+    assert.equal(h.node('[data-location]').textContent, '4층');
+    assert.equal(h.node('[data-inspection-view="top"]').getAttribute('aria-pressed'), 'true');
+    h.node('[data-inspection-floor="8"]').click();
+    assert.equal(h.node('[data-location]').textContent, '옥상');
+    assert.equal(h.api.state().elapsed, elapsed); assert.equal(h.api.state().progress, progress);
+    assert.equal(h.api.state().stepIndex, stepIndex);
+    h.node('[data-action="resume"]').click();
+    assert.equal(h.api.state().status, 'playing'); assert.equal(h.api.state().inspecting, false);
+    assert.equal(h.api.state().elapsed, elapsed); assert.equal(h.api.state().progress, progress);
+    assert.equal(h.api.state().stepIndex, stepIndex); assert.equal(h.api.state().playbackRate, 2);
+    assert.equal(h.document.body.dataset.inspecting, 'false');
+    assert.equal(h.node('[data-location]').textContent, '4층');
+    assert.equal(h.node('[data-view-label]').textContent, '사람 시점');
+    assert.equal(h.node('[data-scene-title]').textContent, '장면 4');
+    assert.equal(h.node('[data-scene-caption]').textContent, '설명 4');
+    assert.ok(h.nodes('[data-inspection-view]').every((node) => node.getAttribute('aria-pressed') === 'false'));
+    assert.ok(h.nodes('[data-total-progress]').every((node) => node.style.transform === `scaleX(${progress})`));
+  }
 });
 
 test('play, pause, previous, next, route seeking and restart update the visible scene and controls together', async () => {
@@ -201,6 +272,30 @@ test('keyboard transport supports Space, arrows and R while leaving native butto
   assert.equal(h.key('ArrowRight', new Element('input')), false);
   assert.equal(h.api.state().stepIndex, 0);
   assert.equal(h.key('Space', h.document.body, { ctrlKey: true }), false);
+});
+
+test('D toggles the current-floor plan and saved tour, ignoring inputs, modifiers and repeat keys', async () => {
+  const h = await harness();
+  h.node('[data-action="play"]').click(); h.api.seek(1); h.api.advance(12);
+  const elapsed = h.api.state().elapsed, progress = h.api.state().progress;
+  const editable = new Element('div'); editable.setAttribute('contenteditable', 'true');
+  const count = h.calls.length;
+  for (const target of [new Element('input'), new Element('textarea'), new Element('select'), editable]) assert.equal(h.key('KeyD', target), false);
+  for (const extras of [{ altKey: true }, { ctrlKey: true }, { metaKey: true }, { repeat: true }]) assert.equal(h.key('KeyD', h.document.body, extras), false);
+  assert.equal(h.calls.length, count); assert.equal(h.api.state().status, 'playing');
+  assert.equal(h.key('KeyD'), true);
+  assert.equal(h.api.state().status, 'paused'); assert.equal(h.api.state().inspecting, true);
+  assert.equal(h.node('[data-location]').textContent, '1.5층');
+  assert.equal(h.node('[data-scene-title]').textContent, '1.5층 · 평면 도면');
+  assert.equal(h.node('[data-inspection-view="top"]').getAttribute('aria-pressed'), 'true');
+  assert.equal(h.key('KeyD'), true);
+  assert.equal(h.api.state().status, 'playing'); assert.equal(h.api.state().inspecting, false);
+  assert.equal(h.api.state().elapsed, elapsed); assert.equal(h.api.state().progress, progress);
+  assert.equal(h.node('[data-scene-title]').textContent, '장면 2');
+  assert.equal(h.node('[data-view-label]').textContent, '사람 시점');
+  h.api.finish(); h.key('KeyD');
+  assert.equal(h.api.state().status, 'playing'); assert.equal(h.api.state().elapsed, 0);
+  assert.equal(h.api.state().inspecting, false); assert.equal(h.node('[data-location]').textContent, '1층');
 });
 
 test('native burner dialog contains synchronized working transport controls and closing it pauses playback', async () => {
@@ -280,13 +375,11 @@ test('walking past doors keeps the presentation unobstructed and offers no manua
   assert.equal(h.node('#presentation-door-prompt'), null);
 });
 
-test('the completed show offers only dryer floor and plan/3D inspection, preserves it on rate changes and hides it on restart', async () => {
+test('the completed show preserves dryer floor and plan/3D inspection on rate changes and resets its selection on restart', async () => {
   const h = await harness();
-  h.node('[data-inspection-floor="4"]').click();
-  h.node('[data-inspection-all]').click();
-  assert.equal(h.calls.some(([name]) => name === 'scene.setFloor'), false, 'inspection controls have no effect before the finale');
   h.api.finish();
   assert.equal(h.node('#presentation-inspector').hidden, false);
+  assert.equal(h.document.body.dataset.inspecting, 'true');
   assert.equal(h.node('#tour-route').hidden, true);
   assert.equal(h.node('[data-scene-title]').textContent, '시연을 마쳤습니다');
   assert.equal(h.node('[data-scene-caption]').textContent, '층과 시점을 선택해 직접 둘러보세요.');
@@ -328,7 +421,9 @@ test('the completed show offers only dryer floor and plan/3D inspection, preserv
   assert.equal(h.node('[data-inspection-floor="3"]').getAttribute('aria-pressed'), 'true');
   assert.equal(h.node('[data-location]').textContent, '3층');
   h.node('[data-action="restart"]').click();
-  assert.equal(h.node('#presentation-inspector').hidden, true);
+  assert.equal(h.node('#presentation-inspector').hidden, false);
+  assert.equal(h.document.body.dataset.inspecting, 'false');
+  assert.equal(h.node('[data-inspection-floor="1"]').getAttribute('aria-pressed'), 'true');
   assert.equal(h.node('#tour-route').hidden, false);
   assert.equal(h.api.state().playbackRate, 2, 'another show keeps the selected playback rate');
 });
@@ -366,6 +461,7 @@ test('fullscreen and page lifecycle keep the scene sized and dispose the show on
   assert.equal(h.document.fullscreenElement, h.document.documentElement);
   h.documentEvent('fullscreenchange');
   assert.equal(h.node('[data-fullscreen-label]').textContent, '전체 화면 종료');
+  assert.equal(h.api.state().status, 'playing', 'entering fullscreen starts a ready tour while transport controls are hidden');
   assert.deepEqual(h.calls.at(-1), ['scene.resize']);
   h.windowEvent('pagehide', { persisted: true });
   assert.equal(h.calls.some(([name]) => name === 'tour.dispose'), false);
@@ -373,6 +469,31 @@ test('fullscreen and page lifecycle keep the scene sized and dispose the show on
   assert.deepEqual(h.calls.at(-2), ['tour.setActive', true]);
   h.windowEvent('pagehide', { persisted: false });
   assert.deepEqual(h.calls.slice(-3).map(([name]) => name), ['tour.dispose', 'furnace.dispose', 'scene.dispose']);
+});
+
+test('fullscreen preserves a paused tour or open plan and leaving it restores its label without restarting', async () => {
+  for (const inspecting of [false, true]) {
+    const h = await harness();
+    h.node('[data-action="play"]').click(); h.api.seek(2); h.api.advance(35);
+    if (inspecting) h.node('[data-inspection-view="top"]').click();
+    else h.node('[data-action="play"]').click();
+    const count = h.calls.filter(([name]) => name === 'tour.play').length;
+    h.node('[data-action="fullscreen"]').click(); await Promise.resolve();
+    h.documentEvent('fullscreenchange');
+    assert.equal(h.api.state().status, 'paused'); assert.equal(h.api.state().inspecting, inspecting);
+    assert.equal(h.api.state().elapsed, 35);
+    assert.equal(h.calls.filter(([name]) => name === 'tour.play').length, count);
+    if (inspecting) {
+      assert.equal(h.node('[data-location]').textContent, '3층');
+      assert.equal(h.node('[data-view-label]').textContent, '평면 보기');
+    }
+    h.node('[data-action="fullscreen"]').click(); await Promise.resolve();
+    h.documentEvent('fullscreenchange');
+    assert.equal(h.document.fullscreenElement, null);
+    assert.equal(h.node('[data-fullscreen-label]').textContent, '전체 화면');
+    assert.equal(h.api.state().status, 'paused'); assert.equal(h.api.state().inspecting, inspecting);
+    assert.deepEqual(h.calls.at(-1), ['scene.resize']);
+  }
 });
 
 test('initialization failure shows recovery and leaves every navigation and playback action disabled', async () => {

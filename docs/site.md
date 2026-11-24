@@ -17,6 +17,9 @@
 | 버너 정비자료 | `burner-maintenance-data.js` | `burner-maintenance.js` |
 | 보일러실·후면 계단 | `campus-data.js`, `rear-survey-data.js` | `boiler-models.js`, `rear-stair-models.js` |
 | 스틱·소포장동 | `packaging-data.js`, `packaging-transport-data.js`, `team2-card-data.js` | `packaging-models.js`, `packaging-environment-v2.js`, `packaging-equipment-v2.js`, `packaging-line-models.js`, `packaging-routes.js` |
+| 2팀 9동 3층 작업장 | `packaging-floor3-data.js`의 게시 위치도, 설비 위치와 PDA | `packaging-floor3-environment.js`의 작업대·출입구, `packaging-mixing-models.js`의 믹서·시프트·호퍼, `packaging-storage-models.js`의 렉·평치, `packaging-kit.js`의 공통 부품 |
+| 1팀 2파트 건조실 3층 | `dryer-building-data.js`의 두 작업구역·계단참·옥상 통로, `dryer-lower-registration.js`의 디스크 컨베이어 | `dryer-process-models.js`의 이송관과 공통 점검대, `dryer-building-envelope.js`의 바닥과 출입문, `dryer-route-environment.js`의 작업장 |
+| 에어컴프레셔실 | `dryer-compressor-records.js`의 현장 사양과 사진 번호, `dryer-compressor-manuals.js`의 제조사 자료 | `dryer-compressor-environment.js`의 배치, `dryer-compressor-interior-details.js`의 외형, `dryer-compressor-view.js`의 실내 배치도·A-015·영상 대조·명판 조회 |
 | 액상 | `liquid-data.js`, `liquid-assets.js` | `liquid-models.js`, `liquid-card-models.js`, `liquid-detail.js` |
 | 실외기실 | `outdoor-data.js`, `outdoor-card-data.js`, `outdoor-drawing-data.js`, `outdoor-survey.js` | `outdoor-models.js` |
 | 냉동기 상세 | `chiller-data.js` | `chiller-model.js`, `chiller-detail.js` |

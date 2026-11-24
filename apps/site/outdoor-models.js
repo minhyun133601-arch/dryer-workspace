@@ -65,6 +65,13 @@ function palette(s) {
       c.fillStyle = random() > .5 ? '#a4642e' : '#6e472c'; c.fillRect(random() * w, random() * h, 4 + random() * 12, 5 + random() * 8);
     }
   });
+  const coilFins = texture(s, (c, w, h) => {
+    c.fillStyle = '#273337'; c.fillRect(0, 0, w, h);
+    for (let y = 0; y < h; y += 4) {
+      c.fillStyle = '#445354'; c.fillRect(0, y, w, 1);
+      c.fillStyle = '#202a2d'; c.fillRect(0, y + 2, w, 1);
+    }
+  }, 128, 128);
   const signTexture = (title, subtitle, color = '#216291') => texture(s, (c, w, h) => {
     c.fillStyle = '#e6e8de'; c.fillRect(0, 0, w, h); c.fillStyle = color; c.fillRect(0, h * .8, w, h * .2);
     c.fillStyle = '#21353c'; c.textAlign = 'center'; c.font = 'bold 54px sans-serif'; c.fillText(title, w / 2, h * .34);
@@ -91,7 +98,7 @@ function palette(s) {
     grille: s._material(0xffffff, .72, .15, { map: grille() }),
     rustyGrille: s._material(0xffffff, .87, .3, { map: grille(true) }),
     rust: s._material(0x9a633b, .9, .25),
-    coil: s._material(0x344c55, .83, .25),
+    coil: s._material(0xffffff, .72, .27, { map: coilFins }),
     cream: s._material(0xd9dcc5, .7, .16),
     duct: s._material(0x829497, .55, .6),
     rubber: s._material(0x293334, .95, .02),
@@ -185,9 +192,18 @@ function pressedPanel(s, parent, width, height, position, side = false) {
   const m = palette(s), g = s._group(parent, position);
   if (side) g.rotation.y = PI / 2;
   s._box(g, [width - .035, height - .035, .025], [0, 0, 0], m.silver);
-  const pressing = s._mesh(new THREE.SphereGeometry(.5, 20, 12), m.silver, g);
-  pressing.scale.set(width * .85, height * .85, .23);
-  for (const y of [-height / 2 + .035, height / 2 - .035]) s._box(g, [width - .035, .018, .03], [0, y, .012], m.silver);
+  // In cards 088/091 the pressed dome rolls gently into the flat flange.
+  // Its outer ring stays circular even on the rectangular top-row sheets.
+  const radius = Math.min(width, height) * .43;
+  const crown = [[1, .014], [.96, .018], [.88, .034], [.70, .075], [.45, .107], [.22, .12], [0, .125]];
+  const pressing = s._mesh(new THREE.LatheGeometry(crown.map(([fraction, depth]) => new THREE.Vector2(radius * fraction, depth)), 24), m.silver, g);
+  pressing.rotation.x = PI / 2;
+  for (const y of [-height / 2 + .035, height / 2 - .035]) {
+    s._box(g, [width - .035, .018, .03], [0, y, .012], m.silver);
+    for (const x of [-width * .25, 0, width * .25]) {
+      s._cyl(g, .011, .02, [x, y, .028], m.frame, .011, 6).rotation.x = PI / 2;
+    }
+  }
   for (const x of [-width / 2 + .035, width / 2 - .035]) {
     s._box(g, [.018, height - .035, .03], [x, 0, .012], m.silver);
     for (const y of [-height / 2 + .055, 0, height / 2 - .055]) s._cyl(g, .012, .025, [x, y, .027], m.frame, .012, 6).rotation.x = PI / 2;
@@ -224,6 +240,15 @@ function gauge(s, parent, x, y, z, r = .085) {
   const m = palette(s); const g = s._cyl(parent, r, .055, [x, y, z], m.shell, r, 16); g.rotation.x = PI / 2;
   torus(s, parent, r, .012, [x, y, z + .03], m.silver, true);
   pipe(s, parent, [[x, y, z + .037], [x + r * .4, y + r * .5, z + .037]], .006, m.vent);
+}
+
+function cabinetGaugeWindow(s, parent, x, y, z, radius, spacing) {
+  const m = palette(s), recessRadius = radius * 1.32;
+  s._box(parent, [2 * spacing, 2 * recessRadius, .028], [x, y, z], m.frame);
+  for (const end of [-1, 1]) {
+    s._cyl(parent, recessRadius, .028, [x + end * spacing, y, z], m.frame, recessRadius, 20).rotation.x = PI / 2;
+  }
+  for (const dial of [-1, 0, 1]) gauge(s, parent, x + dial * spacing, y, z + .022, radius);
 }
 
 // Preserve each movable part and named subassembly, while drawing its many
@@ -479,13 +504,13 @@ function outdoorUnit(s, root, item) {
     s._box(shell, [w, .035, .045], [0, 1.32, z], m.shell);
   }
   for (const x of [-w / 2 - .016, w / 2 + .016]) {
-    const panel = s._group(shell, [x, 1.37, 0]); panel.rotation.y = PI / 2;
+    const panel = s._group(shell, [x, 1.37, 0]); panel.rotation.y = Math.sign(x) * PI / 2;
     s._box(panel, [d - .04, h - .035, .025], [0, 0, 0], m.shell);
     for (const y of [-.01, .63]) s._box(panel, [d - .12, .014, .018], [0, y, .018], m.silver);
     s._box(panel, [d - .02, .025, .035], [0, -.43, .022], m.silver);
     for (const xx of [-.26, .26]) for (const yy of [-.88, -.36]) doorVents(s, panel, xx, yy, .025, .21, 4);
   }
-  for (const x of [-.98, -.77, -.56]) gauge(s, shell, x, 1.16, d / 2 + .055, .068);
+  cabinetGaugeWindow(s, shell, -.77, 1.16, d / 2 + .045, .068, .21);
   s._box(shell, [.035, .14, .035], [.07, .91, d / 2 + .055], m.vent);
   const signMaterial = { 'mix-1': m.signMix1, 'mix-2': m.signMix2, 'mix-4': m.signMix4 }[item.variant] || m.signUnit;
   sign(s, shell, signMaterial, [-.26, 1.12, d / 2 + .065], .3, .24);
@@ -627,7 +652,11 @@ function rack(s, root, item) {
   fan(s, upper, 0, 5.77, 0, .83);
   const frame = s._part(root, item.parts[2], [-.65, 0, .65]);
   for (const x of [-1.75, 1.75]) for (const z of [-1.15, 1.15]) s._box(frame, [.15, 3.12, .15], [x, 1.56, z], m.frame);
-  for (const y of [.16, 2.93]) s._box(frame, [3.68, .2, 2.4], [0, y, 0], m.frame);
+  for (const y of [.16, 2.93]) {
+    for (const z of [-1.15, 1.15]) s._box(frame, [3.68, .2, .13], [0, y, z], m.frame);
+    for (const x of [-1.75, 0, 1.75]) s._box(frame, [.13, .2, 2.21], [x, y, 0], m.frame);
+  }
+  s._box(frame, [3.58, .035, 2.30], [0, 3.043, 0], m.grating);
   for (const z of [-1.15, 1.15]) {
     for (const y of [3.4, 3.9]) pipe(s, frame, [[-1.75, y, z], [1.75, y, z]], .027, m.frame);
     for (const x of [-1.75, 0, 1.75]) pipe(s, frame, [[x, 2.95, z], [x, 3.94, z]], .027, m.frame);
@@ -663,7 +692,7 @@ function chiller(s, root, item) {
   for (const x of [-.71, .68]) squareGuard(s, coil, 1.3, 1.32, [x, 2.08, -.64], m.shell, .13);
   fan(s, coil, -.7, 2.85, 0, .52); fan(s, coil, .7, 2.85, 0, .52);
   const services = s._part(root, item.parts[2], [.85, .1, .6]);
-  for (const x of [-.98, -.71, -.44]) gauge(s, services, x, 1.32, .66, .092);
+  cabinetGaugeWindow(s, services, -.71, 1.32, .647, .092, .27);
   const tube = [[-1.5, .8, -.1], [-1.5, .8, .25], [-1.5, 2.5, .25], [-1.5, 2.5, .45], [-2.1, 2.5, .45]];
   pipe(s, services, tube, .13, m.silver);
   for (const y of [1, 2.25]) s._cyl(services, .15, .045, [-1.5, y, .25], m.silver, .15, 18);
@@ -684,12 +713,17 @@ function longCabinetChiller(s, root, item) {
       s._box(shell, [w / 4 - .035, 1.24, .025], [x, bottom + .62, z], m.shell);
       s._box(shell, [.025, h, .035], [x - w / 8, bottom + h / 2, z], m.silver);
       s._box(shell, [.027, .13, .035], [x + .4, 1.13, z + Math.sign(z) * .028], m.vent);
-      for (const xx of [x - .24, x + .24]) for (const yy of [.58, 1.35]) doorVents(s, shell, xx, yy, z + Math.sign(z) * .026, .23, 4);
+      if (z > 0) {
+        for (const xx of [x - .24, x + .24]) {
+          doorVents(s, shell, xx, .58, z + .026, .23, 4);
+          if (col !== 0) doorVents(s, shell, xx, 1.35, z + .026, .23, 4);
+        }
+      }
     }
     s._box(shell, [w, .035, .045], [0, 1.73, z], m.shell);
   }
   for (const x of [-w / 2 - .02, w / 2 + .02]) {
-    const end = s._group(shell, [x, 1.61, 0]); end.rotation.y = PI / 2;
+    const end = s._group(shell, [x, 1.61, 0]); end.rotation.y = Math.sign(x) * PI / 2;
     s._box(end, [d - .06, h - .04, .025], [0, 0, 0], m.shell);
     for (const y of [-.01, .69]) s._box(end, [d - .12, .014, .018], [0, y, .02], m.silver);
     for (const xx of [-.3, .3]) for (const yy of [-.91, -.36]) doorVents(s, end, xx, yy, .027, .22, 4);
@@ -714,10 +748,14 @@ function longCabinetChiller(s, root, item) {
       s._box(services, [.22, .035, .2], [x, .025, z], m.silver);
     }
   }
-  for (const x of [-1.72, -1.52, -1.32]) gauge(s, services, x, 1.57, .7, .065);
+  // Card 089 shows three dials in one inset at the front, and two pipe collars at the left end.
+  cabinetGaugeWindow(s, services, -1.52, 1.52, .684, .065, .20);
   // Only the visible short rear-side connections are represented. The card's
   // conflicting 40RT/60RT filenames do not establish a different capacity.
-  for (const y of [.86, 1.38]) insulatedPipe(s, services, [[-1.83, y, -.51], [-2.19, y, -.51], [-2.19, y, -.88]], .12);
+  for (const y of [.86, 1.38]) {
+    insulatedPipe(s, services, [[-1.83, y, -.51], [-2.19, y, -.51], [-2.19, y, -.88]], .12);
+    s._cyl(services, .15, .045, [-2.14, y, -.51], m.shell, .15, 20).rotation.z = PI / 2;
+  }
 }
 
 function pumpPit(s, root, item) {
@@ -981,6 +1019,7 @@ function airHandlingUnit(s, root, item) {
   s._box(duct, [1.24, 3 - roof, 1.14], [0, (roof + 3) / 2, 0], m.duct);
   s._box(duct, [1.24, .36, 1.14], [0, 3.18, 0], m.duct);
   s._box(duct, [1.18, .27, 1.08], [0, 3.47, 0], m.rubber);
+  for (const y of [3.38, 3.46, 3.54]) s._box(duct, [1.21, .028, 1.11], [0, y, 0], m.frame);
   for (const y of [3.31, 3.62]) s._box(duct, [1.32, .055, 1.22], [0, y, 0], m.silver);
   s._box(duct, [1.2, 1.06, 1.1], [0, 4.15, 0], m.duct);
   s._box(duct, [1.2, .72, 1.82], [0, 4.86, -.31], m.duct);
@@ -1001,6 +1040,7 @@ function airHandlingUnit(s, root, item) {
   const second = s._group(air, [1.22, 0, -.1]); second.name = 'outdoor-ahu-second-roof-duct';
   s._box(second, [1.3, 3.12 - roof, 1.14], [0, (roof + 3.12) / 2, 0], m.duct);
   s._box(second, [1.24, .25, 1.08], [0, 3.285, 0], m.rubber);
+  for (const y of [3.21, 3.28, 3.35]) s._box(second, [1.265, .026, 1.105], [0, y, 0], m.frame);
   for (const y of [3.13, 3.43]) s._box(second, [1.38, .055, 1.22], [0, y, 0], m.silver);
   s._box(second, [1.3, .41, 1.14], [0, 3.665, 0], m.duct);
   const inclined = new THREE.BoxGeometry(1.3, .83, 1.14), vertices = inclined.attributes.position;

@@ -81,7 +81,7 @@ export function buildDryerRouteEnvironment(s, environment, spec) {
     for(let i=0;i<=count;i++)box(root,'window-mullion',[.035,top-sill,.065],[i*length/count,(sill+top)/2,0],'trim');
     return root;
   };
-  const door=(name,point,width,{rotation=0,label=name,threshold=.02,height=2.3,paint='wall',glazed=true,glassPaint='glass',windowWidth,enterable=true,openAngle=Math.PI*.48,times=[]}={})=>{
+  const door=(name,point,width,{rotation=0,label=name,plaque=true,threshold=.02,height=2.3,paint='wall',glazed=true,glassPaint='glass',windowWidth,enterable=true,openAngle=Math.PI*.48,times=[]}={})=>{
     const root=group(details,`${name}-doorway`,[point[0],threshold,point[1]]);root.rotation.y=rotation;
     Object.assign(root.userData,{customArchitecturalDoor:true,doorId:name,openingWidth:width,openingHeight:height,sourceTimesSeconds:times});
     for(const x of [-width/2-.025,width/2+.025])box(root,'door-jamb',[.065,height+.08,.12],[x,height/2,0],'trim');
@@ -105,7 +105,7 @@ export function buildDryerRouteEnvironment(s, environment, spec) {
     }
     for(const y of [.25,height-.25])cylinder(pivot,'door-hinge',.019,.1,[0,y,.025],'steel');
     for(const z of [-.065,.065]){box(pivot,'door-latch-backplate',[.06,.2,.025],[width-.13,1.02,z],'steel');box(pivot,'door-lever',[.15,.028,.035],[width-.17,1.04,z*1.35],'dark');}
-    sign(root,label,[0,height+.2,.07],Math.min(width+.1,1.15));
+    if(plaque)sign(root,label,[0,height+.2,.07],Math.min(width+.1,1.15));
     return root;
   };
 
@@ -396,11 +396,11 @@ export function buildDryerRouteEnvironment(s, environment, spec) {
       sign(arrival,'3F',[p[0]+1,1.65,p[1]+.09],.45);
     }
     const b=spec.routeSurvey.glazedEnclosure,w=b.maxX-b.minX,d=b.maxZ-b.minZ,doorPosition=spec.routeSurvey.storageDoor?.position||[b.maxX,(b.minZ+b.maxZ)/2];
-    const root=group(details,'yellow-glazed-storage-room');Object.assign(root.userData,{sourceTimesSeconds:[450,462,474,480],roomFunction:'storage-context',functionInferred:true,interiorObserved:true});
+    const root=group(details,'yellow-glazed-storage-room');Object.assign(root.userData,{sourceTimesSeconds:[450,462,474,480],sourcePhotoNumbers:[3],roomFunction:'storage-context',functionInferred:true,interiorObserved:true});
     floorFinish('yellow-room-green-floor',b);
     wallLine('yellow-room-east',[b.maxX,b.maxZ],[b.maxX,b.minZ],{openings:[{offset:d/2,width:2.05,sill:1.0,height:1.3}]});
     glazedLine('yellow-room-east-fixed',[b.maxX,b.minZ+d/2-1.025],[b.maxX,b.minZ+d/2+1.025],{sill:1.0,top:2.3,pitch:2.5,paint:'yellowGlass'});
-    wallLine('yellow-room-south',[b.minX,b.maxZ],[b.maxX,b.maxZ],{openings:[{offset:w/2,width:2.05,sill:1.0,height:1.3}]});glazedLine('yellow-room-side',[b.minX+w/2-1.025,b.maxZ],[b.minX+w/2+1.025,b.maxZ],{sill:1.0,top:2.3,pitch:2.5,paint:'yellowGlass'});
+    wallLine('yellow-room-south',[b.minX,b.maxZ],[b.maxX,b.maxZ],{openings:[{offset:w/2,width:2.25,sill:.9,height:1.22}]});glazedLine('yellow-room-side',[b.minX+w/2-1.125,b.maxZ],[b.minX+w/2+1.125,b.maxZ],{sill:.9,top:2.12,pitch:2.5,paint:'yellowGlass'});
     wallLine('yellow-room-west',[b.minX,b.minZ],[b.minX,b.maxZ]);
     wallLine('yellow-room-north',[b.minX,b.minZ],[b.maxX,b.minZ],{openings:[{offset:doorPosition[0]-b.minX,width:1.05,height:2.32},{offset:1.4,width:1.15,sill:1.0,height:1.3}]});
     glazedLine('yellow-room-entry-facing-window',[b.minX+.825,b.minZ],[b.minX+1.975,b.minZ],{sill:1.0,top:2.3,pitch:2,paint:'yellowGlass'});
@@ -409,7 +409,7 @@ export function buildDryerRouteEnvironment(s, environment, spec) {
     for(const x of [-.26,.26])for(const z of [-1.15,1.15])box(shelf,'storage-shelf-upright',[.035,1.85,.035],[x,.945,z],'steel');for(const y of [.12,.65,1.18,1.75])box(shelf,'storage-shelf-deck',[.6,.035,2.4],[0,y,0],'steel');
     for(let i=0;i<3;i++){box(shelf,'yellow-storage-bin',[.48,.31,.61],[0,.82,-.8+i*.8],'yellow');box(shelf,'anonymous-tool-case',[.46,.18,.54],[0,.23,-.8+i*.8],'teal');box(shelf,'tool-case-handle',[.025,.07,.15],[.25,.24,-.8+i*.8],'dark');}
     const bench=group(root,'small-storage-workbench',[b.minX+w*.37,0,b.minZ+.37]);box(bench,'storage-bench-top',[1.45,.05,.62],[0,.8,0],'steel');for(const x of [-.62,.62])for(const z of [-.24,.24])box(bench,'storage-bench-leg',[.04,.77,.04],[x,.385,z],'steel');box(bench,'unlabelled-toolbox',[.6,.22,.36],[0,.935,0],'dark');
-    const boundary=group(details,'closed-gray-service-door',[.8,0,spec.routeSurvey.entryFromStair?.door[1]??-9.235]);boundary.rotation.y=Math.PI/2;Object.assign(boundary.userData,{sourceTimesSeconds:[450,480],destinationUnconfirmed:true,unseenInteriorAdded:false,registrationBasis:'entry-relative room-and-end-door topology; approximate'});
+    const boundary=group(details,'closed-gray-service-door',[-4.95,0,-8.6]);boundary.rotation.y=Math.PI/2;Object.assign(boundary.userData,{sourceTimesSeconds:[450,480],destinationUnconfirmed:true,unseenInteriorAdded:false,registrationBasis:'entry-relative room-and-end-door topology; approximate'});
     box(boundary,'closed-service-corridor-end-wall',[2.1,2.9,.08],[0,1.45,-.05],'wall');
     box(boundary,'fixed-gray-service-door',[.95,2.18,.025],[0,1.11,0],'gray');for(const x of [-.51,.51])box(boundary,'service-door-jamb',[.05,2.27,.05],[x,1.135,0],'trim');box(boundary,'service-door-handle',[.14,.025,.055],[.32,1.0,.055],'steel');box(boundary,'blank-door-notice',[.54,.24,.012],[0,1.72,.022],'paper');box(boundary,'exit-sign',[.45,.14,.045],[0,2.4,0],'green');
     const insect=group(boundary,'violet-wall-insect-trap',[-.9,1.95,.05]);box(insect,'insect-trap-case',[.46,.24,.09],[0,0,0],'dark');for(const y of [-.055,.055])box(insect,'insect-light-tube',[.39,.018,.015],[0,y,.054],'violet');
@@ -488,17 +488,54 @@ export function buildDryerRouteEnvironment(s, environment, spec) {
 
     const shutter=spec.routeSurvey.shutter;
     if(shutter){
-      const fixed=group(details,'closed-observed-gray-roller',[shutter.position[0],0,shutter.position[1]-.07]);Object.assign(fixed.userData,{sourceTimesSeconds:shutter.sourceTimes||[567],destinationUnconfirmed:true,enterable:false,unseenInteriorAdded:false,openingAnimationAdded:false});
+      const inward = shutter.side==='north' ? 1 : -1;
+      const fixed=group(details,'closed-observed-gray-roller',[shutter.position[0],0,shutter.position[1]+inward*.14]);
+      fixed.rotation.y = inward>0 ? Math.PI : 0;
+      Object.assign(fixed.userData,{sourceTimesSeconds:shutter.sourceTimes||[567],sourcePhotoNumbers:shutter.photoNumbers,destinationUnconfirmed:true,enterable:false,unseenInteriorAdded:false,openingAnimationAdded:false});
       box(fixed,'gray-roller-closed-curtain',[shutter.width-.1,shutter.height-.045,.035],[0,shutter.height/2,.005],'gray');
       repeats(fixed,'gray-roller-static-slats',[shutter.width-.11,.018,.025],Array.from({length:Math.floor(shutter.height/.09)},(_,i)=>[0,.055+i*.09,-.025]),'trim');
       for(const side of [-1,1])box(fixed,'gray-roller-fixed-guide',[.085,shutter.height+.14,.1],[side*(shutter.width/2+.0125),shutter.height/2,0],'steel');
       box(fixed,'gray-roller-fixed-housing',[shutter.width+.2,.21,.24],[0,shutter.height+.115,-.12],'steel');
-      const load=group(details,'observed-movable-bulkbag-pallet',[shutter.position[0],0,shutter.position[1]-1.5]);Object.assign(load.userData,{sourceTimesSeconds:[567],movableContext:true,quantityRepresentative:true,contentsConfirmed:false});
+      const load=group(details,'observed-movable-bulkbag-pallet',[shutter.position[0],0,shutter.position[1]+inward*1.5]);Object.assign(load.userData,{sourceTimesSeconds:[567],movableContext:true,quantityRepresentative:true,contentsConfirmed:false});
       repeats(load,'bulkbag-pallet-slats',[1.08,.055,.18],[-.36,-.12,.12,.36].map(z=>[0,.16,z]),'wood');repeats(load,'bulkbag-pallet-feet',[.18,.12,.9],[-.42,0,.42].map(x=>[x,.07,0]),'dark');
       const bag=s._mesh(geo('third-bulkbag-soft-body',()=>new THREE.CylinderGeometry(.47,.58,1.04,8)),m.white,load,[0,.71,0]);bag.rotation.y=Math.PI/8;bag.name='dryer-route-observed-white-bulkbag';
       cylinder(load,'bulkbag-gathered-top',.15,.12,[0,1.29,0],'white');
       repeats(load,'bulkbag-lift-loop-uprights',[.025,.19,.025],[-.3,.3].flatMap(x=>[-.3,.3].map(z=>[x,1.23,z])),'paper');
       repeats(load,'bulkbag-lift-loop-tops',[.2,.025,.025],[-.3,.3].flatMap(x=>[-.3,.3].map(z=>[x,1.3275,z])),'paper');
+    }
+    const hallMap=group(environment.architectureFixtures,'hall-area-reference');
+    Object.assign(hallMap.userData,{floorMapCaption:true,personCollision:false,approximateGuide:true});
+    const registration = spec.routeSurvey.hallRegistration;
+    const connection = registration.connectingDoor;
+    const [cx,cz]=connection.position,half=connection.panelSpan/2;
+    const perimeterWall=wallLine('process-area-panel',[cx,cz-half],[cx,cz+half],{
+      height:2.78,paint:'white',openings:[{offset:half,width:connection.width,height:connection.height+.025}],
+    });
+    perimeterWall.lower.userData.sourceTimesSeconds=connection.sourceTimes;
+    perimeterWall.upper.userData.sourceTimesSeconds=connection.sourceTimes;
+    const gateway=door(connection.id,connection.position,connection.width,{
+      rotation:Math.atan2(...connection.normal),label:'기존 설비 작업 구역 연결문',plaque:false,
+      height:connection.height,glazed:false,paint:'white',openAngle:Math.PI*.5,times:connection.sourceTimes,
+    });
+    const leaf=gateway.children.find(n=>n.userData.doorLeaf);
+    for(const face of [-1,1]){
+      const front=face*.027;
+      for(const x of [.028,connection.width-.028])box(leaf,'process-link-aluminium-stile',[.021,connection.height-.07,.012],[x,connection.height/2,front],'trim');
+      for(const y of [.052,connection.height-.052])box(leaf,'process-link-aluminium-rail',[connection.width-.05,.022,.012],[connection.width/2,y,front],'trim');
+    }
+    box(leaf,'process-side-horizontal-bar',[connection.width-.145,.045,.047],[connection.width/2,1.02,-.087],'steel');
+    for(let i=1;i<registration.boundaryGuide.length;i++){
+      const [ax,az]=registration.boundaryGuide[i-1],[bx,bz]=registration.boundaryGuide[i];
+      const length=Math.hypot(bx-ax,bz-az),count=Math.ceil(length/.65);
+      for(let j=0;j<count;j++){
+        const along=(j+.5)/count,x=ax+(bx-ax)*along,z=az+(bz-az)*along;
+        if(Math.abs(x-cx)<.1 && Math.abs(z-cz)<half+.1)continue;
+        const stroke=box(hallMap,'survey-area-divider-dash',[.032,.008,length/count*.53],[x,.029,z],'paper');
+        stroke.rotation.y=Math.atan2(bx-ax,bz-az);
+      }
+    }
+    for(const area of registration.areas){
+      s._groundText?.(area.name,[area.labelAt[0],.04,area.labelAt[1]],4.5,.52,hallMap,{fitText:true,color:'#27483e'});
     }
     return details;
   }

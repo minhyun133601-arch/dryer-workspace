@@ -2,10 +2,11 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import vm from 'node:vm';
-import { MODULES, resolveRoute } from '../workspace/module-registry.js';
+import { MODULES, installedModules, resolveRoute } from '../workspace/module-registry.js';
 
-async function workspace(hash = '#/presentation') {
-  const source = (await readFile(new URL('../workspace/app.js', import.meta.url), 'utf8')).replace("import { MODULES, resolveRoute } from './module-registry.js';", '');
+async function workspace(hash = '#/presentation', optionalModules = []) {
+  const source = (await readFile(new URL('../workspace/app.js', import.meta.url), 'utf8'))
+    .replace(/^import .* from '\.\/module-registry\.js';$/m, '');
   const nodes = new Map(), windowEvents = new Map(), documentEvents = new Map(), messages = [];
   const element = (id = '') => ({
     id, dataset: {}, attributes: {}, children: [], hidden: false, listeners: new Map(),
@@ -34,10 +35,11 @@ async function workspace(hash = '#/presentation') {
   };
   const location = { hash, protocol: 'http:', origin: 'http://localhost:4173' };
   const window = { addEventListener: (type, callback) => windowEvents.set(type, callback) };
-  const context = vm.createContext({ MODULES, resolveRoute, document, location, window,
+  const context = vm.createContext({ MODULES, installedModules, resolveRoute, document, location, window, AbortSignal,
+    fetch: async () => Response.json({ optionalModules }),
     history: { replaceState(state, title, next) { location.hash = next; } }, setTimeout: () => 1, clearTimeout() {},
   });
-  new vm.Script(`${source}\nglobalThis.state = () => ({ current, presentationActive, ids: [...instances.keys()] });`).runInContext(context);
+  await new vm.Script(`(async () => {\n${source}\nglobalThis.state = () => ({ current, presentationActive, ids: [...instances.keys()] });\n})()`).runInContext(context);
   const frame = id => node('module-views').children.find(value => value.dataset.module === id);
   return {
     document, location, node, frame, messages, state: context.state,
@@ -45,6 +47,13 @@ async function workspace(hash = '#/presentation') {
     message(id, data, { origin = location.origin, source = frame(id)?.contentWindow } = {}) { windowEvents.get('message')({ origin, source, data }); },
   };
 }
+
+test('a deep link opens an installed optional app, and an absent app returns to the overview', async () => {
+  const w = await workspace('#/motor', ['motor']);
+  assert.equal(w.frame('motor').src, 'apps/motor/index.html');
+  w.route('#/panel');
+  assert.equal(w.state().current, 'home');
+});
 
 test('the active presentation hides workspace navigation and rejects other modules until it ends', async () => {
   const w = await workspace('#/site');

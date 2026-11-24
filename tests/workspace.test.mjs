@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { access, readFile } from 'node:fs/promises';
-import { MODULES, resolveRoute, validateModules } from '../workspace/module-registry.js';
+import { MODULES, installedModules, resolveRoute, validateModules } from '../workspace/module-registry.js';
 
 test('every registered space has a canonical entry and a stable route', async () => {
   assert.equal(validateModules(MODULES), MODULES);
@@ -35,4 +35,12 @@ test('a new space can be registered without changing route logic', () => {
   assert.equal(resolveRoute('#/simulator', modules), 'simulator');
   assert.throws(() => validateModules([...modules, modules[0]]), /ID/);
   assert.throws(() => validateModules([{ id: 'external', name: 'External', entry: 'https://example.com/' }]), /경로/);
+});
+
+test('the home adds only recognized installed modules, in stable order', () => {
+  const modules = installedModules(['heat-exchanger', 'unlisted', 'motor', 'motor']);
+  assert.deepEqual(modules.map(item => item.id), ['site', 'drawings', 'presentation', 'motor', 'heat-exchanger']);
+  assert.equal(resolveRoute('#/panel', modules), 'home');
+  assert.equal(resolveRoute('#/heat-exchanger', modules), 'heat-exchanger');
+  assert.equal(modules.at(-1).number, '05');
 });

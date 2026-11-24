@@ -106,7 +106,37 @@ test('the third floor shrinks to the tower and keeps unconfirmed drawing-only ci
       assert.equal(tank.historicalOnly,true);assert.equal(tank.currentInstallationConfirmed,false);
       assert.equal(tank.referenceOnly,true);assert.equal(tank.selectableEquipment,false);
     }
-    assert.ok(!h.labels.some(label=>label.text==='콤프레샤실'),'an unconfirmed historical room is reference-only');
+    const spec = DRYER_BUILDING_FLOORS[3], room = spec.rooms.find(r => r.id === 'compressor-room');
+    assert.equal(room.floorConfirmedByUser, true);
+    assert.equal(room.name, '공기압축기실');
+    assert.ok(h.labels.some(label => label.text === '에어컴프레셔실'));
+    assert.match(room.positionBasis, /A-015/);
+    const {minX, maxX, minZ, maxZ} = room.bounds, centreX = (minX + maxX) / 2, centreZ = (minZ + maxZ) / 2;
+    assert.ok(minX >= spec.northEastBay.maxX - .01, 'the separate room is east of the stair bay');
+    const hits = down(three.deck, centreX, centreZ);
+    close(hits[0].point.y, spec.elevation, 'the room has a real 3F floor');
+    const roofHits = down(three.cover, centreX, centreZ);
+    assert.ok(roofHits.length && roofHits.every(hit => hit.point.y > spec.elevation + 2.6), 'no low-wing roof crosses the room floor');
+    const door = three.architectureFixtures.children.find(node => node.userData.doorId === 'compressor-room-south');
+    assert.equal(door.userData.positionBasis, room.positionBasis);
+    const leaves = door.children.filter(node => node.userData.proximityDoor);
+    assert.equal(leaves.length, 1);
+    assert.ok(door.getObjectByName('architectural-fixed-door-leaf'));
+    assert.ok(leaves.every(leaf => leaf.userData.proximityDoor.enterable));
+    const centre = door.getWorldPosition(new THREE.Vector3());
+    close(centre.z, maxZ, 'A-015 south entrance');
+    for (const [id, rise] of [['third-ne-roof-door', .08], ['compressor-room-south', .12]]) {
+      const portal = three.architectureFixtures.children.find(node => node.userData.doorId === id);
+      const base = portal.getWorldPosition(new THREE.Vector3());
+      const top = down(three.deck, base.x, base.z)[0];
+      assert.equal(top.object.userData.thresholdFor, id);
+      assert.equal(top.object.userData.dimensionsMeasured, false);
+      close(top.point.y, spec.elevation + rise, 'green curb height on the filmed route');
+      close(base.y + portal.userData.openingHeight, spec.elevation + 2.2, 'door head stays registered to the wall opening');
+    }
+    const through = new THREE.Raycaster(new THREE.Vector3(centre.x, spec.elevation + 1.3, centre.z + .5), new THREE.Vector3(0, 0, -1), 0, 1);
+    assert.equal(through.intersectObject(three.facade, true).length, 0, 'the opening is cut through the shell');
+    assert.ok(down(three.deck, centre.x, centre.z + .55)[0].object.userData.lowWingRoof, 'the door meets the existing roof, not another interior room');
     assert.equal(down(three.deck,-7,-10).length,0,'the filmed return stair has a real opening in the 3F bay');
     const [doorX,doorZ]=DRYER_BUILDING_FLOORS[3].routeSurvey.entryFromStair.door;
     assert.ok(down(three.deck,doorX,doorZ+.35).length>0,'the top stair landing joins the reduced 3F slab at the observed return door');

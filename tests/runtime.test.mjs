@@ -142,6 +142,15 @@ test('modeling server serves site, drawing and shared assets while blocking priv
   for (const route of ['/apps/%5c..%5cpackage.json', '/apps/%00', '/apps/%ZZ', '/apps/site/index.html:stream']) {
     assert.equal((await rawRequest(port, route)).status, 400, route);
   }
+  const installed = async () => JSON.parse((await rawRequest(port, '/__workspace')).body).optionalModules;
+  assert.deepEqual(await installed(), []);
+  await mkdir(path.join(fixture, 'apps/motor'));
+  const optionalEntry = path.join(fixture, 'apps/motor/index.html');
+  await writeFile(optionalEntry, '<html lang="ko"><title>모터 분해도</title></html>');
+  assert.deepEqual(await installed(), ['motor']);
+  assert.equal((await rawRequest(port, '/apps/motor/index.html')).status, 200);
+  await rm(optionalEntry);
+  assert.deepEqual(await installed(), []);
 });
 
 test('launcher reuses only the same workspace server without changing storage origin', async (t) => {

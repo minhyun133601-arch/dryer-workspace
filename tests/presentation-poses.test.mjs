@@ -13,7 +13,9 @@ import { buildPreparationEquipment } from '../apps/site/preparation-models.js';
 import { buildPreparationBoilerRoom } from '../apps/site/boiler-models.js';
 import { buildPreparationEnvironment } from '../apps/site/preparation-environment.js';
 import { buildDryerRouteEnvironment } from '../apps/site/dryer-route-environment.js';
-import { buildDryerBuildingEnvironment } from '../apps/site/dryer-building-envelope.js';
+import { buildDryerCompressorEnvironment } from '../apps/site/dryer-compressor-environment.js';
+import { buildDryerBuildingEnvironment, alignDryerCompressorEntrance } from '../apps/site/dryer-building-envelope.js';
+import { buildDryerCompressorInteriorDetails } from '../apps/site/dryer-compressor-interior-details.js';
 import { buildFurnace } from '../apps/site/furnace-model.js';
 import { createProximityDoorController } from '../apps/site/proximity-doors.js';
 import { OUTDOOR_ROOM } from '../apps/site/outdoor-data.js';
@@ -43,7 +45,7 @@ async function presentationScene() {
   document.defaultView = eventTarget();
   const timers = new Map(); let nextTimer = 0;
   const context = vm.createContext({ THREE, ...walking, FLOORS, FLOOR_HEIGHT, floorElevation, floorHeight,
-    buildDryerUpperEnvironment, buildDryerUpperEquipment, buildDryerBuildingEnvironment, buildDryerProcessEquipment, buildPreparationEquipment, buildPreparationBoilerRoom, buildPreparationEnvironment, buildDryerRouteEnvironment, buildFacilityEquipment, buildFurnace,
+    buildDryerUpperEnvironment, buildDryerUpperEquipment, buildDryerBuildingEnvironment, buildDryerProcessEquipment, buildPreparationEquipment, buildPreparationBoilerRoom, buildPreparationEnvironment, buildDryerRouteEnvironment, buildDryerCompressorEnvironment, buildDryerCompressorInteriorDetails, alignDryerCompressorEntrance, buildFacilityEquipment, buildFurnace,
     OUTDOOR_ROOM, CAMPUS_ROOM, PACKAGING_ROOM, PACKAGING_ROOMS, PACKAGING_OVERVIEW, PACKAGING_FLOOR_ELEVATIONS,
     PLACEMENT_RULES, PLACEMENT_REGIONS, constrainPlacement, rotatedFootprint, fromRoomPosition, toRoomPosition, document,
     setTimeout: callback => { const id = ++nextTimer; timers.set(id, callback); return id; }, clearTimeout: id => timers.delete(id) });

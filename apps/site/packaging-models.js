@@ -275,21 +275,38 @@ function sink(s, root, item) {
 }
 
 function vessel(s, root, item) {
-  const m = palette(s), [body, process, details] = parts(s, root, item), { width: w, depth: d, height: h } = item, r = Math.min(w, d) * .38;
-  s._cyl(body, r, h * .74, [0, h * .46, 0], m.steel, r, 24);
-  s._cyl(process, r * .12, h * .12, [0, h * .89, 0], m.steel, r, 24);
-  s._cyl(process, r * .13, h * .07, [0, h * .985, 0], m.trim, r * .13, 12);
-  const leg = h * .16;
-  boxes(s, body, m.steel, [0, 1, 2].map((index) => [[Math.cos(index * TAU / 3) * r * .75, leg / 2, Math.sin(index * TAU / 3) * r * .75], [.055, leg, .055]]), 'packaging-vessel-three-feet');
-  const gauge = s._cyl(details, r * .24, .06, [0, h * .47, r + .04], m.white, r * .24, 16); gauge.rotation.x = PI / 2;
-  s._box(details, [.02, r * .24, .012], [0, h * .49, r + .075], m.dark).rotation.z = -.6;
-  bars(s, details, m.blue, [
-    [[-r * .9, h * .11, -r * .4], [-r * .9, h * .92, -r * .4], .06],
-    [[-r * .9, h * .74, -r * .4], [-r * .35, h * .74, -r * .4], .06],
-  ], 'packaging-vessel-blue-insulated-riser-and-side-tee');
-  s._box(details, [.24, .025, .04], [-r * .9, h * .15, -r * .3], m.red).name = 'packaging-vessel-low-red-valve-lever';
-  s._box(details,[.25,.32,.1],[r+.08,h*.56,.05],m.white).name='packaging-hot-water-temperature-controller';
-  s._box(details,[.18,.09,.015],[r+.08,h*.61,.11],m.display).name='packaging-hot-water-controller-dark-display';
+  const m = palette(s), [body, lid, fittings] = parts(s, root, item);
+  const h = item.height, r = Math.min(item.width, item.depth) * .4, bottom = h * .19, top = h * .83;
+  s._cyl(body, r, top - bottom, [0, (top + bottom) / 2, 0], m.steel, r, 40);
+  s._cyl(body, r, .05, [0, bottom - .025, 0], m.steel, r * .91, 40);
+  const feet = [], collars = [];
+  for (let index = 0; index < 3; index++) {
+    const angle = PI / 2 + index * TAU / 3;
+    const point = (distance, y) => [Math.cos(angle) * distance, y, Math.sin(angle) * distance];
+    const bend = [point(r * .96, bottom + .14), point(r * 1.12, bottom + .14),
+      point(r * 1.23, bottom + .115), point(r * 1.3, bottom + .06), point(r * 1.32, bottom), point(r * 1.32, .04)];
+    for (let j = 1; j < bend.length; j++) feet.push([bend[j - 1], bend[j], .05]);
+    collars.push([point(r * 1.32, 0), point(r * 1.32, .065), .064]);
+  }
+  bars(s, body, m.steel, feet, 'packaging-vessel-bent-tubular-feet');
+  bars(s, body, m.white, collars, 'packaging-vessel-foot-collars');
+  s._cyl(lid, r * 1.045, .035, [0, top + .01, 0], m.trim, r * 1.045, 40);
+  const handle = (x, y, z, span, rise) => [
+    [[x, y, z], [x, y + rise, z]], [[x, y + rise, z], [x, y + rise, z + span]], [[x, y + rise, z + span], [x, y, z + span]],
+  ];
+  bars(s, lid, m.steel, handle(r * .49, top + .026, -r * .29, r * .58, .053), 'packaging-vessel-lid-handle', .012);
+  const steps = [];
+  for (const y of [bottom + .35, bottom + .65]) {
+    const z = r * .18;
+    steps.push([[r * .95, y, -z], [r + .13, y, -z]], [[r + .13, y, -z], [r + .13, y, z]], [[r + .13, y, z], [r * .95, y, z]]);
+  }
+  bars(s, fittings, m.steel, steps, 'packaging-vessel-side-steps', .015);
+  bars(s, fittings, m.blue, [[[0, top + .035, -r * .68], [0, h, -r * .68]]], 'packaging-vessel-blue-riser', .036);
+  bars(s, fittings, m.trim, [
+    [[-r * .35, top + .035, -r * .35], [-r * .35, top + .23, -r * .35]],
+    [[-r * .35, top + .23, -r * .35], [-r * 1.15, top + .23, -r * .35]],
+    [[-r * .8, bottom + .6, r * .52], [-r * 1.15, bottom + .6, r * .52]],
+  ], 'packaging-vessel-lid-inlet-and-side-port', .022);
 }
 
 function control(s, root, item) {

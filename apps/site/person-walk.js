@@ -95,7 +95,7 @@ export function advancePerson(state, { forward = 0, turn = 0, delta = 0, bounds,
     const surfaceAt = (position) => {
       if (typeof groundHeight !== 'function') return { height: baseHeight, velocity: baseVelocity, blocked: false };
       const surface = groundHeight(position), gap = baseHeight - surface;
-      if (!Number.isFinite(surface)) return { height: baseHeight, velocity: 0, blocked: false };
+      if (!Number.isFinite(surface)) return { height: baseHeight, velocity: 0, blocked: surface === null };
       if (gap < -WALK_RULES.maxStep - EPS) return { height: baseHeight, velocity: 0, blocked: true };
       if (gap <= WALK_RULES.maxStep + EPS) return { height: surface, velocity: 0, blocked: false };
       const velocity = baseVelocity - WALK_RULES.gravity * dt;

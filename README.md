@@ -24,7 +24,21 @@ npm start
 | 이미지·도면 추가·교체 | [자산 관리](docs/assets.md), [자산 목록 CSV](docs/asset-index.csv) |
 | 메뉴·서버·저장·공유 구조 | [프로젝트 구조](docs/architecture.md) |
 
+[팀별 설비 사진 찾아보기](references/팀별_설비사진자료/사진%20찾아보기.html)에서 설비이력카드의 정면·좌측·우측·후면과 추가 참고 사진을 볼 수 있습니다. 건조실 3층 촬영 방향과 모델 치수의 근거는 [에어컴프레셔실 현장 대조 기록](docs/dryer-3f-compressor-review-20261124.md)에 있습니다.
+
 실행 소스는 `apps/`, 시작 화면은 `workspace/`의 루트 파일, 실행·검사·공유 도구는 `tooling/`, 검사는 `tests/`에 있습니다. 활성 화면 이미지는 `apps/site/assets/`에서 관리합니다.
+
+### 모터·제어판·열교환기를 나중에 추가할 때
+
+바탕화면의 `후속작업_모터·제어판·열교환기_20261110` 작업실에서 필요한 기능의 단독 HTML을 아래 위치에 `index.html`로 복사합니다. `npm start`로 연 시작 화면을 새로 고치면 해당 메뉴가 나타납니다.
+
+| 기능 | 후속 작업실의 단독 파일 | 현재 프로젝트에 넣을 위치 |
+| --- | --- | --- |
+| 모터 분해도 | `exports/motor.html` | `apps/motor/index.html` |
+| 제어판 | `exports/건조기-제어판.html` | `apps/panel/index.html` |
+| 열교환기 시뮬레이터 | `exports/건조기-열교환기-시뮬레이터.html` | `apps/heat-exchanger/index.html` |
+
+제어판 단독 파일이 필요하면 후속 작업실에서 `npm run export:panel`로 생성합니다.
 
 ## 도면·현장영상 별도 보관
 
@@ -54,6 +68,8 @@ npm run export:presentation
 ```
 
 `export:share`는 전체 공유본 `exports/건조기-통합-공유.html`, `export:presentation`은 건조실 발표본 `exports/건조실-발표용.html`을 만듭니다. 소스를 수정한 뒤 공유본도 다시 생성해야 반영됩니다.
+
+발표 화면의 `도면·직접 보기`에서 시연 전이나 진행 중에도 층별 평면·입체를 볼 수 있습니다. 도면을 열면 시연이 멈추고 `시연 이어보기`로 같은 지점부터 재생합니다. 전체 화면에서는 메뉴와 재생 도구를 숨기고 장면을 화면에 꽉 채웁니다. 준비 상태에서 전체 화면을 열면 시연이 시작되며, `Space`로 재생·일시정지, `D`로 현재 층 도면 보기·시연 이어보기, `Esc`로 전체 화면을 종료합니다.
 
 ## 저장 배치
 

@@ -4,6 +4,7 @@ import { mkdir, readFile, realpath, rename, stat, writeFile } from 'node:fs/prom
 import { createHash } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import { createDrawingReviewService } from './drawing-review-service.mjs';
+import { OPTIONAL_MODULES } from '../workspace/module-registry.js';
 
 export const DEFAULT_PORT = 4173;
 export const APPLICATION_ID = 'dryer-workspace';
@@ -82,7 +83,17 @@ export async function createServer({ root = PROJECT_ROOT } = {}) {
         send(405, 'Method not allowed', undefined, { Allow: 'GET, HEAD' }); return;
       }
       if (pathname === '/__workspace') {
-        send(200, JSON.stringify(identity), mimeTypes['.json']); return;
+        const installed = await Promise.all(OPTIONAL_MODULES.map(async ({ id, entry }) => {
+          try {
+            const file = await realpath(path.join(publicRoot, entry));
+            const relative = path.relative(publicRoot, file).split(path.sep).join('/');
+            return withinRoot(file) && isPublicPath(relative) && (await stat(file)).isFile() ? id : null;
+          } catch (error) {
+            if (['ENOENT', 'ENOTDIR', 'EACCES'].includes(error.code)) return null;
+            throw error;
+          }
+        }));
+        send(200, JSON.stringify({ ...identity, optionalModules: installed.filter(Boolean) }), mimeTypes['.json']); return;
       }
       const relative = segments.join('/') || 'index.html';
       if (!isPublicPath(relative)) {

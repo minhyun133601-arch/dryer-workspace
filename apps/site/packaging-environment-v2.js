@@ -1,5 +1,7 @@
 import * as THREE from '../shared/vendor/three.module.js';
 import { PACKAGING_STAIR_PROFILES, packagingEntryStairPlan } from './packaging-routes.js';
+import { buildFloor3Decks, floor3Fixtures, floor3Lettering, freightLift, hopperVentDrops, slidingDoor, stickWallServices, vinylCurtain } from './packaging-floor3-environment.js';
+import { tableSacks } from './packaging-storage-models.js';
 
 // Local drawing coordinates, metres: +X right, +Z toward the entrance, Y=0 at
 // the selected floor. All overhead enclosure belongs to `ceiling` so the
@@ -69,38 +71,44 @@ function boxes(s, parent, material, values, name, shadow = true) {
     values.map(([position, scale, rotation]) => ({ position, scale, rotation })), name, shadow);
 }
 
-function bars(s, parent, material, values, name, radius = .03) {
+function bars(s, parent, material, values, name, radius = .03, segments = 10) {
   const q = new THREE.Quaternion();
-  return instances(s, parent, new THREE.CylinderGeometry(1, 1, 1, 10), material, values.map(([a, b, r]) => {
+  return instances(s, parent, new THREE.CylinderGeometry(1, 1, 1, segments), material, values.map(([a, b, r]) => {
     const p = new THREE.Vector3(...a), end = new THREE.Vector3(...b), delta = end.clone().sub(p);
     q.setFromUnitVectors(UP, delta.clone().normalize());
     return { position: p.add(end).multiplyScalar(.5).toArray(), quaternion: q.toArray(), scale: [r || radius, delta.length(), r || radius] };
   }), name);
 }
 
-function bentDuct(s, parent, material, coordinates, radius, name) {
-  const points = coordinates.map((point) => new THREE.Vector3(...point));
-  const path = new THREE.CurvePath(); let cursor = points[0];
+// Round duct along a polyline: rings only where the centreline bends, closed ends.
+function bentDuct(s, parent, material, coordinates, radius, name, radial = 18) {
+  const points = coordinates.map((point) => new THREE.Vector3(...point)), line = [[points[0], points[1].clone().sub(points[0]).normalize()]];
   for (let i = 1; i < points.length - 1; i++) {
-    const corner = points[i], incoming = corner.clone().sub(points[i - 1]), outgoing = points[i + 1].clone().sub(corner);
-    const inset = Math.min(.23, incoming.length() * .35, outgoing.length() * .35);
-    const before = corner.clone().addScaledVector(incoming.normalize(), -inset), after = corner.clone().addScaledVector(outgoing.normalize(), inset);
-    if (cursor.distanceToSquared(before) > .000001) path.add(new THREE.LineCurve3(cursor, before));
-    path.add(new THREE.QuadraticBezierCurve3(before, corner, after)); cursor = after;
+    const corner = points[i], a = corner.clone().sub(points[i - 1]), b = points[i + 1].clone().sub(corner);
+    const inset = Math.min(Math.max(.23, radius * 2.2), a.length() * .42, b.length() * .42); a.normalize(); b.normalize();
+    const curve = new THREE.QuadraticBezierCurve3(corner.clone().addScaledVector(a, -inset), corner, corner.clone().addScaledVector(b, inset));
+    for (let k = 0; k <= 8; k++) line.push([curve.getPoint(k / 8), curve.getTangent(k / 8)]);
   }
-  path.add(new THREE.LineCurve3(cursor, points.at(-1)));
-  const geometry = new THREE.TubeGeometry(path, Math.max(24, Math.ceil(path.getLength() * 12)), radius, 12, false);
-  const mesh = s._mesh(geometry, material, parent); mesh.name = name;
-  // Short closed cylinders cap the two tube ends; joins overlap the supply
-  // header and the matching equipment port instead of exposing open meshes.
-  const q = new THREE.Quaternion();
-  const caps = [0, points.length - 1].map((index) => {
-    const next = index ? points[index - 1] : points[1], direction = next.clone().sub(points[index]).normalize();
-    q.setFromUnitVectors(UP, direction);
-    return { position: points[index].toArray(), quaternion: q.toArray(), scale: [radius, .012, radius] };
+  line.push([points.at(-1), points.at(-1).clone().sub(points.at(-2)).normalize()]);
+  const position = [], normal = [], uv = [], index = [], turn = new THREE.Quaternion(), up = new THREE.Vector3(), n = new THREE.Vector3(), p = new THREE.Vector3();
+  const side = Math.abs(line[0][1].y) > .9 ? new THREE.Vector3(1, 0, 0) : new THREE.Vector3(0, 1, 0); side.addScaledVector(line[0][1], -side.dot(line[0][1])).normalize();
+  const frames = line.map(([center, tangent], i) => {
+    if (i) side.applyQuaternion(turn.setFromUnitVectors(line[i - 1][1], tangent));
+    return { center, tangent, side: side.clone(), up: up.crossVectors(tangent, side).clone() };
   });
-  instances(s, parent, new THREE.CylinderGeometry(1, 1, 1, 12), material, caps, `${name}-closed-end-connections`);
-  return mesh;
+  const around = (frame, k) => { const t = k / radial * PI * 2; return n.copy(frame.side).multiplyScalar(Math.cos(t)).addScaledVector(frame.up, Math.sin(t)); };
+  frames.forEach((frame, i) => {
+    for (let k = 0; k <= radial; k++) { around(frame, k).toArray(normal, normal.length); p.copy(frame.center).addScaledVector(n, radius).toArray(position, position.length); uv.push(k / radial, i / (frames.length - 1)); }
+    if (i) for (let k = 0; k < radial; k++) { const a = (i - 1) * (radial + 1) + k, b = a + radial + 1; index.push(a, a + 1, b, b, a + 1, b + 1); }
+  });
+  for (const [frame, face] of [[frames[0], -1], [frames.at(-1), 1]]) {
+    const start = position.length / 3;
+    frame.center.toArray(position, position.length); frame.tangent.clone().multiplyScalar(face).toArray(normal, normal.length); uv.push(.5, .5);
+    for (let k = 0; k <= radial; k++) { around(frame, k); p.copy(frame.center).addScaledVector(n, radius).toArray(position, position.length); frame.tangent.clone().multiplyScalar(face).toArray(normal, normal.length); uv.push(.5, .5); }
+    for (let k = 1; k <= radial; k++) index.push(start, start + (face > 0 ? k : k + 1), start + (face > 0 ? k + 1 : k));
+  }
+  const geometry = new THREE.BufferGeometry(); geometry.setAttribute('position', new THREE.Float32BufferAttribute(position, 3)); geometry.setAttribute('normal', new THREE.Float32BufferAttribute(normal, 3)); geometry.setAttribute('uv', new THREE.Float32BufferAttribute(uv, 2)); geometry.setIndex(index);
+  const mesh = s._mesh(geometry, material, parent); mesh.name = name; return mesh;
 }
 
 function hoodConnectionHeight(layout, bounds, deck, z, booth = false, ribbon = false, ceilingLimit) {
@@ -159,6 +167,12 @@ function roofAndCeiling(s, groups, room, bounds, m) {
       for (let x = bounds.minX + .3; x <= bounds.maxX; x += 5.125) members.push([[x, y0 - .23, z0], [x, y1 - .23, z1], .2, .4]);
     }
     boxes(s, groups.ceiling, m.panel, panels, 'packaging-m-shaped-twin-gable-roof-panels');
+    // The east and west walls run up into both gables.
+    const gables = [1, 3].map((i) => { const shape = new THREE.Shape(); [zKnots[i - 1], zKnots[i], zKnots[i + 1]].forEach((z, k) => shape[k ? 'lineTo' : 'moveTo'](z, roofHeightAt(layout, bounds, z))); shape.closePath(); return shape; });
+    for (const x of [bounds.minX + .09, bounds.maxX + .01]) {
+      const geometry = new THREE.ExtrudeGeometry(gables, { depth: .1, bevelEnabled: false, steps: 1, curveSegments: 1 }); geometry.rotateY(-PI / 2);
+      s._mesh(geometry, m.panel, groups.ceiling, [x, 0, 0]).name = 'packaging-gable-end-upper-panels';
+    }
     for (let z = bounds.minZ + .2; z <= bounds.maxZ; z += 1) purlins.push([[cx, roofHeightAt(layout, bounds, z) - .03, z], [width, .1, .05]]);
     bars(s, groups.ceiling, m.frame, [[[bounds.minX, height - .08, cz], [bounds.maxX, height - .08, cz], .1]], 'packaging-central-200pvc-valley-gutter');
     groups.ceiling.userData.roofProfile = { eaveHeight: layout.roof?.eaveHeight ?? 6, ridgeHeight: layout.roof?.ridgeHeight ?? 7.36, ridges: [cz - offset, cz + offset] };
@@ -197,7 +211,8 @@ function enclosure(s, groups, room, bounds, m) {
     const start = alongZ ? bounds.minZ : bounds.minX, end = alongZ ? bounds.maxZ : bounds.maxX;
     const windows = segments.filter((entry) => entry.side === side);
     const doorways = (layout.doors || []).filter((door) => Math.abs((alongZ ? door.x : door.z) - bounds[side]) < .2).map((door) => ({ from: (alongZ ? door.z : door.x) - door.width / 2 - .04, to: (alongZ ? door.z : door.x) + door.width / 2 + .04, height: door.height || 2.25 }));
-    const cuts = [...new Set([start, end, ...windows.flatMap((v) => [Math.max(start, v.from), Math.min(end, v.to)]), ...doorways.flatMap((v) => [Math.max(start, v.from), Math.min(end, v.to)])])].sort((a, b) => a - b);
+    const gaps = (layout.wallGaps || []).filter((entry) => entry.side === side);
+    const cuts = [...new Set([start, end, ...[...windows, ...doorways, ...gaps].flatMap((v) => [Math.max(start, v.from), Math.min(end, v.to)])])].sort((a, b) => a - b);
     const addPanel = (list, a, b, bottom, top) => {
       if (b <= a || top <= bottom) return;
       const p = alongZ ? [fixed, (bottom + top) / 2, (a + b) / 2] : [(a + b) / 2, (bottom + top) / 2, fixed];
@@ -205,6 +220,8 @@ function enclosure(s, groups, room, bounds, m) {
     };
     for (let i = 0; i < cuts.length - 1; i++) {
       const a = cuts[i], b = cuts[i + 1], mid = (a + b) / 2;
+      const gap = gaps.find((v) => mid >= v.from && mid <= v.to);
+      if (gap) { addPanel(high, a, b, gap.height ?? 3, h); continue; }
       const win = windows.find((v) => mid >= v.from && mid <= v.to);
       const doorway = doorways.find((v) => mid >= v.from && mid <= v.to);
       if (doorway) { addPanel(high, a, b, doorway.height, h); continue; }
@@ -213,16 +230,16 @@ function enclosure(s, groups, room, bounds, m) {
       else {
         addPanel(high, a, b, .95, win.bottom ?? 1);
         addPanel(high, a, b, win.top ?? 2.5, h);
-        const bottom = win.bottom ?? 1, top = win.top ?? 2.5, paneStep = win.sparse ? 3.2 : 1.28;
+        const bottom = win.bottom ?? 1, top = win.top ?? 2.5, paneStep = win.step ?? (win.sparse ? 3.2 : 1.28);
         for (let p = a; p < b - .1; p += paneStep) {
-          const length = Math.min(win.sparse ? 1.15 : 1.2, b - p - .04);
+          const length = Math.min(win.sparse ? 1.15 : paneStep - .08, b - p - .04);
           if (length <= 0) continue;
           const center = p + length / 2;
           panes.push([alongZ ? [fixed, (bottom + top) / 2, center] : [center, (bottom + top) / 2, fixed], alongZ ? [.04, top - bottom, length] : [length, top - bottom, .04]]);
           for (const position of [p, p + length]) mullions.push([alongZ ? [fixed, (bottom + top) / 2, position] : [position, (bottom + top) / 2, fixed], alongZ ? [.08, top - bottom + .08, .045] : [.045, top - bottom + .08, .08]]);
           if (win.sparse) addPanel(high, p + length, Math.min(p + paneStep, b), bottom, top);
         }
-        for (const y of [bottom, (bottom + top) / 2, top]) mullions.push([alongZ ? [fixed, y, mid] : [mid, y, fixed], alongZ ? [.085, .055, b - a] : [b - a, .055, .085]]);
+        for (const y of [bottom, bottom + (top - bottom) * (level === 3 ? .58 : .5), top]) mullions.push([alongZ ? [fixed, y, mid] : [mid, y, fixed], alongZ ? [.085, .055, b - a] : [b - a, .055, .085]]);
       }
     }
     for (let y = 3; y < h; y += 1.05) joints.push([alongZ ? [fixed + (side.startsWith('min') ? .06 : -.06), y, (start + end) / 2] : [(start + end) / 2, y, fixed + (side.startsWith('min') ? .06 : -.06)], alongZ ? [.008, .012, end - start] : [end - start, .012, .008]]);
@@ -238,11 +255,13 @@ function columnsAndBraces(s, groups, room, bounds, m) {
   const layout = room.layout, level = room.floorLevel || 3, h = level === 3 ? (layout.roof?.eaveHeight ?? 6) : (layout.ceilingHeight ?? (level === 2 ? 6.15 : 6));
   const xAxes = [-15.375, -10.25, -5.125, 0, 5.125, 10.25, 15.375], zAxes = [-14.9, -10, -5, 0, 5, 10, 14.9];
   const defaults = [...xAxes.flatMap((x) => [zAxes[0], zAxes.at(-1)].map((z) => ({ x, z }))), ...zAxes.slice(1, -1).flatMap((z) => [xAxes[0], xAxes.at(-1)].map((x) => ({ x, z }))), ...[-5.125, 5.125].map((x) => ({ x, z: 0 }))];
-  const columns = layout.columns || defaults, members = [], feet = [], guards = [], blackBands = [], wallBraces = [];
+  const columns = layout.columns || defaults, members = [], feet = [], bases = [], guards = [], blackBands = [], wallBraces = [];
   for (const col of columns) {
     const w = col.width ?? (level === 3 ? .3 : .428), d = col.depth ?? w;
     members.push([[col.x, h / 2, col.z], [.014, h, Math.max(.02, d - .03)]], [[col.x, h / 2, col.z - d / 2], [w, h, .022]], [[col.x, h / 2, col.z + d / 2], [w, h, .022]]);
-    feet.push([[col.x, .06, col.z], [w + .2, .12, d + .2]]);
+    // A-11 detail B: chamfered concrete guards stand around the main columns.
+    if (level === 3 && w > .25) bases.push([[col.x, .225, col.z], [w + .34, .45, d + .34]], [[col.x, .52, col.z], [w + .16, .14, d + .16]]);
+    else feet.push([[col.x, .06, col.z], [w + .2, .12, d + .2]]);
     if (Math.abs(col.z) < .1 && col.x > bounds.minX + 1 && col.x < bounds.maxX - 1) {
       for (const z of [col.z - .45, col.z + .45]) {
         guards.push([[col.x - .5, .1, z], [col.x - .5, .85, z], .05], [[col.x + .5, .1, z], [col.x + .5, .85, z], .05], [[col.x - .5, .85, z], [col.x + .5, .85, z], .05]);
@@ -256,6 +275,7 @@ function columnsAndBraces(s, groups, room, bounds, m) {
   }
   boxes(s, groups.structure, m.cream, members, 'packaging-cream-h-section-columns');
   boxes(s, groups.structure, m.frame, feet, 'packaging-column-baseplates');
+  boxes(s, groups.structure, m.panel, bases, 'packaging-column-chamfered-concrete-bases');
   bars(s, groups.structure, m.yellow, guards, 'packaging-column-u-pipe-protectors');
   instances(s, groups.structure, new THREE.CylinderGeometry(1, 1, 1, 10), m.black, blackBands, 'packaging-column-protector-black-bands');
   bars(s, groups.ceiling, m.frame, wallBraces, 'packaging-wall-x-rod-bracing');
@@ -324,6 +344,8 @@ function roomsAndDoors(s, groups, room, m) {
   for (const data of layout.doors || []) {
     const g = s._group(groups.structure, [data.x, 0, data.z]); g.rotation.y = data.rotation || 0; g.name = `packaging-door-${data.id}`;
     const width = data.width || 1.2, height = data.height || 2.25, glazed = data.glazed || /entry|hygiene|weigh/.test(data.id);
+    if (data.kind === 'slide') { slidingDoor(s, g, data, room.floorLevel || room.id, glazed); continue; }
+    if (data.kind === 'strip') { vinylCurtain(s, g, data, room.floorLevel || room.id); continue; }
     boxes(s, g, glazed ? m.black : m.frame, [
       [[-width / 2, height / 2, 0], [.07, height, .12]], [[width / 2, height / 2, 0], [.07, height, .12]], [[0, height, 0], [width + .1, .07, .12]],
     ], 'packaging-door-fixed-frames');
@@ -428,14 +450,19 @@ function platform(s, parent, data, name, main, m) {
   if (width <= 0 || length <= 0) return;
   const g = s._group(parent); g.name = name; g.userData.platformHeight = y;
   const walkWidth = data.walkwayWidth ?? (main ? Math.min(2.75, width * .49) : width);
-  const openings = (data.deckOpenings || []).filter((hole) => hole.x - hole.width / 2 > minX && hole.x + hole.width / 2 < maxX && hole.z - hole.depth / 2 > minZ && hole.z + hole.depth / 2 < maxZ);
+  const openings = (data.deckOpenings || []).map((hole) => hole.radius ? { ...hole, width: hole.radius * 2, depth: hole.radius * 2 } : hole).filter((hole) => hole.x - hole.width / 2 > minX && hole.x + hole.width / 2 < maxX && hole.z - hole.depth / 2 > minZ && hole.z + hole.depth / 2 < maxZ);
   if (openings.length) {
     const shape = new THREE.Shape(); shape.moveTo(minX, minZ); shape.lineTo(maxX, minZ); shape.lineTo(maxX, maxZ); shape.lineTo(minX, maxZ); shape.closePath();
     for (const hole of openings) {
       const left = hole.x - hole.width / 2, right = hole.x + hole.width / 2, front = hole.z - hole.depth / 2, back = hole.z + hole.depth / 2;
-      const path = new THREE.Path(); path.moveTo(left, front); path.lineTo(left, back); path.lineTo(right, back); path.lineTo(right, front); path.closePath(); shape.holes.push(path);
+      const path = new THREE.Path();
+      if (hole.radius) path.absarc(hole.x, hole.z, hole.radius, 0, PI * 2, true);
+      else { path.moveTo(left, front); path.lineTo(left, back); path.lineTo(right, back); path.lineTo(right, front); path.closePath(); }
+      shape.holes.push(path);
     }
-    const geometry = new THREE.ExtrudeGeometry(shape, { depth: .1, bevelEnabled: false, steps: 1, curveSegments: 1 }); geometry.rotateX(PI / 2);
+    const geometry = new THREE.ExtrudeGeometry(shape, { depth: .1, bevelEnabled: false, steps: 1, curveSegments: 36 }); geometry.rotateX(PI / 2);
+    // Extruded plates carry metre UVs; undo the shared map's 4 x 12 panel repeat.
+    const uv = geometry.attributes.uv; for (let i = 0; i < uv.count; i++) uv.setXY(i, uv.getX(i) / 2, uv.getY(i) / 6);
     s._mesh(geometry, m.checker, g, [0, y, 0]).name = `${name}-checker-plate-deck-with-hopper-openings`;
     g.userData.deckOpenings = openings.map((entry) => ({ ...entry }));
   } else s._box(g, [walkWidth, .1, length], [maxX - walkWidth / 2, y - .05, centerZ], m.checker).name = `${name}-checker-plate-deck`;
@@ -602,6 +629,7 @@ function buildingStairsAndLift(s, groups, room, m) {
   }
   const lift = layout.lift;
   if (!lift) return;
+  if (lift.car) { freightLift(s, groups, lift); return; }
   const g = s._group(groups.structure), w = lift.maxX - lift.minX, d = lift.maxZ - lift.minZ, x = (lift.minX + lift.maxX) / 2, z = (lift.minZ + lift.maxZ) / 2;
   g.name = 'packaging-three-ton-cargo-lift'; g.userData.capacity = lift.capacity || '3TON';
   s._box(groups.deck, [w, .2, d], [x, -.12, z], m.concrete);
@@ -646,10 +674,16 @@ function wallAirConditioner(s, parent, x, z, m) {
   const vents = [];
   for (let i = 0; i < 9; i++) vents.push([[.3, .25 + i * .045, .32], [.38, .018, .025]]);
   boxes(s, g, m.frame, vents, 'packaging-air-unit-cabinet-lower-vent-slots');
-  const nozzles = [-.98, -.33, .33, .98].map((px) => ({ position: [px, 4.38, .32], rotation: [PI / 2, 0, 0] }));
-  const shell = new THREE.SphereGeometry(.24, 16, 10, 0, PI * 2, .55, PI - .55); shell.rotateX(PI / 2);
-  instances(s, g, shell, m.panel, nozzles.map((v) => ({ position: v.position })), 'packaging-air-unit-four-white-round-nozzle-shells');
-  instances(s, g, new THREE.CylinderGeometry(.15, .15, .02, 16), m.black, nozzles.map((v) => ({ ...v, position: [v.position[0], v.position[1], .51] })), 'packaging-air-unit-four-open-nozzle-mouths');
+  // Card photo: a flange ring, a tapered white cup and a wide rolled lip per nozzle.
+  const nozzles = [-.99, -.33, .33, .99].map((px) => ({ position: [px, 4.38, .33], rotation: [PI / 2, 0, 0] }));
+  const at = (z) => nozzles.map((v) => ({ ...v, position: [v.position[0], v.position[1], z] }));
+  instances(s, g, new THREE.CylinderGeometry(.2, .27, .2, 28), m.panel, at(.31), 'packaging-air-unit-four-white-round-nozzle-shells');
+  instances(s, g, new THREE.CylinderGeometry(.22, .2, .1, 28, 1, true), m.panel, at(.45), 'packaging-air-unit-four-flared-nozzle-cups');
+  instances(s, g, new THREE.TorusGeometry(.22, .022, 8, 28), m.panel, at(.5).map((v) => ({ position: v.position })), 'packaging-air-unit-four-rolled-nozzle-lips');
+  instances(s, g, new THREE.TorusGeometry(.285, .014, 6, 28), m.frame, at(.215).map((v) => ({ position: v.position })), 'packaging-air-unit-nozzle-flange-rings');
+  instances(s, g, new THREE.CylinderGeometry(.19, .19, .02, 24), m.black, at(.415), 'packaging-air-unit-four-open-nozzle-mouths');
+  boxes(s, g, m.silver, [[[0, 1.02, .312], [1.16, .72, .02]]], 'packaging-air-unit-taped-filter-sheet');
+  boxes(s, g, m.black, [[[.3, 1.52, .315], [.2, .12, .02]], [[0, .03, -.1], [1.34, .06, .84]]], 'packaging-air-unit-control-recess-and-base');
   bars(s, g, m.red, [[[.79, .08, -.22], [.79, 1.7, -.22], .038], [[.79, 1.7, -.22], [1, 1.7, -.22], .038]], 'packaging-air-unit-pink-service-pipe');
   boxes(s,g,m.frame,[[[0,2.4,-.5],[.5,.08,.1]],[[0,3.5,-.5],[.5,.08,.1]]],'packaging-air-unit-wall-standoff-brackets');
 }
@@ -668,11 +702,11 @@ function services(s, groups, room, bounds, m) {
   const silver = [], dark = [], bands = [], hangers = [];
   for (const route of routes) {
     const points = route.points || [];
+    if (points.length > 1) bentDuct(s, groups.ducts, route.dark ? m.darkDuct : m.silver, points, route.radius || .15, route.dark ? 'packaging-dark-parallel-warm-air-duct-routes' : 'packaging-silver-round-extraction-duct-routes', 24);
     for (let i = 0; i < points.length - 1; i++) {
       const a = points[i], b = points[i + 1], radius = route.radius || .15;
-      (route.dark ? dark : silver).push([a, b, radius]);
       const start = new THREE.Vector3(...a), end = new THREE.Vector3(...b), delta = end.clone().sub(start), length = delta.length(), q = new THREE.Quaternion().setFromUnitVectors(new THREE.Vector3(0, 0, 1), delta.clone().normalize());
-      for (let d = .35; d < length; d += .65) bands.push({ position: start.clone().addScaledVector(delta, d / length).toArray(), quaternion: q.toArray(), scale: [radius + .007, radius + .007, .014] });
+      for (let d = radius * 2.6; d < length - radius * 2.3; d += .65) bands.push({ position: start.clone().addScaledVector(delta, d / length).toArray(), quaternion: q.toArray(), scale: [radius + .007, radius + .007, .014] });
       for (let d = 1; d < length; d += 3.5) {
         const p = start.clone().addScaledVector(delta, d / length).toArray(), y = level === 3 ? roofHeightAt(layout, bounds, p[2]) - .35 : (layout.ceilingHeight ?? 6.15) - .9;
         if (y > p[1]) hangers.push([[p[0], p[1] + radius, p[2]], [p[0], y, p[2]], .012]);
@@ -687,56 +721,49 @@ function services(s, groups, room, bounds, m) {
     });
     connections.forEach((connection, index) => {
       const { x, y, z, headerX = -14.55, headerY = 5.15, riseX = -12.75 } = connection;
-      bentDuct(s, groups.ducts, m.silver, [[headerX, headerY, z], [riseX, headerY, z], [riseX, y, z], [x, y, z]], .115, `packaging-raised-main-hood-extraction-branch-${index + 1}`);
+      bentDuct(s, groups.ducts, m.silver, [[headerX, headerY, z], [riseX, headerY, z], [riseX, y, z], [x - .42, y, z]], .14, `packaging-raised-main-hood-extraction-branch-${index + 1}`);
     });
     groups.ducts.userData.hoodBranchConnections = connections.map((connection) => ({ ...connection }));
-    for (const z of [-7.5, -2.9, 1.6, 5.5]) {
-      // A second physical port has not been identified. Keep this warm-air
-      // spur outside the PVC enclosure instead of inventing a crossing pipe.
-      dark.push([[-13.95, 5.55, z + .3], [-12.65, 5.55, z + .3], .14]);
+    // A second physical port has not been identified on the mixers. Each warm-air
+    // branch therefore turns down beside the curtains and ends in an open mouth.
+    const mouths = [];
+    const warmAir = (headerX, z, reach, index) => {
+      const end = headerX + Math.sign(reach) * (Math.abs(reach) + .12);
+      bentDuct(s, groups.ducts, m.darkDuct, [[headerX, 5.55, z], [headerX + reach, 5.55, z], [end, 4.86, z]], .12, `packaging-dark-warm-air-branch-${index}`);
+      mouths.push({ position: [end + Math.sign(reach) * .012, 4.79, z] });
+    };
+    connections.forEach(({ z }, index) => warmAir(-13.9, z + .75, 1.1, `main-${index + 1}`));
+    (layout.stickDuctConnections || []).forEach(({ z }, index) => warmAir(10.75, z + .8, -.62, `stick-${index + 1}`));
+    instances(s, groups.ducts, new THREE.CylinderGeometry(.13, .19, .16, 22), m.silver, mouths, 'packaging-warm-air-flared-mouths');
+    for (const { x, y, z, headerX, headerY, riseX } of layout.stickDuctConnections || []) {
+      bentDuct(s, groups.ducts, m.silver, [[headerX, headerY, z], [riseX, headerY, z], [riseX, y, z], [x + .42, y, z]], .14, `packaging-raised-stick-hood-extraction-branch-${z}`);
     }
-    const stickDeck = layout.auxPlatform?.height ?? 2.4;
-    silver.push([[13.15, 5.15, -10.65], [13.15, 5.15, -3.95], .12]);
-    for (const machineZ of [-7.5, -3.6]) {
-      const z = machineZ - .35, y = hoodConnectionHeight(layout, bounds, stickDeck, z, true);
-      bentDuct(s, groups.ducts, m.silver, [[13.15, 5.15, z], [9.65, 5.15, z], [9.65, y, z], [8.87, y, z]], .115, `packaging-raised-stick-hood-extraction-branch-${machineZ}`);
-    }
-    for (const z of [-6.5, 3.8]) wallAirConditioner(s, groups.structure, bounds.minX + .64, z, m);
+    if (layout.hopperVents) hopperVentDrops(s, groups.ducts, layout);
+    // Two floor-standing units: south of mixer 1 and behind mixer 4.
+    for (const z of [-5.75, 4]) wallAirConditioner(s, groups.structure, bounds.minX + .64, z, m);
   } else if (level === 2 && !layout.ductRoutes) {
-    for (const z of [-8, -3.8, .4, 4.6]) {
-      silver.push([[-14.4, 4.7, z], [-10.3, 4.7, z], .1]);
-      dark.push([[-13.6, 4.78, z + .3], [-10.3, 4.78, z + .3], .12]);
-    }
+    // Extraction rises over the warm-air header and drops onto each hopper's hose;
+    // the warm-air branch ends in an open mouth above the drum.
+    const mouths = [];
+    (layout.hopperDuctConnections || []).forEach(({ z, x, warmX }, index) => {
+      bentDuct(s, groups.ducts, m.silver, [[-14.4, 4.7, z + .6], [-14.4, 5.15, z + .6], [x, 5.15, z + .6], [x, 4.02, z + .6]], .09, `packaging-hopper-extraction-branch-${index + 1}`);
+      bentDuct(s, groups.ducts, m.darkDuct, [[-13.6, 4.78, z - .85], [warmX, 4.78, z - .85], [warmX, 4.3, z - .85]], .11, `packaging-hopper-warm-air-branch-${index + 1}`);
+      mouths.push({ position: [warmX, 4.23, z - .85] });
+    });
+    if (mouths.length) instances(s, groups.ducts, new THREE.CylinderGeometry(.12, .17, .14, 22), m.silver, mouths, 'packaging-warm-air-flared-mouths');
   } else if (level === 1 && !layout.ductRoutes) {
     for (const z of [-7.7, -4.8, -1.7, 5.3]) silver.push([[-14.95, 4.7, z], [-11.6, 4.7, z], .11]);
   }
-  bars(s, groups.ducts, m.silver, silver, 'packaging-silver-round-extraction-duct-routes');
-  bars(s, groups.ducts, m.darkDuct, dark, 'packaging-dark-parallel-warm-air-duct-routes');
-  instances(s, groups.ducts, new THREE.TorusGeometry(1, .025, 4, 16), m.frame, bands, 'packaging-spiral-duct-joint-bands');
+  bars(s, groups.ducts, m.silver, silver, 'packaging-silver-round-extraction-duct-routes', .03, 20);
+  bars(s, groups.ducts, m.darkDuct, dark, 'packaging-dark-parallel-warm-air-duct-routes', .03, 20);
+  instances(s, groups.ducts, new THREE.TorusGeometry(1, .025, 3, 22), m.frame, bands, 'packaging-spiral-duct-joint-bands');
   bars(s, groups.ducts, m.frame, hangers, 'packaging-duct-hanger-rods');
 }
 
 function smallFixtures(s, groups, room, bounds, m) {
   if ((room.floorLevel || 3) !== 3) return;
   const fixed = s._group(groups.structure); fixed.name = 'packaging-fixed-room-fixtures';
-  const booth = s._group(fixed, [-13.2, 0, 11.6]); booth.name = 'packaging-cream-entry-sliding-door-booth';
-  boxes(s, booth, m.cream, [[[0, 1.35, -.65], [1.6, 2.7, .08]], [[-.76, 1.35, 0], [.08, 2.7, 1.3]], [[.76, 1.35, 0], [.08, 2.7, 1.3]], [[0, 2.71, 0], [1.6, .08, 1.3]], [[-.35, 1.2, .65], [.8, 2.4, .06]]], 'packaging-entry-booth-cream-panels');
-  s._box(booth, [.42, .4, .025], [-.35, 1.65, .69], m.glass);
-  s._box(booth, [1.7, .06, .08], [0, 2.48, .72], m.frame);
-  const cabinet = s._group(fixed, [-14.5, 0, 8.9]); cabinet.name = 'packaging-entry-cream-double-cabinet';
-  boxes(s, cabinet, m.cream, [[[0, 1.05, 0], [1.45, 2.1, .65]]], 'packaging-entry-double-cabinet-body');
-  boxes(s, cabinet, m.frame, [[[0, 1.05, .33], [.015, 1.95, .015]], [[-.08, 1, .35], [.035, .21, .035]], [[.08, 1, .35], [.035, .21, .035]]], 'packaging-entry-double-cabinet-door-lines-and-handles');
-  s._box(cabinet, [.3, .12, .03], [0, 1.94, .345], m.display); s._box(cabinet, [.2, .045, .02], [0, 1.94, .367], m.led);
-  const packageAc = s._group(fixed, [bounds.maxX - .55, 0, -10.3]); packageAc.rotation.y = -PI / 2; packageAc.name = 'packaging-floor-standing-package-air-conditioner';
-  boxes(s, packageAc, m.cream, [[[0, 1.32, 0], [1.16, 2.64, .75]]], 'packaging-package-ac-cream-cabinet');
-  const acLouvers = [];
-  for (let i = 0; i < 9; i++) acLouvers.push([[0, 2.05 + i * .042, .39], [.97, .018, .025]], [[0, .23 + i * .045, .39], [.97, .018, .025]]);
-  boxes(s, packageAc, m.frame, acLouvers, 'packaging-package-ac-upper-and-lower-louver-slots');
-  s._box(packageAc, [.25, .16, .025], [.29, 1.48, .39], m.display);
-  const reel = s._group(fixed, [bounds.maxX - .3, 1.35, -.85]); reel.rotation.y = -PI / 2; reel.name = 'packaging-wall-hose-reel';
-  instances(s, reel, new THREE.TorusGeometry(.23, .055, 5, 20), m.black, [0, .04, .08].map((z) => ({ position: [0, 0, z] })), 'packaging-wall-hose-reel-coiled-hose');
-  s._cyl(reel, .29, .025, [0, 0, -.04], m.steel, .29, 20).rotation.x = PI / 2;
-  bars(s, reel, m.black, [[[.17, -.1, .08], [.25, -.9, .1]], [[.25, -.9, .1], [.08, -1.02, .1]]], 'packaging-wall-hose-reel-hanging-hose', .022);
+  stickWallServices(s, fixed, bounds.maxX - .1, room.layout.decks?.find((deck) => deck.id === 'stick')?.height ?? 2.4);
   for (const exit of (room.layout.doors || []).filter((d) => /entry|stair/.test(d.id))) {
     let rotation=exit.rotation||0,nx=Math.sin(rotation),nz=Math.cos(rotation);
     if(nx*((bounds.minX+bounds.maxX)/2-exit.x)+nz*((bounds.minZ+bounds.maxZ)/2-exit.z)<0){rotation+=PI;nx=-nx;nz=-nz;}
@@ -750,7 +777,7 @@ function smallFixtures(s, groups, room, bounds, m) {
     boxes(s, sign, m.panel, [[[-.12, 0, .04], [.035, .13, .012]], [[.07, 0, .04], [.18, .035, .012]], [[.15, .037, .04], [.075, .025, .012], [0, 0, -PI / 4]], [[.15, -.037, .04], [.075, .025, .012], [0, 0, PI / 4]]], 'packaging-emergency-exit-arrow');
   }
   // Keep traps on solid wall above the glazing, beside the doorway heads.
-  for (const [index,[x, z]] of [[bounds.minX + .19, -12.3], [-2.65, bounds.maxZ - .18], [5.7, bounds.maxZ - .18]].entries()) {
+  for (const [index,[x, z]] of [[bounds.minX + .19, -12.3], [-6.35, bounds.maxZ - .18], [5.75, bounds.maxZ - .18]].entries()) {
     const west=x<bounds.minX+.3,mountDepth=west ? .035 : .025;
     const g = s._group(fixed, [x, 2.8, z]); g.rotation.y = west ? PI / 2 : PI;
     g.name=`packaging-wall-mounted-insect-trap-${index+1}`;
@@ -759,16 +786,17 @@ function smallFixtures(s, groups, room, bounds, m) {
     boxes(s, g, m.frame, [[[0, 0, 0], [.55, .3, .13]]], 'packaging-insect-trap-casing');
     boxes(s, g, m.uv, [[[-.03, -.055, .08], [.44, .035, .025]], [[-.03, .055, .08], [.44, .035, .025]]], 'packaging-blue-uv-insect-trap-tubes', false);
   }
-  for (const [x, z] of [[-8.9, -2.5], [12.6, -8.7], [-1.5, -11.15]]) {
-    const g = s._group(fixed, [x, 2.4, z]);
+  // Temperature readouts on the weighing-room wall and beside mixer 2 (card photo).
+  for (const [x, y, z, turn] of [[-1.5, 2.4, -11.09, 0], [-15.12, 4.1, -3, PI / 2], [10.9, 2.4, -11.09, 0]]) {
+    const g = s._group(fixed, [x, y, z]); g.rotation.y = turn;
     s._box(g, [.36, .21, .09], [0, 0, 0], m.cream); s._box(g, [.27, .12, .03], [0, 0, .06], m.display);
     boxes(s, g, m.led, [[[-.07, .018, .08], [.055, .016, .012]], [[.01, .018, .08], [.055, .016, .012]], [[.09, .018, .08], [.055, .016, .012]]], 'packaging-red-digital-temperature-displays', false);
   }
-  for (const [x, z] of [[-14.8, 7.3], [13.5, -9.8], [-5.2, 14.7]]) {
+  for (const [x, z] of [[-15.1, 6.3], [15.1, -4.4], [-6.4, 13.3], [-1.05, 5.1]]) {
     s._cyl(fixed, .11, .53, [x, .4, z], m.red, .11, 12).name = 'packaging-wall-fire-extinguisher';
     bars(s, fixed, m.black, [[[x + .08, .65, z], [x + .16, .31, z], .017]], 'packaging-extinguisher-hose');
   }
-  const cctv = s._group(fixed, [-8, 2.7, -12.3]);
+  const cctv = s._group(fixed, [-8.4, 2.7, -12.42]);
   bars(s, cctv, m.frame, [[[0, 0, 0], [0, 0, .25]], [[0, 0, .25], [0, -.1, .35]]], 'packaging-cip-cctv-bracket');
   s._box(cctv, [.18, .14, .3], [0, -.1, .4], m.panel); s._cyl(cctv, .045, .025, [0, -.1, .56], m.black, .045, 12).rotation.x = PI / 2;
   const cip = (room.layout.rooms || []).find((r) => /cip/i.test(r.id) || /CIP/.test(r.name));
@@ -785,6 +813,7 @@ function cargoAndMarkings(s, groups, room, m) {
     [[-5.95, .025, 1.2], [.055, .012, 24]], [[-13.7, .025, 1], [.055, .012, 20]], [[-9.9, .025, 10.2], [8.1, .012, .055]],
   ] : [[[0, .025, 0], [.055, .012, 24]], [[-8, .025, 11.9], [12, .012, .055]]]);
   boxes(s, groups.deck, m.yellow, lines, 'packaging-yellow-fixed-aisle-and-pallet-markings', false);
+  if (level === 3 && room.layout.serviceTables) tableSacks(s, groups.cargo, room.layout.serviceTables);
   const loads = room.layout.cargo || (level === 3 ? [
     { x: -8.6, z: 5, y: room.layout.mainPlatform?.height || 2.55 }, { x: -11, z: 10.4 }, { x: -12.2, z: -1.2 }, { x: 4.2, z: 6.3 }, { x: 7.3, z: 9.8 },
   ] : []);
@@ -847,12 +876,14 @@ export function buildPackagingEnvironmentV2(s, room) {
   roofAndCeiling(s, groups, room, b, m);
   roomsAndDoors(s, groups, room, m);
   buildingStairsAndLift(s, groups, room, m);
+  if (layout.decks) buildFloor3Decks(s, groups.structure, layout.decks);
   platform(s, groups.structure, layout.mainPlatform, 'packaging-main-platform', true, m);
   platform(s, groups.structure, layout.auxPlatform, 'packaging-aux-platform', false, m);
   racks(s, groups.structure, layout, room.floorLevel || 3, m);
   services(s, groups, room, b, m);
   airShowers(s, groups, layout, m);
   smallFixtures(s, groups, room, b, m);
+  if (layout.decks) { floor3Lettering(s, groups.deck, layout); floor3Fixtures(s, groups, room); }
   cargoAndMarkings(s, groups, room, m);
   transportLines(s, groups, room, m);
   groups.deck.traverse((mesh) => { if (mesh.isMesh) mesh.castShadow = false; });

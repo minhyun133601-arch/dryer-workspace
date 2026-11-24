@@ -20,7 +20,9 @@ for (const reviewed of [REVIEWED_OUTDOOR_REVISIONS, REVIEWED_OUTDOOR_POSITION_RE
   reviewed.add(MISSING_TANK_REVISION);
 }
 const RETIRED_CAMPUS_IDS = new Set(['campus-rear-warehouse', 'campus-front-warehouse', 'campus-front-office']);
-const RETIRED_PACKAGING_IDS = new Set(['packaging-air-unit', 'packaging-cip-area', 'packaging-mixer-sieve-4']);
+// 2026-11-24 위치도·층 대조에서 원통 호퍼·교반기는 2층 호퍼로, 현수 분배함은 시프트로 합쳐졌다.
+const RETIRED_PACKAGING_IDS = new Set(['packaging-air-unit', 'packaging-cip-area', 'packaging-mixer-sieve-4',
+  'packaging-round-process', 'packaging-card-hopper-1', 'packaging-card-hopper-2', 'packaging-card-hopper-3', 'packaging-suspended-distribution']);
 const RETIRED_DRYER_IDS = new Set(['f6-dryer-shell', 'f6-cyclone-bank', 'f6-exhaust-riser']);
 const copyLayout = (layout) => layout.map(({ id, position, rotation }) => ({ id, position: [...position], rotation }));
 const sameLayout = (a, b) => JSON.stringify(a) === JSON.stringify(b);
@@ -73,6 +75,7 @@ export function validateLayout(payload, equipment, { migrateDefaults = false, mi
         // without replaying already-reviewed area migrations.
         (migratePosition || ((original.floor === 'campus' || (preparationCorrection && placement.migrationBasis === 'preparation-video-default') || (dryerRouteCorrection && placement.migrationBasis === 'dryer-route-video-default')) && typeof placement?.catalogRevision === 'string' && placement.catalogRevision.length > 0 && placement.catalogRevision === sourceCatalogRevision)) &&
         (!placement?.catalogRevision || placement.catalogRevision === sourceCatalogRevision) &&
+        (!placement?.alreadyReviewedAt || placement.alreadyReviewedAt !== sourcePlacementRevisions?.[original.id]) &&
         Array.isArray(placement?.position) && placement.position.length === 3 && placement.position.every(Number.isFinite) &&
         Number.isFinite(placement.rotation) && matchesPosition(placement.position) &&
         (placement.catalogRevision ? normalizedAngle(value.rotation - placement.rotation) === 0 :
@@ -97,8 +100,14 @@ export function validateLayout(payload, equipment, { migrateDefaults = false, mi
     const deck = original.hangingDeck;
     const strandedOffDeck = migrateItemDefaults && !!deck && sourceCatalogRevision !== CATALOG_REVISION &&
       !(value.position[0] >= deck.minX && value.position[0] <= deck.maxX && value.position[2] >= deck.minZ && value.position[2] <= deck.maxZ);
-    const position = usesRequestedRestoration || strandedOffDeck || usesPreviousPlacement || usesPreviousPosition ? original.position : value.position;
-    const rotation = usesRequestedRestoration || strandedOffDeck || usesPreviousPlacement || usesPreviousDefault ? original.rotation : value.rotation;
+    // A floor redrawn from its posted plan moved walls, decks and openings
+    // together, so poses saved against the former plan no longer describe any
+    // real place. They take the new plan once; later moves stay as saved.
+    const reviewedPlan = original.planRebuildReviewedRevision;
+    const rebuiltFromPlan = migrateItemDefaults && original.planRebuild === true &&
+      (!reviewedPlan || sourcePlacementRevisions?.[original.id] !== reviewedPlan);
+    const position = rebuiltFromPlan || usesRequestedRestoration || strandedOffDeck || usesPreviousPlacement || usesPreviousPosition ? original.position : value.position;
+    const rotation = rebuiltFromPlan || usesRequestedRestoration || strandedOffDeck || usesPreviousPlacement || usesPreviousDefault ? original.rotation : value.rotation;
     records.set(value.id, { id: value.id, position: [position[0], original.position[1], position[2]], rotation: normalizedAngle(rotation) });
   }
   return equipment.map((item) => records.get(item.id) || { id: item.id, position: [...item.position], rotation: item.rotation || 0 });

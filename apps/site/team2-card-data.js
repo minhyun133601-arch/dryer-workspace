@@ -508,8 +508,7 @@ export function team2RoomPhotos(level){
 }
 const bindings={
   'packaging-main-mixer-1':12,'packaging-main-mixer-2':14,'packaging-main-mixer-3':13,
-  'packaging-round-process':1,
-  'packaging-card-hopper-1':4,'packaging-card-hopper-2':3,'packaging-card-hopper-3':2,
+  'packaging-f2-hopper-1':4,'packaging-f2-hopper-2':3,'packaging-f2-hopper-3':2,'packaging-f2-hopper-4':1,
   'packaging-mixer-sieve-1':7,'packaging-mixer-sieve-2':6,'packaging-mixer-sieve-3':5,
   'packaging-f1-rotary-1':40,'packaging-f1-rotary-2':39,
   'packaging-f1-vertical':38,'packaging-f1-bag-filler':41,

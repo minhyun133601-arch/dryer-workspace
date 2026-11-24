@@ -120,3 +120,22 @@ test('the yellow room uses a narrow real glazed door and the unseen shutter dest
     assert.ok(ray([p.x,p.y,p.z-.35],[0,0,1],[shutter],.7).length>0,'the static slatted curtain blocks the opening');
   }finally{h.dispose();}
 });
+
+test('the north shutter, yellow enclosure and lift appear west to east and the two hall areas share a walkable reference boundary',()=>{
+  const h=fixture();
+  try{
+    const {glazedEnclosure,shutter,hallRegistration}=h.spec.routeSurvey;
+    const elevator=h.environment.architectureFixtures.getObjectByName('dryer-building-3-elevator-landing-doors');
+    assert.equal(shutter.side,'north');
+    assert.ok(shutter.position[0]+shutter.width/2 <= glazedEnclosure.minX);
+    assert.ok(glazedEnclosure.maxX < elevator.position.x);
+    assert.ok(glazedEnclosure.maxZ < -8.9);
+    const ref=h.environment.architectureFixtures.getObjectByName('dryer-route-3-hall-area-reference');
+    assert.equal(ref.userData.floorMapCaption,true);
+    assert.equal(ref.userData.personCollision,false);
+    assert.equal(hallRegistration.physicalPartitionSurveyed,false);
+    assert.deepEqual(hallRegistration.areas.map(a=>a.equipment.length),[1,4]);
+    assert.equal(ray([6.8,8.8,-9.48],[0,0,1],[h.environment.facade,h.environment.structure],1.9).length,0,'lift threshold has a clear forward view to the paired drive heads');
+    assert.ok(box(ref).max.y < h.spec.elevation+.1,'dashed map notation does not introduce a physical partition');
+  }finally{h.dispose();}
+});

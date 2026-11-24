@@ -6,6 +6,7 @@ import { CAMPUS_EQUIPMENT } from '../apps/site/campus-data.js';
 import { EQUIPMENT as BUILDING_EQUIPMENT } from '../apps/site/building-data.js';
 import { LOWER_EQUIPMENT } from '../apps/site/facility-data.js';
 import { EQUIPMENT as PHOTO_EQUIPMENT } from '../apps/site/data.js';
+import { PACKAGING_EQUIPMENT } from '../apps/site/packaging-data.js';
 
 const equipment = [
   { id: 'dryer', position: [1, 37.5, 2], rotation: .5 },
@@ -13,9 +14,9 @@ const equipment = [
 ];
 const original = equipment.map((item) => ({ ...item, position: [...item.position] }));
 
-function entrancePlacementFixture(items, storedPlacementRevisions) {
+function entrancePlacementFixture(items, storedPlacementRevisions, customCatalog) {
   const revision='entrance-route-registration-20261112', globalRevision='preparation-tank-openings-20261112';
-  const catalog=[
+  const catalog=customCatalog || [
     {id:'campus-guardhouse',floor:'campus',position:[61,0,57.5],rotation:0,placementRevision:revision,previousPlacements:[{position:[71,0,57.5],rotation:0,catalogRevision:globalRevision}]},
     {id:'campus-wastewater-treatment',floor:'campus',position:[25,0,53.5],rotation:0,placementRevision:revision,previousPlacements:[{position:[35,0,53.5],rotation:0,catalogRevision:globalRevision}]},
     {id:'reviewed-outdoor',floor:'outdoor',position:[35,0,-1.25],rotation:Math.PI/2,previousPlacements:[{position:[36.75,0,.5],rotation:0}],previousRotation:0},
@@ -52,6 +53,50 @@ test('an entrance placement correction repairs untouched current-release default
     const corrected=fixture.state;fixture.open();
     assert.deepEqual(fixture.state,corrected);assert.equal(fixture.writes,1,'the corrected layout is stamped once and does not migrate again');
   } finally {fixture.dispose();}
+});
+
+test('the posted 9동 floor plan replaces old poses once and then restores the operator’s saved placement', () => {
+  const mixer = PACKAGING_EQUIPMENT.find(i => i.id === 'packaging-main-mixer-1');
+  const unchanged = PACKAGING_EQUIPMENT.find(i => i.floorLevel === 1 && !i.placementRevision && !i.previousPosition && !i.previousRotation);
+  assert.ok(mixer.planRebuild && mixer.placementRevision);
+  const oldMixer = {id:mixer.id, position:[4,0,5], rotation:.5};
+  const downstairs = {id:unchanged.id, position:[3.5,0,-4], rotation:0};
+  const fixture = entrancePlacementFixture([oldMixer,downstairs], {}, [mixer,unchanged]);
+  try {
+    fixture.open();
+    assert.deepEqual(fixture.state[0].position, mixer.position);
+    assert.deepEqual(fixture.state[1], downstairs);
+    assert.equal(fixture.writes, 1);
+    const saved = JSON.parse(fixture.saved.get(fixture.key));
+    assert.equal(saved.placementRevisions[mixer.id], mixer.placementRevision);
+    saved.items[0].position[2] += .25;
+    fixture.saved.set(fixture.key, JSON.stringify(saved));
+    fixture.open();
+    assert.deepEqual(fixture.state, saved.items);
+    assert.equal(fixture.writes, 1);
+  } finally { fixture.dispose(); }
+});
+
+test('the 9동 sieve clearance update moves only the untouched previously reviewed poses', () => {
+  const sieves = [1,2,3].map(n => PACKAGING_EQUIPMENT.find(item => item.id === 'packaging-mixer-sieve-' + n));
+  const old = sieves.map(item => ({id:item.id, ...structuredClone(item.previousPlacements[0])}));
+  old[1].position[0] += .25;
+  old[2].rotation = .3;
+  const revisions = Object.fromEntries(sieves.map(item => [item.id, item.planRebuildReviewedRevision]));
+  const fixture = entrancePlacementFixture(old, revisions, sieves);
+  try {
+    fixture.open();
+    assert.deepEqual(fixture.state[0].position, sieves[0].position);
+    assert.deepEqual(fixture.state[1].position, old[1].position);
+    assert.deepEqual(fixture.state[2].position, old[2].position);
+    assert.ok(Math.abs(fixture.state[2].rotation - old[2].rotation) < 1e-12);
+    const saved = JSON.parse(fixture.saved.get(fixture.key));
+    for (const item of sieves) assert.equal(saved.placementRevisions[item.id], item.placementRevision);
+    const firstLoad = fixture.state;
+    fixture.open();
+    assert.deepEqual(fixture.state, firstLoad);
+    assert.equal(fixture.writes, 1);
+  } finally { fixture.dispose(); }
 });
 
 test('entrance placement correction keeps manually moved or turned poses and checks each placement stamp independently', () => {

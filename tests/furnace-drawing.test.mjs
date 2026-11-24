@@ -200,6 +200,7 @@ async function detailCameraHarness(width = 1000, height = 700) {
       top() { orbit.elevation = 1.56; draw(); }
     } };`);
   const context = vm.createContext({ THREE, document, location: { pathname: '/site/' }, DRAWING_PARTS, DRAWING_GROUPS, DRAWING_INFO, DRAWING_SHEETS, FIELD_STATUS, BASIS, GAS_PATH, PILOT_PATH, PART_BY_ID, DIMENSION_LINES, FLOW_TAG,
+    createBurnerService: () => ({ open() {}, close() {}, refresh() {}, dispose() {}, selectPart() {}, showEquipment() {} }),
     setTimeout(callback) { timers.set(++timerId, callback); return timerId; }, clearTimeout: (id) => timers.delete(id),
     requestAnimationFrame(callback) { frames.set(++frameId, callback); return frameId; }, cancelAnimationFrame: (id) => frames.delete(id), performance: { now: () => 1000 },
   });

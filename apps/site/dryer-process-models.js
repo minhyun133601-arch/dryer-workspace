@@ -62,11 +62,18 @@ function motor(s, parent, position, radius = .19, length = .5, vertical = false)
   const g = tag(s._group(parent, position), 'motor');
   const body = cyl(s, g, radius, length, [0, 0, 0], s.mat.motor, radius, 'motor-body');
   if (!vertical) body.rotation.z = PI / 2;
-  for (let i = 0; i < 8; i++) {
-    const a = i * PI / 4;
-    bar(s, g, vertical ? [Math.cos(a) * radius, -length / 2, Math.sin(a) * radius] : [-length / 2, Math.cos(a) * radius, Math.sin(a) * radius], vertical ? [Math.cos(a) * radius, length / 2, Math.sin(a) * radius] : [length / 2, Math.cos(a) * radius, Math.sin(a) * radius], .012, s.mat.trim, 'motor-fin');
-  }
-  box(s, g, [.2, .16, .2], [0, radius, 0], s.mat.motor, 'terminal-box'); return g;
+  const casing = s._group(g);
+  if (!vertical) casing.rotation.z = PI / 2;
+  const fins = Array.from({ length: 14 }, (_, i) => {
+    const angle = i * 2 * PI / 14;
+    return { position: [Math.cos(angle) * radius, 0, Math.sin(angle) * radius], rotation: [0, -angle, 0] };
+  });
+  repeated(s, casing, new THREE.BoxGeometry(radius * .16, length * .78, radius * .066), fins, s.mat.motor, 'motor-fin');
+  const bell = [[radius * .91, -.06], [radius * 1.06, -.044], [radius * 1.06, 0], [radius * .92, .025], [radius * .65, .035], [0, .035]];
+  tag(s._mesh(new THREE.LatheGeometry(bell.map(([r, y]) => new THREE.Vector2(r, y)), 24), s.mat.motor, casing, [0, length / 2, 0]), 'drive-end-bell');
+  cyl(s, casing, radius * 1.05, .04, [0, -length * .46, 0], s.mat.motor, radius * 1.05, 'motor-base-rim', 24);
+  box(s, g, [.2, .16, .2], vertical ? [radius, 0, 0] : [0, radius, 0], s.mat.motor, 'terminal-box');
+  return g;
 }
 function control(s, parent, position, width = .55, height = .8) {
   const g = tag(s._group(parent, position), 'control');
@@ -286,21 +293,44 @@ function largeCone(s, root, item, g) {
   gauge(s, g[3], [0, 3.1, 1.1]);
 }
 function fluidBed(s, root, item, g) {
-  const shell = cyl(s, g[0], .83, 7, [0, 2.7, 0], s.mat.steel, .83, 'vf-horizontal-shell', 36); shell.rotation.z = PI / 2;
+  const shell = cyl(s, g[0], .83, 7, [0, 2.7, 0], s.mat.steel, .83, 'vf-horizontal-shell', 48); shell.rotation.z = PI / 2;
+  // The SD shaft repair photograph shows rolled cover bays on the VF casing, with
+  // segmented collars around the canvas connections. Their proportions are approximate.
+  const finish = material(s, 'vf-cladding', 0xa9b1ae, { roughness: .38, metalness: .64 });
+  const band = new THREE.CylinderGeometry(.847, .847, .075, 44, 1, true);
+  band.rotateZ(PI / 2);
+  repeated(s, g[0], band, [-3.44, -2.65, -1.1, .99, 2.7, 3.44].map(x => ({ position: [x, 2.7, 0] })), finish, 'vf-rolled-casing-bands');
   box(s, g[0], [6.8, .75, 1.3], [0, 2.05, 0], s.mat.steel, 'vf-lower-chamber');
   for (const x of [-2.1, 0, 2.1]) {
-    const port = cyl(s, g[0], .28, .1, [x, 2.85, .8], s.mat.trim, .28, 'vf-large-inspection-port', 28); port.rotation.x = PI / 2;
-    ring(s, g[0], .29, [x, 2.85, .87], s.mat.trim, .024, 'z', 'vf-large-inspection-ring');
-    bar(s, g[0], [x - .2, 2.85, .9], [x + .2, 2.85, .9], .018, s.mat.trim, 'inspection-handle');
+    const hatch = s._group(g[0], [x, 3.08, .735]);
+    hatch.rotation.x = -.48;
+    cyl(s, hatch, .28, .09, [0, 0, .035], s.mat.trim, .28, 'vf-large-inspection-port', 32).rotation.x = PI / 2;
+    cyl(s, hatch, .251, .025, [0, 0, .089], finish, .251, 'vf-cover-face', 32).rotation.x = PI / 2;
+    ring(s, hatch, .277, [0, 0, .093], finish, .018, 'z', 'vf-large-inspection-ring');
+    for (const side of [-1, 1]) box(s, hatch, [.085, .058, .08], [side * .254, 0, .116], finish, 'vf-hatch-latch');
+    bar(s, hatch, [-.25, 0, .16], [.25, 0, .16], .023, s.mat.trim, 'inspection-handle');
   }
   for (const x of [-2.95, 2.95]) cyl(s, g[0], .14, .09, [x, 2.45, .77], s.mat.trim, .14, 'vf-small-inspection-port', 20).rotation.x = PI / 2;
   deck(s, g[2], [[-3.95, .8], [3.95, .8], [3.95, 2], [-3.95, 2]], [], 1.4, 'vf-front-platform');
   legs(s, g[2], 7.5, 1.05, 1.4, [0, 0, 1.4]); rail(s, g[2], [-3.95, 2], [3.95, 2], 1.4);
   for (const x of [-3.35, 3.35]) stairs(s, g[2], { x, z: 2.05, rise: 1.4, run: 1.6, name: 'vf-end-access-stair' });
-  for (const x of [-1.2, 1, 2.65]) { pipe(s, g[3], [[x, 3.35, 0], [x, 5.15, 0], [x + .4, 5.7, 0]], .25, s.mat.steel, 'vf-upper-connection'); ring(s, g[3], .28, [x, 3.55, 0]); }
+  const cuff = material(s, 'vf-flexible-connector', 0xd8dbcc, { roughness: .94, metalness: .015 });
+  for (const x of [-1.2, 1, 2.65]) {
+    pipe(s, g[3], [[x, 3.35, 0], [x, 5.15, 0], [x + .4, 5.7, 0]], .25, s.mat.steel, 'vf-upper-connection');
+    cyl(s, g[3], .355, .25, [x, 3.68, 0], cuff, .355, 'vf-fabric-sleeve', 32);
+    cyl(s, g[3], .25, .32, [x, 3.965, 0], finish, .355, 'vf-inlet-transition', 32);
+    for (const y of [3.575, 3.783]) ring(s, g[3], .358, [x, y, 0], finish, .015);
+  }
   cyl(s, g[1], 1, 1.3, [-2.75, 4.1, 0], s.mat.steel, .25, 'vf-inlet-cone', 32);
   for (const x of [-2, 2]) {
-    cyl(s, g[2], .16, .35, [x, 1.35, 0], s.mat.dark, .16, 'vf-spring-support');
+    const spring = tag(s._group(g[2], [x, 1.35, 0]), 'vf-spring-support');
+    const turns = 4, coils = Array.from({ length: 65 }, (_, i) => {
+      const angle = i / 64 * turns * 2 * PI;
+      return new THREE.Vector3(.13 * Math.cos(angle), -.15 + .3 * i / 64, .13 * Math.sin(angle));
+    });
+    s._mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(coils), 68, .024, 6, false), finish, spring);
+    for (const y of [-.176, .176]) cyl(s, spring, .168, .035, [0, y, 0], s.mat.trim, .168, 'vf-spring-seat', 24);
+    box(s, g[2], [.39, .16, .42], [x, 1.61, 0], finish, 'vf-upper-spring-bracket');
     legs(s, g[2], .5, .8, 1.15, [x, 0, 0]);
     motor(s, g[2], [x, .65, .65], .2, .55);
   }
@@ -376,75 +406,135 @@ function thirdDetailSign(s,parent,text,position,width=1.15){
   return root;
 }
 function routeConeBank(s, root, item, g) {
-  const y = 3.55, yellow = material(s, 'route-yellow-rails', 0xcaa63c), centers = [-1.4, 1.4];
+  // #003 shows the lift opening and drive guard together. Correcting for
+  // perspective puts the guard at roughly half the opening height. In #001
+  // the service deck is about twice as high as the guard. #004 constrains
+  // the transverse spacing of the support legs to about 0.70 × deck height.
+  // The existing 2.2 m lift opening provides an approximate scale datum.
+  const y = 2.42, guardHeight = 1.18, yellow = material(s, 'route-yellow-rails', 0xcaa63c);
+  const centers = [-1.08, 1.08], shellRadius = .76, openingRadius = .81;
+  const lowerRim = 1.01, upperRim = 2.69, lidTop = 2.83;
   for (const z of centers) {
     const cone = tag(s._group(g[0], [0, 0, z]), 'observed-conical-hopper');
-    cyl(s, cone, 1.08, 2.1, [0, 2.5, 0], s.mat.steel, .22, 'observed-hopper-conical-shell', 40);
-    cyl(s, cone, 1.08, .38, [0, 3.74, 0], s.mat.steel, 1.08, 'observed-hopper-upper-rim', 40);
-    // 538/548s: the feed enters a shallow sloping lid above the cylindrical
-    // collar; the broad vessel top is not a flat, open-topped drum.
-    cyl(s, cone, .24, .18, [0, 4.02, 0], s.mat.steel, 1.08, 'observed-hopper-sloping-cover', 48);
-    for (const yy of [1.45, 3.55, 3.93]) ring(s, cone, yy < 2 ? .24 : 1.09, [0, yy, 0], s.mat.trim, .025);
-    cyl(s, g[2], .22, .26, [0, 1.32, z], s.mat.black, .22, 'observed-hopper-flexible-neck');
-    cyl(s, g[2], .32, .14, [0, 1.12, z], s.mat.trim, .32, 'observed-hopper-discharge-flange');
-    box(s, g[2], [.65, .25, .43], [0, .94, z], s.mat.steel, 'observed-hopper-discharge-assembly');
+    cyl(s, cone, shellRadius, y-lowerRim, [0,(y+lowerRim)/2,0], s.mat.steel,.16,'observed-hopper-conical-shell',40);
+    cyl(s, cone, shellRadius, upperRim-y, [0,(upperRim+y)/2,0], s.mat.steel,shellRadius,'observed-hopper-upper-rim',40);
+    cyl(s, cone, .19, lidTop-upperRim, [0,(lidTop+upperRim)/2,0], s.mat.steel,shellRadius,'observed-hopper-sloping-cover',48);
+    for (const yy of [lowerRim,y,upperRim]) ring(s,cone,yy === lowerRim ? .17 : shellRadius+.007,[0,yy,0],s.mat.trim,.018);
+    cyl(s,g[2],.16,.12,[0,.95,z],s.mat.black,.16,'observed-hopper-flexible-neck');
+    cyl(s,g[2],.23,.085,[0,.86,z],s.mat.trim,.23,'observed-hopper-discharge-flange');
+    box(s,g[2],[.46,.15,.31],[0,.75,z],s.mat.steel,'observed-hopper-discharge-assembly');
     if(z<0){
-      pipe(s,g[3],[[0,4.11,z],[0,4.75,z],[.85,5.18,z],[1.2,5.4,z]],.21,s.mat.steel,'observed-inclined-hopper-feed');
-      for(const point of [[0,4.35,z],[.75,5.12,z]])ring(s,g[3],.18,point,s.mat.trim,.025);
+      pipe(s,g[3],[[0,lidTop,z],[0,3.46,z],[.64,4.61,z],[1.2,5.4,z]],.155,s.mat.steel,'observed-inclined-hopper-feed');
+      for(const point of [[0,3.14,z],[.64,4.61,z]])ring(s,g[3],.165,point,s.mat.trim,.02);
     }else{
       const flex=material(s,'third-hopper-cream-flexible-sleeve',0xded7a6,{roughness:.83,metalness:0});
-      cyl(s,g[3],.4,.67,[0,4.445,z],flex,.4,'observed-hopper-wide-flexible-coupling');
-      cyl(s,g[3],.38,.75,[0,5.155,z],s.mat.steel,.38,'observed-hopper-vertical-upper-riser');
-      for(const yy of [4.11,4.78])ring(s,g[3],.415,[0,yy,z],s.mat.trim,.025,'y','observed-hopper-flex-coupling-band');
-      thirdDetailFlange(s,g[3],[0,4.81,z],.43,'y','observed-hopper-upper-riser-flange');
+      cyl(s,g[3],.29,.50,[0,lidTop+.25,z],flex,.29,'observed-hopper-wide-flexible-coupling');
+      const rigidBase=lidTop+.5, rigidTop=5.53;
+      cyl(s,g[3],.27,rigidTop-rigidBase,[0,(rigidBase+rigidTop)/2,z],s.mat.steel,.27,'observed-hopper-vertical-upper-riser');
+      for(const yy of [lidTop,rigidBase])ring(s,g[3],.304,[0,yy,z],s.mat.trim,.02,'y','observed-hopper-flex-coupling-band');
+      thirdDetailFlange(s,g[3],[0,rigidBase+.03,z],.31,'y','observed-hopper-upper-riser-flange');
     }
-    const rotary=tag(s._group(g[2],[0,.94,z]),'observed-hopper-rotary-outlet-detail');
-    cyl(s,rotary,.23,.5,[0,0,0],s.mat.steel,.23,'observed-hopper-rotary-outlet-body').rotation.z=PI/2;
-    for(const x of [-.28,.28])thirdDetailFlange(s,rotary,[x,0,0],.27,'x','observed-hopper-rotary-side-flange');
-    box(s,rotary,[.18,.3,.32],[.45,0,0],s.mat.steel,'observed-hopper-outlet-actuator-cover');
-    cyl(s, g[3], .07, .13, [1.05, 2.5, z], s.mat.mint, .07, 'observed-hopper-side-sensor').rotation.z = PI / 2;
-    pipe(s, g[3], [[1.13, 2.5, z], [1.25, 2.2, z], [1.25, 1.6, z]], .012, s.mat.black, 'observed-hopper-sensor-cable');
+    const rotary=tag(s._group(g[2],[0,.75,z]),'observed-hopper-rotary-outlet-detail');
+    cyl(s,rotary,.16,.36,[0,0,0],s.mat.steel,.16,'observed-hopper-rotary-outlet-body').rotation.z=PI/2;
+    for(const x of [-.20,.20])thirdDetailFlange(s,rotary,[x,0,0],.19,'x','observed-hopper-rotary-side-flange');
+    box(s,rotary,[.13,.20,.23],[.31,0,0],s.mat.steel,'observed-hopper-outlet-actuator-cover');
+    // The sensor seats on the sloping sheet in #004.
+    const sensorY=1.36, localRadius=.16+(shellRadius-.16)*(sensorY-lowerRim)/(y-lowerRim);
+    cyl(s,g[3],.055,.09,[localRadius+.012,sensorY,z],s.mat.mint,.055,'observed-hopper-side-sensor').rotation.z=PI/2;
+    pipe(s,g[3],[[localRadius+.05,sensorY,z],[localRadius+.09,1.21,z],[.22,.86,z]],.011,s.mat.black,'observed-hopper-sensor-cable');
   }
-  const outline = [[-1.5, -3], [1.5, -3], [1.5, 3], [-1.5, 3]];
-  deck(s, g[1], outline, centers.map(z => [0, z, 1.14]), y, 'observed-hopper-common-platform');
-  thirdDetailChecker(s,g[1],{minX:-1.5,maxX:1.5,minZ:-3,maxZ:3,y,holes:centers.map(z=>[0,z,1.14])},'observed-hopper-checker-plate-relief');
-  legs(s, g[1], 2.7, 5.7, y);
-  for (const z of [-2.85, 0, 2.85]) box(s, g[1], [2.9, .16, .13], [0, y - .18, z], s.mat.trim, 'observed-hopper-platform-beam');
-  for(const x of [-1.36,1.36])box(s,g[1],[.13,.23,5.85],[x,y-.23,0],s.mat.trim,'observed-hopper-underdeck-longitudinal-bearer');
-  for(const side of [-1,1])for(const z of [-2.8,2.8])bar(s,g[1],[side*1.35,2.5,z],[side*.55,y-.28,z],.045,s.mat.trim,'observed-hopper-underdeck-knee-brace');
-  rail(s, g[1], [-1.5, -3], [1.5, -3], y, .95, yellow);
-  rail(s, g[1], [1.5, -3], [1.5, 3], y, .95, yellow);
-  rail(s, g[1], [-1.5, 3], [1.5, 3], y, .95, yellow);
-  rail(s, g[1], [-1.5, -3], [-1.5, 2.1], y, .95, yellow);
-  box(s, g[1], [1.1, .09, .9], [-2, y - .045, 2.65], s.mat.trim, 'observed-hopper-stair-landing');
-  rail(s, g[1], [-2.55, 2.2], [-1.5, 2.2], y, .95, yellow);
-  routeAccessStair(s, g[1], { x: -2.1, z: 6.1, rise: y, run: 3.45, paint: yellow });
-  for (const [index,z] of [-.85, .85].entries()) {
-    const drive = tag(s._group(g[2], [-2.55, 0, z]), 'observed-vertical-motor-housing');
-    cyl(s, drive, .31, .18, [0, .2, 0], s.mat.trim, .38, 'observed-round-drive-base');
-    cyl(s, drive, .23, .32, [0, .45, 0], s.mat.steel, .31, 'observed-round-drive-housing');
-    const coupling=material(s,'third-round-drive-coupling-blue',0x356a8f),motorPaint=material(s,index?'third-round-drive-grey':'third-round-drive-brown',index?0xb5beb7:0x70695a);
-    cyl(s, drive, .17, .14, [0, .68, 0], coupling, .17, 'observed-drive-coupling');
-    const m=routeMotor(s, drive, [0, 1, 0], .15, .5);m.traverse(node=>{if(['dryer-process-motor-body','dryer-process-terminal-box'].includes(node.name))node.material=motorPaint;});
-    cyl(s,drive,.17,.1,[0,1.3,0],motorPaint,.17,'observed-round-drive-motor-fan-cap');
-    thirdDetailFlange(s,drive,[0,.63,0],.23,'y','observed-round-drive-coupling-flange');
-    for(const x of [-.3,.3])box(s,drive,[.035,.55,.48],[x,.7,0],s.mat.steel,'observed-round-drive-fixed-side-guard');
-    for (const xx of [-.37, .37]) box(s, drive, [.045, 1.5, .045], [xx, .75, -.3], s.mat.trim, 'observed-drive-frame-upright');
-    box(s, drive, [.78, .045, .08], [0, 1.48, -.3], s.mat.trim, 'observed-drive-frame-head');
-    cyl(s, drive, .08, .15, [0, 1.59, -.3], s.mat.red, .08, 'observed-drive-red-beacon');
+  const halfWidth=1.05, halfLength=2.36, columnX=.86, columnZ=2.21;
+  const outline=[[-halfWidth,-halfLength],[halfWidth,-halfLength],[halfWidth,halfLength],[-halfWidth,halfLength]];
+  const holes=centers.map(z=>[0,z,openingRadius]);
+  deck(s,g[1],outline,holes,y,'observed-hopper-common-platform');
+  thirdDetailChecker(s,g[1],{minX:-halfWidth,maxX:halfWidth,minZ:-halfLength,maxZ:halfLength,y,holes},'observed-hopper-checker-plate-relief');
+  legs(s,g[1],columnX*2,columnZ*2,y);
+  for(const z of [-columnZ,0,columnZ])box(s,g[1],[2,.13,.10],[0,y-.14,z],s.mat.trim,'observed-hopper-platform-beam');
+  for(const x of [-columnX,columnX])box(s,g[1],[.10,.16,4.51],[x,y-.17,0],s.mat.trim,'observed-hopper-underdeck-longitudinal-bearer');
+  for(const side of [-1,1])for(const z of [-columnZ,columnZ])bar(s,g[1],[side*columnX,1.68,z],[side*.38,y-.21,z],.035,s.mat.trim,'observed-hopper-underdeck-knee-brace');
+  // The transverse tie on each end frame sits just above the hopper throat.
+  for(const z of [-columnZ,columnZ])box(s,g[1],[2*columnX,.07,.06],[0,lowerRim+.03,z],s.mat.trim,'observed-hopper-end-cross-tie');
+  rail(s,g[1],[-halfWidth,-halfLength],[halfWidth,-halfLength],y,.95,yellow);
+  rail(s,g[1],[halfWidth,-halfLength],[halfWidth,halfLength],y,.95,yellow);
+  rail(s,g[1],[-halfWidth,halfLength],[halfWidth,halfLength],y,.95,yellow);
+  rail(s,g[1],[-halfWidth,-halfLength],[-halfWidth,1.66],y,.95,yellow);
+  box(s,g[1],[.76,.08,.72],[-1.40,y-.04,2.02],s.mat.trim,'observed-hopper-stair-landing');
+  rail(s,g[1],[-1.78,1.66],[-halfWidth,1.66],y,.95,yellow);
+  routeAccessStair(s,g[1],{x:-1.40,z:4.27,rise:y,run:2.25,width:.63,paint:yellow});
+  const platformPaint = material(s,'disc-hopper-frame-ivory',0xd1c8ae,{roughness:.64,metalness:.1});
+  g[1].traverse(node=>{
+    if(node.isMesh && node.material===s.mat.trim && !node.name.includes('checker')) node.material=platformPaint;
+  });
+  // Both hoppers lie over the same bank in the two end views (#002, #004).
+  // The drive-end walk-up (#003) shows four removable covers and two return wheels.
+  const line = tag(s._group(g[2]), 'disc-conveyor-pair');
+  line.rotation.y = -PI / 2;
+  const driveX=6, returnX=-2.55, deckWidth=1.34;
+  const driveCenters=[-.34,.34];
+  const blue=material(s,'disc-coupling-blue',0x3f5c87);
+  const motorColors=[material(s,'disc-gearmotor-ochre',0x998355),material(s,'disc-gearmotor-brown',0x736044)];
+  for(const [i,z] of driveCenters.entries()){
+    const drive=tag(s._group(line,[driveX,0,z]),'observed-vertical-motor-housing');
+    cyl(s,drive,.307,.11,[0,.478,0],s.mat.steel,.313,'disc-drive-wheel-cover',40);
+    ring(s,drive,.308,[0,.434,0],s.mat.trim,.011,'y','disc-cover-rolled-seam');
+    cyl(s,drive,.154,.13,[0,.594,0],s.mat.steel,.188,'observed-round-drive-housing');
+    cyl(s,drive,.125,.135,[0,.722,0],blue,.147,'observed-drive-coupling');
+    thirdDetailFlange(s,drive,[0,.663,0],.17,'y','observed-round-drive-coupling-flange');
+    const gearmotor=routeMotor(s,drive,[0,.913,0],.118,.25);
+    gearmotor.traverse(n=>{if(n.isMesh)n.material=motorColors[i];});
+    cyl(s,drive,.12,.045,[0,1.052,0],motorColors[i],.12,'observed-round-drive-motor-fan-cap');
+    for(const side of [-1,1])box(s,drive,[.022,.12,.05],[side*.119,.73,0],blue,'observed-round-drive-fixed-side-guard');
+    pipe(s,drive,[[.09,.95,.055],[.19,.78,.12],[.21,.35,.16],[.13,.18,.16],[-.08,.23,.11]],.013,s.mat.black,'drive-looped-cable');
+    const rear=tag(s._group(line,[returnX,0,z]),'disc-return-station');
+    cyl(s,rear,.288,.09,[0,.47,0],s.mat.steel,.292,'disc-return-wheel-cover',40);
+    cyl(s,rear,.085,.08,[0,.555,0],s.mat.trim,.085,'disc-return-bearing');
+    box(s,rear,[.24,.08,.20],[0,.63,0],s.mat.steel,'disc-return-bearing-block');
   }
-  for (const z of [-.85, 0, .85]) {
-    const trough = tag(s._group(g[2], [-.9, 0, z]), 'observed-covered-transfer-trough');
-    box(s, trough, [3.5, .15, .2], [0, .55, 0], s.mat.steel, 'observed-covered-trough-body');
-    // 516s shows separate shallow removable covers with a narrow seam, rather
-    // than one thick unbroken rectangular bar along the entire transfer.
+  // In the front photograph #002 the three main posts reach the floor;
+  // shorter uprights over the circular covers carry the beacons.
+  const guardX=driveX-.24;
+  for(const z of [-deckWidth/2,0,deckWidth/2]){
+    box(s,line,[.04,guardHeight,.04],[guardX,guardHeight/2,z],s.mat.trim,'observed-drive-frame-upright');
+    box(s,line,[.11,.025,.11],[guardX,.0125,z],s.mat.trim,'disc-guard-foot');
+  }
+  box(s,line,[.045,.042,deckWidth],[guardX,guardHeight,0],s.mat.trim,'paired-drive-guard-crossbar');
+  for(const z of driveCenters){
+    const bracketX=driveX+.20;
+    box(s,line,[.04,guardHeight-.53,.04],[bracketX,(guardHeight+.53)/2,z],s.mat.trim,'observed-drive-frame-upright');
+    box(s,line,[bracketX-guardX,.042,.04],[(guardX+bracketX)/2,guardHeight,z],s.mat.trim,'observed-drive-frame-head');
+    cyl(s,line,.064,.028,[bracketX,guardHeight+.035,z],s.mat.black,.07,'disc-beacon-socket');
+    cyl(s,line,.054,.105,[bracketX,guardHeight+.10,z],s.mat.red,.063,'observed-drive-red-beacon');
+  }
+  const tracks=[-.56,-.12,.12,.56];
+  const span=driveX-returnX,mid=(driveX+returnX)/2,pieces=7;
+  for(const z of tracks){
+    const trough=tag(s._group(line,[mid,0,z]),'observed-covered-transfer-trough');
+    box(s,trough,[span,.103,.144],[0,.503,0],s.mat.steel,'observed-covered-trough-body');
     const covers=tag(s._group(trough),'observed-covered-trough-lid');
-    for(const x of[-1.18,0,1.18])box(s,covers,[1.16,.035,.24],[x,.64,0],s.mat.steel,'observed-trough-removable-cover');
-    for(const side of[-1,1])box(s,trough,[3.55,.045,.025],[0,.645,side*.125],s.mat.trim,'observed-trough-folded-lid-edge');
-    for (const x of [-1.25, 1.25]) box(s, trough, [.06, .44, .28], [x, .22, 0], s.mat.trim, 'observed-trough-support');
-    for (const x of [-1.35, -.45, .45, 1.35]) box(s, trough, [.035, .045, .27], [x, .65, 0], s.mat.dark, 'observed-trough-cover-clamp');
+    for(let i=0;i<pieces;i++){
+      const x=-span/2+(i+.5)*span/pieces;
+      box(s,covers,[span/pieces-.014,.021,.164],[x,.57,0],s.mat.steel,'observed-trough-removable-cover');
+      for(const side of [-1,1])box(s,trough,[.032,.082,.017],[x-.37,.534,side*.086],s.mat.trim,'observed-trough-cover-clamp');
+    }
+    for(const side of [-1,1])box(s,trough,[span,.034,.014],[0,.557,side*.083],s.mat.trim,'observed-trough-folded-lid-edge');
+    for(const x of [-1.12,1.65,4.38]) {
+      box(s,line,[.063,.43,.049],[x,.215,z],s.mat.trim,'observed-trough-support');
+      box(s,line,[.15,.023,.14],[x,.0115,z],s.mat.steel,'disc-trough-anchor');
+    }
   }
-  Object.assign(root.userData, { observedConicalHoppers: 2, observedVerticalMotorHousings: 2, observedCoveredTransferTroughs: 3, localPlatformElevation: y });
+  for(const x of [.9,4.92])for(const z of [-.56,.56]){
+    box(s,line,[.70,.065,.47],[x,.035,z],s.mat.steel,'transfer-outlet-floor-shoe');
+    cyl(s,line,.107,.09,[x,.115,z],s.mat.trim,.107,'transfer-outlet-collar');
+    cyl(s,line,.215,.264,[x,.291,z],s.mat.steel,.109,'transfer-collecting-cone',24);
+    ring(s,line,.124,[x,.17,z],s.mat.trim,.012,'y','transfer-boot-clamp');
+  }
+  for(const x of [returnX-.38,returnX+.35]){
+    box(s,line,[.038,.038,1.30],[x,.74,0],s.mat.trim,'disc-rear-frame-web');
+    for(const z of [-.64,.64]) box(s,line,[.047,.76,.047],[x,.38,z],s.mat.trim,'disc-rear-frame-leg');
+  }
+  for(const z of [-.64,.64])box(s,line,[.78,.04,.04],[returnX,.76,z],s.mat.trim,'disc-return-end-frame');
+  Object.assign(root.userData, { observedConicalHoppers: 2, observedVerticalMotorHousings: 2, observedCoveredTransferTroughs: tracks.length, localPlatformElevation: y, guardHeight, supportWidth: 2*columnX, scaleBasis: 'four-view photo ratios; 2.2 m existing elevator opening reference; not field measured',
+    transferPhotoReferences: ['20261124_134536.jpg','20261124_134544.jpg','20261124_134555.jpg','20261124_134612.jpg'] });
 }
 function routeServiceSkid(s, root, item, g) {
   box(s, g[0], [3.6, .12, 2.3], [0, .12, 0], s.mat.trim, 'observed-service-skid-base');

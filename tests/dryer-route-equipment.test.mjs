@@ -45,16 +45,34 @@ test('the same five 3F identities use video-observed shapes without asserting hi
   } finally { h.dispose(); }
 });
 
-test('the two observed conical hoppers share a pierced yellow-rail deck, two motor housings and three covered troughs', () => {
+test('the elevator-facing A/B drives and four covered runs lead west through the two inline hoppers', () => {
   const h = harness();
   try {
     const item = observed.find(item => item.id === 'f3-holding'), root = h.roots.get(item.id);
     assert.equal(named(root, 'observed-conical-hopper').length, 2);
     assert.equal(named(root, 'observed-vertical-motor-housing').length, 2);
-    assert.equal(named(root, 'observed-covered-transfer-trough').length, 3);
+    const runs = named(root, 'observed-covered-transfer-trough');
+    assert.equal(runs.length, 4);
+    const drivePositions = named(root,'observed-vertical-motor-housing').map(node=>node.getWorldPosition(new THREE.Vector3()));
+    for(const drive of drivePositions) assert.ok(Math.abs(drive.x-6.8)<.2, 'red-beacon end lies directly ahead of the lift');
+    const returns = named(root,'disc-return-station');
+    assert.equal(returns.length,2);
+    assert.ok(returns.every(n=>n.getWorldPosition(new THREE.Vector3()).x < item.position[0]-2));
+    for(const run of runs){ const size=new THREE.Box3().setFromObject(run).getSize(new THREE.Vector3());assert.ok(size.x>8 && size.z<.25); }
     const decks = named(root, 'observed-hopper-common-platform'); assert.equal(decks.length, 1);
-    for (const z of [-1.4, 1.4]) assert.equal(down(decks[0], item.position[0], item.position[2] + z).length, 0, 'the hopper axis remains an actual deck opening');
-    assert.ok(down(decks[0], item.position[0] + 1.3, item.position[2]).length > 0, 'the adjacent service strip remains solid');
+    for (const hopper of named(root,'observed-conical-hopper')) {
+      const center=hopper.getWorldPosition(new THREE.Vector3());
+      assert.equal(down(decks[0],center.x,center.z).length,0,'each inline hopper axis remains an actual deck opening');
+    }
+    assert.ok(down(decks[0], item.position[0], item.position[2]+.96).length > 0, 'the adjacent service strip remains solid');
+    // The EXIF-corrected front frame in #002 and the deck posts in #004
+    // constrain proportions without claiming a tape measurement.
+    const crossing=new THREE.Box3().setFromObject(named(root,'paired-drive-guard-crossbar')[0]);
+    const guardHeight=crossing.getCenter(new THREE.Vector3()).y-item.position[1];
+    const guardWidth=crossing.getSize(new THREE.Vector3()).z;
+    assert.ok(Math.abs(guardWidth/guardHeight-1.12)<.05,'front protection frame reconstructed from photo #002');
+    assert.ok(Math.abs(root.userData.localPlatformElevation/guardHeight-2.04)<.12,'deck height relative to the same guard in photo #001');
+    assert.ok(Math.abs(root.userData.supportWidth/root.userData.localPlatformElevation-.70)<.045,'return-end platform aspect ratio in photo #004');
     const stair = named(root, 'observed-service-stair'); assert.equal(stair.length, 1);
     assert.equal(stair[0].userData.buildingFloorAdded, false);
     const landing = new THREE.Box3().setFromObject(named(root, 'observed-hopper-stair-landing')[0]);
@@ -96,7 +114,9 @@ test('all observed assemblies fit the reduced tower and leave a continuous centr
       const box = new THREE.Box3().setFromObject(root); boxes.push({ id, box });
       assert.ok(box.min.x >= -8.5 && box.max.x <= 8.5 && box.min.z >= -13.3 && box.max.z <= 13.3, `${id} remains in the smaller third-floor tower`);
       assert.ok(box.min.y >= 7.3 - 1e-5 && box.max.y <= 13.3 + 1e-5, `${id} stays between third and fourth floor datums`);
-      assert.equal(box.intersectsBox(passage), false, `${id} leaves the central person route clear`);
+      root.traverse(mesh=>{
+        if(mesh.isMesh)assert.equal(new THREE.Box3().setFromObject(mesh).intersectsBox(passage),false,`${id}/${mesh.name} leaves the central person route clear`);
+      });
       root.traverse(mesh => { if (mesh.isMesh) { assert.ok(h.s.geometries.has(mesh.geometry)); assert.ok(h.s.materials.has(mesh.material)); } });
     }
     for (let i = 0; i < boxes.length; i++) for (let j = i + 1; j < boxes.length; j++) assert.equal(boxes[i].box.intersectsBox(boxes[j].box), false, `${boxes[i].id} and ${boxes[j].id} do not occupy the same equipment envelope`);
@@ -113,4 +133,18 @@ test('the exact old drive-frame default migrates once while moved, rotated and i
     const result = restore(value)[0]; assert.deepEqual(result.position, value.items[0].position); assert.ok(Math.abs(result.rotation - value.items[0].rotation) < 1e-8);
   }
   assert.deepEqual(validateLayout(payload([-.6, 7.3, -3.4]), [item])[0].position, [-.6, 7.3, -3.4], 'explicit imports do not apply catalog migrations');
+});
+
+test('restoring the reviewed disc-conveyor bank moves only its previous default with its original facing', () => {
+  const item=observed.find(record=>record.id==='f3-holding');
+  const old={id:item.id,position:[5.5,7.3,1],rotation:0};
+  const payload=(pose,stamp)=>({version:1,catalogRevision:'preparation-tank-openings-20261112',placementRevisions:{[item.id]:stamp},items:[pose]});
+  const previous='dryer-hall-saved-defaults-20261113';
+  const restore=(pose,stamp)=>validateLayout(payload(pose,stamp),[item],{migrateDefaults:true,migrateDryerDefaults:false})[0];
+  assert.deepEqual(restore(old,previous),{id:item.id,position:item.position,rotation:item.rotation});
+  for(const custom of [{...old,position:[5.75,7.3,1]},{...old,position:[6,7.3,1]},{...old,rotation:Math.PI/2}]) {
+    assert.deepEqual(restore(custom,previous),custom,'a manually changed pose survives the new survey');
+  }
+  assert.deepEqual(restore(old,item.placementRevision),old);
+  assert.deepEqual(validateLayout(payload(old,previous),[item])[0],old,'explicit imports keep their own pose');
 });

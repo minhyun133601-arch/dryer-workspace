@@ -7,7 +7,7 @@ const placements = {
   'f1-melting': [21.2, 3.3], 'f1-oil-water': [25.5, 3.3], 'f1-s1': [23.5, 10],
   'f1-conveyor-a': [-2, 14.5], 'f1-conveyor-b': [6.75, 12.25], 'f1-palletizer': [10.75, 13.75],
   'f3-sterilizer': [-6, -4.75], 'f3-homogenizer': [-6, -.25], 'f3-balance-tank': [-6.75, 4],
-  'f3-feed-tank': [-2.25, 4.5], 'f3-holding': [5.5, 1],
+  'f3-feed-tank': [-2.25, 4.5], 'f3-holding': [.75, -7],
   'f4-fluid-bed': [-4.4, -1.7], 'f5-extraction': [5.9, -1],
 };
 // Only the interrupted full-envelope release produced these automatic clamp
@@ -116,10 +116,12 @@ const thirdFloorObserved = Object.freeze({
     dryerRoute: routeShape('third-cip-deck', [626, 648, 686, 692, 702, 706, 708, 714, 720], { minimumVisibleTankTops: 2, totalTankCountConfirmed: false, readableLabels: ['CIP탱크(산)'] }),
   },
   'f3-holding': {
-    name: '3층 원추 호퍼 2기·이송부', tag: '3F 호퍼·이송',
-    summary: '538·554초에 함께 보이는 원추 호퍼 2기, 공통 황색 난간 점검대, 하부 둥근 구동부 2개와 덮개형 이송 트로프 3열을 반영했습니다. 과거 홀딩/노즐 ID는 보존하며 현재 장치 기능·기종을 단정하지 않습니다.',
-    parts: ['관찰 원추 호퍼 2기', '공통 점검대·황색 난간·계단', '하부 구동부 2개·이송 트로프 3열', '보이는 상부·하부 연결'],
-    dryerRoute: routeShape('third-cone-bank', [502, 508, 514, 516, 520, 538, 540, 548, 554, 563], { conicalHoppers: 2, verticalMotorHousings: 2, coveredTransferTroughs: 3 }),
+    name: '3층 디스크 컨베이어 A·B와 원추 호퍼', tag: '디스크 컨베이어 A·B',
+    summary: '엘리베이터 문 맞은편의 수직 모터 두 대에서 금속 덮개가 있는 이송로 네 열이 서쪽 호퍼 점검대까지 이어집니다. 구동부 보호틀 위에는 적색 경광등 두 개가 있고, 이송로 반대 끝에는 원형 반환부 두 개가 있습니다.',
+    parts: ['원추 호퍼 2기', '공통 점검대·황색 난간·계단', '디스크 컨베이어 A·B 구동부와 이송로', '상부 투입관·호퍼 출구'],
+    rotation: Math.PI / 2,
+    dryerRoute: routeShape('third-cone-bank', [502, 508, 514, 516, 520, 538, 540, 548, 554, 563], { conicalHoppers: 2, verticalMotorHousings: 2, coveredTransferTroughs: 4, confirmedByUser: '디스크 컨베이어', individualABSideConfirmed: false }),
+    sourceReferences: [{clipId:'dryer-3f-compressor-20261124',times:[8,12,14,20],photoNumbers:[1,2,3,4]}, {cardNumbers:[15,16],recordedLocation:'청정실(2층)'}],
   },
 });
 function repairablePreviousPlacements(item, pose) {
@@ -144,20 +146,31 @@ export function registerDryerLowerEquipment(item) {
   const observed = firstFloorObserved[item.id] || thirdFloorObserved[item.id];
   if (observed) {
     const savedHallPose = savedHallDefaultPoses[item.id];
+    const discConveyor = item.id === 'f3-holding';
     const historicalPoses = [...(previousRoutePoses[item.id] || []), ...(savedHallPose ? [savedHallPose] : [])];
     const qualifiedPoses = reviewedRouteRevisions.flatMap(catalogRevision =>
       historicalPoses.map(([x, z]) => ({ position: [x, item.position[1], z], rotation: item.rotation || 0, catalogRevision, migrationBasis: 'dryer-route-video-default' })));
     const corridorDefault=previousCorridorDefaults[item.id];
     const corridorPoses=corridorDefault?reviewedRouteRevisions.map(catalogRevision=>({position:[corridorDefault[0],item.position[1],corridorDefault[1]],rotation:item.rotation||0,catalogRevision,migrationBasis:'dryer-route-video-default'})):[];
+    const earlier = [...previousPlacements, ...qualifiedPoses, ...corridorPoses];
+    // A coordinate already reviewed in the previous hall update can be a
+    // deliberate move back to that spot. Only its then-current default advances.
+    const restoredPoses = discConveyor ? [
+      ...earlier.map(p=>({...p,alreadyReviewedAt:hallPlacementRevision})),
+      ...reviewedRouteRevisions.map(catalogRevision=>({position:[5.5,item.position[1],1],rotation:0,catalogRevision,migrationBasis:'dryer-route-video-default'})),
+    ] : earlier;
     return Object.freeze({
       ...item, ...observed, position: pose ? [pose[0], item.position[1], pose[1]] : item.position,
       ...(supplementalClip2Times[item.id]?{sourceReferences:[{clipId:'first-floor-20261113-clip2',times:supplementalClip2Times[item.id]}]}:{}),
       ...(savedHallPose ? { placementRevision: hallPlacementRevision } : {}),
       ...(corridorDefault ? { placementRevision: corridorPlacementRevision } : {}),
-      previousPlacements: [...previousPlacements, ...qualifiedPoses, ...corridorPoses],
+      ...(discConveyor ? {placementRevision:'dryer-elevator-disc-conveyor-20261124'} : {}),
+      previousPlacements: restoredPoses,
       positionBasis: observed.dryerRoute.positionBasis, positionConfidence: 'approximate',
-      confidence: '2026-11-12 연속 영상 관찰 · 치수·좌표 비실측',
-      details: [item.floor === 1 ? '1.5층 복도와 OP실에서 아래를 내려다본 창 장면의1층 외형·상대 배치를 우선했습니다.' : '1.5층에서 3F 표기 계단을 지나 촬영한 연속 영상의 외형·상대 배치를 우선했습니다.',
+      confidence: discConveyor ? '2026-11-24 현장 사진·영상과 사용자 확인 · 좌표 비실측' : '2026-11-12 연속 영상 관찰 · 치수·좌표 비실측',
+      details: discConveyor ? ['11월 24일 엘리베이터 앞 영상과 현장 사진 001~004에서 두 모터·네 이송로·직렬 호퍼의 방향을 확인했습니다.',
+        '등록카드 15번(B)·16번(A)은 청정실(2층) 표기이며 같은 장면을 담고 있습니다. 현장 안내에 따라 3층에 배치했고 각 구동부의 좌우 A/B 순서는 미확인입니다.',
+        '승강기 문틀과 함께 찍힌 사진 003, 구동부와 점검대가 나란히 보이는 사진 001, 양끝 사진 002·004의 비례를 맞췄습니다. 모델의 보호틀 높이는 약 1.18 m, 호퍼 점검면은 약 2.42 m입니다. 현장 실측 전 추정값입니다.'] : [item.floor === 1 ? '1.5층 복도와 OP실에서 아래를 내려다본 창 장면의1층 외형·상대 배치를 우선했습니다.' : '1.5층에서 3F 표기 계단을 지나 촬영한 연속 영상의 외형·상대 배치를 우선했습니다.',
         '기존 설비 ID는 저장 배치 호환을 위해 유지합니다. 과거 공정 ID와 영상 속 장치의 정확한 기능·기종 대응은 확정하지 않았습니다.',
         '촬영된 도면은 참고 자료이며 현재 설치 수량·벽 위치의 확정 근거로 사용하지 않습니다.',
         item.floor === 1 ? '파란 바닥 생산구역과 녹색 외포장 구역의 위치·장비 비례는 미실측이며 가려진 연결 경로를 확정하지 않습니다.' : '몸통·점검면·배관의 치수와 평면 좌표는 축소된 3층 외곽 안의 모델 비례이며 실측값이 아닙니다.'],

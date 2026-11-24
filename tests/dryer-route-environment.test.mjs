@@ -134,6 +134,32 @@ test('room furniture leaves the recorded door approaches and usable interior ais
   }finally{two.dispose();three.dispose();}
 });
 
+test('the recorded white connecting door opens from the conveyor return into the older process area',()=>{
+  const h=fixture(3);
+  try{
+    const gate=h.spec.routeSurvey.hallRegistration.connectingDoor;
+    const model=h.environment.architectureFixtures.getObjectByName('dryer-route-3-'+gate.id+'-doorway');
+    const leaf=model.children.find(n=>n.userData.doorLeaf);
+    const inside=model.localToWorld(new THREE.Vector3(0,1.45,-.42));
+    const outside=model.localToWorld(new THREE.Vector3(0,1.45,.42));
+    const direction=inside.clone().sub(outside).normalize();
+    assert.deepEqual(model.userData.sourceTimesSeconds,gate.sourceTimes);
+    assert.equal(leaf.userData.proximityDoor.enterable,true);
+    assert.ok(leaf.getObjectByName('dryer-route-process-side-horizontal-bar'));
+    assert.ok(cast(outside.toArray(),direction.toArray(),[leaf],.85).length);
+    const controller=createProximityDoorController(h.s.scene);
+    try{
+      const visitor=model.localToWorld(new THREE.Vector3(0,0,.63));
+      for(let i=0;i<16;i++)controller.update(visitor,.1,{autoOpen:true});
+      h.s.scene.updateMatrixWorld(true);
+      for(const offset of [-.28,0,.28]){
+        const start=model.localToWorld(new THREE.Vector3(offset,1.45,.42));
+        assert.equal(cast(start.toArray(),direction.toArray(),[h.environment.structure,h.environment.facade,model],.85).length,0,'the capsule-width opening is physically clear');
+      }
+    }finally{controller.dispose();}
+  }finally{h.dispose();}
+});
+
 test('the native overlook room keeps six open jet outlets and two wrapped bundles as independently owned context',()=>{
   const h=fixture(1);
   try{

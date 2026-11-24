@@ -183,3 +183,87 @@ test('uniform fitting preserves photographed round sections and whole-machine pr
     const face = componentSpan(softener, 'softener-blue-front-dial'); near(face.x, face.y);
   } finally { model.dispose(); }
 });
+
+test('the three Cheerpack cards keep their distinct feed faces, tracks and guard bands', () => {
+  const model = createLiquidModel({ equipment: LIQUID_EQUIPMENT.filter(item => [64, 65, 66].includes(item.cardNumber)) });
+  const components = (number, role) => model.records.get(`liquid-card-0${number}`).components.filter(c => c.role === role);
+  try {
+    const blueBands = components(64, 'front-door-band');
+    assert.equal(blueBands.length, 2);
+    assert.ok(blueBands.every(c => c.material === 'liquid-blue'));
+    for (const number of [65, 66]) {
+      const orangeBands = components(number, 'front-door-band');
+      assert.equal(orangeBands.length, 2);
+      assert.ok(orangeBands.every(c => c.material === 'liquid-orange' && c.bounds.max[1] < blueBands[0].bounds.min[1]));
+      assert.equal(components(number, 'top-lattice-guard-cap').length, 1);
+    }
+    assert.equal(components(64, 'top-lattice-guard-cap').length, 0);
+    for (const number of [64, 65, 66]) assert.ok(components(number, 'rear-transfer-frame')[0].bounds.max[2] < 0);
+    const rails = components(65, 'paired-outfeed-end');
+    assert.equal(rails.length, 2);
+    assert.ok(rails[0].bounds.max[2] < rails[1].bounds.min[2]);
+    assert.equal(components(65, 'covered-incline').length, 1);
+    assert.equal(components(65, 'incline-flight').length, 0);
+    const flights = components(66, 'incline-flight');
+    assert.ok(flights.length > 2);
+    for (const [index, flight] of flights.entries()) {
+      if (index === 0) continue;
+      assert.ok(flight.bounds.min[1] > flights[index - 1].bounds.max[1]);
+      assert.ok(flight.bounds.min[0] > flights[index - 1].bounds.min[0]);
+    }
+    assert.equal(components(64, 'covered-incline').length + components(64, 'incline-flight').length, 0);
+  } finally { model.dispose(); }
+});
+
+test('cartoner, pill former and kneader retain the external structures visible in their own card views', () => {
+  const model = createLiquidModel({ equipment: LIQUID_EQUIPMENT.filter(item => [53, 106, 107].includes(item.cardNumber)), detail: false });
+  const components = (id, role) => model.records.get(id).components.filter(c => c.role === role);
+  try {
+    const guides = components('liquid-card-053', 'carton-transfer-guide');
+    const [infeed] = components('liquid-card-053', 'cartoner-infeed-side-guide');
+    assert.equal(guides.length, 2);
+    assert.equal(infeed.material, 'liquid-green');
+    assert.ok(infeed.bounds.max[0] < guides[0].bounds.min[0]);
+    const rim = components('liquid-card-106', 'square-hopper-rim');
+    assert.equal(rim.length, 4);
+    assert.ok(rim.every(c => c.bounds.max[1] - c.bounds.min[1] < .04));
+    assert.ok(components('liquid-card-106', 'pellet-side-louvre').every(c => c.material === 'liquid-dark'));
+    assert.equal(components('liquid-card-106', 'pellet-side-louvre').length, 10);
+    const [bowl] = components('liquid-card-107', 'kneader-bowl');
+    const [guard] = components('liquid-card-107', 'kneader-bowl-guard');
+    const [plinth] = components('liquid-card-107', 'bowl-support-plinth');
+    assert.ok(plinth.bounds.max[1] < bowl.bounds.min[1]);
+    near(guard.bounds.min[1], bowl.bounds.max[1], .012);
+    assert.equal(components('liquid-card-107', 'side-cable-loop')[0].material, 'liquid-black');
+    const feet = components('liquid-card-107', 'kneader-leveling-pad');
+    assert.equal(feet.length, 4);
+    assert.ok(feet.every(c => c.bounds.max[1] < plinth.bounds.min[1]));
+  } finally { model.dispose(); }
+});
+
+test('both kneader vent banks are visible against their white panels from the rear', () => {
+  const model = createLiquidModel({ equipment: LIQUID_EQUIPMENT.filter(item => item.cardNumber === 107) });
+  try {
+    const { body, components } = model.records.get('liquid-card-107');
+    model.root.updateMatrixWorld(true);
+    const direction = new THREE.Vector3(0, 0, 1).transformDirection(body.matrixWorld);
+    const hitFromRear = (x, y) => {
+      const origin = body.localToWorld(new THREE.Vector3(x, y, -3));
+      return new THREE.Raycaster(origin, direction).intersectObjects(body.children, false)[0];
+    };
+    for (const role of ['kneader-upper-rear-vent', 'kneader-lower-rear-vent']) {
+      const slots = components.filter(component => component.role === role);
+      assert.equal(slots.length, 20, role);
+      for (const { bounds } of slots) {
+        const x = (bounds.min[0] + bounds.max[0]) / 2;
+        const y = (bounds.min[1] + bounds.max[1]) / 2;
+        const slot = hitFromRear(x, y);
+        const backing = hitFromRear(bounds.max[0] + .004, y);
+        assert.equal(slot?.object.material.name, 'liquid-dark', role);
+        assert.equal(backing?.object.material.name, 'liquid-white', role);
+        near(body.worldToLocal(slot.point.clone()).z, bounds.min[2]);
+        near(body.worldToLocal(backing.point.clone()).z, bounds.max[2]);
+      }
+    }
+  } finally { model.dispose(); }
+});

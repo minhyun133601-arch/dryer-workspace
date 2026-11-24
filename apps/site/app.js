@@ -10,6 +10,7 @@ import { BURNER_MAINTENANCE_DOCUMENTS } from './burner-maintenance-data.js';
 import { createChillerDetail } from './chiller-detail.js';
 import { createLiquidDetail } from './liquid-detail.js';
 import { createDryerUpperReference } from './dryer-upper-reference.js';
+import { createCompressorSurvey } from './dryer-compressor-view.js';
 
 const EQUIPMENT = [...DRYER_EQUIPMENT, ...OUTDOOR_EQUIPMENT, ...CAMPUS_EQUIPMENT, ...PACKAGING_EQUIPMENT];
 
@@ -24,6 +25,7 @@ const liquidDetail = createLiquidDetail({
   onClose: () => setLiquidArea(false),
 });
 const dryerUpperReference = createDryerUpperReference();
+const compressorSurvey = createCompressorSurvey({getScene: () => scene, floorSpec: FLOORS.find(f => f.id === 3)});
 const dryerLevelName = (value) => Number(value) === 8 ? '옥상' : `${FLOORS.find(floor => floor.id === Number(value))?.displayLevel ?? value}층`;
 const itemOnDryerFloor = (item, value) => item.floor === value || item.visibleFloors?.includes(Number(value));
 const icons = {
@@ -156,6 +158,7 @@ function setAreaIndicator(area) {
   document.querySelectorAll('.area-selector [data-area]').forEach((button) => button.setAttribute('aria-pressed', String(button.dataset.area === area)));
 }
 function updateDetailActions() {
+  $('compressor-open').hidden = $('disc-conveyor-open').hidden = liquidShown || activeFloor !== 3;
   $('boiler-open').hidden = liquidShown || !['campus','all',1].includes(activeFloor);
   $('valve-room-open').hidden = liquidShown || activeFloor !== 'campus';
   $('wastewater-open').hidden = liquidShown || activeFloor !== 'campus';
@@ -234,7 +237,7 @@ function setPhoto(index) {
   const item = items.get(selectedId);
   const room = roomByFloor(activeFloor);
   const name = item?.name || room?.name || '건조실 현장';
-  const referenceKind = photoSources[photoIndex].includes('/team3-') ? '설비이력카드' : '도면';
+  const referenceKind = photoSources[photoIndex].includes('/equipment-cards/') ? '설비이력카드' : '도면';
   $('reference-photo').src = photoSources[photoIndex];
   $('reference-photo').classList.toggle('is-drawing-reference', referenceKind === '도면');
   $('photo-dialog').classList.toggle('is-drawing-reference', referenceKind === '도면');
@@ -429,6 +432,8 @@ $('rear-survey-open').addEventListener('click', () => {
 });
 $('furnace-open').addEventListener('click', () => { if (!$('furnace-open').disabled) furnaceDetail.open(); });
 $('upper-photos-open').addEventListener('click', () => dryerUpperReference.open());
+$('compressor-open').addEventListener('click', () => compressorSurvey.open());
+$('disc-conveyor-open').addEventListener('click', () => compressorSurvey.open('f3-holding',{enter:true}));
 $('elevator-room-open').addEventListener('click', () => { setFloor(8); selectEquipment('dryer-roof-drive'); scene?.focus('dryer-roof-drive'); });
 $('chiller-open').addEventListener('click', () => { if (!$('chiller-open').disabled) chillerDetail.open(); });
 for (const level of ['all', 1, 2, 3]) {
@@ -547,7 +552,7 @@ document.addEventListener('visibilitychange', syncActivity);
 window.addEventListener('pagehide', (event) => {
   pageHidden = true;
   if (event.persisted) syncActivity();
-  else { dryerUpperReference.dispose(); liquidDetail.dispose(); chillerDetail.dispose(); furnaceDetail.dispose(); layoutEditor?.dispose(); scene?.dispose(); disposed = true; }
+  else { compressorSurvey.dispose(); dryerUpperReference.dispose(); liquidDetail.dispose(); chillerDetail.dispose(); furnaceDetail.dispose(); layoutEditor?.dispose(); scene?.dispose(); disposed = true; }
 });
 window.addEventListener('pageshow', () => { pageHidden = false; if (!disposed) syncActivity(); });
 
@@ -573,6 +578,7 @@ try {
     onNavigationChange: (progress) => { $('outdoor-progress').value = Math.round(progress); },
     onFloorChange: (floor) => setFloor(floor),
   });
+  compressorSurvey.attach(scene);
   scene.setAutomaticDoors($('auto-doors-toggle').checked);
   scene.setPersonViewScale(Number($('person-view-scale').value)/100);
   scene.setLabels($('labels-toggle').checked);
@@ -590,7 +596,6 @@ try {
   if (requestedEquipment) selectEquipment(requestedEquipment.id);
   $('move-equipment').disabled = !selectedId;
   syncActivity();
-  if (requestedFloor === 'liquid') liquidDetail.open({ equipmentId: requestedParams.get('equipment') });
   $('site-canvas').dataset.ready = 'true';
   $('scene-loading').hidden = true;
   if (embedded) window.parent.postMessage({ type: 'dryer-workspace:ready', moduleId: 'site' }, location.origin);
@@ -602,3 +607,4 @@ try {
   ['zoom-in', 'zoom-out', 'reset-view', 'snapshot-button', 'fullscreen-button', 'focus-equipment', 'move-equipment', 'isolation-toggle', 'explosion-input', 'labels-toggle', 'structure-toggle', 'ducts-toggle'].forEach((id) => { $(id).disabled = true; });
   document.querySelectorAll('[data-view]').forEach((button) => { button.disabled = true; });
 }
+if (requestedFloor === 'liquid') liquidDetail.open({ equipmentId: requestedParams.get('equipment') });

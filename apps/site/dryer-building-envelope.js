@@ -53,6 +53,16 @@ export function buildDryerBuildingEnvironment(s, options = {}) {
     plate(deck, bounds, holes);
   }
   for (const patch of spec.slabPatches || []) plate(deck, patch);
+  if (spec.roofThreshold) {
+    const threshold = plate(deck, spec.roofThreshold, [], m.roof, .13);
+    threshold.name = 'dryer-building-3-compressor-roof-threshold';
+    threshold.userData.lowWingRoof = true;
+  }
+  for (const [index, bounds] of (spec.roofWalkwayZones || []).entries()) {
+    const walk = plate(deck, bounds, [], m.roof, .13);
+    walk.name = `dryer-building-${level}-roof-walkway-${index + 1}`;
+    walk.userData.lowWingRoof = true;
+  }
   for (const bounds of spec.roofZones || []) {
     const result = plate(cover, bounds, [], m.roof, .13); result.userData.lowWingRoof = true;
   }
@@ -106,13 +116,28 @@ export function buildDryerBuildingEnvironment(s, options = {}) {
   }
   function doorway(a, b, opening) {
     if (opening.doorKind === 'custom' || opening.doorKind === 'none' || opening.sill > 0) return;
-    const width = opening.width, height = opening.height, dx = b[0] - a[0], dz = b[1] - a[1], length = Math.hypot(dx,dz);
-    const root = group(architectureFixtures, [a[0] + dx / length * opening.offset, 0, a[1] + dz / length * opening.offset]);
+    const rise = opening.threshold?.height ?? 0;
+    const width = opening.width, height = opening.height - rise, dx = b[0] - a[0], dz = b[1] - a[1], length = Math.hypot(dx,dz);
+    const root = group(architectureFixtures, [a[0] + dx / length * opening.offset, rise, a[1] + dz / length * opening.offset]);
     root.rotation.y = -Math.atan2(dz,dx); root.name = `dryer-building-${level}-door-${architectureFixtures.children.length}`;
     Object.assign(root.userData,{ architecturalDoor:true, openingWidth:width, openingHeight:height, illustratedOpen:false, proximityOperated:true, observedDoorStyle:opening.doorStyle || !!opening.doorKind });
     for (const x of [-width/2,width/2]) box(root,[.065,height,.15],[x,height/2,0],m.trim);
+    if (opening.id) root.userData.doorId = opening.id;
+    if (opening.positionBasis) root.userData.positionBasis = opening.positionBasis;
     box(root,[width+.13,.075,.15],[0,height+.0375,0],m.trim);
-    box(root,[width,.018,.23],[0,.009,0],m.dark);
+    if (opening.threshold) {
+      // The return walk shows the green curb on both approaches. Its rise
+      // is a door-frame proportion; the adjacent slab elevations are retained.
+      const { depth, sourceSeconds } = opening.threshold;
+      m.epoxyCurb ||= s._material(0x437858,.77,.04);
+      const curb = box(deck, [width + .06, rise, depth], [root.position.x, rise / 2, root.position.z], m.epoxyCurb);
+      curb.name = `dryer-building-${level}-${opening.id}-entry-curb`;
+      curb.rotation.y = root.rotation.y;
+      Object.assign(curb.userData, { sourceSeconds, dimensionsMeasured: false, thresholdFor: opening.id });
+      box(root, [width, .008, depth * .74], [0, .003, 0], m.trim);
+    } else {
+      box(root,[width,.018,.23],[0,.009,0],m.dark);
+    }
     if (opening.doorKind === 'slide') {
       const count = opening.slideLeaves === 1 ? 1 : 2, leafWidth = width / count, plane = .18;
       const travel = width / count + .1, railWidth = count === 2 ? width * 2 + .4 : width + travel + .2;
@@ -159,10 +184,51 @@ export function buildDryerBuildingEnvironment(s, options = {}) {
     }
     const pairs = width > 1.55, count = pairs ? 2 : 1, leafWidth = width/count-.06;
     for (let i=0;i<count;i++) {
-      const side = pairs ? i===0 ? -1 : 1 : -1, pivot=group(root,[side*(width/2-.035),0,0]);
-      pivot.name='architectural-open-door-leaf';
-      pivot.userData.proximityDoor={enterable:width>=.75&&height>=1.9,groupId:root.name,label:`건조실 ${spec.displayLevel ?? level}층 출입문`,accessBasis:'architectural opening cut through the modelled floor envelope',kind:'hinge',axis:'y',closed:0,open:side*Math.PI*.48,trigger:[0,0,0],width,height,openDistance:2.2,closeDistance:3.1};
+      const side = pairs ? (i===0 ? -1 : 1) : (opening.hingeSide ?? -1);
+      const pivot=group(root,[side*(width/2-.035),0,0]);
+      const fixed = pairs && opening.passageSide !== undefined && side !== opening.passageSide;
+      pivot.name = fixed ? 'architectural-fixed-door-leaf' : 'architectural-open-door-leaf';
       const center=-side*leafWidth/2;
+      if (!fixed) {
+        const singlePassage = pairs && opening.passageSide !== undefined;
+        pivot.userData.proximityDoor={enterable:width/count>=.75&&height>=1.9,groupId:root.name,label:opening.label || `건조실 ${spec.displayLevel ?? level}층 출입문`,accessBasis:opening.positionBasis || 'architectural opening cut through the modelled floor envelope',kind:'hinge',axis:'y',closed:0,open:side*(opening.swingSide ?? 1)*(opening.openAngle ?? Math.PI*.48),trigger:[singlePassage ? side*width/4 : 0,0,0],width:singlePassage ? width/2 : width,height,openDistance:2.2,closeDistance:3.1};
+      }
+      if (['gray-fire-door','backed-roof-panel','white-service-pair'].includes(opening.doorStyle)) {
+        m.fireDoor ||= s._material(0x8c8981,.72,.16);
+        m.serviceDoor ||= s._material(0xe6e5da,.72,.10);
+        const doorFace = opening.doorStyle === 'gray-fire-door' ? m.fireDoor : m.serviceDoor;
+        const face = box(pivot,[leafWidth,height-.045,.043],[center,height/2,0],doorFace);
+        face.name='filmed-solid-door-skin';
+        if (opening.doorStyle==='gray-fire-door') {
+          m.noticeBlue ||= s._material(0x354f88,.82,.04);
+          box(pivot,[.29,.38,.007],[center,1.52,.025],m.noticeBlue);
+          box(pivot,[.267,.347,.003],[center,1.52,.030],m.serviceDoor);
+          box(pivot,[.205,.019,.003],[center,1.65,.034],m.noticeBlue);
+        }
+        if (opening.doorStyle === 'backed-roof-panel') {
+          // Regular square recesses on the outdoor face only. Both faces
+          // remain opaque, as they are on the walk out and on the return.
+          const stamps=[], step=.032;
+          for(let row=0;row<54;row++) for(let col=0;col<19;col++) {
+            if((row*7+col*11)%23<Math.max(0,6-col)*2) continue;
+            stamps.push([center+(col-9)*step,.24+row*step,.022]);
+          }
+          const marks=new THREE.InstancedMesh(geometry('roof-door-square-stamp',()=>new THREE.BoxGeometry(.021,.021,.002)),m.trim,stamps.length);
+          const matrix=new THREE.Matrix4();
+          stamps.forEach(([x,y,z],index)=>marks.setMatrixAt(index,matrix.makeTranslation(x,y,z)));
+          marks.name='roof-door-exterior-square-pattern'; marks.userData.personCollision=false;
+          marks.instanceMatrix.needsUpdate=true; marks.computeBoundingBox(); marks.computeBoundingSphere(); pivot.add(marks);
+        }
+        const handleX=-side*(leafWidth-.10);
+        for (const sign of [-1,1]) {
+          const rose=mesh(pivot,geometry('survey-door-knob-rose',()=>new THREE.CylinderGeometry(.044,.044,.013,16)),m.trim,[handleX,1.02,sign*.031]);
+          rose.rotation.x=Math.PI/2;
+          const knob=mesh(pivot,geometry('survey-door-round-knob',()=>new THREE.SphereGeometry(.034,16,10)),m.trim,[handleX,1.02,sign*.069]);
+          knob.name='service-door-round-knob'; knob.scale.z=.91;
+        }
+        for (const y of [.24,height-.24]) box(pivot,[.021,.09,.036],[0,y,.018],m.trim);
+        continue;
+      }
       if(opening.doorStyle==='perforated'){
         const entries=[],rim=.07,pitch=.07,rib=.035,left=center-leafWidth/2;
         for(let x=left+rim;x<=left+leafWidth-rim+.001;x+=pitch)entries.push([[x,height/2,0],[rib,height-rim*2,.028]]);
@@ -197,9 +263,12 @@ export function buildDryerBuildingEnvironment(s, options = {}) {
     for (const opening of openings) doorway(a,b,opening);
   }
   for (const partition of spec.partitions || []) {
-    wallSegment(facade, partition.a, partition.b, Math.min(partition.height || 3.1, columnHeight), partition.openings);
+    const fullWall = wallSegment(facade, partition.a, partition.b, Math.min(partition.height || 3.1, columnHeight), partition.openings);
     const cutaway = wallSegment(structure, partition.a, partition.b, .78, partition.openings);
     cutaway.userData.lowPartition = true;
+    if (partition.roomId) {
+      for (const section of [fullWall, cutaway]) Object.assign(section.userData, { roomId: partition.roomId, positionBasis: partition.positionBasis });
+    }
     for (const opening of partition.openings || []) doorway(partition.a,partition.b,opening);
   }
 
@@ -353,14 +422,160 @@ export function buildDryerBuildingEnvironment(s, options = {}) {
   if (level === 3) {
     const compressor = spec.rooms.find(room => room.id === 'compressor-room');
     if (compressor) {
-      const b = compressor.bounds, height = 2.7;
-      wallSegment(facade, [b.minX, b.minZ], [b.maxX, b.minZ], height);
-      wallSegment(facade, [b.minX, b.minZ], [b.minX, b.maxZ], height);
-      wallSegment(facade, [b.maxX, b.minZ], [b.maxX, b.maxZ], height);
-      wallSegment(facade, [b.minX, b.maxZ], [b.maxX, b.maxZ], height, [{ offset: 3, width: 1.4, height: 2.2 }]);
-      box(cover, [b.maxX - b.minX, .1, b.maxZ - b.minZ], [(b.minX + b.maxX) / 2, height, (b.minZ + b.maxZ) / 2], m.roof);
-      cover.userData.compressorRoomHeightBasis = 'illustrative-unmeasured';
+      const landingWall = box(architectureFixtures,[.10,2.65,4.60],[10.24,1.325,-9.03],m.wall);
+      landingWall.name='ne-stair-corridor-side-wall';
+      const b = compressor.bounds, width = b.maxX - b.minX, depth = b.maxZ - b.minZ;
+      const westH = compressor.height, eastH = compressor.lowEastHeight ?? compressor.height;
+      const slopeLen = Math.hypot(width, westH - eastH), tilt = Math.atan2(westH - eastH, width);
+      const midX = (b.minX + b.maxX) / 2, midZ = (b.minZ + b.maxZ) / 2, midY = (westH + eastH) / 2;
+      // The sloping eave closes against sheet-metal end walls. The original
+      // horizontal wall tops left a triangular gap visible above the doors.
+      const infill = geometry('3f-compressor-rake-end', () => {
+        const outline = new THREE.Shape();
+        outline.moveTo(0,0); outline.lineTo(width,0); outline.lineTo(0,westH-eastH); outline.closePath();
+        return new THREE.ExtrudeGeometry(outline,{depth:.12,bevelEnabled:false});
+      });
+      for (const z of [b.minZ,b.maxZ]) mesh(facade,infill,m.wall,[b.minX,eastH,z-.06]).name='compressor-sloping-end-wall';
+
+      // 04:34–04:44 return. The window and orange door trim meet at a
+      // right angle. Both lower panes sit in a short sliding sash.
+      const recessWindow = spec.openings.find(opening=>opening.id==='third-roof-recess-window');
+      const winZ = spec.mainBounds.minZ + recessWindow.offset;
+      const win = group(facade,[spec.mainBounds.maxX+.01,recessWindow.sill,winZ]);
+      win.name='ne-roof-recess-window';
+      m.recessGlass ||= s._material(0xa5b8af,.45,.12,{transparent:true,opacity:.68,depthWrite:false});
+      const winW=recessWindow.width, winH=recessWindow.height;
+      box(win,[.035,winH-.06,winW-.06],[0,winH/2,0],m.recessGlass);
+      for(const dz of [-winW/2,winW/2])box(win,[.09,winH,.04],[0,winH/2,dz],m.trim);
+      for(const y of [0,.62,winH])box(win,[.09,.045,winW],[0,y,0],m.trim);
+      box(win,[.08,.62,.038],[0,.31,0],m.trim);
+
+      // Raised horizontal joints in the insulated panels visible on both
+      // sides of the roof-door recess and along the compressor facade.
+      const seams=[], entry=spec.routeSurvey.compressorWalk;
+      const strips=(axis,line,lo,hi,h,gapLo,gapHi,sill,head)=>{
+        const strip=(from,to,y)=>{
+          if(to<=from)return;
+          seams.push(axis==='x'?[[ (from+to)/2,y,line ],[to-from,.015,.018]]:[[line,y,(from+to)/2],[.018,.015,to-from]]);
+        };
+        for(let y=.22;y<h-.02;y+=.31){
+          if(y>sill && y<head){strip(lo,gapLo,y);strip(gapHi,hi,y);}
+          else strip(lo,hi,y);
+        }
+      };
+      strips('x',-6.633,8.6,13.4,3.4,entry.roofDoor[0]-.57,entry.roofDoor[0]+.57,0,2.24);
+      strips('z',8.67,-6.63,-2.47,3.4,winZ-winW/2-.02,winZ+winW/2+.02,recessWindow.sill-.025,recessWindow.sill+winH+.025);
+      strips('x',b.maxZ+.068,b.minX,b.maxX,eastH,entry.compressorDoor[0]-.99,entry.compressorDoor[0]+.99,0,2.24);
+      strips('z',b.minX-.068,-6.63,b.maxZ,eastH,0,0,0,0);
+      m.seam ||= s._material(0xbcb9ab,.79,.08);
+      const batch=new THREE.InstancedMesh(geometry('roof-panel-seam',()=>new THREE.BoxGeometry(1,1,1)),m.seam,seams.length);
+      const transform=new THREE.Object3D();
+      seams.forEach(([position,size],index)=>{
+        transform.position.set(...position);transform.scale.set(...size);transform.updateMatrix();batch.setMatrixAt(index,transform.matrix);
+      });
+      batch.name='roof-recess-cladding-seams';batch.userData.personCollision=false;batch.instanceMatrix.needsUpdate=true;
+      batch.computeBoundingBox();batch.computeBoundingSphere();facade.add(batch);
+      const roof = group(cover, [midX, midY, midZ]);
+      roof.name = 'dryer-building-3-compressor-room-roof';
+      Object.assign(roof.userData, { roomId: compressor.id, positionBasis: compressor.positionBasis, heightBasis: compressor.heightBasis, roofSlope: compressor.roofSlope });
+      const panel = box(roof, [slopeLen + .32, .12, depth + .35], [0, .06, 0], m.roof);
+      panel.rotation.z = -tilt;
+      // Orange fascia trim along the south sloped eave observed in 2026-11-24 outdoor photos.
+      const orangeTrim = s.dryerCompressorTrimMat ||= s._material(0xd96b27, .65, .08);
+      const fascia = box(roof, [slopeLen + .38, .18, .08], [0, .06, depth / 2 + .18], orangeTrim);
+      fascia.rotation.z = -tilt;
+      fascia.name = 'dryer-building-3-compressor-orange-fascia';
     }
   }
   return { deck, structure, facade, cover, architectureFixtures, ducts };
+}
+
+// Register the survey fixtures against the architecture after both have been
+// built. The tile, nosings and sign keep the original survey materials.
+export function alignDryerCompressorEntrance(environment) {
+  const fixtures = environment?.architectureFixtures;
+  const stair = fixtures?.getObjectByName('dryer-compressor-3-stair');
+  if (!stair || stair.userData.filmedLandingAligned) return;
+  const door = fixtures.children.find(node => node.userData.doorId === 'compressor-room-south');
+  const fixed = door?.getObjectByName('architectural-fixed-door-leaf');
+  const sign = fixtures.getObjectByName('compressor-door-sign');
+  if (fixed && sign) {
+    fixed.add(sign);
+    sign.position.set(.49,1.29,.028);
+    sign.userData.personCollision = false;
+  }
+  const blower = fixtures.getObjectByName('roof-baghouse-and-stack');
+  if (blower) {
+    blower.userData.model = 'GTF #5-S4';
+    blower.userData.motorPowerKw = 30;
+    blower.userData.airflowM3PerMinute = 300;
+    blower.userData.nameplatePhoto = '20261124_135608.jpg';
+  }
+  const window = stair.getObjectByName('ne-stair-north-window');
+  window.position.x = 10.10;
+  const pane = window.getObjectByName('ne-win-glass');
+  pane.scale.y = 3.80; pane.position.y = 2.225;
+  const mullions = window.children.filter(node => node.name === 'ne-win-mullion');
+  // The central meeting stile belongs to the short sliding sash only.
+  for (const mullion of mullions) {
+    const short = mullion.position.x === 0;
+    mullion.scale.y = short ? .52 : 3.85;
+    mullion.position.y = short ? 1.63 : 2.225;
+  }
+  const sashes = window.children.filter(node => node.name === 'ne-win-rail');
+  sashes.forEach((bar,index) => { bar.position.y = [.30,1.37,4.15][index]; });
+  const sashTop = sashes[1].clone(); sashTop.position.y = 1.89; window.add(sashTop);
+  window.children.filter(node => node.name === 'ne-win-safety-bar').forEach((bar,index) => {
+    bar.position.y = [.46,.76,1.06][index];
+  });
+
+  const lowerTile = stair.getObjectByName('ne-stair-north-landing-tile');
+  lowerTile.name = 'ne-stair-half-landing-tile';
+  lowerTile.position.set(12.96,-1.436,-12.53);
+  lowerTile.scale.set(.78,.06,1.60);
+  const pieces = name => stair.children.filter(node => node.name === name);
+  const steps = pieces('ne-stair-desc-tread'), nosings = pieces('ne-stair-desc-nosing');
+  for (let i = 0; i < steps.length; i++) {
+    const x = 10.36 + i * .30, top = -.18 * (i + 1) + .03;
+    steps[i].rotation.y = Math.PI / 2;
+    steps[i].position.set(x,top-.03,-12.53);
+    steps[i].scale.x = 1.59;
+    const nose = nosings[i];
+    nose.rotation.y = Math.PI / 2;
+    nose.position.set(x-.13,top+.005,-12.53);
+    nose.scale.x = 1.59;
+    const riser = steps[i].clone();
+    riser.name = 'architectural-stair-riser';
+    riser.scale.set(1.59,.18,.025);
+    riser.position.set(x-.147,top+.09,-12.53); stair.add(riser);
+  }
+  const railZ = -11.76;
+  const posts = pieces('ne-stair-rail-post'), finials = pieces('ne-stair-rail-finial');
+  const heights = [.0,-.18,-.54,-.90,-1.26,-1.41];
+  const distances = [10.18,10.39,10.99,11.59,12.19,12.65];
+  for (let i=0; i<posts.length; i++) {
+    posts[i].position.set(distances[i],heights[i]+.51,railZ);
+    finials[i].position.set(distances[i],heights[i]+1.05,railZ);
+  }
+  function between(node, from, to) {
+    const start = new THREE.Vector3(...from), delta = new THREE.Vector3(...to).sub(start);
+    node.position.copy(start).addScaledVector(delta,.5);
+    node.scale.y = delta.length();
+    node.quaternion.setFromUnitVectors(new THREE.Vector3(0,1,0),delta.normalize());
+  }
+  for (const [i,bar] of pieces('ne-stair-west-rail').entries()) {
+    const y = [.52,.98][i];
+    between(bar,[10.18,y,railZ],[12.65,y-1.41,railZ]);
+  }
+  for (const [i,bar] of pieces('ne-stair-top-rail').entries()) {
+    const y = [.52,.98][i]-1.41;
+    between(bar,[12.65,y,railZ],[13.26,y,railZ]);
+  }
+  // The camera passes a solid partition on the right until the window
+  // landing. The black skirting on the opposite wall stops at the fire door.
+  const trim = stair.getObjectByName('ne-stair-west-skirting');
+  const southTrim = trim.clone(); southTrim.position.z = -7.37; southTrim.scale.z = 1.22;
+  stair.add(southTrim);
+  trim.position.z = -11.20; trim.scale.z = 4.12;
+  stair.userData.filmedLandingAligned = true;
 }

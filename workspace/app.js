@@ -1,4 +1,17 @@
-import { MODULES, resolveRoute } from './module-registry.js';
+import { MODULES, installedModules, resolveRoute } from './module-registry.js';
+
+async function loadModules() {
+  if (location.protocol === 'file:') return MODULES;
+  try {
+    const response = await fetch('./__workspace', { signal: AbortSignal.timeout(2500) });
+    if (response.ok && response.headers.get('content-type')?.includes('application/json')) {
+      const { optionalModules } = await response.json();
+      if (Array.isArray(optionalModules)) return installedModules(optionalModules);
+    }
+  } catch { /* The base workspace also runs on static hosts. */ }
+  return MODULES;
+}
+const modules = await loadModules();
 
 const $ = (id) => document.getElementById(id);
 const instances = new Map();
@@ -16,7 +29,7 @@ function setPresentationActive(active) {
   document.body.dataset.presentationActive = String(active);
 }
 
-for (const module of MODULES) {
+for (const module of modules) {
   const nav = document.createElement('a');
   nav.href = `#/${module.id}`;
   nav.dataset.route = module.id;
@@ -49,7 +62,7 @@ for (const module of MODULES) {
   card.append(art, content);
   $('module-cards').append(card);
 }
-$('module-count').textContent = `${String(MODULES.length).padStart(2, '0')} SPACES`;
+$('module-count').textContent = `${String(modules.length).padStart(2, '0')} SPACES`;
 
 function sendVisibility(instance, active) {
   instance.frame.contentWindow?.postMessage({
@@ -97,12 +110,12 @@ function createInstance(module) {
 }
 
 function showRoute() {
-  const requested = resolveRoute(location.hash);
+  const requested = resolveRoute(location.hash, modules);
   const next = presentationActive ? 'presentation' : requested;
   if (presentationActive && requested !== next) history.replaceState(null, '', '#/presentation');
   const changed = current !== next;
   current = next;
-  const module = MODULES.find((item) => item.id === current);
+  const module = modules.find((item) => item.id === current);
   if (module && !instances.has(module.id)) createInstance(module);
   $('home-view').hidden = current !== 'home';
   $('module-views').hidden = current === 'home';
@@ -132,7 +145,7 @@ window.addEventListener('message', (event) => {
     instance.error = '';
     sendVisibility(instance, current === instance.module.id);
     renderStatus();
-  } else if (event.data?.type === 'dryer-workspace:navigate' && MODULES.some((item) => item.id === event.data.moduleId)) {
+  } else if (event.data?.type === 'dryer-workspace:navigate' && modules.some((item) => item.id === event.data.moduleId)) {
     if (presentationActive) return;
     location.hash = `#/${event.data.moduleId}`;
   } else if (event.data?.type === 'dryer-workspace:presentation-active' && instance.module.id === 'presentation' && typeof event.data.active === 'boolean') {

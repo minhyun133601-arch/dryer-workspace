@@ -27,7 +27,7 @@ async function harness({failRenderer=false,callbacks,inline=false}={}){
     constructor(){this.dataset={};this.style={};this.children=[];this.attributes={};this.listeners=new Map();this.classList={toggle(){},remove(){},add(){}};this.checked=false;this.value='';}
     append(...nodes){this.children.push(...nodes);}replaceChildren(...nodes){this.children=[...nodes];}
     setAttribute(k,v){this.attributes[k]=v;}addEventListener(k,f){this.listeners.set(k,f);}click(){this.listeners.get('click')?.({target:this});}
-    showModal(){modalShows++;this.open=true;}close(){const wasOpen=this.open;this.open=false;if(wasOpen)this.listeners.get('close')?.();}remove(){this.removed=true;}getBoundingClientRect(){return{width:960,height:650};}
+    focus(){document.activeElement=this;}showModal(){modalShows++;this.open=true;}close(){const wasOpen=this.open;this.open=false;if(wasOpen)this.listeners.get('close')?.();}remove(){this.removed=true;}getBoundingClientRect(){return{width:960,height:650};}
   }
   const nodes=new Map(),groups=new Map(),dialogs=[],panels=[],errors=[],body=new Node(),host=new Node();
   const node=k=>{if(!nodes.has(k))nodes.set(k,new Node());return nodes.get(k);};
@@ -40,7 +40,7 @@ async function harness({failRenderer=false,callbacks,inline=false}={}){
   const frames=new Map(),documentEvents=new Map();
   const document={body,hidden:false,
     addEventListener:(name,callback)=>documentEvents.set(name,callback),removeEventListener:name=>documentEvents.delete(name),
-    createElement(tag){const el=new Node();if(tag==='dialog'||tag==='section'){(tag==='dialog'?dialogs:panels).push(el);el.querySelector=node;el.querySelectorAll=s=>groups.get(s)||[];}return el;}};
+    createElement(tag){const el=new Node();el.tagName=tag;if(tag==='dialog'||tag==='section'){(tag==='dialog'?dialogs:panels).push(el);el.querySelector=node;el.querySelectorAll=s=>groups.get(s)||[];}return el;}};
   class Renderer{constructor(){if(failRenderer)throw Error('No WebGL');}setPixelRatio(){}setSize(){}render(){renders++;}dispose(){}}
   const ctx=vm.createContext({THREE:{...THREE,WebGLRenderer:Renderer},LIQUID_ROOM,LIQUID_ROOMS,LIQUID_EQUIPMENT,devicePixelRatio:1,
     liquidAsset:n=>LIQUID_ASSETS[n],ResizeObserver:class{observe(){}disconnect(){}},console:{error:(...e)=>errors.push(e)},
@@ -51,7 +51,7 @@ async function harness({failRenderer=false,callbacks,inline=false}={}){
   });
   const code=(await readFile(new URL('../apps/site/liquid-detail.js',import.meta.url),'utf8')).replace(/^import .*;\r?\n/gm,'').replace(/^export /gm,'');
   new vm.Script(`${code}\nglobalThis.create=createLiquidDetail;`).runInContext(ctx);const detail=ctx.create(inline?{...callbacks,host}:callbacks);
-  return{detail,node,groups,dialogs,panels,host,errors,get modalShows(){return modalShows;},get model(){return liveModel;},get options(){return options;},get renders(){return renders;},get pendingFrames(){return frames.size;},
+  return{detail,node,groups,dialogs,panels,host,errors,get activeElement(){return document.activeElement;},get modalShows(){return modalShows;},get model(){return liveModel;},get options(){return options;},get renders(){return renders;},get pendingFrames(){return frames.size;},
     eye(position){currentCamera.position.set(...position);currentCamera.updateMatrixWorld();options.draw();},
     hidden(value){document.hidden=value;documentEvents.get('visibilitychange')?.();},
     advance(duration){const target=clock+duration;while(clock<target){clock=Math.min(target,clock+1000/60);const ready=[...frames.values()];frames.clear();ready.forEach(callback=>callback(clock));}},
@@ -68,7 +68,7 @@ test('liquid full-room dialog renders every registered machine, filters rooms, s
     assert.deepEqual([...h.model.objects].filter(([,o])=>o.visible).map(([id])=>id),[item.id]);
     const room=LIQUID_ROOMS.find(r=>r.id!==item.roomId);h.groups.get('[data-liquid-room]').find(n=>n.dataset.liquidRoom===room.id).click();
     assert.equal(Number(h.node('.ld-count').textContent),LIQUID_EQUIPMENT.filter(e=>e.roomId===room.id).length);
-    h.options.select({object:mesh});assert.equal(h.node('.ld-detail h3').textContent,'3팀 액상 전체','a delayed pick from the previous room cannot select its now-hidden equipment');
+    h.options.select({object:mesh});assert.equal(h.node('.ld-detail h3').textContent,room.name,'a delayed pick from the previous room cannot select its now-hidden equipment');
     assert.ok([...h.model.objects].filter(([,o])=>o.visible).every(([id])=>LIQUID_EQUIPMENT.find(e=>e.id===id).roomId===room.id));
     h.node('.ld-search').value='not-a-machine';h.node('.ld-search').listeners.get('input')();assert.equal(h.node('.ld-count').textContent,'0');
     h.detail.open({equipmentId:item.id});assert.equal(h.node('.ld-detail h3').textContent,item.name);
@@ -81,6 +81,19 @@ test('a liquid WebGL failure preserves accessible card selection and photo viewi
   const h=await harness({failRenderer:true});try{
     assert.doesNotThrow(()=>h.detail.open());assert.equal(h.errors.length,1);assert.equal(h.node('.cd-fallback').hidden,false);
     h.groups.get('[data-liquid-equipment]')[0].click();assert.ok(h.node('.ld-photo img').src);h.node('.ld-photo').click();assert.equal(h.dialogs[1].open,true);
+  }finally{h.detail.dispose();}
+});
+
+test('liquid cards stay searchable by their printed number and the four-view photo returns focus to its button',async()=>{
+  const h=await harness({inline:true,failRenderer:true});
+  try{
+    const item=LIQUID_EQUIPMENT.find(entry=>entry.cardNumber===65);
+    h.detail.open({equipmentId:item.id});
+    h.node('.ld-search').value='065';h.node('.ld-search').listeners.get('input')();
+    assert.equal(h.node('.ld-count').textContent,'1');
+    h.node('.ld-photo').click();
+    assert.equal(h.dialogs[0].open,true);assert.equal(h.node('img').src,LIQUID_ASSETS[65]);
+    h.dialogs[0].close();assert.equal(h.activeElement,h.node('.ld-photo'));
   }finally{h.detail.dispose();}
 });
 

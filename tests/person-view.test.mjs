@@ -15,7 +15,82 @@ import { buildPackagingEnvironment } from '../apps/site/packaging-models.js';
 import { packagingEntryStairPlan } from '../apps/site/packaging-routes.js';
 import { buildDryerUpperEnvironment } from '../apps/site/dryer-upper-models.js';
 import { buildCampusBoilerRoom, buildPreparationBoilerRoom } from '../apps/site/boiler-models.js';
-import { buildDryerBuildingEnvironment } from '../apps/site/dryer-building-envelope.js';
+import { alignDryerCompressorEntrance, buildDryerBuildingEnvironment } from '../apps/site/dryer-building-envelope.js';
+import { buildDryerRouteEnvironment } from '../apps/site/dryer-route-environment.js';
+import { buildDryerCompressorEnvironment } from '../apps/site/dryer-compressor-environment.js';
+import { buildDryerCompressorInteriorDetails } from '../apps/site/dryer-compressor-interior-details.js';
+import { createProximityDoorController } from '../apps/site/proximity-doors.js';
+
+test('the dryer compressor room supports continuous walking from 3F hall through NE stair and green roof while blocking unfilmed roof voids', async () => {
+  const h = await harness({ floor: 3 }), s = modelTools(h.scene);
+  try {
+    const { scene } = h, spec = FLOORS.find(floor => floor.id === 3);
+    const env = buildDryerBuildingEnvironment(s, { floor: 3, spec, elevation: spec.elevation });
+    buildDryerRouteEnvironment(s, env, spec);
+    buildDryerCompressorEnvironment(s, env, spec);
+    alignDryerCompressorEntrance(env);
+    buildDryerCompressorInteriorDetails(s, env, spec);
+    scene.buildingEnvironments = new Map([[3, env]]);
+    scene.floorDecks.set(3, env.deck); scene.floorStructures.set(3, env.structure);
+    assert.ok(env.cover.getObjectByName('dryer-building-3-compressor-room-roof'));
+    scene.scene.updateMatrixWorld(true);
+    scene.setView('person');
+    scene.proximityDoors = createProximityDoorController(scene.scene);
+    const room = spec.rooms.find(entry => entry.id === 'compressor-room').bounds;
+    scene.person = walking.createPersonState({ position: [(room.minX + room.maxX) / 2, spec.elevation, (room.minZ + room.maxZ) / 2] });
+    const wing = scene._personWalkLimits();
+    assert.equal(wing.maxX, room.maxX); assert.equal(wing.minX, PLACEMENT_REGIONS.upper.minX);
+    const landing = [(room.minX + room.maxX) / 2, spec.elevation, room.maxZ + .75];
+    const supports = scene._personSupportMeshes();
+    assert.ok(supports.includes(env.deck.getObjectByName('dryer-building-3-compressor-roof-threshold')));
+    for (const point of [[7.8, spec.elevation, -8.6], [9.35, spec.elevation, -8.6], [9.35, spec.elevation, -5.5], landing, [16.85, spec.elevation, -8.0]]) {
+      close(scene._personGroundHeight(point, supports), spec.elevation, `supported 3F walk point ${point}`, .07);
+    }
+    assert.equal(scene._personGroundHeight([20, spec.elevation, 10], supports), null, 'unfilmed south-east roof remains unsupported');
+    assert.equal(walking.isPersonPositionFree([room.maxX + 1, spec.elevation, room.minZ + 2], { bounds: wing }), false);
+    scene.person = walking.createPersonState({ position: [0, spec.elevation, 0] });
+    assert.equal(scene._personWalkLimits().maxX, room.maxX);
+
+    // Follow the marked landing, turn around the outdoor units and enter through
+    // the active (east) half of the compressor-room double door.
+    const route = [[7.9, -8.6], [9.84, -8.6], [9.86, -7.38], [9.35, -6.7], [9.35, -5.4], [10.2, -3.2],
+      [12.7, -1.95], [15, -1.95], [17.31, -1.95], [17.31, -3.4], [17.31, -4.7]];
+    const thresholdRise = new Map([['9.35,-6.7', .08], ['17.31,-3.4', .12]]);
+    const [startX, startZ] = route[0];
+    scene.person = walking.createPersonState({ position: [startX, spec.elevation, startZ] });
+    scene.setPersonInput('forward', true);
+    const opened = new Set();
+    for (const [leg, stops] of [route.slice(1), route.slice(0, -1).reverse()].entries()) {
+      // Use the normal door interaction going out, then walk back from the
+      // machine aisle with the optional automatic opening enabled.
+      scene.proximityDoors.reset();
+      scene.setAutomaticDoors(leg === 1);
+      for (const [x, z] of stops) {
+        const distance = () => Math.hypot(x - scene.person.position[0], z - scene.person.position[2]);
+        const limit = Math.ceil(distance() / (walking.WALK_RULES.speed * .1)) + 12;
+        for (let tick = 0; tick < limit && distance() > .02; tick++) {
+          scene.person.yaw = Math.atan2(x - scene.person.position[0], scene.person.position[2] - z);
+          if (!scene.autoOpenDoors) {
+            const action = scene.proximityDoors.getInteraction(scene._personWorldPosition(), { direction: scene._personDoorDirection() });
+            if (action?.action === 'open' && scene.interactDoor()) opened.add(action.id);
+          }
+          const dt = Math.min(.1, distance() / walking.WALK_RULES.speed);
+          scene._advancePerson(dt);
+          scene._updateProximityDoors(dt);
+        }
+        assert.ok(distance() <= .02, `3F walk towards ${x},${z} stopped at ${scene.person.position.join(',')}`);
+        const rise = thresholdRise.get([x, z].join(',')) ?? 0;
+        close(scene.person.position[1], spec.elevation + rise, 'feet follow the green curbs in both directions', .015);
+      }
+    }
+    assert.equal(opened.size, 3, 'manually opened the hall, roof and compressor doors');
+    // Walk forwards off the surveyed green apron. The void must stop the body,
+    // even though the overall east wing lies inside the rectangular walk limits.
+    scene.person = walking.createPersonState({ position: [19.5, spec.elevation, 5.1], yaw: Math.PI });
+    walkDistance(scene, 1);
+    assert.ok(scene.person.position[2] >= 5.3 && scene.person.position[2] <= 5.401);
+  } finally { h.scene.proximityDoors?.dispose(); s.dispose(); h.dispose(); }
+});
 
 function eventTarget() {
   const handlers = new Map();

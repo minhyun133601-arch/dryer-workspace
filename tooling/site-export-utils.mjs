@@ -50,6 +50,21 @@ export async function bundleBurnerMaintenance() {
   ].join('\n');
 }
 
+export async function bundleBurnerService() {
+  const [dataSource, viewerSource] = await Promise.all([
+    readProjectText('apps/site/burner-service-data.js'),
+    readProjectText('apps/site/burner-service.js'),
+  ]);
+  return [
+    namespaceModule(dataSource, 'burnerServiceDataModule', ["import { DIMENSIONS, DRAWING_GROUPS, DRAWING_INFO, DRAWING_PARTS } from './furnace-drawing-data.js';"]),
+    'const { BURNER_SERVICE_EQUIPMENT, BURNER_SPECIFICATIONS, BURNER_SUPPLIER_CONTACT, BURNER_PART_SPECIFICATIONS, BURNER_UNCONFIRMED_SPECIFICATIONS, createBurnerServiceStore, getReplacementStatus, localDateString } = burnerServiceDataModule;',
+    namespaceModule(viewerSource, 'burnerServiceModule', [
+      "import { BURNER_SERVICE_EQUIPMENT, BURNER_SPECIFICATIONS, BURNER_SUPPLIER_CONTACT, BURNER_PART_SPECIFICATIONS, BURNER_UNCONFIRMED_SPECIFICATIONS, createBurnerServiceStore, getReplacementStatus, localDateString } from './burner-service-data.js';",
+    ]),
+    'const { createBurnerService } = burnerServiceModule;',
+  ].join('\n');
+}
+
 export async function bundlePersonAvatar() {
   const reference = './assets/branding/company-logo.jpg';
   const [source, bytes] = await Promise.all([

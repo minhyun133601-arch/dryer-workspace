@@ -3,6 +3,7 @@ import { buildFurnace } from './furnace-model.js';
 import { createDrawingModel, DIMENSION_LINES, FLOW_TAG } from './furnace-drawing-model.js';
 import { BASIS, DRAWING_GROUPS, DRAWING_INFO, DRAWING_PARTS, DRAWING_SHEETS, FIELD_STATUS, GAS_PATH, PART_BY_ID, PILOT_PATH } from './furnace-drawing-data.js';
 import { createBurnerMaintenance } from './burner-maintenance.js';
+import { createBurnerService } from './burner-service.js';
 
 // Retain only the two technical drawings in the active viewer.
 const furnacePhotos = {
@@ -100,6 +101,12 @@ export function createFurnaceDetail({ documents = [], presentation = false, onCl
   const partRecords = [];
   const markers = [];
   const geometrySet = new Set(), materialSet = new Set();
+  const service = presentation ? null : createBurnerService({
+    dialog,
+    onOpen: () => open(),
+    onSelectPart: id => { setFilter('all'); selectDrawingPart(id); },
+    onShowDrawing: () => { resize(); schedule(); },
+  });
 
   function material(color, roughness = .48, metalness = .45, extras = {}) {
     const value = new THREE.MeshStandardMaterial({ color, roughness, metalness, ...extras });
@@ -388,6 +395,7 @@ export function createFurnaceDetail({ documents = [], presentation = false, onCl
       <dl class="fd-spec"><div><dt>규격</dt><dd>${part.size}</dd></div><div><dt>제조사</dt><dd>${part.maker}</dd></div><div><dt>위치</dt><dd>${part.place}</dd></div></dl>
       <p class="fd-role">${part.role}</p>
       ${status ? `<p class="fd-field ${status.tone}"><strong>${status.label}</strong>${part.field.text}</p>` : ''}
+      ${service ? `<button type="button" class="bs-part-link" data-service-part="${part.id}">교체 주기·업체 연락처 관리 <span aria-hidden="true">→</span></button>` : ''}
       <div class="fd-evidence">${part.sheet ? `<button type="button" class="fd-crop" data-fd-sheet="${part.sheet.key}" aria-label="${part.name} 도면 위치 크게 보기"><canvas width="340" height="230"></canvas><span>도면 위치 ↗</span></button>` : ''}</div>
       <p class="fd-basis">근거 · ${BASIS[part.basis].label}: ${BASIS[part.basis].note}</p>`;
     if (part.sheet) paintCrop(detail.querySelector('canvas'), part.sheet);
@@ -419,6 +427,7 @@ export function createFurnaceDetail({ documents = [], presentation = false, onCl
       if (active) row.scrollIntoView({ block: 'nearest' });
     });
     renderDetail();
+    service?.selectPart(selected);
     draw();
   }
   function setFilter(next) {
@@ -523,10 +532,11 @@ export function createFurnaceDetail({ documents = [], presentation = false, onCl
       dialog.querySelectorAll('[data-furnace-toggle]').forEach(input => { input.checked = false; });
     }
     renderList(); selectDrawingPart(null); setMode('drawing'); markView('iso'); schedule();
+    service?.open();
     $('.furnace-close').focus();
   }
   $('.furnace-close').addEventListener('click', close);
-  dialog.addEventListener('close', () => { cancelGesture(); cancelAnimationFrame(frame); frame = null; $('.furnace-lightbox').hidden = true; previousFocus?.focus?.(); const notify = notifyClose; notifyClose = true; if (notify) onClose(); });
+  dialog.addEventListener('close', () => { service?.close(); cancelGesture(); cancelAnimationFrame(frame); frame = null; $('.furnace-lightbox').hidden = true; previousFocus?.focus?.(); const notify = notifyClose; notifyClose = true; if (notify) onClose(); });
   dialog.addEventListener('click', (event) => { if (event.target === dialog) close(); });
   dialog.addEventListener('cancel', (event) => { if (!$('.furnace-lightbox').hidden) { event.preventDefault(); $('.furnace-lightbox').hidden = true; $('.furnace-photo-button').focus(); } });
   $('#furnace-spread').addEventListener('input', (event) => setSpread(Number(event.target.value) / 100));
@@ -544,6 +554,7 @@ export function createFurnaceDetail({ documents = [], presentation = false, onCl
     const control = event.target.closest('button');
     if (!control) return;
     if (control.classList.contains('fd-clear')) selectDrawingPart(null);
+    else if (control.dataset.servicePart) service?.showEquipment(control.dataset.servicePart);
     else if (control.dataset.fdPart) selectDrawingPart(control.dataset.fdPart);
     else if (control.dataset.fdPhoto) showLightbox(assetUrl(control.dataset.fdPhoto), `${PART_BY_ID[selected]?.name ?? '버너'} 현장 사진`);
     else if (control.dataset.fdSheet) { const sheet = PART_BY_ID[selected]?.sheet; showLightbox(assetUrl(sheetKey(control.dataset.fdSheet)), `${DRAWING_SHEETS[control.dataset.fdSheet].title} 도면`, sheet?.key === control.dataset.fdSheet ? sheet : {}); }
@@ -639,7 +650,7 @@ export function createFurnaceDetail({ documents = [], presentation = false, onCl
   canvas.addEventListener('keydown', (event) => { if (presentation) return; if (event.key === 'ArrowLeft') orbit.azimuth -= .12; else if (event.key === 'ArrowRight') orbit.azimuth += .12; else if (event.key === 'ArrowUp') orbit.elevation = Math.min(ORBIT_LIMITS[mode].top, orbit.elevation + .1); else if (event.key === 'ArrowDown') orbit.elevation = Math.max(-.9, orbit.elevation - .1); else if (event.key.toLowerCase() === 'r') reset(); else return; event.preventDefault(); orbitGoal = null; draw(); });
   const resume = () => { if (dialog.open) schedule(); };
   document.addEventListener('visibilitychange', resume);
-  function dispose() { maintenance?.dispose(); close(); disposed = true; cancelAnimationFrame(frame); cancelAnimationFrame(hoverFrame); observer?.disconnect(); document.removeEventListener('visibilitychange', resume); drawing?.dispose(); grid?.geometry.dispose(); grid?.material.dispose(); for (const geometry of geometrySet) geometry.dispose(); for (const mat of materialSet) mat.dispose(); renderer?.dispose(); dialog.remove(); }
+  function dispose() { service?.dispose(); maintenance?.dispose(); close(); disposed = true; cancelAnimationFrame(frame); cancelAnimationFrame(hoverFrame); observer?.disconnect(); document.removeEventListener('visibilitychange', resume); drawing?.dispose(); grid?.geometry.dispose(); grid?.material.dispose(); for (const geometry of geometrySet) geometry.dispose(); for (const mat of materialSet) mat.dispose(); renderer?.dispose(); dialog.remove(); }
   function setPresentationState({ spread: value = spread, partId = null, view = 'iso' } = {}) {
     if (!dialog.open || disposed) return false;
     if (Number.isFinite(value)) { setSpread(value); amount = spread; }

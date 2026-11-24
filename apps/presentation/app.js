@@ -20,7 +20,7 @@ let lastCaption;
 let lastStatus;
 let lastActiveMessage;
 let toastTimer;
-let inspectionFloor = 7;
+let inspectionFloor = 1;
 let inspectionView = 'perspective';
 
 const levelName = (floor) => floor === 'all' ? '전체' : Number(floor) === 8 ? '옥상' : `${FLOORS.find((entry) => entry.id === Number(floor))?.displayLevel ?? floor}층`;
@@ -38,15 +38,27 @@ function formatTime(seconds) {
   return `${Math.floor(duration / 60)}:${String(duration % 60).padStart(2, '0')}`;
 }
 function updateInspection() {
+  const inspecting = currentState?.inspecting || currentState?.status === 'finished';
   $$('[data-inspection-floor]').forEach((button) => { button.setAttribute('aria-pressed', String(Number(button.dataset.inspectionFloor) === inspectionFloor)); });
-  $$('[data-inspection-view]').forEach((button) => { button.setAttribute('aria-pressed', String(button.dataset.inspectionView === inspectionView)); });
+  $$('[data-inspection-view]').forEach((button) => { button.setAttribute('aria-pressed', String(!!inspecting && button.dataset.inspectionView === inspectionView)); });
   $('[data-inspection-all]').setAttribute('aria-pressed', String(inspectionFloor === 'all'));
-  if (currentState?.status !== 'finished') return;
+  $('[data-inspection-resume-label]').textContent = currentState?.status === 'finished' ? '다시 시연' : '시연 이어보기';
+  if (!inspecting) return;
   $$('[data-location]').forEach((node) => { node.textContent = levelName(inspectionFloor); });
   $$('[data-view-label]').forEach((node) => { node.textContent = inspectionView === 'top' ? '평면 보기' : '입체 보기'; });
   $$('[data-scene-eyebrow]').forEach((node) => { node.textContent = `건조기 직접 둘러보기 · ${levelName(inspectionFloor)}`; });
-  $$('[data-scene-title]').forEach((node) => { node.textContent = '시연을 마쳤습니다'; });
-  $$('[data-scene-caption]').forEach((node) => { node.textContent = '층과 시점을 선택해 직접 둘러보세요.'; });
+  $$('[data-scene-title]').forEach((node) => { node.textContent = currentState.status === 'finished' ? '시연을 마쳤습니다' : `${levelName(inspectionFloor)} · ${inspectionView === 'top' ? '평면 도면' : '입체 보기'}`; });
+  $$('[data-scene-caption]').forEach((node) => { node.textContent = currentState.status === 'finished' ? '층과 시점을 선택해 직접 둘러보세요.' : '층과 시점을 선택해 살펴보고, 시연을 이어서 재생하세요.'; });
+}
+function beginInspection() {
+  if (!tour || !currentState) return false;
+  if (currentState.inspecting || currentState.status === 'finished') return true;
+  inspectionFloor = currentState.step?.floor || 1;
+  inspectionView = 'perspective';
+  if (!tour.inspect()) return false;
+  scene?.setFloor(inspectionFloor);
+  scene?.setView(inspectionView);
+  return true;
 }
 function tellHost(active) {
   if (!embedded || lastActiveMessage === active) return;
@@ -85,14 +97,18 @@ function updateState(state) {
   const progress = Math.max(0, Math.min(1, Number(state.progress) || 0));
   const isPlaying = state.status === 'playing';
   const isFinished = state.status === 'finished';
+  const isInspecting = !!state.inspecting || isFinished;
+  const wasInspecting = document.body.dataset.inspecting === 'true';
   const title = state.title || step.title;
   const caption = state.caption || step.caption;
   const playbackRate = Number(state.playbackRate) || 1;
   const statusLabel = ({ ready: '시연 준비 완료', playing: '자동 시연 중', paused: '일시정지', finished: '시연을 마쳤습니다' })[state.status] || '시연 준비 중';
   document.body.dataset.status = state.status;
-  $('#presentation-inspector').hidden = !isFinished;
-  $('#tour-route').hidden = isFinished;
+  document.body.dataset.inspecting = String(isInspecting);
+  $('#presentation-inspector').hidden = false;
+  $('#tour-route').hidden = isInspecting;
   if (isFinished && lastStatus !== 'finished') { inspectionFloor = 7; inspectionView = 'perspective'; }
+  else if (!isInspecting) { inspectionFloor = step.floor; inspectionView = 'perspective'; }
   if (lastStatus !== state.status) {
     $$('[data-status-label]').forEach((node) => { node.textContent = statusLabel; });
     $$('[data-play-label]').forEach((node) => { node.textContent = isPlaying ? '일시정지' : isFinished ? '다시 시연' : state.status === 'ready' ? '시연 시작' : '계속 재생'; });
@@ -109,7 +125,7 @@ function updateState(state) {
   $$('.tour-timeline').forEach((node) => { node.setAttribute('aria-valuenow', String(Math.round(progress * 100))); });
   $$('[data-action="previous"]').forEach((node) => { node.disabled = state.stepIndex <= 0; });
   $$('[data-action="next"]').forEach((node) => { node.disabled = state.stepIndex >= TOUR_STEPS.length - 1; });
-  if (lastStepIndex !== state.stepIndex || lastTitle !== title || lastCaption !== caption || isFinished) {
+  if (lastStepIndex !== state.stepIndex || lastTitle !== title || lastCaption !== caption || wasInspecting !== isInspecting || isFinished) {
     $$('[data-location]').forEach((node) => { node.textContent = step.kind === 'burner' ? '7층 · 버너' : levelName(step.floor); });
     $$('[data-view-label]').forEach((node) => { node.textContent = step.kind === 'burner' ? '구조 살펴보기' : '사람 시점'; });
     $$('[data-scene-eyebrow]').forEach((node) => { node.textContent = step.kind === 'burner' ? '건조기 핵심 설비 · 버너' : `건조기 현장 · ${levelName(step.floor)}`; });
@@ -125,7 +141,7 @@ function updateState(state) {
     lastTitle = title;
     lastCaption = caption;
   }
-  if (isFinished) updateInspection();
+  updateInspection();
   tellHost(isPlaying || state.status === 'paused');
 }
 
@@ -151,6 +167,7 @@ function bindControls(container) {
   container.querySelectorAll('[data-action]').forEach((button) => button.addEventListener('click', () => {
     switch (button.dataset.action) {
       case 'play': togglePlayback(); break;
+      case 'resume': togglePlayback(); break;
       case 'previous': if (currentState) tour?.seek(Math.max(0, currentState.stepIndex - 1)); break;
       case 'next': if (currentState) tour?.seek(Math.min(TOUR_STEPS.length - 1, currentState.stepIndex + 1)); break;
       case 'restart': tour?.restart(); break;
@@ -161,26 +178,26 @@ function bindControls(container) {
 }
 bindControls(document.body);
 $$('[data-inspection-floor]').forEach((button) => button.addEventListener('click', () => {
-  if (currentState?.status !== 'finished') return;
+  if (!beginInspection()) return;
   inspectionFloor = Number(button.dataset.inspectionFloor);
   scene?.setFloor(inspectionFloor);
   scene?.setView(inspectionView);
   updateInspection();
 }));
 $$('[data-inspection-view]').forEach((button) => button.addEventListener('click', () => {
-  if (currentState?.status !== 'finished') return;
+  if (!beginInspection()) return;
   inspectionView = button.dataset.inspectionView;
   scene?.setView(inspectionView);
   updateInspection();
 }));
 $('[data-inspection-reset]').addEventListener('click', () => {
-  if (currentState?.status !== 'finished') return;
+  if (!beginInspection()) return;
   scene?.resetView();
   inspectionView = 'perspective';
   updateInspection();
 });
 $('[data-inspection-all]').addEventListener('click', () => {
-  if (currentState?.status !== 'finished') return;
+  if (!beginInspection()) return;
   inspectionFloor = 'all';
   inspectionView = 'perspective';
   scene?.setFloor('all');
@@ -230,9 +247,15 @@ document.addEventListener('keydown', (event) => {
   else if (key === 'ArrowLeft') { event.preventDefault(); if (currentState) tour?.seek(Math.max(0, currentState.stepIndex - 1)); }
   else if (key === 'ArrowRight') { event.preventDefault(); if (currentState) tour?.seek(Math.min(TOUR_STEPS.length - 1, currentState.stepIndex + 1)); }
   else if (key === 'KeyR') { event.preventDefault(); tour?.restart(); }
+  else if (key === 'KeyD') {
+    event.preventDefault();
+    if (currentState?.inspecting || currentState?.status === 'finished') togglePlayback();
+    else if (beginInspection()) { inspectionView = 'top'; scene?.setView('top'); updateInspection(); }
+  }
 });
 document.addEventListener('fullscreenchange', () => {
   $$('[data-fullscreen-label]').forEach((node) => { node.textContent = document.fullscreenElement ? '전체 화면 종료' : '전체 화면'; });
+  if (document.fullscreenElement && currentState?.status === 'ready' && !currentState.inspecting) tour?.play();
   scene?.resize();
 });
 const syncActivity = () => {

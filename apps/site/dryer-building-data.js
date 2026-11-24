@@ -7,6 +7,41 @@ const main = Object.freeze({ minX: -8.6, maxX: 8.6, minZ: -13.4, maxZ: 13.4 });
 const northEastBay = Object.freeze(rectangle(17.2, 22, 0, 6.7));
 const room = (id, name, x0, x1, z0, z1, options = {}) => ({ id, name, bounds: rectangle(x0, x1, z0, z1), positionBasis: 'plan-proportion', ...options });
 const wall = (a, b, openings = []) => ({ a: point(...a), b: point(...b), openings, positionBasis: 'plan-proportion' });
+
+// A-015 shows the room east of the stair bay, between X6 and X8. The 2026-11-24
+// continuous walk and 100 photos confirm the 3F hall -> NE stair -> outdoor
+// green roof -> compressor room route and 13 interior units (dimensions approximate).
+const compressorRoom = room('compressor-room', '공기압축기실', 22, 30.8, 0, 10, {
+  displayLabel: '에어컴프레셔실', positionBasis: 'A-015-plan-approximation; interior-and-route-20261124-video', floorConfirmedByUser: true,
+  height: 4.4, lowEastHeight: 3.3, roofSlope: 'west-high-east-low', heightBasis: 'video-proportion-unmeasured',
+  doorPositionMeasured: false, equipmentSurveyDate: '2026-11-24',
+});
+const compressorEntrance = { id: 'compressor-room-south', label: '공기압축기실 양개문',
+  offset: 3.45, width: 1.9, height: 2.2, doorStyle: 'white-service-pair',
+  threshold: { height: .12, depth: .26, sourceSeconds: [81, 92, 101] },
+  passageSide: 1, positionBasis: compressorRoom.positionBasis };
+const compressorNorthWindows = { offset: 4.4, width: 6.8, sill: 1.75, height: 1.15, doorKind: 'none', label: '에어컴프레셔실 북측 창' };
+const compressorWalls = [
+  { ...wall([22, 0], [30.8, 0], [compressorNorthWindows]), height: compressorRoom.lowEastHeight },
+  wall([22, 0], [22, 10]),
+  { ...wall([30.8, 0], [30.8, 10]), height: compressorRoom.lowEastHeight },
+  { ...wall([22, 10], [30.8, 10], [compressorEntrance]), height: compressorRoom.lowEastHeight },
+].map(boundary => ({ height: compressorRoom.height, ...boundary, roomId: compressorRoom.id, positionBasis: compressorRoom.positionBasis }));
+// 2026-11-24 walk (00:34-00:48, 04:44-05:23) confirms the NE stairwell (X5-X6)
+// joins the 3F hall via the east fire door beside ELEV and opens south to the
+// outdoor green roof via a solid door with an exterior square pattern.
+const northEastStairRoofDoor = { id: 'third-ne-roof-door', label: '3층 북동 계단 옥상 출입문',
+  offset: .75, width: 1.05, height: 2.2, doorStyle: 'backed-roof-panel',
+  threshold: { height: .08, depth: .22, sourceSeconds: [37, 285, 286] },
+  positionBasis: 'A-015-and-20261124-video-proportion' };
+// At the north window the camera turns right into the descending flight
+// (04:50–04:58). Its opening belongs to the stair bay, clear of the west
+// corridor connecting the fire door and roof door.
+const northEastFlightOpening = { minX: 10.19, maxX: 13.33, minZ: -13.33, maxZ: -11.73 };
+const northEastStairWalls = [
+  { ...wall([17.2, 0], [22, 0], [{ offset: 1.50, width: 2.8, sill: .30, height: 3.85, doorKind: 'none', label: '북동 계단실 북측 창' }]), height: 5.9 },
+  { ...wall([17.2, 6.7], [22, 6.7], [northEastStairRoofDoor]), height: 5.9 },
+].map(boundary => ({ ...boundary, roomId: 'northeast-stair-3f', positionBasis: 'A-015-and-20261124-video-proportion' }));
 const cores = Object.freeze({
   westStair: { id: 'west-stair', name: '서측 계단실', bounds: rectangle(0, 3.2, 0, 6.7), drawingLabel: 'UP/DN', geometryBasis: 'plan-proportion; tread count representative' },
   northEastStair: { id: 'northeast-stair', name: '북동측 계단실', bounds: northEastBay, drawingLabel: 'UP/DN', geometryBasis: 'plan-proportion; tread count representative' },
@@ -193,27 +228,53 @@ export const DRYER_BUILDING_FLOORS = Object.freeze({
     roofZones:[],openings:[...mezzanineWindows.map(window=>({...window,sill:.4}))],
   })),
   3: Object.freeze(basic(3, 7.3, 6, {
-    name:'3층 · 축소된 설비 홀',shortName:'축소된 설비 홀',
+    name:'3층 · 설비 홀·에어컴프레셔실',shortName:'설비 홀·에어컴프레셔실',
     wallHeight:5.9,
-    summary:'계단 벽의 3F 표시를 지나면 1·1.5층보다 작은 타워 설비 홀로 들어갑니다. 황색 유리 구획과 원추 호퍼 2기, 하부 이송부·탱크·펌프·판형 장치·상부 탱크 작업대를 촬영 순서로 대조했습니다. 동·남측 저층 지붕은 실내 바닥과 구분합니다. 구도면만의 수조·콤프레샤실은 현재 모델에 확정 배치하지 않습니다.',
+    summary:'3층에는 승강기 앞 디스크 컨베이어 구역과 기존 설비 작업 구역이 있습니다. 개요도의 점선은 두 구역의 대략적인 범위입니다. 엘리베이터 옆 동측 방화문에서 북동 계단참과 옥상문을 지나 녹색 옥상의 에어컴프레셔실로 갑니다. 압축기 4대, 리시버 탱크 2기, 애프터 쿨러·드라이어, 칠러·수조 및 옥상 집진기·실외기를 현장 촬영에 맞춰 배치했습니다.',
     positionConfidence:'video-observed-room-sequence; historical-dimensions-retained-as-reference',
-    source:'2026-11-12 연속 촬영 414–724초; 440초 3F 표기',
+    source:'2026-11-12 연속 촬영(3층 홀) + 2026-11-24 연속 촬영·사진 100장(엘리베이터·북동 계단·옥상·에어컴프레셔실)',
     personStart:{position:[-6.315,7.3,-5.9],yaw:Math.PI},
     routeSurvey:{source:'dryer-entrance-mezzanine-20261112',sourceTimes:[440,450,466,502,520,538,554,586,612,648,686,704,724],drawingPolicy:'reference-only',
       smallerFloorPlateConfirmed:true,dimensionsMeasured:false,axesConfirmed:false,
-      glazedEnclosure:{minX:2.5,maxX:6.8,minZ:-8.6,maxZ:-5.2},
-      storageDoor:{position:[5.8,-8.6],side:'north',registrationBasis:'entry-relative topology; not a compass survey'},
+      glazedEnclosure:{minX:.55,maxX:4.55,minZ:-12.15,maxZ:-9.05},
+      storageDoor:{position:[3.65,-12.15],side:'north',registrationBasis:'11/12 observed entrance; 11/24 enclosure west of elevator'},
+      hallRegistration:{
+        basis:'2026-11-24 user-confirmed two work areas; approximate outline from site photos',
+        boundaryMeasured:false,physicalPartitionSurveyed:false,
+        connectingDoor:{
+          id:'third-process-link',position:[-3.35,-5.15],normal:[1,0],width:.95,height:2.10,panelSpan:2.55,
+          fromArea:'elevator-disc',toArea:'process-work',positionMeasured:false,
+          sourceClip:'dryer-entrance-mezzanine-20261112',sourceTimes:[560,571.25,573.5,573.75,574.25,575.5,579.75,583],
+        },
+        boundaryGuide:[[-8.35,-6.45],[-3.35,-6.45],[-3.35,-3.65],[8.35,-3.65]],
+        areas:[
+          {id:'elevator-disc',name:'승강기 앞 · 디스크 컨베이어',labelAt:[4,-4.25],equipment:['f3-holding']},
+          {id:'process-work',name:'기존 설비 작업 구역',labelAt:[-.5,10.2],equipment:['f3-sterilizer','f3-homogenizer','f3-balance-tank','f3-feed-tank']},
+        ],
+      },
       exteriorWindowBands:thirdFloorWindowBands,
       ibcRow:[[-4.6,-10.5],[-2.7,-10.5],[-.8,-10.5]],
       drainSegments:[{a:[1.4,-4.5],b:[1.4,10.5],width:.18},{a:[-6,10.7],b:[1.4,10.7],width:.18}],
-      shutter:{position:[3.3,13.4],width:2.3,height:2.7,sourceTimes:[567],interiorUnconfirmed:true},
+      shutter:{position:[-1.75,-13.4],side:'north',width:4.3,height:4.5,sourceTimes:[567],photoNumbers:[3],interiorUnconfirmed:true},
       entryFromStair:{door:upperStairUpperDoor,normal:'z',sourceTimes:[434,438,440,443,450],positionMeasured:false},
+      compressorWalk:{source:'dryer-3f-compressor-20261124',dimensionsMeasured:false,hallDoor:[8.6,-8.6],roofDoor:[9.35,-6.7],compressorDoor:[16.85,-3.4],walkwayBounds:{minX:8.6,maxX:22.2,minZ:-13.4,maxZ:5.4},
+        route:[[7.9,-8.6],[9.84,-8.6],[9.86,-7.38],[9.35,-6.7],[9.35,-5.4],[10.2,-3.2],[12.7,-1.95],[15,-1.95],[17.31,-1.95],[17.31,-3.4],[17.31,-4.7]]},
       route:[[-6.315,-5.9],[-6.315,-3.4],[.8,-3.4],[.8,3],[1,10.6],[-3.5,10.6]]},
-    slabs: [main, northEastBay], voids: [],
-    slabOpenings:[{bounds:main,holes:[endStairOpening]}],
-    roofZones: [rectangle(17.2, 43, 6.7, 35), rectangle(0, 17.2, 26.8, 35), rectangle(22, 43, 0, 6.7)],
-    rooms:[room('factory','3층 설비 홀',0,17.2,6.7,26.8,{positionBasis:'current-video; reduced-envelope-proportion'})],
-    partitions:[{a:[-8.6,-6.7],b:[-5.4,-6.7],openings:[{offset:2.285,width:1.2,height:2.3,label:'3층 계단 출입문',doorStyle:'perforated'}]}],openings:[...thirdFloorWindowBands,{side:'south',offset:11.9,width:2.3,height:2.7,doorKind:'custom',label:'3층 회색 셔터'}],
+    slabs: [main, northEastBay, compressorRoom.bounds], voids: [],
+    slabOpenings:[{bounds:main,holes:[endStairOpening]}, {bounds:northEastBay,holes:[northEastFlightOpening]}],
+    // The 2026-11-24 walk confirms a continuous green epoxy outdoor roof from
+    // the NE stair exit alcove past the condensers and baghouse to the
+    // compressor room double door. Unfilmed south/far-east roof zones stay cover-only.
+    roofThreshold: rectangle(22, 30.8, 10, 11.5),
+    roofWalkwayZones: [rectangle(17.2, 22, 6.7, 11.5), rectangle(17.2, 30.8, 11.5, 18.8)],
+    roofZones: [rectangle(30.8, 43, 0, 11.5), rectangle(30.8, 43, 11.5, 18.8),
+      rectangle(17.2, 43, 18.8, 35), rectangle(0, 17.2, 26.8, 35)],
+    rooms:[room('factory','3층 설비 홀',0,17.2,6.7,26.8,{positionBasis:'current-video; reduced-envelope-proportion'}), compressorRoom],
+    partitions:[{a:[-8.6,-6.7],b:[-5.4,-6.7],openings:[{offset:2.285,width:1.2,height:2.3,label:'3층 계단 출입문',doorStyle:'perforated'}]}, ...northEastStairWalls, ...compressorWalls],
+    openings:[...thirdFloorWindowBands,
+      {side:'east',offset:4.8,width:1.05,height:2.2,id:'third-ne-stair-door',label:'3층 홀에서 북동 계단참으로 가는 방화문',doorStyle:'gray-fire-door',hingeSide:1,swingSide:-1,openAngle:110*Math.PI/180,positionBasis:'A-015-and-20261124-video-proportion'},
+      {side:'east',offset:8.42,width:2.10,sill:.64,height:1.44,doorKind:'none',id:'third-roof-recess-window',label:'옥상문 옆 외벽 반투명 창',sourceTimes:[274,277,280]},
+      {side:'north',offset:6.85,width:4.3,height:4.5,doorKind:'custom',label:'3층 회색 셔터'}],
     archivedDrawingFixtures: [
       { id: 'historical-roof-tank-a', name: '도면상 옥상수조 A · 30ton 표기 · 현재 미확인', type: 'reference-water-tank', position: point(27.8, 21.5), width: 5.6, depth: 3.2, height: 1.8 },
       { id: 'historical-roof-tank-b', name: '도면상 옥상수조 B · 30ton 표기 · 현재 미확인', type: 'reference-water-tank', position: point(27.8, 29.4), width: 5.6, depth: 3.2, height: 1.8 },

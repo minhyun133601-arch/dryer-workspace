@@ -1,4 +1,5 @@
 import * as THREE from '../shared/vendor/three.module.js';
+import { buildAgitatorHopper } from './packaging-mixing-models.js';
 
 // The drawing owns locations and equipment counts. Team 2 equipment cards
 // (008-011, 015-041) supply the external forms, finishes and visible services.
@@ -177,6 +178,23 @@ function belt(s, body, process, m, w, d, y, longZ = false, rollerOnly = false) {
   ], 'packaging-line-conveyor-side-rails');
 }
 
+function pouchMagazine(s, process, m, item, openTable) {
+  // The 9동 rotary cards show a horizontal pouch feeder reaching forward
+  // from the low table, with two fences that register the unfilled pouches.
+  const w = item.width, d = item.depth, h = item.height;
+  const tray = s._group(process, [w * (openTable ? .18 : .09), h * .34, d * .32]);
+  tray.rotation.x = -.12;
+  const width = w * .24, depth = d * .33;
+  boxes(s, tray, m.polished, [
+    [[0, 0, 0], [width, .032, depth]],
+    ...[-1, 1].map(side => [[side * width * .485, .057, 0], [.025, .11, depth]]),
+    ...[-1, 1].map(side => [[side * width * .35, .105, depth * .27], [.027, .17, .05]]),
+  ], 'packaging-rotary-pouch-magazine-guide-tray');
+  boxes(s, tray, m.film, Array.from({ length: 4 }, (_, i) => [
+    [0, .025 + i * .012, depth * (.02 - .035 * i)], [width * .68, .009, depth * .58],
+  ]), 'packaging-rotary-flat-pouch-stack');
+}
+
 function rotary(s, groups, item, m) {
   const [body, process, details] = groups, w = item.width, d = item.depth, h = item.height;
   const one = item.rotaryVariant === 'orange-guard' || /rotary-1$/.test(item.id), r = Math.min(w, d) * .31;
@@ -203,6 +221,7 @@ function rotary(s, groups, item, m) {
   }
   cylinders(s, process, m.steel, stations, 'packaging-card-rotary-pouch-gripper-posts');
   boxes(s, process, m.edge, clamps, 'packaging-card-rotary-visible-pouch-grippers');
+  pouchMagazine(s, process, m, item, false);
   const feedX = -w * .1, feedZ = -d * .06;
   cylinder(s, process, m.polished, r * .47, h * .14, [feedX, h * .8, feedZ], r * .13, 'packaging-card-rotary-upper-conical-receiver');
   cylinder(s, process, m.ivory, r * .14, h * .18, [feedX, h * .64, feedZ], r * .14, 'packaging-card-rotary-white-auger-drive-column');
@@ -262,6 +281,7 @@ function rotaryTwo(s, groups, item, m) {
     grippers.push([[Math.cos(a) * ringRadius, deck + .16, Math.sin(a) * ringRadius], [.11, .07, .06], [0, -a, 0]]);
   }
   boxes(s, process, m.edge, grippers, 'packaging-card-rotary-two-pouch-clamps-around-small-carriage');
+  pouchMagazine(s, process, m, item, true);
   const lowerConeY = h * .51, upperConeY = h * .89, columnBottom = h * .55, columnTop = h * .825;
   cylinder(s, process, m.polished, w * .085, h * .1, [feedX, lowerConeY, feedZ], .055, 'packaging-card-rotary-two-lower-conical-filling-head');
   cylinder(s, process, m.ivory, .075, columnTop - columnBottom, [feedX, (columnTop + columnBottom) / 2, feedZ], .075, 'packaging-card-rotary-two-long-narrow-white-auger-column');
@@ -325,8 +345,13 @@ function stickFiller(s, groups, item, m) {
   // Cards 011/010/008/009 show the paired 1-8 fillers, not the third-floor
   // supply hoppers. Their control faces and film rolls visibly differ.
   // Existing plan-based envelopes remain approximate installation dimensions.
-  const [body, process, details] = groups, w = item.width, d = item.depth, h = item.height;
+  const w = item.width, d = item.depth, h = item.height;
   const line = item.lineNumber || Number(item.id.match(/stick-(\d+)$/)?.[1]) || 1;
+  const [body, process, details] = groups.map(part => {
+    const local = s._group(part);
+    if (item.operatorSide === 'left') local.scale.x = -1;
+    return local;
+  });
   const traditionalControls = line <= 2, wideFilm = line === 3 || line === 4;
   const purpleFilm = line >= 7;
   const bodyW = w * .8, cx = -w * .08, mainTop = h * 2 / 2.9;
@@ -364,6 +389,19 @@ function stickFiller(s, groups, item, m) {
     [[cx, mainTop * .47, d * .1], [bodyW * .87, .11, d * .17]],
     [[cx, mainTop * .29, d * .1], [bodyW * .87, .13, d * .19]],
   ], 'packaging-stick-drawing-feed-bank-and-horizontal-sealing-bars');
+  // H9-M-034 through 040 have a rectangular overhead feed chest above the
+  // guard and a visible comb of sloping outlets above the takeaway belt.
+  const feedY = h * .93, chestHeight = h * .12, chestDepth = d * .24;
+  boxes(s, process, m.polished, [
+    [[cx, feedY, .02], [bodyW * .76, chestHeight, chestDepth]],
+    [[cx, feedY - chestHeight * .52, .02], [bodyW * .82, .035, chestDepth + .045]],
+  ], 'packaging-stick-overhead-steel-feed-chest');
+  const chutes = [];
+  for (let i = 0; i < 10; i++) {
+    const x = cx + (i / 9 - .5) * bodyW * .68;
+    chutes.push([[x, h * .175, d * .218], [bodyW * .052, .028, d * .22], [.58, 0, 0]]);
+  }
+  boxes(s, process, m.dark, chutes, 'packaging-stick-sloping-individual-discharge-chutes');
   const sealActuators = [];
   for (const x of [cx - bodyW * .36, cx + bodyW * .36]) sealActuators.push({ position: [x, mainTop * .39, d * .05], scale: [.055, mainTop * .24, .055] });
   cylinders(s, process, m.edge, sealActuators, 'packaging-stick-drawing-side-sealing-actuators');
@@ -449,8 +487,41 @@ function bagFiller(s, groups, item, m) {
   rod(s, details, m.steel, [x + radius * .75, h * .3, 0], [x + radius * .8, h * .4, 0], .023);
 }
 
+function lineCheckweigher(s, [body, process, details], item, m) {
+  const w = item.width, d = item.depth, h = item.height, bed = h * .5;
+  const cream = item.weigherVariant === 'rotary-white';
+  const beltMat = cream ? m.film : m.dark;
+  frame(s, body, m, w * .96, d * .82, bed - .12);
+  boxes(s, body, cream ? m.ivory : m.polished, [
+    [[0, bed - .105, -d * .33], [w * .96, .17, .055]],
+    [[0, bed - .105, d * .33], [w * .96, .17, .055]],
+  ], 'packaging-small-pack-checkweigher-stainless-chassis');
+  const segments = [[-.335, .285], [0, .34], [.335, .285]];
+  for (const [offset, length] of segments) {
+    const plateY = offset === 0 ? bed + .006 : bed;
+    boxes(s, process, beltMat, [[[w * offset, plateY, 0], [w * length, .042, d * .62]]],
+      offset === 0 ? 'packaging-small-pack-isolated-weighing-belt' : 'packaging-small-pack-transfer-belt');
+  }
+  const deckDrums = segments.flatMap(([offset, length]) => [-1, 1].map(side => ({
+    position: [w * (offset + side * length / 2), bed - .024, 0],
+    scale: [.045, d * .62, .045], rotation: [PI / 2, 0, 0],
+  })));
+  cylinders(s, process, beltMat, deckDrums, 'packaging-small-pack-independent-belt-drums');
+  const cx = item.weigherVariant === 'vertical-steel' ? w * .06 : 0;
+  const consoleW = w * .21, consoleZ = -d * .365, consoleDepth = d * .15;
+  s._box(body, [consoleW, h * .64, consoleDepth], [cx, h * .65, consoleZ], cream ? m.ivory : m.polished).name = 'packaging-small-pack-rear-weigher-console';
+  const face = consoleZ + consoleDepth * .53;
+  boxes(s, details, m.dark, [
+    [[cx, h * .84, face], [consoleW * .77, h * .135, .016]],
+    [[cx, h * .675, face], [consoleW * .58, h * .04, .016]],
+  ], 'packaging-small-pack-weigher-display-and-key-row');
+  s._box(details, [consoleW * .6, h * .1, .012], [cx - consoleW * .045, h * .84, face + .014], m.screen);
+  tower(s, details, m, cx + consoleW * .33, h * .97, consoleZ, h * .1);
+}
+
 function inspection(s, groups, item, m, kind) {
   if (kind === 'xray') return photoXray(s, groups, item, m);
+  if (kind === 'checkweigher' && item.weigherVariant) return lineCheckweigher(s, groups, item, m);
   const [body, process, details] = groups, w = item.width, d = item.depth, h = item.height, beltY = Math.min(.83, h * (kind === 'xray' ? .41 : .53));
   belt(s, body, process, m, w, d, beltY);
   if (kind === 'checkweigher') {
@@ -680,10 +751,19 @@ function vMixer(s, groups, item, m) {
   const r = Math.min(d * .23, w * .12);
   rod(s, process, m.steel, [-w * .24, h * .85, 0], [0, h * .38, 0], r, 'packaging-v-mixer-left-drum');
   rod(s, process, m.steel, [w * .24, h * .85, 0], [0, h * .38, 0], r, 'packaging-v-mixer-right-drum');
+  for (const side of [-1, 1]) {
+    const axis = new THREE.Vector3(w * .24 * side, h * .47, 0).normalize();
+    const top = new THREE.Vector3(w * .24 * side, h * .85, 0);
+    for (const [distance, radius, length, mat] of [[-.035, r * 1.08, .055, m.edge], [.009, r * 1.02, .04, m.polished]]) {
+      const cap = cylinder(s, process, mat, radius, length, top.clone().addScaledVector(axis, distance).toArray(), radius, 'packaging-v-blender-angled-charge-cover');
+      cap.quaternion.setFromUnitVectors(UP, axis);
+    }
+  }
   rod(s, body, m.steel, [-w * .42, h * .5, 0], [w * .42, h * .5, 0], .06, 'packaging-v-mixer-trunnion-shaft');
   cylinder(s, process, m.steel, .1, h * .16, [0, h * .27, 0]);
   cylinder(s, process, m.blue, .15, .07, [0, h * .19, 0]).rotation.x = PI / 2;
   const motor = cylinder(s, details, m.blue, .15, w * .18, [w * .32, h * .45, -d * .22]); motor.rotation.z = PI / 2;
+  boxes(s, body, m.edge, [-1, 1].map(side => [[side * w * .4, h * .48, 0], [.16, .2, d * .28]]), 'packaging-v-blender-trunnion-bearing-pedestals');
   control(s, details, m, -w * .33, h * .4, d * .35, .26);
 }
 
@@ -701,6 +781,29 @@ function hopper(s, groups, item, m) {
 
 function serviceCabinet(s, groups, item, m) {
   const [body, process, details] = groups, w = item.width, d = item.depth, h = item.height;
+  if (item.serviceVariant === 'printer') {
+    const headZ = d * .35, standX = -w * .18;
+    frame(s, body, m, w * .68, d * .7, h * .4);
+    const panel = s._group(process, [standX, h * .7, -d * .12]);
+    panel.rotation.x = -.16;
+    s._box(panel, [w * .61, h * .46, d * .35], [0, 0, 0], m.dark).name = 'packaging-inkjet-sloped-controller';
+    s._box(panel, [w * .49, h * .23, .015], [0, h * .055, d * .18], m.screen);
+    s._box(panel, [w * .48, h * .055, .015], [0, -h * .145, d * .18], m.edge);
+    const headX = w * .29, headY = h * .6;
+    rod(s, body, m.steel, [headX, .055, headZ], [headX, headY + .055, headZ], .017, 'packaging-inkjet-printhead-mounting-post');
+    s._box(body, [.12, .035, .11], [headX, .03, headZ], m.steel);
+    s._box(process, [.09, .06, .14], [headX, headY, headZ], m.edge).name = 'packaging-inkjet-remote-coding-head';
+    hose(s, details, m.dark, [[standX, h * .55, -d * .23], [-w * .32, h * .19, d * .12], [w * .08, h * .16, d * .26], [headX, headY, headZ]], .014, 'packaging-inkjet-flexible-umbilical');
+    return;
+  }
+  if (item.serviceVariant === 'hotmelt') {
+    frame(s, body, m, w * .83, d * .73, h * .36);
+    s._box(body, [w * .84, h * .37, d * .7], [0, h * .55, 0], m.edge).name = 'packaging-hotmelt-melter-housing';
+    s._box(process, [w * .62, h * .1, d * .57], [-w * .065, h * .77, -.025], m.ivory).name = 'packaging-hotmelt-insulated-tank-lid';
+    control(s, details, m, w * .19, h * .57, d * .37, w * .29);
+    hose(s, details, m.dark, [[-w * .33, h * .48, 0], [-w * .4, h * .84, -.025], [w * .26, h * .86, d * .07], [w * .34, h * .57, d * .28]], .029, 'packaging-hotmelt-heated-delivery-hose');
+    return;
+  }
   if (item.serviceVariant === 'hot-air' || /hot-air/.test(item.id)) {
     feet(s, body, m, w * .87, d * .83);
     boxes(s, body, m.ivory, [
@@ -758,6 +861,7 @@ function serviceCabinet(s, groups, item, m) {
 }
 
 export function buildPackagingLineEquipment(s, root, item) {
+  if (item.type === 'packaging-hopper' && item.drumHeight) { buildAgitatorHopper(s, root, item); return true; }
   const builders = {
     'packaging-rotary-packer': rotary,
     'packaging-vertical-packer': (s, groups, item, m) => formingPacker(s, groups, item, m, false),

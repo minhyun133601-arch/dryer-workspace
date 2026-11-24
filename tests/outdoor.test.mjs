@@ -18,7 +18,7 @@ import { buildOutdoorEnvironment, buildOutdoorEquipment } from '../apps/site/out
 import { CHILLER_ASSETS } from '../apps/site/chiller-data.js';
 import { BURNER_MAINTENANCE_DOCUMENTS } from '../apps/site/burner-maintenance-data.js';
 import { SITE_ASSETS } from '../apps/site/asset-catalog.js';
-import { isRetainedEvidenceImage } from '../apps/site/evidence-assets.js';
+import { displayEvidenceImage, evidenceImageKind, isRetainedEvidenceImage } from '../apps/site/evidence-assets.js';
 import { constrainPlacement, PLACEMENT_REGIONS, fromRoomPosition, toRoomPosition } from '../apps/site/placement-rules.js';
 import * as THREE from '../apps/shared/vendor/three.module.js';
 
@@ -218,7 +218,7 @@ test('outdoor equipment remains separate from seven physical dryer stories and t
     for (const photo of new Set([item.photo, ...item.photos])) {
       assert.match(photo, /^\.\//);
       if (!isRetainedEvidenceImage(photo)) continue;
-      const resolved = await realpath(path.resolve(siteRoot, photo));
+      const resolved = await realpath(path.resolve(siteRoot, photo.split('#')[0]));
       const relative = path.relative(siteRoot, resolved);
       assert.ok(relative && !relative.startsWith(`..${path.sep}`) && !path.isAbsolute(relative), photo);
       await access(resolved);
@@ -511,7 +511,7 @@ async function localViewerHarness(url = 'https://example.invalid/apps/site/index
   let sceneOptions, liquidLifecycle, liquidInstance;
   const localStorage = navigationStorage(navigationPreferences);
   const context = vm.createContext({ DRYER_EQUIPMENT: EQUIPMENT, SITE_NOTE, FLOORS, floorById, OUTDOOR_EQUIPMENT, OUTDOOR_ROOM, CAMPUS_EQUIPMENT, CAMPUS_ROOM, PACKAGING_EQUIPMENT, PACKAGING_ROOM, PACKAGING_ROOMS, PACKAGING_OVERVIEW, SURVEY_PHOTOS,
-    document, window, localStorage, location: new URL(url), URL, URLSearchParams, isRetainedEvidenceImage, BURNER_MAINTENANCE_DOCUMENTS,
+    document, window, localStorage, location: new URL(url), URL, URLSearchParams, displayEvidenceImage, evidenceImageKind, isRetainedEvidenceImage, BURNER_MAINTENANCE_DOCUMENTS,
     console: { error: (...args) => errors.push(args) }, setTimeout, clearTimeout,
     createFurnaceDetail: () => ({ open: () => furnaceCalls.push('open'), dispose() {} }),
     createChillerDetail: () => ({ open: () => chillerCalls.push('open'), close: () => chillerCalls.push('close'), dispose: () => chillerCalls.push('dispose') }),
@@ -1120,8 +1120,9 @@ test('offline map export includes outdoor models and chiller reference images wh
     assert.ok(Object.values(chillerAssets).every((asset) => /^data:image\/jpeg;base64,.+/.test(asset)), 'all retained drawings must work without the workspace or a network');
     for (const key of ['sheet014', 'sheet022', 'cutaway', 'dimensions']) {
       const registered = SITE_ASSETS.find(asset => asset.path === CHILLER_ASSETS[key]);
-      assert.ok(registered?.sharePath, `${key} needs a registered compact export image`);
-      const original = await readFile(new URL(`../apps/site/${registered.sharePath.slice(2)}`, import.meta.url));
+      assert.ok(registered, `${key} needs a registered export image`);
+      const exportPath = registered.sharePath || registered.path;
+      const original = await readFile(new URL(`../apps/site/${exportPath.slice(2)}`, import.meta.url));
       const embedded = Buffer.from(chillerAssets[key].split(',')[1], 'base64');
       assert.equal(createHash('sha256').update(embedded).digest('hex'), createHash('sha256').update(original).digest('hex'), key);
     }

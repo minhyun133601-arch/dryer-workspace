@@ -2,14 +2,16 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile, readdir } from 'node:fs/promises';
 import path from 'node:path';
-import { isRetainedEvidenceImage } from '../apps/site/evidence-assets.js';
+import { displayEvidenceImage, evidenceImageKind, isRetainedEvidenceImage } from '../apps/site/evidence-assets.js';
 import { SITE_ASSETS } from '../apps/site/asset-catalog.js';
 import { LIQUID_ASSETS } from '../apps/site/liquid-assets.js';
 import { OUTDOOR_HISTORY_CARDS } from '../apps/site/outdoor-card-data.js';
 
-test('runtime evidence accepts retained drawings and team 3 cards while rejecting ordinary photos and team 2 cards', () => {
+test('runtime evidence accepts registered drawings, cards and nitrogen tank plate and rejects retired photos', () => {
   for (const reference of [
-    './assets/equipment-cards/liquid/042-pet-filler-28mm/four-views.jpg', './assets/equipment-cards/outdoor/084-cheerpack-stick-air-handler/front.jpg',
+    './assets/photos/equipment-cards/packaging/028-nitrogen/four-views.jpg',
+    './assets/photos/equipment-cards/packaging/028-nitrogen/adsorption-tank-plate.jpg',
+    './assets/photos/equipment-cards/liquid/042-pet-filler-28mm/four-views.jpg', './assets/photos/equipment-cards/outdoor/084-cheerpack-stick-air-handler/overview.jpg#front',
     './assets/drawings/furnace/burner-assembly-drawing.jpg', './assets/drawings/chiller/page-014-chiller-general-arrangement-and-bom.jpg',
     './assets/drawings/chiller/hitachi-compressor-dimensions.jpg', './assets/drawings/outdoor/equipment-plan-2022.png',
     './assets/drawings/dryer/dryer-floor-plan-1f.png', './assets/drawings/campus/yusan-site-plan.png',
@@ -22,6 +24,24 @@ test('runtime evidence accepts retained drawings and team 3 cards while rejectin
     './photos/furnace/overview.jpg', './photos/chiller-20261110/photo-001.jpg',
     './photos/campus-entrance.png', './photos/packaging-3f/frame-033s.jpg', '', null, undefined,
   ]) assert.equal(isRetainedEvidenceImage(reference), false, String(reference));
+});
+
+test('individual outdoor directions crop the master and selecting a full image clears the crop', () => {
+  const { photo, views } = OUTDOOR_HISTORY_CARDS[0];
+  const image = { style: { objectViewBox: '' } };
+  const crops = [];
+  for (const view of views) {
+    displayEvidenceImage(image, view);
+    assert.equal(image.src, photo);
+    crops.push(image.style.objectViewBox);
+  }
+  assert.deepEqual(crops, ['inset(0 75% 0 0%)', 'inset(0 50% 0 25%)', 'inset(0 25% 0 50%)', 'inset(0 0% 0 75%)']);
+  displayEvidenceImage(image, photo);
+  assert.equal(image.style.objectViewBox, '');
+  assert.equal(evidenceImageKind(photo), '설비이력카드');
+  assert.equal(evidenceImageKind('./assets/photos/compressor/field-001.jpg'), '현장 사진');
+  assert.equal(evidenceImageKind('./assets/documents/chiller/page-022-condenser-coil-specifications.jpg'), '문서');
+  assert.equal(evidenceImageKind('./assets/drawings/outdoor/equipment-plan-2022.png'), '도면');
 });
 
 test('the catalog permits every current viewer image and keeps compact share variants outside the runtime evidence gallery', () => {
@@ -61,12 +81,13 @@ test('active asset folders contain exactly the registered viewer images and shar
 test('all 66 team 3 card groups retain accessible registered viewer images', async () => {
   const liquid = Object.values(LIQUID_ASSETS);
   assert.equal(liquid.length, 52); assert.equal(OUTDOOR_HISTORY_CARDS.length, 14);
-  const outdoor = OUTDOOR_HISTORY_CARDS.flatMap(card => {
-    assert.equal(card.views.length, 4, `card ${card.number} keeps all four views`);
-    return [card.photo, ...card.views];
+  const outdoor = OUTDOOR_HISTORY_CARDS.map(card => {
+    assert.deepEqual(card.views, ['front', 'left', 'right', 'rear'].map(side => `${card.photo}#${side}`));
+    for (const view of card.views) assert.ok(isRetainedEvidenceImage(view), view);
+    return card.photo;
   });
   const references = [...liquid, ...outdoor];
-  assert.equal(new Set(references).size, 122, '52 combined indoor images and five images for each of 14 outdoor cards');
+  assert.equal(new Set(references).size, 66, 'one master JPEG per card');
   const registered = new Map(SITE_ASSETS.map(asset => [asset.path, asset.category]));
   for (const reference of references) {
     assert.ok(['card-liquid', 'card-outdoor'].includes(registered.get(reference)), reference);

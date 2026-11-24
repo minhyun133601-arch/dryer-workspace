@@ -53,13 +53,15 @@ test('the chiller retains all 23 drawing BOM rows, 13 distinct assemblies, two c
   } finally { model.dispose(); }
 });
 
-test('22 drawing sheets and manufacturer extracts remain local while field photos are excluded from the runtime registry', async () => {
+test('the 22 source sheets and manufacturer extracts resolve to the correct drawing or document folder', async () => {
   assert.equal(Object.keys(CHILLER_ASSETS).length, 24);
   assert.ok(Object.keys(CHILLER_ASSETS).every(key => !key.startsWith('photo')));
   assert.deepEqual(CHILLER_SHEETS.map((sheet) => sheet.page).sort((a, b) => a - b), Array.from({ length: 22 }, (_, i) => i + 1), 'every source PDF page remains reachable');
   const root = await realpath(fileURLToPath(new URL('../apps/site/', import.meta.url)));
+  const technicalDocuments = new Set(['sheet001', 'sheet003', 'sheet005', 'sheet007', 'sheet008', 'sheet019', 'sheet020', 'sheet022']);
   await Promise.all(Object.entries(CHILLER_ASSETS).map(async ([key, asset]) => {
-    assert.match(asset, /^\.\/assets\/drawings\/chiller\//, key);
+    const kind = technicalDocuments.has(key) ? 'documents' : 'drawings';
+    assert.ok(asset.startsWith(`./assets/${kind}/chiller/`), key);
     const resolved = await realpath(path.resolve(root, asset)), relative = path.relative(root, resolved);
     assert.ok(relative && !relative.startsWith('..') && !path.isAbsolute(relative));
     assert.ok((await stat(resolved)).size > 1000, key);

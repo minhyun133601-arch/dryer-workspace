@@ -133,7 +133,7 @@ export const OUTDOOR_EQUIPMENT = Object.freeze([
   equipment('outdoor-condensers', '노출 코일 응축기 · 상부 팬 2개', 'outdoor-condenser-bank', 'FAN × 2', 35, -1.25, [], {
     rotation: yaw + Math.PI / 2,
     previousPlacements: [{ position: at(36.75, .5), rotation: yaw }, { position: at(36, -1.15), rotation: yaw }],
-    photo: endVideoPhoto(4), photos: [endVideoPhoto(4), './assets/equipment-cards/outdoor/085-pet-pouch-air-handler/left.jpg', videoPhoto('130440', 63), videoPhoto('130440', 58), videoPhoto('130440', 55)],
+    photo: endVideoPhoto(4), photos: [endVideoPhoto(4), './assets/photos/equipment-cards/outdoor/085-pet-pouch-air-handler/overview.jpg#left', videoPhoto('130440', 63), videoPhoto('130440', 58), videoPhoto('130440', 55)],
     labelHeight: 2.3,
     parts: ['열교환 코일·외곽 프레임', '상부 팬·녹슨 보호망', '받침·연결 배관'],
     summary: 'PET/파우치 공조기의 진입측 짧은 끝면 앞, 집진설비와 공조기 사이 기초 위의 노출 코일 응축기입니다. 청회색 코일·녹슨 보호망·상부 팬 2개가 통로 가로 방향으로 나란히 놓입니다.',

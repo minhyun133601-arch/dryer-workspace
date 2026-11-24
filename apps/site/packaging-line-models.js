@@ -837,27 +837,40 @@ function serviceCabinet(s, groups, item, m) {
     hose(s, details, m.dark, [[w * .2, h * .5, 0], [w * .35, h * .35, d * .15], [w * .32, h * .18, d * .22]], .015, 'packaging-drawing-ancillary-controller-service-lead');
     return;
   }
-  feet(s, body, m, w * .9, d * .88);
+  // H9-M-045 stands on a folded plinth with two visible fork openings.
+  s._box(body, [w*.91, h*.055, d*.87], [0, h*.028, 0], m.steel);
+  boxes(s, details, m.dark, [-1,1].map(side =>
+    [[side*w*.29,h*.029,d*.438],[w*.15,h*.034,.012]]
+  ), 'packaging-nitrogen-plinth-openings');
   s._box(body, [w * .91, h * .93, d * .87], [0, h * .52, 0], m.cream).name = 'packaging-card-nitrogen-generator-large-white-cabinet';
   boxes(s, details, m.ivory, [
-    [[-w * .226, h * .33, d * .442], [w * .439, h * .5, .018]],
-    [[w * .226, h * .33, d * .442], [w * .439, h * .5, .018]],
+    [[-w * .226, h * .36, d * .442], [w * .439, h * .59, .018]],
+    [[w * .226, h * .36, d * .442], [w * .439, h * .59, .018]],
   ], 'packaging-card-nitrogen-generator-two-lower-service-doors');
-  boxes(s, details, m.edge, [
-    [[-w * .035, h * .36, d * .461], [.02, .14, .02]],
-    [[w * .035, h * .36, d * .461], [.02, .14, .02]],
-  ], 'packaging-card-nitrogen-generator-paired-door-handles');
+  s._box(details, [.023,h*.066,.019], [w*.045,h*.335,d*.457], m.edge).name='packaging-nitrogen-central-door-handle';
   s._box(details, [w * .56, h * .24, .02], [-w * .08, h * .76, d * .45], m.dark).name = 'packaging-card-nitrogen-generator-wide-black-gauge-panel';
   s._box(details, [.14, .04, .012], [-w * .16, h * .83, d * .467], m.red).name = 'packaging-card-nitrogen-generator-red-led-meter';
-  for (const x of [-w * .22, w * .05]) {
-    const gauge = cylinder(s, details, m.steel, .05, .018, [x, h * .76, d * .469]); gauge.rotation.x = PI / 2;
-    rod(s, details, m.dark, [x, h * .76, d * .483], [x + .022, h * .78, d * .483], .004);
+  s._box(details, [w*.075, h*.019, .012], [w*.065,h*.83,d*.467], m.steel);
+  for (const x of [-w*.245,-w*.08,w*.085]) {
+    const gauge = cylinder(s, details, m.steel, w*.039, .018, [x, h*.765, d*.469], w*.039, 'packaging-nitrogen-panel-gauge'); gauge.rotation.x = PI / 2;
+    rod(s, details, m.dark, [x, h*.765, d*.483], [x+w*.019, h*.774, d*.483], .003);
   }
-  boxes(s, details, m.green, [[[-w * .18, h * .69, d * .47], [.03, .03, .012]]], 'packaging-card-nitrogen-generator-green-start-button');
-  boxes(s, details, m.red, [[[0, h * .69, d * .47], [.03, .03, .012]]], 'packaging-card-nitrogen-generator-red-stop-button');
+  for (const [x,material] of [[-.215,m.green],[-.08,m.red],[.055,m.red]]) {
+    const button=cylinder(s,details,material,w*.017,.013,[x*w,h*.70,d*.47]);
+    button.rotation.x=PI/2;
+  }
   s._box(details, [w * .095, h * .18, .023], [w * .31, h * .76, d * .454], m.edge).name = 'packaging-card-nitrogen-generator-vertical-flow-meter-slot';
   s._box(details, [w * .03, h * .15, .012], [w * .31, h * .76, d * .475], m.glass);
-  vents(s, details, m, 0, h * .15, -d * .447, w * .4, h * .09, 6);
+  s._box(details,[.006,h*.89,.009],[0,h*.52,-d*.439],m.edge).name='packaging-nitrogen-rear-door-seam';
+  const louvers=[];
+  for (const offset of [-.30,-.19,.12,.23]) {
+    for (let row=0; row<7; row++) {
+      const y=h*(.11+row*.011);
+      louvers.push([[offset*w,y,-d*.44],[w*.09,h*.004,.012]]);
+      louvers.push([[w*.459,y,offset*d],[.012,h*.004,d*.09]]);
+    }
+  }
+  boxes(s,details,m.edge,louvers,'packaging-nitrogen-lower-louver-banks');
 }
 
 export function buildPackagingLineEquipment(s, root, item) {

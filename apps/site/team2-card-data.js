@@ -329,13 +329,9 @@ export const TEAM2_CARDS=Object.freeze([
     "number": 28,
     "name": "질소발생기",
     "room": "스틱,소포장실",
-    "photo": "./photos/team2-cards/card-028.jpg",
-    "views": [
-      "./photos/team2-cards/card-028-front.jpg",
-      "./photos/team2-cards/card-028-left.jpg",
-      "./photos/team2-cards/card-028-right.jpg",
-      "./photos/team2-cards/card-028-rear.jpg"
-    ]
+    "photo": "./assets/photos/equipment-cards/packaging/028-nitrogen/four-views.jpg",
+    "plate": "./assets/photos/equipment-cards/packaging/028-nitrogen/adsorption-tank-plate.jpg",
+    "views": []
   },
   {
     "number": 29,
@@ -501,6 +497,7 @@ const byNumber=new Map(TEAM2_CARDS.map(card=>[card.number,card]));
 const directions=['정면','좌측면','우측면','후면'];
 export const TEAM2_CARD_CAPTIONS=Object.freeze(Object.fromEntries(TEAM2_CARDS.flatMap(card=>[
   [card.photo,`2팀 설비이력카드 · ${card.name} · 4방향 원본`],
+  ...(card.plate ? [[card.plate, 'H9-M-045 질소발생기 · 내부 흡착탱크 명판 · 가스테크(주)']] : []),
   ...card.views.map((photo,index)=>[photo,`2팀 설비이력카드 · ${card.name} · ${directions[index]}`]),
 ])));
 export function team2RoomPhotos(level){
@@ -531,7 +528,7 @@ export function bindTeam2Card(item){
   const binding=typeof entry==='number'?{number:entry,mode:'direct'}:entry;
   const card=byNumber.get(binding.number);
   if(!card)throw Error(`Missing team 2 card ${binding.number}`);
-  const photos=[...new Set([...card.views,card.photo,...(item.photos||[])])];
+  const photos=[...new Set([...card.views,card.photo,...(card.plate?[card.plate]:[]),...(item.photos||[])])];
   const sameType=binding.mode==='same-type';
   return Object.freeze({...item,photo:photos[0],photos,
     photoCaptions:{...item.photoCaptions,...TEAM2_CARD_CAPTIONS},

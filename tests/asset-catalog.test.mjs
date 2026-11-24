@@ -36,11 +36,11 @@ test('registered drawings, branding and share derivatives pass while historical 
   const root = await fixture(t, {
     'assets/drawings/floor-1.png': png,
     'assets/brand/company-mark.svg': svg,
-    'assets/share/floor-1.jpg': jpg,
+    'assets/drawings/share/floor-1.jpg': jpg,
     'example-data.js': 'export const photos = [1].map(n => `./assets/drawings/floor-${n}.png`);\nexport const historical = "./photos/retired.jpg";\n',
     'app.js': 'const brand = "./assets/brand/company-mark.svg";\n',
   });
-  const assets = [asset('floor-1', './assets/drawings/floor-1.png', { sharePath: './assets/share/floor-1.jpg' }), asset('company-mark', './assets/brand/company-mark.svg')];
+  const assets = [asset('floor-1', './assets/drawings/floor-1.png', { sharePath: './assets/drawings/share/floor-1.jpg' }), asset('company-mark', './assets/brand/company-mark.svg', { category: 'brand' })];
   assert.deepEqual(await inspectSiteAssets({ root, assets }), []);
 });
 
@@ -57,12 +57,29 @@ test('missing files and unsafe or inconsistent names are reported without resolv
   assert.equal(errors.filter(error => error.includes('잘못된 자산 경로')).length, 2);
 });
 
-test('catalog ID and physical file collisions include share paths', async t => {
-  const root = await fixture(t, { 'assets/drawings/floor-1.png': png, 'assets/share/floor-1.jpg': jpg });
+test('field photos, drawings, document scans and compact exports stay in their media folders', async t => {
+  const root = await fixture(t, {
+    'assets/drawings/field.jpg': jpg,
+    'assets/photos/plan.png': png,
+    'assets/photos/share/manual.jpg': jpg,
+    'assets/documents/manual.jpg': jpg,
+  });
   const errors = await inspectSiteAssets({ root, assets: [
-    asset('floor-1', './assets/drawings/floor-1.png', { sharePath: './assets/share/floor-1.jpg' }),
-    asset('floor-1', './assets/drawings/floor-1.png', { sharePath: './assets/share/floor-1.jpg' }),
-    asset('cross-collision', './assets/share/floor-1.jpg'),
+    asset('field', './assets/drawings/field.jpg', { category: 'dryer-compressor-survey' }),
+    asset('plan', './assets/photos/plan.png', { category: 'drawing-campus' }),
+    asset('manual', './assets/documents/manual.jpg', { category: 'document-chiller', sharePath: './assets/photos/share/manual.jpg' }),
+  ] });
+  assert.equal(errors.filter(error => error.includes('분류와 원본 폴더')).length, 2);
+  assert.equal(errors.filter(error => error.includes('같은 분류의 share')).length, 1);
+  assert.ok(errors.some(error => error.includes('내용이 같은 자산 파일')));
+});
+
+test('catalog ID and physical file collisions include share paths', async t => {
+  const root = await fixture(t, { 'assets/drawings/floor-1.png': png, 'assets/drawings/share/floor-1.jpg': jpg });
+  const errors = await inspectSiteAssets({ root, assets: [
+    asset('floor-1', './assets/drawings/floor-1.png', { sharePath: './assets/drawings/share/floor-1.jpg' }),
+    asset('floor-1', './assets/drawings/floor-1.png', { sharePath: './assets/drawings/share/floor-1.jpg' }),
+    asset('cross-collision', './assets/drawings/share/floor-1.jpg'),
   ] });
   assert.equal(errors.filter(error => error.includes('중복 자산 ID')).length, 1);
   assert.equal(errors.filter(error => error.includes('중복 자산 경로')).length, 3);
@@ -71,7 +88,7 @@ test('catalog ID and physical file collisions include share paths', async t => {
 test('wrong image contents, unregistered files and both static and generated references fail the audit', async t => {
   const root = await fixture(t, {
     'assets/drawings/floor-1.png': jpg,
-    'assets/share/unregistered.jpg': jpg,
+    'assets/drawings/share/unregistered.jpg': jpg,
     'app.js': 'const image = "./assets/drawings/static-missing.png"; const directory = "./assets/drawings/";\n',
     'example-data.js': 'export const photos = [2].map(n => `./assets/drawings/floor-${n}.png`);\n',
   });

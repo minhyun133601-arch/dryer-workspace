@@ -7,14 +7,14 @@ export const CHILLER_INFO = {
 };
 
 export const CHILLER_ASSETS = {
-  "sheet001": "./assets/drawings/chiller/page-001-condenser-capacity-calculation.jpg",
+  "sheet001": "./assets/documents/chiller/page-001-condenser-capacity-calculation.jpg",
   "sheet002": "./assets/drawings/chiller/page-002-liquid-receiver-dimensions.jpg",
-  "sheet003": "./assets/drawings/chiller/page-003-receiver-pressure-vessel-certificate.jpg",
+  "sheet003": "./assets/documents/chiller/page-003-receiver-pressure-vessel-certificate.jpg",
   "sheet004": "./assets/drawings/chiller/page-004-shell-and-tube-evaporator-detail.jpg",
-  "sheet005": "./assets/drawings/chiller/page-005-water-chiller-catalog.jpg",
+  "sheet005": "./assets/documents/chiller/page-005-water-chiller-catalog.jpg",
   "sheet006": "./assets/drawings/chiller/page-006-safety-valve-section.jpg",
-  "sheet007": "./assets/drawings/chiller/page-007-safety-valve-test-certificate-1.jpg",
-  "sheet008": "./assets/drawings/chiller/page-008-safety-valve-test-certificate-2.jpg",
+  "sheet007": "./assets/documents/chiller/page-007-safety-valve-test-certificate-1.jpg",
+  "sheet008": "./assets/documents/chiller/page-008-safety-valve-test-certificate-2.jpg",
   "sheet009": "./assets/drawings/chiller/page-009-electrical-control-circuit-1.jpg",
   "sheet010": "./assets/drawings/chiller/page-010-electrical-control-circuit-2.jpg",
   "sheet011": "./assets/drawings/chiller/page-011-electrical-control-circuit-3.jpg",
@@ -25,10 +25,10 @@ export const CHILLER_ASSETS = {
   "sheet016": "./assets/drawings/chiller/page-016-compressor-50asc-dimensions.jpg",
   "sheet017": "./assets/drawings/chiller/page-017-compressor-section-and-capacity-control.jpg",
   "sheet018": "./assets/drawings/chiller/page-018-capacity-control-modification.jpg",
-  "sheet019": "./assets/drawings/chiller/page-019-compressor-series-dimensions.jpg",
-  "sheet020": "./assets/drawings/chiller/page-020-compressor-performance.jpg",
+  "sheet019": "./assets/documents/chiller/page-019-compressor-series-dimensions.jpg",
+  "sheet020": "./assets/documents/chiller/page-020-compressor-performance.jpg",
   "sheet021": "./assets/drawings/chiller/page-021-condenser-coil-detail.jpg",
-  "sheet022": "./assets/drawings/chiller/page-022-condenser-coil-specifications.jpg",
+  "sheet022": "./assets/documents/chiller/page-022-condenser-coil-specifications.jpg",
   "cutaway": "./assets/drawings/chiller/hitachi-compressor-cutaway.jpg",
   "dimensions": "./assets/drawings/chiller/hitachi-compressor-dimensions.jpg"
 };

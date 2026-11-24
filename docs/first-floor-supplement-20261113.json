@@ -42,7 +42,7 @@
       "frames": [
         {
           "assetId": "survey-dryer-first-floor-20261113-142059-031s",
-          "assetPath": "./assets/evidence/dryer-first-floor-20261113/clip-142059-frame-031s.jpg",
+          "assetPath": "./assets/photos/evidence/dryer-first-floor-20261113/clip-142059-frame-031s.jpg",
           "timestampSeconds": 31,
           "label": "조제실 작업대·계단과 크림색 철골",
           "supports": [
@@ -66,7 +66,7 @@
         },
         {
           "assetId": "survey-dryer-first-floor-20261113-142059-038s",
-          "assetPath": "./assets/evidence/dryer-first-floor-20261113/clip-142059-frame-038s.jpg",
+          "assetPath": "./assets/photos/evidence/dryer-first-floor-20261113/clip-142059-frame-038s.jpg",
           "timestampSeconds": 38,
           "label": "조제실 백색 이동식 장치와 상부 덕트",
           "supports": [
@@ -90,7 +90,7 @@
         },
         {
           "assetId": "survey-dryer-first-floor-20261113-142059-042s",
-          "assetPath": "./assets/evidence/dryer-first-floor-20261113/clip-142059-frame-042s.jpg",
+          "assetPath": "./assets/photos/evidence/dryer-first-floor-20261113/clip-142059-frame-042s.jpg",
           "timestampSeconds": 42,
           "label": "Fristam 포대 투입부·흡입 후드·하부 펌프",
           "supports": [
@@ -114,7 +114,7 @@
         },
         {
           "assetId": "survey-dryer-first-floor-20261113-142059-065s",
-          "assetPath": "./assets/evidence/dryer-first-floor-20261113/clip-142059-frame-065s.jpg",
+          "assetPath": "./assets/photos/evidence/dryer-first-floor-20261113/clip-142059-frame-065s.jpg",
           "timestampSeconds": 65,
           "label": "균질기 전면 펌프 헤드·압력계·조작반",
           "supports": [
@@ -138,7 +138,7 @@
         },
         {
           "assetId": "survey-dryer-first-floor-20261113-142059-072s",
-          "assetPath": "./assets/evidence/dryer-first-floor-20261113/clip-142059-frame-072s.jpg",
+          "assetPath": "./assets/photos/evidence/dryer-first-floor-20261113/clip-142059-frame-072s.jpg",
           "timestampSeconds": 72,
           "label": "균질기 측면 캐비닛·손잡이·위험 표지",
           "supports": [
@@ -162,7 +162,7 @@
         },
         {
           "assetId": "survey-dryer-first-floor-20261113-142059-078s",
-          "assetPath": "./assets/evidence/dryer-first-floor-20261113/clip-142059-frame-078s.jpg",
+          "assetPath": "./assets/photos/evidence/dryer-first-floor-20261113/clip-142059-frame-078s.jpg",
           "timestampSeconds": 78,
           "label": "균질기 앞 외포장실 출입구·세로 황색창",
           "supports": [
@@ -204,7 +204,7 @@
       "frames": [
         {
           "assetId": "survey-dryer-first-floor-20261113-142223-010s",
-          "assetPath": "./assets/evidence/dryer-first-floor-20261113/clip-142223-frame-010s.jpg",
+          "assetPath": "./assets/photos/evidence/dryer-first-floor-20261113/clip-142223-frame-010s.jpg",
           "timestampSeconds": 10,
           "label": "외포장실 전경·팔레트·황색 펜스·청색 로봇",
           "supports": [
@@ -228,7 +228,7 @@
         },
         {
           "assetId": "survey-dryer-first-floor-20261113-142223-042s",
-          "assetPath": "./assets/evidence/dryer-first-floor-20261113/clip-142223-frame-042s.jpg",
+          "assetPath": "./assets/photos/evidence/dryer-first-floor-20261113/clip-142223-frame-042s.jpg",
           "timestampSeconds": 42,
           "label": "골판지 매거진·주황 헤드·삼색등·청색 봉투통",
           "supports": [
@@ -252,7 +252,7 @@
         },
         {
           "assetId": "survey-dryer-first-floor-20261113-142223-048s",
-          "assetPath": "./assets/evidence/dryer-first-floor-20261113/clip-142223-frame-048s.jpg",
+          "assetPath": "./assets/photos/evidence/dryer-first-floor-20261113/clip-142223-frame-048s.jpg",
           "timestampSeconds": 48,
           "label": "외포장 곡선 롤러·프레임·상부 관찰창",
           "supports": [
@@ -276,7 +276,7 @@
         },
         {
           "assetId": "survey-dryer-first-floor-20261113-142223-108s",
-          "assetPath": "./assets/evidence/dryer-first-floor-20261113/clip-142223-frame-108s.jpg",
+          "assetPath": "./assets/photos/evidence/dryer-first-floor-20261113/clip-142223-frame-108s.jpg",
           "timestampSeconds": 108,
           "label": "1층 엘리베이터 양개문·다중 버튼 패널",
           "supports": [
@@ -300,7 +300,7 @@
         },
         {
           "assetId": "survey-dryer-first-floor-20261113-142223-141s",
-          "assetPath": "./assets/evidence/dryer-first-floor-20261113/clip-142223-frame-141s.jpg",
+          "assetPath": "./assets/photos/evidence/dryer-first-floor-20261113/clip-142223-frame-141s.jpg",
           "timestampSeconds": 141,
           "label": "컨베이어 횡단 발판·양쪽 황색 난간",
           "supports": [
@@ -324,7 +324,7 @@
         },
         {
           "assetId": "survey-dryer-first-floor-20261113-142223-162s",
-          "assetPath": "./assets/evidence/dryer-first-floor-20261113/clip-142223-frame-162s.jpg",
+          "assetPath": "./assets/photos/evidence/dryer-first-floor-20261113/clip-142223-frame-162s.jpg",
           "timestampSeconds": 162,
           "label": "통로 끝 우측 백색 계단·황색 난간",
           "supports": [

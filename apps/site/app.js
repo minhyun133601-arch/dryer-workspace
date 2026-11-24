@@ -3,7 +3,7 @@ import { OUTDOOR_EQUIPMENT, OUTDOOR_ROOM } from './outdoor-data.js';
 import { CAMPUS_EQUIPMENT, CAMPUS_ROOM } from './campus-data.js';
 import { PACKAGING_EQUIPMENT, PACKAGING_ROOM, PACKAGING_ROOMS, PACKAGING_OVERVIEW } from './packaging-data.js';
 import { SURVEY_PHOTOS } from './outdoor-survey.js';
-import { isRetainedEvidenceImage } from './evidence-assets.js';
+import { displayEvidenceImage, evidenceImageKind, isRetainedEvidenceImage } from './evidence-assets.js';
 import { createLayoutEditor } from './layout-editor.js';
 import { createFurnaceDetail } from './furnace-detail.js';
 import { BURNER_MAINTENANCE_DOCUMENTS } from './burner-maintenance-data.js';
@@ -237,8 +237,8 @@ function setPhoto(index) {
   const item = items.get(selectedId);
   const room = roomByFloor(activeFloor);
   const name = item?.name || room?.name || '건조실 현장';
-  const referenceKind = photoSources[photoIndex].includes('/equipment-cards/') ? '설비이력카드' : '도면';
-  $('reference-photo').src = photoSources[photoIndex];
+  const referenceKind = evidenceImageKind(photoSources[photoIndex]);
+  displayEvidenceImage($('reference-photo'), photoSources[photoIndex]);
   $('reference-photo').classList.toggle('is-drawing-reference', referenceKind === '도면');
   $('photo-dialog').classList.toggle('is-drawing-reference', referenceKind === '도면');
   $('reference-photo').alt = `${name} ${referenceKind} ${photoIndex + 1}`;
@@ -251,7 +251,7 @@ function setPhoto(index) {
   scene?.setSurveyPhoto(null);
   $('reference-photo-button').setAttribute('aria-label', `${name} ${referenceKind} 크게 보기`);
   $('photo-dialog-title').textContent = `${name} · ${referenceKind}`;
-  $('photo-dialog-image').src = photoSources[photoIndex];
+  displayEvidenceImage($('photo-dialog-image'), photoSources[photoIndex]);
   $('photo-dialog-image').alt = `${name} ${referenceKind} ${photoIndex + 1}`;
   $('photo-position').textContent = `${String(photoIndex + 1).padStart(2, '0')} / ${String(photoSources.length).padStart(2, '0')}`;
   $('previous-photo').disabled = photoSources.length < 2;
@@ -269,7 +269,12 @@ function renderPhotos(item) {
   $('photo-thumbnails').replaceChildren();
   $('photo-thumbnails').hidden = !photoSources.length;
   if (!photoSources.length) {
-    for (const id of ['reference-photo', 'photo-dialog-image']) { $(id).removeAttribute?.('src'); $(id).alt = ''; }
+    for (const id of ['reference-photo', 'photo-dialog-image']) {
+      const image = $(id);
+      image.onload = null;
+      image.removeAttribute?.('src');
+      image.alt = '';
+    }
     $('reference-photo-button').hidden = true;
     $('photo-info').hidden = true;
     $('reference-caption').textContent = '';
@@ -284,7 +289,7 @@ function renderPhotos(item) {
     button.setAttribute('aria-label', `참고 자료 ${i + 1} 선택`);
     button.setAttribute('aria-pressed', String(i === 0));
     const image = document.createElement('img');
-    image.src = source;
+    displayEvidenceImage(image, source);
     image.alt = '';
     image.loading = 'lazy';
     button.append(image);

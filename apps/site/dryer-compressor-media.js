@@ -3,7 +3,7 @@ const captureTimes = '134536 134544 134555 134612 135511 135531 135538 135555 13
 export const COMPRESSOR_MEDIA = captureTimes.map((time,index) => ({
   number: index + 1,
   original: '20261124_' + time + '.jpg',
-  path: './assets/compressor/field-' + String(index + 1).padStart(3, '0') + '.jpg',
+  path: './assets/photos/compressor/field-' + String(index + 1).padStart(3, '0') + '.jpg',
 }));
 export const COMPRESSOR_PLAN_IMAGE = './assets/drawings/dryer/dryer-floor-plan-3f.png';
 export const COMPRESSOR_WALK_FRAMES = [
@@ -13,4 +13,4 @@ export const COMPRESSOR_WALK_FRAMES = [
   ['new-1','11/24','00:05','승강기','스테인리스 승강기와 바로 옆 조작반'],
   ['new-2','11/24','00:13','디스크 이송관','이송관 위 원추 호퍼와 공통 황색 난간 점검대'],
   ['new-3','11/24','00:16','계단참 방화문','포충기 옆의 회색 방화문. 이 문은 옥상으로 향하는 계단참으로 열린다.'],
-].map(([key,date,time,short,caption])=>({id:'walk-'+key,path:'./assets/compressor/walk-'+key+'.jpg',date,time,short,caption}));
+].map(([key,date,time,short,caption])=>({id:'walk-'+key,path:'./assets/photos/compressor/walk-'+key+'.jpg',date,time,short,caption}));

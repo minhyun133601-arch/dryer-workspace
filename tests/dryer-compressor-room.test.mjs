@@ -92,6 +92,34 @@ test('compressor room refit preserves the clear aisle, measured envelopes and so
   } finally { h.dispose(); }
 });
 
+test('receiver fittings and asymmetric cabinet faces match their field views', () => {
+  const h=fixture();
+  try {
+    buildDryerCompressorInteriorDetails(h.s,h.env,h.spec);
+    h.s.scene.updateMatrixWorld(true);
+    const room=h.env.architectureFixtures.getObjectByName('dryer-compressor-3-room');
+    const at=name=>room.getObjectByName(name);
+    const bounds=name=>new THREE.Box3().setFromObject(at(name),true);
+    const direction=name=>at(name).getWorldDirection(new THREE.Vector3());
+    const gauge=bounds('receiver-1-head-gauge');
+    assert.ok(gauge.max.y>bounds('comp-receiver-1-dome').max.y,'#044 gauge projects above the domed head');
+    assert.ok(direction('survey-receiver-1').x<-.99,'HAN GANG front faces the aisle');
+    assert.ok(direction('survey-receiver-2').x>.99,'#052 upper elbow faces the aisle from the opposite row');
+    assert.ok(direction('receiver-2-cooler-side').z>.99,'#053 manhole and gauge are on the aftercooler side');
+    assert.ok(bounds('receiver-2-clamped-manhole').max.y<bounds('receiver-2-manufacturer-plate').min.y);
+    assert.deepEqual(at('receiver-2-clamped-manhole').userData.sourcePhotoNumbers,[53]);
+    assert.ok(at('comp-dryer-spx-blue').getObjectByName('hl350-exhaust-silencer'));
+    assert.ok(direction('separator-connection-face').x>.99 && direction('separator-product-label').z>.99);
+    assert.ok(bounds('separator-lower-sump').max.x>bounds('ows-tank').max.x && bounds('separator-lower-sump').max.y<bounds('ows-tank').max.y);
+    assert.ok(direction('jac-front-instruments').z>.99,'#073 instrument face is local -X after rotating the combined shell');
+    for (const [number,photo] of [[1,12],[2,18],[3,37]]) {
+      const back=at('survey-rear-service-panel-'+number);
+      assert.deepEqual(back.userData.sourcePhotoNumbers,[photo]);
+      assert.ok(back.getWorldDirection(new THREE.Vector3()).dot(back.parent.getWorldDirection(new THREE.Vector3()))<-.99);
+    }
+  } finally { h.dispose(); }
+});
+
 test('3F hall, stair landing, roof and compressor room have separate wall openings and operable doors', () => {
   const h = fixture();
   try {

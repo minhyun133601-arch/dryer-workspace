@@ -210,7 +210,10 @@ const floor2Equipment=[
   ...[-4.4,4.3,9.1].map((z,i)=>lineItem(2,`check-${i+1}`,`중량선별기 ${i+1}`,'checkweigher',[-1,1.3,-.5][i],z,1.8,1.1,1.3,{rotation:Math.PI/2,previousRotation:0})),
   ...[-2.7,6,10.8].map((z,i)=>lineItem(2,`taper-${i+1}`,`${['A','C','B'][i]}라인 테이핑기`,'case-sealer',[-1,1.3,-.5][i],z,1.65,1.1,1.8,{tapeVariant:i===1?'cyan':'cream',rotation:Math.PI/2,previousRotation:0})),
   lineItem(2,'incase','인케이스 포장기','carton-erector',2.5,-7,1.8,1.5,2),
-  lineItem(2,'nitrogen','질소발생기','service-cabinet',5.6,-13.8,1.3,1,2),
+  lineItem(2,'nitrogen','질소발생기','service-cabinet',5.6,-13.8,.98,1.43,2,{
+    details:['H9-M-045 · 028번 4면 사진과 전경에서 전면 계기 3개, 유량계, 점검문과 하부 통풍구를 확인했습니다. 외함 크기는 사진 비례 추정입니다.',
+      '가스테크(주) ADSORPTION TANK 명판의 설계압력은 0.97 MPa, 설계온도는 50 °C, 수압시험압력은 1.47 MPa입니다. 이 값은 내부 흡착탱크 사양입니다.'],
+  }),
   lineItem(2,'hot-air','열풍기','service-cabinet',11.4,-13.8,2,1.2,2.5),
   ...[-8.4,.2].map((z,i)=>lineItem(2,`hotmelt-${i+1}`,`핫멜트 ${i+1}`,'service-cabinet',5.9,z,.7,.7,1.3,{serviceVariant:'hotmelt',details:['도면에 표기된 핫멜트 장치로, 용융부와 가열 호스는 설비 형식에 따른 근사 형상입니다.']})),
   ...[-8.4,.2].map((z,i)=>lineItem(2,`printer-${i+1}`,`날인기 ${i+1}`,'service-cabinet',6.7,z,.6,.6,1.2,{serviceVariant:'printer'})),

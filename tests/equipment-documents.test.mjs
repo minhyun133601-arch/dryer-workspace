@@ -16,8 +16,8 @@ test('both model viewers omit document controls and retain their registered hist
   assert.ok(OUTDOOR_EQUIPMENT.every((item) => !item.documentIds));
   const ahu = OUTDOOR_EQUIPMENT.find((item) => item.id === 'outdoor-ahu');
   assert.equal(ahu.historyCardNumber, 84);
-  assert.equal(ahu.photos[0], './assets/equipment-cards/outdoor/084-cheerpack-stick-air-handler/front.jpg');
-  assert.ok(SITE_ASSETS.some(asset => asset.path === ahu.photos[0] && asset.category === 'card-outdoor'));
+  assert.equal(ahu.photos[0], './assets/photos/equipment-cards/outdoor/084-cheerpack-stick-air-handler/overview.jpg#front');
+  assert.ok(SITE_ASSETS.some(asset => asset.path === ahu.photos[0].split('#')[0] && asset.category === 'card-outdoor'));
 });
 
 test('the offline model omits document controls, popup code and embedded equipment PDFs', async () => {

@@ -5,6 +5,8 @@ import { createHash } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import { createDrawingReviewService } from './drawing-review-service.mjs';
 import { OPTIONAL_MODULES } from '../workspace/module-registry.js';
+import { legacyAssetTarget } from '../apps/site/legacy-asset-paths.js';
+import { renderCardPanel } from './card-panel-image.mjs';
 
 export const DEFAULT_PORT = 4173;
 export const APPLICATION_ID = 'dryer-workspace';
@@ -54,6 +56,7 @@ export async function createServer({ root = PROJECT_ROOT } = {}) {
   const identity = { application: APPLICATION_ID, version: 1, workspace: workspaceId(publicRoot) };
   const withinRoot = (file) => file === publicRoot || file.startsWith(publicRoot + path.sep);
   const drawingReview = createDrawingReviewService({ root: publicRoot });
+  const cardPanels = new Map();
   const server = http.createServer(async (req, res) => {
     const headers = {
       'Cache-Control': 'no-store',
@@ -95,7 +98,16 @@ export async function createServer({ root = PROJECT_ROOT } = {}) {
         }));
         send(200, JSON.stringify({ ...identity, optionalModules: installed.filter(Boolean) }), mimeTypes['.json']); return;
       }
-      const relative = segments.join('/') || 'index.html';
+      let relative = segments.join('/') || 'index.html';
+      let cardFace;
+      if (relative.startsWith('apps/site/assets/')) {
+        const target = legacyAssetTarget('./' + relative.slice('apps/site/'.length));
+        if (target) {
+          const [canonical, face] = target.split('#');
+          relative = 'apps/site/' + canonical.slice(2);
+          cardFace = face;
+        }
+      }
       if (!isPublicPath(relative)) {
         send(404, 'Not found'); return;
       }
@@ -109,6 +121,15 @@ export async function createServer({ root = PROJECT_ROOT } = {}) {
         send(403, 'Forbidden'); return;
       }
       const body = await readFile(file);
+      if (cardFace) {
+        const sourceHash = createHash('sha256').update(body).digest('hex');
+        const key = canonicalRelative + '#' + cardFace;
+        if (cardPanels.get(key)?.sourceHash !== sourceHash) {
+          cardPanels.set(key, { sourceHash, image: renderCardPanel(body, cardFace) });
+        }
+        const image = await cardPanels.get(key).image;
+        send(200, image.body, image.type); return;
+      }
       send(200, body, mimeTypes[path.extname(file).toLowerCase()] || 'application/octet-stream');
     } catch (error) {
       if (error instanceof URIError) send(400, 'Bad request');

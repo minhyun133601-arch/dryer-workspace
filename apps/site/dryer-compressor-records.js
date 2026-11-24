@@ -19,6 +19,12 @@ export const COMPRESSOR_RECORDS = [
   {
     id: 'comp-unit-1-kaeser-csd125sfc', title: '공기압축기 1호기', maker: 'KAESER', model: 'CSD 130 SFC',
     group: '공기압축기', cardNumber: 'HC-T-005', photoNumbers: [11,14,15,10,12,13],
+    elevation: { frontAxis: 'z',
+      front: { photo: 11, detail: '조작반과 점검문' },
+      left: { photo: 10, detail: '황색 점검문과 상부 덕트' },
+      right: { photo: 13, detail: '우측 방열 그릴' },
+      rear: { photo: 12, detail: '회색 후면 패널과 하부 연결관' },
+    },
     fields: [
       plate(14,'모델','CSD 130 SFC · 로터리 스크루'),
       ...management(15,'100마력 · 인버터형','2026년'),
@@ -42,6 +48,12 @@ export const COMPRESSOR_RECORDS = [
   {
     id: 'comp-unit-2-kaeser-bsd72', title: '공기압축기 2호기', maker: 'KAESER', model: 'BSD 72',
     group: '공기압축기', cardNumber: 'HC-T-006', photoNumbers: [19,21,17,16,18,20,22,23,24,25],
+    elevation: { frontAxis: 'z',
+      front: { photo: 19, detail: '조작면 · 점검 덮개 개방' },
+      left: { photo: 20, detail: '좌측 방열 그릴' },
+      right: { photo: 16, detail: '관리표 쪽 · 열린 덮개로 일부 가림', partial: true },
+      rear: { photo: 18, detail: '황색 후면 외장 패널' },
+    },
     fields: [
       plate(21,'모델','BSD 72 · 스크루'),
       ...management(17,'50마력 · 정속형','2012년'),
@@ -61,6 +73,12 @@ export const COMPRESSOR_RECORDS = [
   {
     id: 'comp-unit-3-kaeser-csd125', title: '공기압축기 3호기', maker: 'KAESER', model: 'CSD 125',
     group: '공기압축기', cardNumber: 'HC-T-001', photoNumbers: [40,39,43,37,38,41,42],
+    elevation: { frontAxis: 'z',
+      front: { photo: 40, detail: '조작반과 점검문' },
+      left: { photo: 41, detail: '좌측 점검구와 노출된 열교환기' },
+      right: { photo: 43, detail: '리시버 쪽 외판과 관리표' },
+      rear: { photo: 37, detail: '황색 후면 패널과 하부 통풍구' },
+    },
     fields: [
       observed(40,'본체 모델 표기','CSD 125'),
       ...management(43,'100마력 · 정속형','2019년'),
@@ -76,6 +94,12 @@ export const COMPRESSOR_RECORDS = [
   {
     id: 'comp-unit-4-k2power-k50', title: '공기압축기 4호기', maker: 'K2 POWER LIMITED', model: 'K50',
     group: '공기압축기', cardNumber: 'HC-T-007', photoNumbers: [26,30,28,27,29,31,32],
+    elevation: { frontAxis: '-x',
+      front: { photo: 26, detail: '조작면 · 내부 분리탱크' },
+      left: { photo: 29, detail: '전선관이 연결된 측면' },
+      right: { photo: 28, detail: '관리표가 붙은 면의 근접 사진', partial: true },
+      rear: { photo: 32, detail: '벽 쪽 외판 · 일부 가림', partial: true },
+    },
     fields: [
       plate(30,'모델','K 50'),
       ...management(28,'50마력 · 정속형','2002년'),
@@ -97,6 +121,12 @@ export const COMPRESSOR_RECORDS = [
   {
     id: 'comp-receiver-1', title: '공기 리시버 탱크 1', maker: 'HAN GANG', model: 'HAT-100',
     group: '공기 저장', cardNumber: 'H-T-002', photoNumbers: [44,45,46,47,48],
+    elevation: { frontAxis: '-x',
+      front: { photo: 44, detail: '압력계와 하단 배출구 쪽' },
+      left: { photo: 46, detail: '수직 배관과 밸브 쪽' },
+      right: { photo: 48, detail: '청색 필터와 플랜지 쪽' },
+      rear: { photo: 47, detail: '용접선이 보이는 반대편' },
+    },
     fields: [
       card('H-T-002','모델 / 용량','HAT-100 / 1 m³'),
       card('H-T-002','제조연도','1999년'),
@@ -111,6 +141,12 @@ export const COMPRESSOR_RECORDS = [
   {
     id: 'comp-receiver-2', title: '공기 리시버 탱크 2', maker: '유진하이테크', model: 'GMT-0266 (카드)',
     group: '공기 저장', cardNumber: 'H-T-009', photoNumbers: [52,54,50,51,53],
+    elevation: { frontAxis: 'x',
+      front: { photo: 52, detail: '통로 쪽 · 상부 연결관' },
+      left: { photo: 53, detail: '압력계와 점검구 일부', partial: true },
+      right: { photo: 50, detail: '벽을 따라 본 탱크 외판' },
+      rear: { photo: 51, detail: '벽 쪽 배관과 외판 일부', partial: true },
+    },
     fields: [
       plate(54,'품목','AIR RECEIVER TANK'),
       card('H-T-009','카드 품명','압력용기(GMT-0266)'),
@@ -126,6 +162,12 @@ export const COMPRESSOR_RECORDS = [
   {
     id: 'comp-aftercooler-jac100', title: '애프터쿨러', maker: 'JEMACO FLAIR', model: 'JAC-150',
     group: '공기 처리', photoNumbers: [73,72,70,71,74,75],
+    elevation: { frontAxis: '-x',
+      front: { photo: 73, detail: '계기와 전면 그릴' },
+      left: { photo: 75, detail: '반대쪽 검은 단면' },
+      right: { photo: 70, detail: '안전수칙 표지 쪽 단면' },
+      rear: { photo: 71, detail: '후면 그릴과 상부 팬' },
+    },
     fields: [
       plate(72,'모델','JAC-150 · JAC SERIES AFTER COOLER'),
       plate(72,'최대압력','20 kg/cm²·G'),
@@ -140,6 +182,12 @@ export const COMPRESSOR_RECORDS = [
   {
     id: 'comp-dryer-hx601k', title: '냉동식 드라이어 · 청색 전면', maker: 'JEMACO / SPX', model: 'HX601K',
     group: '공기 처리', photoNumbers: [76,79,77,78,80,81],
+    elevation: { frontAxis: 'x',
+      front: { photo: 76, detail: '청색 조작면' },
+      left: { photo: 81, detail: '조작면 왼쪽 · 사각 그릴' },
+      right: { photo: 77, detail: '조작면 오른쪽 · 열교환 그릴' },
+      rear: { photo: 78, detail: '후면 · 배관과 점검구' },
+    },
     fields: [
       plate(79,'모델','HX601K'),
       { label: '표준 외형 (폭 × 깊이 × 높이)', value: '543 × 1,321 × 811 mm', source: 'SPX JEMACO HXK 시리즈 카탈로그', photo: null },
@@ -160,6 +208,12 @@ export const COMPRESSOR_RECORDS = [
   {
     id: 'comp-dryer-jemaco-dark', title: '냉동식 드라이어 · 상부 팬형', maker: 'JEMACO', model: '100마력 신형 (카드)',
     group: '공기 처리', cardNumber: 'H-T-003 · 신형', photoNumbers: [55,58,56,57],
+    elevation: { frontAxis: '-x',
+      front: { photo: 55, detail: '조작면과 상부 팬' },
+      left: { photo: 57, detail: '조작면 왼쪽 · 배수 밸브' },
+      right: { photo: 56, detail: '조작면 오른쪽 · 그릴' },
+      rear: { photo: 58, detail: '후면 · 입출구 배관' },
+    },
     fields: [
       card('H-T-003 · 신형','카드 규격','100 HP 냉동식 드라이어'),
       card('H-T-003 · 신형','가동년월','2025년 7월'),
@@ -172,6 +226,12 @@ export const COMPRESSOR_RECORDS = [
   {
     id: 'comp-dryer-ps600k', title: '흡착식 드라이어 · 회색 쌍탑', maker: 'JEMACO FLAIR', model: 'PS600K',
     group: '공기 처리', cardNumber: 'H-T-011', photoNumbers: [82,84,85,49,83,86,87,88,89],
+    elevation: { frontAxis: 'x',
+      front: { photo: 82, detail: '전면 · 쌍탑과 제어함' },
+      left: { photo: 86, detail: '제어함 옆 측면' },
+      right: { photo: 89, detail: '청색 필터 쪽 측면' },
+      rear: { photo: 87, detail: '후면 · 연결 배관 사이' },
+    },
     fields: [
       plate(85,'모델','PS600K · DESICCANT AIR DRYER'),
       inspection(49,'오른쪽 용기','V-3 · Air Receiver Tank'),
@@ -190,7 +250,13 @@ export const COMPRESSOR_RECORDS = [
   },
   {
     id: 'comp-dryer-spx-blue', title: '흡착식 드라이어 · 청색 쌍탑', maker: 'JEMACO / SPX', model: 'HL350K',
-    group: '공기 처리', cardNumber: 'H-T-004', photoNumbers: [91,93,100,90,92,94],
+    group: '공기 처리', cardNumber: 'H-T-004', photoNumbers: [91,93,100,90,92,94,97],
+    elevation: { frontAxis: 'x',
+      front: { photo: 91, detail: '전면 · 중앙 조작부' },
+      left: { photo: 90, detail: '소음기와 받침대 쪽' },
+      right: { photo: 94, detail: '벽 쪽 필터와 용기 측면' },
+      rear: { photo: 97, detail: '제어함 뒤와 연결관 일부', partial: true },
+    },
     fields: [
       plate(93,'모델 / 재생방식','HL350K / PRESSURE-SWING'),
       { label: '동형 외형 (폭 × 깊이 × 높이)', value: '890 × 800 × 2,085 mm', source: '경원 2015년 카탈로그 9쪽 · 현장 용기는 2012년 제작', photo: null },
@@ -211,6 +277,12 @@ export const COMPRESSOR_RECORDS = [
   {
     id: 'comp-chiller-bumyang', title: '범양냉방 냉수 칠러', maker: '범양냉방', model: 'SCREW CHILLING UNIT',
     group: '냉각·보조', photoNumbers: [59,65,61,60,62,63,64,66,67,68,69],
+    elevation: { frontAxis: '-x',
+      front: { photo: 59, detail: '전면 · 제어함과 압축기' },
+      left: { photo: 64, detail: '제어함의 좁은 측면' },
+      right: { photo: 68, detail: '압축기 끝단과 배관' },
+      rear: { photo: 67, detail: '제어함 뒤 배관 일부', partial: true },
+    },
     fields: [
       plate(65,'유닛 종류','스크루 냉동기(SCREW CHILLING UNIT)'),
       plate(65,'내압시험(고압 / 저압)','4.1 / 2.0 MPa'),
@@ -230,6 +302,12 @@ export const COMPRESSOR_RECORDS = [
   {
     id: 'comp-water-tank-pump', title: '각형 수조·순환펌프', maker: '제조사 미확인', model: '각형 금속 수조',
     group: '냉각·보조', photoNumbers: [33,34,35,36],
+    elevation: { frontAxis: '-x',
+      front: { photo: 34, detail: '통로 쪽 긴 면' },
+      left: { photo: 33, detail: '청색 입상관과 펌프 쪽' },
+      right: { photo: 35, detail: '수조의 반대쪽 단면' },
+      rear: { photo: 36, detail: '벽 쪽 긴 면 · 배관 사이 일부', partial: true },
+    },
     fields: [
       observed(34,'몸체','받침대 위 각형 금속 수조'),
       observed(33,'부속','수직 전동펌프 · 측면 수위관'),
@@ -241,6 +319,12 @@ export const COMPRESSOR_RECORDS = [
   {
     id: 'comp-oil-water-separator', title: '유수분리기', maker: '제조사 미확인', model: 'Oil-Water Separator',
     group: '냉각·보조', photoNumbers: [98,95,96,97,99],
+    elevation: { frontAxis: 'x',
+      front: { photo: 95, detail: '연결 배관 쪽을 위에서 본 사선', partial: true },
+      left: { photo: 98, detail: '외함 품명 표찰 쪽 · 흡착탑에 일부 가림', partial: true },
+      right: { photo: 96, detail: '청색 덮개와 외함 측면' },
+      rear: { photo: 99, detail: '벽 쪽 호스와 외함 일부 · 후면 전경 미확인', partial: true },
+    },
     fields: [
       observed(98,'외함 표기','Oil-Water Separator'),
       observed(96,'본체','상부 통기구가 있는 회색 외함과 청색 덮개'),

@@ -1,6 +1,7 @@
 import { readFile, readdir, realpath, stat } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
+import { createHash } from 'node:crypto';
 import { SITE_ASSETS } from '../apps/site/asset-catalog.js';
 
 const repoRoot = fileURLToPath(new URL('../', import.meta.url));
@@ -17,6 +18,14 @@ function validSignature(bytes, extension) {
 // Only data modules are evaluated; browser controllers and their functions are
 // never executed. Exported arrays include paths generated with template strings.
 const isDataModule = name => name === 'data.js' || name.endsWith('-data.js') || name === 'liquid-assets.js';
+
+function categoryFolders(category) {
+  if (category === 'brand') return ['brand', 'branding'];
+  if (/^drawing(?:-|$)/.test(category)) return ['drawings'];
+  if (/^document(?:-|$)/.test(category)) return ['documents'];
+  if (/^(?:photo|card|survey)(?:-|$)/.test(category) || category.endsWith('-survey')) return ['photos'];
+  return [];
+}
 
 export async function inspectSiteAssets({ root = repoRoot, assets = SITE_ASSETS, legacyMoves } = {}) {
   const errors = [];
@@ -63,8 +72,18 @@ export async function inspectSiteAssets({ root = repoRoot, assets = SITE_ASSETS,
     if (typeof asset.category !== 'string' || !asset.category.trim()) errors.push(`${owner}: 분류(category)가 없습니다.`);
     registerPath(asset.path, `${owner}.path`);
     if (asset.sharePath !== undefined) registerPath(asset.sharePath, `${owner}.sharePath`);
+    if (typeof asset.category === 'string' && typeof asset.path === 'string') {
+      const [folder, subfolder] = asset.path.split('/').slice(2);
+      if (!categoryFolders(asset.category).includes(folder) || subfolder === 'share') {
+        errors.push(`${owner}: 분류와 원본 폴더가 일치하지 않습니다 (${asset.category}, ${asset.path})`);
+      }
+      if (typeof asset.sharePath === 'string' && !asset.sharePath.startsWith(`./assets/${folder}/share/`)) {
+        errors.push(`${owner}: 공유용 축소본은 같은 분류의 share 폴더에 두세요 (${asset.sharePath})`);
+      }
+    }
   }
 
+  const imageHashes = new Map();
   for (const reference of registered) {
     const relative = reference.slice(2);
     const file = path.join(siteRoot, ...relative.split('/'));
@@ -92,6 +111,9 @@ export async function inspectSiteAssets({ root = repoRoot, assets = SITE_ASSETS,
       if (!(await stat(file)).isFile()) { errors.push(`자산 경로가 파일이 아닙니다: ${reference}`); continue; }
       const bytes = await readFile(file);
       if (!validSignature(bytes, path.extname(file))) errors.push(`자산 이미지 시그니처 불일치: ${reference}`);
+      const hash = createHash('sha256').update(bytes).digest('hex');
+      if (imageHashes.has(hash)) errors.push(`내용이 같은 자산 파일: ${imageHashes.get(hash)} / ${reference}`);
+      else imageHashes.set(hash, reference);
     } catch (error) {
       errors.push(`자산 파일 확인 실패: ${reference} (${error.code || error.message})`);
     }
@@ -116,8 +138,10 @@ export async function inspectSiteAssets({ root = repoRoot, assets = SITE_ASSETS,
   await inspectDirectory(assetsRoot);
 
   const reportedReferences = new Set();
-  const inspectReference = (reference, origin) => {
-    if (typeof reference !== 'string' || !imageExtension.test(reference)) return;
+  const inspectReference = (value, origin) => {
+    if (typeof value !== 'string') return;
+    const reference = value.split(/[?#]/, 1)[0];
+    if (!imageExtension.test(reference)) return;
     if (movedPhotos.has(reference) && !reportedReferences.has(`${origin}:${reference}`)) {
       reportedReferences.add(`${origin}:${reference}`);
       errors.push(`${origin}: 이동 전 자산 참조 ${reference} → ${movedPhotos.get(reference)}`);
@@ -135,7 +159,7 @@ export async function inspectSiteAssets({ root = repoRoot, assets = SITE_ASSETS,
     const origin = `apps/site/${entry.name}`;
     const source = await readFile(file, 'utf8');
     // Deliberately exclude backtick literals and path prefixes used to build URLs.
-    for (const match of source.matchAll(/(["'])(\.\/(?:assets|photos)\/[^"'`\r\n]+\.(?:jpe?g|png|svg))\1/g)) inspectReference(match[2], origin);
+    for (const match of source.matchAll(/(["'])(\.\/(?:assets|photos)\/[^"'`\r\n]+\.(?:jpe?g|png|svg)(?:#[a-z]+)?)\1/g)) inspectReference(match[2], origin);
     if (!isDataModule(entry.name)) continue;
     try {
       const exports = await import(pathToFileURL(file).href);

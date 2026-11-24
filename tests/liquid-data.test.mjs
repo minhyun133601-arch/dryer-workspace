@@ -123,7 +123,7 @@ test('each equipment card has one accessible four-side reflow asset while the da
     const registered = SITE_ASSETS.find(entry => entry.id === `liquid-card-${String(item.cardNumber).padStart(3, '0')}`);
     assert.ok(registered, `card ${item.cardNumber} needs a catalog entry`);
     assert.equal(asset, registered.path);
-    assert.match(asset, /^\.\/assets\/equipment-cards\/liquid\/\d{3}-[a-z0-9-]+\/four-views\.jpg$/);
+    assert.match(asset, /^\.\/assets\/photos\/equipment-cards\/liquid\/\d{3}-[a-z0-9-]+\/four-views\.jpg$/);
     const resolved = await realpath(path.resolve(root, asset)), relative = path.relative(root, resolved);
     assert.ok(relative && !relative.startsWith('..') && !path.isAbsolute(relative));
     const bytes = await readFile(resolved); assert.equal(bytes[0], 0xff); assert.equal(bytes[1], 0xd8); assert.ok((await stat(resolved)).size > 1000);

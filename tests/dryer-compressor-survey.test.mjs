@@ -7,6 +7,24 @@ import { COMPRESSOR_MEDIA, COMPRESSOR_PLAN_IMAGE, COMPRESSOR_WALK_FRAMES } from 
 import { SITE_ASSETS } from '../apps/site/asset-catalog.js';
 import * as THREE from '../apps/shared/vendor/three.module.js';
 import { compressorPlanGeometry } from '../apps/site/dryer-compressor-view.js';
+import { elevationAxes } from '../apps/site/dryer-compressor-elevations.js';
+
+test('each equipment elevation identifies four distinct field views in a right-handed projection', () => {
+  for (const row of COMPRESSOR_RECORDS) {
+    const {frontAxis,...faces}=row.elevation;
+    assert.deepEqual(Object.keys(faces),['front','left','right','rear']);
+    assert.equal(new Set(Object.values(faces).map(f=>f.photo)).size,4);
+    for (const f of Object.values(faces)) assert.ok(f.detail && row.photoNumbers.includes(f.photo),row.title);
+    const axes=Object.fromEntries(['front','left','right','rear','top'].map(side=>[side,elevationAxes(frontAxis,side)]));
+    const front=axes.front.direction;
+    assert.equal(front.length(),1);
+    assert.equal(front.dot(axes.rear.direction),-1);
+    assert.equal(front.dot(axes.left.direction),0);
+    assert.equal(axes.right.direction.dot(axes.left.direction),-1);
+    assert.equal(new THREE.Vector3().crossVectors(axes.front.up,front).dot(axes.right.direction),1);
+    assert.equal(axes.top.up.dot(front),-1);
+  }
+});
 
 test('plan footprints follow the installed cabinet dimensions, offset and orientation without overhead ductwork', () => {
   const station=new THREE.Group();station.name='comp-unit-1-kaeser-csd125sfc';

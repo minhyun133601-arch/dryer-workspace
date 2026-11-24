@@ -1,6 +1,7 @@
 import * as THREE from '../shared/vendor/three.module.js';
 import { COMPRESSOR_RECORDS } from './dryer-compressor-records.js';
 import { COMPRESSOR_MANUALS } from './dryer-compressor-manuals.js';
+import { drawEquipmentElevation } from './dryer-compressor-elevations.js';
 import { COMPRESSOR_MEDIA, COMPRESSOR_PLAN_IMAGE, COMPRESSOR_WALK_FRAMES } from './dryer-compressor-media.js';
 
 // Short labels stay legible at the equipment footprints on the floor plan.
@@ -80,7 +81,7 @@ export function compressorPlanGeometry(station) {
 
 export function createCompressorSurvey({getScene, floorSpec}) {
   let dialog, photoDialog, selector, plan, info, tabs, stageTitle, figure, caption, pager;
-  let record, mode='layout', photoIndex=0, bindings=[], previousFocus, returnButton, helpButton, angleButton, viewportObserver;
+  let record, mode='layout', face='front', photoIndex=0, bindings=[], previousFocus, returnButton, helpButton, angleButton, viewportObserver;
   const stations=new Map();
   const records=[...COMPRESSOR_RECORDS,conveyor,approach];
   const room=floorSpec.rooms.find(r=>r.id==='compressor-room');
@@ -93,7 +94,7 @@ export function createCompressorSurvey({getScene, floorSpec}) {
       const station=root.getObjectByName(row.id);
       if (!station) continue;
       const center=station.getWorldPosition(new THREE.Vector3());
-      stations.set(row.id,{center,plan:compressorPlanGeometry(station)});
+      stations.set(row.id,{station,center,plan:compressorPlanGeometry(station)});
       station.traverse(node=>{ if (node.isMesh) node.userData.compressorRecord=row.id; });
       if (!/^\d호$/.test(symbols[row.id] || '')) continue;
       const canvas=document.createElement('canvas'); canvas.width=224; canvas.height=84;
@@ -181,7 +182,7 @@ export function createCompressorSurvey({getScene, floorSpec}) {
     dialog.innerHTML='<header class="air-heading"><div><span>1팀 2파트 · 건조실 3층</span><h2 id="air-survey-heading">에어컴프레셔실</h2></div></header><div class="air-layout"><section class="air-plan"><div class="air-tabs"></div><div class="air-sheet"></div><p class="air-sheet-note"></p></section><section class="air-info"><label for="air-station">설비 선택</label><select id="air-station"></select><div class="air-record" aria-live="polite"></div></section></div>';
     const close=action('닫기',()=>dialog.close(),'air-close');dialog.querySelector('header').append(close);
     selector=dialog.querySelector('select'); plan=dialog.querySelector('.air-sheet');stageTitle=dialog.querySelector('.air-sheet-note');info=dialog.querySelector('.air-record');tabs=dialog.querySelector('.air-tabs');
-    for (const [key,title] of [['layout','압축기실 배치'],['floor','3층 두 구역과 동선'],['drawing','건축도면 A-015']]) {
+    for (const [key,title] of [['layout','압축기실 배치'],['equipment','설비 구조도'],['floor','3층 두 구역과 동선'],['drawing','건축도면 A-015']]) {
       const button=action(title,()=>{mode=key;drawPlan();});button.dataset.mode=key;tabs.append(button);
     }
     for (const row of records) {
@@ -251,9 +252,49 @@ export function createCompressorSurvey({getScene, floorSpec}) {
     stageTitle.textContent='11월 12일 영상에서 디스크 컨베이어 반환부 옆 흰 문을 열면 기존 설비 작업구역의 바닥 펌프가 보입니다. 문 위치는 영상 비례로 잡았으며, 점선은 전체 벽선이 추가 촬영으로 확인될 때까지의 잠정 경계입니다.';
   }
 
+  function equipmentElevation() {
+    const directions = {front:'정면', left:'좌측면', right:'우측면', rear:'후면', top:'평면'};
+    const group = element('div',null,'air-elevation');
+    const controls = element('div',null,'air-face-controls');
+    controls.setAttribute('role','group');controls.setAttribute('aria-label','설비 투영 방향');
+    for (const [key,title] of Object.entries(directions)) {
+      const button = action(title,()=>{
+        face=key;drawPlan();plan.querySelector('[data-face="'+key+'"]').focus({preventScroll:true});
+      });
+      button.dataset.face=key;button.setAttribute('aria-pressed',String(key===face));controls.append(button);
+    }
+    const title = record.title+' · '+directions[face];
+    const canvas = element('canvas');
+    canvas.width=688;canvas.height=464;canvas.setAttribute('aria-label',title+' 정투영 모델');canvas.setAttribute('role','img');
+    group.append(element('h3',title),controls);
+    const unit = stations.get(record.id)?.station;
+    if (drawEquipmentElevation(getScene(),unit,record.elevation.frontAxis,face,canvas)) group.append(canvas);
+    else group.append(element('p','3D 장면을 열면 이 설비의 정투영도를 볼 수 있습니다.'));
+    const body = unit?.userData.cabinetDimensions, vessel = unit?.userData.vesselDimensions;
+    if (body || vessel) {
+      const mm = value => Math.round(value*1000).toLocaleString('ko-KR');
+      const size = body ? '폭 × 깊이 × 높이  '+[body.width,body.depth,body.height].map(mm).join(' × ') : '지름 × 높이  '+[vessel.diameter,vessel.height].map(mm).join(' × ');
+      group.append(element('strong',size+' mm','air-dimensions'),element('small',(body || vessel).basis));
+    } else group.append(element('small','형상 비례는 현장 사진 기준입니다. 본체의 실측 치수는 미확인입니다.'));
+    const evidence=record.elevation[face];
+    if (evidence) {
+      const number=evidence.photo, reference=action('',()=>openImage(number),'air-elevation-reference');
+      const img=element('img');img.alt='';img.src=imagePath(mediaAt(number).path);
+      const text=element('span');
+      text.append(element('strong',directions[face]+' 사진 #'+String(number).padStart(3,'0')+(evidence.partial?' · 부분·사선 촬영':'')),element('span',evidence.detail));
+      reference.append(img,text);group.append(reference);
+    }
+    plan.append(group);
+    stageTitle.textContent='3D 배치에 설치된 모델을 정투영했습니다. 축척 막대는 배관을 포함한 모델에 적용되며, 표기 치수는 해당 출처의 본체 기준입니다.';
+  }
+
   function drawPlan() {
-    for (const btn of tabs.children) btn.setAttribute('aria-pressed',String(btn.dataset.mode===mode));
+    for (const btn of tabs.children) {
+      btn.setAttribute('aria-pressed',String(btn.dataset.mode===mode));
+      if (btn.dataset.mode==='equipment') btn.disabled=!record.elevation;
+    }
     plan.replaceChildren();
+    if(mode==='equipment'){equipmentElevation();return;}
     if(mode==='floor'){floorOverview();return;}
     if (mode==='drawing') {
       const button=action('',()=>openImage());button.className='air-drawing';button.setAttribute('aria-label','A-015 도면 확대');
@@ -318,6 +359,7 @@ export function createCompressorSurvey({getScene, floorSpec}) {
 
   function choose(id) {
     record=records.find(row=>row.id===id)||records[0];selector.value=record.id;
+    if(mode==='equipment' && !record.elevation) mode='floor';
     info.replaceChildren();drawPlan();
     const heading=element('h3',record.title), meta=element('p',[record.maker,record.model].filter(Boolean).join(' · ') || record.group,'air-meta');
     info.append(heading,meta);
@@ -326,12 +368,13 @@ export function createCompressorSurvey({getScene, floorSpec}) {
     },'air-go');
     const status=element('span',null,'air-status');status.setAttribute('role','status');info.append(go,status);
     const preview=element('div',null,'air-preview');
-    const plate=record.fields.find(field=>field.photo && /명판|검사표|관리표/.test(field.source));
+    const plateFields=record.fields.filter(field=>field.photo && /명판|검사표|관리표/.test(field.source));
+    const plate=plateFields.find(field=>/명판/.test(field.source)) || plateFields[0];
     const previewNumbers=[...new Set([record.photoNumbers[0],plate?.photo || record.photoNumbers[1]])].filter(Boolean);
     for (const [index,number] of previewNumbers.entries()) {
       const button=action('',()=>openImage(number));
       const img=element('img'); img.alt='';img.src=imagePath(mediaAt(number).path);
-      button.append(img,element('span',index===0?'외관 확대':plate ? '명판·표찰 확대' : '다른 방향'));preview.append(button);
+      button.append(img,element('span',index===0?'외관 확대':plate ? plate.source+' 확대' : '다른 방향'));preview.append(button);
     }
     info.append(preview);
     const list=element('dl',null,'air-fields');
@@ -341,14 +384,16 @@ export function createCompressorSurvey({getScene, floorSpec}) {
       dd.append(source);list.append(dt,dd);
     }
     info.append(list);
-    const photos=element('div',null,'air-thumbs');
+    const photos=element('div',null,'air-thumbs'), plates=element('div',null,'air-thumbs');
+    const plateNumbers=new Set(plateFields.map(field=>field.photo));
     for(const n of record.photoNumbers){
       const photo=mediaAt(n);if(!photo)continue;
       const thumb=action('',()=>openImage(n));thumb.setAttribute('aria-label',record.title+' 사진 #'+n+' 확대');
       const img=element('img');img.src=imagePath(photo.path);img.loading='lazy';img.alt='';
-      thumb.append(img,element('span','#'+String(n).padStart(3,'0')));photos.append(thumb);
+      thumb.append(img,element('span','#'+String(n).padStart(3,'0')));(plateNumbers.has(n)?plates:photos).append(thumb);
     }
-    info.append(element('h4','현장 사진 · 명판'),photos);
+    if(photos.childElementCount) info.append(element('h4','현장 사진'),photos);
+    if(plates.childElementCount) info.append(element('h4','명판·검사표·관리표'),plates);
     for(const note of record.notes || [])info.append(element('p',note,'air-note'));
     const manuals=COMPRESSOR_MANUALS[record.id]||[];
     if(manuals.length) info.append(element('h4','제조사 기술자료'));

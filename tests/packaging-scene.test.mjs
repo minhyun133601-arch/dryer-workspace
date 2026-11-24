@@ -105,7 +105,7 @@ test('all packaging floors use their own drawing catalog and third-floor materia
     for (const photo of item.photos) images.add(photo);
   }
   for (const photo of images) {
-    assert.match(photo, /^\.\/(?:assets\/drawings\/packaging|photos\/(?:packaging-3f|team2-cards))\//);
+    assert.match(photo, /^\.\/(?:assets\/drawings\/packaging|assets\/photos\/equipment-cards\/packaging|photos\/(?:packaging-3f|team2-cards))\//);
     if (isRetainedEvidenceImage(photo)) await access(new URL(`../apps/site/${photo.slice(2)}`, import.meta.url));
     if (photo.includes('/team2-cards/')) assert.equal(isRetainedEvidenceImage(photo), false, 'team 2 card images are excluded from runtime galleries');
     assert.ok(PACKAGING_ROOM.photoCaptions[photo], `${photo} must keep its time or plan caption`);
@@ -126,7 +126,10 @@ test('all packaging floors use their own drawing catalog and third-floor materia
   assert.equal(TEAM2_IDENTITY.buildingNumber,9);
   assert.match(TEAM2_IDENTITY.buildingName,/스틱·소포장/);
   for(const item of PACKAGING_EQUIPMENT.filter(i=>i.historyCardNumber)){
-    assert.ok(item.photos.slice(0,4).every(photo=>/team2-cards\/card-\d{3}-(front|left|right|rear)\.jpg$/.test(photo)),item.id);
+    if(item.historyCardNumber===28){
+      assert.deepEqual(item.photos.slice(0,2).map(path=>path.split('/').pop()),['four-views.jpg','adsorption-tank-plate.jpg']);
+      assert.match(item.photoCaptions[item.photos[1]],/H9-M-045.*흡착탱크/);
+    } else assert.ok(item.photos.slice(0,4).every(photo=>/team2-cards\/card-\d{3}-(front|left|right|rear)\.jpg$/.test(photo)),item.id);
     assert.ok(['direct','same-type'].includes(item.historyCardMatch));
   }
   for(const level of [1,2,3]){
@@ -140,6 +143,10 @@ test('all three floors have finite three-part assemblies, bounded placement and 
   const { scene, dispose } = await harness();
   try {
     const bodies = [];
+    const nitrogen = scene.objects.get('packaging-f2-nitrogen');
+    assert.equal(nitrogen.getObjectsByProperty('name','packaging-nitrogen-panel-gauge').length,3);
+    assert.ok(nitrogen.getObjectByName('packaging-nitrogen-central-door-handle'));
+    assert.equal(nitrogen.getObjectByName('packaging-nitrogen-lower-louver-banks').count,4*7*2);
     let meshes = 0, repeated = 0;
     scene.scene.traverse((mesh) => { if (mesh.isMesh) meshes++; if (mesh.isInstancedMesh) repeated += mesh.count; });
     assert.ok(repeated > 300, 'rails, steps and repeated fittings should use instances');

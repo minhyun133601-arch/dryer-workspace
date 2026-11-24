@@ -1,5 +1,6 @@
 // Team 3 outdoor history-card photos. Blank specifications and historical
 // operation records are not converted into live status or measured dimensions.
+export const OUTDOOR_CARD_SIDES = Object.freeze(['front', 'left', 'right', 'rear']);
 export const OUTDOOR_HISTORY_CARDS = Object.freeze([
   {
     "number": 72,
@@ -9,13 +10,7 @@ export const OUTDOOR_HISTORY_CARDS = Object.freeze([
     "room": "실외기실",
     "manufacturer": "",
     "modelName": "",
-    "photo": "./assets/equipment-cards/outdoor/072-air-handler-20rt-2/overview.jpg",
-    "views": [
-      "./assets/equipment-cards/outdoor/072-air-handler-20rt-2/front.jpg",
-      "./assets/equipment-cards/outdoor/072-air-handler-20rt-2/left.jpg",
-      "./assets/equipment-cards/outdoor/072-air-handler-20rt-2/right.jpg",
-      "./assets/equipment-cards/outdoor/072-air-handler-20rt-2/rear.jpg"
-    ]
+    "photo": "./assets/photos/equipment-cards/outdoor/072-air-handler-20rt-2/overview.jpg"
   },
   {
     "number": 73,
@@ -25,13 +20,7 @@ export const OUTDOOR_HISTORY_CARDS = Object.freeze([
     "room": "실외기실",
     "manufacturer": "",
     "modelName": "",
-    "photo": "./assets/equipment-cards/outdoor/073-air-handler-20rt-1/overview.jpg",
-    "views": [
-      "./assets/equipment-cards/outdoor/073-air-handler-20rt-1/front.jpg",
-      "./assets/equipment-cards/outdoor/073-air-handler-20rt-1/left.jpg",
-      "./assets/equipment-cards/outdoor/073-air-handler-20rt-1/right.jpg",
-      "./assets/equipment-cards/outdoor/073-air-handler-20rt-1/rear.jpg"
-    ]
+    "photo": "./assets/photos/equipment-cards/outdoor/073-air-handler-20rt-1/overview.jpg"
   },
   {
     "number": 74,
@@ -41,13 +30,7 @@ export const OUTDOOR_HISTORY_CARDS = Object.freeze([
     "room": "실외기실",
     "manufacturer": "",
     "modelName": "",
-    "photo": "./assets/equipment-cards/outdoor/074-mixing-room-cooling-unit-4/overview.jpg",
-    "views": [
-      "./assets/equipment-cards/outdoor/074-mixing-room-cooling-unit-4/front.jpg",
-      "./assets/equipment-cards/outdoor/074-mixing-room-cooling-unit-4/left.jpg",
-      "./assets/equipment-cards/outdoor/074-mixing-room-cooling-unit-4/right.jpg",
-      "./assets/equipment-cards/outdoor/074-mixing-room-cooling-unit-4/rear.jpg"
-    ]
+    "photo": "./assets/photos/equipment-cards/outdoor/074-mixing-room-cooling-unit-4/overview.jpg"
   },
   {
     "number": 75,
@@ -57,13 +40,7 @@ export const OUTDOOR_HISTORY_CARDS = Object.freeze([
     "room": "실외기실",
     "manufacturer": "",
     "modelName": "",
-    "photo": "./assets/equipment-cards/outdoor/075-mixing-room-cooling-unit-2/overview.jpg",
-    "views": [
-      "./assets/equipment-cards/outdoor/075-mixing-room-cooling-unit-2/front.jpg",
-      "./assets/equipment-cards/outdoor/075-mixing-room-cooling-unit-2/left.jpg",
-      "./assets/equipment-cards/outdoor/075-mixing-room-cooling-unit-2/right.jpg",
-      "./assets/equipment-cards/outdoor/075-mixing-room-cooling-unit-2/rear.jpg"
-    ]
+    "photo": "./assets/photos/equipment-cards/outdoor/075-mixing-room-cooling-unit-2/overview.jpg"
   },
   {
     "number": 76,
@@ -73,13 +50,7 @@ export const OUTDOOR_HISTORY_CARDS = Object.freeze([
     "room": "실외기실",
     "manufacturer": "",
     "modelName": "",
-    "photo": "./assets/equipment-cards/outdoor/076-mixing-room-cooling-unit-1/overview.jpg",
-    "views": [
-      "./assets/equipment-cards/outdoor/076-mixing-room-cooling-unit-1/front.jpg",
-      "./assets/equipment-cards/outdoor/076-mixing-room-cooling-unit-1/left.jpg",
-      "./assets/equipment-cards/outdoor/076-mixing-room-cooling-unit-1/right.jpg",
-      "./assets/equipment-cards/outdoor/076-mixing-room-cooling-unit-1/rear.jpg"
-    ]
+    "photo": "./assets/photos/equipment-cards/outdoor/076-mixing-room-cooling-unit-1/overview.jpg"
   },
   {
     "number": 84,
@@ -89,13 +60,7 @@ export const OUTDOOR_HISTORY_CARDS = Object.freeze([
     "room": "실외기실",
     "manufacturer": "",
     "modelName": "",
-    "photo": "./assets/equipment-cards/outdoor/084-cheerpack-stick-air-handler/overview.jpg",
-    "views": [
-      "./assets/equipment-cards/outdoor/084-cheerpack-stick-air-handler/front.jpg",
-      "./assets/equipment-cards/outdoor/084-cheerpack-stick-air-handler/left.jpg",
-      "./assets/equipment-cards/outdoor/084-cheerpack-stick-air-handler/right.jpg",
-      "./assets/equipment-cards/outdoor/084-cheerpack-stick-air-handler/rear.jpg"
-    ]
+    "photo": "./assets/photos/equipment-cards/outdoor/084-cheerpack-stick-air-handler/overview.jpg"
   },
   {
     "number": 85,
@@ -105,13 +70,7 @@ export const OUTDOOR_HISTORY_CARDS = Object.freeze([
     "room": "실외기실",
     "manufacturer": "",
     "modelName": "",
-    "photo": "./assets/equipment-cards/outdoor/085-pet-pouch-air-handler/overview.jpg",
-    "views": [
-      "./assets/equipment-cards/outdoor/085-pet-pouch-air-handler/front.jpg",
-      "./assets/equipment-cards/outdoor/085-pet-pouch-air-handler/left.jpg",
-      "./assets/equipment-cards/outdoor/085-pet-pouch-air-handler/right.jpg",
-      "./assets/equipment-cards/outdoor/085-pet-pouch-air-handler/rear.jpg"
-    ]
+    "photo": "./assets/photos/equipment-cards/outdoor/085-pet-pouch-air-handler/overview.jpg"
   },
   {
     "number": 86,
@@ -121,13 +80,7 @@ export const OUTDOOR_HISTORY_CARDS = Object.freeze([
     "room": "실외기실",
     "manufacturer": "",
     "modelName": "",
-    "photo": "./assets/equipment-cards/outdoor/086-cooling-tower-water-tank-100rt/overview.jpg",
-    "views": [
-      "./assets/equipment-cards/outdoor/086-cooling-tower-water-tank-100rt/front.jpg",
-      "./assets/equipment-cards/outdoor/086-cooling-tower-water-tank-100rt/left.jpg",
-      "./assets/equipment-cards/outdoor/086-cooling-tower-water-tank-100rt/right.jpg",
-      "./assets/equipment-cards/outdoor/086-cooling-tower-water-tank-100rt/rear.jpg"
-    ]
+    "photo": "./assets/photos/equipment-cards/outdoor/086-cooling-tower-water-tank-100rt/overview.jpg"
   },
   {
     "number": 87,
@@ -137,13 +90,7 @@ export const OUTDOOR_HISTORY_CARDS = Object.freeze([
     "room": "실외기실",
     "manufacturer": "",
     "modelName": "",
-    "photo": "./assets/equipment-cards/outdoor/087-chiller-100rt/overview.jpg",
-    "views": [
-      "./assets/equipment-cards/outdoor/087-chiller-100rt/front.jpg",
-      "./assets/equipment-cards/outdoor/087-chiller-100rt/left.jpg",
-      "./assets/equipment-cards/outdoor/087-chiller-100rt/right.jpg",
-      "./assets/equipment-cards/outdoor/087-chiller-100rt/rear.jpg"
-    ]
+    "photo": "./assets/photos/equipment-cards/outdoor/087-chiller-100rt/overview.jpg"
   },
   {
     "number": 88,
@@ -153,13 +100,7 @@ export const OUTDOOR_HISTORY_CARDS = Object.freeze([
     "room": "실외기실",
     "manufacturer": "",
     "modelName": "",
-    "photo": "./assets/equipment-cards/outdoor/088-water-tank-100rt/overview.jpg",
-    "views": [
-      "./assets/equipment-cards/outdoor/088-water-tank-100rt/front.jpg",
-      "./assets/equipment-cards/outdoor/088-water-tank-100rt/left.jpg",
-      "./assets/equipment-cards/outdoor/088-water-tank-100rt/right.jpg",
-      "./assets/equipment-cards/outdoor/088-water-tank-100rt/rear.jpg"
-    ]
+    "photo": "./assets/photos/equipment-cards/outdoor/088-water-tank-100rt/overview.jpg"
   },
   {
     "number": 89,
@@ -169,13 +110,7 @@ export const OUTDOOR_HISTORY_CARDS = Object.freeze([
     "room": "실외기실",
     "manufacturer": "",
     "modelName": "",
-    "photo": "./assets/equipment-cards/outdoor/089-chiller-40rt/overview.jpg",
-    "views": [
-      "./assets/equipment-cards/outdoor/089-chiller-40rt/front.jpg",
-      "./assets/equipment-cards/outdoor/089-chiller-40rt/left.jpg",
-      "./assets/equipment-cards/outdoor/089-chiller-40rt/right.jpg",
-      "./assets/equipment-cards/outdoor/089-chiller-40rt/rear.jpg"
-    ],
+    "photo": "./assets/photos/equipment-cards/outdoor/089-chiller-40rt/overview.jpg",
     "namingConflict": "현재 카드 표시명은 40RT이나 사진명·설비 코드·저장 경로에 60RT가 남아 있습니다. 제조 명판의 정격값은 확인되지 않았습니다."
   },
   {
@@ -186,13 +121,7 @@ export const OUTDOOR_HISTORY_CARDS = Object.freeze([
     "room": "실외기실",
     "manufacturer": "",
     "modelName": "",
-    "photo": "./assets/equipment-cards/outdoor/090-water-tank-40rt/overview.jpg",
-    "views": [
-      "./assets/equipment-cards/outdoor/090-water-tank-40rt/front.jpg",
-      "./assets/equipment-cards/outdoor/090-water-tank-40rt/left.jpg",
-      "./assets/equipment-cards/outdoor/090-water-tank-40rt/right.jpg",
-      "./assets/equipment-cards/outdoor/090-water-tank-40rt/rear.jpg"
-    ],
+    "photo": "./assets/photos/equipment-cards/outdoor/090-water-tank-40rt/overview.jpg",
     "namingConflict": "현재 카드 표시명은 40RT이나 사진명·설비 코드·저장 경로에 60RT가 남아 있습니다. 제조 명판의 정격값은 확인되지 않았습니다."
   },
   {
@@ -203,13 +132,7 @@ export const OUTDOOR_HISTORY_CARDS = Object.freeze([
     "room": "실외기실",
     "manufacturer": "",
     "modelName": "",
-    "photo": "./assets/equipment-cards/outdoor/091-cooling-tower-water-tank-20rt/overview.jpg",
-    "views": [
-      "./assets/equipment-cards/outdoor/091-cooling-tower-water-tank-20rt/front.jpg",
-      "./assets/equipment-cards/outdoor/091-cooling-tower-water-tank-20rt/left.jpg",
-      "./assets/equipment-cards/outdoor/091-cooling-tower-water-tank-20rt/right.jpg",
-      "./assets/equipment-cards/outdoor/091-cooling-tower-water-tank-20rt/rear.jpg"
-    ]
+    "photo": "./assets/photos/equipment-cards/outdoor/091-cooling-tower-water-tank-20rt/overview.jpg"
   },
   {
     "number": 92,
@@ -219,15 +142,10 @@ export const OUTDOOR_HISTORY_CARDS = Object.freeze([
     "room": "실외기실",
     "manufacturer": "",
     "modelName": "",
-    "photo": "./assets/equipment-cards/outdoor/092-cooling-tower-20rt/overview.jpg",
-    "views": [
-      "./assets/equipment-cards/outdoor/092-cooling-tower-20rt/front.jpg",
-      "./assets/equipment-cards/outdoor/092-cooling-tower-20rt/left.jpg",
-      "./assets/equipment-cards/outdoor/092-cooling-tower-20rt/right.jpg",
-      "./assets/equipment-cards/outdoor/092-cooling-tower-20rt/rear.jpg"
-    ]
+    "photo": "./assets/photos/equipment-cards/outdoor/092-cooling-tower-20rt/overview.jpg"
   }
-]);
+  // Individual views refer to the corresponding column of the single card JPEG.
+].map(card => ({ ...card, views: OUTDOOR_CARD_SIDES.map(side => `${card.photo}#${side}`) })));
 export const OUTDOOR_CARD_BINDINGS = Object.freeze({
   "outdoor-unit-1": 75,
   "outdoor-unit-2": 76,

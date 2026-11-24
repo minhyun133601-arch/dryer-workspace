@@ -104,8 +104,8 @@ for (const reference of furnacePhotos) {
   furnaceDetail = furnaceDetail.replaceAll(reference, `data:image/jpeg;base64,${bytes.toString('base64')}`);
 }
 let chillerData = chillerDataSource;
-const chillerAssetPattern = /\.\/assets\/drawings\/chiller\/[a-z\d-]+\.jpg/g;
-// The active registry contains retained technical drawings only.
+const chillerAssetPattern = /\.\/assets\/(?:drawings|documents)\/chiller\/[a-z\d-]+\.jpg/g;
+// Embed the registered chiller drawings and technical documents.
 const { CHILLER_ASSETS } = await import('../apps/site/chiller-data.js');
 const chillerAssetEntries = [];
 for (const [key, reference] of Object.entries(CHILLER_ASSETS)) {
@@ -165,12 +165,15 @@ const code = [
   namespace(three, 'THREE'),
   namespace(await read('apps/site/dryer-compressor-records.js'), 'compressorRecordsModule'),
   namespace(await read('apps/site/dryer-compressor-manuals.js'), 'compressorManualsModule'),
+  namespace(await read('apps/site/dryer-compressor-elevations.js'), 'compressorElevationsModule', ["import * as THREE from '../shared/vendor/three.module.js';"]),
+  'const { drawEquipmentElevation } = compressorElevationsModule;',
   'const { COMPRESSOR_RECORDS } = compressorRecordsModule, { COMPRESSOR_MANUALS } = compressorManualsModule;',
   'const COMPRESSOR_MEDIA = ' + JSON.stringify(compressorPhotos) + ', COMPRESSOR_PLAN_IMAGE = ' + JSON.stringify(compressorPlan) + ', COMPRESSOR_WALK_FRAMES = ' + JSON.stringify(walkFrames) + ';',
   namespace(await read('apps/site/dryer-compressor-view.js'), 'compressorViewModule', [
     "import * as THREE from '../shared/vendor/three.module.js';",
     "import { COMPRESSOR_RECORDS } from './dryer-compressor-records.js';",
     "import { COMPRESSOR_MANUALS } from './dryer-compressor-manuals.js';",
+    "import { drawEquipmentElevation } from './dryer-compressor-elevations.js';",
     "import { COMPRESSOR_MEDIA, COMPRESSOR_PLAN_IMAGE, COMPRESSOR_WALK_FRAMES } from './dryer-compressor-media.js';",
   ]),
   'const { createCompressorSurvey } = compressorViewModule;',

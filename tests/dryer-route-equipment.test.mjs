@@ -54,7 +54,7 @@ test('the elevator-facing A/B drives and four covered runs lead west through the
     const runs = named(root, 'observed-covered-transfer-trough');
     assert.equal(runs.length, 4);
     const drivePositions = named(root,'observed-vertical-motor-housing').map(node=>node.getWorldPosition(new THREE.Vector3()));
-    for(const drive of drivePositions) assert.ok(Math.abs(drive.x-6.8)<.2, 'red-beacon end lies directly ahead of the lift');
+    for(const drive of drivePositions) assert.ok(Math.abs(drive.x-7.1)<.2, 'red-beacon end lies ahead of the lift, 2 m off the east windows (11/25 00:22)');
     const returns = named(root,'disc-return-station');
     assert.equal(returns.length,2);
     assert.ok(returns.every(n=>n.getWorldPosition(new THREE.Vector3()).x < item.position[0]-2));
@@ -82,17 +82,49 @@ test('the elevator-facing A/B drives and four covered runs lead west through the
   } finally { h.dispose(); }
 });
 
+test('November 25 walk retains the line markings, pump frames and GEA cabinet on the filmed assemblies', () => {
+  const h=harness();
+  try {
+    const bank=h.roots.get('f3-holding'), skid=h.roots.get('f3-sterilizer');
+    const plaques=named(bank,'observed-silo-hopper-line-plate');
+    assert.deepEqual(plaques.map(sign=>sign.userData.text),['싸이로 호퍼 B라인','싸이로 호퍼 A라인']);
+    assert.equal(named(bank,'observed-hopper-outlet-actuator').length,2);
+    assert.equal(named(bank,'hopper-a-side-inlet').length,1);
+    assert.equal(named(bank,'disc-return-bearing-strap').length,2);
+    const [left,right]=named(skid,'observed-plate-pack-frame');
+    const plate=named(left,'observed-stainless-plate-housing')[0];
+    assert.ok(right.position.x-left.position.x > plate.geometry.parameters.width,'the two stacks leave a real gap');
+    assert.equal(named(skid,'plate-skid-dial-stem').length,2);
+    const gear=h.roots.get('f3-homogenizer');
+    assert.equal(named(gear,'observed-stainless-control-cabinet')[0].userData.observedMark,'GEA');
+    assert.equal(named(gear,'drive-cabinet-door-reveal').length,1);
+    const leftHmi=named(gear,'walk-process-left-hmi')[0], orange=named(gear,'walk-process-orange-banded-unit')[0];
+    const sideCabinet=named(gear,'observed-stainless-control-cabinet')[0];
+    assert.ok(leftHmi.position.x<orange.position.x && orange.position.x<sideCabinet.position.x);
+    assert.ok(orange.position.z<leftHmi.position.z && orange.position.z<sideCabinet.position.z);
+    assert.equal(sideCabinet.rotation.y,-Math.PI/2,'the connecting door sees the vented end of the GEA cabinet');
+    const sideEquipment=named(h.roots.get('f3-balance-tank'),'observed-rectangular-tank-and-low-pumps')[0];
+    assert.equal(named(sideEquipment,'low-pump-rolled-stainless-hood').length,1);
+    assert.equal(named(sideEquipment,'motor-body').length,2);
+    const stairs=named(h.roots.get('f3-feed-tank'),'observed-service-stair')[0];
+    assert.ok(named(stairs,'cip-stair-vertical-balusters')[0].count>20);
+  } finally { h.dispose(); }
+});
+
 test('the observed CIP tops hang through a real service deck and retain open manholes and a connected access stair', () => {
   const h = harness();
   try {
     const item = observed.find(item => item.id === 'f3-feed-tank'), root = h.roots.get(item.id);
-    assert.equal(named(root, 'observed-cip-tank').length, 2);
+    // Field cards 19, 21 and 22 (2026-11-24) add the water tank to the two filmed tops.
+    assert.equal(named(root, 'observed-cip-tank').length, 3);
+    assert.deepEqual([...root.userData.cardTankLabels].sort(), ['CIP탱크(물)', 'CIP탱크(산)', 'CIP탱크(알카리)']);
     assert.equal(root.userData.entireCipTankCountConfirmed, false);
     assert.deepEqual(root.userData.readableObservedTankLabels, ['CIP탱크(산)']);
     const platform = named(root, 'observed-cip-pierced-platform')[0];
-    for (const z of [-1.15, 1.15]) {
+    for (const z of [-3.45, -1.15, 1.15]) {
       assert.equal(down(platform, item.position[0], item.position[2] + z).length, 0, 'the tank body passes through the deck');
-      const hits = down(root, item.position[0] + .33, item.position[2] + z + .25);
+      const port=root.localToWorld(new THREE.Vector3(.33,0,z+.25));
+      const hits = down(root, port.x, port.z);
       assert.ok(hits.length && hits[0].point.y < item.position[1] + 1, 'the open manhole reveals the vessel interior rather than a hidden solid top');
     }
     assert.ok(down(platform, item.position[0] + 1.2, item.position[2]).length > 0);
@@ -108,18 +140,33 @@ test('the observed CIP tops hang through a real service deck and retain open man
 test('all observed assemblies fit the reduced tower and leave a continuous central passage', () => {
   const h = harness();
   try {
-    const passage = new THREE.Box3(new THREE.Vector3(.8, 7.45, -5.1), new THREE.Vector3(2, 9.1, 10.5));
+    const passage = new THREE.Box3(new THREE.Vector3(2.2, 7.45, 2.9), new THREE.Vector3(3.4, 9.1, 10.5));
+    const approach = new THREE.Box3(new THREE.Vector3(-2.9, 7.45, -4.9), new THREE.Vector3(-2, 9.1, -.1));
     const boxes = [];
     for (const [id, root] of h.roots) {
-      const box = new THREE.Box3().setFromObject(root); boxes.push({ id, box });
+      const box = new THREE.Box3().setFromObject(root),parts=[];
+      boxes.push({id,box,parts});
       assert.ok(box.min.x >= -8.5 && box.max.x <= 8.5 && box.min.z >= -13.3 && box.max.z <= 13.3, `${id} remains in the smaller third-floor tower`);
       assert.ok(box.min.y >= 7.3 - 1e-5 && box.max.y <= 13.3 + 1e-5, `${id} stays between third and fourth floor datums`);
       root.traverse(mesh=>{
-        if(mesh.isMesh)assert.equal(new THREE.Box3().setFromObject(mesh).intersectsBox(passage),false,`${id}/${mesh.name} leaves the central person route clear`);
+        if(!mesh.isMesh)return;
+        const bounds=new THREE.Box3().setFromObject(mesh);
+        parts.push({name:mesh.name,bounds});
+        assert.equal(bounds.intersectsBox(passage),false,`${id}/${mesh.name} leaves the central person route clear`);
+        assert.equal(bounds.intersectsBox(approach),false,`${id}/${mesh.name} leaves the way round the conveyor end to the sliding panel clear`);
       });
       root.traverse(mesh => { if (mesh.isMesh) { assert.ok(h.s.geometries.has(mesh.geometry)); assert.ok(h.s.materials.has(mesh.material)); } });
     }
-    for (let i = 0; i < boxes.length; i++) for (let j = i + 1; j < boxes.length; j++) assert.equal(boxes[i].box.intersectsBox(boxes[j].box), false, `${boxes[i].id} and ${boxes[j].id} do not occupy the same equipment envelope`);
+    // On film the sloping CIP stair stands beside the cabinet. Their shared
+    // bounding rectangle includes the open aisle between the stair and deck.
+    for (let i=0;i<boxes.length;i++) for(let j=i+1;j<boxes.length;j++){
+      const a=boxes[i],b=boxes[j];
+      if(!a.box.intersectsBox(b.box))continue;
+      for(const part of a.parts){
+        const overlap=b.parts.find(other=>other.bounds.intersectsBox(part.bounds));
+        assert.ok(!overlap,`${a.id}/${part.name} collides with ${b.id}/${overlap?.name}`);
+      }
+    }
   } finally { h.dispose(); }
 });
 
@@ -133,6 +180,28 @@ test('the exact old drive-frame default migrates once while moved, rotated and i
     const result = restore(value)[0]; assert.deepEqual(result.position, value.items[0].position); assert.ok(Math.abs(result.rotation - value.items[0].rotation) < 1e-8);
   }
   assert.deepEqual(validateLayout(payload([-.6, 7.3, -3.4]), [item])[0].position, [-.6, 7.3, -3.4], 'explicit imports do not apply catalog migrations');
+});
+
+test('the November 25 process room restores only the previous catalogue poses while keeping manual edits and imports', () => {
+  const prior=[
+    ['f3-sterilizer',[-6,7.3,-4.75],'dryer-hall-saved-defaults-20261113'],
+    ['f3-homogenizer',[-6,7.3,-.25],'dryer-route-3f-20261112'],
+    ['f3-balance-tank',[-6.75,7.3,4],null], ['f3-feed-tank',[-2.25,7.3,4.5],null],
+  ];
+  for(const [id,position,stamp] of prior){
+    const item=observed.find(row=>row.id===id),old={id,position,rotation:0};
+    const payload=(pose,revision)=>({version:1,catalogRevision:'preparation-tank-openings-20261112',
+      placementRevisions:revision?{[id]:revision}:{},items:[pose]});
+    const restore=(pose,revision)=>validateLayout(payload(pose,revision),[item],{migrateDefaults:true,migrateDryerDefaults:false})[0];
+    const updated=restore(old,stamp);
+    assert.deepEqual(updated.position,item.position);assert.ok(Math.cos(updated.rotation-item.rotation)>.999999);
+    for(const pose of [{...old,position:[position[0]+.25,position[1],position[2]]},{...old,rotation:.1}]){
+      const custom=restore(pose,stamp);
+      assert.deepEqual(custom.position,pose.position);assert.ok(Math.abs(custom.rotation-pose.rotation)<1e-8);
+    }
+    assert.deepEqual(restore(old,item.placementRevision),old);
+    assert.deepEqual(validateLayout(payload(old,stamp),[item])[0],old);
+  }
 });
 
 test('restoring the reviewed disc-conveyor bank moves only its previous default with its original facing', () => {

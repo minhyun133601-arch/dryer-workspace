@@ -100,6 +100,28 @@ test('independently filmed accessories have their own identities without countin
   } finally { dispose(); }
 });
 
+test('the preparation console retains the photographed folding profile, station order and four selector dials', () => {
+  const {s,dispose}=harness(), item=EQUIPMENT.find(row=>row.id==='f1-prep-console');
+  try {
+    const root=new THREE.Group();
+    buildPreparationEquipment(s,root,item);
+    root.updateMatrixWorld(true);
+    const piece=name=>root.getObjectByName('preparation-'+name);
+    const center=name=>piece(name).getWorldPosition(new THREE.Vector3());
+    const tray=piece('filmed-sloped-console-face'), board=piece('console-upright-mimic-board');
+    assert.ok(tray.rotation.x < board.rotation.x && board.rotation.x < 0);
+    assert.ok(center('console-upright-mimic-board').y > center('filmed-sloped-console-face').y);
+    assert.equal(piece('console-four-dial-faces').count,4);
+    assert.equal(piece('console-four-dial-handles').count,4);
+    assert.equal(piece('console-inspection-cards').count,32);
+    const phone=center('console-telephone'),desktop=center('console-desktop-monitor'),upperHmi=center('console-top-hmi-enclosure');
+    assert.ok(center('console-secondary-hmi').x < desktop.x && desktop.x < phone.x && phone.x < upperHmi.x);
+    assert.ok(upperHmi.y > desktop.y && desktop.y > phone.y);
+    assert.ok(Math.abs(new THREE.Box3().setFromObject(piece('filmed-control-cabinet')).min.y-item.preparation.elevation) < .025);
+    assert.equal(root.userData.liveOperatingStateAdded,false);
+  } finally {dispose();}
+});
+
 test('the filmed hanging tank has a closed visible dished bottom, real deck lugs and the lower clamp, flexible connector and protected sensor route', () => {
   const {s,dispose}=harness();
   try {
@@ -205,7 +227,8 @@ test('the assembled current catalog keeps every vessel within the double-height 
       const item = current.find(item => item.id === id), { width, depth, elevation } = item.preparation;
       assert.equal(elevation, deckItem.preparation.elevation, `${id} stands on the filmed raised checkerplate rather than the ground floor`);
       for (const [dx, dz] of [[-width * .4, -depth * .4], [width * .4, -depth * .4], [-width * .4, depth * .4], [width * .4, depth * .4]]) {
-        const ray = new THREE.Raycaster(new THREE.Vector3(item.position[0] + dx, 6, item.position[2] + dz), new THREE.Vector3(0, -1, 0));
+        const point = roots.get(id).localToWorld(new THREE.Vector3(dx,0,dz));
+        const ray = new THREE.Raycaster(new THREE.Vector3(point.x,6,point.z), new THREE.Vector3(0,-1,0));
         assert.ok(ray.intersectObject(deck).length, `${id} is supported across its footprint by the connected platform`);
       }
     }

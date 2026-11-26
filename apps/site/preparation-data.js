@@ -1,3 +1,5 @@
+import { PREPARATION_CONSOLE_PHOTOS } from './field-photos-20261125.js';
+
 // 2026-11-11 continuous walk: raw-material entry → preparation → 1팀2파트.
 // The photographed lighting plan is rotated 90° against A013. Yellow circles
 // on that plan are lamps; the six explicitly drawn vessels define the bank.
@@ -5,6 +7,7 @@ const frame = second => [76, 78].includes(second)
   ? `./assets/drawings/preparation/current-room-plan-frame-${String(second).padStart(3, '0')}s.jpg`
   : `./photos/preparation-room/frame-${String(second).padStart(3, '0')}s.jpg`;
 const basis = '20261111-continuous-walk-and-current-room-plan';
+const deckPhotos = PREPARATION_CONSOLE_PHOTOS.filter(photo => /-(090201|090319)$/.test(photo.id)).map(photo => photo.path);
 const supplementReferences = seconds => [{ clipId: 'first-floor-20261113-clip1', seconds }];
 const knownRevisions = ['dryer-full-envelope-20261110', 'dryer-full-envelope-final-20261110', 'liquid-card-detail-spacing-20261110', 'campus-rear-video-placement-20261111', 'campus-rear-identities-20261111', 'campus-valve-interior-20261111', 'campus-office-lpg-restoration-20261111', 'preparation-room-current-layout-20261111'];
 const originalTankPositions = { 'f1-mix-a': [-8.8,.3,-8], 'f1-mix-b': [-3.8,.3,-8], 'f1-melting': [1.2,.3,-8], 'f1-oil-water': [8,.3,-7.5], 'f1-s1': [8.8,.3,-1.8] };
@@ -13,7 +16,17 @@ const originalTankPositions = { 'f1-mix-a': [-8.8,.3,-8], 'f1-mix-b': [-3.8,.3,-
 // the deck openings are derived from the tank poses: a saved browser layout
 // can no longer leave a tank off-centre in its opening (11/12 screenshot 261).
 const DECK_ORIGIN = Object.freeze([22, 11.5]);
-const DECK_OUTLINE = Object.freeze([[-5.4,-6.75],[4.9,-6.75],[4.9,-4.3],[-1.6,-4.3],[-1.6,2.2],[4.9,2.2],[4.9,6.75],[-5.4,6.75]]);
+// The posted lighting plan shows the operator desk on a projection of the
+// long inside edge opposite the tank row. Its rear and side rails are visible
+// from above and below the deck in the November 25 photographs.
+const CONSOLE_BAY = Object.freeze({frontX:-1.6, backX:-.82, startZ:-1.34, endZ:1.78});
+const southReturnZ = 3.25;
+const stairLandingZ = 2.65;
+const innerRim = [
+  [-1.6,-4.3], [CONSOLE_BAY.frontX,CONSOLE_BAY.startZ], [CONSOLE_BAY.backX,CONSOLE_BAY.startZ],
+  [CONSOLE_BAY.backX,CONSOLE_BAY.endZ], [CONSOLE_BAY.frontX,CONSOLE_BAY.endZ],
+];
+const DECK_OUTLINE = Object.freeze([[-5.4,-6.75],[4.9,-6.75],[4.9,-4.3],...innerRim,[-1.6,southReturnZ],[4.9,southReturnZ],[4.9,6.75],[-5.4,6.75]]);
 const DECK_OPENING_CLEARANCE = .04;
 // A hanging tank outside this world rectangle has no deck to hang from.
 const HANGING_DECK = Object.freeze({ id: 'f1-prep-platform',
@@ -27,8 +40,8 @@ const rowOffset = x => round6(TANK_ROW_X + x - DECK_ORIGIN[0]);
 // 11/11 clip 4:31-4:53 and 6:40: vessels hang from the 2.45 m deck on lugs,
 // dished bottoms about 1 m above the floor, no floor legs.
 const vessel = (id, label, options = {}) => ({ id, label, x: 0, z: 0, radius: .9, bodyHeight: 2.35, baseHeight: .95, deckElevation: 2.45, motor: true, motorColor: 'dark', ...options });
-const observed = (seconds, details = []) => ({
-  photo: frame(seconds[0]), photos: seconds.map(frame),
+const observed = (seconds, details = [], fieldPhotos = []) => ({
+  photo: fieldPhotos[0] || frame(seconds[0]), photos: [...fieldPhotos, ...seconds.map(frame)],
   confidence: '현장 영상·현행 배치도 대조 · 크기·좌표 개략',
   positionBasis: basis, positionConfidence: 'approximate',
   details: [...details, '탱크·설비의 반복 촬영은 같은 장치로 대조했습니다. 보이지 않는 내부 구조와 가려진 배관 연결은 확정하지 않았습니다.', '원료 출입구와 1팀 2파트 출입구를 연결해 도면에 비례 등록했으며 실측 좌표는 아닙니다.'],
@@ -40,12 +53,12 @@ const overrides = {
     ...observed([189, 201, 345]),
   },
   'f1-mix-a': { name: '혼합·살균 탱크 1', tag: 'MIX-1', position: [TANK_ROW_X, .3, 8.25],
-    preparation: { kind: 'tank-group', vessels: [vessel('homo-a', '호모 믹스-1', { radius: 1.02, plate: '호모 믹스-1' })], sourceTimes: [207, 249, 393] },
+    preparation: { kind: 'tank-group', vessels: [vessel('homo-a', '호모 믹스-1', { radius: 1.02, plate: '호모 믹스-1', lidLabel:'혼합/살균 탱크 1' })], sourceTimes: [207, 249, 393] },
     summary: '뚜껑에 혼합/살균 탱크 1 표지가 보이는 외형을 재현했습니다. 배치도의 호모믹스 열을 참고하되, 과거 공정 명칭과의 정확한 대응은 미확인입니다.',
-    ...observed([249, 267, 393]),
+    ...observed([249, 267, 393], [], [deckPhotos[0]]),
   },
   'f1-mix-b': { name: '혼합·살균 탱크 2', tag: 'MIX-2', position: [TANK_ROW_X, .3, 11],
-    preparation: { kind: 'tank-group', vessels: [vessel('homo-b', '호모 믹스-2', { radius: 1.02, plate: '호모 믹스-2', lowerDetails: { inspectionPort: true, flexConnection: true, sensorCable: true } })], sourceTimes: [255, 267, 393, 399] },
+    preparation: { kind: 'tank-group', vessels: [vessel('homo-b', '호모 믹스-2', { radius: 1.02, plate: '호모 믹스-2', lidLabel:'혼합/살균 탱크 2', lowerDetails: { inspectionPort: true, flexConnection: true, sensorCable: true } })], sourceTimes: [255, 267, 393, 399] },
     summary: '뚜껑의 혼합/살균 탱크 2 표지와 교반 모터·메시 보호통·원형 맨홀을 재현했습니다. 서측 탱크 열과 하부 배관 공간을 연결했습니다.',
     ...observed([255, 291, 399]),
   },
@@ -55,9 +68,9 @@ const overrides = {
     ...observed([267, 291, 411, 429]),
   },
   'f1-s1': { name: 'S-1 탱크', tag: 'S-1', position: [23, .3, 16],
-    preparation: { kind: 'tank-group', vessels: [vessel('s1', 'S-1 탱크', { radius: .95, motor: false })], sourceTimes: [225, 236, 357] },
-    summary: '일렬 5기에서 남측으로 꺾여 배치된 S-1 탱크입니다. 조작반 옆 반환 구간과 하부 서비스 공간을 함께 구분했습니다.',
-    ...observed([225, 236, 357]),
+    preparation: { kind: 'tank-group', vessels: [vessel('s1', 'S-1 탱크', { radius: .95 })], sourceTimes: [225, 236, 357] },
+    summary: '조작반 너머에 따로 선 탱크로, 배치도의 남측 S-1 위치와 대응합니다. 11월 25일 작업대 전경에 보이는 검은 수직 구동부와 금속 지지부를 반영했습니다.',
+    ...observed([225, 236, 357], [], [deckPhotos[0]]),
   },
 };
 export function registerPreparationEquipment(item) {
@@ -104,6 +117,15 @@ function equipment(id, name, kind, position, dimensions, seconds, summary, prepa
 // connected pair sideways while keeping clearance from the CIP-room wall.
 // Manual moves, turns and later saves under this revision remain intentional.
 const OUTER_DOOR_PLACEMENT_REVISION = 'preparation-outer-door-clearance-20261113';
+const stairEquipmentRevision = 'preparation-console-stair-equipment-20261125';
+const whiteUnitShutterRevision = 'preparation-mobile-cabinet-shutter-clearance-20261113';
+// Browser saves snap X/Z to 25 cm. Only a published default or its exact
+// snapped result under the corresponding release qualifies as an old pose.
+function previousStairPoses(x, z, catalogRevision, sourcePlacementRevision) {
+  return [[x,z],[Math.round(x*4)/4,Math.round(z*4)/4]].map(([px,pz]) => ({
+    position:[px,.3,pz], rotation:0, catalogRevision, sourcePlacementRevision, migrationBasis:'preparation-video-default',
+  }));
+}
 const relocatedFrom = (previousDefault, ...poses) => ({ placementRevision: OUTER_DOOR_PLACEMENT_REVISION,
   previousPlacements: ['preparation-complete-20261111', 'preparation-missing-tank-20261112', 'preparation-tank-openings-20261112'].flatMap(catalogRevision => [
     ...poses.map(([x, z]) => ({ position: [x, .3, z], rotation: 0, catalogRevision, migrationBasis: 'preparation-video-default' })),
@@ -112,30 +134,52 @@ const relocatedFrom = (previousDefault, ...poses) => ({ placementRevision: OUTER
 });
 export const PREPARATION_EQUIPMENT = Object.freeze([
   equipment('f1-prep-platform', '조제실 작업대·계단', 'platform', DECK_ORIGIN, { width: 10.5, depth: 13.5, height: 3.5 }, [177, 183, 237, 333, 339],
-    '서측 일렬 5기와 남측 S-1을 잇는 철골 작업대입니다. 탱크 개구부, 체크무늬 철판, 지지 기둥, 계단과 스테인리스 난간을 구분했습니다.',
-    { elevation: 2.45, outline: DECK_OUTLINE.map(point => [...point]),
+    '서측 탱크 열과 남측 S-1을 잇는 철골 작업대입니다. 11월 25일 사진과 현행 배치도에 맞춰 조작반 자리의 돌출 체크무늬 상판, 뒤·옆 난간, 계단 중간 난간과 상판 아래 배선받이를 반영했습니다.',
+    { elevation: 2.45, outline: DECK_OUTLINE.map(point => [...point]), consoleBay:CONSOLE_BAY,
       holes: deckOpenings,
       // Approximate supports remain beneath the deck, west of the complete
       // raw-shutter aisle rather than across its 2.85m clear opening.
-      supports: [[-5.22,-6.57],[2.6,-6.57],[2.6,-4.48],[-1.42,-4.48],[-1.42,2.38],[4.72,2.38],[4.72,6.57],[-5.22,6.57]],
-      stairs: { x: 2.6, z: -1.7, rotation: Math.PI, width: .9, run: 2.6 },
-      railEdges: [{a:[-1.6,-4.3],b:[1.9,-4.3]},{a:[3.3,-4.3],b:[4.9,-4.3]},{a:[4.9,-6.75],b:[4.9,-4.3]},{a:[-1.6,-4.3],b:[-1.6,2.2]},{a:[-1.6,2.2],b:[4.9,2.2]},{a:[4.9,2.2],b:[4.9,6.75]}], sourceTimes: [177,183,237,333,339] }),
-  equipment('f1-prep-console', '조제실 조작반', 'control-panel', [24.25, 14.5], { width: 2.7, depth: .85, height: 1.45 }, [232, 236],
-    '탱크 작업대 위의 경사 조작반입니다. 공정 선도, 상부 표시기, 누름 버튼·선택 스위치와 비상정지를 표현했습니다.', { elevation: 2.45, width: 2.7, height: 1.45, depth: .85, console: true, sourceTimes: [232,236] }),
+      supports: [[-5.22,-6.57],[2.6,-6.57],[2.6,-4.48],[-1.42,-4.48],[-1.42,southReturnZ+.18],[4.72,southReturnZ+.18],[4.72,6.57],[-5.22,6.57]],
+      stairs: { x: 1, z: stairLandingZ, rotation: -Math.PI/2, width: .9, run: 2.6 },
+      railEdges: [{a:[-1.6,-4.3],b:[4.9,-4.3]},{a:[4.9,-6.75],b:[4.9,-4.3]},
+        ...innerRim.slice(1).map((end,i)=>({a:innerRim[i],b:end})),
+        {a:[-1.6,CONSOLE_BAY.endZ],b:[-1.6,stairLandingZ-.45]},{a:[-1.6,stairLandingZ+.45],b:[-1.6,southReturnZ]},
+        {a:[-1.6,southReturnZ],b:[4.9,southReturnZ]},{a:[4.9,southReturnZ],b:[4.9,6.75]}], sourceTimes: [177,183,237,333,339] },
+    { photo:deckPhotos[0], photos:[...deckPhotos,...[177,183,237,333,339].map(frame)] }),
+  equipment('f1-prep-console', '조제실 조작반', 'control-panel', [20.5, 11.75], { width: 2.7, depth: .85, height: 1.85 }, [232, 236],
+    '탱크 열을 마주 보는 작업대의 경사 조작반입니다. 왼쪽에는 모니터와 기록대가 있고, 오른쪽 상단에는 별도 터치화면이 있습니다.',
+    { elevation: 2.45, width: 2.7, height: 1.85, depth: .85, console: true, facePhoto: PREPARATION_CONSOLE_PHOTOS[0].path, sourceTimes: [232,236] },
+    {
+      rotation: -Math.PI/2,
+      exteriorView: { focusObject: 'preparation-static-control-face', azimuth: -2.42, elevation: .32, distanceScale: .6 },
+      placementRevision: 'preparation-console-platform-20261125',
+      previousPlacements: ['preparation-complete-20261111','preparation-missing-tank-20261112','preparation-tank-openings-20261112']
+        .map(catalogRevision => ({ position:[24.25,.3,14.5], rotation:0, catalogRevision, migrationBasis:'preparation-video-default' })),
+      photo: PREPARATION_CONSOLE_PHOTOS[0].path,
+      photos: [...PREPARATION_CONSOLE_PHOTOS.map(photo => photo.path), frame(232), frame(236)],
+      positionBasis: '20261111-preparation-plan-and-20261125-console-photos',
+      confidence: '11월 25일 정면·옆면 사진과 조제실 배치도 대조 · 외함 치수와 이격은 비례 추정',
+      details: ['경사판에는 여러 줄의 누름버튼·선택 스위치와 앞줄의 원형 다이얼 4개가 있습니다.',
+        '수직판에는 점검 카드와 공정 계통도가 있고, 계통도 오른쪽에 숫자 표시창 2개가 있습니다.'],
+    }),
   equipment('f1-prep-main-panel', '조제실 메인 제어반', 'control-panel', [24.5, 5.5], { width: 3.5, depth: .65, height: 2.2 }, [177, 315, 321, 327],
     '북측 작업대 위 회색·크림색 제어반 열과 미믹 배관 선도, 표시창, 계기 및 회전 스위치를 재현했습니다. 표시 숫자는 운전값으로 만들지 않았습니다.', { elevation: 2.45, width: 3.5, height: 2.2, depth: .65, conduitSide:-1, sourceTimes: [177,315,321,327] }),
-  equipment('f1-prep-bag-dump', '원료 투입·분말 용해부', 'powder-hopper', [22.2, 6.4], { width: 1.6, depth: 1.2, height: 1.9 }, [57, 105, 333, 471],
-    '작업대 아래 Fristam 표기가 보이는 포대 투입·펌프 장치입니다. 원형 투입구, 경사진 스테인리스 흡입 후드와 검정 주름 덕트, 하부 펌프 덮개·통풍 조작함·캐스터를 11월 13일 근접 영상으로 보강했습니다. 가려진 덕트 연결과 내부 용해 방식은 확정하지 않았습니다.', { width: 1.6, depth: 1.2, height: 1.9, sourceTimes: [57,105,333,471], supplementaryExterior:true, sourceReferences:supplementReferences([42,46,50,55]) }),
-  Object.freeze({ id:'f1-prep-mobile-white-unit',name:'조제실 이동식 백색 장치',floor:1,type:'preparation-equipment',tag:'백색 이동식 장치',position:[25.65,.3,9.8],rotation:0,
+  equipment('f1-prep-bag-dump', '원료 투입·분말 용해부', 'powder-hopper', [21.25, 10.75], { width: 1.6, depth: 1.2, height: 1.9 }, [57, 105, 333, 471],
+    '작업대 아래, 계단 옆 백색 장치 뒤에 있는 Fristam 포대 투입·펌프 장치입니다. 11월 13일 영상에서 원형 투입구, 경사진 스테인리스 후드와 검정 주름 덕트, 하부 펌프 덮개·조작함·캐스터가 보입니다.', { width: 1.6, depth: 1.2, height: 1.9, sourceTimes: [57,105,333,471], supplementaryExterior:true, sourceReferences:supplementReferences([42,46,50,55]) },
+    { rotation:Math.PI/2, placementRevision:stairEquipmentRevision,
+      previousPlacements:['preparation-complete-20261111','preparation-missing-tank-20261112','preparation-tank-openings-20261112']
+        .flatMap(revision => previousStairPoses(22.2,6.4,revision,null)) }),
+  Object.freeze({ id:'f1-prep-mobile-white-unit',name:'조제실 이동식 백색 장치',floor:1,type:'preparation-equipment',tag:'백색 이동식 장치',position:[23,.3,13],rotation:Math.PI/2,
     width:.85,depth:.75,height:2.5,labelHeight:2.7,parts:['백색 외함·캐스터','표시판·청색 덮개','상부 주름 금속관'],
     preparation:{kind:'mobile-cabinet',width:.82,depth:.7,height:1.55,sourceReferences:supplementReferences([31,35,38])},
     sourceReferences:supplementReferences([31,35,38]),
     photo:'./assets/photos/evidence/dryer-first-floor-20261113/clip-142059-frame-031s.jpg',
     photos:['./assets/photos/evidence/dryer-first-floor-20261113/clip-142059-frame-031s.jpg','./assets/photos/evidence/dryer-first-floor-20261113/clip-142059-frame-038s.jpg'],
-    placementRevision:'preparation-mobile-cabinet-shutter-clearance-20261113',
-    previousPlacements:[25.65,25.75].map(x=>({position:[x,.3,6.5],rotation:0,catalogRevision:'preparation-tank-openings-20261112',migrationBasis:'preparation-video-default'})),
+    placementRevision:stairEquipmentRevision,
+    previousPlacements:[...previousStairPoses(25.65,6.5,'preparation-tank-openings-20261112',null),
+      ...previousStairPoses(25.65,9.8,'preparation-tank-openings-20261112',whiteUnitShutterRevision)],
     summary:'조제실 작업대 계단 옆에서 보이는 백색 3구획 외함·캐스터 장치입니다. 상부 금속 주름관, 표시판, 옆에 걸린 청색 덮개를 재현했습니다. 정확한 장치 기능·정격과 가려진 배관 연결은 미확정이며 위치·치수는 영상 비례입니다.',
-    confidence:'2026-11-13 근접 영상 외형 확인 · 기능 미확정 · 치수·좌표 개략',positionBasis:'20261113-video-relative-to-platform-stair-and-bag-dump',positionConfidence:'approximate',
+    confidence:'11월 13일 영상과 11월 25일 조작반 뒷면 사진에서 계단·기둥과 상대 위치 대조 · 치수·좌표 개략',positionBasis:'20261113-and-20261125-stair-column-cabinet-views',positionConfidence:'approximate',
   }),
   // Front (pump heads, gauges, panel) faces the hall; its west end keeps 2.6 m
   // clear in front of the outer-packaging door at local z19.5.
@@ -170,4 +214,4 @@ export const PREPARATION_EQUIPMENT = Object.freeze([
     photo:'./photos/boiler-room/clip-002-022s.jpg', photos:[22,37,52,74,106,118,162,218,238].map(second => `./photos/boiler-room/clip-002-${String(second).padStart(3,'0')}s.jpg`),
   }),
 ]);
-export const PREPARATION_PHOTOS = Object.freeze([15,39,47,51,57,76,78,87,105,135,141,152,153,154,165,170,177,189,236,291,321,363,411,483,486,492,497,500,502,503,505,510,519].map(frame));
+export const PREPARATION_PHOTOS = Object.freeze([...deckPhotos, ...[15,39,47,51,57,76,78,87,105,135,141,152,153,154,165,170,177,189,236,291,321,363,411,483,486,492,497,500,502,503,505,510,519].map(frame)]);

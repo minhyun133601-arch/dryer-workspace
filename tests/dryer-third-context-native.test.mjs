@@ -30,14 +30,17 @@ test('both yellow window rows are transparent openings above one stainless sill 
   const h=fixture();
   try{
     const details=h.environment.architectureFixtures.getObjectByName('dryer-route-3-details');
-    const bands=details.children.filter(node=>node.name.startsWith('dryer-route-3-third-exterior-'));
-    assert.equal(bands.length,8);
+    const bands=h.spec.routeSurvey.exteriorWindowBands;
+    assert.deepEqual(bands.map(band=>[band.side,band.drawing,band.width]),[['west','AW-8',18],['east','AW-7',12]]);
     for(const band of bands){
-      const pane=named(band,'observation-window-glass')[0],point=pane.getWorldPosition(new THREE.Vector3()),side=band.userData.registeredSide==='west'?1:-1;
-      assert.ok(ray([point.x+side*.35,point.y,point.z],[-side,0,0],[band],.7).some(hit=>hit.object.material.transparent));
-      assert.equal(ray([point.x+side*.35,point.y,point.z],[-side,0,0],[h.environment.structure,h.environment.facade],.7).length,0,'neither stacked row has opaque wall behind its glass');
+      const z=h.spec.mainBounds.minZ+band.offset+.35,side=band.side==='west'?1:-1,x=band.side==='west'?h.spec.mainBounds.minX:h.spec.mainBounds.maxX;
+      for(const y of [band.sill+.4,band.sill+band.height-.35]){
+        const origin=[x+side*.6,h.spec.elevation+y,z];
+        assert.ok(ray(origin,[-side,0,0],[h.environment.architectureFixtures],1.1).some(hit=>hit.object.material.transparent),'both rows carry glass');
+        assert.equal(ray(origin,[-side,0,0],[h.environment.structure,h.environment.facade],1.1).length,0,'neither stacked row has opaque wall behind its glass');
+      }
     }
-    const sills=named(details,'stainless-window-lower-protection');assert.equal(sills.length,4);
+    const sills=named(details,'stainless-window-lower-protection');assert.equal(sills.length,2);
     for(const sill of sills)assert.ok(box(sill).max.y<h.spec.elevation+1,'stainless protection stays below the first row');
   }finally{h.dispose();}
 });
@@ -64,7 +67,7 @@ test('drain covers are flush floor details with visible dark gaps, not raised wa
   const h=fixture();
   try{
     const drains=h.environment.architectureFixtures.getObjectByName('dryer-route-3-observed-flush-drain-channels');
-    assert.equal(drains.children.length,2);assert.equal(drains.userData.fullNetworkConfirmed,false);
+    assert.equal(drains.children.length,4);assert.equal(drains.userData.fullNetworkConfirmed,false);
     for(const channel of drains.children){
       assert.ok(box(channel).max.y-h.spec.elevation<=.00801);
       const grates=named(channel,'drain-removable-cover-grates')[0],matrix=new THREE.Matrix4();grates.getMatrixAt(0,matrix);
@@ -87,7 +90,7 @@ test('overhead ducts and pipe runs have ceiling hangers while the reduced hall a
     assert.ok(rods.min.y<=crossbar.max.y&&rods.max.y>box(ceiling).min.y,'the rods reach from supports to ceiling beams');
     assert.equal(named(overhead,'third-visible-blue-silver-run').length,4);
     assert.ok(named(overhead,'third-pipe-tray-hanger-rods')[0].count===8);
-    const passage=new THREE.Box3(new THREE.Vector3(.8,7.45,-5.1),new THREE.Vector3(2,9.1,10.5)),b=h.spec.mainBounds;
+    const passage=new THREE.Box3(new THREE.Vector3(2.2,7.45,2.9),new THREE.Vector3(3.4,9.1,10.5)),b=h.spec.mainBounds;
     const added=[h.environment.architectureFixtures.getObjectByName('dryer-route-3-details'),...h.environment.ducts.children.filter(node=>node.name.startsWith('dryer-route-3-')),ceiling];
     for(const root of added)meshBoxes(root,(node,volume)=>{
       const inside=region=>volume.min.x>=region.minX-.0001&&volume.max.x<=region.maxX+.0001&&volume.min.z>=region.minZ-.0001&&volume.max.z<=region.maxZ+.0001;
@@ -103,6 +106,14 @@ test('the yellow room uses a narrow real glazed door and the unseen shutter dest
   const h=fixture();
   try{
     const doorway=h.environment.architectureFixtures.getObjectByName('dryer-route-3-yellow-storage-doorway'),leaf=doorway.children.find(node=>node.userData.doorLeaf),glass=named(leaf,'door-upper-window')[0];
+    const stationary=h.environment.architectureFixtures.getObjectByName('dryer-route-3-yellow-storage-inactive-doorway');
+    assert.equal(stationary.children.find(node=>node.userData.doorLeaf).userData.proximityDoor.enterable,false);
+    assert.equal(h.spec.routeSurvey.storageDoor.side,'west');
+    const exterior=h.environment.architectureFixtures.getObjectByName('dryer-route-3-storage-exterior-wired-glazing');
+    const outsidePane=named(exterior,'observation-window-glass')[0].getWorldPosition(new THREE.Vector3());
+    const eye=[outsidePane.x,outsidePane.y+.20,outsidePane.z+.35];
+    assert.equal(ray(eye,[0,0,-1],[h.environment.structure,h.environment.facade],.8).length,0,'the exterior wired window has an opening through the building facade');
+    assert.ok(ray(eye,[0,0,-1],[exterior],.8).some(hit=>hit.object.material.transparent));
     const ratio=glass.scale.x/named(leaf,'door-lower-panel')[0].scale.x;
     assert.ok(ratio>.57&&ratio<.63,'the filmed upper pane occupies about sixty percent of the leaf width');
     const normal=new THREE.Vector3(0,0,1).transformDirection(leaf.matrixWorld);
@@ -133,9 +144,11 @@ test('the north shutter, yellow enclosure and lift appear west to east and the t
     const ref=h.environment.architectureFixtures.getObjectByName('dryer-route-3-hall-area-reference');
     assert.equal(ref.userData.floorMapCaption,true);
     assert.equal(ref.userData.personCollision,false);
-    assert.equal(hallRegistration.physicalPartitionSurveyed,false);
+    assert.equal(hallRegistration.physicalPartitionSurveyed,true);
+    // The 11/25 walk shows one closed wall from floor to deck, stepped beside the panel.
+    for(const [x,z,dir]of [[4,-.4,[0,0,1]],[-6,-3,[0,0,1]],[-2.2,-1.2,[-1,0,0]]])for(const y of [.6,2.6,5.4])assert.ok(ray([x,h.spec.elevation+y,z],dir,[h.environment.structure,h.environment.facade],1.6).length,`partition is solid at ${x},${z} height ${y}`);
     assert.deepEqual(hallRegistration.areas.map(a=>a.equipment.length),[1,4]);
-    assert.equal(ray([6.8,8.8,-9.48],[0,0,1],[h.environment.facade,h.environment.structure],1.9).length,0,'lift threshold has a clear forward view to the paired drive heads');
-    assert.ok(box(ref).max.y < h.spec.elevation+.1,'dashed map notation does not introduce a physical partition');
+    assert.equal(ray([6.8,8.8,-9.48],[0,0,1],[h.environment.facade,h.environment.structure],5).length,0,'lift threshold has a clear forward view to the paired drive heads');
+    assert.ok(box(ref).max.y < h.spec.elevation+.1,'area names stay flat on the floor');
   }finally{h.dispose();}
 });

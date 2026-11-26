@@ -92,6 +92,56 @@ test('the dryer compressor room supports continuous walking from 3F hall through
   } finally { h.scene.proximityDoors?.dispose(); s.dispose(); h.dispose(); }
 });
 
+test('a person can cross the third-floor process opening using either photographed door', async () => {
+  const h=await harness({floor:3}),scene=h.scene,s=modelTools(scene);
+  try{
+    const spec=FLOORS.find(f=>f.id===3),gate=spec.routeSurvey.hallRegistration.connectingDoor;
+    const env=buildDryerBuildingEnvironment(s,{floor:3,spec,elevation:spec.elevation});
+    buildDryerRouteEnvironment(s,env,spec);
+    scene.buildingEnvironments=new Map([[3,env]]);
+    scene.floorDecks.set(3,env.deck);scene.floorStructures.set(3,env.structure);
+    scene.scene.updateMatrixWorld(true);scene.setView('person');
+    scene.proximityDoors=createProximityDoorController(scene.scene);
+    const [x,z]=gate.position;
+    for(const [id,handleOffset] of [['dryer-route:3:third-process-link',0],['dryer-route:3:process-sliding-panel',1.32]]){
+      scene.proximityDoors.reset();
+      scene.person=walking.createPersonState({position:[x-handleOffset,spec.elevation,z-.85],yaw:Math.PI});
+      const action=scene.proximityDoors.getInteraction(scene._personWorldPosition(),{direction:scene._personDoorDirection()});
+      assert.equal(action?.id,id);
+      assert.ok(scene.interactDoor());
+      for(let i=0;i<12;i++)scene._updateProximityDoors(.1);
+      scene.setPersonInput('forward',true);
+      scene.person.yaw=Math.PI/2;walkDistance(scene,handleOffset);
+      for(const side of [1,-1]){
+        scene.person.yaw=side>0?Math.PI:0;walkDistance(scene,1.7);
+        close(scene.person.position[2],z+side*.85,'crossed the threshold at walking speed',.035);
+      }
+      scene.setPersonInput('forward',false);
+    }
+  }finally{scene.proximityDoors?.dispose();s.dispose();h.dispose();}
+});
+
+test('the filmed storage-room approach passes the shutter pallets and the right yellow leaf in both directions',async()=>{
+  const h=await harness({floor:3}),scene=h.scene,s=modelTools(scene);
+  try{
+    const spec=FLOORS.find(f=>f.id===3),[x,z]=spec.routeSurvey.storageDoor.position;
+    const env=buildDryerBuildingEnvironment(s,{floor:3,spec});
+    buildDryerRouteEnvironment(s,env,spec);
+    scene.buildingEnvironments=new Map([[3,env]]);
+    scene.floorDecks.set(3,env.deck);scene.floorStructures.set(3,env.structure);
+    scene.scene.updateMatrixWorld(true);scene.setView('person');
+    scene.proximityDoors=createProximityDoorController(scene.scene);
+    scene.person=walking.createPersonState({position:[x-1.55,spec.elevation,z],yaw:Math.PI/2});
+    const action=scene.proximityDoors.getInteraction(scene._personWorldPosition(),{direction:scene._personDoorDirection()});
+    assert.equal(action?.id,'dryer-route:3:yellow-storage');
+    assert.ok(scene.interactDoor());for(let i=0;i<10;i++)scene._updateProximityDoors(.1);
+    scene.setPersonInput('forward',true);
+    for(const [yaw,target]of [[Math.PI/2,x+1.55],[-Math.PI/2,x-1.55]]){
+      scene.person.yaw=yaw;walkDistance(scene,3.1);close(scene.person.position[0],target,'clear aisle across storage doorway',.04);
+    }
+  }finally{scene.proximityDoors?.dispose();s.dispose();h.dispose();}
+});
+
 function eventTarget() {
   const handlers = new Map();
   return {
@@ -383,11 +433,15 @@ test('the filmed preparation stair reaches its real checkerplate deck, holds hei
   const h = await harness({ floor: 1 }), s = modelTools(h.scene);
   try {
     const { scene } = h, item = PREPARATION_EQUIPMENT.find(item => item.id === 'f1-prep-platform');
-    scene.equipment.push(item);
-    const root = s._group(scene.scene, item.position); scene.objects.set(item.id, root);
-    buildPreparationEquipment(s, root, item);
+    for (const entry of PREPARATION_EQUIPMENT.filter(entry=>['platform','control-panel','mobile-cabinet','powder-hopper'].includes(entry.preparation?.kind))) {
+      scene.equipment.push(entry);
+      const root=s._group(scene.scene,entry.position); root.rotation.y=entry.rotation||0; scene.objects.set(entry.id,root);
+      buildPreparationEquipment(s,root,entry);
+    }
+    const stair=scene.objects.get(item.id).getObjectByName('preparation-platform-access-stair');
+    const start=stair.localToWorld(new THREE.Vector3(0,0,-.2)), uphill=stair.getWorldDirection(new THREE.Vector3());
     const base = floorElevation(1), deckY = item.position[1] + item.preparation.elevation;
-    scene.person = walking.createPersonState({ position: [24.7, base, 10] });
+    scene.person = walking.createPersonState({ position: [start.x,base,start.z], yaw:Math.atan2(uphill.x,-uphill.z) });
     scene.view = 'person'; scene.setPersonInput('forward', true);
     let previous = base, largestStep = 0;
     walkDistance(scene, 11 / 3, () => {
@@ -429,11 +483,11 @@ test('the real southeast and northeast stairs support the complete entry–mezza
       }));
       if (selected === 2) {
         scene.view = 'perspective'; scene._visibility(); scene.navigationEdited = true;
-        assert.equal(scene.floorDecks.get(1).visible, false, 'the mezzanine perspective keeps the first-floor hall separate');
+        assert.equal(scene.floorDecks.get(1).visible, true, 'the mezzanine perspective shows the first-floor hall beyond the observation glass');
         scene.setView('top');
         assert.equal(scene.floorDecks.get(1).visible, false, 'switching an edited camera to plan mode removes the lower context');
         scene.setView('perspective');
-        assert.equal(scene.floorDecks.get(1).visible, false, 'switching back keeps the mezzanine cutaway separate');
+        assert.equal(scene.floorDecks.get(1).visible, true, 'switching back shows the hall below the mezzanine again');
       }
       scene.view = 'person'; scene._visibility(); scene.scene.updateMatrixWorld(true);
       for (const environment of scene.buildingEnvironments.values()) assert.equal(environment.deck.visible, true, 'all filmed route floors remain visible during the walk');
@@ -444,15 +498,15 @@ test('the real southeast and northeast stairs support the complete entry–mezza
         const stair = scene.buildingEnvironments.get(level).architectureFixtures.getObjectByName(`dryer-building-${level}-${id}`);
         const spanX = core.bounds.maxX - core.bounds.minX, spanZ = core.bounds.maxZ - core.bounds.minZ;
         const lane = Math.min(1.25, ((core.runAxis === 'x' ? spanZ : spanX) - .25) / 2);
-        const run = Math.max(1.8, Math.min(4, (core.runAxis === 'x' ? spanX : spanZ) - 1.7));
-        const laneOffset = lane / 2 + .06, travel = run + .9;
+        const run = core.run ?? Math.max(1.8, Math.min(4, (core.runAxis === 'x' ? spanX : spanZ) - 1.7));
+        const mirror = core.mirror ? -1 : 1, laneOffset = lane / 2 + .06, travel = run + .9;
         const world = local => stair.localToWorld(new THREE.Vector3(...local));
-        const start = world([-laneOffset, 0, -firstDirection * (run / 2 + .45)]);
+        const start = world([-mirror * laneOffset, 0, -firstDirection * (run / 2 + .45)]);
         scene.person = walking.createPersonState({ position: start.toArray() }); scene.personEyeY = null;
         const legDirection = new THREE.Vector3(0, 0, firstDirection).transformDirection(stair.matrixWorld);
         walkLeg(Math.atan2(legDirection.x, -legDirection.z), travel);
         close(scene.person.position[1], spec.elevation + spec.height / 2, `${id} return landing`, .02);
-        const across = new THREE.Vector3(1, 0, 0).transformDirection(stair.matrixWorld);
+        const across = new THREE.Vector3(mirror, 0, 0).transformDirection(stair.matrixWorld);
         walkLeg(Math.atan2(across.x, -across.z), laneOffset * 2);
         walkLeg(Math.atan2(-legDirection.x, legDirection.z), travel);
         close(scene.person.position[1], spec.elevation + spec.height, `${id} upper floor landing`, .02);

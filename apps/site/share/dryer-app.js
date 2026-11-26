@@ -106,7 +106,7 @@ document.querySelectorAll('.view-selector button[data-view]').forEach(button => 
     if (['perspective', 'top', 'aisle'].includes(button.dataset.view)) scene?.setView(button.dataset.view);
   });
 });
-for (const [id, method] of [['labels-toggle', 'setLabels'], ['structure-toggle', 'setStructure'], ['partitions-toggle', 'setPartitions'], ['ducts-toggle', 'setDucts']]) {
+for (const [id, method] of [['labels-toggle', 'setLabels'], ['structure-toggle', 'setStructure'], ['columns-toggle', 'setColumns'], ['partitions-toggle', 'setPartitions'], ['ducts-toggle', 'setDucts']]) {
   $(id).addEventListener('change', event => scene?.[method](event.target.checked));
 }
 $('furnace-open').addEventListener('click', () => { if (!$('furnace-open').disabled) furnaceDetail.open(); });
@@ -205,6 +205,7 @@ try {
   });
   layoutEditor = createLayoutEditor({ scene, equipment: CATALOG, container: $('layout-editor') });
   scene.setLabels($('labels-toggle').checked);
+  scene.setColumns?.($('columns-toggle').checked);
   scene.setPartitions?.($('partitions-toggle').checked);
   layoutEditor.select(selectedId);
   if (requestedEquipment) select(requestedEquipment.id);

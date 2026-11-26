@@ -1,0 +1,562 @@
+{
+  "totalSlides": 10,
+  "size": {
+    "cx": "12192000",
+    "cy": "6858000"
+  },
+  "lastSlide": "ppt/slides/slide10.xml",
+  "objects": [
+    {
+      "index": 2,
+      "type": "sp",
+      "name": {
+        "id": "2",
+        "name": "근거자료 제목"
+      },
+      "text": [
+        "[첨부] 설비 유지관리 디지털화"
+      ],
+      "geometry": {
+        "off": {
+          "x": "228600",
+          "y": "85637"
+        },
+        "ext": {
+          "cx": "10795000",
+          "cy": "247825"
+        }
+      }
+    },
+    {
+      "index": 3,
+      "type": "sp",
+      "name": {
+        "id": "3",
+        "name": "① 전체 설비 3D 모델"
+      },
+      "text": [
+        "① 전체 설비 3D 모델"
+      ],
+      "geometry": {
+        "off": {
+          "x": "228600",
+          "y": "694944"
+        },
+        "ext": {
+          "cx": "2423160",
+          "cy": "283464"
+        }
+      }
+    },
+    {
+      "index": 4,
+      "type": "sp",
+      "name": {
+        "id": "4",
+        "name": "② 7층에서 버너 클릭"
+      },
+      "text": [
+        "② 7층에서 버너 클릭"
+      ],
+      "geometry": {
+        "off": {
+          "x": "3063240",
+          "y": "694944"
+        },
+        "ext": {
+          "cx": "2926080",
+          "cy": "283464"
+        }
+      }
+    },
+    {
+      "index": 5,
+      "type": "sp",
+      "name": {
+        "id": "5",
+        "name": "③ 버너 전체 분해도"
+      },
+      "text": [
+        "③ 버너 전체 분해도"
+      ],
+      "geometry": {
+        "off": {
+          "x": "6492240",
+          "y": "694944"
+        },
+        "ext": {
+          "cx": "5468112",
+          "cy": "283464"
+        }
+      }
+    },
+    {
+      "index": 6,
+      "type": "sp",
+      "name": {
+        "id": "6",
+        "name": "현행 관제와 고도화 계획 구분"
+      },
+      "text": [
+        "※ 화면은 건조실 3D 구현 현황이며, 단종 부품 목록화·유지관리 기준 수립은 2027년 계획입니다.  자료: 3D 화면, 버너 원도면, 2027년 중점추진과제"
+      ],
+      "geometry": {
+        "off": {
+          "x": "228600",
+          "y": "6477000"
+        },
+        "ext": {
+          "cx": "11734800",
+          "cy": "177800"
+        }
+      }
+    },
+    {
+      "index": 7,
+      "type": "pic",
+      "name": {
+        "id": "7",
+        "name": "건조실 전체 3D 모델",
+        "descr": "건조실 전체 모델과 7층 위치"
+      },
+      "text": [],
+      "geometry": {
+        "off": {
+          "x": "228600",
+          "y": "1399032"
+        },
+        "ext": {
+          "cx": "2331720",
+          "cy": "2380171"
+        }
+      },
+      "images": [
+        {
+          "rid": "rId3",
+          "target": "ppt/media/image10.png",
+          "extracted": "C:\\Users\\user\\Desktop\\프로젝트\\workspace\\review\\burner-service\\ppt-before\\7-image10.png",
+          "crop": null
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "type": "pic",
+      "name": {
+        "id": "8",
+        "name": "층별 설비 배치·구조",
+        "descr": "7층 모델의 버너 클릭 위치"
+      },
+      "text": [],
+      "geometry": {
+        "off": {
+          "x": "3063240",
+          "y": "1700784"
+        },
+        "ext": {
+          "cx": "2926080",
+          "cy": "1564439"
+        }
+      },
+      "images": [
+        {
+          "rid": "rId4",
+          "target": "ppt/media/image11.png",
+          "extracted": "C:\\Users\\user\\Desktop\\프로젝트\\workspace\\review\\burner-service\\ppt-before\\8-image11.png",
+          "crop": null
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "type": "pic",
+      "name": {
+        "id": "9",
+        "name": "버너 분해도·부품 정보",
+        "descr": "버너 전체 분해도, 부품 목록과 분해 슬라이더"
+      },
+      "text": [],
+      "geometry": {
+        "off": {
+          "x": "6492240",
+          "y": "1097280"
+        },
+        "ext": {
+          "cx": "5468112",
+          "cy": "2984678"
+        }
+      },
+      "images": [
+        {
+          "rid": "rId5",
+          "target": "ppt/media/image12.png",
+          "extracted": "C:\\Users\\user\\Desktop\\프로젝트\\workspace\\review\\burner-service\\ppt-before\\9-image12.png",
+          "crop": null
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "type": "graphicFrame",
+      "name": {
+        "id": "10",
+        "name": "설비 유지관리 디지털화 추진근거 표"
+      },
+      "text": [
+        "기존 관리 (As-is)",
+        "3D 기반 정비 체계 (To-be)",
+        "2027년 분기별 실행 계획",
+        "기대 효과",
+        "도면·자료 개별 보관",
+        "설비별 3D 도면 표준화",
+        "1분기  현황 진단·기본 배경 설정",
+        " (4개소 배경 설정률 100%)",
+        "2분기  3D 도면·부속설비 구성도",
+        " (4개소 도면 작성률 100%)",
+        "3분기  단종 부품 목록 확보",
+        " (4개소 목록화율 100%)",
+        "4분기  설비 통합관리 체계 구축",
+        " (통합 데이터 연동)",
+        "1)  정비시간 단축",
+        "     3D 도면 기반 신속 정비",
+        "2)  설비 정지 최소화",
+        "     단종 부품 선제 확보",
+        "3)  스마트 정비 체계 실현",
+        "     유지관리 기준 표준화",
+        "경험 중심 분해·정비",
+        "분해도·부품정보 연계",
+        "노후·단종 부품 사후 대응",
+        "단종 부품 목록·유지관리 기준 수립"
+      ],
+      "geometry": null
+    },
+    {
+      "index": 11,
+      "type": "pic",
+      "name": {
+        "id": "11",
+        "name": "2페이지로 돌아가기"
+      },
+      "text": [],
+      "geometry": {
+        "off": {
+          "x": "11353800",
+          "y": "76200"
+        },
+        "ext": {
+          "cx": "330200",
+          "cy": "330200"
+        }
+      },
+      "images": [
+        {
+          "rid": "rId7",
+          "target": "ppt/media/image7.png",
+          "extracted": "C:\\Users\\user\\Desktop\\프로젝트\\workspace\\review\\burner-service\\ppt-before\\11-image7.png",
+          "crop": null
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "type": "sp",
+      "name": {
+        "id": "12",
+        "name": "TextBox 6"
+      },
+      "text": [
+        "☞ 전체 모델에서 버너를 클릭해 분해도·부품 정보를 바로 조회하고 ",
+        "정비 준비를 표준화"
+      ],
+      "geometry": {
+        "off": {
+          "x": "228600",
+          "y": "6096000"
+        },
+        "ext": {
+          "cx": "11734800",
+          "cy": "176780"
+        }
+      }
+    },
+    {
+      "index": 13,
+      "type": "sp",
+      "name": {
+        "id": "18",
+        "name": "7층 위치 강조"
+      },
+      "text": [],
+      "geometry": {
+        "off": {
+          "x": "466344",
+          "y": "1828800"
+        },
+        "ext": {
+          "cx": "1344168",
+          "cy": "411480"
+        }
+      }
+    },
+    {
+      "index": 14,
+      "type": "sp",
+      "name": {
+        "id": "19",
+        "name": "7층 위치 안내"
+      },
+      "text": [
+        "7층"
+      ],
+      "geometry": {
+        "off": {
+          "x": "484632",
+          "y": "1600200"
+        },
+        "ext": {
+          "cx": "457200",
+          "cy": "201168"
+        }
+      }
+    },
+    {
+      "index": 15,
+      "type": "sp",
+      "name": {
+        "id": "20",
+        "name": "버너 클릭 위치 강조"
+      },
+      "text": [],
+      "geometry": {
+        "off": {
+          "x": "4581687",
+          "y": "2695941"
+        },
+        "ext": {
+          "cx": "219456",
+          "cy": "292608"
+        }
+      }
+    },
+    {
+      "index": 16,
+      "type": "sp",
+      "name": {
+        "id": "21",
+        "name": "버너 클릭 안내"
+      },
+      "text": [
+        "버너 클릭"
+      ],
+      "geometry": {
+        "off": {
+          "x": "4124487",
+          "y": "3502152"
+        },
+        "ext": {
+          "cx": "1133856",
+          "cy": "228600"
+        }
+      }
+    },
+    {
+      "index": 17,
+      "type": "sp",
+      "name": {
+        "id": "22",
+        "name": "버너 클릭 안내선"
+      },
+      "text": [],
+      "geometry": {
+        "off": {
+          "x": "4691415",
+          "y": "3025125"
+        },
+        "ext": {
+          "cx": "0",
+          "cy": "422163"
+        }
+      }
+    },
+    {
+      "index": 18,
+      "type": "sp",
+      "name": {
+        "id": "23",
+        "name": "전체 모델에서 7층으로 연결"
+      },
+      "text": [],
+      "geometry": {
+        "off": {
+          "x": "2633472",
+          "y": "2450592"
+        },
+        "ext": {
+          "cx": "365760",
+          "cy": "182880"
+        }
+      }
+    },
+    {
+      "index": 19,
+      "type": "sp",
+      "name": {
+        "id": "24",
+        "name": "층 선택 연결 설명"
+      },
+      "text": [
+        "7층 선택"
+      ],
+      "geometry": {
+        "off": {
+          "x": "2551176",
+          "y": "2167128"
+        },
+        "ext": {
+          "cx": "539496",
+          "cy": "210312"
+        }
+      }
+    },
+    {
+      "index": 20,
+      "type": "sp",
+      "name": {
+        "id": "25",
+        "name": "버너 클릭에서 전체 분해도로 연결"
+      },
+      "text": [],
+      "geometry": {
+        "off": {
+          "x": "6062472",
+          "y": "2450592"
+        },
+        "ext": {
+          "cx": "365760",
+          "cy": "182880"
+        }
+      }
+    },
+    {
+      "index": 21,
+      "type": "sp",
+      "name": {
+        "id": "26",
+        "name": "분해도 표시 연결 설명"
+      },
+      "text": [
+        "상세 열기"
+      ],
+      "geometry": {
+        "off": {
+          "x": "5989320",
+          "y": "2167128"
+        },
+        "ext": {
+          "cx": "539496",
+          "cy": "210312"
+        }
+      }
+    },
+    {
+      "index": 22,
+      "type": "sp",
+      "name": {
+        "id": "27",
+        "name": "층별 설비 위치 확인"
+      },
+      "text": [
+        "층별 설비 위치 확인"
+      ],
+      "geometry": {
+        "off": {
+          "x": "228600",
+          "y": "4105656"
+        },
+        "ext": {
+          "cx": "2331720",
+          "cy": "210312"
+        }
+      }
+    },
+    {
+      "index": 23,
+      "type": "sp",
+      "name": {
+        "id": "28",
+        "name": "7층 모델에서 버너 선택"
+      },
+      "text": [
+        "7층 모델에서 버너 선택"
+      ],
+      "geometry": {
+        "off": {
+          "x": "3063240",
+          "y": "4105656"
+        },
+        "ext": {
+          "cx": "2926080",
+          "cy": "210312"
+        }
+      }
+    },
+    {
+      "index": 24,
+      "type": "sp",
+      "name": {
+        "id": "29",
+        "name": "전체 분해도와 부품 정보를 한 화면에 표시"
+      },
+      "text": [
+        "전체 분해도와 부품 정보를 한 화면에 표시"
+      ],
+      "geometry": {
+        "off": {
+          "x": "6492240",
+          "y": "4105656"
+        },
+        "ext": {
+          "cx": "5468112",
+          "cy": "210312"
+        }
+      }
+    }
+  ],
+  "relationships": {
+    "rId3": {
+      "Id": "rId3",
+      "Type": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
+      "Target": "../media/image10.png"
+    },
+    "rId7": {
+      "Id": "rId7",
+      "Type": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
+      "Target": "../media/image7.png"
+    },
+    "rId2": {
+      "Id": "rId2",
+      "Type": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/notesSlide",
+      "Target": "../notesSlides/notesSlide3.xml"
+    },
+    "rId1": {
+      "Id": "rId1",
+      "Type": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideLayout",
+      "Target": "../slideLayouts/slideLayout2.xml"
+    },
+    "rId6": {
+      "Id": "rId6",
+      "Type": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide",
+      "Target": "slide4.xml"
+    },
+    "rId5": {
+      "Id": "rId5",
+      "Type": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
+      "Target": "../media/image12.png"
+    },
+    "rId4": {
+      "Id": "rId4",
+      "Type": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
+      "Target": "../media/image11.png"
+    }
+  }
+}

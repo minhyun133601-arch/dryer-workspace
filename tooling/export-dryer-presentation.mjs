@@ -7,12 +7,12 @@ import { EQUIPMENT, FLOORS, FLOOR_HEIGHT, floorElevation, floorHeight } from '..
 import { dryerStairWalkPoints } from '../apps/site/dryer-building-data.js';
 import { PLACEMENT_REGIONS } from '../apps/site/placement-rules.js';
 import { SITE_ASSETS } from '../apps/site/asset-catalog.js';
-import { readProjectText as read, namespaceModule as namespace, replaceRequired, bundleBurnerMaintenance, bundleBurnerService, bundlePersonAvatar } from './site-export-utils.mjs';
+import { readProjectText as read, namespaceModule as namespace, replaceRequired, bundleBurnerMaintenance, bundleBurnerService, bundlePersonAvatar, embedPreparationFacePhotos } from './site-export-utils.mjs';
 
 const root = new URL('../', import.meta.url);
-const modelFields = ['id', 'floor', 'name', 'type', 'tag', 'position', 'rotation', 'previousRotation', 'previousPlacements', 'placementRevision', 'parts', 'labelHeight', 'height', 'length', 'radius', 'variant', 'visibleFloors', 'width', 'depth', 'belowFloor', 'stations', 'positionBasis', 'positionConfidence', 'preparation', 'dryerRoute', 'inspectableInterior', 'interiorView', 'physicalRoomId', 'samePhysicalRoomAs'];
+const modelFields = ['dryerLoad', 'id', 'floor', 'name', 'type', 'tag', 'position', 'rotation', 'previousRotation', 'previousPlacements', 'placementRevision', 'parts', 'labelHeight', 'height', 'length', 'radius', 'variant', 'visibleFloors', 'width', 'depth', 'belowFloor', 'stations', 'positionBasis', 'positionConfidence', 'preparation', 'dryerRoute', 'inspectableInterior', 'interiorView', 'exteriorView', 'physicalRoomId', 'samePhysicalRoomAs'];
 const sceneDependencies = new Set([
-  './dryer-compressor-interior-details.js',
+  './dryer-compressor-interior-details.js', './dryer-floor1-photo-detail.js',
   '../shared/vendor/three.module.js', './furnace-model.js', './facility-data.js', './facility-models.js', './dryer-process-models.js',
   './equipment-lighting.js', './preparation-models.js', './boiler-models.js', './preparation-environment.js', './dryer-upper-models.js', './dryer-building-envelope.js', './dryer-route-environment.js', './dryer-compressor-environment.js',
   './outdoor-data.js', './outdoor-models.js', './campus-data.js', './campus-models.js', './packaging-data.js', './packaging-models.js',
@@ -23,10 +23,11 @@ export async function exportDryerPresentation({ output, profile = 'dryer' } = {}
   if (!['dryer', 'presentation'].includes(profile)) throw new Error(`Unknown dryer export profile: ${profile}`);
   const automatic = profile === 'presentation';
   const filenames = [
-    'dryer-compressor-interior-details.js',
+    'dryer-compressor-interior-details.js', 'dryer-compressor-site-finish.js', 'dryer-floor1-photo-detail.js',
     'share/dryer-index.html', 'share/dryer-app.js', 'share/styles.css', 'share/dryer-styles.css', 'layout-editor.css', 'furnace-detail.css',
     'scene.js', 'facility-models.js', 'furnace-model.js', 'furnace-drawing-data.js', 'furnace-drawing-model.js', 'furnace-detail.js',
     'layout-editor.js', 'placement-rules.js', 'proximity-doors.js', 'dryer-upper-models.js', 'dryer-building-envelope.js',
+    'architecture-kit.js', 'dryer-wall-plan.js',
     'dryer-process-models.js', 'preparation-models.js', 'preparation-environment.js', 'dryer-route-environment.js', 'dryer-compressor-environment.js',
   ];
   const values = await Promise.all(filenames.map(name => read(`apps/site/${name}`)));
@@ -44,8 +45,8 @@ export async function exportDryerPresentation({ output, profile = 'dryer' } = {}
 
   // The manual first-floor view includes the adjacent boiler interior. The
   // automatic presentation stays on the dryer route and excludes that room.
-  const equipment = EQUIPMENT.filter(item => Number.isFinite(item.floor) && ((!automatic && item.id === 'f1-boiler-room') || (item.id !== 'f1-boiler-room' && !item.samePhysicalRoomAs)))
-    .map(item => Object.fromEntries(modelFields.filter(field => field in item).map(field => [field, item[field]])));
+  const equipment = await embedPreparationFacePhotos(EQUIPMENT.filter(item => Number.isFinite(item.floor) && ((!automatic && item.id === 'f1-boiler-room') || (item.id !== 'f1-boiler-room' && !item.samePhysicalRoomAs)))
+    .map(item => Object.fromEntries(modelFields.filter(field => field in item).map(field => [field, item[field]]))));
   const floors = FLOORS.map(({ reference, photos, source, sourceReference, summary, personStart, ...floor }) => automatic ? { ...floor, personStart } : floor);
   const data = `const FLOORS = ${JSON.stringify(floors)};\nconst FLOOR_HEIGHT = ${FLOOR_HEIGHT};\nconst EQUIPMENT = ${JSON.stringify(equipment)};\nconst floorElevation = ${floorElevation.toString()};\nconst floorHeight = ${floorHeight.toString()};`;
   // Generic scene methods retain harmless identifiers for disabled areas.
@@ -88,8 +89,8 @@ export async function exportDryerPresentation({ output, profile = 'dryer' } = {}
   const code = [
     namespace(three, 'THREE'), data, disabledRooms,
     namespace(await read('apps/site/equipment-lighting.js'), 'lightModule', ["import * as THREE from '../shared/vendor/three.module.js';"]),
-    'const { equipmentReflection } = lightModule;',
-    namespace(sources['facility-models.js'], 'modelsModule'), 'const { buildFacilityEquipment } = modelsModule;',
+    'const { applyLightProfile, equipmentReflection, lightProfileFor } = lightModule;',
+    namespace(sources['facility-models.js'], 'modelsModule', ["import * as THREE from '../shared/vendor/three.module.js';"]), 'const { buildFacilityEquipment } = modelsModule;',
     namespace(sources['furnace-model.js'], 'furnaceModelModule'), 'const { buildFurnace } = furnaceModelModule;',
     namespace(sources['furnace-drawing-data.js'], 'furnaceDrawingDataModule'),
     'const { BASIS, DIMENSIONS, DRAWING_GROUPS, DRAWING_INFO, DRAWING_PARTS, DRAWING_SHEETS, FIELD_STATUS, GAS_PATH, PART_BY_ID, PILOT_PATH, TRAIN_GASKET_ALLOWANCE } = furnaceDrawingDataModule;',
@@ -111,9 +112,13 @@ export async function exportDryerPresentation({ output, profile = 'dryer' } = {}
     'const { PLACEMENT_RULES, PLACEMENT_REGIONS, constrainPlacement, toRoomPosition, fromRoomPosition, rotatedFootprint } = placementRulesModule;',
     namespace(sources['proximity-doors.js'], 'proximityDoorsModule', ["import * as THREE from '../shared/vendor/three.module.js';"]),
     'const { createProximityDoorController } = proximityDoorsModule;',
-    namespace(sources['dryer-upper-models.js'], 'dryerUpperModelsModule', ["import * as THREE from '../shared/vendor/three.module.js';", "import { buildFurnace } from './furnace-model.js';"]),
+    namespace(sources['architecture-kit.js'], 'architectureKitModule', ["import * as THREE from '../shared/vendor/three.module.js';"]),
+    'const { createArchitectureKit } = architectureKitModule;',
+    namespace(sources['dryer-wall-plan.js'], 'dryerWallPlanModule'),
+    'const { dryerWallPlan } = dryerWallPlanModule;',
+    namespace(sources['dryer-upper-models.js'], 'dryerUpperModelsModule', ["import * as THREE from '../shared/vendor/three.module.js';", "import { buildFurnace } from './furnace-model.js';", "import { createArchitectureKit } from './architecture-kit.js';", "import { dryerWallPlan } from './dryer-wall-plan.js';"]),
     'const { buildDryerUpperEnvironment, buildDryerUpperEquipment } = dryerUpperModelsModule;',
-    namespace(sources['dryer-building-envelope.js'], 'dryerBuildingEnvelopeModule', ["import * as THREE from '../shared/vendor/three.module.js';"]),
+    namespace(sources['dryer-building-envelope.js'], 'dryerBuildingEnvelopeModule', ["import * as THREE from '../shared/vendor/three.module.js';", "import { createArchitectureKit } from './architecture-kit.js';"]),
     'const { buildDryerBuildingEnvironment, alignDryerCompressorEntrance } = dryerBuildingEnvelopeModule;',
     namespace(sources['dryer-process-models.js'], 'dryerProcessModelsModule', ["import * as THREE from '../shared/vendor/three.module.js';"]),
     'const { buildDryerProcessEquipment } = dryerProcessModelsModule;',
@@ -125,8 +130,12 @@ export async function exportDryerPresentation({ output, profile = 'dryer' } = {}
     'const { buildDryerRouteEnvironment } = dryerRouteEnvironmentModule;',
     namespace(sources['dryer-compressor-environment.js'], 'dryerCompressorEnvironmentModule', ["import * as THREE from '../shared/vendor/three.module.js';"]),
     'const { buildDryerCompressorEnvironment } = dryerCompressorEnvironmentModule;',
-    namespace(sources['dryer-compressor-interior-details.js'], 'dryerCompressorInteriorModule', ["import * as THREE from '../shared/vendor/three.module.js';"]),
+    namespace(sources['dryer-compressor-site-finish.js'], 'dryerCompressorSiteFinishModule', ["import * as THREE from '../shared/vendor/three.module.js';"]),
+    'const { buildDryerCompressorSiteFinish } = dryerCompressorSiteFinishModule;',
+    namespace(sources['dryer-compressor-interior-details.js'], 'dryerCompressorInteriorModule', ["import * as THREE from '../shared/vendor/three.module.js';", "import { buildDryerCompressorSiteFinish } from './dryer-compressor-site-finish.js';"]),
     'const { buildDryerCompressorInteriorDetails } = dryerCompressorInteriorModule;',
+    namespace(sources['dryer-floor1-photo-detail.js'], 'dryerFloor1PhotoDetailModule', ["import * as THREE from '../shared/vendor/three.module.js';"]),
+    'const { buildDryerFloor1PhotoDetail, buildDryerFloor1Load } = dryerFloor1PhotoDetailModule;',
     ...(!automatic ? [
       namespace(boilerModels, 'boilerModelsModule', ["import * as THREE from '../shared/vendor/three.module.js';"]),
       'const { buildCampusBoilerRoom, buildPreparationBoilerRoom } = boilerModelsModule;',

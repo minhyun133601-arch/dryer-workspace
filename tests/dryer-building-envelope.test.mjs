@@ -149,9 +149,13 @@ test('fourth and fifth floors retain the narrow tower, the aligned northeast bay
   try {
     for (const floor of [4, 5]) {
       const env = h.environments.get(floor);
-      assert.ok(down(env.deck, 11, -10).length > 0, `${floor}F northeast stair bay is not lost`);
+      assert.ok(down(env.deck, 9.4, -7.6).length > 0, `${floor}F northeast lobby is not lost`);
+      assert.ok(down(env.deck, 10.1, -12).length > 0, `${floor}F northeast stair landing is not lost`);
+      assert.equal(down(env.deck, 12, -8).length, 0, `${floor}F recess east of the drawn lobby is open air`);
+      assert.equal(down(env.deck, 11.5, -12).length, 0, `${floor}F northeast flights pass a real stair void`);
+      assert.equal(down(env.deck, -7.1, -11).length, 0, `${floor}F west flights pass a real stair void`);
       assert.equal(down(env.deck, 22, 0).length, 0, `${floor}F does not inherit the wide low wing`);
-      close(size(env.deck).x, 22, `${floor}F tower plus north bay width`); close(size(env.deck).z, 26.8, `${floor}F depth`);
+      close(size(env.deck).x, 22.1, `${floor}F tower plus drawn stair bay width`); close(size(env.deck).z, 26.8, `${floor}F depth`);
     }
     assert.equal(down(h.environments.get(5).deck, -1, 7.5).length, 0, 'the lower cone retains a real floor penetration');
     assert.ok(down(h.environments.get(5).deck, -5, 7.5).length > 0);
@@ -161,7 +165,7 @@ test('fourth and fifth floors retain the narrow tower, the aligned northeast bay
 test('room names remain legible source labels and low cutaway partitions preserve real door gaps', () => {
   const h = harness();
   try {
-    for (const name of ['공장', '원료계량창고', '일일원료보관창고', '조제실', '보일러실', 'CIP·세척 설비실', '사무·소독 준비실', '소독실·에어샤워', '위생 전실·신발장', '화장실','탈의실 · 탈의장','OP실','충전·포장 설비 구역','엘리베이터 · ELEV']) assert.ok(h.labels.some(label => label.text === name), name);
+    for (const name of ['V/F·화인리턴 작업장', '챔버 하부 작업장', '1팀 2파트 휴게실', '포장창고', '원료계량창고', '일일원료보관창고', '조제실', '보일러실', 'CIP·세척 설비실', '사무·소독 준비실', '소독실·에어샤워', '위생 전실·신발장', '화장실','탈의실 · 탈의장','OP실','충전·포장 설비 구역','엘리베이터 · ELEV']) assert.ok(h.labels.some(label => label.text === name), name);
     assert.ok(!h.labels.some(label=>['회의실 및 휴게실','사진 및 액자 진열공간'].includes(label.text)),'the filmed walk replaces superseded historical room-use guesses');
     assert.ok(!h.labels.some(label => label.parent === h.environments.get(1).architectureFixtures && /^(?:공무작업실|공무자재창고|준비실|OP실)$/.test(label.text)), 'superseded historical names cannot misidentify the current first-floor rooms');
     const lowWalls = h.environments.get(1).structure.children.filter(root => root.userData.lowPartition);
@@ -229,13 +233,14 @@ test('the filmed upper stair door has real perforations and the two observed fli
 test('the two raised window rows remain genuine openings without filling one another or the sill gap',()=>{
   const h=harness();
   try{
-    const spec=DRYER_BUILDING_FLOORS[3],facade=h.environments.get(3).facade;
+    const spec=DRYER_BUILDING_FLOORS[3],{facade,structure}=h.environments.get(3);
     for(const opening of spec.routeSurvey.exteriorWindowBands){
       const z=spec.mainBounds.minZ+opening.offset,x=opening.side==='west'?spec.mainBounds.minX:spec.mainBounds.maxX,side=opening.side==='west'?1:-1;
-      const hits=y=>new THREE.Raycaster(new THREE.Vector3(x+side*.35,spec.elevation+y,z),new THREE.Vector3(-side,0,0),0,.7).intersectObject(facade,true);
-      assert.equal(hits(opening.sill+opening.height/2).length,0,'the actual upper/lower glazing row has no opaque wall behind it');
+      const hits=y=>new THREE.Raycaster(new THREE.Vector3(x+side*.35,spec.elevation+y,z),new THREE.Vector3(-side,0,0),0,.7).intersectObjects([facade,structure],true);
+      for(const y of [opening.sill+.4,opening.sill+opening.height-.35])assert.equal(hits(y).length,0,'neither the sliding row nor the fixed upper row has an opaque wall behind it');
       assert.ok(hits(.5).length>0,'the solid stainless-protected wall sill remains below the two rows');
-      assert.ok(hits(1.97).length>0,'a real wall strip separates the rows');
+      assert.ok(hits(opening.sill+opening.height+.3).length>0,'the panel wall continues above the window head');
+      assert.equal(opening.modules,opening.width/2,'AW-7/AW-8 stay on their 2 m modules');
     }
   }finally{h.dispose();}
 });

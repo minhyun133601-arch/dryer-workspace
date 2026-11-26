@@ -2,6 +2,7 @@ import * as THREE from '../shared/vendor/three.module.js';
 import { PACKAGING_STAIR_PROFILES, packagingEntryStairPlan } from './packaging-routes.js';
 import { buildFloor3Decks, floor3Fixtures, floor3Lettering, freightLift, hopperVentDrops, slidingDoor, stickWallServices, vinylCurtain } from './packaging-floor3-environment.js';
 import { tableSacks } from './packaging-storage-models.js';
+import { createArchitectureKit } from './architecture-kit.js';
 
 // Local drawing coordinates, metres: +X right, +Z toward the entrance, Y=0 at
 // the selected floor. All overhead enclosure belongs to `ceiling` so the
@@ -14,12 +15,14 @@ function materials(s) {
   if (s.packagingEnvironmentV2Materials) return s.packagingEnvironmentV2Materials;
   const make = (color, roughness = .65, metalness = .1, extra = {}) => s._material(color, roughness, metalness, extra);
   const m = {
-    cream: make(0xe3dcc0, .63, .27), panel: make(0xe9e9dd, .81, .05),
-    concrete: make(0xc5c8bb, .91, .02), floor: make(0x2e8a55, .24, .12),
+    cream: make(0xe0dac3, .66, .18), panel: make(0xedf0e8, .76, .05),
+    concrete: make(0xc5c8bb, .91, .02), floor: s.mat?.floor || make(0x1f6644, .28, .08),
+    skirting: make(0x185c3d, .42, .05),
     stone: make(0xc8c3b1, .58, .035),
-    steel: make(0x9ba5a8, .27, .9, { envMapIntensity: 1.1 }),
-    silver: make(0xc8ccd0, .32, .75), darkDuct: make(0x4f525a, .48, .5),
-    frame: make(0x83867e, .56, .52), black: make(0x202522, .7, .18),
+    steel: make(0xdce2e4, .24, .88, { envMapIntensity: 1.15 }),
+    silver: make(0xd2d7da, .28, .82), darkDuct: make(0x4a5058, .5, .48),
+    ceilingDeck: s.mat?.ceilingDeck || make(0x4c545a, .58, .48),
+    frame: make(0x888d86, .48, .56), black: make(0x202522, .7, .18),
     yellow: make(0xf2c200, .52, .16), blue: make(0x1f57a8, .5, .25),
     orange: make(0xe8622a, .58, .18), red: make(0xba3f32, .55, .2),
     maroon: make(0x944664, .8, .05),
@@ -166,7 +169,7 @@ function roofAndCeiling(s, groups, room, bounds, m) {
       panels.push([[cx, (y0 + y1) / 2 + .07, (z0 + z1) / 2], [width + .24, .1, slopeLength + .04], [angle, 0, 0]]);
       for (let x = bounds.minX + .3; x <= bounds.maxX; x += 5.125) members.push([[x, y0 - .23, z0], [x, y1 - .23, z1], .2, .4]);
     }
-    boxes(s, groups.ceiling, m.panel, panels, 'packaging-m-shaped-twin-gable-roof-panels');
+    boxes(s, groups.ceiling, m.ceilingDeck, panels, 'packaging-m-shaped-twin-gable-roof-panels', false);
     // The east and west walls run up into both gables.
     const gables = [1, 3].map((i) => { const shape = new THREE.Shape(); [zKnots[i - 1], zKnots[i], zKnots[i + 1]].forEach((z, k) => shape[k ? 'lineTo' : 'moveTo'](z, roofHeightAt(layout, bounds, z))); shape.closePath(); return shape; });
     for (const x of [bounds.minX + .09, bounds.maxX + .01]) {
@@ -177,10 +180,14 @@ function roofAndCeiling(s, groups, room, bounds, m) {
     bars(s, groups.ceiling, m.frame, [[[bounds.minX, height - .08, cz], [bounds.maxX, height - .08, cz], .1]], 'packaging-central-200pvc-valley-gutter');
     groups.ceiling.userData.roofProfile = { eaveHeight: layout.roof?.eaveHeight ?? 6, ridgeHeight: layout.roof?.ridgeHeight ?? 7.36, ridges: [cz - offset, cz + offset] };
   } else {
-    s._box(groups.ceiling, [width, .2, depth], [cx, height + .1, (bounds.minZ + bounds.maxZ) / 2], m.panel).name = 'packaging-upper-floor-slab-soffit';
+    const soffit = s._box(groups.ceiling, [width, .2, depth], [cx, height + .1, (bounds.minZ + bounds.maxZ) / 2], m.ceilingDeck);
+    soffit.name = 'packaging-upper-floor-slab-soffit'; soffit.castShadow = false;
     for (let z = bounds.minZ + .3; z <= bounds.maxZ; z += 5) members.push([[bounds.minX, height - .395, z], [bounds.maxX, height - .395, z], .3, .79]);
     for (let x = bounds.minX + 5.125; x < bounds.maxX; x += 5.125) members.push([[x, height - .395, bounds.minZ], [x, height - .395, bounds.maxZ], .3, .79]);
   }
+  const trays = [];
+  for (const tx of [-9.2, 9.2]) trays.push([[tx, height - .92, (bounds.minZ + bounds.maxZ) / 2], [.34, .07, depth - 2]]);
+  boxes(s, groups.ceiling, m.black, trays, 'packaging-overhead-cable-trays', false);
   hBeams(s, groups.ceiling, m.cream, members, 'packaging-overhead-h-section-structure');
   boxes(s, groups.ceiling, m.cream, purlins, 'packaging-roof-purlins-at-one-metre');
   for (const x of [-5.125, 5.125]) for (const z of [-10, -5, 0, 5, 10]) {
@@ -255,13 +262,26 @@ function columnsAndBraces(s, groups, room, bounds, m) {
   const layout = room.layout, level = room.floorLevel || 3, h = level === 3 ? (layout.roof?.eaveHeight ?? 6) : (layout.ceilingHeight ?? (level === 2 ? 6.15 : 6));
   const xAxes = [-15.375, -10.25, -5.125, 0, 5.125, 10.25, 15.375], zAxes = [-14.9, -10, -5, 0, 5, 10, 14.9];
   const defaults = [...xAxes.flatMap((x) => [zAxes[0], zAxes.at(-1)].map((z) => ({ x, z }))), ...zAxes.slice(1, -1).flatMap((z) => [xAxes[0], xAxes.at(-1)].map((x) => ({ x, z }))), ...[-5.125, 5.125].map((x) => ({ x, z: 0 }))];
-  const columns = layout.columns || defaults, members = [], feet = [], bases = [], guards = [], blackBands = [], wallBraces = [];
+  const columns = layout.columns || defaults, members = [], feet = [], bases = [], greenFeet = [], splicePlates = [], spliceBolts = [], guards = [], blackBands = [], wallBraces = [];
   for (const col of columns) {
     const w = col.width ?? (level === 3 ? .3 : .428), d = col.depth ?? w;
     members.push([[col.x, h / 2, col.z], [.014, h, Math.max(.02, d - .03)]], [[col.x, h / 2, col.z - d / 2], [w, h, .022]], [[col.x, h / 2, col.z + d / 2], [w, h, .022]]);
-    // A-11 detail B: chamfered concrete guards stand around the main columns.
-    if (level === 3 && w > .25) bases.push([[col.x, .225, col.z], [w + .34, .45, d + .34]], [[col.x, .52, col.z], [w + .16, .14, d + .16]]);
-    else feet.push([[col.x, .06, col.z], [w + .2, .12, d + .2]]);
+    // Splice plates + 2x6 bolt rows + white concrete base + green foot band
+    const sy = 1.22, ph = .46, pw = w * .86;
+    for (const side of [-1, 1]) {
+      splicePlates.push([[col.x, sy, col.z + side * (d / 2 + .01)], [pw, ph, .016]]);
+      for (const bx of [-pw * .28, pw * .28]) for (let row = 0; row < 6; row++) {
+        spliceBolts.push([[col.x + bx, sy - ph * .38 + row * (ph * .76 / 5), col.z + side * (d / 2 + .022)], [.022, .022, .018]]);
+      }
+    }
+    if (level === 3 && w > .25) {
+      bases.push([[col.x, .225, col.z], [w + .34, .45, d + .34]], [[col.x, .52, col.z], [w + .16, .14, d + .16]]);
+      greenFeet.push([[col.x, .07, col.z], [w + .36, .14, d + .36]]);
+    } else {
+      bases.push([[col.x, .2, col.z], [w + .16, .34, d + .16]]);
+      greenFeet.push([[col.x, .07, col.z], [w + .19, .14, d + .19]]);
+      feet.push([[col.x, .03, col.z], [w + .22, .06, d + .22]]);
+    }
     if (Math.abs(col.z) < .1 && col.x > bounds.minX + 1 && col.x < bounds.maxX - 1) {
       for (const z of [col.z - .45, col.z + .45]) {
         guards.push([[col.x - .5, .1, z], [col.x - .5, .85, z], .05], [[col.x + .5, .1, z], [col.x + .5, .85, z], .05], [[col.x - .5, .85, z], [col.x + .5, .85, z], .05]);
@@ -273,11 +293,16 @@ function columnsAndBraces(s, groups, room, bounds, m) {
     const x = bounds[side] + (side === 'minX' ? .18 : -.18);
     for (const [z0, z1] of [[-10, -5], [5, 10]]) wallBraces.push([[x, 2.65, z0], [x, h - .2, z1], .017], [[x, h - .2, z0], [x, 2.65, z1], .017]);
   }
+  const before = groups.structure.children.length;
   boxes(s, groups.structure, m.cream, members, 'packaging-cream-h-section-columns');
+  boxes(s, groups.structure, m.cream, splicePlates, 'packaging-column-splice-plates', false);
+  boxes(s, groups.structure, m.frame, spliceBolts, 'packaging-column-splice-bolts', false);
   boxes(s, groups.structure, m.frame, feet, 'packaging-column-baseplates');
   boxes(s, groups.structure, m.panel, bases, 'packaging-column-chamfered-concrete-bases');
+  boxes(s, groups.structure, m.skirting, greenFeet, 'packaging-column-green-feet', false);
   bars(s, groups.structure, m.yellow, guards, 'packaging-column-u-pipe-protectors');
   instances(s, groups.structure, new THREE.CylinderGeometry(1, 1, 1, 10), m.black, blackBands, 'packaging-column-protector-black-bands');
+  for (const node of groups.structure.children.slice(before)) node.userData.buildingColumn = true;
   bars(s, groups.ceiling, m.frame, wallBraces, 'packaging-wall-x-rod-bracing');
 }
 
@@ -297,14 +322,16 @@ function partitionIntervals(part, doors) {
 }
 
 function roomsAndDoors(s, groups, room, m) {
-  const layout = room.layout, low = [], high = [], tops = [], roomFloors = [], doorHeads=new Set();
-  for (const part of layout.partitions || []) {
+  const layout = room.layout, low = [], high = [], caps = [], tops = [], roomFloors = [], doorHeads=new Set();
+  const drawn = layout.wallPlan?.interior;
+  for (const part of drawn ? [] : layout.partitions || []) {
     const height = part.height ?? 3, thickness = part.thickness ?? .08;
     // Confirmed conveyor crossings are low transfer hatches, not human doors.
     const passages = transportCrossings(part, layout.transportLines || []);
     for (const segment of partitionIntervals(part, [...(layout.doors || []), ...passages])) {
       low.push([[segment.center[0], .55, segment.center[1]], [segment.length, 1.1, thickness], [0, segment.rotation, 0]]);
       high.push([[segment.center[0], (height + 1.1) / 2, segment.center[1]], [segment.length, Math.max(.02, height - 1.1), thickness], [0, segment.rotation, 0]]);
+      caps.push([[segment.center[0], 1.101, segment.center[1]], [segment.length, .004, thickness], [0, segment.rotation, 0]]);
     }
     // Door cuts stop at the head. Removing the whole-height interval left
     // the upper partition and wall-mounted exit fittings unsupported.
@@ -338,6 +365,7 @@ function roomsAndDoors(s, groups, room, m) {
     if (r.ceiling !== false && (r.height ?? 3) <= 3.5 && (w * d < 80 || r.ceiling === true)) tops.push([[cx, (r.height ?? 3) + .025, cz], [w, .05, d]]);
   }
   boxes(s, groups.structure, m.panel, low, 'packaging-room-cutaway-lower-partitions');
+  boxes(s, groups.structure, m.wallCut ||= s._material(0x4c5650, .95, 0), caps, 'packaging-room-partition-cut-faces', false);
   boxes(s, groups.ceiling, m.panel, high, 'packaging-room-three-metre-upper-partitions');
   boxes(s, groups.ceiling, m.panel, tops, 'packaging-room-t50-panel-ceilings');
   boxes(s, groups.deck, m.floor, roomFloors, 'packaging-room-epoxy-floor-insets', false);
@@ -359,6 +387,21 @@ function roomsAndDoors(s, groups, room, m) {
     ], 'packaging-door-leaf-frames-and-handle');
     if (!glazed) s._box(leaf, [width * .44, .45, .045], [width / 2, 1.55, .025], m.glass);
   }
+}
+
+// Shell, stair rooms and partitions from the drawings. Conveyors that cross a
+// wall get their own low transfer opening, so no roller runs through a panel.
+function drawnWalls(s, groups, room) {
+  const layout = room.layout, level = room.floorLevel || 3, plan = layout.wallPlan;
+  const openings = s._group(groups.structure); openings.name = `packaging-${level}f-plan-openings`;
+  const kit = createArchitectureKit(s, { key: 'packaging-plan', level, prefix: `packaging-plan-${level}`, structure: groups.structure, facade: groups.ceiling, fixtures: openings, deck: groups.deck });
+  for (const data of plan.walls) {
+    const passages = data.transfer ? transportCrossings({ from: data.a, to: data.b }, layout.transportLines || []) : [];
+    const length = Math.hypot(data.b[0] - data.a[0], data.b[1] - data.a[1]);
+    kit.wall({ ...data, openings: [...data.openings, ...passages.map((p, i) => ({ type: 'HATCH', id: `${data.id}-transfer-${i + 1}`, width: p.width, sill: p.bottom, height: p.height - p.bottom, transfer: true,
+      offset: ((p.x - data.a[0]) * (data.b[0] - data.a[0]) + (p.z - data.a[1]) * (data.b[1] - data.a[1])) / length }))] });
+  }
+  kit.finish();
 }
 
 function transportCrossings(part, lines) {
@@ -768,7 +811,7 @@ function smallFixtures(s, groups, room, bounds, m) {
     let rotation=exit.rotation||0,nx=Math.sin(rotation),nz=Math.cos(rotation);
     if(nx*((bounds.minX+bounds.maxX)/2-exit.x)+nz*((bounds.minZ+bounds.maxZ)/2-exit.z)<0){rotation+=PI;nx=-nx;nz=-nz;}
     const perimeter=['minX','maxX'].some(side=>Math.abs(exit.x-bounds[side])<.2)||['minZ','maxZ'].some(side=>Math.abs(exit.z-bounds[side])<.2);
-    const wallOffset=perimeter ? .04 : 0,halfWall=perimeter ? .05 : .04,mountDistance=wallOffset+halfWall+.04;
+    const wallOffset=0,halfWall=perimeter ? .06 : .04,mountDistance=wallOffset+halfWall+.04;
     const sign = s._group(fixed, [exit.x+nx*mountDistance, (exit.height||2.25)+.3, exit.z+nz*mountDistance]); sign.rotation.y=rotation;
     sign.name=`packaging-wall-mounted-exit-sign-${exit.id}`;
     Object.assign(sign.userData,{wallMounted:true,doorId:exit.id,mountNormal:[nx,0,nz],wallFace:[exit.x+nx*(wallOffset+halfWall),exit.z+nz*(wallOffset+halfWall)],mountGap:.01});
@@ -777,7 +820,7 @@ function smallFixtures(s, groups, room, bounds, m) {
     boxes(s, sign, m.panel, [[[-.12, 0, .04], [.035, .13, .012]], [[.07, 0, .04], [.18, .035, .012]], [[.15, .037, .04], [.075, .025, .012], [0, 0, -PI / 4]], [[.15, -.037, .04], [.075, .025, .012], [0, 0, PI / 4]]], 'packaging-emergency-exit-arrow');
   }
   // Keep traps on solid wall above the glazing, beside the doorway heads.
-  for (const [index,[x, z]] of [[bounds.minX + .19, -12.3], [-6.35, bounds.maxZ - .18], [5.75, bounds.maxZ - .18]].entries()) {
+  for (const [index,[x, z]] of [[bounds.minX + .135, -12.3], [-6.35, bounds.maxZ - .18], [5.75, bounds.maxZ - .18]].entries()) {
     const west=x<bounds.minX+.3,mountDepth=west ? .035 : .025;
     const g = s._group(fixed, [x, 2.8, z]); g.rotation.y = west ? PI / 2 : PI;
     g.name=`packaging-wall-mounted-insect-trap-${index+1}`;
@@ -871,7 +914,7 @@ export function buildPackagingEnvironmentV2(s, room) {
   groups.ceiling = s._group(groups.structure); groups.ceiling.name = 'packaging-overhead-context'; groups.ceiling.visible = false;
   s._box(groups.deck, [b.maxX - b.minX, .22, b.maxZ - b.minZ], [(b.minX + b.maxX) / 2, -.14, (b.minZ + b.maxZ) / 2], m.concrete);
   s._box(groups.deck, [b.maxX - b.minX - .12, .045, b.maxZ - b.minZ - .12], [(b.minX + b.maxX) / 2, -.012, (b.minZ + b.maxZ) / 2], m.floor).name = 'packaging-gloss-green-epoxy-floor';
-  enclosure(s, groups, room, b, m);
+  if (layout.wallPlan) drawnWalls(s, groups, room); else enclosure(s, groups, room, b, m);
   columnsAndBraces(s, groups, room, b, m);
   roofAndCeiling(s, groups, room, b, m);
   roomsAndDoors(s, groups, room, m);

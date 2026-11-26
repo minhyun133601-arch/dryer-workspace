@@ -63,17 +63,18 @@ test('native708 tank necks retain open bores, attached tilted lids, screw latche
   const h=build();
   try{
     const root=h.roots.get('f3-feed-tank'),item=EQUIPMENT.find(item=>item.id==='f3-feed-tank');
-    assert.equal(named(root,'observed-cip-wide-mixer-mounting-flange').length,2);
-    assert.equal(named(root,'observed-cip-manhole-latch-handle').length,2);
+    assert.equal(named(root,'observed-cip-wide-mixer-mounting-flange').length,3);
+    assert.equal(named(root,'observed-cip-manhole-latch-handle').length,3);
     const hinges=named(root,'observed-cip-manhole-lid-hinge'),pins=named(root,'observed-cip-lid-hinge-pin');
-    assert.equal(hinges.length,2);
+    assert.equal(hinges.length,3,'cards 19, 21 and 22 show three tank tops');
     for(const [i,hinge]of hinges.entries()){
       assert.ok(Math.abs(hinge.rotation.x)>.1&&Math.abs(hinge.rotation.x)<.35,'the filmed lid lies just above the far rim rather than standing almost upright');
       const lid=box(named(hinge,'observed-open-manhole-lid')[0]),pin=pins[i].getWorldPosition(new THREE.Vector3());
       assert.ok(pin.distanceTo(lid.clampPoint(pin,new THREE.Vector3()))<.04,'the open lid remains attached at the rim hinge');
     }
-    for(const z of[-1.15,1.15]){
-      const ray=new THREE.Raycaster(new THREE.Vector3(item.position[0]+.33,12,item.position[2]+z+.25),new THREE.Vector3(0,-1,0),0,10),hits=ray.intersectObject(root,true);
+    for(const z of[-3.45,-1.15,1.15]){
+      const origin=root.localToWorld(new THREE.Vector3(.33,4.7,z+.25));
+      const ray=new THREE.Raycaster(origin,new THREE.Vector3(0,-1,0),0,10),hits=ray.intersectObject(root,true);
       assert.ok(hits.length&&hits[0].point.y<item.position[1]+1,'new latches, flanges and hinged lids do not secretly close the manhole');
     }
     for(const cap of named(root,'observed-tank-cap-with-open-manhole')){
@@ -95,7 +96,7 @@ test('native692/714 checker relief uses shared instances only on solid deck plat
       relief.getMatrixAt(i,instance);const transform=relief.matrixWorld.clone().multiply(instance);
       for(const x of[-.0375,.0375])for(const z of[-.009,.009]){
         point.set(x,0,z).applyMatrix4(transform);
-        for(const centerZ of[-1.15,1.15])assert.ok(Math.hypot(point.x-item.position[0],point.z-item.position[2]-centerZ)>.94,'no raised checker fragment bridges the open tank cutout');
+        for(const centerZ of[-3.45,-1.15,1.15])assert.ok(Math.hypot(point.x-item.position[0],point.z-item.position[2]-centerZ)>.94,'no raised checker fragment bridges the open tank cutout');
       }
     }
     assert.equal(named(root,'observed-cip-landing-checker-relief').length,1);
@@ -106,10 +107,18 @@ test('native692/714 checker relief uses shared instances only on solid deck plat
 test('native648 acid plaque faces upright and the three-display cabinet adds no invented current readings or tank identities',()=>{
   const h=build();
   try{
-    const root=h.roots.get('f3-feed-tank'),sign=named(root,'observed-cip-upright-nameplate')[0],cabinet=named(root,'observed-cip-three-display-cabinet')[0];
+    const root=h.roots.get('f3-feed-tank'),signs=named(root,'observed-cip-upright-nameplate'),sign=signs.find(node=>node.userData.text==='CIP탱크(산)'),cabinet=named(root,'observed-cip-three-display-cabinet')[0];
     assert.equal(sign.userData.text,'CIP탱크(산)');
     const normal=new THREE.Vector3(0,0,1).transformDirection(sign.matrixWorld);assert.ok(Math.abs(normal.y)<1e-6,'the label is upright rather than printed horizontally at tank height');
-    assert.ok(box(sign).getSize(new THREE.Vector3()).y>.3);
+    assert.equal(signs.length,3,'one small plate hangs on the front rail for each visible tank');
+    assert.ok(signs.every(plate=>plate.position.x>1.38 && Math.abs(plate.position.y-2.43)<.02));
+    assert.ok(box(sign).getSize(new THREE.Vector3()).y>.17 && box(sign).getSize(new THREE.Vector3()).y<.22);
+    assert.equal(named(root,'observed-cip-floor-pump').length,2);
+    assert.equal(named(root,'observed-cip-yellow-drive-guard').length,2);
+    assert.equal(named(root,'cip-long-lower-frame-tie').length,2);
+    const deck=box(named(root,'observed-cip-pierced-platform')[0]);
+    assert.ok(named(root,'observed-cip-tank-shell').every(shell=>box(shell).max.y-deck.max.y>.62));
+    assert.ok(named(root,'observed-cip-tank-lower-dish').every(dish=>box(dish).min.y-root.position.y>.70));
     assert.equal(named(cabinet,'observed-cip-static-display-window').length,3);
     assert.equal(cabinet.userData.liveReadingsAdded,false);
     assert.equal(root.userData.entireCipTankCountConfirmed,false);

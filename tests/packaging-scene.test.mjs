@@ -150,7 +150,8 @@ test('all three floors have finite three-part assemblies, bounded placement and 
     let meshes = 0, repeated = 0;
     scene.scene.traverse((mesh) => { if (mesh.isMesh) meshes++; if (mesh.isInstancedMesh) repeated += mesh.count; });
     assert.ok(repeated > 300, 'rails, steps and repeated fittings should use instances');
-    assert.ok(meshes < 2700, `three packaging floors use ${meshes} meshes`);
+    // Drawn shells, doors and sight windows of all three floors are included.
+    assert.ok(meshes < 2950, `three packaging floors use ${meshes} meshes`);
     for (const item of scene.equipment) {
       const root = scene.objects.get(item.id), parts = scene.parts.filter((part) => part.root === root);
       assert.equal(parts.length, 3);
@@ -189,7 +190,7 @@ test('desktop and phone packaging views retain their fit, expose machinery from 
         scene.setView(view); const camera = settled(scene);
         for (const point of points) {
           const projected = point.clone().project(camera);
-          assert.ok(Math.abs(projected.x) <= 1 && Math.abs(projected.y) <= 1 && projected.z >= -1 && projected.z <= 1, `${width}x${height} ${view}: ${point.toArray()}`);
+          assert.ok(Math.abs(projected.x) <= 1 && Math.abs(projected.y) <= 1 && projected.z >= -1 && projected.z <= 1, `${width}x${height} ${view}: ${point.toArray()} -> ${projected.toArray().map(v => v.toFixed(3))}`);
         }
         assert.equal(scene.packaging.ceiling.visible, false, 'overhead context must not obscure machinery in the overview');
       }

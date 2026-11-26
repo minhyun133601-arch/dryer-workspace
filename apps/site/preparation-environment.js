@@ -13,7 +13,7 @@ export function buildPreparationEnvironment(s, environment, spec) {
   };
   const m = s.preparationEnvironmentMaterials ||= Object.fromEntries(Object.entries({
     steel: [0xb7c3bf, .37, .65], dark: [0x293b3c, .7, .12], trim: [0x929f9b, .5, .48],
-    cream: [0xe4e3cf, .9, .02], green: [0x277356, .92, .01], redFloor: [0x915a4a, .96, .01],
+    cream: [0xe4e3cf, .9, .02], roofSheet: [0x727d86,.74,.27], green: [0x277356, .92, .01], redFloor: [0x915a4a, .96, .01],
     yellow: [0xd1cb36, .8, .02], orange: [0xdc762b, .75, .06], blue: [0x2c7386, .77, .05],
     red: [0xaa3b33, .8, .05], white: [0xe6e5d8, .9, .02], paper: [0xd4bc91, .98, .01],
     pallet: [0x3c6978, .9, .03], wood: [0xaf8d58, .88, .02], brown: [0x3b3029, .8, .02], black: [0x182527, .85, .05],
@@ -114,9 +114,11 @@ export function buildPreparationEnvironment(s, environment, spec) {
     return root;
   }
 
+  // Same worn epoxy as the rest of the plant (walk of 11/13, card floors of 11/24).
+  m.epoxy ||= s.mat?.floor || m.green;
   const floors = group(deck, 'current-green-floor-and-zones');
   for (const [x, z, width, depth] of [[25.3, .5, 17.8, 8.1], [22.3, 11.5, 11.7, 13.7], [31.3, 18.9, 6.1, 5.3]]) {
-    box(floors, [width, .012, depth], [x, .008, z], 'green');
+    box(floors, [width, .012, depth], [x, .008, z], 'epoxy');
   }
   for (const [x, z, width, depth] of [[30.8, -1.9, 5.8, 1.7], [23.4, 3.5, 8.1, 1.3], [18.9, 11.4, 1.1, 11.3]]) {
     box(floors, [width, .009, depth], [x, .018, z], 'redFloor');
@@ -501,14 +503,41 @@ export function buildPreparationEnvironment(s, environment, spec) {
   panel(washroomUpper, [.4, .18, .014], [31.85, 1.45, 13.07], 'white');
   repeats(washroom, 'washroom-threshold-slippers', [.11, .07, .22], [[31.5, .07, 15.75], [31.68, .07, 15.75]], 'brown');
   doorway('toilet', [33.3, 0, 15.2], .9, 2.2, { normal: 'x', style: 'half-glass', sourceTimesSeconds: [500, 502, 503, 505] });
-  const supportDoor = doorway('corridor-unconfirmed-support', [33.3, 0, 12.45], .75, 2.15, { normal: 'x', style: 'half-glass', angle: 0, sourceTimesSeconds: [500, 501] });
-  supportDoor.userData.roomFunctionUnconfirmed = true;
+  // 2026-11-26 사용자 요청: 벽 없이 서 있던 용도 미확인 문(들어갈 수도 없던 문)은 뺐다.
+  // 그 자리는 화장실 서쪽 벽을 이어 막는다(dryer-floor1-photo-detail.js).
   const corridorBoard = group(architectureFixtures, 'corridor-quality-board', [34.295, 0, 12.05]);
   corridorBoard.rotation.y = -Math.PI / 2;
   Object.assign(corridorBoard.userData,{wallMounted:true,wallPlaneX:34.4,wallFaceX:34.34,mountGap:.015});
   box(corridorBoard, [.87, 1.9, .06], [0, .99, 0], 'white');
   for (const [y, paint] of [[1.58, 'blue'], [.99, 'red'], [.4, 'green']]) box(corridorBoard, [.79, .53, .018], [0, y, .041], paint);
 
+  // 2026-11-26 사용자 확인: 작업대 남쪽 끝의 유리는 1.5층 남측 통로 관찰창 한 장뿐이다.
+  // 1층 쪽에 나란히 두었던 관찰 유리벽(창·창틀·벽판·게시물 뒷면)은 중복이라 뺐다.
+  const fullHeight = spec.preparationSurvey.doubleHeight;
+  const column = group(facade,'console-side-square-column-casing',[22.2,0,13.3]);
+  column.userData.buildingColumn = true;
+  Object.assign(column.userData,{sourcePhotos:['20261125_090257.jpg','20261125_090319.jpg'],positionBasis:'existing structural grid at operator bay',dimensionsEstimated:true});
+  box(column,[.59,fullHeight,.55],[0,fullHeight/2,0],'cream').userData.buildingColumn = true;
+
+  // The reverse shot looks up at exposed folded metal above the operator.
+  // Its downward-facing surface leaves the tank layout visible from above.
+  const ceiling = group(facade,'console-bay-roof-underside',[16.6,fullHeight-.05,4.75]);
+  Object.assign(ceiling.userData,{sourcePhotos:['20261125_090319.jpg'],dimensionsEstimated:true});
+  const foldedSheet=geo('console-bay-roof-folds',()=>{
+    const vertices=[], spanX=10.3, pitch=13.5/52;
+    const profile=[[0,0],[.16,-.036],[.28,-.036],[.44,0],[1,0]];
+    for(let fold=0;fold<52;fold++){
+      for(let edge=1;edge<profile.length;edge++){
+        const [before,ya]=profile[edge-1], [after,yb]=profile[edge];
+        const za=(fold+before)*pitch, zb=(fold+after)*pitch;
+        vertices.push(0,ya,za, spanX,ya,za, spanX,yb,zb, 0,ya,za, spanX,yb,zb, 0,yb,zb);
+      }
+    }
+    const geometry=new THREE.BufferGeometry();
+    geometry.setAttribute('position',new THREE.Float32BufferAttribute(vertices,3)); geometry.computeVertexNormals(); return geometry;
+  });
+  s._mesh(foldedSheet,m.roofSheet,ceiling);
+  for(const x of [2.37,5.6,8.83]) box(ceiling,[.11,.17,13.5],[x,-.12,6.75],'cream');
   const services = group(ducts, 'high-visible-service-routes');
   for (const [y, paint] of [[5.35, 'blue'], [5.57, 'yellow'], [5.78, 'steel']]) {
     bar(services, [33.9, y, -3.1], [33.9, y, 4.3], .055, paint);
@@ -517,7 +546,40 @@ export function buildPreparationEnvironment(s, environment, spec) {
   const trays = group(services, 'overhead-cable-ladder');
   for (const x of [32.5, 33]) box(trays, [.045, .075, 7.9], [x, 5.5, .35]);
   repeats(trays, 'cable-ladder-rungs', [.55, .035, .035], Array.from({ length: 24 }, (_, i) => [32.75, 5.5, -3.35 + i * .32]), 'steel');
-  for (const z of [5, 9.6, 14.2]) box(services, [11.5, .18, .14], [22.3, 5.9, z], 'cream');
+  const beamStations = [5,9.6,13.3];
+  for (const z of beamStations) {
+    box(ceiling,[10.3,.065,.24],[5.15,5.9-ceiling.position.y,z-ceiling.position.z],'cream');
+    box(ceiling,[10.3,.386,.08],[5.15,6.125-ceiling.position.y,z-ceiling.position.z],'cream');
+    box(ceiling,[10.3,.055,.24],[5.15,6.345-ceiling.position.y,z-ceiling.position.z],'cream');
+  }
+  const deckServices = group(services,'tank-deck-exposed-lines',[16.55,0,18.32]);
+  Object.assign(deckServices.userData,{sourcePhotos:['20261125_090201.jpg','20261125_090319.jpg'],hiddenConnectionsUnconfirmed:true});
+  // At the window head both shiny lines turn across the aisle, then turn
+  // down beside a mixer. The still doesn't show their final connections.
+  const drop = geo('deck-end-mixer-lines-20261125',()=>{
+    const path = new THREE.CurvePath();
+    const v = (x,y,z)=>new THREE.Vector3(x,y,z);
+    path.add(new THREE.LineCurve3(v(0,0,0),v(0,0,6.75)));
+    path.add(new THREE.QuadraticBezierCurve3(v(0,0,6.75),v(0,0,6.86),v(-.11,0,6.86)));
+    path.add(new THREE.LineCurve3(v(-.11,0,6.86),v(-1.36,0,6.86)));
+    path.add(new THREE.QuadraticBezierCurve3(v(-1.36,0,6.86),v(-1.47,0,6.86),v(-1.47,-.11,6.86)));
+    path.add(new THREE.LineCurve3(v(-1.47,-.11,6.86),v(-1.47,-1.89,6.86)));
+    return new THREE.TubeGeometry(path,80,.048,12,false);
+  });
+  for (const [x,z] of [[3.25,-9.15],[3.44,-9.01]]) {
+    s._mesh(drop,m.steel,deckServices,[x,5.7,z]);
+    ring(deckServices,.056,.009,[x-1.47,4.04,z+6.86],'trim');
+  }
+  for (const station of beamStations.slice(1)) {
+    const z = station-deckServices.position.z;
+    box(deckServices,[.49,.042,.065],[3.36,5.61,z],'trim');
+    for (const x of [3.14,3.58]) bar(deckServices,[x,5.63,z],[x,5.86,z],.011,'trim');
+  }
+  bar(deckServices,[.33,3.11,-.14],[8.35,3.11,-.14],.047,'steel');
+  for (const x of [.58,2.45,4.63,6.72,8.1]) {
+    box(deckServices,[.075,.09,.14],[x,3.11,-.065],'trim');
+    ring(deckServices,.052,.008,[x,3.11,-.14],'trim','x');
+  }
   Object.assign(services.userData, { visibleRoutesOnly: true, hiddenConnectionsUnconfirmed: true });
   return environment;
 }

@@ -142,13 +142,17 @@ function setAreaIndicator(area) {
 }
 function updateDetailActions() {
   $('compressor-open').hidden = $('disc-conveyor-open').hidden = liquidShown || floor !== 3;
+  $('hall-walk-open').hidden = liquidShown || floor !== 3;
   $('boiler-open').hidden = liquidShown || !['campus','all',1].includes(floor);
   $('valve-room-open').hidden = liquidShown || floor !== 'campus';
+  $('office-power-open').hidden = liquidShown || floor !== 'campus';
   $('wastewater-open').hidden = liquidShown || floor !== 'campus';
   $('rear-survey-open').hidden = liquidShown || floor !== 'campus';
   $('preparation-open').hidden = liquidShown || !['campus', 'all', 1].includes(floor);
   $('preparation-lower-open').hidden = liquidShown || floor !== 1;
+  $('preparation-console-open').hidden = liquidShown || floor !== 1;
   $('partitions-option').hidden = liquidShown || ['campus','outdoor'].includes(floor);
+  $('columns-option').hidden = $('partitions-option').hidden;
   const item = items.get(selectedId);
   const furnace = !liquidShown && floorArea(floor) === 'dryer';
   const chiller = !liquidShown && floor === 'outdoor' && item?.detailKey === 'chiller-100rt';
@@ -223,7 +227,7 @@ function setFloor(value, { overview = true } = {}) {
   setAreaIndicator(floorArea(next));
   $('floor-selector').hidden = outdoors || campus || packaging;
   $('packaging-floor-selector').hidden = !packaging;
-  $('packaging-cargo-option').hidden = !packaging;
+  $('packaging-cargo-option').hidden = !(packaging || next === 1); // 1층 적재물도 같은 「적재물 표시」를 쓴다
   document.querySelectorAll('[data-packaging-level]').forEach((button) => button.setAttribute('aria-pressed', String(button.dataset.packagingLevel === String(packagingLevel))));
   $('outdoor-navigation').hidden = !(outdoors || campus || (packaging && packagingLevel !== 'all'));
   $('outdoor-navigation').querySelector('label').textContent = packaging ? packagingLevel === 'all' ? '층별 통로' : `${packagingLevel}층 통로` : campus ? '정문 진입' : '통로 이동';
@@ -293,6 +297,13 @@ $('preparation-lower-open').addEventListener('click', () => {
   $('isolation-toggle').checked = false;
   scene?.showPreparationLowerView?.();
 });
+for (const [button, id] of [['preparation-console-open', 'f1-prep-console'], ['office-power-open', 'campus-maintenance-office']]) {
+  $(button).addEventListener('click', () => {
+    layoutEditor?.stopMoving();
+    select(id);
+    scene?.focus(id);
+  });
+}
 $('rear-survey-open').addEventListener('click', () => {
   layoutEditor?.stopMoving();
   select('campus-team2-rear-access');
@@ -302,6 +313,7 @@ $('furnace-open').addEventListener('click', () => { if (!$('furnace-open').disab
 $('upper-photos-open').addEventListener('click', () => dryerUpperReference.open());
 $('compressor-open').addEventListener('click', () => compressorSurvey.open());
 $('disc-conveyor-open').addEventListener('click', () => compressorSurvey.open('f3-holding',{enter:true}));
+$('hall-walk-open').addEventListener('click', () => compressorSurvey.open('f3-holding',{walk:true}));
 $('elevator-room-open').addEventListener('click', () => { setFloor(8); select('dryer-roof-drive'); scene?.focus('dryer-roof-drive'); });
 $('chiller-open').addEventListener('click', () => { if (!$('chiller-open').disabled) chillerDetail.open(); });
 document.querySelectorAll('.view-selector button[data-view]').forEach((button) => {
@@ -316,6 +328,7 @@ bindDoorNavigation();
 for (const [id, method] of [['labels-toggle', 'setLabels'], ['structure-toggle', 'setStructure'], ['ducts-toggle', 'setDucts'], ['packaging-cargo-toggle', 'setPackagingCargoVisible']]) {
   $(id).addEventListener('change', (event) => scene?.[method](event.target.checked));
 }
+$('columns-toggle').addEventListener('change', (event) => scene?.setColumns?.(event.target.checked));
 $('partitions-toggle').addEventListener('change', (event) => scene?.setPartitions?.(event.target.checked));
 $('zoom-in').addEventListener('click', () => scene?.zoomBy(1.2));
 $('zoom-out').addEventListener('click', () => scene?.zoomBy(1 / 1.2));
@@ -415,6 +428,7 @@ try {
   scene.setAutomaticDoors($('auto-doors-toggle').checked);
   scene.setPersonViewScale(Number($('person-view-scale').value)/100);
   scene.setLabels($('labels-toggle').checked);
+  scene.setColumns?.($('columns-toggle').checked);
   scene.setPartitions?.($('partitions-toggle').checked);
   layoutEditor.select(selectedId);
   if (requestedEquipment) select(requestedEquipment.id);

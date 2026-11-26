@@ -30,6 +30,17 @@ function customDoors(environment) {
   return result;
 }
 
+test('the tank-deck end has only the 1.5F corridor glazing and visible service pipes stay on the equipment side', () => {
+  const { environment }=fixture();
+  assert.equal(environment.facade.getObjectByName('preparation-tank-deck-observation-wall'),undefined,'no second glass wall parallel to the 1.5F observation window (user-confirmed 2026-11-26)');
+  const pipes=environment.ducts.getObjectByName('preparation-tank-deck-exposed-lines');
+  assert.ok(new THREE.Box3().setFromObject(pipes).max.z<=18.33);
+  const roof=environment.facade.getObjectByName('preparation-console-bay-roof-underside'), sheet=roof.children[0];
+  const ray=(x,y,z,dy)=>new THREE.Raycaster(new THREE.Vector3(x,y,z),new THREE.Vector3(0,dy,0)).intersectObject(sheet);
+  assert.ok(ray(20.5,4,11.75,1).length,'the folded steel roof is visible when looking up from the console');
+  assert.equal(ray(20.5,9,11.75,-1).length,0,'the single-sided roof leaves equipment visible from above');
+});
+
 test('the complete raw-shutter opening and both approaches stay free of equipment, supports and parked context', () => {
   const { s, environment } = fixture();
   s._part = (root, name) => { const part = s._group(root); part.name = name; return part; };
@@ -47,6 +58,19 @@ test('the complete raw-shutter opening and both approaches stay free of equipmen
   // Full 2.85m curtain width, 2.2m on each side of the actual curtain plane,
   // and continuous standing-person headroom above the walking surface.
   const passage = new THREE.Box3(new THREE.Vector3(center.x - 1.425, center.y + .15, center.z - 2.2), new THREE.Vector3(center.x + 1.425, center.y + 2.1, center.z + 2.2));
+  const stair=s.scene.getObjectByName('preparation-platform-access-stair');
+  const foot=stair.getWorldPosition(new THREE.Vector3());
+  const config=EQUIPMENT.find(item=>item.id==='f1-prep-platform').preparation;
+  const landing=stair.localToWorld(new THREE.Vector3(0,config.elevation,config.stairs.run));
+  const column=environment.facade.getObjectByName('preparation-console-side-square-column-casing');
+  const cabinet=s.scene.getObjectByName('f1-prep-mobile-white-unit'), hopper=s.scene.getObjectByName('f1-prep-bag-dump');
+  assert.ok(foot.x>landing.x && foot.z>cabinet.position.z && cabinet.position.z>hopper.position.z,'looking at the back of the console, the stair is left of the cabinet and hopper');
+  assert.ok(foot.distanceTo(cabinet.position)<1.4 && cabinet.position.distanceTo(column.getWorldPosition(new THREE.Vector3()))<1.4);
+  const stairBounds=new THREE.Box3().setFromObject(stair), cabinetBounds=new THREE.Box3().setFromObject(cabinet), columnBounds=new THREE.Box3().setFromObject(column);
+  assert.ok(!stairBounds.intersectsBox(cabinetBounds) && !stairBounds.intersectsBox(columnBounds) && !cabinetBounds.intersectsBox(columnBounds));
+  assert.ok(!cabinetBounds.intersectsBox(new THREE.Box3().setFromObject(hopper)));
+  const lowerApproach=new THREE.Box3(new THREE.Vector3(foot.x+.1,foot.y+.2,foot.z-.35), new THREE.Vector3(foot.x+2,foot.y+1.85,foot.z+.35));
+  const upperApproach=new THREE.Box3(new THREE.Vector3(landing.x-.65,landing.y+.2,landing.z-.35),new THREE.Vector3(landing.x+.1,landing.y+1.6,landing.z+.35));
   const temporary = new THREE.Matrix4(), collisions = [];
   s.scene.traverse(mesh => {
     if (!mesh.isMesh || mesh.material.transparent && mesh.material.opacity < .99) return;
@@ -56,12 +80,21 @@ test('the complete raw-shutter opening and both approaches stay free of equipmen
       if (mesh.isInstancedMesh) { mesh.getMatrixAt(i, temporary); matrix.multiply(temporary); }
       const bounds = mesh.geometry.boundingBox.clone().applyMatrix4(matrix);
       if (passage.intersectsBox(bounds)) collisions.push(mesh.name || mesh.parent.name || mesh.geometry.type);
+      for (const approach of [lowerApproach,upperApproach]) {
+        if (!approach.intersectsBox(bounds)) continue;
+        // An elbow's bounding box also contains the open space below the
+        // overhead run. Check its faces before reporting a blocked approach.
+        const triangle=new THREE.Triangle(), positions=mesh.geometry.attributes.position, index=mesh.geometry.index;
+        const count=index?.count??positions.count;
+        for(let vertex=0;vertex<count;vertex+=3){
+          const corners=[triangle.a,triangle.b,triangle.c];
+          corners.forEach((corner,k)=>corner.fromBufferAttribute(positions,index?index.getX(vertex+k):vertex+k).applyMatrix4(matrix));
+          if(approach.intersectsTriangle(triangle)){collisions.push('stair approach: '+(mesh.name || mesh.parent.name || mesh.geometry.type));break;}
+        }
+      }
     }
   });
   assert.deepEqual(collisions, [], 'the full opening works without steering a person around a column or movable cabinet');
-  const white = EQUIPMENT.find(item => item.id === 'f1-prep-mobile-white-unit');
-  assert.deepEqual(white.position, [25.65, .3, 9.8], 'the filmed mobile cabinet stands to the right of the working-platform stair');
-  assert.equal(white.placementRevision, 'preparation-mobile-cabinet-shutter-clearance-20261113');
 });
 
 test('the tall entrance cupboards remain outside the air shower and clear its real stair, table and lockers', () => {
@@ -83,7 +116,8 @@ test('the tall entrance cupboards remain outside the air shower and clear its re
 
 test('preparation passage doors start closed with independent proximity-operated leaves and fixed frames', () => {
   const { s, environment } = fixture(), doors = customDoors(environment);
-  for (const id of ['raw-exterior', 'raw-inner-shutter', 'air-shower-process', 'air-shower-hygiene', 'sanitation-workroom', 'cip-utility', 'toilet', 'corridor-unconfirmed-support', 'team1-part2']) assert(doors.has(id), id);
+  for (const id of ['raw-exterior', 'raw-inner-shutter', 'air-shower-process', 'air-shower-hygiene', 'sanitation-workroom', 'cip-utility', 'toilet', 'team1-part2']) assert(doors.has(id), id);
+  assert.equal(doors.has('corridor-unconfirmed-support'), false, 'the wall-less, non-enterable support door was removed (2026-11-26)');
   for (const [id, root] of doors) {
     if (id.startsWith('raw-')) continue;
     assert(new THREE.Box3().setFromObject(root).getSize(new THREE.Vector3()).y >= 2.1, `${id}: full-height frame`);

@@ -149,6 +149,7 @@ export function freightLift(s, groups, lift) {
   base.flush(); upper.flush(); car.flush();
   textPlate(s, g, '화물용 LIFT 3TON', { width: 1.25, height: .24, position: [cx, 2.6, north - .02], rotation: [0, PI, 0], background: '#23386b', color: '#ffffff', name: 'packaging-cargo-lift-sign' });
   // Orange arrow: the plan's material flow from the lift into the store.
+  if (lift.arrow === false) return;
   const arrow = new PartKit(s, groups.deck, 'packaging-lift-material-flow-arrow'); arrow.box(m.orange, [.12, .008, 1.35], [c.minX + .45, .032, 12.05], undefined, { shadow: false, solid: false });
   for (const side of [-1, 1]) arrow.box(m.orange, [.12, .008, .44], [c.minX + .45 + side * .13, .032, 11.42], [0, side * .72, 0], { shadow: false, solid: false }); arrow.flush();
 }

@@ -1,6 +1,7 @@
 import { DRYER_UPPER_FLOORS } from './dryer-upper-data.js';
 import { DRYER_BUILDING_FLOORS } from './dryer-building-data.js';
 import { PREPARATION_PHOTOS } from './preparation-data.js';
+import { HALL_WALK_FRAMES } from './dryer-compressor-media.js';
 
 // Architectural drawings are the active floor references. Historical OWP
 // process diagrams are preserved in references/owp-team2-20261029/derived-images/.
@@ -9,7 +10,8 @@ export const FLOOR_HEIGHT = 7.5;
 export const FLOORS = Object.freeze([
   ...[1, 2, 3, 4, 5].map(id => ({ ...DRYER_BUILDING_FLOORS[id],
     reference: `./assets/drawings/dryer/dryer-floor-plan-${id < 4 ? `${id}f` : '4f5f'}.png`,
-    photos: [...(id === 1 ? PREPARATION_PHOTOS : []), `./assets/drawings/dryer/dryer-floor-plan-${id < 4 ? `${id}f` : '4f5f'}.png`],
+    photos: [...(id === 1 ? PREPARATION_PHOTOS : []), `./assets/drawings/dryer/dryer-floor-plan-${id < 4 ? `${id}f` : '4f5f'}.png`,
+      ...(id === 3 ? HALL_WALK_FRAMES.map(frame => frame.path) : [])],
   })),
   { id: 6, name: '6층 · 건조 설비 홀', shortName: '건조 설비 홀', ...DRYER_UPPER_FLOORS[6] },
   { id: 7, ...DRYER_UPPER_FLOORS[7] },

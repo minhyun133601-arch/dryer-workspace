@@ -100,7 +100,8 @@ test('partial upper floors and both four-flight stairs stay open, while historic
       assert.equal(stair.userData.stepCountBasis, 'representative-unmeasured');
       const b = bounds(stair); assert.ok(b.min.y < 26.4 && b.max.y > 33.6, 'flights physically connect both datums and have handrails');
     }
-    assert.ok(env.get(6).facade.children.length > 15, 'opaque facades are independent from the retained frame');
+    const upperWalls = env.get(6).facade.getObjectByName('dryer-plan-6-upper-walls'), lowWalls = env.get(6).structure.getObjectByName('dryer-plan-6-cutaway-walls');
+    assert.ok(upperWalls.count > 15 && lowWalls.count > 15, 'opaque facades are independent from the retained frame');
     assert.ok(env.get(6).structure.children.length > 15);
     const cover = env.get(8).cover, b = bounds(cover); near(b.min.y, 32.6); assert.ok(b.max.y > 40.4);
     const walk = cover.getObjectByName('dryer-historical-roof-L-catwalk'); assert.ok(walk);
@@ -194,42 +195,48 @@ test('two observed upper apparatus groups connect only at their visible ports an
     env.structure.traverse(mesh => {
       if (!mesh.isMesh) return;
       const b = bounds(mesh); if (b.max.y < 32.7) return;
-      for (const [id, root] of roots) assert.equal(b.intersectsBox(bounds(root)), false, `${id} intersects an upper guard/rail`);
+      // Drawn walls are batched; test each wall piece rather than the whole batch.
+      const pieces = [];
+      if (mesh.isInstancedMesh && mesh.name.startsWith('dryer-plan-')) {
+        const matrix = new THREE.Matrix4(); mesh.geometry.computeBoundingBox();
+        for (let i = 0; i < mesh.count; i++) { mesh.getMatrixAt(i, matrix); pieces.push(mesh.geometry.boundingBox.clone().applyMatrix4(matrix.premultiply(mesh.matrixWorld))); }
+      } else pieces.push(b);
+      for (const piece of pieces) for (const [id, root] of roots) assert.equal(piece.intersectsBox(bounds(root)), false, `${id} intersects an upper guard/rail`);
       obstacles.push(mesh);
     });
     assert.ok(obstacles.length > 10);
   } finally { s.dispose(); }
 });
 
-test('the historical recovery group restores three continuous cyclone cones and four exterior drive/outlet trains', (t) => {
+test('the 5F recovery group builds three full-height cyclone cones on curbs, Roots blower, booth and suspended drum', (t) => {
   const s = harness(), item = EQUIPMENT.find(item => item.id === 'f5-powder-recovery'), unchanged = JSON.stringify(item);
   try {
     const root = s._group(s.scene, item.position); assert.equal(buildFacilityEquipment(s, root, item), true);
-    assert.equal(s.parts.length, 4); assert.equal(root.userData.coneCount, 3); assert.equal(root.userData.driveTrainCount, 4);
-    assert.equal(root.userData.sourceBasis, 'historical-OWP-floor5-7;not-current-asbuilt'); assert.equal(root.userData.currentVideoCountConfirmed, false);
-    const cones = [], trains = [], motors = [], outlets = [];
+    assert.equal(s.parts.length, 4); assert.equal(root.userData.coneCount, 3);
+    assert.equal(root.userData.sourceBasis, 'field-cards-27-28-29-30-20261124');
+    assert.equal(root.userData.currentFieldPhotoVerified, true);
+    assert.equal(root.userData.hasRootsBlower, true);
+    assert.equal(root.userData.hasWhiteBooth, true);
+    assert.equal(root.userData.hasSuspendedCylinder, true);
+    const cones = [];
     root.traverse(mesh => {
       if (mesh.name === 'dryer-recovery-long-cone') cones.push(mesh);
-      if (mesh.name === 'dryer-recovery-drive-train') trains.push(mesh);
-      if (mesh.name === 'dryer-recovery-visible-motor') motors.push(mesh);
-      if (mesh.name === 'dryer-recovery-box-outlet') outlets.push(mesh);
       if (mesh.isMesh) { assert.ok(s.geometries.has(mesh.geometry)); assert.ok(mesh.geometry.attributes.position.array.every(Number.isFinite)); }
     });
-    assert.equal(cones.length, 3); assert.equal(trains.length, 4); assert.equal(motors.length, 4); assert.equal(outlets.length, 4);
+    assert.equal(cones.length, 3);
+    assert.ok(root.getObjectByName('dryer-5f-roots-blower'));
+    assert.ok(root.getObjectByName('dryer-5f-white-panel-booth'));
+    assert.ok(root.getObjectByName('dryer-5f-suspended-cylinder'));
     root.updateMatrixWorld(true);
     for (const cone of cones) {
       const p = cone.getWorldPosition(new THREE.Vector3()), upper = upperItems.find(item => item.type === 'cyclone' && Math.abs(item.position[2] - p.z) < .01), b = bounds(cone);
-      assert.ok(upper); near(p.x, upper.position[0]); near(b.max.y, upper.position[1]); near(b.min.y, 22.4);
-      near(cone.geometry.parameters.radiusTop, upper.radius); near(cone.geometry.parameters.radiusBottom, .25);
+      assert.ok(upper); near(p.x, upper.position[0]); near(b.max.y, upper.position[1]); near(b.min.y, 20.42);
+      near(cone.geometry.parameters.radiusTop, upper.radius); near(cone.geometry.parameters.radiusBottom, .22);
     }
-    const main = trains.find(train => train.userData.station === 'main-chamber'), p = main.getWorldPosition(new THREE.Vector3()), chamber = EQUIPMENT.find(item => item.id === 'f5-dryer-cone');
-    near(p.x, chamber.position[0]); near(p.z, chamber.position[2]);
-    const existingNeck = root.userData.mainChamberConnection.existingNeckRange, mainTop = bounds(main).max.y - item.position[1];
-    assert.ok(mainTop >= existingNeck[0] && mainTop < existingNeck[1], 'the compact main train meets the current lower-chamber neck without floating below it');
     assert.ok(bounds(root).min.y >= item.position[1] - .001);
     const start = bounds(root); for (const part of s.parts) part.group.position.copy(part.home).addScaledVector(part.offset, .8);
     const exploded = bounds(root); assert.ok([...exploded.min.toArray(), ...exploded.max.toArray()].every(Number.isFinite)); assert.ok(exploded.getSize(new THREE.Vector3()).length() > start.getSize(new THREE.Vector3()).length());
-    assert.equal(JSON.stringify(item), unchanged); assert.ok(trains.every(train => train.userData.concealedRotorAdded === false));
-    t.diagnostic(`3 historic cones join the 6F cylinders at Y26.2; 4th train joins the existing main-chamber neck at X${p.x.toFixed(1)}/Z${p.z.toFixed(1)}`);
+    assert.equal(JSON.stringify(item), unchanged); assert.equal(root.userData.concealedMechanismsAdded, false);
+    t.diagnostic('3 full-height cyclone cones join 6F cylinders at Y26.2 and reach green curbs at Y20.42');
   } finally { s.dispose(); }
 });

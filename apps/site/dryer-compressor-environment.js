@@ -126,7 +126,7 @@ export function buildDryerCompressorEnvironment(s, environment, spec) {
   });
 
   // 1a. 3F ELEV adjacent stainless button cabinet (00:04-00:08, #003)
-  const elevPanel = group(stairGroup, 'third-elevator-button-cabinet', [4.25, 0, -10.12], {
+  const elevPanel = group(stairGroup, 'third-elevator-button-cabinet', [4.5, 0, -10.43], {
     sourceTimesSeconds: [4, 5, 6], liveValuesAdded: false,
   });
   box(elevPanel, 'elev-panel-shell', [.86, 1.12, .12], [0, 1.48, 0], 'steel');
@@ -184,6 +184,9 @@ export function buildDryerCompressorEnvironment(s, environment, spec) {
   });
   // Green waterproof epoxy roof finish on confirmed walkable area
   const roofFinishAlcove = box(roofGroup, 'roof-epoxy-alcove', [4.72, .012, 3.25], [11.0, .006, -5.05], 'roofGreen');
+  // A-015: the recess east of the lobby is open roof up to the stair wall.
+  const roofFinishRecess = box(roofGroup, 'roof-epoxy-recess', [3.05, .012, 3.75], [11.85, .006, -8.57], 'roofGreen');
+  roofFinishRecess.userData.lowWingRoof = true;
   const roofFinishTerrace = box(roofGroup, 'roof-epoxy-terrace', [13.5, .012, 8.75], [15.4, .006, 1.0], 'roofGreen');
   roofFinishAlcove.userData.lowWingRoof = roofFinishTerrace.userData.lowWingRoof = true;
 
@@ -211,7 +214,7 @@ export function buildDryerCompressorEnvironment(s, environment, spec) {
     }
     return u;
   };
-  centuryUnit('roof-century-alcove-north', [11.45, 0, -6.25], 0);
+  centuryUnit('roof-century-alcove-north', [11.45, 0, -9.9], 0); // back against the stair wall of the open recess
   centuryUnit('roof-century-alcove-east-1', [12.90, 0, -5.91], -Math.PI / 2);
   centuryUnit('roof-century-alcove-east-2', [12.90, 0, -4.18], -Math.PI / 2);
   centuryUnit('roof-century-compressor-sw', [14.65, 0, -2.94], 0);
@@ -499,7 +502,7 @@ export function buildDryerCompressorEnvironment(s, environment, spec) {
   bar(jac100, 'jac100-top-run', [0, 2.02, -.42], [0, 2.02, .42], .055, 'galv');
 
   // [5] Air Receiver Tank #2 (유진하이테크, 24-05-012242)
-  receiverTank('comp-receiver-2', '리시버탱크 #2 (유진하이테크)', [14.55, 0, -9.45], .46, 2.28, 'tankLight');
+  receiverTank('comp-receiver-2', '리시버탱크 #2 (유진하이테크)', [14.55, 0, -9.25], .46, 2.28, 'tankLight');
 
   // [6] Air Compressor #1 — KAESER CSD 125 SFC (100HP Inverter, 2026) — NW quadrant
   kaeserUnit('comp-unit-1-kaeser-csd125sfc', '#1 KAESER 100HP', [14.85, 0, -11.15], [1.45, 1.98, 1.85], Math.PI / 2, {

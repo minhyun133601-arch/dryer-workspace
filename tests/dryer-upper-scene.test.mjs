@@ -14,6 +14,7 @@ import { buildDryerRouteEnvironment } from '../apps/site/dryer-route-environment
 import { buildDryerCompressorEnvironment } from '../apps/site/dryer-compressor-environment.js';
 import { buildDryerBuildingEnvironment, alignDryerCompressorEntrance } from '../apps/site/dryer-building-envelope.js';
 import { buildDryerCompressorInteriorDetails } from '../apps/site/dryer-compressor-interior-details.js';
+import { buildDryerFloor1PhotoDetail, buildDryerFloor1Load } from '../apps/site/dryer-floor1-photo-detail.js';
 import { buildFurnace } from '../apps/site/furnace-model.js';
 import { OUTDOOR_ROOM } from '../apps/site/outdoor-data.js';
 import { CAMPUS_ROOM } from '../apps/site/campus-data.js';
@@ -30,7 +31,7 @@ async function harness() {
     return { width: 0, height: 0, getContext: () => ({ fillRect() {}, fillText() {} }) };
   } };
   const context = vm.createContext({ THREE, FLOORS, FLOOR_HEIGHT, floorElevation, floorHeight,
-    buildDryerUpperEnvironment, buildDryerUpperEquipment, buildDryerBuildingEnvironment, buildDryerProcessEquipment, buildPreparationEquipment, buildPreparationBoilerRoom, buildPreparationEnvironment, buildDryerRouteEnvironment, buildDryerCompressorEnvironment, buildDryerCompressorInteriorDetails, alignDryerCompressorEntrance, buildFacilityEquipment, buildFurnace,
+    buildDryerUpperEnvironment, buildDryerUpperEquipment, buildDryerBuildingEnvironment, buildDryerProcessEquipment, buildPreparationEquipment, buildPreparationBoilerRoom, buildPreparationEnvironment, buildDryerRouteEnvironment, buildDryerCompressorEnvironment, buildDryerCompressorInteriorDetails, buildDryerFloor1PhotoDetail, buildDryerFloor1Load, alignDryerCompressorEntrance, buildFacilityEquipment, buildFurnace,
     OUTDOOR_ROOM, CAMPUS_ROOM, PACKAGING_ROOM, PACKAGING_ROOMS, PACKAGING_OVERVIEW, PACKAGING_FLOOR_ELEVATIONS,
     PLACEMENT_RULES, PLACEMENT_REGIONS, constrainPlacement, fromRoomPosition, toRoomPosition, document, clearTimeout });
   new vm.Script(`${source}\nglobalThis.FacilityScene = FacilityScene;`).runInContext(context);
@@ -112,7 +113,7 @@ test('actual scene shows eight lower-hall groups, thirteen upper-context groups 
   } finally { h.dispose(); }
 });
 
-test('lower floor cutaways keep each deck, rooms and equipment separate from the mezzanine', async () => {
+test('lower floor cutaways keep each deck, rooms and equipment separate, except the 1F hall seen below the 1.5F glass', async () => {
   const h = await harness();
   try {
     const { scene } = h;
@@ -126,16 +127,19 @@ test('lower floor cutaways keep each deck, rooms and equipment separate from the
       for (const [level, environment] of scene.buildingEnvironments) {
         for (const key of ['deck', 'structure', 'architectureFixtures']) {
           const shared = key === 'architectureFixtures' && environment.architectureFixtures.children.some(child => child.visible && child.userData.stepsRepresentative && child.userData.visibleFloors?.includes(floor));
-          assert.equal(environment[key].visible, level === floor || shared, `${floor}F ${view}: ${level}F ${key}`);
+          const overlook = floor === 2 && level === 1 && view !== 'top';
+          assert.equal(environment[key].visible, level === floor || shared || overlook, `${floor}F ${view}: ${level}F ${key}`);
         }
-        if (level !== floor) for (const child of environment.architectureFixtures.children.filter(child => child.visible)) assert.ok(child.userData.stepsRepresentative && child.userData.visibleFloors?.includes(floor), 'adjoining fixtures contain shared stairs without revealing rooms, doors or furniture');
+        if (level !== floor && !(floor === 2 && level === 1 && view !== 'top')) for (const child of environment.architectureFixtures.children.filter(child => child.visible)) assert.ok(child.userData.stepsRepresentative && child.userData.visibleFloors?.includes(floor), 'adjoining fixtures contain shared stairs without revealing rooms, doors or furniture');
       }
       for (const item of scene.equipment) {
-        assert.equal(scene.objects.get(item.id).visible, item.floor === floor || (item.visibleFloors || []).includes(floor), `${floor}F ${view}: ${item.id}`);
+        assert.equal(scene.objects.get(item.id).visible, item.floor === floor || (item.visibleFloors || []).includes(floor) || (floor === 2 && item.floor === 1 && view !== 'top'), `${floor}F ${view}: ${item.id}`);
       }
     }
-    scene.setFloor(1); scene.setFloor(2); scene.resize();
-    assert.equal(scene.floorDecks.get(1).visible, false, 'switching floors and resizing cannot restore the lower hall in the mezzanine cutaway');
+    scene.setFloor(1); scene.setFloor(2); scene.setView('perspective'); scene.resize();
+    assert.equal(scene.floorDecks.get(1).visible, true, 'the 1.5F perspective shows the lower hall beyond the observation glass');
+    scene.setView('top'); scene.resize();
+    assert.equal(scene.floorDecks.get(1).visible, false, 'the 1.5F plan keeps the lower hall separate');
     assert.equal(scene.floorDecks.get(2).visible, true);
     scene.setPlacementMode(true);
     assert.equal(scene.floorDecks.get(1).visible, false, 'editing the mezzanine cannot reveal first-floor equipment');

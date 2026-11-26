@@ -92,7 +92,7 @@ test('the retained entry and end stairs clear a 1.75m person and join their real
     const one=DRYER_BUILDING_FLOORS[1],two=DRYER_BUILDING_FLOORS[2];
     const paths=[
       [[33.75,.3,18.1],...dryerStairWalkPoints(one.stairs[0],one),[33.7,3.8,17.8]],
-      [[-7,3.8,-5.3],[-7,3.8,-7.1],...dryerStairWalkPoints(two.stairs[0],two),[-6.315,7.3,-5.9]],
+      [[-7,3.8,-5.3],[-7.785,3.8,-7.4],[-7.785,3.8,-8.55],[-7.3,3.8,-8.95],...dryerStairWalkPoints(two.stairs[0],two),[-7.785,7.3,-7.2]],
     ];
     const surfaces=[...h.environments.values()].flatMap(env=>[env.deck,env.architectureFixtures]);
     for(const [index,path]of paths.entries())walkSamples(path,(p,leg)=>{

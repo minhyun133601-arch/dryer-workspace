@@ -1,5 +1,6 @@
 import * as THREE from '../shared/vendor/three.module.js';
 import { buildAgitatorHopper } from './packaging-mixing-models.js';
+import { textPlate } from './packaging-kit.js';
 
 // The drawing owns locations and equipment counts. Team 2 equipment cards
 // (008-011, 015-041) supply the external forms, finishes and visible services.
@@ -873,6 +874,133 @@ function serviceCabinet(s, groups, item, m) {
   boxes(s,details,m.edge,louvers,'packaging-nitrogen-lower-louver-banks');
 }
 
+// Plates, guards and loose services that the 2026-11-24 cards repeat on each
+// machine. Everything stays inside the drawn installation envelope.
+function coil(s, parent, material, from, to, radius, turns, tube, name) {
+  const a = new THREE.Vector3(...from), b = new THREE.Vector3(...to), points = [];
+  for (let i = 0; i <= turns * 8; i++) { const t = i / (turns * 8), p = a.clone().lerp(b, t); points.push([p.x + Math.cos(t * turns * PI * 2) * radius, p.y, p.z + Math.sin(t * turns * PI * 2) * radius]); }
+  return hose(s, parent, material, points, tube, name);
+}
+function clampRing(s, parent, m, x, y, z, radius) {
+  const ring = s._mesh(new THREE.TorusGeometry(radius, .014, 6, 32), m.polished, parent, [x, y, z]); ring.rotation.x = PI / 2; ring.name = 'packaging-card-cone-clamp-ring';
+}
+const CARD_FINISH = {
+  'packaging-xray'(s, [, , details], item, m) {
+    const w = item.width, d = item.depth, h = item.height, card = Number(item.historyCardNumber), ventFront = card === 25 || card === 26;
+    if (!card || item.kind === 'metal-detector') return;
+    const cw = w * .51, cd = d * .83, top = h * .94, openingTop = h * .41 + h * .145, sign = ventFront ? -1 : 1, monitorY = (openingTop + top) / 2, monitorH = (top - openingTop) * .74;
+    const front = s._group(details, [0, 0, sign * (cd / 2 + .03)]); front.rotation.y = sign < 0 ? PI : 0; front.name = 'packaging-card-xray-operator-face-plates';
+    textPlate(s, front, 'OK', { width: cw * .62, height: monitorH * .56, position: [-cw * .02, monitorY + .03, .049], background: '#dfe5e8', color: '#2f86cc', top: '#2f86cc', scale: .4, name: 'packaging-card-xray-light-inspection-window' });
+    const lamp = m.redLamp ||= s._material(0xd8463a, .4, .05, { emissive: 0xe0392c, emissiveIntensity: .7 });
+    s._box(front, [.13, .028, .006], [cw * .02, monitorY - monitorH * .4, .047], lamp).name = 'packaging-card-xray-on-lamp';
+    textPlate(s, front, item.name.replace('X-Ray ', 'X-Ray|').replace(/ · .*/, ''), { width: .2, height: .12, position: [-cw * .24, openingTop + .05, .05], top: '#2d5aa5', bottom: '#8fc04a' });
+    for (const side of [-1, 1]) {
+      const end = s._group(details, [side * (cw / 2 + .02), 0, 0]); end.rotation.y = side * PI / 2;
+      textPlate(s, end, 'CCP-2P-1|관계자외 조작금지', { width: cd * .46, height: .13, position: [0, h * .68, .024], color: '#b3312b', top: '#2d5aa5', bottom: '#8fc04a' });
+    }
+    if (card === 25) { const end = s._group(details, [cw / 2 + .022, 0, 0]); end.rotation.y = PI / 2; textPlate(s, end, 'HALAL', { width: cd * .34, height: .15, position: [0, h * .75, .03], color: '#2f8a5a', top: '#2d5aa5' }); }
+  },
+  'packaging-vertical-packer'(s, [body, process, details], item, m) {
+    const w = item.width, d = item.depth, h = item.height, cw = w * .53, cd = d * .63, mainTop = h * .6, front = cd / 2 + .035;
+    s._box(details, [cw * .74, .25, .13], [cw * .07, .4, front + .07], m.orange).name = 'packaging-card-vertical-orange-front-drawer';
+    const badge = cylinder(s, details, m.ivory, .075, .008, [cw * .07, .4, front + .139]); badge.rotation.x = PI / 2; badge.scale.set(1.35, 1, .7);
+    s._box(details, [cw * .13, .13, .012], [-cw * .39, mainTop * .83, front + .068], m.screen);
+    const stop = cylinder(s, details, m.red, .03, .03, [-cw * .39, mainTop * .3, front + .075]); stop.rotation.x = PI / 2;
+    const side = s._group(details, [-cw / 2 - .046, 0, 0]); side.rotation.y = -PI / 2;
+    textPlate(s, side, '버티컬 2호기|포장기', { width: .42, height: .17, position: [cd * .1, mainTop * .86, 0], top: '#3f9a4f', bottom: '#2d5aa5' });
+    textPlate(s, side, '손 끼임 주의', { width: .34, height: .12, position: [cd * .1, mainTop * .64, 0], color: '#b3262a', bottom: '#2d5aa5' });
+    s._box(side, [cd * .52, mainTop * .34, .006], [-cd * .08, mainTop * .36, .004], m.film).name = 'packaging-card-vertical-side-notice-sheet';
+    boxes(s, side, m.edge, [[[cd * .2, mainTop * .5, .012], [.03, .1, .02]], [[-cd * .3, mainTop * .5, .012], [.03, .1, .02]]], 'packaging-card-vertical-side-door-latches');
+    // Printed yellow film roll on two arms at the back.
+    const z = -(cd / 2 + Math.min(.2, d * .5 - cd / 2 - .13)), roll = cylinder(s, process, m.yellow, .12, cw * .62, [0, .55, z]); roll.rotation.z = PI / 2; roll.name = 'packaging-card-vertical-rear-printed-film-roll';
+    boxes(s, body, m.ivory, [-cw * .38, cw * .38].map(x => [[x, .55, z + cd * .16], [.04, .16, cd * .5]]), 'packaging-card-vertical-film-roll-arms');
+    cylinders(s, process, m.carton, [-.2, 0, .2].map(x => ({ position: [x * cw, .55, z], scale: [.1215, .05, .1215], rotation: [0, 0, PI / 2] })), 'packaging-card-vertical-film-print-bands', 24);
+    const legs = [];
+    for (const sx of [-1, 1]) for (const [y, zz, dd] of [[.18, .15, d * .4], [.42, -.12, d * .2]]) for (const dx of [-1, 1]) for (const dz of [-1, 1]) legs.push([[sx * w * .37 + dx * w * .09, y / 2, zz + dz * dd * .43], [.025, y, .025]]);
+    boxes(s, body, m.edge, legs, 'packaging-card-vertical-step-legs');
+    s._box(process, [.22, .18, .2], [0, h * .87, 0], m.film).name = 'packaging-card-vertical-white-auger-drive-box';
+    cylinder(s, process, m.dark, .06, h * .06, [0, h * .95, 0], .06, 'packaging-card-vertical-black-servo-motor');
+    clampRing(s, process, m, 0, h * .85, 0, cw * .225); clampRing(s, process, m, 0, h * .72, 0, cw * .165);
+    coil(s, details, m.yellow, [-cw * .4, mainTop * .9, -cd * .42], [-cw * .42, .5, -cd * .46], .035, 11, .009, 'packaging-card-vertical-yellow-coiled-air-hose');
+  },
+  'packaging-rotary-packer'(s, [body, process, details], item, m) {
+    const w = item.width, d = item.depth, h = item.height, one = item.rotaryVariant === 'orange-guard' || /rotary-1$/.test(item.id);
+    if (one) {
+      const r = Math.min(w, d) * .31, tableY = h * .31, face = d * .432, feedX = -w * .1, feedZ = -d * .06;
+      textPlate(s, details, 'JUPACK', { width: .34, height: .12, position: [-w * .23, h * .645, face], background: '#df5a2c', color: '#fff6ee' });
+      boxes(s, details, m.edge, [[[0, h * .63, face], [.008, h * .17, .004]], [[0, h * .545, face], [w * .83, .012, .006]]], 'packaging-card-rotary-one-header-seams');
+      s._box(details, [.2, .1, .006], [w * .2, h * .665, d * .44 + .066], m.green).name = 'packaging-card-rotary-one-green-hmi-page';
+      cylinders(s, details, m.red, [0, 1, 2].map(i => ({ position: [w * .33 + i * .05, h * .6, face + .01], scale: [.016, .02, .016], rotation: [PI / 2, 0, 0] })), 'packaging-card-rotary-one-header-button');
+      const belt = m.beltBlue ||= s._material(0x2f74b5, .55, .05);
+      s._box(process, [.3, .03, d * .3], [-w * .16, tableY - .1, d * .35], belt).name = 'packaging-card-rotary-one-blue-pouch-belt';
+      s._box(process, [.07, .034, d * .3], [-w * .13, tableY - .1, d * .35], m.carton); boxes(s, body, m.polished, [[[-w * .16 - .17, tableY - .1, d * .35], [.03, .08, d * .3]], [[-w * .16 + .17, tableY - .1, d * .35], [.03, .08, d * .3]]], 'packaging-card-rotary-one-belt-rails');
+      const left = s._group(details, [-w * .425, 0, 0]); left.rotation.y = -PI / 2;
+      textPlate(s, left, '380V', { width: .16, height: .07, position: [d * .22, h * .6, .01] });
+      s._box(left, [.22, .34, .1], [d * .1, h * .42, .02], m.polished).name = 'packaging-card-rotary-one-air-service-panel';
+      cylinders(s, left, m.blue, [-.06, 0, .06].map(x => ({ position: [d * .1 + x, h * .39, .085], scale: [.022, .1, .022] })), 'packaging-card-rotary-one-air-regulators');
+      coil(s, details, m.blue, [-w * .45, h * .36, -d * .1], [-w * .45, .12, -d * .1], .04, 9, .01, 'packaging-card-rotary-one-blue-coiled-hose');
+      hose(s, details, m.orange, [[w * .36, h * .42, -d * .3], [w * .44, h * .4, -d * .28], [w * .45, h * .2, -d * .26], [w * .42, .1, -d * .34]], .035, 'packaging-card-rotary-one-orange-vacuum-hose');
+      clampRing(s, process, m, feedX, h * .87, feedZ, r * .475); clampRing(s, process, m, feedX, h * .5525, feedZ, r * .355);
+      boxes(s, details, m.dark, [-w * .28, w * .28].map(x => [[x, h * .12, d * .423], [.02, .07, .012]]), 'packaging-card-rotary-one-recessed-door-pulls');
+    } else {
+      const deck = h * .29, feedX = -w * .08, feedZ = -d * .05;
+      textPlate(s, process, 'GREENPACK', { width: .22, height: .07, position: [feedX, h * .74, feedZ + .08], background: '#2f8a4d', color: '#ffffff' });
+      s._box(details, [.26, .3, .15], [feedX, h * .41, feedZ + .2], m.film).name = 'packaging-card-rotary-two-white-terminal-box';
+      textPlate(s, details, '감전 주의', { width: .18, height: .1, position: [feedX, h * .42, feedZ + .277], color: '#1d2b3c', background: '#f2c800', bottom: '#2d5aa5' });
+      const bw = w * .65, bd = d * .64;
+      textPlate(s, details, '끼임 주의', { width: .2, height: .13, position: [-bw * .3, deck + h * .13, bd * .455], color: '#b3262a', bottom: '#2d5aa5' });
+      textPlate(s, details, '손 조심', { width: .2, height: .1, position: [bw * .12, deck + h * .13, bd * .455], color: '#1d2b3c', background: '#f2c800' });
+      const cart = s._group(body, [w * .4, 0, d * .34]); cart.name = 'packaging-card-rotary-two-clear-drum-cart';
+      s._box(cart, [.3, .6, .28], [0, .36, 0], m.polished); cylinders(s, cart, m.dark, [-.12, .12].flatMap(x => [-.11, .11].map(z => ({ position: [x, .03, z], scale: [.03, .06, .03] }))), 'packaging-card-rotary-two-cart-wheels');
+      cylinder(s, cart, m.glass, .125, .24, [0, .78, 0]); cylinder(s, cart, m.film, .13, .02, [0, .91, 0]);
+      coil(s, details, m.blue, [w * .31, deck * .95, -bd * .42], [w * .33, .12, -bd * .44], .05, 10, .011, 'packaging-card-rotary-two-blue-coiled-hose');
+      hose(s, details, m.yellow, [[-bw * .2, deck + .05, bd * .3], [-bw * .3, deck + .2, bd * .2], [-bw * .05, deck + .26, bd * .1], [feedX, deck + .16, feedZ]], .012, 'packaging-card-rotary-two-yellow-air-tube');
+      clampRing(s, process, m, feedX, h * .965, feedZ, w * .118); clampRing(s, process, m, feedX, h * .56, feedZ, w * .088);
+    }
+  },
+  'packaging-bag-filler'(s, [body, process, details], item, m) {
+    const w = item.width, d = item.depth, h = item.height, x = -w * .12, radius = Math.min(w * .14, d * .18);
+    textPlate(s, process, 'GREENPACK', { width: h * .18, height: .075, position: [x, h * .71, radius * .3 + .012], rotation: [0, 0, PI / 2], background: '#2f8a4d', color: '#ffffff' });
+    s._box(details, [.22, .26, .15], [x - w * .2, h * .37, d * .05], m.film).name = 'packaging-card-bag-filler-left-terminal-box';
+    rod(s, details, m.steel, [x - w * .2, .12, d * .05], [x - w * .2, h * .33, d * .05], .022, 'packaging-card-bag-filler-terminal-box-post');
+    const panel = s._group(details, [w * .24, 0, d * .15]);
+    textPlate(s, panel, '주의', { width: .16, height: .1, position: [0, h * .46, .008], background: '#f2c800' }); s._box(panel, [.2, .26, .004], [0, h * .34, .006], m.film);
+    boxes(s, panel, m.edge, [[[w * .07, h * .28, .01], [.02, .1, .02]]], 'packaging-card-bag-filler-collector-latch');
+    const wrap = m.wrapFilm ||= s._material(0xe9eef0, .3, .02, { transparent: true, opacity: .3, depthWrite: false, side: THREE.DoubleSide });
+    cylinder(s, details, wrap, radius * .62, h * .2, [x, h * .27, -d * .05], radius * .95, 'packaging-card-bag-filler-plastic-dust-wrap').castShadow = false;
+    clampRing(s, process, m, x, h * .96, 0, radius * 1.02); clampRing(s, process, m, x, h * .61, 0, radius * .85);
+    s._box(body, [w * .3, .05, d * .24], [w * .22, .3, d * .36], m.belt).name = 'packaging-card-bag-filler-green-outfeed-belt'; boxes(s, body, m.ivory, [[[w * .22, .26, d * .245], [w * .3, .1, .03]], [[w * .22, .26, d * .475], [w * .3, .1, .03]], [[w * .1, .11, d * .36], [.05, .22, d * .2]], [[w * .34, .11, d * .36], [.05, .22, d * .2]]], 'packaging-card-bag-filler-outfeed-frame');
+    s._box(details, [w * .1, .1, d * .12], [w * .16, h * .52, d * .05], m.yellow).name = 'packaging-card-bag-filler-yellow-belt-cover';
+  },
+  'packaging-stick-filler'(s, [, , details], item, m) {
+    const w = item.width, d = item.depth, h = item.height, line = item.lineNumber || Number(item.id.match(/stick-(\d+)$/)?.[1]) || 1;
+    const flip = item.operatorSide === 'left' ? -1 : 1, bodyW = w * .8, cx = -w * .08 * flip, mainTop = h * 2 / 2.9, panelX = w * .39;
+    const face = s._group(details); face.name = 'packaging-card-stick-door-plates';
+    if (line >= 5) { face.position.set((panelX + .034) * flip, 0, -d * .03); face.rotation.y = flip * PI / 2; }
+    else { face.position.set(cx, 0, -d * .42 - .002); face.rotation.y = PI; }
+    const span = line >= 5 ? d * .76 : bodyW * .86, dir = line >= 5 ? flip : 1;
+    textPlate(s, face, `스틱 ${line}호기`, { width: .34, height: .17, position: [-span * .26 * dir, mainTop * .84, .008], top: '#1f2d3d', border: '#1f2d3d' });
+    textPlate(s, face, '추락 주의|감전 주의', { width: .3, height: .22, position: [span * .2 * dir, mainTop * .84, .008], color: '#1d2b3c', background: '#f2c800', bottom: '#2d5aa5' });
+    if (line < 5) {
+      s._box(face, [.34, .24, .03], [span * .22 * dir, mainTop * .52, .02], m.blue).name = 'packaging-card-stick-blue-framed-tablet'; s._box(face, [.28, .18, .008], [span * .22 * dir, mainTop * .52, .038], m.screen);
+    }
+    coil(s, details, m.orange, [cx - bodyW * .42 * flip, mainTop * .62, d * .2], [cx - bodyW * .42 * flip, .3, d * .24], .03, 9, .009, 'packaging-card-stick-orange-coiled-hose');
+  },
+  'packaging-robot'(s, [body, process, details], item, m) {
+    const w = item.width, d = item.depth, h = item.height, unit = Math.min(w, d);
+    if (item.robotVariant === 'case-palletizer' || /robot-[45]$/.test(item.id)) {
+      if (item.robotIndex === 4 || /robot-4$/.test(item.id)) s._box(body, [w * .4, h * .26, d * .4], [0, h * .18, 0], m.blue).name = 'packaging-card-case-palletizer-four-solid-blue-pedestal';
+      return;
+    }
+    for (const side of [1]) textPlate(s, process, 'ABB', { width: unit * .16, height: unit * .075, position: [0, h * .875, side * unit * .178], rotation: [0, side < 0 ? PI : 0, 0], flat: true, color: '#d8232a' });
+  },
+  'packaging-checkweigher'(s, [, , details], item, m) {
+    const label = item.name.replace(/ · .*/, '');
+    if (label.startsWith('박스')) return;
+    textPlate(s, details, label.replace(/(중량선별기) ?/, '$1|'), { width: .2, height: .12, position: [0, item.height * .47, item.depth * .445], top: '#2d5aa5', bottom: '#8fc04a' });
+  },
+};
+
 export function buildPackagingLineEquipment(s, root, item) {
   if (item.type === 'packaging-hopper' && item.drumHeight) { buildAgitatorHopper(s, root, item); return true; }
   const builders = {
@@ -895,6 +1023,8 @@ export function buildPackagingLineEquipment(s, root, item) {
   };
   const builder = builders[item.type];
   if (!builder) return false;
-  builder(s, assembly(s, root, item), item, materials(s));
+  const groups = assembly(s, root, item), m = materials(s);
+  builder(s, groups, item, m);
+  CARD_FINISH[item.type]?.(s, groups, item, m);
   return true;
 }

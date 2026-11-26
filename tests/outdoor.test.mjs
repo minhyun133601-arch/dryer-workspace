@@ -18,7 +18,7 @@ import { buildOutdoorEnvironment, buildOutdoorEquipment } from '../apps/site/out
 import { CHILLER_ASSETS } from '../apps/site/chiller-data.js';
 import { BURNER_MAINTENANCE_DOCUMENTS } from '../apps/site/burner-maintenance-data.js';
 import { SITE_ASSETS } from '../apps/site/asset-catalog.js';
-import { displayEvidenceImage, evidenceImageKind, isRetainedEvidenceImage } from '../apps/site/evidence-assets.js';
+import { displayEvidenceImage, evidenceImageCaption, evidenceImageKind, isRetainedEvidenceImage } from '../apps/site/evidence-assets.js';
 import { constrainPlacement, PLACEMENT_REGIONS, fromRoomPosition, toRoomPosition } from '../apps/site/placement-rules.js';
 import * as THREE from '../apps/shared/vendor/three.module.js';
 
@@ -204,7 +204,8 @@ test('outdoor equipment remains separate from seven physical dryer stories and t
   assert.equal(OUTDOOR_ROOM.id, 'outdoor');
   assert.deepEqual(FLOORS.map(({ id }) => id), [1, 2, 3, 4, 5, 6, 7, 8]);
   assert.deepEqual(FLOORS.filter(({ kind }) => kind !== 'roof').map(({ id }) => id), [1, 2, 3, 4, 5, 6, 7]);
-  assert.equal(EQUIPMENT.length, 48);
+  // 48 earlier items plus the carded bag line (11, 12), agitator tank (20) and five selectable 1F loads (2026-11-26).
+  assert.equal(EQUIPMENT.length, 55);
   assert.ok(OUTDOOR_EQUIPMENT.length >= 5, 'the room needs its distinct visible equipment groups');
   const all = [...EQUIPMENT, ...OUTDOOR_EQUIPMENT];
   assert.equal(new Set(all.map(({ id }) => id)).size, all.length, 'selection IDs must remain unique across both spaces');
@@ -511,7 +512,7 @@ async function localViewerHarness(url = 'https://example.invalid/apps/site/index
   let sceneOptions, liquidLifecycle, liquidInstance;
   const localStorage = navigationStorage(navigationPreferences);
   const context = vm.createContext({ DRYER_EQUIPMENT: EQUIPMENT, SITE_NOTE, FLOORS, floorById, OUTDOOR_EQUIPMENT, OUTDOOR_ROOM, CAMPUS_EQUIPMENT, CAMPUS_ROOM, PACKAGING_EQUIPMENT, PACKAGING_ROOM, PACKAGING_ROOMS, PACKAGING_OVERVIEW, SURVEY_PHOTOS,
-    document, window, localStorage, location: new URL(url), URL, URLSearchParams, displayEvidenceImage, evidenceImageKind, isRetainedEvidenceImage, BURNER_MAINTENANCE_DOCUMENTS,
+    document, window, localStorage, location: new URL(url), URL, URLSearchParams, displayEvidenceImage, evidenceImageCaption, evidenceImageKind, isRetainedEvidenceImage, BURNER_MAINTENANCE_DOCUMENTS,
     console: { error: (...args) => errors.push(args) }, setTimeout, clearTimeout,
     createFurnaceDetail: () => ({ open: () => furnaceCalls.push('open'), dispose() {} }),
     createChillerDetail: () => ({ open: () => chillerCalls.push('open'), close: () => chillerCalls.push('close'), dispose: () => chillerCalls.push('dispose') }),
@@ -1259,8 +1260,8 @@ test('inline liquid keeps R and Escape from resetting or clearing the hidden mai
 test('the reviewed dryer catalog preserves seven source identities and all original photos while replacing three duplicate approximations', async () => {
   const sourceIds = ['chamber', 'blower', 'heater', 'cyclone-1', 'cyclone-2', 'cyclone-3', 'panel'];
   assert.deepEqual(SOURCE_PHOTO_EQUIPMENT.map(({ id }) => id), sourceIds);
-  assert.equal(EQUIPMENT.length, 48, 'the active catalog adds ten filmed preparation assemblies to the 38 registered groups');
-  assert.equal(new Set(EQUIPMENT.map(({ id }) => id)).size, 48);
+  assert.equal(EQUIPMENT.length, 55, 'the active catalog adds ten filmed preparation assemblies, two carded items and five selectable 1F loads to the 38 registered groups');
+  assert.equal(new Set(EQUIPMENT.map(({ id }) => id)).size, 55);
   const whiteUnits = EQUIPMENT.filter(({ id }) => id === 'f1-prep-mobile-white-unit');
   assert.equal(whiteUnits.length, 1, 'the newly observed mobile cabinet has one independent identity');
   assert.equal(whiteUnits[0].floor, 1);
@@ -1332,8 +1333,8 @@ test('local and shared dryer controls distinguish the lower hall, upper observat
     h.areaButtons.find((button) => button.dataset.area === 'dryer').click();
     assert.equal(h.context.ui.getFloor(), 8, 'returning from another area must restore the roof selector without inventing an eighth story');
     h.context.ui.setFloor('all');
-    if (factory === localViewerHarness) assert.equal(shownIds().length, 48);
-    else assert.match(h.element('area-summary').textContent, /설비 48개$/);
+    if (factory === localViewerHarness) assert.equal(shownIds().length, 55);
+    else assert.match(h.element('area-summary').textContent, /설비 55개$/);
   }
 });
 

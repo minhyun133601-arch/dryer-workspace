@@ -29,6 +29,7 @@ function rearTools(s, inherited = {}) {
     asphalt: s._material(0x6d756f, .98, .01),
     // Tank valve-room prefabs: pale grey-green panels, blue roof (clip002 69s).
     prefabWall: s._material(0xc6cec1, .82, .04), bluePanel: s._material(0x2f6fb4, .62, .18),
+    gantrySteel: s._material(0x737e81, .68, .32),
   };
   const cache = s.campusRearGeometry ||= new Map();
   const geo = (key, create) => { if (!cache.has(key)) { const g = create(); cache.set(key, g); s.geometries?.add(g); } return cache.get(key); };
@@ -343,8 +344,7 @@ function recyclingRoom(s, root, item, t) {
   return true;
 }
 
-// 공무사무실: the green-roof concrete building (user, 11/11). Wall/roof paint
-// come from data; facade details wait for the user's photos.
+// The open electrical yard sits on the green concrete roof of the office.
 function serviceBuilding(s, root, item, t) {
   const { width: w, depth: d, height: h } = item;
   const wall = item.wallPaint || 'white', roofPaint = item.roofPaint || 'white', base = item.basePaint || 'greenRoof';
@@ -361,10 +361,11 @@ function serviceBuilding(s, root, item, t) {
   }
   const roof = s._part(root, item.parts?.[1] || '지붕·파라펫', [0, .8, 0]); roof.name = 'campus-maintenance-office-roof';
   t.box(roof, [w + .2, .16, d + .2], [0, h + .06, 0], roofPaint);
+  const parapet = item.parapetHeight ?? .36, parapetY = h + .12 + parapet / 2;
   t.boxes(roof, [
-    [[0, h + .3, d / 2 + .05], [w + .3, .36, .2]], [[0, h + .3, -d / 2 - .05], [w + .3, .36, .2]],
-    [[w / 2 + .05, h + .3, 0], [.2, .36, d + .3]], [[-w / 2 - .05, h + .3, 0], [.2, .36, d + .3]],
-  ], 'white');
+    [[0, parapetY, d / 2 + .05], [w + .3, parapet, .2]], [[0, parapetY, -d / 2 - .05], [w + .3, parapet, .2]],
+    [[w / 2 + .05, parapetY, 0], [.2, parapet, d + .3]], [[-w / 2 - .05, parapetY, 0], [.2, parapet, d + .3]],
+  ], item.parapetHeight ? 'concrete' : 'white');
   const details = s._part(root, item.parts?.[2] || '창·출입문', [.5, .2, .4]); details.name = 'campus-maintenance-office-exterior';
   Object.assign(root.userData, { source: item.source || 'video-001-264s;video-001-404s;aerial-green-roof;dwg2019-existing-8', officeIdentity: 'user-confirmed-green-roof-building', exteriorPending: !(item.exteriorDetails || []).length, nominalDimensionsMeasured: false, interiorAdded: false });
 }
@@ -682,6 +683,85 @@ function projectingVestibule(s, frame, feature, t) {
   Object.assign(frame.userData,{projectingVestibule:true,projectionMetres:d,actualDoorLeafCount:2,actualDoorType:'two-panel-frosted-sliding',doorOpeningSideUnmeasured:true,interiorAdded:false,source:feature.source});
 }
 
+function rooftopMeterYard(s, frame, feature, t) {
+  const { width: w, height: h, depth: d } = feature;
+  const deck = s._group(frame, [0, -h / 2, 0]);
+
+  // The near frame and the low rear truss are distinct silhouettes in 085723.
+  const posts = [], rails = [];
+  for (const x of [-w / 2, w / 2]) for (const z of [-d / 2, d / 2]) {
+    posts.push([[x, .055, z], [.28, .11, .28]], [[x, h * .48, z], [.095, h * .96, .095]]);
+  }
+  for (const z of [-d / 2, d / 2]) {
+    for (const y of [.66, h * .59, h * .92]) rails.push([[0, y, z], [w + .13, .11, .10]]);
+  }
+  for (const x of [-w / 2, w / 2]) {
+    for (const y of [.66, h * .59, h * .92]) rails.push([[x, y, 0], [.09, .10, d]]);
+    const rise = (h * .92 - .66) / 3;
+    for (let bay = 0; bay < 3; bay++) {
+      rails.push([[x, .66 + (bay + .5) * rise, 0], [.066, .066, Math.hypot(d, rise)], [(bay % 2 ? -1 : 1) * Math.atan2(rise, d), 0, 0]]);
+    }
+  }
+  t.boxes(deck, posts, 'gantrySteel');
+  t.boxes(deck, rails, 'gantrySteel').name = 'campus-rooftop-power-front-frame';
+
+  // The staff identified this as the KEPCO meter area. The photos give the
+  // shapes of the external housings and bushings but no legible equipment ratings.
+  const cabinet = s._group(deck, [-.47, 0, -.48]);
+  cabinet.name = 'campus-rooftop-power-gray-housing';
+  t.box(cabinet, [2.0, 2.09, 1.14], [0, 1.10, 0], 'corrugated');
+  t.box(cabinet, [2.08, .08, 1.20], [0, 2.17, 0], 'steel');
+  t.boxes(cabinet, [[[-.33, 1.09, .577], [.018, 1.93, .014]], [[.32, 1.09, .577], [.018, 1.93, .014]]], 'gantrySteel');
+  const nearFace = d / 2;
+  t.box(deck, [.82, .44, .39], [.44, h * .59 + .24, nearFace - .15], 'frosted');
+  t.box(deck, [.67, .41, .30], [1.03, .89, nearFace - .14], 'corrugated');
+  // Dark hanging bundles appear against the front steelwork. Their hidden
+  // terminations are outside the photographed layout.
+  for (const x of [-.91, .48]) {
+    t.pipe(deck, [[x, h * .86, nearFace], [x - .16, h * .61, nearFace - .08],
+      [x - .08, h * .32, nearFace + .02], [x - .15, .29, nearFace], [x - .35, .18, nearFace - .19]], .032, 'black');
+  }
+  const top = s._group(deck, [.24, h * .92 + .055, -.1]);
+  top.name = 'campus-rooftop-power-upper-housing';
+  t.box(top, [1.10, .37, .66], [0, .185, 0], 'frosted');
+  const bushing = t.geo('rooftop-power-bushing', () => {
+    const profile = [[0, 0], [.065, 0]];
+    for (const y of [.09, .17, .25, .33]) profile.push([.065, y - .018], [.115, y], [.065, y + .016]);
+    profile.push([.065, .46], [0, .46]);
+    return new THREE.LatheGeometry(profile.map(([r, y]) => new THREE.Vector2(r, y)), 12);
+  });
+  for (const z of [-.15, .15]) for (const x of [-.31, 0, .31]) {
+    const insulator = t.mesh(top, bushing, [x, .35, z], 'cream');
+    insulator.rotation.x = Math.sign(z) * .23;
+    t.cyl(insulator, .076, .09, [0, .47, 0], 'dark');
+  }
+  for (const x of [-.31, 0, .31]) {
+    t.pipe(top, [[x, .80, -.25], [x, 1.05, -.48], [x, 1.06, -.83], [x, .50, -1.12]], .017, 'black');
+  }
+
+  const rear = s._group(deck, [-1.64, 0, -3.35]);
+  rear.name = 'campus-rooftop-power-low-truss';
+  const span = 2.28, length = 4.16, topY = 2.09, trussDepth = .25, bayLength = length / 6;
+  const truss = [];
+  for (const x of [-span / 2, span / 2]) {
+    for (const z of [-length / 2, length / 2]) {
+      truss.push([[x, topY / 2, z], [.09, topY, .09]], [[x, .06, z], [.30, .12, .30]]);
+    }
+    for (const y of [topY, topY - trussDepth]) truss.push([[x, y, 0], [.08, .065, length]]);
+    for (let bay = 0; bay < 6; bay++) {
+      truss.push([[x, topY - trussDepth / 2, -length / 2 + (bay + .5) * bayLength],
+        [.05, .05, Math.hypot(bayLength, trussDepth)], [(bay % 2 ? -1 : 1) * Math.atan2(trussDepth, bayLength), 0, 0]]);
+    }
+  }
+  for (const z of [-length / 2, 0, length / 2]) truss.push([[0, topY, z], [span, .075, .085]]);
+  t.boxes(rear, truss, 'steel');
+  const pale = s._group(rear, [-.18, 0, -.75]);
+  pale.name = 'campus-rooftop-power-ribbed-housing';
+  t.box(pale, [1.08, 1.12, .90], [0, .68, 0], 'cream');
+  t.boxes(pale, Array.from({length: 8}, (_, i) => [[-.43 + i * .12, .69, .47], [.04, .95, .08]]), 'white');
+  Object.assign(frame.userData, { location: '공무사무실 옥상', equipmentArea: '한전 전력계', measurementsConfirmed: false });
+}
+
 function exteriorFeature(s, parent, feature, t) {
   const w = feature.width || 2, h = feature.height || 2.2, d = feature.depth || .12;
   const frame = s._group(parent, feature.position || [0, 0, 0]); frame.name = `campus-exterior-${feature.id || feature.kind}`; frame.rotation.y = feature.yaw || 0;
@@ -708,6 +788,8 @@ function exteriorFeature(s, parent, feature, t) {
     const wheel = t.ring(frame, .31, .021, [0, y, .63], 'steel', 'z'); wheel.name = 'campus-gas-riser-handwheel';
     for (let a = 0; a < TAU; a += TAU / 5) t.bar(frame, [0, y, .63], [Math.cos(a) * .29, y + Math.sin(a) * .29, .63], .014);
     for (const yy of [low + .7, h / 2 - .65]) t.box(frame, [.45, .075, .12], [0, yy, .04], 'yellow');
+  } else if (feature.kind === 'electrical-gantry' && feature.rooftopSurvey) {
+    rooftopMeterYard(s, frame, feature, t);
   } else if (feature.kind === 'electrical-gantry') {
     for (const x of [-w / 2, w / 2]) t.cyl(frame, .055, h, [x, 0, 0], 'steel');
     for (const z of [-d / 2, d / 2]) {
@@ -868,6 +950,9 @@ export function addCampusRearDetails(s, root, item, { materials } = {}) {
   // Reuse the third selectable part instead of introducing extra explosion
   // levels merely to add facade features.
   const parent = root.children[2] || root;
-  for (const feature of features) exteriorFeature(s, parent, feature, t);
+  for (const feature of features) {
+    const mount = feature.rooftopSurvey ? root.getObjectByName('campus-maintenance-office-roof') : null;
+    exteriorFeature(s, mount || parent, feature, t);
+  }
   return true;
 }

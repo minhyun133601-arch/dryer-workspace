@@ -130,7 +130,7 @@ test('room furniture leaves the recorded door approaches and usable interior ais
     inspect(op,new THREE.Box3(new THREE.Vector3(-5.35,base+.1,8.65),new THREE.Vector3(-1,base+1.8,9.55)));
     inspect(op,new THREE.Box3(new THREE.Vector3(-4.15,base+.1,4.7),new THREE.Vector3(-3.25,base+1.8,9.55)));
     const enclosure=three.spec.routeSurvey.glazedEnclosure,[doorX,doorZ]=three.spec.routeSurvey.storageDoor.position;
-    inspect(three.environment.architectureFixtures.getObjectByName('dryer-route-3-yellow-glazed-storage-room'),new THREE.Box3(new THREE.Vector3(doorX-.45,three.spec.elevation+.1,doorZ+.05),new THREE.Vector3(doorX+.45,three.spec.elevation+1.8,enclosure.maxZ-.1)));
+    inspect(three.environment.architectureFixtures.getObjectByName('dryer-route-3-yellow-glazed-storage-room'),new THREE.Box3(new THREE.Vector3(doorX+.05,three.spec.elevation+.1,doorZ-.38),new THREE.Vector3(enclosure.maxX-.32,three.spec.elevation+1.8,doorZ+.38)));
   }finally{two.dispose();three.dispose();}
 });
 
@@ -145,16 +145,35 @@ test('the recorded white connecting door opens from the conveyor return into the
     const direction=inside.clone().sub(outside).normalize();
     assert.deepEqual(model.userData.sourceTimesSeconds,gate.sourceTimes);
     assert.equal(leaf.userData.proximityDoor.enterable,true);
-    assert.ok(leaf.getObjectByName('dryer-route-process-side-horizontal-bar'));
+    const carrier=model.parent, track=carrier.parent;
+    assert.equal(carrier.userData.proximityDoor.kind,'slide');
+    assert.ok(!leaf.getObjectByName('dryer-route-process-side-horizontal-bar'));
+    assert.equal(named(carrier,'dryer-route-process-side-horizontal-bar').length,2);
+    const sightGlass=h.environment.architectureFixtures.getObjectByName('dryer-route-3-process-link-inspection-window-glazing');
+    assert.ok(sightGlass && !carrier.getObjectById(sightGlass.id));
+    const pane=sightGlass.getObjectByName('dryer-route-observation-window-glass');
+    const throughWindow=pane.getWorldPosition(new THREE.Vector3()).addScaledVector(direction,-.4);
+    assert.equal(cast(throughWindow.toArray(),direction.toArray(),[h.environment.structure,h.environment.facade],.8).length,0,'fixed wall has an opening behind the inspection glass');
     assert.ok(cast(outside.toArray(),direction.toArray(),[leaf],.85).length);
     const controller=createProximityDoorController(h.s.scene);
     try{
       const visitor=model.localToWorld(new THREE.Vector3(0,0,.63));
       for(let i=0;i<16;i++)controller.update(visitor,.1,{autoOpen:true});
       h.s.scene.updateMatrixWorld(true);
+      assert.equal(carrier.position.x,0,'walking up to the pedestrian door leaves the large panel parked');
       for(const offset of [-.28,0,.28]){
         const start=model.localToWorld(new THREE.Vector3(offset,1.45,.42));
-        assert.equal(cast(start.toArray(),direction.toArray(),[h.environment.structure,h.environment.facade,model],.85).length,0,'the capsule-width opening is physically clear');
+        assert.equal(cast(start.toArray(),direction.toArray(),[h.environment.structure,h.environment.facade,track],.85).length,0,'the capsule-width opening is physically clear');
+      }
+      controller.reset();
+      const wicketStart=model.getWorldPosition(new THREE.Vector3());
+      assert.ok(controller.setPassageOpen(carrier.userData.proximityDoor.groupId,true,{immediate:true}));
+      h.s.scene.updateMatrixWorld(true);
+      assert.equal(leaf.rotation.y,0);
+      assert.ok(Math.abs(model.getWorldPosition(new THREE.Vector3()).distanceTo(wicketStart)-carrier.position.x)<1e-5,'the closed wicket and its jambs ride on the sliding panel');
+      for (const offset of [-.28,0,.28]){
+        const at=track.localToWorld(new THREE.Vector3(offset,1.4,.42));
+        assert.equal(cast(at.toArray(),direction.toArray(),[track,h.environment.structure,h.environment.facade],.85).length,0,'the sliding leaf clears a person-width route independently');
       }
     }finally{controller.dispose();}
   }finally{h.dispose();}
@@ -173,9 +192,7 @@ test('the native overlook room keeps six open jet outlets and two wrapped bundle
       assert.equal(cast([center.x,center.y,center.z+.5],[0,0,-1],[shell],1).length,0,'the round nozzle is a hollow outlet rather than a solid white disc');
     }
     assert.ok(hvac.getObjectByName('dryer-route-lower-air-cabinet'));
-    const bundles=h.environment.architectureFixtures.getObjectByName('dryer-route-1-green-wrapped-corrugated-bundles');
-    assert.equal(bundles.userData.observedMinimumTallBundles,2);
-    assert.equal(named(bundles,'dryer-route-wrapped-cardboard-bundle').length,2);
+    assert.equal(h.environment.architectureFixtures.getObjectByName('dryer-route-1-green-wrapped-corrugated-bundles'),undefined,'loose mid-hall bundles were removed at the user request (2026-11-26)');
     assert.equal(context.getObjectByName('dryer-route-1-observed-floor-fan').userData.operatingAnimationAdded,false);
   }finally{h.dispose();}
 });
@@ -188,7 +205,8 @@ test('the packing clean room has a closed rear wall, an open observation face an
     assert.equal(cast([-6,one.spec.elevation+5.1,0],[1,0,0],[upper],1).length,0,'the elevated west observation window is cut through the inner corridor wall');
     const glazing=one.environment.architectureFixtures.getObjectByName('dryer-route-1-blue-clean-room-upper-observation-glazing');
     assert.ok(cast([-6,one.spec.elevation+5.1,0],[1,0,0],[glazing],1).some(hit=>hit.object.name==='dryer-route-observation-window-glass'));
-    assert.equal(cast([0,one.spec.elevation+2.5,2.6],[0,0,1],[one.environment.structure,one.environment.facade],.7).length,0,'no extra wall closes the existing OP observation face');
+    assert.equal(cast([0,one.spec.elevation+4.3,2.6],[0,0,1],[one.environment.structure,one.environment.facade],.9).length,0,'no extra wall closes the existing OP observation face');
+    assert.ok(cast([0,one.spec.elevation+2,2.6],[0,0,1],[one.environment.structure,one.environment.facade],.9).length,'below the OP floor the drawn clean-room panel closes the bay');
     for(const [name,point]of [['south-observation-corridor',[10,17.8]],['west-observation-corridor',[-7,15]],['op-room',[-2,8]]]){
       const ceiling=two.environment.facade.getObjectByName(`dryer-route-2-${name}-suspended-ceiling`);
       assert.ok(ceiling);assert.equal(ceiling.userData.cutawayWithFacade,true);
@@ -204,12 +222,13 @@ test('the upper stair faces its landing window and returns straight to the third
   try{
     const core=two.spec.stairs[0],stair=two.environment.architectureFixtures.getObjectByName('dryer-building-2-northeast-stair');
     assert.equal(core.runAxis,'z');assert.equal(core.startDirection,-1);
-    const width=core.bounds.maxX-core.bounds.minX,depth=core.bounds.maxZ-core.bounds.minZ,lane=Math.min(1.25,(width-.25)/2),offset=lane/2+.06,run=Math.max(1.8,Math.min(4,depth-1.7)),rise=two.spec.height/2,count=Math.ceil(rise/.18);
+    const width=core.bounds.maxX-core.bounds.minX,depth=core.bounds.maxZ-core.bounds.minZ,lane=Math.min(1.25,(width-.25)/2),offset=(core.mirror?-1:1)*(lane/2+.06),run=core.run??Math.max(1.8,Math.min(4,depth-1.7)),rise=two.spec.height/2,count=Math.ceil(rise/.18);
     const roots=[two.environment.deck,two.environment.architectureFixtures,three.environment.deck];
     const supported=(point,y,label)=>{const hits=cast([point.x,y+.12,point.z],[0,-1,0],roots,.25);assert.ok(hits.some(hit=>Math.abs(hit.point.y-y)<.012),label);};
     const world=local=>stair.localToWorld(new THREE.Vector3(...local));
     const lowerZ=two.spec.routeSurvey.upperStair.lowerDoor[1];
-    for(const [x,z]of [[-8,-5.6],[-7,-6],[-7,lowerZ],[-7,-7.25]])supported(new THREE.Vector3(x,0,z),two.spec.elevation,'the lower corridor reaches the stair door on real floor');
+    const lowerX=two.spec.routeSurvey.upperStair.lowerDoor[0];
+    for(const [x,z]of [[-8,-5.6],[-7,-6],[lowerX,-7.4],[lowerX,lowerZ],[lowerX,-8.6]])supported(new THREE.Vector3(x,0,z),two.spec.elevation,'the lower corridor reaches the stair door on real floor');
     for(let flight=0;flight<2;flight++){
       const direction=flight===0?-1:1;
       for(let step=0;step<count;step++){

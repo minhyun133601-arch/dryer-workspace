@@ -22,7 +22,10 @@ __pycache__/
 *.mkv
 *.avi
 *.webm
-/3층-에어 컴프레셔실/
+/references/현장사진_원본/
+/references/설비이력카드_원본문서/*
+!/references/설비이력카드_원본문서/*.csv
+/references/팀별_설비사진자료/**/명판/
 /근거 자료/건물3D 후보도면/*
 !/근거 자료/건물3D 후보도면/00_*
 

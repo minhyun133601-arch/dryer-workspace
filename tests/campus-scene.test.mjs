@@ -896,6 +896,18 @@ test('the 공무작업장 door belongs to the LPG-side 공무환경팀실 across
     assert.equal(copies.length, 1, '공무작업장 and 공무환경팀실 are aliases of one building rather than duplicated rooms');
     assert.deepEqual([...officeItem.position], [42.5, 0, -82.75], 'the user-confirmed LPG-side anchor stays intact');
     assert.match(officeItem.name, /공무작업장/); assert.match(officeItem.name, /공무환경팀실/);
+    const yard = office.getObjectByName(officeItem.exteriorView.focusObject);
+    office.updateWorldMatrix(true, true);
+    assert.equal(yard.parent.name, 'campus-maintenance-office-roof', 'the rooftop installation moves with the roof during part separation');
+    assert.equal(yard.userData.equipmentArea, '한전 전력계');
+    assert.ok(yard.getObjectByName('campus-rooftop-power-front-frame'));
+    const upper = new THREE.Box3().setFromObject(yard.getObjectByName('campus-rooftop-power-upper-housing'));
+    const rear = new THREE.Box3().setFromObject(yard.getObjectByName('campus-rooftop-power-low-truss'));
+    assert.ok(rear.max.y < upper.min.y && rear.max.z < upper.getCenter(new THREE.Vector3()).z, 'the smaller lattice and ribbed unit sit behind the taller frame');
+    const yardBounds = new THREE.Box3().setFromObject(yard);
+    assert.ok(yardBounds.min.y >= officeItem.height && yardBounds.min.x > office.position.x - officeItem.width / 2 && yardBounds.max.x < office.position.x + officeItem.width / 2);
+    scene.focus(officeItem.id);
+    assert.ok(scene.goalTarget.distanceTo(yardBounds.getCenter(new THREE.Vector3())) < 1e-6, 'the close view frames the roof equipment');
     const entrance = workshop.getWorldPosition(new THREE.Vector3());
     const normal = new THREE.Vector3(0, 0, 1).transformDirection(workshop.matrixWorld);
     // boiler clip001 2:58: the door is just round the corner from the LPG fence

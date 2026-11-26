@@ -1,4 +1,5 @@
 import test from 'node:test';
+import { DRYER_F1_LOAD_EQUIPMENT } from '../apps/site/dryer-floor1-load-data.js';
 import assert from 'node:assert/strict';
 import { access, realpath } from 'node:fs/promises';
 import path from 'node:path';
@@ -26,10 +27,12 @@ const photoLayout = new Map([
 test('assembled facility follows architectural datums and keeps the roof service area at the seventh-floor level', () => {
   assert.deepEqual(FLOORS.map((floor) => floor.id), actualFloors);
   assert.equal(FLOOR_HEIGHT, 7.5);
-  assert.equal(EQUIPMENT.length, 48);
+  assert.equal(EQUIPMENT.length, 55);
   assert.equal(PREPARATION_EQUIPMENT.length, 10, 'the filmed preparation additions include the mobile white unit, lower services and adjacent boiler-room view');
   assert.equal(LOWER_EQUIPMENT.length, 28, 'the original lower-floor records remain available as source references');
-  assert.equal(EQUIPMENT.length, LOWER_EQUIPMENT.length - 3 + PHOTO_EQUIPMENT.length + 6 + PREPARATION_EQUIPMENT.length);
+  assert.equal(EQUIPMENT.length, LOWER_EQUIPMENT.length - 3 + PHOTO_EQUIPMENT.length + 6 + PREPARATION_EQUIPMENT.length + 2 + DRYER_F1_LOAD_EQUIPMENT.length, 'field cards 11/12 and 20 add two items; 1F loads add five selectable items');
+  assert.equal(DRYER_F1_LOAD_EQUIPMENT.length, 5);
+  for (const item of DRYER_F1_LOAD_EQUIPMENT) { assert.equal(item.floor, 1); assert.equal(item.type, 'f1-load'); assert.ok(item.position.every(Number.isFinite)); for (const v of [item.position[0], item.position[2]]) assert.ok(Math.abs(v * 4 - Math.round(v * 4)) < 1e-9, `${item.id} stays on the 0.25 m placement grid`); }
   for (const id of ['f1-prep-under-services', 'f1-boiler-room']) assert.equal(EQUIPMENT.find(item => item.id === id)?.floor, 1, `${id} must be selectable with the preparation room`);
   assert.equal(EQUIPMENT.find(item => item.id === 'f1-boiler-room').samePhysicalRoomAs, 'campus-boiler-room');
   const ids = EQUIPMENT.map((item) => item.id);

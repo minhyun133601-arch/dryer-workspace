@@ -25,9 +25,9 @@ test('the new mobile cabinet repairs only its exact aisle-blocking saved default
   const old = { id:item.id, position:[25.65,.3,6.5], rotation:0 };
   const payload = {version:1,catalogRevision:currentRevision,placementRevisions:{},items:[old]};
   const options = {migrateDefaults:true,migrateDryerDefaults:false};
-  assert.deepEqual(validateLayout(payload,[item],options),[{id:item.id,position:[...item.position],rotation:0}]);
+  assert.deepEqual(validateLayout(payload,[item],options),[pose(item)]);
   const snapped = {...payload,items:[{...old,position:[25.75,.3,6.5]}]};
-  assert.deepEqual(validateLayout(snapped,[item],options),[{id:item.id,position:[...item.position],rotation:0}], 'the original default saved on the automatic quarter-grid is also repaired');
+  assert.deepEqual(validateLayout(snapped,[item],options),[pose(item)], 'the original default saved on the automatic quarter-grid is also repaired');
   for (const changed of [{...old,position:[25.5,.3,6.5]},{...old,rotation:.1}]) {
     const manual={...payload,items:[changed]};
     const [restored]=validateLayout(manual,[item],options);
@@ -37,6 +37,28 @@ test('the new mobile cabinet repairs only its exact aisle-blocking saved default
   assert.deepEqual(validateLayout(payload,[item]),payload.items,'an explicit file import stays intentional');
   const stamped={...payload,placementRevisions:{[item.id]:item.placementRevision}};
   assert.deepEqual(validateLayout(stamped,[item],options),payload.items,'the item correction never replays after it was saved once');
+});
+
+test('only the previous stair equipment defaults and their quarter-grid saves follow the photographed console', () => {
+  const options={migrateDefaults:true,migrateDryerDefaults:false};
+  const whiteStamp='preparation-mobile-cabinet-shutter-clearance-20261113';
+  for (const [id, old, snapped, stamp] of [
+    ['f1-prep-mobile-white-unit',[25.65,.3,9.8],[25.75,.3,9.75],whiteStamp],
+    ['f1-prep-bag-dump',[22.2,.3,6.4],[22.25,.3,6.5],null],
+  ]) {
+    const item=EQUIPMENT.find(item=>item.id===id);
+    const payload=(position,rotation=0,revision=stamp,catalogRevision=currentRevision)=>({version:1,catalogRevision,
+      placementRevisions:revision?{[id]:revision}:{}, items:[{id,position,rotation}]});
+    for(const position of [old,snapped]) assert.deepEqual(validateLayout(payload(position),[item],options),[pose(item)]);
+    for(const manual of [payload([old[0]+.01,.3,old[2]]),payload(old,.25),payload(old,0,item.placementRevision),payload(old,0,'other-review'),payload(old,0,stamp,'other-catalog')]){
+      assert.deepEqual(validateLayout(manual,[item],options),manual.items);
+    }
+    assert.deepEqual(validateLayout(payload(old),[item]),payload(old).items);
+    if(id==='f1-prep-mobile-white-unit'){
+      const editedAfterShutterFix=payload([25.65,.3,6.5]);
+      assert.deepEqual(validateLayout(editedAfterShutterFix,[item],options),editedAfterShutterFix.items);
+    }
+  }
 });
 // A hanging tank pose is "on the deck" when its centre lies within the deck rectangle.
 const onDeck = (item, position) => position[0] >= item.hangingDeck.minX && position[0] <= item.hangingDeck.maxX && position[2] >= item.hangingDeck.minZ && position[2] <= item.hangingDeck.maxZ;

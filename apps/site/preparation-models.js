@@ -217,6 +217,15 @@ function tankGroup(s, g, item, config, t) {
     t.spun(lid, [[0, .012], [lidR * .94, .012], [lidR, .027], [lidR, .054],
       [lidR * .91, .071], [lidR * .62, .087], [0, .093]], [0, 0, 0], 'steel', 'rolled-manway-lid');
     t.ring(lid, lidR + .005, [0, .048, 0], 'trim', 'y', .012);
+    if (unit.lidLabel) {
+      // The operator reads the strip on the lid from the east-side walkway.
+      const label = s._group(lid, [lidR*.27, .09, 0]);
+      label.name = 'preparation-manway-identification-strip';
+      label.rotation.set(-PI/2, PI/2, 0, 'YXZ');
+      label.userData.text = unit.lidLabel;
+      t.box(label, [.45,.155,.005], [0,0,0], 'white');
+      plateText(s,label,unit.lidLabel,t);
+    }
     for (const x of [lidR * .74, -lidR * .74]) {
       t.box(lid, [.09, .055, .16], [x, .09, -.18], 'trim');
       t.cylinder(lid, .025, .13, [x, .12, -.18], 'trim', 'x');
@@ -304,18 +313,203 @@ function platform(s, g, item, config, t) {
     t.mesh(beams, haunch, [x, y - .12, z - .07], 'cream', 'structural-column-haunch');
   }
   const railEdges = config.railEdges || outline.map((point, i) => ({ a: point, b: outline[(i + 1) % outline.length] }));
+  const railPosts = new Map();
   for (const { a, b } of railEdges) {
     const length = Math.hypot(b[0] - a[0], b[1] - a[1]), posts = Math.max(1, Math.ceil(length / 1.5));
     for (const height of [.5, 1.0]) t.bar(g[1] || g[0], [a[0], y + height, a[1]], [b[0], y + height, b[1]], .025, 'trim', 'platform-guardrail');
-    for (let i = 0; i <= posts; i++) { const x = a[0] + (b[0] - a[0]) * i / posts, z = a[1] + (b[1] - a[1]) * i / posts; t.bar(g[1] || g[0], [x, y, z], [x, y + 1, z], .025); }
+    for (let i = 0; i <= posts; i++) {
+      const x = a[0] + (b[0] - a[0]) * i / posts, z = a[1] + (b[1] - a[1]) * i / posts;
+      railPosts.set(`${x.toFixed(4)},${z.toFixed(4)}`, [x,z]);
+    }
+  }
+  for (const [x,z] of railPosts.values()) t.bar(g[1] || g[0], [x,y,z], [x,y+1,z], .025);
+  if (config.consoleBay) {
+    const bay = config.consoleBay, tray = s._group(g[0]);
+    tray.name = 'preparation-console-bay-underside';
+    Object.assign(tray.userData, {sourcePhotos:['20261125_090257.jpg','20261125_090319.jpg'], dimensionsEstimated:true});
+    // The reverse view shows transverse joists, a short folded tray and
+    // one cable disappearing under the deck. Only that exposed run is drawn.
+    const zCentre = (bay.startZ+bay.endZ)/2, run = bay.endZ-bay.startZ;
+    for (const z of [bay.startZ+.28,zCentre,bay.endZ-.28]) {
+      t.box(tray,[bay.backX-bay.frontX,.16,.09],[(bay.frontX+bay.backX)/2,y-.17,z],'cream');
+    }
+    const x = bay.backX-.19;
+    t.box(tray,[.15,.025,run-.38],[x,y-.33,zCentre],'trim');
+    for (const dx of [-.069,.069]) t.box(tray,[.014,.062,run-.38],[x+dx,y-.30,zCentre],'trim');
+    t.pipe(tray,[[x,y-.29,bay.endZ-.47],[x,y-.29,bay.endZ-.19],[x+.05,y-.39,bay.endZ-.07],[x+.13,y-.42,bay.endZ+.05]],.014,'black','console-bay-visible-cable');
   }
   if (config.stairs !== false) {
     const stairs = config.stairs || {}, run = stairs.run || 2.1, sw = stairs.width || .85, stair = s._group(g[2] || g[0], [stairs.x ?? minX + .8, 0, stairs.z ?? minZ - run]); stair.rotation.y = stairs.rotation || 0; stair.name = 'preparation-platform-access-stair';
     const count = Math.max(3, Math.ceil(y / .2));
     for (let i = 0; i < count; i++) t.box(stair, [sw, .045, run / count + .02], [0, (i + 1) * y / count, (i + .5) * run / count], 'steel');
-    for (const side of [-1, 1]) { const x = side * sw / 2; t.bar(stair, [x, .06, 0], [x, y, run], .045, 'cream'); t.bar(stair, [x, .95, 0], [x, y + .95, run], .024); for (const t0 of [0, .5, 1]) t.bar(stair, [x, y * t0, run * t0], [x, y * t0 + .95, run * t0], .023); }
+    for (const side of [-1, 1]) {
+      const x = side * sw / 2;
+      t.bar(stair, [x,.06,0], [x,y,run], .045,'cream');
+      for (const h of [.47,.95]) t.bar(stair, [x,h,0], [x,y+h,run], .024,'trim','stair-handrail');
+      for (const t0 of [0,.5,1]) t.bar(stair,[x,y*t0,run*t0],[x,y*t0+.95,run*t0],.023);
+    }
   }
   deck.userData.singlePlatformOwner = item.id; return { observedVesselBodies: 0, singlePlatformOwner: item.id, vesselClearanceOpenings: holes.length };
+}
+
+// The printed diagram and the HMI use two regions of the same surveyed face.
+// Sampling the upright November 25 photo preserves its actual marks without
+// inventing process connections, tag IDs or live readings.
+function consolePhoto(s, t, photo, board, display) {
+  if (!photo || typeof Image === 'undefined' || typeof document === 'undefined' || !document.createElementNS) return;
+  const material = new THREE.MeshBasicMaterial({ color: 0xffffff, toneMapped: false });
+  s.materials.add(material);
+  function surface({parent, width, height, position}, name, [tl,tr,bl,br]) {
+    const geometry = t.geo(name, () => {
+      const plane = new THREE.PlaneGeometry(1, 1, 12, 8);
+      const uv = plane.attributes.uv;
+      for (let i=0; i<uv.count; i++) {
+        const u=uv.getX(i), v=1-uv.getY(i);
+        // Bilinear sampling across a grid follows both skewed edges of the
+        // mildly oblique photograph. Coordinates refer to its 1024×768 view.
+        const x=(1-v)*((1-u)*tl[0]+u*tr[0])+v*((1-u)*bl[0]+u*br[0]);
+        const y=(1-v)*((1-u)*tl[1]+u*tr[1])+v*((1-u)*bl[1]+u*br[1]);
+        uv.setXY(i,x/1024,1-y/768);
+      }
+      return plane;
+    });
+    const mesh=s._mesh(geometry,material,parent,position);
+    mesh.scale.set(width,height,1); mesh.name='preparation-'+name;
+    mesh.castShadow=false; mesh.receiveShadow=false; mesh.visible=false;
+    return mesh;
+  }
+  const images=[
+    surface(board,'console-photographed-mimic',[[54,134],[790,192],[32,501],[806,498]]),
+    surface(display,'console-photographed-hmi',[[626,78],[714,84],[618,145],[707,152]]),
+  ];
+  const source=photo.startsWith('./assets/') && location.pathname.includes('/apps/site/share/') ? '.'+photo : photo;
+  const texture=new THREE.TextureLoader().load(source, map=>{
+    if (s.disposed) return;
+    map.colorSpace=THREE.SRGBColorSpace;
+    material.map=map; material.needsUpdate=true;
+    for(const mesh of images) mesh.visible=true;
+    s._invalidate?.();
+  });
+  s.textures?.add(texture);
+}
+
+function consoleSwitches(s,t,tray,w,h) {
+  const cylinder = t.geo('unit-cylinder',()=>new THREE.CylinderGeometry(1,1,1,24));
+  // These lens colors record the still photo. They have no live state binding.
+  for (const [name,color] of [['lampRed',0xe94334],['lampGreen',0x25d667]]) {
+    if (!t.materials[name]) {
+      const lens = new THREE.MeshStandardMaterial({color,emissive:color,emissiveIntensity:.55,roughness:.27});
+      t.materials[name]=lens; s.materials?.add(lens);
+    }
+  }
+  const metal=[], caps={red:[],green:[],black:[],lampRed:[],lampGreen:[]};
+  function button(x,y,paint,r=.019) {
+    const key=(radius,z,height)=>({position:[x*w,y*h,z],scale:[radius,height,radius],rotation:[PI/2,0,0]});
+    metal.push(key(r+.006,.024,.012));
+    caps[paint].push(key(r,.036,.017));
+  }
+  const columns=[-.33,-.265,-.20,-.135,-.07,-.005,.06,.125];
+  for(const [col,x] of columns.entries()) {
+    button(x,.34,['lampRed','lampGreen','lampGreen','lampRed','green','green','lampGreen','green'][col]);
+    button(x,.11,col===0||col===3?'black':'red');
+    button(x,-.12,col===4?'lampGreen':'green');
+    if(col>=4) button(x,-.36,'red');
+  }
+  for(const x of [.28,.345,.41]) {button(x,.34,'green'); button(x,.11,'red');}
+  button(.29,-.12,'black'); button(.36,-.12,'green'); button(.38,-.36,'red'); button(.444,-.23,'red',.033);
+  t.repeated(tray,metal,'steel','console-button-bezels',cylinder);
+  for(const [paint,entries] of Object.entries(caps)) t.repeated(tray,entries,paint,'console-'+paint+'-controls',cylinder);
+  const dialBases=[], dials=[], levers=[];
+  for(const x of columns.slice(0,4)) {
+    const dx=x*w,dy=-.36*h;
+    dialBases.push({position:[dx,dy,.031],scale:[w*.062,h*.205,.025]});
+    dials.push({position:[dx,dy,.049],scale:[w*.028,.014,w*.028],rotation:[PI/2,0,0]});
+    levers.push({position:[dx,dy,.069],scale:[w*.014,h*.115,.03],rotation:[0,0,-.38]});
+  }
+  t.repeated(tray,dialBases,'black','console-four-selector-bases');
+  t.repeated(tray,dials,'white','console-four-dial-faces',cylinder);
+  t.repeated(tray,levers,'trim','console-four-dial-handles');
+  const tags=columns.map(x=>({position:[x*w,-.235*h,.021],scale:[w*.046,h*.06,.003]}));
+  t.repeated(tray,tags,'yellow','console-amber-control-tags');
+  for(const x of [.18,.23]) t.box(tray,[w*.033,h*.98,.026],[x*w,0,.028],'white','covered-switch-column');
+
+  const phone=s._group(tray,[-w*.432,h*.23,.052]);
+  t.box(phone,[.132,.207,.043],[0,0,0],'white','console-telephone');
+  t.box(phone,[.039,.199,.036],[-.055,0,.031],'white','console-telephone-handset');
+  t.box(phone,[.067,.029,.006],[.014,.068,.025],'screen');
+  const keys=[];
+  for(let row=0; row<4; row++) for(let col=0; col<3; col++) keys.push({position:[-.016+col*.026,.027-row*.024,.026],scale:[.017,.012,.009]});
+  t.repeated(phone,keys,'trim','console-telephone-keypad');
+}
+
+function consoleWorkstation(s,t,body,face,w,h,d) {
+  const stand=s._group(body,[-w*.33,0,0]);
+  const displays=s._group(face,[-w*.33,0,0]);
+  t.box(stand,[w*.314,.046,d*.84],[0,h*.36,d*.019],'cream','console-writing-table');
+  for(const x of [-w*.134,w*.134]) for(const z of [-d*.28,d*.28]) t.box(stand,[.032,h*.355,.032],[x,h*.175,z],'trim');
+  for(const x of [-w*.073,w*.061]) t.box(stand,[w*.116,.007,d*.28],[x,h*.375,d*.19],'white','console-desk-record');
+  t.box(stand,[.087,h*.78,.092],[-w*.066,h*.39,-d*.32],'steel','console-monitor-support');
+  t.box(displays,[w*.194,h*.29,d*.19],[-w*.067,h*.735,-d*.255],'steel','console-auxiliary-enclosure');
+  t.box(displays,[w*.098,h*.109,.02],[-w*.096,h*.738,-d*.147],'black','console-secondary-hmi');
+  t.box(displays,[w*.088,h*.092,.007],[-w*.096,h*.738,-d*.132],'screen');
+  const tiles=[];
+  for(let row=0;row<2;row++) for(let col=0;col<3;col++) {
+    tiles.push({position:[w*(-.123+.025*col),h*(.754-.029*row),-d*.125],scale:[w*.018,h*.018,.004]});
+  }
+  t.repeated(displays,tiles,'trim','console-secondary-hmi-tiles');
+  for(const [index,color] of ['cream','green','red'].entries()) {
+    t.cylinder(displays,.035,.061,[-w*.08,h*.88+.03+index*.057,-d*.26],color,'y','console-stack-light');
+  }
+  t.box(stand,[.058,h*.45,.063],[w*.048,h*.56,-d*.13],'trim');
+  t.box(stand,[w*.146,.018,d*.23],[w*.045,h*.542,-d*.02],'trim','console-keyboard-shelf');
+  const monitor=s._group(displays,[w*.037,h*.729,-d*.023]);
+  t.box(monitor,[w*.197,h*.171,.029],[0,0,0],'black','console-desktop-monitor');
+  t.box(monitor,[w*.185,h*.151,.006],[0,0,.018],'white');
+  t.box(monitor,[w*.185,h*.014,.006],[0,h*.051,.022],'screen');
+  const rows=Array.from({length:8},(_,i)=>({position:[-w*.008,h*(.034-i*.011),.022],scale:[w*.155,.0025,.004]}));
+  t.repeated(monitor,rows,'trim','console-desktop-table-rows');
+}
+
+function photographedConsole(s,t,body,face,config,w,h,d) {
+  // The steel mimic board rises behind a separate, shallower switch tray.
+  // The small stainless HMI on top and the two screens to its left are three
+  // different displays in 09:02:07 and 09:02:09.
+  const width=w*.648, cx=(w-width)/2;
+  const cabinet=s._group(body,[cx,0,0]), controls=s._group(face,[cx,0,0]);
+  const front=[d*.47,h*.434], fold=[d*.025,h*.522], top=[-d*.24,h*.845], rear=-d*.47;
+  const profile=t.geo('console-side-profile-'+[w,h,d].join('-'),()=>{
+    const outline=new THREE.Shape([front,fold,top,[rear,top[1]],[rear,h*.42],[front[0],h*.40]].map(([z,y])=>new THREE.Vector2(z,y)));
+    const solid=new THREE.ExtrudeGeometry(outline,{depth:width,bevelEnabled:false});
+    solid.rotateY(-PI/2); solid.translate(width/2,0,0); return solid;
+  });
+  t.mesh(cabinet,profile,[0,0,0],'cream','console-folded-enclosure');
+  t.box(cabinet,[width*.93,h*.40,d*.46],[0,h*.20,-d*.225],'cream','console-recessed-pedestal');
+  for(const side of [-1,1]) t.box(cabinet,[.046,h*.402,d*.69],[side*width*.465,h*.201,-d*.115],'cream','console-pedestal-side');
+  function panel(name,low,high) {
+    const depth=low[0]-high[0],rise=high[1]-low[1],length=Math.hypot(depth,rise);
+    const part=s._group(controls,[0,(high[1]+low[1])/2,(high[0]+low[0])/2]);
+    part.name=name; part.rotation.x=-Math.atan2(depth,rise);
+    t.box(part,[width,length,.02],[0,0,0],'steel');
+    return {parent:part,width,height:length,position:[0,0,.024]};
+  }
+  const tray=panel('preparation-filmed-sloped-console-face',front,fold);
+  consoleSwitches(s,t,tray.parent,width,tray.height);
+  const board=panel('preparation-console-upright-mimic-board',fold,top);
+  t.box(board.parent,[width*.97,board.height*.94,.012],[0,0,.012],'trim');
+  // The plain paper faces remain available if the photographic finish cannot load.
+  const cards=[];
+  for(let row=0;row<8;row++) for(let col=0;col<4;col++) cards.push({position:[width*(-.245+col*.079),board.height*(.407-row*.108),.021],scale:[width*.074,board.height*.102,.003]});
+  t.repeated(board.parent,cards,'white','console-inspection-cards');
+  t.box(board.parent,[width*.20,board.height*.27,.003],[width*.226,board.height*.30,.021],'white','console-posted-sheet');
+  for(const x of [.28,.342]) t.cylinder(board.parent,.022,.018,[width*x,-board.height*.29,.032],'black','z','console-lower-selector');
+  const caseHeight=h*.155,caseWidth=width*.229;
+  const display=s._group(controls,[width*.285,top[1]+caseHeight/2,rear+d*.15]);
+  t.box(display,[caseWidth,caseHeight,d*.25],[0,0,0],'steel','console-top-hmi-enclosure');
+  t.box(display,[caseWidth*.77,caseHeight*.67,.015],[0,-caseHeight*.055,d*.13],'black','console-top-hmi-bezel');
+  t.box(display,[caseWidth*.65,caseHeight*.49,.006],[0,-caseHeight*.055,d*.146],'screen');
+  t.cylinder(display,.013,.015,[0,caseHeight*.354,d*.138],'green','z','console-top-hmi-indicator');
+  consolePhoto(s,t,config.facePhoto,board,{parent:display,width:caseWidth*.65,height:caseHeight*.49,position:[0,-caseHeight*.055,d*.155]});
+  consoleWorkstation(s,t,body,face,w,h,d);
 }
 
 function controlPanel(s, g, item, config, t) {
@@ -323,13 +517,7 @@ function controlPanel(s, g, item, config, t) {
   const body = s._group(g[0], [0, elevation, 0]); body.name = 'preparation-filmed-control-cabinet';
   const face = s._group(g[1] || g[0], [0, elevation, 0]); face.name = 'preparation-static-control-face';
   if (config.console) {
-    t.box(body, [w, h * .62, d * .73], [0, h * .31, -.05], 'cream');
-    const slope = s._group(face, [0, h * .76, 0]); slope.rotation.x = -PI / 3; slope.name = 'preparation-filmed-sloped-console-face';
-    t.box(slope, [w, d, .09], [0, 0, 0], 'cream');
-    t.box(slope, [w * .54, d * .72, .008], [-w * .15, -.025, .05], 'white', 'visible-paper-plan');
-    t.box(slope, [w * .16, d * .28, .025], [w * .32, d * .2, .061], 'screen');
-    for (let row = 0; row < 3; row++) for (let col = 0; col < 3; col++) t.cylinder(slope, .025, .025, [w * (.19 + col * .075), d * (.02 - row * .17), .062], row === 2 && col === 0 ? 'red' : row === 1 ? 'dark' : 'green', 'z');
-    for (const x of [-w * .38, w * .38]) t.box(body, [.13, .12, d * .9], [x, .06, 0], 'dark');
+    photographedConsole(s,t,body,face,config,w,h,d);
   } else {
     t.box(body, [w, h, d], [0, h / 2, 0], 'cream');
     const doorCount = Math.max(1, Math.round(w / 1.15)), doorWidth = w / doorCount, vents = [];

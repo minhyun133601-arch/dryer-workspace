@@ -1,21 +1,26 @@
 import * as THREE from '../shared/vendor/three.module.js';
 import { buildFurnace } from './furnace-model.js';
+import { createArchitectureKit } from './architecture-kit.js';
+import { dryerWallPlan } from './dryer-wall-plan.js';
 
 // A016/A017/A019 determine floor ownership and openings. Dimensions of the
 // photographed machines remain qualified approximations, distinct from holes.
 const TAU = Math.PI * 2, UP = new THREE.Vector3(0, 1, 0);
 function tools(s) {
   const m = s.dryerUpperMaterials ||= {
-    steel: s.mat.steel, trim: s.mat.trim, dark: s.mat.dark, white: s.mat.white,
-    floor: s._material(0x397762, .94, .02), cream: s._material(0xd8d5c5, .78, .1),
-    motor: s._material(0x87a8a0, .55, .34), grayMotor: s._material(0xacaeaa, .6, .25),
-    red: s._material(0x98534d, .76, .18), yellow: s.mat.yellow,
-    wrap: s._material(0xc4c9c4, .5, .65), concrete: s._material(0x858980, .98, 0),
-    roof: s._material(0xb2b4a8, .8, .2), apron: s._material(0x676e65, .99, 0),
-    tank: s._material(0xb9c0af, .72, .16), glass: s._material(0xc1d2cf, .25, .03, { transparent: true, opacity: .28, depthWrite: false }),
-    innerSteel: s._material(0xbfc6c2, .44, .65, { side: THREE.DoubleSide }),
-    blue: s._material(0x4774a2, .59, .2), black: s.mat.black,
-    cabinet: s._material(0x91a29b, .72, .2), orange: s._material(0xc68a45, .65, .15),
+    steel: s.mat.steel, stainedSteel: s.mat?.stainedSteel || s.mat.steel, trim: s.mat.trim, dark: s.mat.dark, white: s.mat.white,
+    floor: s.mat?.slabFloor || s._material(0x1f5e3f, .34, .06), curb: s.mat?.curb || s._material(0x1b5e3e, .32, .06),
+    cream: s.mat?.creamBeam || s._material(0xdad5c2, .74, .1),
+    motor: s._material(0x3f7d76, .45, .42), grayMotor: s._material(0x9ea39f, .52, .35),
+    red: s._material(0xb63b31, .55, .24), yellow: s.mat.yellow,
+    wrap: s._material(0xcad0cc, .38, .72), concrete: s._material(0x858980, .95, 0),
+    roof: s._material(0x9a9f96, .74, .28), ceilingDeck: s.mat?.ceilingDeck || s._material(0x4c545a, .58, .48, { side: THREE.DoubleSide }),
+    tray: s._material(0x2c3438, .56, .46), led: s._material(0xfbf9ee, .35, 0, { emissive: 0xfff8e6, emissiveIntensity: 1.15 }),
+    apron: s._material(0x676e65, .96, 0),
+    tank: s._material(0xb9c0af, .68, .22), glass: s._material(0xc1d2cf, .22, .04, { transparent: true, opacity: .28, depthWrite: false }),
+    innerSteel: s._material(0xe6eae8, .24, .85, { map: s.mat?.steel?.map || null, roughnessMap: s.mat?.steel?.roughnessMap || null, envMapIntensity: 1.18, side: THREE.DoubleSide }),
+    blue: s._material(0x2b629b, .5, .22), black: s.mat.black,
+    cabinet: s._material(0x91a29b, .68, .24), orange: s._material(0xc68a45, .6, .16),
   };
   const cache = s.dryerUpperGeometry ||= new Map();
   const geo = (key, make) => { if (!cache.has(key)) { const value = make(); cache.set(key, value); s.geometries.add(value); } return cache.get(key); };
@@ -57,27 +62,50 @@ function tools(s) {
   return { m, geo, mesh, box, cyl, ring, bar, pipe, instances, bolts, flange, ibeam };
 }
 
-function accessDoor(s, h, parent, width, height, position) {
-  const group = s._group(parent, position);
-  h.box(group, [width + .12, height + .12, .07], [0, 0, 0], 'dark'); h.box(group, [width, height, .065], [0, 0, .055]);
-  for (const side of [-1, 1]) for (let i = 0; i < 5; i++) {
-    const y = -height * .42 + i * height * .21;
-    h.cyl(group, .028, .14, [side * (width / 2 + .075), y, .07], 'trim');
-    h.bar(group, [side * (width / 2 + .09), y, .09], [side * (width / 2 - .03), y + .04, .13], .014);
+function plaque(s, h, parent, text, size, position, rotationY = 0, borderColor = '#26589c') {
+  const g = s._group(parent, position); g.rotation.y = rotationY;
+  const [w, hh] = size;
+  h.box(g, [w, hh, .014], [0, 0, 0], 'white');
+  h.box(g, [w * .94, hh * .22, .016], [0, -hh * .34, .002], 'blue');
+  if (typeof WebGLRenderingContext !== 'undefined' && typeof document !== 'undefined' && typeof document.createElement === 'function') {
+    const canvas = document.createElement('canvas'); canvas.width = 256; canvas.height = 128;
+    const ctx = canvas.getContext?.('2d');
+    if (ctx?.fillText) {
+      ctx.fillStyle = '#f5f6f2'; ctx.fillRect(0, 0, 256, 128);
+      ctx.strokeStyle = borderColor; ctx.lineWidth = 7; ctx.strokeRect(5, 5, 246, 118);
+      ctx.fillStyle = borderColor; ctx.fillRect(8, 96, 240, 24);
+      ctx.fillStyle = '#182426'; ctx.font = '700 46px "Malgun Gothic", sans-serif';
+      ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText(text, 128, 54, 224);
+      const tex = new THREE.CanvasTexture(canvas); tex.colorSpace = THREE.SRGBColorSpace; s.textures?.add(tex);
+      const mat = s._material(0xffffff, .5, .05, { map: tex });
+      const plane = h.mesh(g, h.geo(`plaque:${w}:${hh}`, () => new THREE.PlaneGeometry(w * .96, hh * .94)), mat, [0, 0, .009]);
+      plane.castShadow = false;
+    }
   }
-  for (const x of [-width * .32, width * .32]) for (const y of [-height / 2 - .02, height / 2 + .02]) h.box(group, [.16, .035, .09], [x, y, .1], 'trim');
-  const x = width * .31;
-  h.bar(group, [x, -.25, .11], [x, -.25, .22], .02); h.bar(group, [x, -.25, .22], [x, .3, .22], .025); h.bar(group, [x, .3, .22], [x, .3, .11], .02);
-  const port = s._group(group, [-width * .4, -height * .4, .16]);
-  h.cyl(port, .12, .1, [0, 0, 0], 'trim', 'z');
-  h.cyl(port, .092, .012, [0, 0, .055], 'dark', 'z');
-  h.ring(port, .116, .012, [0, 0, .059], 'trim', 'z');
-  h.bolts(port, Array.from({ length: 6 }, (_, i) => {
-    const a = i * TAU / 6;
-    return [.103 * Math.cos(a), .103 * Math.sin(a), .06];
-  }), 'z', .011);
-  // The warning plaque colors are visible; unreadable lettering is not invented.
-  h.box(group, [.18, .24, .012], [-width * .7, .1, .08], 'white'); h.box(group, [.18, .045, .014], [-width * .7, .01, .09], 'blue');
+  return g;
+}
+
+function accessDoor(s, h, parent, width, height, position, options = {}) {
+  const group = s._group(parent, position);
+  // Rounded-corner stainless inspection door frame, twin horizontal latch bars, hinges & handle (card 32 FRONT)
+  h.box(group, [width + .14, height + .14, .045], [0, 0, 0], 'trim');
+  h.box(group, [width + .04, height + .04, .05], [0, 0, .02], 'dark');
+  h.box(group, [width - .02, height - .02, .055], [0, 0, .045], 'steel');
+  for (const yBar of [-height * .31, height * .31]) {
+    h.bar(group, [-width * .56, yBar, .085], [width * .52, yBar, .085], .018, 'trim');
+    for (const sx of [-1, 1]) h.box(group, [.06, .08, .05], [sx * (width * .51), yBar, .07], 'trim');
+  }
+  for (const yHinge of [-height * .32, height * .32]) h.cyl(group, .024, .12, [width * .51, yHinge, .07], 'trim');
+  const hx = -width * .41;
+  h.bar(group, [hx, -.13, .075], [hx, -.13, .13], .014); h.bar(group, [hx, -.13, .13], [hx, .13, .13], .016); h.bar(group, [hx, .13, .13], [hx, .13, .075], .014);
+  if (options.chamberSigns) {
+    plaque(s, h, group, '챔 버', [.62, .34], [0, -height * .12, .078], 0);
+    for (const dy of [.08, .32]) {
+      h.box(group, [.15, .20, .012], [-width * .66, dy, .04], 'white');
+      h.box(group, [.15, .04, .014], [-width * .66, dy - .07, .042], 'blue');
+      const tri = h.box(group, [.065, .065, .015], [-width * .66, dy + .02, .044], 'yellow'); tri.rotation.z = Math.PI / 4;
+    }
+  }
   return group;
 }
 
@@ -166,57 +194,120 @@ function roofDrive(s, root, item, h) {
 function chamber(s, root, item, h) {
   const r = item.radius || 3.8, height = item.height || 6.4;
   const base = s._part(root, '바닥 관통 외함·녹색 턱', [0, 0, 0]);
-  const kerb = h.mesh(base, h.geo(`chamber-kerb:${r}`, () => new THREE.RingGeometry(r - .05, r + .34, 80)), h.m.floor, [0, .14, 0]); kerb.rotation.x = -Math.PI / 2;
-  h.cyl(base, r + .06, .16, [0, .08, 0], 'trim', 'y', r + .06, true);
+  // Raised circular deep-green concrete curb + stainless base flashing (card 32 FRONT/REAR)
+  h.cyl(base, r + .28, .22, [0, .11, 0], 'curb', 'y', r + .32, false);
+  h.cyl(base, r + .05, .08, [0, .23, 0], 'trim', 'y', r + .05, true);
   for (let i = 0; i < 3; i++) {
     const y = height * i / 3, shell = s._part(root, ['하단 원통 외피', '중단 원통 외피', '상단 연결 외피'][i], [i === 1 ? -1.0 : 0, i * .45, 0], [0, y, 0]);
     h.cyl(shell, r, height / 3, [0, height / 6, 0], 'innerSteel', 'y', r, true);
-    for (const yy of [.025, height / 3 - .025]) h.ring(shell, r + .012, .018, [0, yy, 0]);
-    const seams = []; for (let n = 0; n < 12; n++) { const a = n * TAU / 12; seams.push({ position: [Math.cos(a) * r, height / 6, Math.sin(a) * r], quaternion: new THREE.Quaternion().setFromAxisAngle(UP, -a) }); }
-    h.instances(shell, h.geo(`chamber-seam:${height}`, () => new THREE.BoxGeometry(.011, height / 3 - .03, .011)), 'trim', seams);
+    for (const yy of [.02, height / 3 - .02]) h.ring(shell, r + .012, .016, [0, yy, 0]);
+    const seams = []; for (let n = 0; n < 20; n++) { const a = n * TAU / 20; seams.push({ position: [Math.cos(a) * (r + .004), height / 6, Math.sin(a) * (r + .004)], quaternion: new THREE.Quaternion().setFromAxisAngle(UP, -a) }); }
+    h.instances(shell, h.geo(`chamber-seam:${height}`, () => new THREE.BoxGeometry(.010, height / 3 - .02, .010)), 'trim', seams);
   }
-  const door = s._part(root, '다중 잠금 점검문·원형 포트', [0, .1, 1.4], [0, 1.7, r + .035]); accessDoor(s, h, door, 1.4, 2.03, [0, 0, 0]);
-  const services = s._part(root, '외부 얇은 배관·고정 클램프', [.5, .1, .3]);
-  for (const x of [-1.15, 1.15]) {
-    const z = Math.sqrt(r * r - x * x) + .05;
-    h.pipe(services, [[x, .35, z], [x, 2, z], [x, height - .3, z], [x * .5, height - .17, r + .1]], .025);
-    for (const y of [1, 2.3, 3.6, 5.0]) if (y < height) h.box(services, [.15, .035, .06], [x, y, z], 'trim');
+  // Main inspection door ("챔 버" nameplate) oriented toward the NE 6F hall & tour sightline (angle = -.95 rad from +Z -> NE)
+  const doorAngle = 2.42;
+  const doorPos = [Math.sin(doorAngle) * (r + .03), 1.42, Math.cos(doorAngle) * (r + .03)];
+  const door = s._part(root, '다중 잠금 점검문·원형 포트', [.9, .1, -.9], doorPos);
+  const doorNode = accessDoor(s, h, door, 1.06, 1.86, [0, 0, 0], { chamberSigns: true });
+  doorNode.rotation.y = doorAngle;
+  // Round dark sight port + hanging cable to the right of the door (card 32 FRONT) & elevated small square port (card 32 LEFT)
+  const portAngle = doorAngle + .34;
+  const sp = s._group(door, [Math.sin(portAngle) * (r + .03) - doorPos[0], -.18, Math.cos(portAngle) * (r + .03) - doorPos[2]]);
+  sp.rotation.y = portAngle;
+  h.cyl(sp, .15, .09, [0, 0, .03], 'black', 'z'); h.cyl(sp, .11, .02, [0, 0, .08], 'glass', 'z');
+  h.pipe(sp, [[.06, -.04, .06], [.22, -.24, .05], [.42, -.12, .04]], .009, 'black');
+  const sqAngle = doorAngle - .52;
+  const sq = s._group(door, [Math.sin(sqAngle) * (r + .03) - doorPos[0], 1.72, Math.cos(sqAngle) * (r + .03) - doorPos[2]]);
+  sq.rotation.y = sqAngle;
+  h.box(sq, [.66, .66, .04], [0, 0, 0], 'trim'); h.box(sq, [.56, .56, .048], [0, 0, .015], 'steel');
+  for (const dy of [-.18, .18]) h.box(sq, [.08, .05, .06], [.26, dy, .03], 'trim');
+
+  const services = s._part(root, '외부 얇은 배관·고정 클램프', [.5, .1, -.4]);
+  // Circumferential twin air/conduit pipe rings + upper knockers + FRL regulator beside door (card 32 FRONT/RIGHT)
+  for (const ry of [3.55, 3.72, 5.45]) h.ring(services, r + .045, .016, [0, ry, 0], 'trim', 'y');
+  for (let k = 0; k < 6; k++) {
+    const a = doorAngle - .8 + k * .52;
+    const kx = Math.sin(a) * (r + .06), kz = Math.cos(a) * (r + .06);
+    const kn = h.box(services, [.14, .22, .12], [kx, 4.18, kz], 'steel'); kn.rotation.y = a;
+    h.bar(services, [kx, 3.72, kz], [kx, 4.18, kz], .012, 'blue');
   }
+  const frlAngle = doorAngle - .23, fx = Math.sin(frlAngle) * (r + .06), fz = Math.cos(frlAngle) * (r + .06);
+  h.bar(services, [fx, .22, fz], [fx, 5.45, fz], .020, 'trim');
+  h.box(services, [.14, .22, .12], [fx, 1.18, fz], 'dark');
   root.userData.openAtTop = true; root.userData.connectsUpperWell = 'dryer-chamber-upper-well';
 }
 
 function upperWell(s, root, item, h) {
   const r = item.radius || 4.3, top = item.height || .8, down = item.belowFloor || 1;
+  // Card 35 (보류 2, 7F chamber top plate): low circular step platform + stained wide circular top plate + perimeter rail
   const cone = s._part(root, '관찰 웰 경사 외피·원형 림', [0, .7, 0]);
-  h.cyl(cone, r - .035, top + down, [0, (top - down) / 2, 0], 'innerSteel', 'y', .65, true);
-  h.ring(cone, r, .045, [0, top, 0]); h.cyl(cone, r, .16, [0, top - .08, 0], 'innerSteel', 'y', r, true);
+  h.cyl(cone, r - .035, down + .28, [0, (.28 - down) / 2, 0], 'innerSteel', 'y', r - .35, true);
+  h.cyl(cone, r + .22, .08, [0, .04, 0], 'curb', 'y', r + .26, false);
+  h.cyl(cone, r + .02, .28, [0, .14, 0], 'trim', 'y', r + .04, true);
+  h.ring(cone, r + .03, .028, [0, .28, 0], 'trim', 'y');
+
   const rim = s._part(root, '체커 점검 보행면·분리 판', [.4, 0, .6]);
-  const ring = h.mesh(rim, h.geo(`well-walk:${r}`, () => {
-    const g = new THREE.RingGeometry(r, r + .55, 96), p = g.attributes.position;
-    for (let i = 0; i < p.count; i++) { const x = p.getX(i), y = p.getY(i), length = Math.hypot(x, y); if (length > r + .1) { const inset = THREE.MathUtils.clamp((y / length - .75) / .2, 0, 1) * .3, scale = (r + .55 - inset) / length; p.setXY(i, x * scale, y * scale); } }
-    g.computeBoundingBox(); g.computeBoundingSphere(); return g;
-  }), h.m.trim, [0, .025, 0]); ring.rotation.x = -Math.PI / 2;
-  const checker = [], railPoints = [];
-  for (let i = 0; i < 96; i++) {
-    const a = i * TAU / 96, outer = r + .55 - THREE.MathUtils.clamp((-Math.sin(a) - .75) / .2, 0, 1) * .3, rr = (r + outer) / 2;
-    checker.push({ position: [Math.cos(a) * rr, .032, Math.sin(a) * rr], quaternion: new THREE.Quaternion().setFromAxisAngle(UP, -a + Math.PI / 4) });
-    railPoints.push([Math.cos(a) * (outer - .03), .06, Math.sin(a) * (outer - .03)]);
+  // Wide stained stainless circular top deck (y = .28m) + radial plate seams + perimeter handrail
+  h.cyl(rim, r, .04, [0, .28, 0], 'stainedSteel', 'y', r, false);
+  for (let i = 0; i < 8; i++) {
+    const a = i * Math.PI / 8;
+    h.bar(rim, [Math.cos(a) * 1.55, .305, Math.sin(a) * 1.55], [Math.cos(a) * (r - .05), .305, Math.sin(a) * (r - .05)], .008, 'trim');
   }
-  h.instances(rim, h.geo('upper-well-annular-checker', () => new THREE.BoxGeometry(.1, .008, .025)), 'steel', checker);
+  const railPoints = [];
+  for (let i = 0; i < 48; i++) {
+    const a = i * TAU / 48, outer = r + .45 - THREE.MathUtils.clamp((-Math.sin(a) - .75) / .2, 0, 1) * .3;
+    railPoints.push([Math.cos(a) * (outer - .04), .28, Math.sin(a) * (outer - .04)]);
+  }
   const guard = s._group(rim); guard.name = 'dryer-well-perimeter-guard';
-  for (let i = 0; i < railPoints.length; i += 5) { const [x, y, z] = railPoints[i]; h.bar(guard, [x, y, z], [x, 1.18, z], .022, 'white'); }
-  for (const y of [.62, 1.18]) h.pipe(guard, [...railPoints, railPoints[0]].map(([x, , z]) => [x, y, z]), .022, 'white');
-  Object.assign(guard.userData, { source: 'video-432-444-468s', dimensionsMeasured: false, northEdgeInsetForObservedDuct: true });
-  h.box(rim, [1.05, .06, .85], [0, -.62, .3]);
-  const plates = []; for (let x = -.45; x <= .45; x += .12) for (let z = -.05; z <= .65; z += .13) plates.push({ position: [x, -.584, z], quaternion: new THREE.Quaternion().setFromAxisAngle(UP, Math.PI / 4) });
-  h.instances(rim, h.geo('checker-detail', () => new THREE.BoxGeometry(.08, .008, .022)), 'steel', plates);
+  for (let i = 0; i < railPoints.length; i += 2) { const [x, y, z] = railPoints[i]; h.bar(guard, [x, y, z], [x, 1.32, z], .020, 'trim'); }
+  for (const y of [.78, 1.32]) h.pipe(guard, [...railPoints, railPoints[0]].map(([x, , z]) => [x, y, z]), .021, 'trim');
+  Object.assign(guard.userData, { source: 'field-card-35-and-video-432s', dimensionsMeasured: false, northEdgeInsetForObservedDuct: true });
+
+  // Central low cylindrical air distributor + tangential fan-ribbed round duct + small blower/yellow motor/trapezoid filter + 2 nozzle wash stands + chain hoist (card 35)
   const visible = s._part(root, '보이는 중앙 커버·호스·고정부', [.2, .4, -.5]);
-  h.box(visible, [.79, .46, .67], [0, -.85, -.05]);
-  for (const [i, x] of [-.28, -.03, .25].entries()) h.pipe(visible, [[x, -.7, -.12], [x - .15, -.05 + i * .04, -.15], [x + .05, .15, .05], [x + .3, -.65, .3]], .025, 'black');
-  const hose = h.pipe(visible, [[-1.1, -.05, -.25], [-.8, -.2, -.3], [-.6, -.6, -.15], [-.35, -.76, -.12]], .07, 'yellow');
-  const hoops = []; for (let i = 1; i < 22; i++) hoops.push({ position: hose.getPointAt(i / 22).toArray(), quaternion: new THREE.Quaternion().setFromUnitVectors(new THREE.Vector3(0, 0, 1), hose.getTangentAt(i / 22)) });
-  h.instances(visible, h.geo('well-hose-ridge', () => new THREE.TorusGeometry(.073, .009, 4, 16)), 'yellow', hoops);
-  for (let i = 0; i < 8; i++) { const a = i * TAU / 8; h.box(visible, [.045, .12, .045], [Math.cos(a) * r * .7, .1, Math.sin(a) * r * .7], 'trim'); }
+  const distX = -.25, distZ = -.35;
+  h.cyl(visible, 1.52, .98, [distX, .79, distZ], 'steel', 'y', 1.52, false);
+  h.ring(visible, 1.54, .022, [distX, 1.28, distZ], 'trim', 'y');
+  // Thick fan-segmented stainless duct sweeping into the central air distributor (card 35 RIGHT/REAR)
+  h.pipe(visible, [[-2.35, .55, -2.55], [-2.15, .88, -1.85], [-1.62, .92, -1.05], [distX - .95, .86, distZ - .35]], .48, 'steel');
+  for (const [rx, ry, rz, ay] of [[-2.22, .74, -2.18, .3], [-1.88, .90, -1.45, .65], [-1.38, .90, -.82, 1.05]]) {
+    const rb = h.ring(visible, .50, .016, [rx, ry, rz], 'trim', 'z'); rb.rotation.y = ay;
+  }
+  // Small blower + yellow belt guard/motor + trapezoidal intake filter box on the top plate (card 35 LEFT)
+  const bx = 1.65, bz = -.95;
+  h.box(visible, [.95, .08, .72], [bx, .34, bz], 'trim');
+  h.cyl(visible, .42, .26, [bx - .28, .82, bz], 'steel', 'x');
+  h.box(visible, [.28, .42, .62], [bx - .02, .68, bz + .18], 'yellow');
+  h.cyl(visible, .15, .38, [bx + .22, .52, bz + .28], 'blue', 'x');
+  const trap = h.geo('card35-trap-filter', () => {
+    const g = new THREE.BoxGeometry(.76, .96, .62), p = g.attributes.position;
+    for (let i = 0; i < p.count; i++) if (p.getX(i) < 0) { p.setY(i, p.getY(i) * .38); p.setZ(i, p.getZ(i) * .42); }
+    g.computeVertexNormals(); g.computeBoundingBox(); g.computeBoundingSphere(); return g;
+  });
+  h.mesh(visible, trap, h.m.steel, [bx - .85, .88, bz - .62]).rotation.y = Math.PI / 2;
+  for (const lx of [-.26, .26]) for (const lz of [-.24, .24]) h.bar(visible, [bx - .85 + lx, .30, bz - .62 + lz], [bx - .85 + lx, .45, bz - .62 + lz], .018, 'trim');
+  // Two stainless table-type nozzle wash stands on south/east side of plate (card 35 FRONT)
+  // Stand 1: flat round disk table on 4 legs + coiled black hose + orange pendant
+  const t1x = .55, t1z = 2.35;
+  h.cyl(visible, .58, .025, [t1x, .96, t1z], 'steel');
+  for (const a of [.4, 1.9, 3.5, 5.0]) h.bar(visible, [t1x + Math.cos(a) * .42, .30, t1z + Math.sin(a) * .42], [t1x + Math.cos(a) * .38, .96, t1z + Math.sin(a) * .38], .016, 'trim');
+  h.box(visible, [.22, .06, .08], [t1x + .32, .99, t1z + .12], 'orange');
+  h.pipe(visible, [[t1x - .15, .99, t1z], [t1x - .62, .88, t1z + .32], [t1x - .75, .42, t1z + .45], [t1x - .25, .34, t1z + .18]], .026, 'black');
+  // Stand 2: open ring work stand on 4 splayed legs + yellow drain hose + overhead chain hoist with red hook
+  const t2x = 1.85, t2z = 1.75;
+  h.ring(visible, .48, .022, [t2x, 1.06, t2z], 'steel', 'y');
+  for (let i = 0; i < 4; i++) {
+    const a = (i + .5) * Math.PI / 2;
+    h.bar(visible, [t2x + Math.cos(a) * .54, .30, t2z + Math.sin(a) * .54], [t2x + Math.cos(a) * .46, 1.06, t2z + Math.sin(a) * .46], .017, 'trim');
+    const aNext = (i + 1.5) * Math.PI / 2;
+    h.bar(visible, [t2x + Math.cos(a) * .50, .58, t2z + Math.sin(a) * .50], [t2x + Math.cos(aNext) * .50, .58, t2z + Math.sin(aNext) * .50], .014, 'trim');
+  }
+  h.pipe(visible, [[t2x, .32, t2z], [t2x + .45, .31, t2z + .85], [t2x + .72, .12, t2z + 1.45]], .020, 'yellow');
+  // Overhead chain hoist block & red hook above Stand 2 (card 35 FRONT)
+  h.bar(visible, [t2x, 1.88, t2z], [t2x, 3.65, t2z], .014, 'black');
+  h.cyl(visible, .12, .08, [t2x, 1.82, t2z], 'red', 'z');
+  h.ring(visible, .048, .012, [t2x, 1.68, t2z], 'red', 'z');
+  h.bar(visible, [t2x, 1.12, t2z], [t2x, 1.64, t2z], .008, 'trim');
   root.userData.notAdditionalChamber = true; root.userData.observationOnly = true;
 }
 
@@ -255,65 +346,171 @@ function upperTaperedHousing(s, root, item, h) {
 }
 
 function blower(s, root, item, h) {
-  const frame = s._part(root, '붉은 H형 점검 프레임·가새', [-.3, -.1, 0]);
-  for (const x of [-2.12, 2.12]) for (const z of [-1.52, 1.52]) {
-    h.ibeam(frame, [x, .06, z], [x, 1.55, z], .22, .24, 'red'); h.box(frame, [.36, .07, .36], [x, .035, z], 'trim');
+  // Card 34 (보류 3): black steel legs + green concrete curb + red upper deck & red railings + huge 180° ribbed fan-shaped rectangular duct + nearby red post
+  const frame = s._part(root, '검은 철골 다리·초록 턱·적색 데크 테', [-.3, -.1, 0]);
+  h.box(frame, [4.35, .16, 3.05], [0, .08, 0], 'curb');
+  for (const x of [-1.92, 1.92]) for (const z of [-1.28, 1.28]) {
+    h.ibeam(frame, [x, .16, z], [x, 1.56, z], .20, .22, 'tray');
+    h.box(frame, [.34, .05, .34], [x, .185, z], 'dark');
   }
-  for (const z of [-1.52, 1.52]) { h.ibeam(frame, [-2.2, 1.52, z], [2.2, 1.52, z], .2, .24, 'red'); h.ibeam(frame, [-2.12, .15, z], [2.12, 1.48, z], .09, .1, 'red'); }
-  const bed = s._part(root, '백색 이중 받침·청색 방진부', [0, .65, 0]);
-  for (const y of [1.59, 1.88]) for (const z of [-1.2, 1.2]) h.ibeam(bed, [-2.12, y, z], [2.12, y, z], .18, .2, 'white');
-  for (const x of [-1.45, 1.45]) for (const z of [-.9, .9]) { h.cyl(bed, .12, .19, [x, 1.73, z], 'blue'); h.box(bed, [.3, .035, .3], [x, 1.84, z], 'trim'); }
-  const casing = s._part(root, '대형 케이싱·리브·원형 플랜지', [-.7, .2, -.4], [-.5, 2.92, -.25]);
-  const shape = new THREE.Shape(); shape.moveTo(-1.27, -.95); shape.bezierCurveTo(-1.73, .25, -1.15, 1.43, .3, 1.25); shape.bezierCurveTo(1.45, 1.08, 1.7, -.27, .95, -1.03); shape.lineTo(-1.27, -1.03); shape.closePath();
-  h.mesh(casing, h.geo('upper-blower-volute', () => new THREE.ExtrudeGeometry(shape, { depth: 1.02, bevelEnabled: false, curveSegments: 28 })), h.m.steel, [0, 0, -.55]);
-  h.box(casing, [1.05, .55, 1.15], [.3, 1.305, -.05]);
-  h.flange(casing, 1.19, [-.12, 0, .53], 'z', 'trim', 24); h.cyl(casing, .92, .03, [-.12, 0, .58], 'dark', 'z');
-  for (let i = 0; i < 8; i++) { const a = i * TAU / 8; h.bar(casing, [-.12 + Math.cos(a) * .99, Math.sin(a) * .99, .58], [-.12 + Math.cos(a) * 1.35, Math.sin(a) * 1.35, .51], .035); }
-  accessDoor(s, h, casing, .51, .47, [.58, -.1, .51]);
-  const motor = s._part(root, '청록색 수평 모터·접속함', [.8, .2, .2], [1.35, 2.4, .4]);
-  h.cyl(motor, .42, .94, [0, 0, 0], 'motor', 'z'); h.flange(motor, .44, [0, 0, .5], 'z', 'motor', 12);
-  h.ring(motor, .32, .015, [0, 0, .545], 'motor', 'z'); h.ring(motor, .22, .015, [0, 0, .55], 'motor', 'z');
-  for (let i = 0; i < 12; i++) { const a = i * TAU / 12; h.bar(motor, [Math.cos(a) * .42, Math.sin(a) * .42, -.38], [Math.cos(a) * .42, Math.sin(a) * .42, .35], .015, 'motor'); }
-  h.box(motor, [.24, .27, .2], [.36, -.03, 0], 'motor');
-  const guard = s._part(root, '황색 구동 보호커버·외부 연결', [0, .2, 1.2]);
+  // Red upper deck rim beams & knee braces (card 34 FRONT/LEFT/REAR)
+  for (const z of [-1.36, 1.36]) h.ibeam(frame, [-2.18, 1.56, z], [2.18, 1.56, z], .18, .22, 'red');
+  for (const x of [-2.08, 2.08]) h.ibeam(frame, [x, 1.56, -1.36], [x, 1.56, 1.36], .18, .22, 'red');
+  for (const [x, sx] of [[-1.92, -1], [1.92, 1]]) for (const [z, sz] of [[-1.28, -1], [1.28, 1]]) {
+    h.bar(frame, [x, 1.18, z], [x + sx * .22, 1.52, z + sz * .06], .03, 'red');
+  }
+  const bed = s._part(root, '방진 스키드·지지 프레임', [0, .65, 0]);
+  for (const z of [-1.05, 1.05]) h.ibeam(bed, [-1.85, 1.72, z], [1.85, 1.72, z], .16, .18, 'tray');
+  for (const x of [-1.35, 1.35]) for (const z of [-.95, .95]) h.cyl(bed, .09, .14, [x, 1.63, z], 'blue');
+
+  const casing = s._part(root, '원심 케이싱·180도 부채꼴 사각 덕트', [-.7, .2, -.4], [-.35, 2.82, -.15]);
+  const shape = new THREE.Shape(); shape.moveTo(-1.15, -.92); shape.bezierCurveTo(-1.55, .22, -1.02, 1.32, .28, 1.18); shape.bezierCurveTo(1.32, 1.02, 1.55, -.25, .88, -.98); shape.lineTo(-1.15, -.98); shape.closePath();
+  h.mesh(casing, h.geo('upper-blower-volute', () => new THREE.ExtrudeGeometry(shape, { depth: .96, bevelEnabled: false, curveSegments: 28 })), h.m.steel, [0, 0, -.48]);
+  // Sloped bearing pedestal block at front of blower shaft
+  h.box(casing, [1.35, .72, .22], [.45, -.52, .68], 'tray');
+  // Thick round suction duct entering eye of blower (-Z/+X side, card 34 LEFT & REAR)
+  h.cyl(casing, .72, 1.65, [.15, .08, -1.28], 'steel', 'z');
+  h.flange(casing, .78, [.15, .08, -.52], 'z', 'trim', 20);
+  // Huge 180-degree fan-segmented rectangular stainless duct with dark radial ribs plunging into floor green curb (card 34 FRONT/RIGHT/REAR)
+  const archCx = -.92, archCy = .42, archR = 1.28, segN = 11;
+  for (let i = 0; i < segN; i++) {
+    const a0 = (i / segN) * Math.PI, a1 = ((i + 1) / segN) * Math.PI, am = (a0 + a1) / 2;
+    const rMid = archR, segLen = archR * (Math.PI / segN) + .06;
+    const sx = archCx + Math.cos(am) * rMid, sy = archCy + Math.sin(am) * rMid;
+    const seg = h.box(casing, [.98, segLen, 1.12], [sx, sy, -.02], 'steel');
+    seg.rotation.z = am;
+    const rib = h.box(casing, [1.06, .038, 1.20], [archCx + Math.cos(a0) * rMid, archCy + Math.sin(a0) * rMid, -.02], 'dark');
+    rib.rotation.z = a0;
+  }
+  // Vertical rectangular drop trunk below the 180° bend down into raised green floor curb
+  const dropX = archCx - archR;
+  for (let k = 0; k < 5; k++) {
+    const sy = .22 - k * .56;
+    h.box(casing, [1.04 + k * .04, .54, 1.14 + k * .03], [dropX, sy, -.02], 'stainedSteel');
+    h.box(casing, [1.12 + k * .04, .036, 1.22 + k * .03], [dropX, sy + .27, -.02], 'dark');
+  }
+  h.box(casing, [1.56, .22, 1.64], [dropX, -2.71, -.02], 'curb');
+
+  const motor = s._part(root, '청록색 수평 모터·대형 단자함', [.8, .2, .2], [1.18, 2.38, .42]);
+  h.cyl(motor, .39, .92, [0, 0, 0], 'motor', 'z'); h.flange(motor, .42, [0, 0, .48], 'z', 'motor', 12);
+  for (let i = 0; i < 12; i++) { const a = i * TAU / 12; h.bar(motor, [Math.cos(a) * .39, Math.sin(a) * .39, -.38], [Math.cos(a) * .39, Math.sin(a) * .39, .36], .014, 'motor'); }
+  // Large angled teal terminal box on top of motor (card 34 FRONT/LEFT)
+  const tBox = h.box(motor, [.38, .36, .34], [-.18, .48, -.05], 'motor'); tBox.rotation.z = .35;
+  h.pipe(motor, [[-.32, .36, -.05], [-.52, .05, .05], [-.56, -.52, .12]], .028, 'black');
+
+  const guard = s._part(root, '경사 황색 벨트커버·슬롯 망', [0, .2, 1.2]);
   const cover = h.geo('blower-folded-belt-cover', () => {
     const outline = new THREE.Shape();
-    outline.moveTo(-1.39, -.24); outline.quadraticCurveTo(-1.39, -.36, -1.22, -.36);
-    outline.lineTo(1.17, -.36); outline.quadraticCurveTo(1.39, -.36, 1.39, -.13);
-    outline.lineTo(1.39, .14); outline.quadraticCurveTo(1.39, .36, 1.17, .36);
-    outline.lineTo(-1.22, .36); outline.quadraticCurveTo(-1.39, .36, -1.39, .22); outline.closePath();
-    return new THREE.ExtrudeGeometry(outline, { depth: .12, bevelEnabled: true, bevelThickness: .012, bevelSize: .012, bevelSegments: 2, curveSegments: 6 });
+    outline.moveTo(-1.18, -.22); outline.quadraticCurveTo(-1.18, -.32, -1.02, -.32);
+    outline.lineTo(1.02, -.32); outline.quadraticCurveTo(1.18, -.32, 1.18, -.12);
+    outline.lineTo(1.18, .12); outline.quadraticCurveTo(1.18, .32, 1.02, .32);
+    outline.lineTo(-1.02, .32); outline.quadraticCurveTo(-1.18, .32, -1.18, .20); outline.closePath();
+    return new THREE.ExtrudeGeometry(outline, { depth: .14, bevelEnabled: true, bevelThickness: .012, bevelSize: .012, bevelSegments: 2, curveSegments: 6 });
   });
-  h.mesh(guard, cover, h.m.yellow, [.35, 2.65, 1.30]);
-  const guardSlots = Array.from({ length: 18 }, (_, i) => ({ position: [-.86 + i * .14, 2.65, 1.436] }));
-  h.instances(guard, h.geo('blower-guard-slot', () => new THREE.BoxGeometry(.023, .48, .005)), 'dark', guardSlots);
-  h.bolts(guard, [-.83, 1.54].flatMap(x => [2.37, 2.93].map(y => [x, y, 1.436])), 'z', .022);
-  const access = s._part(root, '점검 보행면·난간·사다리', [.2, 0, .5]);
-  h.box(access, [4.8, .06, .7], [0, 1.56, 1.83], 'trim');
-  for (const x of [-2.35, 0, 2.35]) h.bar(access, [x, 1.6, 2.14], [x, 2.65, 2.14], .025, 'red');
-  for (const y of [2.1, 2.65]) h.bar(access, [-2.35, y, 2.14], [2.35, y, 2.14], .025, 'red');
-  for (const x of [-2.4, -1.8]) h.bar(access, [x, .05, 1.7], [x, 1.6, 1.7], .025, 'red');
-  for (let y = .22; y < 1.6; y += .24) h.bar(access, [-2.4, y, 1.7], [-1.8, y, 1.7], .02, 'red');
+  const beltGroup = s._group(guard, [.38, 2.74, .88]); beltGroup.rotation.z = .24;
+  h.mesh(beltGroup, cover, h.m.yellow, [0, 0, 0]);
+  const guardSlots = Array.from({ length: 14 }, (_, i) => ({ position: [-.78 + i * .12, 0, .155] }));
+  h.instances(beltGroup, h.geo('blower-guard-slot', () => new THREE.BoxGeometry(.07, .42, .006)), 'dark', guardSlots);
+
+  const access = s._part(root, '적색 점검 데크·난간·인접 적색 기둥', [.2, 0, .5]);
+  h.box(access, [4.36, .06, 2.72], [0, 1.62, 0], 'tray');
+  for (const [a, b] of [[[-2.18, 1.36], [2.18, 1.36]], [[2.18, -1.36], [2.18, 1.36]], [[-2.18, -1.36], [-2.18, 1.36]]]) {
+    const n = Math.max(2, Math.ceil(Math.hypot(b[0] - a[0], b[1] - a[1]) / 1.1));
+    for (let i = 0; i <= n; i++) {
+      const t = i / n, px = a[0] + (b[0] - a[0]) * t, pz = a[1] + (b[1] - a[1]) * t;
+      h.bar(access, [px, 1.64, pz], [px, 2.68, pz], .022, 'red');
+    }
+    for (const ry of [2.16, 2.68]) h.bar(access, [a[0], ry, a[1]], [b[0], ry, b[1]], .024, 'red');
+  }
+  for (const lx of [1.45, 1.92]) h.bar(access, [lx, .05, 1.44], [lx, 1.66, 1.44], .022, 'red');
+  for (let y = .26; y < 1.62; y += .26) h.bar(access, [1.45, y, 1.44], [1.92, y, 1.44], .018, 'red');
+  // Nearby red vertical support column visible in card 34 FRONT/LEFT
+  h.ibeam(access, [2.15, .04, 2.35], [2.15, 6.15, 2.35], .16, .18, 'red');
+  h.box(access, [.28, .04, .28], [2.15, .02, 2.35], 'dark');
   root.userData.ports = { discharge: [-.2, 4.5, -.3] }; root.userData.unseenImpellerAdded = false;
 }
 
 function cyclone(s, root, item, h) {
-  const r = item.radius || 1.2, upperR = item.upperRadius || .8, height = item.height || 5.3;
-  const lower = s._part(root, '원통 외피·하부 볼트 링', [0, 0, 0]);
-  h.cyl(lower, r, height * .59, [0, height * .295, 0]);
-  for (const y of [.08, .5, height * .58]) h.ring(lower, r + .01, .025, [0, y, 0]); h.flange(lower, r + .025, [0, .12, 0], 'y', 'trim', 20);
-  const upper = s._part(root, '상부 단차 외통·연결부', [0, .9, 0]);
+  const r = item.radius || 1.2, upperR = item.upperRadius || .78, height = item.height || 4.15;
+  // Card 33 (보류 4): short wide cylinder + narrower upper neck on circular green concrete curb + white nameplate
+  const lower = s._part(root, '원통 외피·초록 원형 턱', [0, 0, 0]);
+  h.cyl(lower, r + .20, .20, [0, .10, 0], 'curb', 'y', r + .24, false);
+  h.cyl(lower, r + .06, .06, [0, .22, 0], 'trim', 'y', r + .06, false);
+  for (let i = 0; i < 8; i++) {
+    const a = i * TAU / 8, lug = h.box(lower, [.04, .22, .14], [Math.cos(a) * (r + .05), .32, Math.sin(a) * (r + .05)], 'trim');
+    lug.rotation.y = -a;
+  }
+  const bodyH = 2.08;
+  h.cyl(lower, r, bodyH, [0, .22 + bodyH / 2, 0], item.id === 'cyclone-3' ? 'stainedSteel' : 'steel');
+  for (const y of [.26, 1.38, .22 + bodyH]) h.ring(lower, r + .016, .022, [0, y, 0]);
+  if (item.id === 'cyclone-1') {
+    h.box(lower, [.46, .48, .12], [r + .02, .88, .18], 'steel').rotation.y = Math.PI / 2;
+  }
+
+  const upper = s._part(root, '상부 좁은 목 원통·단차부', [0, .9, 0]);
+  const shY = .22 + bodyH;
   const shoulder = h.geo(`cyclone-rolled-shoulder:${r}:${upperR}`, () => new THREE.LatheGeometry(
-    [[r, 0], [r, .025], [r - .025, .052], [upperR + .045, .218], [upperR + .012, .247], [upperR, .28]]
+    [[r, 0], [r, .03], [r - .04, .06], [upperR + .04, .18], [upperR, .22]]
       .map(([radius, y]) => new THREE.Vector2(radius, y)), 48));
-  h.mesh(upper, shoulder, h.m.steel, [0, height * .59, 0]);
-  h.ring(upper, upperR + .008, .013, [0, height * .59 + .275, 0]);
-  h.cyl(upper, upperR, height * .41 - .33, [0, height * .795 + .025, 0]); h.ring(upper, upperR + .01, .025, [0, height - .04, 0]);
-  h.cyl(upper, upperR + .02, .045, [0, height - .02, 0]);
-  const outlet = s._part(root, '가시 접속 덕트·플랜지', [.7, .2, 0]);
-  h.cyl(outlet, .34, .65, [upperR + .18, height * .79, 0], 'steel', 'x'); h.flange(outlet, .4, [upperR + .5, height * .79, 0], 'x', 'trim', 12);
-  const door = s._part(root, '작은 점검문·고정 브래킷', [0, .1, .8]); accessDoor(s, h, door, .57, .65, [0, 1.25, r]);
-  for (let i = 0; i < 6; i++) { const a = i * TAU / 6, foot = h.box(lower, [.12, .26, .2], [Math.cos(a) * r, .15, Math.sin(a) * r], 'trim'); foot.rotation.y = -a; }
+  h.mesh(upper, shoulder, h.m.steel, [0, shY, 0]);
+  const neckH = 1.42;
+  h.cyl(upper, upperR, neckH, [0, shY + .22 + neckH / 2, 0]);
+  h.ring(upper, upperR + .014, .020, [0, shY + .22 + neckH - .03, 0]);
+
+  const outlet = s._part(root, '매니폴드·상부 분기 덕트', [-.7, .2, 0]);
+  // Tangential rectangular inlet box entering lower cylinder from rear (-X) manifold
+  h.box(outlet, [.85, .74, .56], [-r - .22, 1.78, .38], 'steel');
+  // Shared front gray stair/railing deck + rear ribbed rectangular manifold + 3 flaring round ducts + floor elbow (owned by middle cyclone-2)
+  if (item.id === 'cyclone-2') {
+    const dy = 2.28;
+    // Front (+X) gray steel inspection deck spanning cyclones 1..3 + north access stair (card 33 FRONT/LEFT/RIGHT)
+    h.box(outlet, [1.05, .07, 8.2], [r + .48, dy, 0], 'concrete');
+    for (const px of [r + .06, r + .96]) for (const pz of [-3.95, -1.5, 1.5, 3.95]) {
+      h.bar(outlet, [px, .02, pz], [px, dy, pz], .032, 'concrete');
+    }
+    for (const [a, b] of [[[r + .98, -4.05], [r + .98, 4.05]], [[r + .04, 4.05], [r + .98, 4.05]]]) {
+      const n = Math.max(2, Math.ceil(Math.hypot(b[0] - a[0], b[1] - a[1]) / 1.35));
+      for (let i = 0; i <= n; i++) {
+        const t = i / n, px = a[0] + (b[0] - a[0]) * t, pz = a[1] + (b[1] - a[1]) * t;
+        h.bar(outlet, [px, dy, pz], [px, dy + 1.04, pz], .020, 'concrete');
+      }
+      for (const ry of [dy + .52, dy + 1.04]) h.bar(outlet, [a[0], ry, a[1]], [b[0], ry, b[1]], .022, 'concrete');
+    }
+    // North (-Z) angled steel access stair descending along -Z (card 33 LEFT)
+    const stX = r + .52, stZ0 = -4.05, stRun = 1.95, steps = 10;
+    for (let i = 0; i < steps; i++) {
+      const t = (i + .5) / steps;
+      h.box(outlet, [.76, .045, .22], [stX, dy * (1 - t), stZ0 - stRun * t], 'concrete');
+    }
+    for (const sx of [-.38, .38]) {
+      h.bar(outlet, [stX + sx, dy, stZ0], [stX + sx, .04, stZ0 - stRun], .035, 'concrete');
+      h.bar(outlet, [stX + sx, dy + 1.02, stZ0], [stX + sx, 1.02, stZ0 - stRun], .020, 'concrete');
+    }
+    // Rear (-X) long rectangular manifold duct with vertical flange ribs & end round cleanout port (card 33 REAR)
+    const mx = -r - .68, my = 2.42;
+    h.box(outlet, [.82, .86, 8.1], [mx, my, 0], 'stainedSteel');
+    for (let zRib = -3.9; zRib <= 3.9; zRib += .86) h.box(outlet, [.90, .94, .035], [mx, my, zRib], 'trim');
+    for (const pz of [-3.4, 0, 3.4]) {
+      for (const lx of [mx - .36, mx + .36]) h.bar(outlet, [lx, .02, pz], [lx, my - .43, pz], .032, 'concrete');
+      h.bar(outlet, [mx - .38, 1.15, pz], [mx + .38, 1.15, pz], .026, 'concrete');
+    }
+    // Clamped round inspection port on manifold end (card 33 REAR left)
+    h.cyl(outlet, .22, .08, [mx - .44, my, 3.55], 'trim', 'x');
+    h.bar(outlet, [mx - .50, my, 3.30], [mx - .50, my, 3.80], .014, 'trim');
+    // 3 thick flaring round stainless ducts rising & converging above the rear manifold (card 33 REAR top)
+    for (const [cz, tz] of [[-3, -1.2], [0, 0], [3, 1.2]]) {
+      h.pipe(outlet, [[0, shY + .22 + neckH - .25, cz], [-.85, 4.35, cz * .72], [mx - .15, 5.55, tz]], .42, 'steel');
+    }
+    // Thick floor elbow duct plunging into circular green floor curb (card 33 RIGHT & card 34 FRONT left)
+    h.pipe(outlet, [[.25, 2.08, -3.35], [1.65, 2.02, -4.15], [2.45, 1.65, -4.45], [2.68, .92, -4.55], [2.68, .18, -4.55]], .50, 'steel');
+    h.cyl(outlet, .72, .20, [2.68, .10, -4.55], 'curb', 'y', .76, false);
+  }
+
+  // White/blue nameplate ("싸이클론 1/2/3") facing the +X east hall aisle (card 33 FRONT)
+  const door = s._part(root, '전면 명판·점검 브래킷', [.6, .1, 0]);
+  const label = item.name || '싸이클론';
+  plaque(s, h, door, label, [.48, .20], [r + 1.02, 2.28, 0], Math.PI / 2);
+  if (item.id === 'cyclone-3') plaque(s, h, door, '▲ 주의', [.32, .16], [r + .04, 3.65, 0], Math.PI / 2);
   root.userData.ports = { side: [upperR + .5, height * .79, 0] };
 }
 
@@ -349,8 +546,8 @@ export function buildDryerUpperEnvironment(s, options = {}) {
   const eave = profile.eave ?? profile.eaves ?? roofElevation, ridge = profile.ridge ?? 40.4;
   const gable = { minX: profile.minX ?? -8.6, maxX: profile.maxX ?? 8.6, minZ: profile.minZ ?? -6.7, maxZ: profile.maxZ ?? 13.4 };
   const apron = profile.serviceApron || { minX: -8.6, maxX: 13.4, minZ: -13.4, maxZ: -6.7, elevation: 32.6 };
-  const deck = s._group(s.scene, [0, elevation, 0]), structure = s._group(s.scene, [0, elevation, 0]), ducts = s._group(s.scene, [0, elevation, 0]), cover = s._group(s.scene, [0, elevation, 0]), facade = s._group(s.scene, [0, elevation, 0]), machineRoomCover = s._group(s.scene, [0, elevation, 0]), machineRoomInterior = s._group(s.scene, [0, elevation, 0]);
-  deck.name = `dryer-upper-${floor}-deck`; structure.name = `dryer-upper-${floor}-structure`; ducts.name = `dryer-upper-${floor}-ducts`; cover.name = `dryer-upper-${floor}-cutaway-cover`; facade.name = `dryer-upper-${floor}-cutaway-facade`;
+  const deck = s._group(s.scene, [0, elevation, 0]), structure = s._group(s.scene, [0, elevation, 0]), ducts = s._group(s.scene, [0, elevation, 0]), cover = s._group(s.scene, [0, elevation, 0]), facade = s._group(s.scene, [0, elevation, 0]), ceiling = s._group(s.scene, [0, elevation, 0]), machineRoomCover = s._group(s.scene, [0, elevation, 0]), machineRoomInterior = s._group(s.scene, [0, elevation, 0]);
+  deck.name = `dryer-upper-${floor}-deck`; structure.name = `dryer-upper-${floor}-structure`; ducts.name = `dryer-upper-${floor}-ducts`; cover.name = `dryer-upper-${floor}-cutaway-cover`; facade.name = `dryer-upper-${floor}-cutaway-facade`; ceiling.name = `dryer-upper-${floor}-ceiling`; ceiling.visible = false;
   machineRoomCover.name = `dryer-upper-${floor}-elevator-room-cover`; machineRoomInterior.name = `dryer-upper-${floor}-elevator-room-interior`;
   const radius = floor === 6 ? 4.15 : 4.3, well = options.chamberOpening || { x: -1, z: 7.5, diameter: radius * 2 };
   function plate(parent, bounds, y, paint, opening = null, thickness = .16) {
@@ -366,12 +563,22 @@ export function buildDryerUpperEnvironment(s, options = {}) {
     const geometry = h.geo(key, () => { const value = new THREE.ExtrudeGeometry(shape, { depth: thickness, bevelEnabled: false, curveSegments: 64 }); value.rotateX(-Math.PI / 2); return value; });
     h.mesh(parent, geometry, h.m[paint], [0, y - thickness, 0]);
   }
+  // Walls, doors, windows and steel columns come from the as-built drawings.
+  function drawnWalls(options = {}) {
+    const plan = dryerWallPlan(floor); if (!plan) return;
+    const openings = s._group(structure); openings.name = `dryer-upper-${floor}-plan-openings`;
+    const kit = createArchitectureKit(s, { key: 'dryer-plan', level: floor, prefix: `dryer-plan-${floor}`, structure, facade, fixtures: openings, deck });
+    for (const data of plan.walls) kit.wall({ height: plan.height, skirting: floor === 6, ...data });
+    for (const data of plan.columns) kit.column({ height: plan.height, plinth: { size: .6, height: .38 }, ...data, x: data.position[0], z: data.position[1], ...options });
+    kit.finish();
+  }
   function stairOpening(bounds) {
+    if (bounds.runAxis === 'x') return { minX: bounds.minX + 1.1, maxX: bounds.maxX - .05, minZ: bounds.minZ + .02, maxZ: bounds.maxZ - .02 };
     const lane = Math.min(1.3, (bounds.maxX - bounds.minX - .28) / 2), run = Math.min(3, bounds.maxZ - bounds.minZ - 2.1), x = (bounds.minX + bounds.maxX) / 2, z = (bounds.minZ + bounds.maxZ) / 2;
     return { minX: x - lane - .1, maxX: x + lane + .1, minZ: z - run / 2 - .98, maxZ: z + run / 2 + .98 };
   }
   const internalBounds = profile.internalStairs || { minX: 5.9, maxX: 8.1, minZ: 3.8, maxZ: 9.2 };
-  const externalBounds = profile.stairs || { minX: 8.6, maxX: 13.4, minZ: -13.4, maxZ: -6.7 };
+  const externalBounds = profile.stairs || { minX: 8.7, maxX: 13.3, minZ: -13.3, maxZ: -10.7, runAxis: 'x' };
   function rail(parent, a, b, base = 0, height = 1.2, paint = 'white') {
     const first = new THREE.Vector3(a[0], base, a[1]), last = new THREE.Vector3(b[0], base, b[1]), count = Math.ceil(first.distanceTo(last) / 1.45);
     for (let i = 0; i <= count; i++) { const point = first.clone().lerp(last, i / count); h.bar(parent, point.toArray(), point.clone().add(new THREE.Vector3(0, height, 0)).toArray(), .022, paint); }
@@ -379,7 +586,9 @@ export function buildDryerUpperEnvironment(s, options = {}) {
   }
   function stairs(bounds, fromY, toY, name) {
     const group = s._group(structure, [(bounds.minX + bounds.maxX) / 2, fromY - elevation, (bounds.minZ + bounds.maxZ) / 2]); group.name = name;
-    const flights = 4, steps = 9, rise = (toY - fromY) / flights, lane = Math.min(1.3, (bounds.maxX - bounds.minX - .28) / 2), run = Math.min(3, bounds.maxZ - bounds.minZ - 2.1), landing = .95;
+    const alongX = bounds.runAxis === 'x', across = alongX ? bounds.maxZ - bounds.minZ : bounds.maxX - bounds.minX, length = alongX ? bounds.maxX - bounds.minX : bounds.maxZ - bounds.minZ;
+    if (alongX) group.rotation.y = -Math.PI / 2;
+    const flights = 4, steps = 9, rise = (toY - fromY) / flights, lane = Math.min(1.3, (across - .28) / 2), run = Math.min(3, length - 2.1), landing = .95;
     for (let f = 0; f < flights; f++) {
       const direction = f % 2 ? 1 : -1, x = f % 2 ? lane / 2 + .06 : -lane / 2 - .06, base = f * rise;
       for (let i = 0; i < steps; i++) {
@@ -412,15 +621,56 @@ export function buildDryerUpperEnvironment(s, options = {}) {
     }
     h.box(facade, [.18, .2, length], [x, .1, centreZ], 'floor');
   }
+  function buildUpperCeiling() {
+    const width = gable.maxX - gable.minX, half = width / 2, rise = ridge - eave, slope = Math.hypot(half, rise), centreX = (gable.minX + gable.maxX) / 2, centreZ = (gable.minZ + gable.maxZ) / 2, length = gable.maxZ - gable.minZ;
+    for (const side of [-1, 1]) {
+      const sheet = h.box(ceiling, [slope, .055, length], [centreX + side * half / 2, (eave + ridge) / 2 - elevation, centreZ], 'ceilingDeck');
+      sheet.rotation.z = -side * Math.atan2(rise, half);
+      sheet.userData.personCollision = false; sheet.castShadow = false;
+      for (const t of [.25, .5, .75]) {
+        const px = centreX + side * half * t, py = ridge - rise * t - elevation - .08;
+        const purlin = h.box(ceiling, [.1, .14, length], [px, py, centreZ], 'cream');
+        purlin.rotation.z = sheet.rotation.z; purlin.userData.personCollision = false; purlin.castShadow = false;
+      }
+    }
+    if (floor === 6) {
+      // North service bay flat soffit under the 32.6m roof apron (clear of west stair opening x < -5.7)
+      const northSoffit = h.box(ceiling, [14.05, .06, 6.6], [1.525, apron.elevation - elevation - .18, -10.05], 'ceilingDeck');
+      northSoffit.userData.personCollision = false; northSoffit.castShadow = false;
+      for (const z of [-12.2, -9.8, -7.2]) {
+        const bm = h.box(ceiling, [13.9, .28, .2], [1.45, apron.elevation - elevation - .35, z], 'cream');
+        bm.userData.personCollision = false; bm.castShadow = false;
+      }
+    }
+    const lamps = [], leds = [], trays = [];
+    const lightY = floor === 6 ? 7.8 : 4.5;
+    for (const lx of [-4.8, 0, 4.8]) for (const lz of (floor === 6 ? [-10.5, -4.5, 1.2, 8.2] : [3.8, 8.2, 12.0])) {
+      if (floor === 6 && Math.hypot(lx + 1, lz - 7.5) < 4.5) continue;
+      if (floor === 7 && Math.hypot(lx + 1, lz - 7.5) < 4.4) continue;
+      const y = (floor === 6 && lz < -6.7) ? 5.7 : lightY + (1 - Math.abs(lx) / 8.6) * .8;
+      lamps.push({ position: [lx, y, lz], scale: [1, 1, 1] });
+      leds.push({ position: [lx, y - .08, lz], scale: [1, 1, 1] });
+    }
+    trays.push({ position: [-6.8, floor === 6 ? 5.6 : 4.2, 3.2], scale: [.32, .07, 18.8] });
+    trays.push({ position: [6.8, floor === 6 ? 5.6 : 4.2, -1.7], scale: [.32, .07, 9.0] });
+    if (lamps.length) {
+      const lm = h.instances(ceiling, h.geo('upper-ceil-shade', () => new THREE.CylinderGeometry(.12, .24, .16, 18)), 'tray', lamps);
+      lm.userData.personCollision = false; lm.castShadow = false;
+      const ld = h.instances(ceiling, h.geo('upper-ceil-led', () => new THREE.CylinderGeometry(.21, .21, .02, 18)), 'led', leds);
+      ld.userData.personCollision = false; ld.castShadow = false;
+    }
+    if (trays.length) {
+      const tr = h.instances(ceiling, h.geo('upper-ceil-tray', () => new THREE.BoxGeometry(1, 1, 1)), 'tray', trays);
+      tr.userData.personCollision = false; tr.castShadow = false;
+    }
+  }
   if (floor === 6) {
-    plate(deck, { minX: -8.6, maxX: 8.6, minZ: -13.4, maxZ: 13.4 }, 0, 'floor', well);
-    plate(deck, profile.stairs || { minX: 8.6, maxX: 13.4, minZ: -13.4, maxZ: -6.7 }, 0, 'concrete');
+    plate(deck, { minX: -8.6, maxX: 8.6, minZ: -13.4, maxZ: 13.4 }, 0, 'floor', [well, { minX: -8.5, maxX: -5.7, minZ: -13.28, maxZ: -9.48 }]);
+    plate(deck, { minX: 8.6, maxX: 10.25, minZ: -13.4, maxZ: -6.25 }, 0, 'concrete'); plate(deck, { minX: 10.25, maxX: 13.5, minZ: -13.4, maxZ: -10.35 }, 0, 'concrete', { minX: 10.26, maxX: 13.2, minZ: -13.28, maxZ: -10.74 });
     for (const x of [-8.25, 8.25]) for (const z of [-13.15, -6.7, 0, 6.7, 13.15]) {
       const height = (z < gable.minZ - .1 ? apron.elevation : eave) - elevation;
-      h.ibeam(structure, [x, 0, z], [x, height, z], .3, .34);
-      h.box(structure, [.5, .12, .5], [x, .06, z], 'concrete');
-      h.box(structure, [.32, .5, .025], [x, 1, z + .19], 'cream');
-      h.bolts(structure, [-.1, .1].flatMap((dx) => [-.18, -.06, .06, .18].map((dy) => [x + dx, 1 + dy, z + .215])), 'z', .016, 'trim');
+      // Above the 7F datum the perimeter frame carries on to the eave.
+      if (height > 6.4) h.ibeam(structure, [x, 6.2, z], [x, height, z], .3, .34);
     }
     for (const z of [gable.minZ, 0, 6.7, gable.maxZ]) {
       h.ibeam(structure, [-8.25, eave - elevation, z], [0, ridge - elevation, z], .19, .3);
@@ -428,16 +678,13 @@ export function buildDryerUpperEnvironment(s, options = {}) {
       h.ibeam(structure, [-8.25, eave - elevation, z], [8.25, eave - elevation, z], .13, .2);
       for (const x of [-5.5, -2.75, 0, 2.75, 5.5]) h.bar(structure, [x, eave - elevation, z], [x + (x < 0 ? 1.4 : -1.4), ridge - elevation - Math.abs(x) * (ridge - eave) / 8.6, z], .027, 'cream');
     }
-    wallPanels(-1, -13.4, gable.minZ, apron.elevation); wallPanels(1, -13.4, gable.minZ, apron.elevation);
-    wallPanels(-1, gable.minZ, 13.4, eave); wallPanels(1, gable.minZ, 13.4, eave);
-    h.box(facade, [17.2, apron.elevation - elevation, .15], [0, (apron.elevation - elevation) / 2, -13.325], 'cream');
-    // The opaque envelope cuts away independently from the load-bearing frame.
-    h.box(facade, [17.2, eave - elevation, .15], [0, (eave - elevation) / 2, 13.325], 'cream');
+    drawnWalls();
+    buildUpperCeiling();
     const triangle = new THREE.Shape(); triangle.moveTo(-8.6, eave - elevation); triangle.lineTo(0, ridge - elevation); triangle.lineTo(8.6, eave - elevation); triangle.closePath();
     const end = h.mesh(facade, h.geo(`gable-front:${eave - elevation}:${ridge - elevation}`, () => new THREE.ShapeGeometry(triangle)), h.m.cream, [0, 0, 13.4]); end.material.side = THREE.DoubleSide;
     const internal = stairs(internalBounds, elevation, apron.elevation, 'dryer-internal-four-flight-stair');
     Object.assign(deck.userData, { openingDiameter: well.diameter, floorBasis: 'A016-main-hall' });
-    return { deck, structure, ducts, cover, facade, machineRoomCover, machineRoomInterior, stairs: internal };
+    return { deck, structure, ducts, cover, facade, ceiling, machineRoomCover, machineRoomInterior, stairs: internal };
   }
   if (floor === 7) {
     // The video shows the local equipment apron adjoining the historical
@@ -453,14 +700,18 @@ export function buildDryerUpperEnvironment(s, options = {}) {
     // large duct and housing would invent a physical collision.
     rail(structure, [-7.4, 2.7], [-5.35, 2.7]); rail(structure, [5.45, 2.7], [7.4, 2.7]);
     rail(structure, [-5.35, .9], [5.45, .9]);
+    drawnWalls();
+    buildUpperCeiling();
     for (const z of [-6.7, 2.7, 13.25]) h.ibeam(structure, [-8.25, -.19, z], [8.25, -.19, z], .16, .25);
     Object.assign(ducts.userData, { observedDuctOwnedByEquipment: 'dryer-upper-duct-run', hiddenConnectionsConfirmed: false });
     Object.assign(deck.userData, { openingDiameter: well.diameter, middleOpen: true, serviceBayOwnedByFloor8: true, stairOpening: stairOpening(internalBounds), equipmentApron, elbowOpening, equipmentApronBasis: 'video-414-432s-local-platform;position-and-outline-approximate;historical-A017-OPEN-retained' });
-    return { deck, structure, ducts, cover, facade, machineRoomCover, machineRoomInterior };
+    return { deck, structure, ducts, cover, facade, ceiling, machineRoomCover, machineRoomInterior };
   }
   if (floor === 8) {
-    plate(deck, apron, apron.elevation - elevation, 'apron', stairOpening(externalBounds), .18);
-    for (const [a, b] of [[[apron.minX, apron.minZ], [apron.maxX, apron.minZ]], [[apron.minX, apron.minZ], [apron.minX, apron.maxZ]], [[apron.maxX, apron.minZ], [apron.maxX, apron.maxZ]]]) {
+    // A-017: open roof stops at the tower; only the lobby and stair bay reach east.
+    const apronOutline = [[apron.minX, apron.minZ], [13.5, apron.minZ], [13.5, -10.35], [10.25, -10.35], [10.25, -6.25], [8.6, -6.25], [8.6, apron.maxZ], [apron.minX, apron.maxZ]];
+    plate(deck, { ...apron, outline: apronOutline }, apron.elevation - elevation, 'apron', stairOpening(externalBounds), .18);
+    for (const [a, b] of [[[apron.minX, apron.minZ], [8.5, apron.minZ]], [[apron.minX, apron.minZ], [apron.minX, apron.maxZ]]]) {
       const length = Math.hypot(b[0] - a[0], b[1] - a[1]), wall = h.box(structure, [length, .95, .17], [(a[0] + b[0]) / 2, .475, (a[1] + b[1]) / 2], 'cream'); wall.rotation.y = -Math.atan2(b[1] - a[1], b[0] - a[0]);
     }
     const width = gable.maxX - gable.minX, half = width / 2, rise = ridge - eave, slope = Math.hypot(half, rise), centreX = (gable.minX + gable.maxX) / 2, centreZ = (gable.minZ + gable.maxZ) / 2, length = gable.maxZ - gable.minZ;
@@ -541,6 +792,7 @@ export function buildDryerUpperEnvironment(s, options = {}) {
     const wallBox = h.box(machineRoomInterior, [.32, .38, .15], [room.minX + .45, 1.63, room.maxZ - .15], 'cabinet'); wallBox.name = 'elevator-small-wall-junction-box'; wallBox.userData.source = 'video-076s';
     h.pipe(machineRoomInterior, [[room.minX + .45, 1.43, room.maxZ - .15], [room.minX + .45, .19, room.maxZ - .15], [room.minX + .25, .12, room.minZ + .25], [5.05, .12, room.minZ + .25]], .022, 'black');
     machineRoomInterior.userData.hiddenElectricalConnectionsConfirmed = false;
+    drawnWalls();
     const outerStair = stairs(externalBounds, profile.stairs?.fromY ?? 26.2, profile.stairs?.toY ?? 32.6, 'dryer-service-four-flight-stair');
     Object.assign(deck.userData, { sameDatumAsFloor7: true, notAnAdditionalStorey: true, gableSurfaceOwnedByCover: true, stairOpening: stairOpening(externalBounds) });
     return { deck, structure, ducts, cover, facade, machineRoomCover, machineRoomInterior, stairs: outerStair };

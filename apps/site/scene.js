@@ -1,5 +1,5 @@
 import * as THREE from '../shared/vendor/three.module.js';
-import { equipmentReflection } from './equipment-lighting.js';
+import { applyLightProfile, equipmentReflection, lightProfileFor } from './equipment-lighting.js';
 import { buildFurnace } from './furnace-model.js';
 import { FLOORS, FLOOR_HEIGHT, floorElevation, floorHeight } from './facility-data.js';
 import { buildFacilityEquipment } from './facility-models.js';
@@ -10,6 +10,7 @@ import { buildPreparationEnvironment } from './preparation-environment.js';
 import { buildDryerRouteEnvironment } from './dryer-route-environment.js';
 import { buildDryerCompressorEnvironment } from './dryer-compressor-environment.js';
 import { buildDryerCompressorInteriorDetails } from './dryer-compressor-interior-details.js';
+import { buildDryerFloor1PhotoDetail, buildDryerFloor1Load } from './dryer-floor1-photo-detail.js';
 import { buildDryerUpperEnvironment, buildDryerUpperEquipment } from './dryer-upper-models.js';
 import { buildDryerBuildingEnvironment, alignDryerCompressorEntrance } from './dryer-building-envelope.js';
 import { OUTDOOR_ROOM } from './outdoor-data.js';
@@ -113,6 +114,7 @@ class FacilityScene {
     this.isolated = false;
     this.labelsEnabled = false;
     this.structureEnabled = true;
+    this.columnsEnabled = true;
     this.partitionsEnabled = false;
     this.ductsEnabled = true;
     this.packagingLevel = packagingLevel === 'all' ? 'all' : PACKAGING_ROOMS[Number(packagingLevel)] ? Number(packagingLevel) : 'all';
@@ -206,8 +208,8 @@ class FacilityScene {
     const reflection = this.packagingEquipmentV2Materials?.ss?.envMap;
     if (!reflection) return;
     for (const [palette, keys, intensity] of [
-      [this.packagingLineMaterials, ['steel', 'polished', 'edge'], .64],
-      [this.packagingEnvironmentV2Materials, ['steel', 'silver'], .6],
+      [this.packagingLineMaterials, ['steel', 'polished', 'edge'], 1.05],
+      [this.packagingEnvironmentV2Materials, ['steel', 'silver'], .9],
     ]) {
       for (const key of keys) {
         const material = palette?.[key];
@@ -215,6 +217,9 @@ class FacilityScene {
         material.envMap = reflection; material.envMapIntensity = intensity; material.needsUpdate = true;
       }
     }
+    // Rolled sheet streaks from the third-floor kit keep flat cabinet faces metallic.
+    const sheet = this.packagingFloor3Materials?.ss?.map, polished = this.packagingLineMaterials?.polished;
+    if (sheet && polished) { polished.map = sheet; polished.color.set(0xe9eceb); polished.roughness = .4; polished.needsUpdate = true; }
   }
 
   _applyOutdoorFinishes() {
@@ -240,37 +245,121 @@ class FacilityScene {
   }
 
   _palette() {
-    const textureCanvas = document.createElement('canvas');
-    textureCanvas.width = textureCanvas.height = 256;
-    const ctx = textureCanvas.getContext('2d');
-    ctx.fillStyle = '#b6c1bf'; ctx.fillRect(0, 0, 256, 256);
-    let seed = 24;
-    for (let i = 0; i < 1500; i++) {
-      seed = (seed * 16807) % 2147483647;
-      const x = seed % 256;
-      seed = (seed * 16807) % 2147483647;
-      ctx.fillStyle = `rgba(255,255,255,${.025 + (seed % 6) / 100})`;
-      ctx.fillRect(x, seed % 256, 1, 15 + seed % 80);
-    }
-    const brushed = new THREE.CanvasTexture(textureCanvas);
-    brushed.colorSpace = THREE.SRGBColorSpace;
-    brushed.wrapS = brushed.wrapT = THREE.RepeatWrapping;
-    this.textures.add(brushed);
+    const fine = typeof WebGLRenderingContext !== 'undefined';
+    const makeDataTex = (w, h, fill, { srgb = true, repeat = [1, 1] } = {}) => {
+      const data = new Uint8Array(w * h * 4);
+      for (let y = 0; y < h; y++) for (let x = 0; x < w; x++) {
+        const c = fill((x + .5) / w, (y + .5) / h), i = (y * w + x) * 4;
+        data[i] = Math.max(0, Math.min(255, c[0]));
+        data[i + 1] = Math.max(0, Math.min(255, c[1]));
+        data[i + 2] = Math.max(0, Math.min(255, c[2]));
+        data[i + 3] = c[3] ?? 255;
+      }
+      const tex = new THREE.DataTexture(data, w, h, THREE.RGBAFormat);
+      if (srgb) tex.colorSpace = THREE.SRGBColorSpace;
+      tex.wrapS = tex.wrapT = THREE.RepeatWrapping;
+      tex.repeat.set(repeat[0], repeat[1]);
+      tex.magFilter = THREE.LinearFilter;
+      tex.minFilter = fine ? THREE.LinearMipmapLinearFilter : THREE.LinearFilter;
+      tex.generateMipmaps = fine;
+      if (fine) tex.anisotropy = 4;
+      tex.needsUpdate = true;
+      this.textures.add(tex);
+      return tex;
+    };
+    const hash2 = (x, y) => { const v = Math.sin(x * 127.1 + y * 311.7) * 43758.5453123; return v - Math.floor(v); };
+    const vnoise = (x, y) => {
+      const ix = Math.floor(x), iy = Math.floor(y), fx = x - ix, fy = y - iy;
+      const u = fx * fx * (3 - 2 * fx), v = fy * fy * (3 - 2 * fy);
+      const a = hash2(ix, iy), b = hash2(ix + 1, iy), c = hash2(ix, iy + 1), d = hash2(ix + 1, iy + 1);
+      return a + (b - a) * u + (c - a) * v + (a - b - c + d) * u * v;
+    };
+    const fbm = (x, y) => vnoise(x, y) * .55 + vnoise(x * 2.07 + 5.2, y * 2.07 + 1.3) * .3 + vnoise(x * 4.31 + 9.7, y * 4.31 + 3.8) * .15;
+
+    // Brushed stainless steel + vertical/horizontal sheet weld seams & subtle patina
+    const sw = fine ? 256 : 16;
+    const brushed = makeDataTex(sw, sw, (u, v) => {
+      const streak = vnoise(u * 140, v * 5) * .6 + vnoise(u * 260, v * 12) * .4;
+      const vSeam = Math.min(Math.abs(u - .25), Math.abs(u - .75)) < .004 ? -14 : 0;
+      const hBand = Math.abs(v - .5) < .006 ? -9 : 0;
+      const warm = Math.max(0, fbm(u * 4 + 2, v * 4 + 7) - .62) * 22;
+      const base = 216 + streak * 6 + vSeam + hBand;
+      return [base + warm * .45, base - warm * .12, base - warm * .38, 255];
+    });
+    const stainedMap = makeDataTex(sw, sw, (u, v) => {
+      const streak = vnoise(u * 130, v * 5);
+      const drip = Math.max(0, fbm(u * 9 + 3, v * 2.2 + 1) - .52) * Math.max(0, 1 - Math.abs(v - .45) * 1.5);
+      const base = 202 + streak * 24;
+      return [base - drip * 38, base - drip * 72, base - drip * 96, 255];
+    });
+    const steelRough = makeDataTex(fine ? 128 : 8, fine ? 128 : 8, (u, v) => {
+      const r = 156 + vnoise(u * 90, v * 6) * 18 + fbm(u * 3 + 1, v * 3 + 6) * 46 + (Math.abs(v - .5) < .008 ? 22 : 0);
+      return [0, r, 0, 255];
+    }, { srgb: false });
+
+    // Deep glossy emerald epoxy floor with subtle white powder trails, scuffs & roller fade
+    const fw = fine ? 384 : 16;
+    const epoxyPixel = (u, v) => {
+      const x = u * 7, z = v * 7;
+      const tileFade = (Math.floor(u * 2) + Math.floor(v * 2)) % 2 ? .035 : -.025;
+      const joint = (Math.min((u * 2) % 1, 1 - (u * 2) % 1) < .007 || Math.min((v * 2) % 1, 1 - (v * 2) % 1) < .007) ? .08 : 0;
+      const cloud = fbm(x * .95, z * .95);
+      const patch = fbm(x * 2.1 + 11.4, z * 1.9 + 4.2);
+      const powder = Math.max(0, patch - .62) * 1.45 * Math.max(0, fbm(x * 4.7 + 2, z * 4.5 + 8) - .35);
+      const fineDust = Math.max(0, vnoise(x * 16, z * 16) - .74) * .45;
+      const scratch = Math.max(0, vnoise(x * 42 + z * 11, z * 7 - x * 5) - .87) * 1.4;
+      let r = 27 + 18 * (cloud + tileFade), g = 74 + 24 * (cloud + tileFade), b = 52 + 18 * (cloud + tileFade);
+      const w = Math.min(.48, powder * .65 + fineDust * .28 + scratch * .32 + joint * .25);
+      r = r * (1 - w) + 174 * w;
+      g = g * (1 - w) + 186 * w;
+      b = b * (1 - w) + 172 * w;
+      const dark = Math.max(0, .45 - cloud) * .48;
+      return [r * (1 - dark), g * (1 - dark), b * (1 - dark), w];
+    };
+    const epoxyBoxMap = makeDataTex(fw, fw, (u, v) => { const p = epoxyPixel(u, v); return [p[0], p[1], p[2], 255]; }, { repeat: [4, 4] });
+    const epoxyBoxRough = makeDataTex(fine ? 192 : 8, fine ? 192 : 8, (u, v) => {
+      const p = epoxyPixel(u, v);
+      return [0, Math.round(52 + p[3] * 145), 0, 255];
+    }, { srgb: false, repeat: [4, 4] });
+    const epoxySlabMap = epoxyBoxMap.clone(); epoxySlabMap.repeat.set(.13, .13); epoxySlabMap.needsUpdate = true; this.textures.add(epoxySlabMap);
+    const epoxySlabRough = epoxyBoxRough.clone(); epoxySlabRough.repeat.set(.13, .13); epoxySlabRough.needsUpdate = true; this.textures.add(epoxySlabRough);
+
+    // Sky-blue cleanroom epoxy floor (cards 05~07, 11)
+    const blueEpoxyMap = makeDataTex(fine ? 192 : 8, fine ? 192 : 8, (u, v) => {
+      const c = fbm(u * 5 + 3, v * 5 + 8), scuff = Math.max(0, vnoise(u * 26, v * 26) - .8) * .35;
+      return [146 + 22 * c + 40 * scuff, 188 + 20 * c + 30 * scuff, 208 + 18 * c + 22 * scuff, 255];
+    }, { repeat: [3, 2] });
+
+    // Corrugated dark charcoal-slate steel ceiling deckplate
+    const deckMap = makeDataTex(fine ? 128 : 8, fine ? 128 : 8, (u, v) => {
+      const rib = Math.sin(u * Math.PI * 24);
+      const shade = 78 + rib * 18 + vnoise(u * 12, v * 8) * 7;
+      return [shade + 2, shade + 2, shade + 8, 255];
+    }, { repeat: [6, 6] });
+
     this.mat = {
-      steel: this._material(0xf1f4ed, .43, .48, { map: brushed }),
-      trim: this._material(0xb1bfba, .39, .55),
-      dark: this._material(0x344c49, .6, .32),
-      floor: this._material(0x397566, .93, .02),
-      plinth: this._material(0xd1d5c9, .9, .03),
+      steel: this._material(0xdfe3e2, .42, .85, { map: brushed, roughnessMap: steelRough, envMapIntensity: 1.18 }),
+      stainedSteel: this._material(0xe4e6e0, .28, .82, { map: stainedMap, roughnessMap: steelRough, envMapIntensity: 1.1 }),
+      trim: this._material(0xaeb6b4, .36, .76, { envMapIntensity: 1.05 }),
+      dark: this._material(0x2f3f3d, .54, .42),
+      floor: this._material(0xffffff, .30, .06, { map: epoxyBoxMap, roughnessMap: epoxyBoxRough, envMapIntensity: .82 }),
+      slabFloor: this._material(0xffffff, .30, .06, { map: epoxySlabMap, roughnessMap: epoxySlabRough, envMapIntensity: .82 }),
+      curb: this._material(0x165638, .32, .06, { envMapIntensity: .72 }),
+      cleanBlueFloor: this._material(0xffffff, .26, .05, { map: blueEpoxyMap, envMapIntensity: .8 }),
+      ceilingDeck: this._material(0xffffff, .62, .38, { map: deckMap, emissive: 0x262930, emissiveIntensity: .28, side: THREE.DoubleSide }),
+      creamBeam: this._material(0xdcd7c4, .72, .12, { emissive: 0x2c2a24, emissiveIntensity: .14 }),
+      plinth: this._material(0xe4e1d2, .85, .03),
       concrete: this._material(0xe2dec9, .86, .03),
-      wall: this._material(0xe6e5d8, .95, 0),
-      red: this._material(0x944e45, .7, .22),
-      yellow: this._material(0xe4b63e, .48, .18),
-      motor: this._material(0x4e817b, .53, .45),
-      black: this._material(0x203633, .8, .08),
-      copper: this._material(0xa67543, .4, .5),
-      white: this._material(0xe8efe5, .6, .02),
+      wall: this._material(0xe6e2d3, .88, .02),
+      red: this._material(0xb43c32, .56, .24),
+      yellow: this._material(0xe9b824, .42, .18),
+      motor: this._material(0x4b7f79, .46, .48),
+      black: this._material(0x1e2b29, .74, .12),
+      copper: this._material(0xa67543, .38, .58),
+      white: this._material(0xedf0ea, .56, .04),
       mint: this._material(0x71d5a6, .4, .14),
+      blue: this._material(0x2764a6, .48, .18),
+      insulation: this._material(0x9ca4a8, .52, .34),
       screen: this._material(0x163d41, .3, .15, { emissive: 0x1c4f4f, emissiveIntensity: .35 }),
     };
   }
@@ -318,7 +407,7 @@ class FacilityScene {
 
   _lights() {
     this.textures.add(equipmentReflection(this.scene));
-    this.scene.add(new THREE.HemisphereLight(0xf4fbff, 0x668278, 2.8));
+    const hemisphere = new THREE.HemisphereLight(0xf4fbff, 0x668278, 2.8); this.scene.add(hemisphere);
     const sun = new THREE.DirectionalLight(0xfff3d9, 3.6);
     sun.position.set(-28, 85, 35); sun.castShadow = true;
     sun.target.position.set(0, 24, 0); this.scene.add(sun.target);
@@ -328,6 +417,8 @@ class FacilityScene {
     this.scene.add(sun); this.sun = sun;
     const fill = new THREE.DirectionalLight(0xd8edff, 1.3);
     fill.position.set(15, 12, -12); this.scene.add(fill);
+    const lights = { scene: this.scene, sun, hemisphere, fill, materials: this.materials };
+    this._updateLighting = () => applyLightProfile(lights, lightProfileFor({ floor: this.activeFloor, view: this.view }));
   }
 
   _environment() {
@@ -360,6 +451,7 @@ class FacilityScene {
       buildDryerCompressorEnvironment(this, environment, floor);
       alignDryerCompressorEntrance(environment);
       buildDryerCompressorInteriorDetails(this, environment, floor);
+      buildDryerFloor1PhotoDetail(this, environment, floor);
       if (floor.id === 3) {
         environment.mapCaptions = [];
         environment.architectureFixtures.traverse(node => {
@@ -369,9 +461,9 @@ class FacilityScene {
       this.buildingEnvironments.set(floor.id, environment);
       this.floorDecks.set(floor.id, environment.deck); this.floorStructures.set(floor.id, environment.structure);
       for (const item of this.equipment.filter(entry => entry.floor === floor.id)) {
-        const material = this._material(0xffffff, .9, 0, { transparent: true, opacity: .08, depthWrite: false });
-        const disk = this._mesh(new THREE.CircleGeometry(item.type === 'dryer-body' ? 3.2 : 1.8, 24), material, environment.deck, [item.position[0], .04, item.position[2]]);
-        disk.rotation.x = -Math.PI / 2; this.locationDisks.set(item.id, disk);
+        const material = this._material(0x0c2418, .95, 0, { transparent: true, opacity: .14, depthWrite: false });
+        const disk = this._mesh(new THREE.CircleGeometry(item.type === 'dryer-body' ? 3.0 : 1.5, 24), material, environment.deck, [item.position[0], .016, item.position[2]]);
+        disk.rotation.x = -Math.PI / 2; disk.castShadow = false; this.locationDisks.set(item.id, disk);
       }
     }
   }
@@ -429,6 +521,7 @@ class FacilityScene {
     else if (item.floor === 'outdoor') buildOutdoorEquipment(this, root, item);
     else if ([6, 7, 8].includes(item.floor) && buildDryerUpperEquipment(this, root, item)) { /* New film and architectural floor ownership. */ }
     else if (buildPreparationBoilerRoom(this, root, item)) { /* Same adjacent boiler room, open in the 1F cutaway. */ }
+    else if (buildDryerFloor1Load(this, root, item)) { /* 1F selectable loads, as on team 2 floor 3. */ }
     else if (buildPreparationEquipment(this, root, item)) { /* Current 1F continuous walk and room plan. */ }
     else if (buildDryerProcessEquipment(this, root, item)) { /* Preserved OWP silhouettes. */ }
     else if (photoModel) photoModel(); else buildFacilityEquipment(this, root, item);
@@ -803,6 +896,13 @@ class FacilityScene {
     return this._personFrame();
   }
 
+  // 1.5층 관찰창 너머는 1층 홀이다. 입체·통로 보기에서는 1층 바닥·고정물·설비를
+  // 원래 높이에 함께 보여 준다(2026-11-26 사용자 요청). 평면과 배치 편집은 층을 분리한다.
+  _overlookContextLevels() {
+    if (this.activeFloor !== 2 || this.isolated || this.placementMode || !['perspective', 'aisle'].includes(this.view)) return [];
+    return [1];
+  }
+
   _dryerRouteContextLevels() {
     if (this.isolated || this.placementMode || ![1, 2, 3].includes(this.activeFloor)) return [];
     // Floor cutaways show only their own deck, rooms and equipment. Keep the
@@ -942,7 +1042,7 @@ class FacilityScene {
       }
       const bodies=[],seen=new Set();
       for(const root of roots)root?.traverse(mesh=>{
-        if(!mesh.isMesh||seen.has(mesh)||!mesh.geometry?.attributes?.position||mesh.userData.personCollision===false)return;
+        if(!mesh.isMesh||seen.has(mesh)||!mesh.geometry?.attributes?.position||mesh.userData.personCollision===false||(mesh.userData.buildingColumn&&this.columnsEnabled===false))return;
         for(let node=mesh;node;node=node.parent)if(node.userData.preparationEnvelopeOmitted||node.userData.personCollision===false)return;
         // Text/decal planes are annotations, while transparent physical glass
         // and door glazing still take part in collision.
@@ -1904,7 +2004,7 @@ class FacilityScene {
     this.onPackagingLevelChange?.(level);
   }
 
-  setPackagingCargoVisible(value) { if (this._areaEnabled('packaging')) { this.packagingCargoVisible = !!value; this._visibility(); } }
+  setPackagingCargoVisible(value) { this.packagingCargoVisible = !!value; this._visibility(); }
 
   getPackagingProgress() { return this.packagingProgress || 0; }
 
@@ -2082,7 +2182,10 @@ class FacilityScene {
     const leavingAisle = this.view === 'aisle' || this.view === 'person';
     if (leavingAisle) { this._stopPerson(); this.view = 'perspective'; this._visibility(); this.onViewChange(this.view); }
     const object = this.objects.get(id);
-    const focusObject = object.userData.hasInspectableInterior && this.campusInteriorEnabled ? object.getObjectByName(object.userData.interiorFocusObject || 'campus-tank-valve-room-units') || object : object;
+    const focusName = object.userData.hasInspectableInterior && this.campusInteriorEnabled
+      ? object.userData.interiorFocusObject || 'campus-tank-valve-room-units'
+      : item.exteriorView?.focusObject;
+    const focusObject = (focusName && object.getObjectByName(focusName)) || object;
     const bounds = new THREE.Box3().setFromObject(focusObject);
     if (id === 'dryer-roof-drive') {
       const interior = this.upperEnvironments?.get(8)?.machineRoomInterior;
@@ -2113,7 +2216,10 @@ class FacilityScene {
       }
       const vertical = (this.camera.fov || 42) * Math.PI / 360;
       const halfAngle = Math.min(vertical, Math.atan(Math.tan(vertical) * this.camera.aspect));
-      this.goalOrbit.distance = Math.max(.8, size.length() * .5 / Math.sin(halfAngle) * 1.15);
+      const closeFit = focusObject.name === item.exteriorView?.focusObject ? item.exteriorView?.distanceScale ?? 1 : 1;
+      // Leave room for the side workstation in narrow portrait viewports.
+      const distanceScale = 1 + (closeFit - 1) * Math.min(1, this.camera.aspect);
+      this.goalOrbit.distance = Math.max(.8, size.length() * .5 / Math.sin(halfAngle) * 1.15 * distanceScale);
       this._ensureCameraRange();
     }
     this._notifyNavigation();
@@ -2310,6 +2416,19 @@ class FacilityScene {
   }
   setLabels(value) { this.labelsEnabled = !!value; this._invalidate(); }
   setStructure(value) { this.structureEnabled = !!value; this._visibility(); }
+  // Columns are part of the structure layer, with their own switch.
+  setColumns(value) {
+    this.columnsEnabled = !!value; this.personCollisionMeshCache = null; this.personObstacleCache = null;
+    this._visibility();
+  }
+  _columnNodes() {
+    if (!this.columnNodeCache) {
+      this.columnNodeCache = [];
+      const roots = [...(this.buildingEnvironments?.values() || []), ...(this.upperEnvironments?.values() || []), ...(this.packagingEnvironments?.values() || [])];
+      for (const environment of roots) for (const root of [environment?.structure, environment?.facade, environment?.ceiling]) root?.traverse?.(node => { if (node.userData.buildingColumn) this.columnNodeCache.push(node); });
+    }
+    return this.columnNodeCache;
+  }
   setPartitions(value) { this.partitionsEnabled = !!value; this._visibility(); }
   setCampusInterior(value) {
     this.campusInteriorEnabled = !!value && !!this.objects.get(this.selected)?.userData.hasInspectableInterior;
@@ -2322,8 +2441,9 @@ class FacilityScene {
 
   _visibility() {
     this._applyPackagingDisplayOffsets();
+    this._updateLighting?.();
     const onFloor = (floor) => this.activeFloor === 'all' ? floor !== 'outdoor' && floor !== 'campus' && floor !== 'packaging' : floor === this.activeFloor;
-    const routeLevels = this._dryerRouteContextLevels();
+    const routeLevels = [...new Set([...this._dryerRouteContextLevels(), ...(this._overlookContextLevels?.() || [])])];
     const inContext = floor => onFloor(floor) || routeLevels.includes(floor);
     for (const item of this.equipment) {
       const visible = (inContext(item.floor) || (item.visibleFloors || []).includes(this.activeFloor)) && (item.floor !== 'packaging' || this.getPackagingLevel() === 'all' || (item.floorLevel ?? 3) === this.getPackagingLevel()) && (!this.isolated || item.id === this.selected);
@@ -2335,7 +2455,7 @@ class FacilityScene {
           if (node.userData.campusInteriorCover) node.visible = !(this.selected === item.id && this.campusInteriorEnabled);
         });
       }
-      const disk = this.locationDisks.get(item.id); if (disk) disk.visible = visible;
+      const disk = this.locationDisks.get(item.id); if (disk) disk.visible = visible && this.view !== 'person';
     }
     const contextNames = new Set(this.equipment.flatMap(item => item.contextOccluders || []));
     const selectedEquipment = this.equipment.find(item => item.id === this.selected);
@@ -2362,9 +2482,11 @@ class FacilityScene {
     }
     for (const [floor, deck] of this.floorDecks) deck.visible = inContext(floor) && !this.isolated;
     for (const [floor, structure] of this.floorStructures) structure.visible = inContext(floor) && this.structureEnabled && !this.isolated;
+    for (const node of this._columnNodes?.() || []) node.visible = this.columnsEnabled !== false;
     if (this.buildingEnvironments) for (const [level, environment] of this.buildingEnvironments) {
       const context = inContext(level) && !this.isolated;
       environment.facade.visible = context && this.structureEnabled && (this.partitionsEnabled || ['aisle', 'person'].includes(this.view));
+      if (environment.ceiling) environment.ceiling.visible = context && this.structureEnabled && (this.partitionsEnabled || ['aisle', 'person'].includes(this.view));
       environment.cover.visible = context && this.structureEnabled && this.activeFloor !== 'all';
       const compressorRoof = environment.cover.getObjectByName('dryer-building-3-compressor-room-roof');
       for (const caption of environment.mapCaptions || []) caption.visible = this.view !== 'person' && this.view !== 'aisle';
@@ -2392,9 +2514,10 @@ class FacilityScene {
         environment.deck.visible = context && !this.isolated;
         environment.structure.visible = context && this.structureEnabled && !this.isolated;
         environment.ducts.visible = context && this.ductsEnabled && !this.isolated;
-        if (environment.stairs) environment.stairs.visible = context && this.structureEnabled && !this.isolated;
+        if (environment.stairs) environment.stairs.visible = (context || (level === 8 && this.activeFloor === 6)) && this.structureEnabled && !this.isolated;
         if (environment.cover) environment.cover.visible = level === 8 && this.activeFloor === 8 && this.structureEnabled && !this.isolated;
         if (environment.facade) environment.facade.visible = context && (this.partitionsEnabled || ['aisle', 'person'].includes(this.view)) && this.structureEnabled && !this.isolated;
+        if (environment.ceiling) environment.ceiling.visible = context && (this.partitionsEnabled || ['aisle', 'person'].includes(this.view)) && this.structureEnabled && !this.isolated;
         if (environment.machineRoomCover) environment.machineRoomCover.visible = context && this.structureEnabled && !this.isolated && this.selected !== 'dryer-roof-drive';
         if (environment.machineRoomInterior) environment.machineRoomInterior.visible = context && (!this.isolated || this.selected === 'dryer-roof-drive');
       }

@@ -8,7 +8,7 @@ const roofProfile = Object.freeze({
   minX: -8.6, maxX: 8.6, minZ: -6.7, maxZ: 13.4,
   serviceApron,
   catwalk: { widths: [1, .75], guardHeight: 1.2, basis: 'A018/A033 도면의 지붕 점검통로 · 현재 위치 개략' },
-  stairs: { minX: 8.6, maxX: 13.4, minZ: -13.4, maxZ: -6.7, fromY: 26.2, toY: 32.6, flights: 4 },
+  stairs: { minX: 8.7, maxX: 13.3, minZ: -13.3, maxZ: -10.7, runAxis: 'x', fromY: 26.2, toY: 32.6, flights: 4 },
   basis: 'A017 서비스 bay는 7층과 같은 높이이며 처마·용마루는 별도 지붕 표고입니다.',
 });
 

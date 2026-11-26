@@ -1,4 +1,5 @@
 import * as THREE from '../shared/vendor/three.module.js';
+import { createArchitectureKit } from './architecture-kit.js';
 
 // Architectural context only. Historical fixtures do not enter the equipment
 // catalog, and walls are separated so the viewer can cut them away.
@@ -13,9 +14,13 @@ export function buildDryerBuildingEnvironment(s, options = {}) {
     return cache.get(key);
   };
   const m = s.dryerBuildingMaterials ||= {
-    floor: s._material(0x537b69, .96, .01), trim: s.mat?.trim || s._material(0xb8c1b7, .58, .27),
-    column: s._material(0xc9c6b5, .9, .05), wall: s._material(0xe2dfd0, .95, 0),
-    roof: s._material(0xa2a99e, .97, .02), dark: s._material(0x41554b, .8, .08),
+    floor: s.mat?.slabFloor || s._material(0x1f5e3f, .34, .06), trim: s.mat?.trim || s._material(0xb8c1b7, .35, .65),
+    column: s.mat?.creamBeam || s._material(0xdad5c2, .76, .08), wall: s._material(0xe2dfd0, .88, .02),
+    roof: s._material(0xa2a99e, .92, .08), dark: s._material(0x374842, .68, .18),
+    ceilingDeck: s.mat?.ceilingDeck || s._material(0x4c545a, .58, .48, { side: THREE.DoubleSide }),
+    ceilingRib: s._material(0x3a4247, .55, .52),
+    tray: s._material(0x2d3538, .56, .46),
+    led: s._material(0xfbf9ee, .35, 0, { emissive: 0xfff8e6, emissiveIntensity: 1.15 }),
     reference: s._material(0xaeb9ae, .8, .12, { transparent: true, opacity: .5 }),
     sign: s._material(0xe7dbc1, .92, .01),
   };
@@ -23,8 +28,10 @@ export function buildDryerBuildingEnvironment(s, options = {}) {
   const box = (parent, size, position, material = m.wall) => mesh(parent, geometry(`box:${size}`, () => new THREE.BoxGeometry(...size)), material, position);
   const deck = group(s.scene, [0, elevation, 0]), structure = group(s.scene, [0, elevation, 0]),
     facade = group(s.scene, [0, elevation, 0]), cover = group(s.scene, [0, elevation, 0]),
-    architectureFixtures = group(s.scene, [0, elevation, 0]), ducts = group(s.scene, [0, elevation, 0]);
-  for (const [key, root] of Object.entries({ deck, structure, facade, cover, architectureFixtures, ducts })) {
+    architectureFixtures = group(s.scene, [0, elevation, 0]), ducts = group(s.scene, [0, elevation, 0]),
+    ceiling = group(s.scene, [0, elevation, 0]);
+  ceiling.visible = false;
+  for (const [key, root] of Object.entries({ deck, structure, facade, cover, architectureFixtures, ducts, ceiling })) {
     root.name = `dryer-building-${level}-${key}`;
     Object.assign(root.userData, { architecturalFloor: level, historicalPlan: !spec.routeSurvey, positionBasis: spec.positionConfidence || 'plan-proportion', currentVideoReference:!!spec.routeSurvey, drawingPolicy:spec.routeSurvey?.drawingPolicy || 'historical-reference' });
   }
@@ -79,15 +86,25 @@ export function buildDryerBuildingEnvironment(s, options = {}) {
   const zs = level <= 3 ? [-13.3, -6.7, 3.1, 13.3, 21.5] : [-13.15, -6.7, 0, 6.7, 13.15];
   const columnHeight = spec.structureHeight || spec.height;
   const columnGeo = geometry(`column:${columnHeight}`, () => new THREE.BoxGeometry(.24, columnHeight, .28));
+  // Floors with a wall plan take walls, openings and steel columns from the
+  // as-built drawings; the remaining floors keep the registered grid.
+  const plan = spec.wallPlan, planRoot = plan && group(architectureFixtures);
+  if (plan) {
+    const kit = createArchitectureKit(s, { key: 'dryer-plan', level, prefix: `dryer-plan-${level}`, structure, facade, fixtures: planRoot, deck });
+    planRoot.name = `dryer-building-${level}-plan-openings`; planRoot.userData.architecturePlan = true;
+    for (const data of plan.walls) kit.wall({ height: plan.height, skirting: plan.skirting, ...data });
+    for (const data of plan.columns) kit.column({ height: columnHeight, plinth: plan.plinth, ...data, x: data.position[0], z: data.position[1] });
+    kit.finish();
+  }
   const positions = [];
-  for (const x of xs) for (const z of zs) {
+  if (!plan) for (const x of xs) for (const z of zs) {
     if (level === 3 && (x > 8.6 || z > 13.4)) continue;
     positions.push([x, columnHeight / 2, z]);
   }
   const columns = new THREE.InstancedMesh(columnGeo, m.column, positions.length), matrix = new THREE.Matrix4();
   positions.forEach((position, index) => columns.setMatrixAt(index, matrix.makeTranslation(...position)));
-  columns.instanceMatrix.needsUpdate = true; columns.computeBoundingBox(); columns.computeBoundingSphere(); structure.add(columns);
-  for (const bounds of level <= 2 ? [spec.bounds] : [spec.mainBounds]) traceRect(structure, bounds, columnHeight - .12, m.column, .18);
+  columns.instanceMatrix.needsUpdate = true; columns.computeBoundingBox(); columns.computeBoundingSphere(); if (positions.length) structure.add(columns);
+  if (!plan) for (const bounds of level <= 2 ? [spec.bounds] : [spec.mainBounds]) traceRect(structure, bounds, columnHeight - .12, m.column, .18);
   for (const opening of spec.voids || []) {
     traceRect(structure, opening, .04, m.trim, .08);
     // A minimal open guard represents the boundary, rather than an opaque
@@ -97,7 +114,7 @@ export function buildDryerBuildingEnvironment(s, options = {}) {
     }
   }
 
-  function wallSegment(parent, a, b, height, openings = []) {
+  function wallSegment(parent, a, b, height, openings = [], thickness = .12) {
     const dx = b[0] - a[0], dz = b[1] - a[1], length = Math.hypot(dx, dz), wallRoot = group(parent, [a[0], 0, a[1]]);
     wallRoot.rotation.y = -Math.atan2(dz, dx);
     // Subtract the union of openings in both axes. A raised or stacked window
@@ -108,7 +125,7 @@ export function buildDryerBuildingEnvironment(s, options = {}) {
       const left=cuts[index-1],right=cuts[index],middle=(left+right)/2;
       const active=gaps.filter(gap=>middle>gap.min-1e-6&&middle<gap.max+1e-6).sort((a,b)=>a.bottom-b.bottom);
       let cursor=0;
-      const panel=(bottom,top)=>{if(top-bottom>1e-5)box(wallRoot,[right-left,top-bottom,.12],[(left+right)/2,(bottom+top)/2,0]);};
+      const panel=(bottom,top)=>{if(top-bottom>1e-5)box(wallRoot,[right-left,top-bottom,thickness],[(left+right)/2,(bottom+top)/2,0]);};
       for(const gap of active){if(gap.bottom>cursor)panel(cursor,gap.bottom);cursor=Math.max(cursor,gap.top);}
       if(cursor<height)panel(cursor,height);
     }
@@ -259,13 +276,22 @@ export function buildDryerBuildingEnvironment(s, options = {}) {
     ['east', [perimeter.maxX, perimeter.minZ], [perimeter.maxX, perimeter.maxZ]],
   ]) {
     const openings = (spec.openings || []).filter(opening => opening.side === side);
-    wallSegment(facade, a, b, Math.min(spec.wallHeight || 3.5, columnHeight), openings);
+    if (!plan) wallSegment(facade, a, b, Math.min(spec.wallHeight || 3.5, columnHeight), openings);
     for (const opening of openings) doorway(a,b,opening);
   }
+  function cutFace(root, top, thickness) {
+    m.cut ||= s._material(0x4c5650, .95, 0, { polygonOffset: true, polygonOffsetFactor: -2, polygonOffsetUnits: -2 });
+    for (const panel of [...root.children]) {
+      const p = panel.geometry?.parameters; if (!p || Math.abs(panel.position.y + p.height / 2 - top) > 1e-6) continue;
+      const face = mesh(root, geometry(`cut:${p.width}:${thickness}`, () => { const g = new THREE.PlaneGeometry(p.width, thickness); g.rotateX(-Math.PI / 2); return g; }), m.cut, [panel.position.x, top, 0]);
+      face.userData.personCollision = false; face.castShadow = false;
+    }
+  }
   for (const partition of spec.partitions || []) {
-    const fullWall = wallSegment(facade, partition.a, partition.b, Math.min(partition.height || 3.1, columnHeight), partition.openings);
-    const cutaway = wallSegment(structure, partition.a, partition.b, .78, partition.openings);
+    const fullWall = wallSegment(facade, partition.a, partition.b, Math.min(partition.height || 3.1, columnHeight), partition.openings, partition.thickness);
+    const cutaway = wallSegment(structure, partition.a, partition.b, .78, partition.openings, partition.thickness);
     cutaway.userData.lowPartition = true;
+    cutFace(cutaway, .78, partition.thickness ?? .12);
     if (partition.roomId) {
       for (const section of [fullWall, cutaway]) Object.assign(section.userData, { roomId: partition.roomId, positionBasis: partition.positionBasis });
     }
@@ -297,7 +323,7 @@ export function buildDryerBuildingEnvironment(s, options = {}) {
   traceRect(elevatorGroup, elevator.bounds, .08, m.dark, .13);
   for (const x of [elevator.bounds.minX, elevator.bounds.maxX]) for (const z of [elevator.bounds.minZ, elevator.bounds.maxZ]) box(structure, [.15, spec.height, .15], [x, spec.height / 2, z], m.column);
   const elevatorDoor = { offset: (elevator.bounds.maxX - elevator.bounds.minX) / 2, width: 1.4, height: 2.2, doorKind: 'custom' };
-  wallSegment(facade, [elevator.bounds.minX, elevator.bounds.maxZ], [elevator.bounds.maxX, elevator.bounds.maxZ], Math.min(spec.height, 3), elevatorService ? [elevatorDoor] : []);
+  if (!plan?.ownsLift) wallSegment(facade, [elevator.bounds.minX, elevator.bounds.maxZ], [elevator.bounds.maxX, elevator.bounds.maxZ], Math.min(spec.height, 3), elevatorService ? [elevatorDoor] : []);
   // Show the shaft clearly, with landing doors only on served floors. A tinted shaft
   // volume, closed stainless landing doors and an upright sign mark the
   // drawn ELEV core; no car, rope or machine is invented inside it.
@@ -362,7 +388,8 @@ export function buildDryerBuildingEnvironment(s, options = {}) {
     stairRoot.name = `dryer-building-${level}-${core.id}`;
     if (core.runAxis === 'x') stairRoot.rotation.y = Math.PI / 2;
     Object.assign(stairRoot.userData, { architecturalFixture: true, stairId: core.id, visibleFloors: core.visibleFloors || [level], fromY, toY: fromY + stairHeight, geometryBasis: core.geometryBasis, stepsRepresentative: true,currentVideoReference:!!core.observed,sourceTimes:core.sourceTimes || [],sourceReferences:core.sourceReferences||[],connectionBasis:core.connectionBasis });
-    const flights = core.flights || (stairHeight > 4.5 ? 4 : 2), lane = Math.min(1.25, (width - .25) / (flights === 1 ? 1 : 2)), run = Math.max(1.8, Math.min(flights === 1 ? 10 : 4, depth - 1.7)), count = Math.ceil(stairHeight / flights / .18);
+    const flights = core.flights || (stairHeight > 4.5 ? 4 : 2), lane = Math.min(1.25, (width - .25) / (flights === 1 ? 1 : 2)), run = core.run ?? Math.max(1.8, Math.min(flights === 1 ? 10 : 4, depth - 1.7)), count = Math.ceil(stairHeight / flights / .18);
+    const mirror = core.mirror ? -1 : 1, landingDepth = core.landingDepth ?? .8;
     const observedWhite=core.appearance==='white-stringer-yellow-rail';
     const steel=m.trim,handrail=observedWhite?(s.dryerObservedYellowHandrail ||=s._material(0xe2bd36,.62,.06)):(s.dryerBuildingHandrail ||= s._material(0x936739,.65,.05));
     const treadMaterial=observedWhite?(s.dryerObservedWhiteStair ||=s._material(0xe1e0d2,.75,.12)):core.id==='northeast-stair'&&core.observed?(s.dryerStairTerrazzo ||=s._material(0xcbd0c1,.9,.02)):steel;
@@ -378,7 +405,7 @@ export function buildDryerBuildingEnvironment(s, options = {}) {
       lowerLanding.name='architectural-stair-landing';
     }
     for (let flight = 0; flight < flights; flight++) {
-      const direction = (flight % 2 ? -1 : 1)*firstDirection, x = flights === 1 ? 0 : flight % 2 ? lane / 2 + .06 : -lane / 2 - .06;
+      const direction = (flight % 2 ? -1 : 1)*firstDirection, x = flights === 1 ? 0 : mirror * (flight % 2 ? lane / 2 + .06 : -lane / 2 - .06);
       const y0=stairHeight/flights*flight,rise=stairHeight/flights;
       for (let index = 0; index < count; index++) {
         const y = stairHeight / flights * (flight + (index + 1) / count), z = direction * (-run / 2 + (index + .5) * run / count);
@@ -386,7 +413,7 @@ export function buildDryerBuildingEnvironment(s, options = {}) {
         const riser=box(stairRoot,[lane,rise/count,.035],[x,y-rise/count/2,direction*(-run/2+index*run/count)],treadMaterial);riser.name='architectural-stair-riser';
         if(core.observed){const nosing=box(stairRoot,[lane,.009,.045],[x,y+.0045,direction*(-run/2+index*run/count+.0225)],m.dark);nosing.name='architectural-stair-nosing';}
       }
-      const landing=box(stairRoot,[landingWidth,.1,.8],[0,y0+rise-.05,direction*(run/2+.4)],treadMaterial);landing.name='architectural-stair-landing';
+      const landing=box(stairRoot,[landingWidth,.1,landingDepth],[0,y0+rise-.05,direction*(run/2+landingDepth/2)],treadMaterial);landing.name='architectural-stair-landing';
       for(const side of [-1,1]) {
         const edge=x+side*(lane/2-.035);
         rail([edge,y0+1,-direction*run/2],[edge,y0+rise+1,direction*run/2],.035,core.id==='southeast-stair'||observedWhite?handrail:steel);
@@ -400,7 +427,7 @@ export function buildDryerBuildingEnvironment(s, options = {}) {
         }
       }
       // Open return landing: the crossing between lanes remains clear.
-      const endZ=direction*(run/2+.77);
+      const endZ=direction*(run/2+landingDepth-.03);
       // The observed upper return lands directly at a doorway. A rail across
       // that final edge would physically block the filmed exit.
       if(!((core.openUpperLanding || (core.id==='northeast-stair'&&core.observed))&&flight===flights-1))rail([-landingWidth/2,y0+rise+1,endZ],[landingWidth/2,y0+rise+1,endZ],.03,core.id==='southeast-stair'?handrail:steel);
@@ -463,7 +490,7 @@ export function buildDryerBuildingEnvironment(s, options = {}) {
           else strip(lo,hi,y);
         }
       };
-      strips('x',-6.633,8.6,13.4,3.4,entry.roofDoor[0]-.57,entry.roofDoor[0]+.57,0,2.24);
+      strips('x',-6.633,8.6,10.3,3.4,entry.roofDoor[0]-.57,entry.roofDoor[0]+.57,0,2.24);
       strips('z',8.67,-6.63,-2.47,3.4,winZ-winW/2-.02,winZ+winW/2+.02,recessWindow.sill-.025,recessWindow.sill+winH+.025);
       strips('x',b.maxZ+.068,b.minX,b.maxX,eastH,entry.compressorDoor[0]-.99,entry.compressorDoor[0]+.99,0,2.24);
       strips('z',b.minX-.068,-6.63,b.maxZ,eastH,0,0,0,0);
@@ -487,7 +514,145 @@ export function buildDryerBuildingEnvironment(s, options = {}) {
       fascia.name = 'dryer-building-3-compressor-orange-fascia';
     }
   }
-  return { deck, structure, facade, cover, architectureFixtures, ducts };
+
+  // Overhead dark corrugated steel deckplate, cream H-beams, cable trays & round LEDs
+  // on the ceiling layer (hidden in cutaway/top overview, visible in person/full view).
+  if (level === 4 || level === 5 || level === 1) {
+    const unitBox = geometry('ceiling-unit-box', () => new THREE.BoxGeometry(1, 1, 1));
+    const unitCyl = geometry('ceiling-unit-cyl', () => new THREE.CylinderGeometry(1, 1, 1, 18));
+    const putInstances = (name, geo, mat, entries) => {
+      if (!entries.length) return null;
+      const inst = new THREE.InstancedMesh(geo, mat, entries.length), dummy = new THREE.Object3D();
+      entries.forEach((e, i) => {
+        dummy.position.set(...e.p); dummy.rotation.set(...(e.r || [0, 0, 0])); dummy.scale.set(...e.s);
+        dummy.updateMatrix(); inst.setMatrixAt(i, dummy.matrix);
+      });
+      inst.name = `dryer-building-${level}-${name}`;
+      inst.userData.personCollision = false; inst.castShadow = false; inst.receiveShadow = true;
+      inst.instanceMatrix.needsUpdate = true; inst.computeBoundingBox(); inst.computeBoundingSphere();
+      ceiling.add(inst); return inst;
+    };
+    if (level === 4 || level === 5) {
+      const cy = level === 5 ? 5.82 : 6.72;
+      const holes = [
+        { minX: -8.52, maxX: -5.65, minZ: -13.3, maxZ: -9.45 },
+        ...(level === 5
+          ? [{ x: -1, z: 7.5, diameter: 7.55 }, { x: -3.35, z: -8.2, diameter: 2.32 }, { x: -3.35, z: -5.2, diameter: 2.32 }, { x: -3.35, z: -2.2, diameter: 2.32 }]
+          : [{ x: -2.05, z: -1.7, diameter: 2.52 }]),
+      ];
+      const deckPlate = plate(ceiling, spec.mainBounds, holes, m.ceilingDeck, .06);
+      deckPlate.position.y = cy;
+      deckPlate.userData.personCollision = false; deckPlate.castShadow = false;
+      deckPlate.name = `dryer-building-${level}-corrugated-deck`;
+      const ribs = [], beams = [], trays = [], leds = [], shades = [];
+      for (let x = -8.35; x <= 8.35; x += .28) {
+        if (level === 5 && Math.abs(x + 1) < 3.85) {
+          ribs.push({ p: [x, cy - .04, -5.0], s: [.055, .035, 16.4] });
+        } else {
+          ribs.push({ p: [x, cy - .04, 0], s: [.055, .035, 26.5] });
+        }
+      }
+      const addHBeamX = (x0, x1, z, y, w = .22, d = .32) => {
+        const cx = (x0 + x1) / 2, len = x1 - x0;
+        beams.push({ p: [cx, y + d / 2 - .012, z], s: [len, .024, w] }, { p: [cx, y - d / 2 + .012, z], s: [len, .024, w] }, { p: [cx, y, z], s: [len, d - .048, .016] });
+      };
+      const addHBeamZ = (x, z0, z1, y, w = .22, d = .32) => {
+        const cz = (z0 + z1) / 2, len = z1 - z0;
+        beams.push({ p: [x, y + d / 2 - .012, cz], s: [w, .024, len] }, { p: [x, y - d / 2 + .012, cz], s: [w, .024, len] }, { p: [x, y, cz], s: [.016, d - .048, len] });
+      };
+      const by = cy - .2;
+      for (const z of [-6.7, -.2, 3.3, 11.6, 13.15]) addHBeamX(-8.4, 8.4, z, by);
+      for (const x of [-5.4, 5.6]) addHBeamZ(x, -13.2, 13.2, by);
+      addHBeamZ(.7, -13.2, 3.3, by);
+      if (level === 5) {
+        // Framed steel collar beams around the chamber cone penetration (card 23)
+        addHBeamZ(-5.0, 3.3, 11.6, by, .2, .28);
+        addHBeamZ(3.0, 3.3, 11.6, by, .2, .28);
+      } else {
+        // Framed steel collar beams around the 4F V/F chamber cone drop (card 02 RIGHT)
+        addHBeamX(-3.45, -.65, -3.05, by, .2, .28);
+        addHBeamX(-3.45, -.65, -.35, by, .2, .28);
+        addHBeamZ(-3.45, -3.05, -.35, by, .2, .28);
+        addHBeamZ(-.65, -3.05, -.35, by, .2, .28);
+      }
+      // Ladder cable trays & overhead utility pipes
+      const ty = cy - .48;
+      for (const tx of [-5.0, 5.15]) {
+        for (const side of [-.16, .16]) trays.push({ p: [tx + side, ty, 0], s: [.025, .075, 25.4] });
+        for (let z = -12.4; z <= 12.4; z += .38) trays.push({ p: [tx, ty - .025, z], s: [.32, .018, .028] });
+        for (let z = -11; z <= 11; z += 3.6) trays.push({ p: [tx, (ty + cy) / 2, z], s: [.02, cy - ty, .02] });
+      }
+      for (const side of [-.15, .15]) trays.push({ p: [0, ty + .06, 2.85 + side], s: [10.4, .07, .025] });
+      if (level === 5) {
+        for (const [py, r] of [[ty + .14, .055], [ty + .02, .042]]) {
+          const pipeMesh = mesh(ceiling, geometry(`5f-ceil-pipe:${r}`, () => { const g = new THREE.CylinderGeometry(r, r, 16.6, 14); g.rotateZ(Math.PI / 2); return g; }), s.mat?.insulation || m.trim, [0, py, 3.25]);
+          pipeMesh.userData.personCollision = false; pipeMesh.castShadow = false;
+        }
+        // 5F photographed floor context (cards 28, 29, 30): yellow pallet with white bag stack,
+        // yellow/red floor zone lines, north-wall coiled cable reel, and fire extinguisher.
+        const ctx5 = group(architectureFixtures, [0, 0, 0]);
+        ctx5.name = 'dryer-building-5-field-context';
+        ctx5.userData.movableContext = true;
+        m.yellowLine ||= s.mat?.yellow || s._material(0xe8b822, .52, .12);
+        m.redLine ||= s.mat?.red || s._material(0xb8382e, .55, .12);
+        m.whiteBag ||= s._material(0xeeefe9, .86, .02);
+        m.cardboard ||= s._material(0xc7a373, .88, .02);
+        // Yellow & red floor parking zone lines (card 30 RIGHT, clear of column [-0.5, -6.7])
+        const px = .95, pz = -5.85;
+        for (const [lx, lz, lw, ld, mat] of [
+          [px, pz - .65, 1.45, .045, m.yellowLine], [px, pz + .65, 1.45, .045, m.yellowLine],
+          [px - .70, pz, .045, 1.35, m.yellowLine], [px + .70, pz, .045, 1.35, m.yellowLine],
+          [px, pz + 1.95, 1.45, .045, m.redLine], [px + .70, pz + 1.30, .045, 1.35, m.redLine],
+        ]) {
+          const ln = box(deck, [lw, .006, ld], [lx, .004, lz], mat);
+          ln.userData.personCollision = false; ln.castShadow = false;
+        }
+        // Yellow plastic pallet + stacked white sacks + kraft slip sheet (card 28 FRONT & 30 RIGHT)
+        box(ctx5, [1.16, .13, 1.02], [px, .065, pz], m.yellowLine);
+        for (let tier = 0; tier < 4; tier++) for (const dx of [-.27, .27]) for (const dz of [-.22, .22]) {
+          box(ctx5, [.50, .11, .42], [px + dx, .185 + tier * .115, pz + dz], m.whiteBag);
+        }
+        box(ctx5, [.62, .12, .52], [px - .18, .68, pz + .1], m.cardboard).rotation.z = -.18;
+        // Coiled black cable/hose reel on solid north wall pier between shutter & window (card 30 LEFT & RIGHT)
+        const reel = group(ctx5, [-.52, 1.15, -13.18]);
+        reel.userData.personCollision = false;
+        for (const r of [.24, .29, .34]) {
+          const loop = mesh(reel, geometry(`5f-cable-loop:${r}`, () => new THREE.TorusGeometry(r, .016, 6, 24)), m.tray, [0, 0, .05]);
+          loop.userData.personCollision = false;
+        }
+        box(reel, [.14, .18, .08], [0, .28, .02], m.trim).userData.personCollision = false;
+        // Fire extinguisher beside east lobby door (card 28 LEFT)
+        const ext = mesh(ctx5, geometry('5f-fire-ext', () => new THREE.CylinderGeometry(.085, .085, .44, 14)), m.redLine, [8.12, .24, -6.15]);
+        ext.userData.personCollision = false;
+      }
+      for (const lx of [-6.4, -.8, 4.4, 6.8]) for (const lz of [-10.2, -4.2, 1.5, 7.5, 12.1]) {
+        if (Math.hypot(lx + 1, lz - 7.5) < (level === 5 ? 4.3 : 2.3)) continue;
+        if (lx < -5.5 && lz < -9.2) continue;
+        shades.push({ p: [lx, cy - .36, lz], s: [.22, .14, .22] });
+        leds.push({ p: [lx, cy - .435, lz], s: [.19, .018, .19] });
+      }
+      putInstances('ceiling-ribs', unitBox, m.ceilingRib, ribs);
+      putInstances('ceiling-hbeams', unitBox, m.column, beams);
+      putInstances('ceiling-cable-trays', unitBox, m.tray, trays);
+      putInstances('ceiling-lamp-housings', unitCyl, m.tray, shades);
+      putInstances('ceiling-led-disks', unitCyl, m.led, leds);
+    } else if (level === 1) {
+      // Exposed ceiling over the 1F outer packaging & preparation hall where open
+      const cy = 6.24, beams = [], leds = [], shades = [];
+      const deckPlate = plate(ceiling, { minX: -8.5, maxX: 34.2, minZ: 3.2, maxZ: 17.0 }, [], m.ceilingDeck, .06);
+      deckPlate.position.y = cy; deckPlate.userData.personCollision = false; deckPlate.castShadow = false;
+      for (const z of [3.5, 9.8, 16.4]) beams.push({ p: [12.8, cy - .18, z], s: [42.4, .32, .22] });
+      for (const x of [-5.4, .7, 8.3, 16.4, 22.2, 28.2]) beams.push({ p: [x, cy - .18, 10.1], s: [.22, .32, 13.6] });
+      for (const lx of [-4, 3, 10, 20, 28]) for (const lz of [5.5, 10.5, 15.2]) {
+        shades.push({ p: [lx, cy - .34, lz], s: [.22, .14, .22] });
+        leds.push({ p: [lx, cy - .415, lz], s: [.19, .018, .19] });
+      }
+      putInstances('ceiling-hbeams', unitBox, m.column, beams);
+      putInstances('ceiling-lamp-housings', unitCyl, m.tray, shades);
+      putInstances('ceiling-led-disks', unitCyl, m.led, leds);
+    }
+  }
+  return { deck, structure, facade, cover, architectureFixtures, ducts, ceiling };
 }
 
 // Register the survey fixtures against the architecture after both have been

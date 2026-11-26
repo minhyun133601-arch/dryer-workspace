@@ -3,8 +3,9 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { COMPRESSOR_RECORDS } from '../apps/site/dryer-compressor-records.js';
 import { COMPRESSOR_MANUALS } from '../apps/site/dryer-compressor-manuals.js';
-import { COMPRESSOR_MEDIA, COMPRESSOR_PLAN_IMAGE, COMPRESSOR_WALK_FRAMES } from '../apps/site/dryer-compressor-media.js';
+import { COMPRESSOR_MEDIA, COMPRESSOR_PLAN_IMAGE, COMPRESSOR_WALK_FRAMES, HALL_WALK_FRAMES } from '../apps/site/dryer-compressor-media.js';
 import { SITE_ASSETS } from '../apps/site/asset-catalog.js';
+import { EQUIPMENT, FLOORS } from '../apps/site/building-data.js';
 import * as THREE from '../apps/shared/vendor/three.module.js';
 import { compressorPlanGeometry } from '../apps/site/dryer-compressor-view.js';
 import { elevationAxes } from '../apps/site/dryer-compressor-elevations.js';
@@ -48,7 +49,16 @@ test('all photographed stations link to the correct registered November survey i
   assert.deepEqual(COMPRESSOR_MEDIA.map(p=>p.number),Array.from({length:100},(_,i)=>i+1));
   const catalog=new Set(SITE_ASSETS.map(a=>a.path));
   assert.ok(catalog.has(COMPRESSOR_PLAN_IMAGE));
-  assert.deepEqual(COMPRESSOR_WALK_FRAMES.map(f=>f.date),['11/12','11/12','11/12','11/24','11/24','11/24']);
+  assert.deepEqual(COMPRESSOR_WALK_FRAMES.filter(f=>f.date!=='11/25').map(f=>f.date),['11/12','11/12','11/12','11/24','11/24','11/24']);
+  assert.deepEqual(COMPRESSOR_WALK_FRAMES.filter(f=>f.date==='11/25'),HALL_WALK_FRAMES);
+  const hall=FLOORS.find(floor=>floor.id===3);
+  for(const frame of HALL_WALK_FRAMES){
+    assert.ok(hall.photos.includes(frame.path),frame.time);
+    if(!frame.equipment)continue;
+    const item=EQUIPMENT.find(row=>row.id===frame.equipment);
+    assert.equal(item.floor,3);
+    assert.ok(item.photos.includes(frame.path) && item.sourceReferences.some(ref=>ref.clipId==='dryer-third-hall-20261125' && ref.times.includes(frame.seconds)));
+  }
   for(const frame of COMPRESSOR_WALK_FRAMES){
     assert.ok(catalog.has(frame.path));
     const bytes=await readFile(new URL('../apps/site/'+frame.path,import.meta.url));

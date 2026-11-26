@@ -1,12 +1,16 @@
 // Current viewer images and their optional compact offline variants.
 // Edit paths here together with the consuming data file; npm run assets:check validates both.
 import { COMPRESSOR_MEDIA, COMPRESSOR_WALK_FRAMES } from './dryer-compressor-media.js';
+import { OFFICE_ROOF_PHOTOS, PREPARATION_CONSOLE_PHOTOS } from './field-photos-20261125.js';
 
 export const SITE_ASSETS = Object.freeze([
+  ...PREPARATION_CONSOLE_PHOTOS,
+  ...OFFICE_ROOF_PHOTOS,
   { id: 'packaging-card-028', path: './assets/photos/equipment-cards/packaging/028-nitrogen/four-views.jpg', category: 'card-packaging', label: '2팀 028 질소발생기 · 4면 사진' },
   { id: 'packaging-card-028-adsorption-tank-plate', path: './assets/photos/equipment-cards/packaging/028-nitrogen/adsorption-tank-plate.jpg', category: 'card-packaging', label: '2팀 028 질소발생기 · 흡착탱크 명판' },
-  ...COMPRESSOR_WALK_FRAMES.map(({id,path,date,time,caption}) => ({
-    id: 'dryer-compressor-' + id, path, category: 'dryer-compressor-survey', label: date+' '+time+' · '+caption,
+  ...COMPRESSOR_WALK_FRAMES.map(({id,path,date,time,caption,category}) => ({
+    id: (category ? 'dryer-' : 'dryer-compressor-') + id, path,
+    category: category || 'dryer-compressor-survey', label: date+' '+time+' · '+caption,
   })),
   ...COMPRESSOR_MEDIA.map(({number, original, path}) => ({
     id: 'dryer-compressor-field-' + number, path, category: 'dryer-compressor-survey',

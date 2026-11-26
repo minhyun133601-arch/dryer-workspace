@@ -1,7 +1,8 @@
 import { PACKAGING_PATHS, PACKAGING_PATH_END_LOOKATS } from './packaging-routes.js';
 import { TEAM2_CARD_CAPTIONS, TEAM2_IDENTITY, team2RoomPhotos, bindTeam2Card } from './team2-card-data.js';
 import { PACKAGING_TRANSPORT_LINES } from './packaging-transport-data.js';
-import { FLOOR3_EQUIPMENT, FLOOR3_LAYOUT, FLOOR3_MIXER_X, FLOOR3_MIXER_Z, FLOOR3_PLAN, FLOOR3_PLAN_CAPTION, FLOOR3_REVISION } from './packaging-floor3-data.js';
+import { PACKAGING_WALL_PLAN } from './packaging-wall-plan.js';
+import { FLOOR3_EQUIPMENT, FLOOR3_LAYOUT, FLOOR3_LIFT, FLOOR3_MIXER_X, FLOOR3_MIXER_Z, FLOOR3_PLAN, FLOOR3_PLAN_CAPTION, FLOOR3_REVISION } from './packaging-floor3-data.js';
 
 // This is a separate third-floor room. The employee confirmed the building and
 // floor; plan X/Z are local drawing axes, not GPS or the campus building axes.
@@ -16,12 +17,8 @@ const photoCaptions = Object.freeze({
 });
 
 const mainBounds = Object.freeze({ minX: -15.675, maxX: 15.675, minZ: -15.2, maxZ: 15.2 });
-const axisX = [-15.375, -10.25, -5.125, 0, 5.125, 10.25, 15.375];
-const axisZ = [-14.9, -10, -5, 0, 5, 10, 14.9];
 const column = (x, z) => ({ x, z, width: .3, depth: .3, height: 6.2 });
 const columns = [
-  ...axisX.flatMap((x) => [column(x, axisZ[0]), column(x, axisZ.at(-1))]),
-  ...axisZ.slice(1, -1).flatMap((z) => [column(axisX[0], z), column(axisX.at(-1), z)]),
   column(-5.125, 0), column(5.125, 0),
 ];
 const buildingDoors = [
@@ -34,9 +31,9 @@ const stairs = [
 ];
 
 const buildingFrame = Object.freeze({
-  id: 'packaging', floor: 'packaging', span: 47, length: 33.55, width: 34.8, depth: 33.55,
+  id: 'packaging', floor: 'packaging', span: 53, length: 33.55, width: 34.8, depth: 33.55,
   anchor: [0, 0, 0], rotation: 0,
-  bounds: { minX: -19.125, maxX: 15.675, minZ: -15.2, maxZ: 18.35 }, mainBounds,
+  bounds: { minX: -19.2, maxX: 15.8, minZ: -15.3, maxZ: 18.45 }, mainBounds,
   drawingSources: [
     { sha256: '48e451589dba4125332ba8fd34e226f71f8182b237bf980014f7231367019b33', name: '소포장 3층 평면도.pdf', page: 1 },
     { sha256: 'b932b98e4f848582adcd6f02d3461945b0c67e7439b6663be7b7538bea623dfa', name: '소포장 3층 평면도 측량.pdf', page: 1 },
@@ -45,8 +42,8 @@ const buildingFrame = Object.freeze({
 
 const buildingLayout = {
   mainBounds,
-  lift: { id: 'cargo-lift', name: '화물용 LIFT', minX: -.8, maxX: 4.6, minZ: 15.2, maxZ: 18.35, capacity: '3TON', height: 3 },
-  confidence: '도면 치수 기준 · 칸막이·기둥 높이·개구부 이격·플랫폼 높이는 영상 비례 근사',
+  lift: { ...FLOOR3_LIFT, arrow: false },
+  confidence: '외벽·계단실·창호는 A-05~07 도면 좌표 · 칸막이 높이와 플랫폼 높이는 근사',
 };
 
 const workplacePlan = (level) => `./assets/drawings/packaging/floor-${level}-workplace-2025.png`;
@@ -99,55 +96,41 @@ export const PACKAGING_ROOM = Object.freeze({...buildingFrame, floorLevel: 3,
     '원통 교반 호퍼와 지대 교반기는 구 카드의 9동 2층 표기에 따라 2층 호퍼 작업대에 있습니다.'],
 });
 const floor1Cells=[
-  roomCell('f1-material-store','부자재창고',-15.675,-4.4,-15.2,-10.1),
-  roomCell('f1-small-pack','소포장 포장실',-15.675,-4.4,-10.1,15.2),
-  roomCell('f1-outer-pack','외포장실',-4.4,12.2,-15.2,15.2),
-  roomCell('f1-aisle','통로',12.2,15.675,-15.2,15.2),
-  roomCell('f1-air-shower','부자재 에어샤워',-15.675,-12.3,11.4,15.2),
-  roomCell('f1-cip','CIP실',-2.2,-1.2,12.2,15.2),
+  roomCell('f1-material-store','부자재창고',-15.675,-5.41,-15.2,-10.24),
+  roomCell('f1-small-pack','소포장 포장실',-15.675,-5.41,-10.24,15.2),
+  roomCell('f1-outer-pack','외포장실',-5.41,11.19,-15.2,15.2),
+  roomCell('f1-aisle','통로',12.3,15.675,-15.2,15.2),
+  roomCell('f1-air-shower','부자재 에어샤워',-15.675,-12.3,11.39,15.2),
+  roomCell('f1-hygiene','위생전실',-5.41,-2.24,12.66,15.2),
+  roomCell('f1-cip','CIP실',-2.24,-1.09,12.07,15.2),
 ];
 const floor2Cells=[
-  roomCell('f2-store','창고',-15.675,-12,-15.2,-12.7),
-  roomCell('f2-cip','CIP룸',-12,-7.2,-15.2,-12.7),
-  roomCell('f2-break','휴게실',-7.2,-.6,-15.2,-12.7),
-  roomCell('f2-office','사무실',-.6,3.2,-15.2,-12.7),
-  roomCell('f2-nitrogen','질소발생기실',3.2,8.1,-15.2,-12.7),
-  roomCell('f2-hot-air','열풍기실',8.1,15.675,-15.2,-12.7),
-  roomCell('f2-stick','스틱 포장실',4.4,15.675,-11.5,5.4),
-  roomCell('f2-hygiene','위생전실',4.4,9.4,5.4,8.1),
-  roomCell('f2-air-shower','부자재 에어샤워',10.6,14.5,5.5,7.9),
-  roomCell('f2-material-store','부자재창고',9.4,15.675,5.4,10.4),
-  roomCell('f2-air','공조실',9.4,15.675,10.4,15.2),
-  {...roomCell('f2-outer-pack','외포장실',-4.4,4.4,-12.7,15.2),ceiling:false},
+  roomCell('f2-store','창고',-15.675,-11.92,-15.2,-12.77),
+  roomCell('f2-cip','CIP룸',-11.92,-6.9,-15.2,-12.77),
+  roomCell('f2-break','휴게실',-6.9,-.63,-15.2,-12.77),
+  roomCell('f2-office','사무실',-.63,3.13,-15.2,-12.77),
+  {...roomCell('f2-nitrogen','질소발생기',4.39,6.9,-15.2,-12.77),ceiling:false},
+  roomCell('f2-hot-air','열풍기실',8.14,13.15,-15.2,-12.77),
+  {...roomCell('f2-hopper','호퍼실',-15.675,-4.41,-12.77,15.2),ceiling:false},
+  roomCell('f2-stick','스틱 포장실',4.39,15.675,-11.57,5.48),
+  roomCell('f2-hygiene','위생전실',4.39,9.4,5.48,7.9),
+  roomCell('f2-air-shower','부자재 에어샤워',10.6,14.4,5,7),
+  roomCell('f2-material-store','부자재창고',9.4,15.675,5.48,10.34),
+  roomCell('f2-air','공조실',9.4,15.675,10.34,15.2),
+  {...roomCell('f2-outer-pack','외포장실',-4.41,4.39,-12.77,15.2),ceiling:false},
 ];
 // 2층 호퍼 1~4: 2025 도면처럼 원통이 동·서로 엇갈리고 진동채 작업대가 반대편에 선다.
 const HOPPER_X=-10.25;
 const HOPPER_DRUMS=Object.freeze([{height:1.28,radius:.98,side:-1},{height:1.24,radius:1.02,side:1},{height:.78,radius:1.1,side:-1},{height:.78,radius:1.1,side:1}]);
 function lowerRoom(level,cells){
   const two=level===2;
-  const levelWalls=two?[...wallsForCells(cells.filter(c=>c.minZ< -12)),
-    wallSegment('hopper-room-side-a',[-4.4,-12.7],[-4.4,-9.8]),wallSegment('hopper-room-side-b',[-4.4,-8.4],[-4.4,10.5]),
-    wallSegment('hopper-room-side-c',[-4.4,11.9],[-4.4,15.2]),
-    wallSegment('stick-rear',[4.4,-11.5],[15.675,-11.5]),wallSegment('stick-side-a',[4.4,-11.5],[4.4,-6.3]),
-    wallSegment('stick-side-b',[4.4,-4.7],[4.4,5.4]),wallSegment('stick-front',[4.4,5.4],[15.675,5.4]),
-    wallSegment('stores-side',[9.4,8.1],[9.4,15.2]),wallSegment('stores-split',[9.4,10.4],[15.675,10.4])]:[
-    wallSegment('material-store-front',[-15.675,-10.1],[-5.5,-10.1]),
-    wallSegment('small-pack-side',[-4.4,-15.2],[-4.4,15.2]),wallSegment('aisle-wall',[12.2,-15.2],[12.2,13.5]),
-    wallSegment('f1-air-shower-side',[-12.3,11.4],[-12.3,15.2]),wallSegment('f1-air-shower-front',[-15.675,11.4],[-12.3,11.4]),
-    wallSegment('f1-cip-side-a',[-2.2,12.2],[-2.2,15.2]),wallSegment('f1-cip-side-b',[-1.2,12.2],[-1.2,15.2]),
-    wallSegment('f1-cip-front',[-2.2,12.2],[-1.2,12.2]),
-  ];
   return Object.freeze({...buildingFrame,identity:TEAM2_IDENTITY,floorLevel:level,name:`스틱·소포장 · ${level}층`,shortName:`스틱·소포장 ${level}층`,title:`스틱·소포장 · ${level}층`,
     center:[0,2.1,0],path:PACKAGING_PATHS[level],pathEndLookAt:PACKAGING_PATH_END_LOOKATS[level],
-    layout:{...buildingLayout,rooms:cells,partitions:levelWalls,transportLines:PACKAGING_TRANSPORT_LINES[level],
-      doors:[...buildingDoors,
-        ...(two?[{id:'f2-stick-entry',x:6.2,z:5.4,width:1.4,rotation:0,kind:'swing'}]:[
-          {id:'f1-air-shower-entry',x:-13.9,z:11.4,width:1.2,rotation:0,kind:'swing'},
-          {id:'f1-small-pack-personnel-entry',x:-4.4,z:13.2,width:1.4,rotation:Math.PI/2,kind:'swing'},
-          {id:'f1-cip-entry',x:-1.7,z:12.2,width:.8,rotation:0,kind:'swing'}])],
+    layout:{...buildingLayout,rooms:cells,partitions:[],wallPlan:PACKAGING_WALL_PLAN[level],transportLines:two?PACKAGING_TRANSPORT_LINES[2]:PACKAGING_TRANSPORT_LINES[1].map(line=>({...line,points:line.points.map(([x,z])=>[x< -4.9?x-1:x,z])})),
+      doors:buildingDoors.filter(door=>door.id==='entry-door'),
       stairs:stairs.map(stair=>stair.id==='front-stair'?{...stair,flights:two?4:1,stepsPerFlight:two?9:1,rise:two?6:.1}:stair),
-      columns:[...perimeterColumns.filter(c=>c.z!==0||Math.abs(c.x)>15),
-        ...[-5.125,5.125].flatMap(x=>[-10,-5,0,5,10].map(z=>column(x,z)))].map(c=>({...c,height:two?5.8:5.65})),
+      // 현장 사진에서 확인되지 않은 외벽·칸막이 속 도면 축 기둥은 배치하지 않는다.
+      columns:[],
       mainPlatform:two?{minX:-13.2,maxX:-7.2,minZ:-10.4,maxZ:7,height:1.2,stairLength:1.2,stairEnds:['minZ','maxZ'],deckOpenings:FLOOR3_MIXER_Z.map((z,i)=>({x:HOPPER_X-HOPPER_DRUMS[i].side*1.12,z,radius:HOPPER_DRUMS[i].radius+.06}))}:null,
       hopperDuctConnections:two?FLOOR3_MIXER_Z.map((z,i)=>{const {side,radius}=HOPPER_DRUMS[i];return{z,x:HOPPER_X-side*(1.12+radius*.5),warmX:HOPPER_X-side*1.12};}):null,
       auxPlatform:null,ceilingHeight:two?5.8:5.65,floorToFloor:two?6.15:6,roof:false,
@@ -157,7 +140,7 @@ function lowerRoom(level,cells){
     source:`2025 ${level}층 작업장평면도 · 9동 ${level}층 건축 평면도 A-0${level+4} · 주단면도 A-11`,
     summary:two?'스틱 1~8호기와 호퍼 1~4, V-MIX, 외포장·검사 설비를 확인합니다.':'소포장 포장실과 외포장실의 충전·검사·박스 포장·로봇 이송 배치를 확인합니다.',
     confidence:'2025 작업장평면도 · 9동 건축 도면',
-    details:['설비 종류·순서와 방 용도는 층별 작업장평면도를 따릅니다.','개별 설비의 외형·설치 높이와 이격은 도면 배치를 위한 재현값입니다.'],
+    details:['외벽·계단실·창호는 A-05~07과 창호일람표, 칸막이·문·투시창은 2025 작업장평면도의 좌표입니다.','설비 종류·순서와 방 용도는 층별 작업장평면도를 따릅니다.','개별 설비의 외형·설치 높이와 이격은 도면 배치를 위한 재현값입니다.'],
   });
 }
 export const PACKAGING_ROOMS=Object.freeze({1:lowerRoom(1,floor1Cells),2:lowerRoom(2,floor2Cells),3:PACKAGING_ROOM});
@@ -179,12 +162,16 @@ function lineItem(level, key, name, type, x, z, width, depth, height = 1.8, extr
     ...extra,
   });
 }
+// A-05 puts the packing-room wall on the X1 axis (-5.41), 1 m west of the earlier
+// estimate. The lines behind it move with the wall; poses the user changed are kept.
+const PACKING_WALL_REVISION='team2-packing-wall-20261125';
+const behindWall=(x,z)=>({placementRevision:PACKING_WALL_REVISION,previousPosition:[x,0,z],previousPositions:[[Math.round(x*4)/4,0,Math.round(z*4)/4]]});
 const floor1Equipment=[
-  lineItem(1,'rotary-1','로터리 1호기 포장기','rotary-packer',-10.1,-7.7,3.1,2.2,3.1,{rotaryVariant:'rotary1'}),
-  lineItem(1,'rotary-2','로터리 2호기 포장기','rotary-packer',-10.1,-4.8,3.1,2.2,3.1,{rotaryVariant:'rotary2'}),
-  lineItem(1,'vertical','버티컬 2호기 포장기','vertical-packer',-10.1,-1.7,2.9,2.4,3.5),
-  lineItem(1,'bag-filler','지대백 포장기','bag-filler',-10.1,5.3,2.9,2.1,3.1),
-  ...[-7.7,-4.8,-1.7].map((z,i)=>lineItem(1,`check-${i+1}`,`중량선별기 ${i+1}`,'checkweigher',-6.5,z,2.1,1.1,1.3,{weigherVariant:['rotary-white','rotary-steel','vertical-steel'][i]})),
+  lineItem(1,'rotary-1','로터리 1호기 포장기','rotary-packer',-11,-7.7,3.1,2.2,3.1,{rotaryVariant:'rotary1',...behindWall(-10.1,-7.7)}),
+  lineItem(1,'rotary-2','로터리 2호기 포장기','rotary-packer',-11,-4.8,3.1,2.2,3.1,{rotaryVariant:'rotary2',...behindWall(-10.1,-4.8)}),
+  lineItem(1,'vertical','버티컬 2호기 포장기','vertical-packer',-11,-1.7,2.9,2.4,3.5,behindWall(-10.1,-1.7)),
+  lineItem(1,'bag-filler','지대백 포장기','bag-filler',-11,5.3,2.9,2.1,3.1,behindWall(-10.1,5.3)),
+  ...[-7.7,-4.8,-1.7].map((z,i)=>lineItem(1,`check-${i+1}`,`중량선별기 ${i+1}`,'checkweigher',-7.5,z,2.1,1.1,1.3,{weigherVariant:['rotary-white','rotary-steel','vertical-steel'][i],...behindWall(-6.5,z)})),
   ...[-6.9,-4.4,-.9].map((z,i)=>lineItem(1,`xray-${i+1}`,`X-Ray ${i+1}호기`,'xray',-1.5,z,2.1,1.25,1.8)),
   ...[-6.9,-4.4,-.9].map((z,i)=>lineItem(1,`robot-${i+1}`,`포장 로봇 ${i+1}`,'robot',1.1,z,1.6,1.5,3.5,{robotIndex:i+1,robotVariant:'delta'})),
   ...[-6.9,-4.4,-.9].map((z,i)=>lineItem(1,`sealer-${i+1}`,`날인·테이핑기 ${i+1}`,'case-sealer',3.8,z,1.7,1.2,1.7)),

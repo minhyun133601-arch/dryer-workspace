@@ -23,21 +23,19 @@ const all=(root,name)=>{const result=[];root.traverse(node=>{if(node.name===`dry
 const bounds=node=>new THREE.Box3().setFromObject(node);
 const down=(root,x,z,y=8)=>new THREE.Raycaster(new THREE.Vector3(x,y,z),new THREE.Vector3(0,-1,0),0,10).intersectObject(root,true);
 
-test('the same saved palletizer identity owns the two simultaneously filmed, differently colored arms',()=>{
+test('the saved palletizer identity owns exactly one palletizing robot (user-confirmed 2026-11-26)',()=>{
   const h=fixture();
   try{
-    const root=h.roots.get('f1-palletizer'),blue=find(root,'observed-blue-articulated-arm'),cream=find(root,'observed-cream-articulated-arm');
-    assert.ok(blue&&cream);
-    assert.equal(root.userData.observedMinimumArticulatedArms,2);
-    assert.equal(blue.userData.armStyle,'blue');assert.equal(cream.userData.armStyle,'cream');
-    const blueBase=find(root,'observed-blue-arm-base'),creamBase=find(root,'observed-cream-arm-base');
-    assert.notEqual(blueBase.material.color.getHex(),creamBase.material.color.getHex());
-    assert.ok(bounds(blueBase).getCenter(new THREE.Vector3()).distanceTo(bounds(creamBase).getCenter(new THREE.Vector3()))>3,'the foreground cream mechanism has a separate fixed base');
-    assert.equal(all(root,'observed-red-vacuum-gripper').length,2);
-    assert.equal(find(root,'observed-cream-end-tool').userData.partialToolView,true,'the partly visible cream tool is not presented as a confirmed full OEM assembly');
+    const root=h.roots.get('f1-palletizer'),arm=find(root,'observed-blue-articulated-arm');
+    assert.ok(arm);assert.equal(find(root,'observed-cream-articulated-arm'),undefined);assert.equal(find(root,'observed-cream-arm-base'),undefined);
+    assert.equal(root.userData.palletizingRobotCount,1);assert.equal(root.userData.observedMinimumArticulatedArms,1);
+    assert.equal(all(root,'observed-blue-arm-base').length,1);
+    assert.equal(all(root,'observed-red-vacuum-gripper').length,0);
+    assert.equal(find(root,'observed-blue-end-tool').userData.gripperType,'bag-fork');
+    assert.ok(find(root,'photo-20261126-sce-kraft-sacks'),'the robot stacks kraft sacks on a red pallet');
     assert.equal(root.userData.operatingAnimationAdded,false);
     const item=EQUIPMENT.find(value=>value.id==='f1-palletizer');
-    assert.deepEqual(h.s.parts.filter(value=>value.root===root).map(value=>value.name),item.parts,'the added observed arm cannot create or replace saved catalog identities');
+    assert.deepEqual(h.s.parts.filter(value=>value.root===root).map(value=>value.name),item.parts,'the robot cannot create or replace saved catalog identities');
   }finally{h.dispose();}
 });
 
@@ -45,14 +43,14 @@ test('three separate alignment lanes and local fences fit the actual mezzanine v
   const h=fixture();
   try{
     const root=h.roots.get('f1-palletizer'),b=bounds(root);
-    assert.ok(b.min.x>=6.8&&b.max.x<=13.4&&b.min.z>=10.8&&b.max.z<=17.7,'both arms, lanes and fencing occupy the approved compact cell footprint');
+    assert.ok(b.min.x>=5.9&&b.max.x<=13.4&&b.min.z>=10.8&&b.max.z<=17.7,'the robot, lanes, fencing and the west-side operator console/controller occupy the approved cell footprint');
     assert.ok(b.max.y<DRYER_BUILDING_FLOORS[2].elevation,'the highest static links and service hoses remain below the 1.5-floor slab datum');
     assert.equal(root.userData.observedAlignmentLaneCount,3);
     const lanes=[1,2,3].map(i=>find(root,`observed-arm-alignment-lane-${i}`));
     for(const lane of lanes){assert.ok(lane);const bb=bounds(lane),center=bb.getCenter(new THREE.Vector3());assert.equal(down(h.mezzanine.deck,center.x,center.z).length,0,'an alignment lane must lie beneath a real void, not an unseen solid mezzanine');}
     const centers=lanes.map(node=>bounds(node).getCenter(new THREE.Vector3()));
     assert.ok(centers[1].z-centers[0].z>.7&&centers[2].z-centers[1].z>.7,'the observed lanes remain parallel and individually separated');
-    for(const arm of ['blue','cream']){const p=find(root,`observed-${arm}-arm-base`).getWorldPosition(new THREE.Vector3());assert.equal(down(h.mezzanine.deck,p.x,p.z).length,0);}
+    for(const arm of ['blue']){const p=find(root,`observed-${arm}-arm-base`).getWorldPosition(new THREE.Vector3());assert.equal(down(h.mezzanine.deck,p.x,p.z).length,0);}
     const wires=all(root,'observed-yellow-fence-wire');assert.ok(wires.every(node=>node.isInstancedMesh));assert.ok(wires.reduce((sum,node)=>sum+node.count,0)>100,'the visible mesh guard is detailed without one draw object per rod');
   }finally{h.dispose();}
 });
@@ -87,11 +85,8 @@ test('the visible curve uses batched brown radial rollers and separate guards wi
     const color=rollers.material.color;assert.ok(color.r>color.g&&color.g>color.b,'the observed orange-brown curve is distinguished from silver straight rollers');
     assert.ok(find(curve,'observed-curved-side-guide-rails').isInstancedMesh);
     assert.ok(find(curve,'observed-curved-support-legs').isInstancedMesh);
-    assert.ok(find(root,'observed-green-short-merge'));
+    assert.equal(find(root,'observed-green-short-merge'),undefined,'the dead-end angled fragment was removed at the user request (2026-11-26)');
     assert.equal(down(h.roots.get('f1-palletizer'),6.95,14.3).length,0,'the brown infeed passes through a real opening in the yellow cell fence');
-    const end=find(root,'observed-green-short-merge'),internalDividerZ=13.7;
-    assert.ok(bounds(end).min.z>internalDividerZ+.04,'the visible angled fragment stops before the internal cell divider, including its support feet');
-    assert.equal(down(root,9.73,internalDividerZ).length,0,'the internal yellow divider cannot pass through the end of the short merge bed');
     let meshes=0,instances=0;for(const body of h.roots.values())body.traverse(node=>{if(node.isMesh){meshes++;assert.ok(h.s.geometries.has(node.geometry));assert.ok(h.s.materials.has(node.material));if(node.isInstancedMesh)instances+=node.count;}});
     assert.ok(meshes<240&&instances>300,'detailed rollers and fences share geometry instead of multiplying draw objects');
   }finally{h.dispose();}

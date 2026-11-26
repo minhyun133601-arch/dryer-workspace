@@ -88,16 +88,17 @@ test('green-floor rollers retain visible branches and curve while hidden blue-to
   } finally { h.dispose(); }
 });
 
-test('the observed blue articulated arm has its red suction head and yellow guarded roller area instead of the historical pallet lift', () => {
+test('the single palletizing robot has a bag fork gripper and yellow guarded roller area instead of the historical pallet lift', () => {
   const h = harness();
   try {
     const root = h.roots.get('f1-palletizer');
     assert.equal(root.userData.observedBlueArticulatedArm, true);
     assert.equal(root.userData.operatingEnvelopeConfirmed, false); assert.equal(root.userData.operatingAnimationAdded, false);
     assert.equal(named(root, 'observed-blue-arm-base').length, 1);
-    assert.equal(named(root, 'observed-articulated-arm-joint').length, 6);
-    assert.equal(named(root, 'observed-red-vacuum-gripper').length, 2);
-    assert.equal(named(root, 'observed-vacuum-gripper-cup').length, 6);
+    assert.equal(named(root, 'observed-articulated-arm-joint').length, 3);
+    assert.equal(named(root, 'observed-red-vacuum-gripper').length, 0);
+    assert.equal(named(root, 'photo-20261126-bag-fork-gripper').length, 1);
+    assert.equal(root.userData.palletizingRobotCount, 1);
     assert.ok(named(root, 'observed-yellow-fence-wire').reduce((sum, mesh) => sum + (mesh.isInstancedMesh ? mesh.count : 1), 0) > 50);
     assert.equal(root.userData.observedAlignmentLaneCount, 3);
     for (const number of [1, 2, 3]) assert.equal(named(root, `observed-arm-alignment-lane-${number}`).length, 1);

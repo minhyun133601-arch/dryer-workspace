@@ -1,6 +1,82 @@
-// Procedural OWP-inspired lower-floor equipment. All render resources are made
-// through FacilityScene helpers so normal picking, disassembly and disposal work.
-const PI = Math.PI;
+import * as THREE from '../shared/vendor/three.module.js';
+
+// Field-card verified 5F dryer equipment and procedural lower-floor equipment.
+// All render resources are registered through FacilityScene helpers for disposal.
+const PI = Math.PI, TAU = Math.PI * 2, UP = new THREE.Vector3(0, 1, 0);
+
+function extraPalette(s) {
+  return (s.facilityExtraMaterials ||= {
+    curb: s.mat.curb || s._material(0x165638, .32, .06),
+    insulation: s.mat.insulation || s._material(0x98a2a6, .52, .34),
+    blueHose: s._material(0x1f6bc4, .38, .12),
+    yellowMotor: s._material(0xeeb61b, .38, .22),
+    rootsGray: s._material(0x4b5358, .48, .46),
+    boothPanel: s._material(0xf0f2ee, .72, .05),
+    boothGlass: s._material(0x9ab5b8, .22, .08, { transparent: true, opacity: .34, depthWrite: false, side: THREE.DoubleSide }),
+    filterWhite: s._material(0xf4f5f0, .86, .02),
+    floorPlate: s._material(0x7c8488, .44, .62),
+    stained: s.mat.stainedSteel || s.mat.steel,
+  });
+}
+
+function labelPlaque(s, parent, text, size, position, rotationY = 0, kind = 'nameplate') {
+  const g = s._group(parent, position);
+  g.rotation.y = rotationY;
+  const [w, h] = size;
+  s._box(g, [w, h, .012], [0, 0, 0], s.mat.white);
+  if (kind === 'caution') {
+    s._box(g, [w * .92, h * .24, .014], [0, -h * .34, .002], extraPalette(s).blueHose);
+    s._box(g, [h * .36, h * .36, .015], [-w * .24, h * .1, .003], s.mat.yellow).rotation.z = PI / 4;
+  } else if (kind === 'prohibit') {
+    const ring = s._cyl(g, Math.min(w, h) * .32, .015, [-w * .22, 0, .003], s.mat.red, Math.min(w, h) * .32, 20);
+    ring.rotation.x = PI / 2;
+    const inner = s._cyl(g, Math.min(w, h) * .23, .016, [-w * .22, 0, .004], s.mat.white, Math.min(w, h) * .23, 20);
+    inner.rotation.x = PI / 2;
+    const slash = s._box(g, [Math.min(w, h) * .54, .022, .017], [-w * .22, 0, .005], s.mat.red);
+    slash.rotation.z = -PI / 4;
+  }
+  const canDraw = typeof WebGLRenderingContext !== 'undefined' && typeof document !== 'undefined' && typeof document.createElement === 'function';
+  if (canDraw && text) {
+    const canvas = document.createElement('canvas'); canvas.width = 256; canvas.height = 128;
+    const ctx = canvas.getContext?.('2d');
+    if (ctx?.fillText) {
+      ctx.fillStyle = '#f5f6f2'; ctx.fillRect(0, 0, 256, 128);
+      ctx.strokeStyle = kind === 'nameplate' ? '#2c5a9e' : '#333'; ctx.lineWidth = 6; ctx.strokeRect(4, 4, 248, 120);
+      if (kind === 'caution') {
+        ctx.fillStyle = '#eab318'; ctx.beginPath(); ctx.moveTo(64, 24); ctx.lineTo(104, 88); ctx.lineTo(24, 88); ctx.closePath(); ctx.fill();
+        ctx.strokeStyle = '#1e2426'; ctx.lineWidth = 4; ctx.stroke();
+        ctx.fillStyle = '#1d4c96'; ctx.fillRect(8, 96, 240, 24);
+        ctx.fillStyle = '#1e2426'; ctx.font = '700 28px "Malgun Gothic", sans-serif'; ctx.textAlign = 'center'; ctx.fillText('주 의', 172, 66);
+      } else {
+        ctx.fillStyle = '#1d2b2a'; ctx.font = '700 48px "Malgun Gothic", sans-serif'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+        ctx.fillText(text, 128, 66, 228);
+      }
+      const tex = new THREE.CanvasTexture(canvas); tex.colorSpace = THREE.SRGBColorSpace; s.textures?.add(tex);
+      const mat = s._material(0xffffff, .55, .05, { map: tex });
+      const face = s._mesh(new THREE.PlaneGeometry(w * .96, h * .94), mat, g, [0, 0, .008]);
+      face.castShadow = false;
+    }
+  }
+  return g;
+}
+
+function curvedTube(s, parent, points, radius, material, tubularSegments = 28, radialSegments = 16) {
+  const curve = new THREE.CatmullRomCurve3(points.map(p => new THREE.Vector3(...p)), false, 'centripetal');
+  return s._mesh(new THREE.TubeGeometry(curve, tubularSegments, radius, radialSegments, false), material, parent);
+}
+
+function sightPort(s, parent, position, radius = .16, normalAxis = 'z') {
+  const g = s._group(parent, position);
+  if (normalAxis === 'x') g.rotation.y = PI / 2;
+  const body = s._cyl(g, radius, .09, [0, 0, .04], s.mat.trim, radius, 24); body.rotation.x = PI / 2;
+  const glass = s._cyl(g, radius * .72, .02, [0, 0, .082], extraPalette(s).boothGlass, radius * .72, 20); glass.rotation.x = PI / 2;
+  s._bar(g, [-radius * 1.18, 0, .075], [radius * 1.18, 0, .075], .014, s.mat.trim);
+  for (const sx of [-1, 1]) {
+    const cap = s._cyl(g, .022, .055, [sx * radius * 1.12, 0, .075], extraPalette(s).blueHose, .022, 10);
+    cap.rotation.z = PI / 2;
+  }
+  return g;
+}
 
 function part(s, root, name, offset = [0, 1, 0], position = [0, 0, 0]) {
   return s._part(root, name, offset, position);
@@ -236,6 +312,145 @@ function fineReturn(s, root, item) {
 }
 
 function servicePump(s, root, item) {
+  if (item.id === 'f5-extraction' || item.variant === 'extraction') {
+    const ex = extraPalette(s);
+    const blowers = part(s, root, item.parts[0], [-.8, 0, 0]);
+    const filters = part(s, root, item.parts[1], [.8, .3, 0]);
+    const heaters = part(s, root, item.parts[2], [-.6, .5, 0]);
+    const ducts = part(s, root, item.parts[3] || '토출 덕트·대형 송풍기', [0, .8, .6]);
+
+    // Four photographed 5F blower trains: 31(1), 26(6 no heater), 25(7), 24(8)
+    const stations = [
+      { z: -7.2, heater: true, card: '31' },
+      { z: -4.2, heater: false, card: '26' },
+      { z: -1.5, heater: true, card: '25' },
+      { z: 1.4, heater: true, card: '24' },
+    ];
+    const voluteShape = new THREE.Shape();
+    voluteShape.moveTo(-.44, -.42);
+    voluteShape.bezierCurveTo(-.62, .08, -.42, .62, .12, .58);
+    voluteShape.bezierCurveTo(.54, .54, .62, -.05, .36, -.44);
+    voluteShape.lineTo(-.44, -.44); voluteShape.closePath();
+    const voluteGeo = new THREE.ExtrudeGeometry(voluteShape, { depth: .36, bevelEnabled: false, curveSegments: 20 });
+
+    for (const st of stations) {
+      const bz = st.z, bx = .75;
+      // 1) Green concrete curb + steel skid + centrifugal blower + yellow belt guard + yellow motor
+      s._box(blowers, [1.46, .17, 1.06], [bx, .085, bz], ex.curb);
+      s._box(blowers, [1.30, .06, .92], [bx, .20, bz], s.mat.trim);
+      for (const dx of [-.52, .52]) for (const dz of [-.36, .36]) {
+        s._cyl(blowers, .055, .08, [bx + dx, .26, bz + dz], ex.blueHose, .055, 12);
+      }
+      s._box(blowers, [1.18, .08, .78], [bx, .32, bz], s.mat.trim);
+      const scroll = s._mesh(voluteGeo, s.mat.steel, blowers, [bx - .18, .88, bz - .18]);
+      scroll.name = `dryer-5f-blower-volute-${st.card}`;
+      s._box(blowers, [.46, .34, .38], [bx - .36, 1.32, bz], s.mat.steel);
+      // Yellow horizontal motor + yellow folded belt guard
+      const mot = s._cyl(blowers, .19, .54, [bx + .32, .62, bz - .16], ex.yellowMotor, .19, 18);
+      mot.rotation.z = PI / 2;
+      s._box(blowers, [.18, .15, .16], [bx + .32, .81, bz - .16], s.mat.trim);
+      s._box(blowers, [.22, .68, .74], [bx + .56, .74, bz - .02], s.mat.yellow);
+      s._cyl(blowers, .22, .22, [bx + .56, 1.08, bz + .12], s.mat.yellow, .22, 16).rotation.z = PI / 2;
+      // Floor junction box on conduit post
+      s._cyl(blowers, .035, .42, [bx + .58, .21, bz - .42], s.mat.dark, .035, 10);
+      s._box(blowers, [.22, .24, .18], [bx + .58, .48, bz - .42], s.mat.trim);
+      if (!st.heater) {
+        // Card 26(6): red prohibition plaque on blower scroll + 2 yellow junction boxes & corrugated hoses
+        labelPlaque(s, blowers, '', [.24, .16], [bx - .15, .96, bz - .20], PI, 'prohibit');
+      }
+
+      // 2) Trapezoidal stainless intake filter box + white panel filter + black X wires + caution plaque
+      const fx = bx + .15, fz = bz + .68;
+      s._box(filters, [.78, .15, .48], [fx, .075, fz], ex.curb);
+      for (const dx of [-.32, .32]) for (const dz of [-.16, .16]) {
+        s._box(filters, [.045, .28, .045], [fx + dx, .29, fz + dz], s.mat.trim);
+      }
+      // Trapezoid intake housing narrowing toward the blower inlet
+      const fBox = s._box(filters, [.86, 1.18, .54], [fx, 1.02, fz], s.mat.steel);
+      const pos = fBox.geometry.attributes.position;
+      for (let i = 0; i < pos.count; i++) {
+        if (pos.getZ(i) < 0) {
+          pos.setX(i, pos.getX(i) * .52);
+          pos.setY(i, pos.getY(i) * .56);
+        }
+      }
+      pos.needsUpdate = true; fBox.geometry.computeVertexNormals(); fBox.geometry.computeBoundingBox(); fBox.geometry.computeBoundingSphere();
+      s._cyl(filters, .22, .20, [fx - .12, .88, fz - .32], s.mat.trim, .22, 18).rotation.x = PI / 2;
+      // White filter media + stainless frame + black X wire retainer on outer face (+Z)
+      s._box(filters, [.80, 1.10, .03], [fx, 1.02, fz + .275], ex.filterWhite);
+      for (const sx of [-.41, .41]) s._box(filters, [.04, 1.16, .045], [fx + sx, 1.02, fz + .28], s.mat.trim);
+      for (const sy of [.46, 1.58]) s._box(filters, [.86, .04, .045], [fx, sy, fz + .28], s.mat.trim);
+      s._bar(filters, [fx - .38, .49, fz + .298], [fx + .38, 1.55, fz + .298], .007, s.mat.black);
+      s._bar(filters, [fx - .38, 1.55, fz + .298], [fx + .38, .49, fz + .298], .007, s.mat.black);
+      labelPlaque(s, filters, '주의', [.24, .16], [fx + .44, 1.08, fz + .04], PI / 2, 'caution');
+
+      // 3) Discharge transition -> Steam heater box (24,25,31) OR direct round duct (26) -> 90° elbow into floor plate
+      const dropX = -3.05;
+      if (st.heater) {
+        const hx = -.82;
+        // Bolted square taper from blower top/side to steam heater coil box
+        const inTaper = s._box(heaters, [.72, .88, .82], [hx + .66, 1.26, bz], s.mat.steel);
+        const tp = inTaper.geometry.attributes.position;
+        for (let i = 0; i < tp.count; i++) if (tp.getX(i) > 0) { tp.setY(i, tp.getY(i) * .52); tp.setZ(i, tp.getZ(i) * .52); }
+        tp.needsUpdate = true; inTaper.geometry.computeVertexNormals(); inTaper.geometry.computeBoundingBox(); inTaper.geometry.computeBoundingSphere();
+        // Heater box + bolted flanges + 4 angle legs
+        s._box(heaters, [.64, .96, .92], [hx, 1.26, bz], s.mat.steel);
+        for (const fxOff of [-.31, .31]) s._box(heaters, [.04, 1.04, 1.0], [hx + fxOff, 1.26, bz], s.mat.trim);
+        for (const lx of [-.26, .26]) for (const lz of [-.38, .38]) {
+          s._box(heaters, [.05, .78, .05], [hx + lx, .39, bz + lz], s.mat.trim);
+        }
+        // Upper & lower gray insulated steam pipes + valve cluster + pressure gauge
+        pipe(s, heaters, [[hx - .2, 1.98, bz - .52], [hx + .35, 1.98, bz - .52], [hx + .35, 5.6, bz - .52]], .065, ex.insulation);
+        pipe(s, heaters, [[hx, 1.74, bz - .32], [hx, 1.98, bz - .32], [hx, 1.98, bz - .52]], .055, ex.insulation);
+        pipe(s, heaters, [[hx - .25, .48, bz - .48], [hx + .35, .48, bz - .48], [hx + .35, .82, bz - .32]], .055, ex.insulation);
+        for (const vx of [-.14, .08, .26]) {
+          s._cyl(heaters, .065, .04, [hx + vx, 2.09, bz - .52], s.mat.dark, .065, 12);
+          s._bar(heaters, [hx + vx, 1.98, bz - .52], [hx + vx, 2.09, bz - .52], .018, s.mat.trim);
+        }
+        gauge(s, heaters, hx - .22, 2.18, bz - .52, .075);
+        // Outgoing square-to-round taper
+        const outTaper = s._box(heaters, [.76, .88, .82], [hx - .68, 1.26, bz], s.mat.steel);
+        const op = outTaper.geometry.attributes.position;
+        for (let i = 0; i < op.count; i++) if (op.getX(i) < 0) { op.setY(i, op.getY(i) * .46); op.setZ(i, op.getZ(i) * .46); }
+        op.needsUpdate = true; outTaper.geometry.computeVertexNormals(); outTaper.geometry.computeBoundingBox(); outTaper.geometry.computeBoundingSphere();
+        // Round duct + 90-deg elbow into floor curb & circular steel flange plate
+        curvedTube(s, ducts, [[hx - 1.04, 1.26, bz], [dropX + .38, 1.26, bz], [dropX + .08, 1.16, bz], [dropX, .86, bz], [dropX, .18, bz]], .19, s.mat.steel, 24, 18);
+      } else {
+        // Card 26(6): no steam heater — direct long round duct + 2 yellow junction boxes & flexible hoses
+        const outTaper = s._box(heaters, [.68, .54, .54], [.1, 1.26, bz], s.mat.steel);
+        const op = outTaper.geometry.attributes.position;
+        for (let i = 0; i < op.count; i++) if (op.getX(i) < 0) { op.setY(i, op.getY(i) * .68); op.setZ(i, op.getZ(i) * .68); }
+        op.needsUpdate = true; outTaper.geometry.computeVertexNormals(); outTaper.geometry.computeBoundingBox(); outTaper.geometry.computeBoundingSphere();
+        curvedTube(s, ducts, [[-.22, 1.26, bz], [dropX + .38, 1.26, bz], [dropX + .08, 1.16, bz], [dropX, .86, bz], [dropX, .18, bz]], .19, s.mat.steel, 28, 18);
+        for (const jx of [-.75, -1.65]) {
+          s._bar(ducts, [jx, .02, bz + .26], [jx, 1.48, bz + .26], .018, s.mat.trim);
+          s._box(ducts, [.15, .17, .12], [jx, 1.48, bz + .26], s.mat.yellow);
+          curvedTube(s, ducts, [[jx, 1.40, bz + .26], [jx - .18, 1.22, bz + .22], [jx - .32, 1.28, bz + .16]], .014, s.mat.black, 12, 8);
+        }
+      }
+      // Floor penetration green curb + round steel collar plate + flange ring
+      s._box(ducts, [.82, .18, .82], [dropX, .09, bz], ex.curb);
+      s._cyl(ducts, .34, .024, [dropX, .19, bz], ex.floorPlate, .34, 24);
+      s._ring(ducts, .21, .84, s.mat.trim, .022).position.set(dropX, .84, bz);
+    }
+
+    // Large rear blower ("송 풍 기" nameplate + yellow belt cover, seen behind card 24)
+    const rx = 1.05, rz = 5.35;
+    s._box(ducts, [1.38, .18, 1.48], [rx, .09, rz], ex.curb);
+    s._box(ducts, [1.24, .22, 1.32], [rx, .28, rz], s.mat.trim);
+    s._box(ducts, [1.06, 1.32, 1.14], [rx, 1.05, rz], ex.stained);
+    s._box(ducts, [1.02, 1.05, 1.08], [rx, 2.22, rz], s.mat.steel);
+    for (const y of [1.70, 2.74]) s._box(ducts, [1.10, .05, 1.16], [rx, y, rz], s.mat.trim);
+    s._box(ducts, [.04, 1.02, .04], [rx - .52, 2.22, rz], s.mat.trim);
+    // Nameplate "송 풍 기" + yellow triangle caution sign + round latch + yellow belt guard
+    labelPlaque(s, ducts, '송 풍 기', [.36, .16], [rx - .54, 1.46, rz - .08], -PI / 2, 'nameplate');
+    labelPlaque(s, ducts, '주의', [.24, .26], [rx - .54, 1.92, rz + .24], -PI / 2, 'caution');
+    s._bar(ducts, [rx - .56, 1.05, rz - .08], [rx - .56, 1.22, rz - .08], .018, s.mat.dark);
+    s._box(ducts, [.34, .44, .78], [rx - .12, 1.56, rz + .74], s.mat.yellow);
+    s._cyl(ducts, .24, .22, [rx - .12, 1.62, rz + 1.06], s.mat.yellow, .24, 18);
+    Object.assign(root.userData, { cardNumbers: [24, 25, 26, 31], rearBlowerNameplate: '송 풍 기' });
+    return;
+  }
   const base = part(s, root, item.parts[0], [-.8, 0, 0]); s._box(base, [3.5, .2, 2.5], [0, .15, 0], s.mat.dark);
   const drive = part(s, root, item.parts[1], [1, .3, 0]);
   for (const z of [-.65, .65]) {
@@ -251,6 +466,88 @@ function servicePump(s, root, item) {
 
 function dryerBody(s, root, item) {
   const isCone = item.variant === 'cone';
+  if (isCone && item.id === 'f5-dryer-cone') {
+    // Card 23(10): Chamber lower truncated cone penetrating ceiling & seated on circular green curb
+    const ex = extraPalette(s);
+    const rTop = item.radius || 3.8, rBot = 1.54, top = item.height || 6.0, bot = .18;
+    const shell = part(s, root, item.parts[0], [-1.2, .4, 0]);
+    const accessories = part(s, root, item.parts[1], [0, .8, 0]);
+    const sideDuct = part(s, root, item.parts[2], [-1.0, .2, -.8]);
+    const rightDuct = part(s, root, item.parts[3], [1.1, .2, -.6]);
+
+    // Circular deep-green concrete curb + sealed base so floor hole shows no void
+    s._cyl(shell, 1.80, .22, [0, .11, 0], ex.curb, 1.84, 56);
+    s._cyl(shell, rBot + .05, .08, [0, .21, 0], s.mat.trim, rBot + .05, 56);
+    s._cyl(shell, 1.72, .05, [0, .03, 0], ex.curb, 1.72, 40);
+
+    // Main stainless truncated cone + horizontal weld rings + 24 vertical sheet seams
+    const coneH = top - bot, coneMidY = (top + bot) / 2;
+    s._cyl(shell, rTop, coneH, [0, coneMidY, 0], s.mat.steel, rBot, 64);
+    s._ring(shell, rTop + .02, top - .03, s.mat.trim, .04);
+    const midY = 2.55, rMid = rBot + (rTop - rBot) * (midY - bot) / coneH;
+    s._ring(shell, rMid + .012, midY, s.mat.trim, .018);
+    for (let i = 0; i < 24; i++) {
+      const a = i / 24 * TAU;
+      s._bar(shell,
+        [Math.cos(a) * (rBot + .01), bot + .05, Math.sin(a) * (rBot + .01)],
+        [Math.cos(a) * (rTop + .01), top - .05, Math.sin(a) * (rTop + .01)],
+        .008, s.mat.trim);
+    }
+
+    // Upper ring of 8 pneumatic air-hammers + circular air header pipe + blue/black hoses
+    const hammerY = 4.38, rHam = rBot + (rTop - rBot) * (hammerY - bot) / coneH;
+    const ringY = 3.82, rRing = rBot + (rTop - rBot) * (ringY - bot) / coneH + .08;
+    s._ring(accessories, rRing, ringY, s.mat.trim, .022);
+    for (let i = 0; i < 8; i++) {
+      const a = (i + .5) / 8 * TAU, ca = Math.cos(a), sa = Math.sin(a);
+      const pad = s._box(accessories, [.18, .24, .06], [ca * (rHam + .03), hammerY, sa * (rHam + .03)], s.mat.trim);
+      pad.rotation.y = -a + PI / 2;
+      const knocker = s._cyl(accessories, .055, .20, [ca * (rHam + .13), hammerY + .02, sa * (rHam + .13)], s.mat.steel, .055, 12);
+      knocker.rotation.z = -ca * .45; knocker.rotation.x = sa * .45;
+      s._bar(accessories, [ca * (rRing - .08), ringY, sa * (rRing - .08)], [ca * rRing, ringY, sa * rRing], .014, s.mat.trim);
+      curvedTube(s, accessories, [
+        [ca * rRing, ringY, sa * rRing],
+        [ca * (rRing + .12), (ringY + hammerY) / 2 - .08, sa * (rRing + .12)],
+        [ca * (rHam + .14), hammerY, sa * (rHam + .14)],
+      ], .011, i % 2 ? ex.blueHose : s.mat.black, 12, 6);
+    }
+
+    // Left/North thick stainless exhaust elbow from ceiling into cone side + sight port + Y-support leg
+    const elbowCurve = curvedTube(s, sideDuct, [
+      [-1.95, 5.9, -2.95], [-1.95, 3.25, -2.95], [-1.82, 2.42, -2.78], [-1.32, 2.22, -2.42], [-.72, 2.22, -1.95],
+    ], .46, s.mat.steel, 32, 24);
+    elbowCurve.name = 'dryer-5f-cone-side-elbow-duct';
+    for (const y of [3.5, 4.5, 5.4]) {
+      const r = s._ring(sideDuct, .475, y, s.mat.trim, .016); r.position.set(-1.95, y, -2.95);
+    }
+    sightPort(s, sideDuct, [-1.42, 2.22, -2.92], .17, 'z');
+    // Lower branch support column & Y-boot on green concrete curb (card 23 FRONT)
+    s._box(sideDuct, [1.55, .16, .88], [-1.95, .08, -2.95], ex.curb);
+    s._box(sideDuct, [1.42, .035, .76], [-1.95, .175, -2.95], ex.floorPlate);
+    s._cyl(sideDuct, .21, 1.65, [-1.95, 1.02, -2.95], s.mat.steel, .21, 22);
+    for (const fy of [.58, 1.12, 1.62]) {
+      const f = s._ring(sideDuct, .235, fy, s.mat.trim, .016); f.position.set(-1.95, fy, -2.95);
+    }
+    curvedTube(s, sideDuct, [[-1.95, .56, -2.95], [-1.72, .32, -2.95], [-1.52, .18, -2.95]], .15, s.mat.steel, 12, 14);
+
+    // Right/NE separate thick vertical duct -> conical reducer -> valve -> angled entry into floor trench plate (card 23 RIGHT)
+    const rx = 2.45, rz = -2.85;
+    curvedTube(s, rightDuct, [[rx, 5.92, rz - .45], [rx, 3.85, rz - .42], [rx, 2.75, rz]], .50, s.mat.steel, 24, 24);
+    s._cyl(rightDuct, .50, .72, [rx, 2.42, rz], s.mat.steel, .26, 28);
+    s._cyl(rightDuct, .26, 1.18, [rx, 1.48, rz], s.mat.steel, .26, 24);
+    for (const fy of [2.06, 1.56, .92]) {
+      const f = s._ring(rightDuct, .29, fy, s.mat.trim, .018); f.position.set(rx, fy, rz);
+    }
+    // Yellow-cap angled actuator valve on the lower vertical spool
+    const act = s._group(rightDuct, [rx - .28, 1.46, rz + .12]); act.rotation.z = .55;
+    s._cyl(act, .065, .22, [0, .12, 0], s.mat.trim, .065, 12);
+    s._cyl(act, .072, .10, [0, .27, 0], s.mat.yellow, .072, 12);
+    // Angled pipe plunging into steel floor trench cover plate
+    curvedTube(s, rightDuct, [[rx, .90, rz], [rx, .48, rz + .12], [rx, .06, rz + .36]], .24, s.mat.steel, 16, 20);
+    s._box(rightDuct, [.92, .06, 2.35], [rx, .03, rz + .55], ex.floorPlate);
+    s._box(rightDuct, [.48, .08, .58], [rx, .042, rz + .28], s.mat.black);
+    return;
+  }
   const radius = isCone ? item.radius || 2.85 : 2.85;
   const top = isCone ? item.height || 7.05 : 7.15;
   const coneBottom = 1.25;
@@ -291,56 +588,138 @@ function cycloneBank(s, root, item) {
 }
 
 function recoveryManifold(s, root, item) {
-  const stations = item.stations || [-3, 0, 3], coneBottom = 2.2, coneTop = 6, coneRadius = 1.2;
-  const cones = part(s, root, '싸이클론 3개 긴 하부 콘·볼트 이음', [0, .8, -.5]);
-  const drives = part(s, root, '네 곳 외부 구동 모터·노란 커플링', [-.8, .1, 0]);
-  const outlets = part(s, root, '사각 배출·전이 외함 네 곳', [.6, .15, 0]);
-  const supports = part(s, root, '콘 지지 다리·발판·가새', [0, -.15, .8]);
-  function flange(parent, radius, y, z) {
-    s._cyl(parent, radius, .07, [0, y, z], s.mat.trim, radius, 32);
-    for (let i = 0; i < 12; i++) { const a = i * PI / 6; s._cyl(parent, .022, .035, [Math.cos(a) * radius * .88, y + .05, z + Math.sin(a) * radius * .88], s.mat.trim, .022, 6); }
-  }
-  for (const z of stations) {
-    const cone = s._cyl(cones, coneRadius, coneTop - coneBottom, [0, (coneTop + coneBottom) / 2, z], s.mat.steel, .25, 40);
-    cone.name = 'dryer-recovery-long-cone'; Object.assign(cone.userData, { station: z, topY: coneTop, bottomY: coneBottom, source: 'historical-OWP-floor5-7' });
-    flange(cones, coneRadius + .035, coneTop - .04, z); flange(cones, .31, coneBottom + .015, z);
-    for (const y of [3.4, 4.8]) { const r = .25 + (coneRadius - .25) * (y - coneBottom) / (coneTop - coneBottom); const ring = s._group(cones, [0, 0, z]); s._ring(ring, r + .01, y, s.mat.trim, .018); }
-    for (const x of [-1.11, 1.11]) for (const dz of [-1.11, 1.11]) {
-      s._box(supports, [.09, 5.85, .09], [x, 2.955, z + dz], s.mat.trim); s._box(supports, [.3, .06, .3], [x, .03, z + dz], s.mat.trim);
+  // Cards 27(5), 28(4), 29(3) + 30(2): 3 full-height slender cyclone cones seated on
+  // square green concrete curbs with white plates, Roots blower beside #28, white
+  // 2-window booth in front of #27, and suspended drum #30 beside the north shutter.
+  const ex = extraPalette(s);
+  const stations = item.stations || [-3, 0, 3], coneBottom = .22, coneTop = 6.0, coneRadius = 1.2, botRadius = .22;
+  const cones = part(s, root, item.parts?.[0] || '싸이클론 3개 긴 하부 콘·점검구', [0, .8, -.5]);
+  const rootsUnit = part(s, root, item.parts?.[1] || '루츠 블로워·흡입·수평 사일런서', [-.9, .2, 0]);
+  const booth = part(s, root, item.parts?.[2] || '전면 백색 판넬 부스·조작반', [.8, .2, .4]);
+  const suspended = part(s, root, item.parts?.[3] || '셔터 옆 매달린 원통·부채꼴 사각 덕트', [.7, .4, -.7]);
+
+  for (const [idx, z] of stations.entries()) {
+    // Square green concrete pedestal + white steel top plate (no stilts)
+    s._box(cones, [.94, .19, .94], [0, .095, z], ex.curb);
+    s._box(cones, [.78, .038, .78], [0, .205, z], s.mat.white);
+    const cone = s._cyl(cones, coneRadius, coneTop - coneBottom, [0, (coneTop + coneBottom) / 2, z], ex.stained, botRadius, 48);
+    cone.name = 'dryer-recovery-long-cone';
+    Object.assign(cone.userData, { station: z, topY: coneTop, bottomY: coneBottom, source: 'field-cards-27-28-29-20261124' });
+    // Top ceiling collar + 4 horizontal/spiral seam bands
+    const g = s._group(cones, [0, 0, z]);
+    s._ring(g, coneRadius + .03, coneTop - .04, s.mat.trim, .032);
+    for (const y of [1.55, 2.75, 3.95, 5.10]) {
+      const r = botRadius + (coneRadius - botRadius) * (y - coneBottom) / (coneTop - coneBottom);
+      s._ring(g, r + .009, y, s.mat.trim, .014);
     }
-    for (const dz of [-1.11, 1.11]) s._bar(supports, [-1.11, .22, z + dz], [1.11, 4.9, z + dz], .03, s.mat.trim);
+    // Round inspection port with blue-tipped latch bar (y ≈ 1.48)
+    const rPort = botRadius + (coneRadius - botRadius) * (1.48 - coneBottom) / (coneTop - coneBottom);
+    sightPort(s, g, [0, 1.48, idx === 0 ? -rPort : rPort], .135, 'z');
+    // Pneumatic knocker assembly on mounting pad + curved blue polyurethane air hose
+    const ky = 1.08, rk = botRadius + (coneRadius - botRadius) * (ky - coneBottom) / (coneTop - coneBottom);
+    s._box(g, [.04, .28, .20], [rk + .02, ky, 0], s.mat.trim);
+    for (const dy of [-.05, .05]) {
+      const cyl = s._cyl(g, .036, .22, [rk + .13, ky + dy, 0], s.mat.steel, .036, 10);
+      cyl.rotation.z = -PI / 2.6;
+    }
+    curvedTube(s, g, [[rk + .21, ky - .04, 0], [rk + .30, .58, .12], [.42, .22, .34]], .009, ex.blueHose, 14, 6);
   }
-  function driveTrain(x, z, compact = false) {
-    const unit = s._group(drives, [x, 0, z]); unit.name = 'dryer-recovery-drive-train';
-    Object.assign(unit.userData, { station: compact ? 'main-chamber' : z, source: 'historical-OWP-floor5-7', concealedRotorAdded: false });
-    const y = compact ? .34 : 1.62, radius = compact ? .18 : .24, length = compact ? .62 : .78;
-    s._box(unit, [compact ? .5 : .65, compact ? .32 : .54, compact ? .5 : .65], [0, y, 0], s.mat.trim);
-    const neckY = compact ? .56 : 2.025, neckH = compact ? .16 : .35, neckRadius = compact ? .38 : .25;
-    s._cyl(unit, neckRadius, neckH, [0, neckY, 0], s.mat.steel, .25, 24);
-    const gear = s._cyl(unit, radius * .9, .22, [-.4, y, 0], s.mat.trim, radius * .9, 20); gear.rotation.z = PI / 2;
-    const coupling = s._cyl(unit, radius * .65, .17, [-.57, y, 0], s.mat.yellow, radius * .65, 16); coupling.rotation.z = PI / 2;
-    s._box(unit, [.18, radius * 1.5, radius * 1.65], [-.57, y, 0], s.mat.yellow);
-    const motorBody = motor(s, unit, [-.73 - length / 2, y, 0], radius, length); motorBody.name = 'dryer-recovery-visible-motor';
-    s._box(unit, [length + .2, .055, radius * 1.8], [-.73 - length / 2, y - radius - .035, 0], s.mat.trim);
-    for (const px of [-.8, -.65 - length]) s._box(unit, [.1, Math.max(.08, y - radius - .08), .1], [px, Math.max(.08, y - radius - .08) / 2, 0], s.mat.trim);
-    const box = s._group(outlets, [x, 0, z]); box.name = 'dryer-recovery-box-outlet';
-    const height = compact ? .34 : 1.27, centreY = compact ? .19 : .68;
-    const transition = s._box(box, [compact ? .6 : .85, height, compact ? .52 : .8], [.55, centreY, 0], s.mat.steel);
-    // The external sloping sheet is visible in the historic view; no rotary
-    // blades, seals, transport internals or operating sequence are invented.
-    const vertices = transition.geometry.attributes.position;
-    for (let i = 0; i < vertices.count; i++) if (vertices.getY(i) > 0 && vertices.getX(i) < 0) vertices.setY(i, vertices.getY(i) - height * .25);
-    vertices.needsUpdate = true; transition.geometry.computeVertexNormals(); transition.geometry.computeBoundingBox(); transition.geometry.computeBoundingSphere();
-    s._box(box, [compact ? .66 : .91, .04, compact ? .58 : .86], [.55, .04, 0], s.mat.trim);
-    s._box(box, [compact ? .35 : .52, .05, .025], [.55, compact ? .26 : 1.06, compact ? .273 : .413], s.mat.trim);
-    return unit;
+  // Conveying line linking the cyclone outlets at floor level
+  pipe(s, cones, [[.36, .34, stations[0]], [.36, .34, stations[2]]], .075, s.mat.steel);
+
+  // Card 28(4): Roots blower + yellow mesh belt cover + vertical intake silencer (2 white caps) + horizontal silencer
+  const rx = -1.18, rz = .15;
+  const rGroup = s._group(rootsUnit, [rx, 0, rz]); rGroup.name = 'dryer-5f-roots-blower';
+  s._box(rGroup, [1.18, .12, .88], [0, .06, 0], ex.curb);
+  s._box(rGroup, [1.08, .08, .78], [0, .16, 0], s.mat.trim);
+  // Dark gray blower casing + electric motor
+  s._box(rGroup, [.46, .48, .42], [.18, .44, -.08], ex.rootsGray);
+  s._cyl(rGroup, .18, .46, [-.28, .38, -.08], ex.rootsGray, .18, 18).rotation.z = PI / 2;
+  // Yellow perforated/mesh guard at front
+  s._box(rGroup, [.96, .46, .26], [-.04, .43, .24], s.mat.yellow);
+  s._box(rGroup, [.88, .34, .02], [-.04, .43, .375], s.mat.dark);
+  for (const mx of [-.34, 0, .28]) s._box(rGroup, [.035, .44, .03], [mx, .43, .38], s.mat.yellow);
+  // Vertical gray cylindrical intake silencer + 2-stage white filter caps on top
+  s._cyl(rGroup, .135, .86, [.18, 1.12, -.08], ex.insulation, .135, 20);
+  s._cyl(rGroup, .155, .10, [.18, 1.60, -.08], s.mat.white, .155, 20);
+  s._cyl(rGroup, .155, .10, [.18, 1.74, -.08], s.mat.white, .155, 20);
+  s._cyl(rGroup, .13, .04, [.18, 1.67, -.08], s.mat.dark, .13, 16);
+  // Horizontal silencer cylinder connecting toward cyclone base pipe
+  const hSil = s._cyl(rGroup, .125, .72, [.74, .44, -.08], ex.insulation, .125, 20); hSil.rotation.z = PI / 2;
+  pipe(s, rGroup, [[1.10, .44, -.08], [1.54, .34, -.08]], .065, s.mat.trim);
+
+  // Card 27(5): White insulated panel booth (2-tier windows, lower vent louver, side sloped control cabinet)
+  const bx = 1.82, bz = 2.55;
+  const bGroup = s._group(booth, [bx, 0, bz]); bGroup.name = 'dryer-5f-white-panel-booth';
+  s._box(bGroup, [1.58, .08, 1.48], [0, .04, 0], ex.curb);
+  s._box(bGroup, [1.52, 2.58, 1.42], [0, 1.37, 0], ex.boothPanel);
+  s._box(bGroup, [1.56, .06, 1.46], [0, 2.68, 0], s.mat.trim);
+  // Vertical sandwich panel seams & corner aluminum extrusions
+  for (const sx of [-.762, .762]) for (const sz of [-.712, .712]) s._box(bGroup, [.04, 2.60, .04], [sx, 1.37, sz], s.mat.trim);
+  for (const zSeam of [-.24, .24]) for (const sx of [-.762, .762]) s._box(bGroup, [.008, 2.56, .012], [sx, 1.37, zSeam], s.mat.trim);
+  // 2-tier dark-glazed windows on cyclone face (-X), aisle face (+X), and north face (-Z)
+  for (const [wy, wh] of [[2.12, .54], [1.26, .48]]) {
+    for (const sx of [-1, 1]) {
+      s._box(bGroup, [.018, wh + .06, .56], [sx * .762, wy, 0], s.mat.trim);
+      s._box(bGroup, [.022, wh, .50], [sx * .766, wy, 0], s.mat.dark);
+      s._box(bGroup, [.026, wh - .02, .48], [sx * .770, wy, 0], ex.boothGlass);
+    }
+    s._box(bGroup, [.56, wh + .06, .018], [-.12, wy, -.712], s.mat.trim);
+    s._box(bGroup, [.50, wh, .022], [-.12, wy, -.716], s.mat.dark);
+    s._box(bGroup, [.48, wh - .02, .026], [-.12, wy, -.720], ex.boothGlass);
   }
-  for (const z of stations) driveTrain(0, z);
-  const mainOffset = item.mainChamberOffset || [2.4, 0, 12.8]; driveTrain(mainOffset[0], mainOffset[2], true);
+  // Door leaf outline & lever handle on -X and +X + lower ventilation louver grille
+  for (const sx of [-1, 1]) {
+    s._box(bGroup, [.014, 1.78, .78], [sx * .763, .98, 0], s.mat.trim);
+    s._box(bGroup, [.016, 1.72, .72], [sx * .765, .98, 0], ex.boothPanel);
+    s._box(bGroup, [.022, .48, .48], [sx * .770, 1.26, 0], s.mat.dark);
+    s._box(bGroup, [.026, .46, .46], [sx * .774, 1.26, 0], ex.boothGlass);
+    s._bar(bGroup, [sx * .79, .98, -.30], [sx * .79, .98, -.18], .014, s.mat.dark);
+  }
+  for (let i = 0; i < 5; i++) s._box(bGroup, [.34, .018, .025], [.38, .34 + i * .045, -.72], s.mat.trim);
+  // Side-mounted gray sloped-top control panel cabinet
+  const cab = s._group(bGroup, [-.22, 1.18, -.88]);
+  s._box(cab, [.56, .88, .32], [0, 0, 0], ex.insulation);
+  for (const lx of [-.14, 0, .14]) for (const ly of [.18, .04]) {
+    s._cyl(cab, .016, .02, [lx, ly, -.165], ly > .1 ? s.mat.red : s.mat.mint, .016, 10).rotation.x = PI / 2;
+  }
+  s._bar(cab, [-.12, -.44, 0], [-.12, -1.14, 0], .022, s.mat.dark);
+  s._bar(cab, [.12, -.44, 0], [.12, -1.14, 0], .022, s.mat.dark);
+
+  // Card 30(2): Suspended cylindrical separator beside north shutter + fan-ribbed rectangular elbow duct
+  const sx = 4.75, sz = -5.45;
+  const sGroup = s._group(suspended, [sx, 0, sz]); sGroup.name = 'dryer-5f-suspended-cylinder';
+  // Suspended cylinder (y = 2.08..5.78) + shallow conical bottom (apex at y = 1.48, clear of floor)
+  s._cyl(sGroup, 1.06, 3.70, [0, 3.93, 0], s.mat.steel, 1.06, 48);
+  s._cyl(sGroup, 1.06, .60, [0, 1.78, 0], s.mat.steel, .08, 48);
+  for (const y of [2.08, 3.35, 4.62, 5.74]) s._ring(sGroup, 1.072, y, s.mat.trim, .016);
+  // Fan-segmented rectangular duct sweeping down from ceiling into side of cylinder + round inspection port
+  const segPts = [[-1.65, 5.65], [-1.52, 4.65], [-1.22, 3.85], [-.72, 3.35], [-.12, 3.18]];
+  for (let i = 1; i < segPts.length; i++) {
+    const [x0, y0] = segPts[i - 1], [x1, y1] = segPts[i];
+    const len = Math.hypot(x1 - x0, y1 - y0), ang = Math.atan2(y1 - y0, x1 - x0);
+    const seg = s._box(sGroup, [len + .06, .74, .68], [(x0 + x1) / 2, (y0 + y1) / 2, .88], s.mat.steel);
+    seg.rotation.z = ang;
+    const rib = s._box(sGroup, [.04, .82, .76], [x0, y0, .88], s.mat.trim);
+    rib.rotation.z = ang;
+  }
+  s._box(sGroup, [.88, .74, .68], [.34, 3.18, .88], s.mat.steel);
+  sightPort(s, sGroup, [-.56, 3.42, 1.23], .18, 'z');
+  // Floor support pipe on square green curb + diagonal drain pipe from shallow cone apex
+  s._box(sGroup, [.62, .18, .62], [-.56, .09, 0], ex.curb);
+  s._cyl(sGroup, .115, 1.78, [-.56, 1.06, 0], s.mat.steel, .115, 20);
+  s._ring(sGroup, .155, 1.78, s.mat.trim, .018).position.set(-.56, 1.78, 0);
+  s._bar(sGroup, [0, 1.48, 0], [-.52, .38, 0], .028, s.mat.steel);
+
   Object.assign(root.userData, {
-    sourceBasis: 'historical-OWP-floor5-7;not-current-asbuilt', currentVideoCountConfirmed: false,
-    coneCount: stations.length, driveTrainCount: stations.length + 1, coneTopY: coneTop, coneBottomY: coneBottom,
-    mainChamberConnection: { offset: [...mainOffset], existingNeckRange: [.425, 1.275], compactUnitTop: .64 },
+    sourceBasis: 'field-cards-27-28-29-30-20261124',
+    currentFieldPhotoVerified: true,
+    coneCount: stations.length,
+    coneTopY: coneTop,
+    coneBottomY: coneBottom,
+    hasRootsBlower: true,
+    hasWhiteBooth: true,
+    hasSuspendedCylinder: true,
     concealedMechanismsAdded: false,
   });
 }

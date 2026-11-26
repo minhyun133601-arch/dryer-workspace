@@ -10,6 +10,7 @@
 | 건조실 전체 층·설비 목록 | `building-data.js`, `facility-data.js`, `data.js` | `facility-models.js` |
 | 건조실 건물·부분층·계단 | `dryer-building-data.js` | `dryer-building-envelope.js`, `dryer-route-environment.js` |
 | 건조실 1층·3층 설비 | `dryer-lower-registration.js`, `facility-data.js` | `dryer-process-models.js` |
+| 건조실 1층 사진 보강(2026-11-26) | 좌표는 모듈 안 평면 좌표 | `dryer-floor1-photo-detail.js`: 조제실 바닥 트렌치·펌프·포대, 외포장실 라인 시작부·지대 라인·랩핑기·팬·배관 |
 | 출입구·생산 주변 | `entrance-route-data.js` | `entrance-production-models.js` |
 | 조제실 | `preparation-data.js` | `preparation-models.js`, `preparation-environment.js` |
 | 건조실 상부·옥상 | `dryer-upper-data.js` | `dryer-upper-models.js` |
@@ -19,7 +20,7 @@
 | 스틱·소포장동 | `packaging-data.js`, `packaging-transport-data.js`, `team2-card-data.js` | `packaging-models.js`, `packaging-environment-v2.js`, `packaging-equipment-v2.js`, `packaging-line-models.js`, `packaging-routes.js` |
 | 2팀 9동 3층 작업장 | `packaging-floor3-data.js`의 게시 위치도, 설비 위치와 PDA | `packaging-floor3-environment.js`의 작업대·출입구, `packaging-mixing-models.js`의 믹서·시프트·호퍼, `packaging-storage-models.js`의 렉·평치, `packaging-kit.js`의 공통 부품 |
 | 1팀 2파트 건조실 3층 | `dryer-building-data.js`의 두 작업구역·계단참·옥상 통로, `dryer-lower-registration.js`의 디스크 컨베이어 | `dryer-process-models.js`의 이송관과 공통 점검대, `dryer-building-envelope.js`의 바닥과 출입문, `dryer-route-environment.js`의 작업장 |
-| 에어컴프레셔실 | `dryer-compressor-records.js`의 현장 사양과 사진 번호, `dryer-compressor-manuals.js`의 제조사 자료 | `dryer-compressor-environment.js`의 배치, `dryer-compressor-interior-details.js`의 외형, `dryer-compressor-view.js`의 실내 배치도·A-015·영상 대조·명판 조회 |
+| 에어컴프레셔실 | `dryer-compressor-records.js`의 현장 사양과 사진 번호, `dryer-compressor-manuals.js`의 제조사 자료 | `dryer-compressor-environment.js`의 배치, `dryer-compressor-interior-details.js`의 외형, `dryer-compressor-site-finish.js`의 실내 조명·마감·배관·전기·덕트, `dryer-compressor-view.js`의 실내 배치도·A-015·영상 대조·명판 조회 |
 | 액상 | `liquid-data.js`, `liquid-assets.js` | `liquid-models.js`, `liquid-card-models.js`, `liquid-detail.js` |
 | 실외기실 | `outdoor-data.js`, `outdoor-card-data.js`, `outdoor-drawing-data.js`, `outdoor-survey.js` | `outdoor-models.js` |
 | 냉동기 상세 | `chiller-data.js` | `chiller-model.js`, `chiller-detail.js` |
@@ -35,6 +36,44 @@
 | 사람 이동·바닥 지지·문 작동 | `person-walk.js`, `proximity-doors.js`, `scene.js` |
 | 활성 이미지·표시 허용 | `asset-catalog.js`, `evidence-assets.js` |
 | 상세창 카메라 | `detail-camera.js` |
+
+## 실사 재현 기준 (2026-11-25)
+
+설비 외형은 2026년 11월 24일 현장등록카드 4면 사진을 먼저 따르고, 영상, 준공도면 순으로 대조합니다. 현장등록카드의 층 표기(2~5층)는 사이트 층보다 하나 낮습니다. 사진을 보고 내린 판단이며 사용자 확인 전입니다.
+
+| 구역 | 카드 | 반영 위치 |
+| --- | --- | --- |
+| 1층 청정실·외포장 | 04~07, 11, 12 | `dryer-process-models.js`의 `packingCardDetails`, `bagFillingLine`, `transferDetailCasePacker` |
+| 3층 | 13~22 | 같은 파일의 `routeConeBank`, `plateExchanger`, `agitatorTank`, `cylinderSideEquipment`, `routeCipDeck` |
+| 4층 | 02, 03 | 같은 파일의 `fourthFluidBed`, `fourthVibratingConveyor`, `fourthTransferChute` |
+| 5층 | 23~31 | `facility-models.js` |
+| 6·7층 | 32~36 | `dryer-upper-models.js`, `furnace-model.js` |
+| 2팀 1~2층 | 008~041 | `packaging-line-models.js`의 `CARD_FINISH` |
+
+- 조명은 `equipment-lighting.js`의 `LIGHT_PROFILES`가 정합니다. 사람 시점은 `interior`, 잘라 본 화면과 평면은 `cutaway`, 전경·실외기·옥상은 `daylight`입니다. 자체 반사 맵을 쓰는 재질도 함께 조절합니다. 에어컴프레셔실은 자체 조명을 유지합니다.
+- 기둥은 사진이나 영상에 드러난 독립 기둥만 둡니다. 도면 축만 근거로 다시 늘리지 않습니다.
+- 카탈로그에 없던 설비 두 개를 추가했습니다. `f1-bag-line`(카드 11·12)은 카드 05~07 배경에서 이카 3호 옆 데크로 보이며, `f3-agitator-tank`(카드 20)는 살균기 열교환기 남쪽에 있습니다. 둘 다 평면 좌표는 추정입니다.
+- 도면과 다른 점: 3층 CIP탱크는 영상에서 2기만 보였으나 카드 19·21·22로 3기를 확인했습니다. 3층 홀 바닥 마감은 타워 벽에서 끝나며 남동쪽 저층 지붕으로 나가지 않습니다.
+- 조제실 과거 이력카드 사진(2006~2012년)은 바닥이 타일이던 시기라 배치 근거로 쓰지 않았습니다.
+
+## 1층 사진 보강 (2026-11-26)
+
+1.5층 관찰창과 1층 바닥에서 찍은 사진 241장으로 1층을 보강했습니다. 원본은 `references/현장사진_원본/건조실 1층·1.5층-20261126/`에 구역별 7개 폴더로 정리했고, `사진설명.csv`와 `00_밀착인화`가 함께 있습니다. 이동 기록은 [정리 목록](material-organize-20261126.json)에 있습니다.
+
+- 고정 세부는 `dryer-floor1-photo-detail.js` 하나에 모았습니다. 평면 좌표(X 동쪽, Z 남쪽)로 적고 루트에서 [-8.6, 0, -13.4]만큼 옮깁니다. 위치·치수는 사진 비례 추정입니다.
+- 조제실: 탱크 열 동쪽의 타공 덮개 배수 트렌치와 붉은 에폭시 띠, 바닥 마모, 탱크 하부 펌프 3대·스트레이너 2기·흰 버킷, 셔터 앞 원료 포대 파레트, 작업대(상판 약 2.45 m) 통로의 크라프트 포대.
+- 외포장실: 청정구역 남벽의 라인별 관통구·관찰창, 녹색 벨트, 케이스 패커(크림색 기둥·서보·노란 보호함), YuKwang 테이핑기, 제어함, 노란 횡단 계단, 주황 부품함 선반, 지대 라인의 중량선별기·스테인리스 판·CC-4 곡선 롤러, 남측 통로 아래 회전식 랩핑기와 파레트 공급기, 바닥 노란 구획선, 안전 게시판.
+- 대형 실링팬과 색상 배관은 1.5층 바닥이 없는 2층 높이 공간(x 9.5~21.3, z 16.8~30.3) 안에만 둡니다. OP실·중앙 통로 위로 넘어가면 발표 동선의 사람 충돌 검사에 걸립니다.
+- **1층 적재 로봇은 1대입니다(2026-11-26 사용자 확인).** 예전 영상 해석으로 두었던 크림색 두 번째 암을 없애고, `f1-palletizer`를 파란 베이스·크림색 몸체(FUJI-ACE)·크림색 링크 팔·포크형 포대 집게 1대로 바꿨습니다. 셀 안에 SCE 크라프트 포대를 쌓는 빨간 파레트가 있습니다. 두 번째 로봇을 다시 추가하지 마세요.
+- 공정순서 영상 `공정순서(수정).mp4`(20분, 화면 날짜 2015년대)는 입고→보관→용해→혼합→가열→균질→건조→채선별→이송→소포장→박스포장→로봇 적재 순서를 설명합니다. 5초 요약컷은 `references/현장사진_원본/공정순서 영상(수정)-5초 요약컷/`에 있습니다. 영상의 옛 설비 모습(주황 원형 가드 등)과 11월 26일 사진이 다르면 사진을 따릅니다.
+- 설비 세부(사진 대조): 케이스 패커는 구멍 뚫린 쌍기둥·박스 보·Z축 서보·노랑/검정 케이블 체인·노란 망 보호함, 테이핑기는 YuKwang 문형 틀·안쪽 스테인리스 틀·양옆 구동 벨트와 세운 기어모터·옆 제어함, 지대 라인은 금속검출 터널·흰 벨트·적녹 경광등, 랩핑기는 체인 두 줄 회전판·필름 마스트·누름 팔, 파레트 공급기는 2단 틀·회색 모서리 안내판입니다. 롤러에는 가이드 봉·손잡이 브래킷, 벨트에는 풀리·흰 모터·파란 감속기가 있습니다.
+- **1층 적재물은 2팀 3층처럼 설비 목록에서 고르고 옮길 수 있는 항목 5개입니다**(`dryer-floor1-load-data.js`의 `DRYER_F1_LOAD_EQUIPMENT`, 형상은 `dryer-floor1-photo-detail.js`의 `buildDryerFloor1Load`): 출하 대기 파레트, 원료계량창고 원료 포대 파레트 8개, 조제실 셔터 앞 원료 포대, 빈 파레트 더미, 서쪽 벽 골판지 낱장 묶음. 박스·포대·필름은 `packagingCargo` 층에 있어 1층에서도 「적재물 표시」로 숨길 수 있고, 파레트와 바닥 구획선은 남습니다. 건조실 카탈로그는 55개입니다. 조제실 작업대 위 포대 더미는 의미 없는 적재라 뺐습니다(2026-11-26 사용자 요청).
+- **1.5층 입체·통로 보기에서는 관찰창 너머 1층 홀(바닥·고정물·설비)을 원래 높이에 함께 보여 줍니다**(`scene.js`의 `_overlookContextLevels`, 2026-11-26 사용자 요청). 평면 보기와 배치 편집에서는 층을 분리합니다. 1층 설비 이름표는 1.5층에서 띄우지 않습니다.
+- 제어반: 적재 로봇 셀 서쪽 펜스 밖 조작반(화면·버튼·비상정지·경광등·티칭 펜던트)과 회색 로봇 제어 캐비닛은 `f1-palletizer`에 붙어 함께 움직입니다. 1.5층 유리 사무실 아래 동쪽 벽에는 모니터링 책상과 벽시계가 있습니다.
+- 컨베이어 연결: 1·2번 라인 롤러는 아래 셀 입구까지, 3번 라인은 비스듬한 합류 롤러까지 이어집니다. 끝이 허공에서 끊기던 짧은 롤러 토막(`observed-green-short-merge`)과, 포대 파레트가 롤러 밑에 겹치던 배치는 정리했습니다.
+- 조제실 벽 보강(2026-11-26): 탱크 뒤 서쪽 칸막이 위 가로 틈과, 작업대 남쪽 끝과 1.5층 통로 바닥 사이를 크림색 벽판으로 막았습니다(유리 없음, 설비를 가리지 않는 높이). 벽 없이 서 있던 출입 복도의 용도 미확인 문(`corridor-unconfirmed-support`)은 지우고 화장실 서쪽 벽을 이어 막았습니다.
+- **조제실 작업대 남쪽 끝의 유리는 1.5층 남측 통로 관찰창 한 장뿐입니다**(2026-11-26 사용자 확인). 1층 쪽에 나란히 있던 작업대 관찰 유리벽을 다시 만들지 마세요.
+- 사진 0~11번(사물함·유해화학물질 보관함)은 1층 출입 계단홀입니다. 보관함과 황색 창의 벽 방향을 확정하지 못해 반영하지 않았습니다.
 
 ## 건조실 층과 동선
 

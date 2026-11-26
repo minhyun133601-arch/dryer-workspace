@@ -85,10 +85,40 @@ test('compressor room refit preserves the clear aisle, measured envelopes and so
       'comp-dryer-spx-blue','comp-dryer-jemaco-dark','comp-water-tank-pump',...cases.map(row=>row[1])])
       assert.equal(aisle.intersectsBox(new THREE.Box3().setFromObject(room.getObjectByName(id))),false,id);
     const duct=room.getObjectByName('survey-north-galvanized-ductwork');
-    assert.ok(new THREE.Box3().setFromObject(duct).min.y>h.spec.elevation+2.6);
+    // 02:16 and photo 011 place the long duct just above the 1.95 m cabinets.
+    assert.ok(new THREE.Box3().setFromObject(duct).min.y>h.spec.elevation+1.65);
     const count=room.children.length;
     buildDryerCompressorInteriorDetails(h.s,h.env,h.spec);
     assert.equal(room.children.length,count);
+  } finally { h.dispose(); }
+});
+
+test('the installed-condition layer stays registered, inside the room and out of the walking routes', () => {
+  const h=fixture();
+  try {
+    buildDryerCompressorInteriorDetails(h.s,h.env,h.spec);
+    h.s.scene.updateMatrixWorld(true);
+    const room=h.env.architectureFixtures.getObjectByName('dryer-compressor-3-room');
+    const facade=h.env.facade.getObjectByName('dryer-compressor-3-facade-extras');
+    const layers=['compressor-site-finish','compressor-site-loose-items'].map(name=>room.getObjectByName(name)).concat(facade.getObjectByName('compressor-site-shell'));
+    const b=h.spec.rooms.find(r=>r.id==='compressor-room').bounds;
+    for(const layer of layers) {
+      assert.ok(layer);
+      assert.equal(layer.userData.personCollision,false);
+      const box=new THREE.Box3().setFromObject(layer);
+      assert.ok(box.min.x>=b.minX-.05 && box.max.x<=b.maxX+.05 && box.min.z>=b.minZ-.05 && box.max.z<=b.maxZ+.05,layer.name);
+      assert.ok(box.min.y>=h.spec.elevation-.02 && box.max.y<=h.spec.elevation+4.45,layer.name);
+      layer.traverse(node=>{
+        if(!node.isMesh) return;
+        assert.ok(h.s.geometries.has(node.geometry) && h.s.materials.has(node.material),node.name);
+        assert.ok(Array.from(node.geometry.attributes.position.array).every(Number.isFinite),node.name);
+        assert.equal(node.raycast.length,0,'fittings do not intercept a click on the machine behind them');
+      });
+    }
+    assert.equal(room.getObjectByName('compressor-site-loose-items').userData.observedOn,'2026-11-24');
+    // Floor, lining and fittings are lit by the room; the roof outside keeps the site light.
+    assert.ok(room.getObjectByName('compressor-interior-green-floor').material.userData.airRoomLit);
+    assert.equal(facade.getObjectByName('compressor-roof-rafter').visible,false);
   } finally { h.dispose(); }
 });
 

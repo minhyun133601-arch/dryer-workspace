@@ -4,8 +4,25 @@ import { readFile, readdir } from 'node:fs/promises';
 import path from 'node:path';
 import { displayEvidenceImage, evidenceImageKind, isRetainedEvidenceImage } from '../apps/site/evidence-assets.js';
 import { SITE_ASSETS } from '../apps/site/asset-catalog.js';
+import { EQUIPMENT as DRYER_EQUIPMENT, FLOORS } from '../apps/site/building-data.js';
+import { CAMPUS_EQUIPMENT } from '../apps/site/campus-data.js';
+import { OFFICE_ROOF_PHOTOS, PREPARATION_CONSOLE_PHOTOS } from '../apps/site/field-photos-20261125.js';
 import { LIQUID_ASSETS } from '../apps/site/liquid-assets.js';
 import { OUTDOOR_HISTORY_CARDS } from '../apps/site/outdoor-card-data.js';
+
+test('the November 25 preparation and office photographs open on their respective equipment', () => {
+  const consoleItem = DRYER_EQUIPMENT.find(item => item.id === 'f1-prep-console');
+  const office = CAMPUS_EQUIPMENT.find(item => item.id === 'campus-maintenance-office');
+  for (const [item, photos] of [[consoleItem,PREPARATION_CONSOLE_PHOTOS],[office,OFFICE_ROOF_PHOTOS]]) {
+    for (const { path } of photos) {
+      assert.ok(isRetainedEvidenceImage(path) && item.photos.includes(path), item.id+' '+path);
+    }
+  }
+  const firstFloor = FLOORS.find(floor => floor.id === 1);
+  const deck = DRYER_EQUIPMENT.find(item => item.id === 'f1-prep-platform');
+  assert.ok(firstFloor.photos.includes(deck.photo));
+  assert.ok(!firstFloor.photos.some(path => path.includes('/office-rooftop-power-')));
+});
 
 test('runtime evidence accepts registered drawings, cards and nitrogen tank plate and rejects retired photos', () => {
   for (const reference of [

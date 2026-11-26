@@ -4,8 +4,12 @@ export function buildFurnace(model, root) {
   const m = model;
   const steel = m.mat.steel, trim = m.mat.trim, dark = m.mat.dark;
   const yellow = m.mat.yellow, black = m.mat.black, white = m.mat.white;
-  const orange = m.mat.furnaceOrange || (m._material ? m._material(0xe66320, .5, .18) : m.mat.red);
-  const motor = m.mat.furnaceMotor || (m._material ? m._material(0x263d55, .52, .3) : m.mat.motor);
+  const orange = m.mat.furnaceOrange || (m._material ? m._material(0xd84622, .46, .2) : m.mat.red);
+  const motor = m.mat.furnaceMotor || (m._material ? m._material(0x1f2b38, .52, .32) : m.mat.motor);
+  const curb = m.mat.curb || (m._material ? m._material(0x165638, .34, .06) : dark);
+  const plinthGray = m.mat.furnacePlinth || (m._material ? m._material(0x565c60, .58, .36) : dark);
+  const bodyGray = m.mat.furnaceBodyGray || (m._material ? m._material(0x8d9496, .46, .48) : steel);
+  const signBlue = m.mat.furnaceSignBlue || (m._material ? m._material(0x1d56a2, .48, .12) : dark);
   const result = [];
   const part = (number, name, offset, home, anchor) => {
     const group = m._part(root, name, offset, home);
@@ -60,13 +64,18 @@ export function buildFurnace(model, root) {
   transition.geometry.computeBoundingSphere();
   m._box(hood, [2.46, .2, 1.8], [0, -.55, 0], steel);
   m._box(hood, [2.61, .09, 1.98], [0, -.47, 0], dark);
-  m._box(hood, [2.76, .13, .18], [0, -.48, 1.01], orange);
+  // Sloped bright-yellow protective canopy over the front gas train & burners (card 36 FRONT/LEFT/RIGHT)
+  const canopy = m._box(hood, [2.82, .045, .52], [0, -.52, 1.14], yellow);
+  canopy.rotation.x = .26;
+  m._box(hood, [2.82, .11, .04], [0, -.59, 1.38], yellow);
   for (const x of [-1.25, 1.25]) m._box(hood, [.12, .1, 1.96], [x, -.48, 0], trim);
   for (const x of [-1.1, -.55, 0, .55, 1.1]) boltZ(hood, x, -.42, 1.01);
 
-  // 03: external chamber, right-side bolted access panel and two handles.
+  // 03: external chamber on green concrete curb, lower dark-gray plinth, right-side bolted access panel and two handles.
   const body = part(3, '버너 본체·점검문', [-1.35, 0, -.65], [0, 1.54, 0], [1.25, .5, .25]);
-  m._box(body, [2.46, 2.7, 1.8], [0, 0, 0], steel);
+  m._box(body, [2.88, .18, 2.24], [0, -1.45, 0], curb);
+  m._box(body, [2.56, .58, 1.90], [0, -1.08, 0], plinthGray);
+  m._box(body, [2.46, 2.18, 1.8], [0, .26, 0], bodyGray);
   m._box(body, [2.63, .09, 1.98], [0, -1.12, 0], trim);
   m._box(body, [.055, 1.95, 1.5], [1.255, .22, 0], dark);
   m._box(body, [.07, 1.87, 1.42], [1.29, .22, 0], steel);
@@ -114,10 +123,15 @@ export function buildFurnace(model, root) {
       const a = n * Math.PI / 4;
       m._cyl(fans, .025, .035, [x + Math.cos(a) * .4, .43, Math.sin(a) * .4], trim, .025, 6);
     }
-    m._box(fans, [.24, .12, .015], [x, .27, .475], yellow);
+    m._box(fans, [.24, .05, .015], [x, .24, .475], yellow);
+    m._box(fans, [.16, .045, .015], [x, -.56, .25], yellow);
     m._bar(fans, [x + .2, -.42, .1], [x + .3, -.81, .13], .027, black);
     m._bar(fans, [x + .3, -.81, .13], [x + .05, -.95, -.18], .027, black);
   }
+  // Center "화상 주의" blue-bordered caution plaque between the paired red burner blowers (card 36 FRONT)
+  m._box(fans, [.44, .24, .018], [-.22, .42, .46], signBlue);
+  m._box(fans, [.40, .18, .020], [-.22, .44, .465], white);
+  m._box(fans, [.09, .09, .022], [-.33, .44, .47], yellow).rotation.z = Math.PI / 4;
 
   // 05: front yellow gas train, right-hand valves, flange bolts and gauges.
   const gas = part(5, '배관·밸브', [2, .35, 1.3], [.45, 2.51, 1.25], [1.35, .15, 0]);

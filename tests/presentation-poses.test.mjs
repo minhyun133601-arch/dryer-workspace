@@ -16,6 +16,7 @@ import { buildDryerRouteEnvironment } from '../apps/site/dryer-route-environment
 import { buildDryerCompressorEnvironment } from '../apps/site/dryer-compressor-environment.js';
 import { buildDryerBuildingEnvironment, alignDryerCompressorEntrance } from '../apps/site/dryer-building-envelope.js';
 import { buildDryerCompressorInteriorDetails } from '../apps/site/dryer-compressor-interior-details.js';
+import { buildDryerFloor1PhotoDetail, buildDryerFloor1Load } from '../apps/site/dryer-floor1-photo-detail.js';
 import { buildFurnace } from '../apps/site/furnace-model.js';
 import { createProximityDoorController } from '../apps/site/proximity-doors.js';
 import { OUTDOOR_ROOM } from '../apps/site/outdoor-data.js';
@@ -45,7 +46,7 @@ async function presentationScene() {
   document.defaultView = eventTarget();
   const timers = new Map(); let nextTimer = 0;
   const context = vm.createContext({ THREE, ...walking, FLOORS, FLOOR_HEIGHT, floorElevation, floorHeight,
-    buildDryerUpperEnvironment, buildDryerUpperEquipment, buildDryerBuildingEnvironment, buildDryerProcessEquipment, buildPreparationEquipment, buildPreparationBoilerRoom, buildPreparationEnvironment, buildDryerRouteEnvironment, buildDryerCompressorEnvironment, buildDryerCompressorInteriorDetails, alignDryerCompressorEntrance, buildFacilityEquipment, buildFurnace,
+    buildDryerUpperEnvironment, buildDryerUpperEquipment, buildDryerBuildingEnvironment, buildDryerProcessEquipment, buildPreparationEquipment, buildPreparationBoilerRoom, buildPreparationEnvironment, buildDryerRouteEnvironment, buildDryerCompressorEnvironment, buildDryerCompressorInteriorDetails, buildDryerFloor1PhotoDetail, buildDryerFloor1Load, alignDryerCompressorEntrance, buildFacilityEquipment, buildFurnace,
     OUTDOOR_ROOM, CAMPUS_ROOM, PACKAGING_ROOM, PACKAGING_ROOMS, PACKAGING_OVERVIEW, PACKAGING_FLOOR_ELEVATIONS,
     PLACEMENT_RULES, PLACEMENT_REGIONS, constrainPlacement, rotatedFootprint, fromRoomPosition, toRoomPosition, document,
     setTimeout: callback => { const id = ++nextTimer; timers.set(id, callback); return id; }, clearTimeout: id => timers.delete(id) });
@@ -396,6 +397,7 @@ test('cutaway views reveal only explicitly shared stairs from adjoining floors a
       scene.setFloor(floor); scene.setView('perspective');
       for (const [level, environment] of scene.buildingEnvironments) {
         if (level === floor) continue;
+        if (floor === 2 && level === 1) { assert.equal(environment.architectureFixtures.visible, true, '1.5F perspective shows the 1F hall below the glass'); continue; }
         const visible = environment.architectureFixtures.children.filter(child => child.visible);
         for (const child of visible) assert.ok(child.userData.stepsRepresentative && child.userData.visibleFloors?.includes(floor), `${floor}F: only the explicitly shared stair can appear from ${level}F`);
         assert.equal(environment.architectureFixtures.visible, visible.length > 0, `${floor}F: the adjoining fixture container follows its shared stairs`);

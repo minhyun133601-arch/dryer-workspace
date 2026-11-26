@@ -75,6 +75,7 @@ export function validateLayout(payload, equipment, { migrateDefaults = false, mi
         // without replaying already-reviewed area migrations.
         (migratePosition || ((original.floor === 'campus' || (preparationCorrection && placement.migrationBasis === 'preparation-video-default') || (dryerRouteCorrection && placement.migrationBasis === 'dryer-route-video-default')) && typeof placement?.catalogRevision === 'string' && placement.catalogRevision.length > 0 && placement.catalogRevision === sourceCatalogRevision)) &&
         (!placement?.catalogRevision || placement.catalogRevision === sourceCatalogRevision) &&
+        (placement?.sourcePlacementRevision === undefined || placement.sourcePlacementRevision === (sourcePlacementRevisions?.[original.id] ?? null)) &&
         (!placement?.alreadyReviewedAt || placement.alreadyReviewedAt !== sourcePlacementRevisions?.[original.id]) &&
         Array.isArray(placement?.position) && placement.position.length === 3 && placement.position.every(Number.isFinite) &&
         Number.isFinite(placement.rotation) && matchesPosition(placement.position) &&

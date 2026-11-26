@@ -1,4 +1,5 @@
 ﻿import * as THREE from '../shared/vendor/three.module.js';
+import { buildDryerCompressorSiteFinish } from './dryer-compressor-site-finish.js';
 
 const HALF = Math.PI / 2;
 const UP = new THREE.Vector3(0, 1, 0);
@@ -164,17 +165,15 @@ function kaeser(s,k,room,num,id,w,h,d) {
   const south = local(s,unit,'survey-south-cabinet-end-'+num,[10,16,43]);
   south.rotation.y = num===1 ? -HALF : HALF;
   const face = w/2+.018;
-  k.plate(south,[d*.98,h-.15,.034],[0,h/2+.065,face],num===3?'kaeserDark':'kaeserYellow');
+  k.plate(south,[d*.98,h-.15,.034],[0,h/2+.065,face],num===1?'kaeserYellow':'kaeserDark');
   if (num===1) {
     k.plate(south,[.009,h-.18,.017],[0,h/2+.06,face+.022],'dark');
     for (const side of [-1,1]) {
-      for (let j=0;j<13;j++) k.plate(south,[d*.27,.007,.014],[side*d*.26,h*.73+j*.016,face+.025],'dark');
+      for (let j=0;j<13;j++) k.plate(south,[d*.22,.006,.014],[side*d*.26,h*.858+j*.0150,face+.025],'dark');
       for (const y of [.31,1.49]) k.drum(south,.012,.014,[side*.053,y,face+.029],'black',[HALF,0,0]);
     }
   } else if (num===2) {
-    k.plate(south,[d*.38,h-.15,.021],[d*.295,h/2+.065,face+.024],'kaeserDark');
-    paintedMark(s,south,'bsd-yellow-end-maker','KAESER',.075,.45,[-d*.42,h*.78,face+.041],0,true);
-    paintedMark(s,south,'bsd-yellow-end-model','BSD 72',.28,.075,[-d*.12,h*.50,face+.041],0);
+    for(const x of [-d*.47,d*.47]) k.plate(south,[.03,h-.17,.02],[x,h/2+.065,face+.016],'kaeserYellow');
   } else {
     for(let j=0;j<4;j++) for(let i=0;i<12;i++)
       k.plate(south,[.012,.005,.008],[d*.10+i*.022,h*.32+j*.014,face+.022],'black');
@@ -212,22 +211,6 @@ function kaeser(s,k,room,num,id,w,h,d) {
     for(let i=0;i<8;i++) k.plate(rear,[.19,.007,.012],[vent[0],vent[1]-.067+i*.019,vent[2]+.009],'brown');
     for(const y of [.20,h*.91]) k.drum(rear,.013,.008,[-w*.34,y,back+.024],'black',[HALF,0,0]);
   }
-  // The 90-degree BSD duct has rolled square cheeks. It is not a round barrel.
-  const hw=w*.26, hd=d*.26;
-  if (compact) {
-    const bendSection=new THREE.Shape(),inner=.12,outer=.12+2*hd;
-    bendSection.absarc(0,0,outer,0,HALF,false);
-    bendSection.lineTo(0,inner);
-    bendSection.absarc(0,0,inner,HALF,0,true);
-    bendSection.closePath();
-    const bend=k.shape('bsd72-square-hood-bend',()=>new THREE.ExtrudeGeometry(bendSection,{depth:hw*2,curveSegments:10,bevelEnabled:false}));
-    // Local +X of the section points to -Z, its vertical limb continues the riser.
-    k.part(p,bend,'galv',[1,1,1],[-w*.08-hw,h+.80,hd+.12],[0,HALF,0]);
-  } else {
-    const hood=[-w*.08,h+.55,hd+.012];
-    k.plate(p,[hw*1.84,.50,.022],hood,'dark');
-    for(let i=0;i<7;i++) k.plate(p,[hw*1.82,.055,.072],[hood[0],hood[1]-.22+i*.074,hood[2]+.018],'galv',[-.35,0,0]);
-  }
 }
 
 function k50ServiceBay(s, k, room) {
@@ -245,12 +228,6 @@ function k50ServiceBay(s, k, room) {
   k.arc(bay, [[-.37,.47,.48],[-.46,.42,.33],[-.39,.32,.26],[-.2,.34,.25]], .038, 'galv');
   k.arc(bay, [[-.19,.79,.32],[-.26,1.29,.34],[-.16,1.52,.26],[.19,1.54,.22]], .026, 'black');
   k.plate(bay, [.026,.071,.093], [-.499,.94,.48], 'steel');
-  k.drum(bay, .04, .03, [-.676, 1.46, -.14], 'kaeserYellow', [0,0,HALF]);
-  k.drum(bay, .031, .037, [-.697, 1.46, -.14], 'red', [0,0,HALF]);
-  for (const z of [-.53,-.35,-.17]) {
-    k.ring(bay, .043, [-.678,1.3,z], 'trim', [0,HALF,0]);
-    k.plate(bay,[.008,.045,.006],[-.682,1.31,z],'dark',[.6,0,0]);
-  }
 }
 
 function operatingCard(s, unit, number, rating, position, yaw) {
@@ -258,30 +235,32 @@ function operatingCard(s, unit, number, rating, position, yaw) {
   const canvas = document.createElement('canvas');
   const ctx = canvas.getContext?.('2d');
   if (!ctx) return;
-  canvas.width = 480; canvas.height = 590;
-  ctx.fillStyle = '#305b93'; ctx.fillRect(0,0,480,590);
-  ctx.fillStyle = '#f5f2e7'; ctx.fillRect(12,12,456,566);
-  ctx.textAlign = 'center'; ctx.fillStyle = '#33393a';
-  const models=['','CSD 130 SFC','BSD 72','CSD 125','K50'];
+  canvas.width = 480; canvas.height = 780;
+  ctx.fillStyle = '#2f5a9c'; ctx.fillRect(0,0,480,780);
+  ctx.fillStyle = '#f7f6f0'; ctx.fillRect(16,16,448,352); ctx.fillRect(16,386,448,346);
+  ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
   const years=['','2026년','2012년','2019년','2002년'];
-  const rows=[['설비명','공기압축기 '+number+'호기'],['모델',models[number]],['용량·형식',rating],['구매·가동',years[number]],['사용처','생산 공정용'],['소모품 교체', '6,000시간']];
-  ctx.lineWidth=2;ctx.strokeStyle='#97978d';
+  const rows=[['설비명','공기압축기 #'+number],['[용량]','['+rating+']'],['구매연도',years[number]],['사용처','생산 공정용'],['소모품교체주기','6,000시간'],['관리','공무환경팀 · 생산팀']];
   for(const [row,[label,value]] of rows.entries()) {
-    const y=28+row*46;
-    ctx.fillStyle='#e6e5d9';ctx.fillRect(24,y,136,45);
-    ctx.fillStyle='#293235';ctx.font='bold 22px sans-serif';ctx.fillText(label,92,y+30,125);
-    ctx.font='bold 24px sans-serif';ctx.fillText(value,307,y+30,263);
-    ctx.beginPath();ctx.moveTo(24,y+45);ctx.lineTo(455,y+45);ctx.stroke();
+    const y=24+row*57;
+    ctx.strokeStyle='#7f93b5';ctx.lineWidth=1.5;ctx.strokeRect?.(24,y,130,57);ctx.strokeRect?.(154,y,302,57);
+    ctx.fillStyle='#2a3036';ctx.font='700 21px "Malgun Gothic",sans-serif';ctx.fillText(label,89,y+29,122);
+    ctx.font='600 25px "Malgun Gothic",sans-serif';ctx.fillText(value,305,y+29,286);
   }
-  ctx.fillStyle='#a53c27';ctx.fillRect(36,342,408,56);
-  ctx.fillStyle='#fff1bc';ctx.font='bold 30px sans-serif';ctx.fillText('공기압축기 주의사항',240,381);
-  ctx.fillStyle='#4a473e';ctx.font='17px sans-serif';ctx.textAlign='left';
-  const cautions=['안전커버 제거 후 운전 금지','설정 압력 이상 운전 금지','이상 소음·진동 발생 시 즉시 정지',
-    '운전 중 점검 및 정비 금지','응축수(드레인) 정기 배출','정비 시 전원 차단 후 작업','오일 및 필터 정기 점검'];
-  for(const [i,line] of cautions.entries()) ctx.fillText('• '+line,47,426+i*22);
+  ctx.fillStyle='#d8432c';ctx.fillRect(92,398,296,46);
+  ctx.fillStyle='#ffe9a8';ctx.font='800 27px "Malgun Gothic",sans-serif';ctx.fillText('공기압축기 주의사항',240,422);
+  const cautions=[['안전커버 제거 후 ','운전 금지'],['설정 압력 이상 ','운전 금지'],['이상 소음.진동 발생 시 ','즉시 정지'],
+    ['운전 중 점검 및 정비 ','금지'],['응축수(드레인) 정기 배출',''],['정비 시 전원 차단 후 작업',''],['오일 및 필터 정기 점검','']];
+  ctx.textAlign='left';ctx.font='700 22px "Malgun Gothic",sans-serif';
+  for(const [i,[plain,strong]] of cautions.entries()) {
+    const y=468+i*37;
+    ctx.fillStyle='#2f5a9c';ctx.fillText('•',40,y);ctx.fillStyle='#2b3035';ctx.fillText(plain,62,y);
+    if(strong){ctx.fillStyle='#d8432c';ctx.fillText(strong,62+(ctx.measureText?.(plain)?.width||0),y);}
+  }
+  ctx.textAlign='center';ctx.fillStyle='#eef2f8';ctx.font='800 22px Arial, sans-serif';ctx.fillText('HEE CHANG',240,756);
   const map = new THREE.CanvasTexture(canvas); map.colorSpace = THREE.SRGBColorSpace; s.textures.add(map);
   const mat = s._material(0xffffff,.8,.02,{map});
-  const geo = new THREE.PlaneGeometry(.21,.255); s.geometries.add(geo);
+  const geo = new THREE.PlaneGeometry(.36,.585); s.geometries.add(geo);
   const plate = s._mesh(geo,mat,unit,position);
   plate.rotation.y = yaw; plate.name = 'survey-operating-card-'+number;
   plate.userData.personCollision = false;
@@ -322,9 +301,6 @@ function hx601Dryer(s,k,room) {
       k.plate(hx,[.691,.005,.003],[.16,.075+i*.034,z+side*.004],side<0?'galv':'trim');
     if(side>0) k.plate(hx,[.025,.562,.003],[.16,.35,z+.005],'kaeserDark');
   }
-  k.arc(hx,[[-depth/2,.59,.19],[-.81,.59,.19],[-.85,.66,.19],[-.85,1.63,.19],[-.84,1.73,.13],[-.79,1.76,-.15]],.037,'galv');
-  k.arc(hx,[[-depth/2,.63,-.19],[-.88,.63,-.19],[-.92,.71,-.23],[-.92,1.76,-.26],[-.91,1.85,-.31],[-.91,1.85,-.53]],.041,'galv');
-  for(const y of [.84,1.44]) flange(k,hx,[-.92,y,-.24],.062);
   unit.userData.cabinetDimensions={width,depth,height,unit:'m',basis:'경원 2015년 국문 카탈로그 HX601K 외형 · 현장사진 076–081',includesDuct:false};
 }
 
@@ -419,8 +395,6 @@ function dryerDetails(s, k, room) {
     k.drum(filter,.078,.06,[0,.17,0],'bluePipe');
     k.drum(filter,.028,.085,[0,-.54,0],'galv');
   }
-  k.tube(dry,[-.34,1.90,.53],[.51,1.90,.53],.045,'galv');
-  k.arc(dry,[[-.12,1.90,-.53],[.03,1.90,-.53],[.21,1.90,-.53],[.26,1.95,-.53],[.26,2.03,-.53],[.31,2.08,-.53],[.59,2.08,-.53]],.044,'galv');
   hx601Dryer(s,k,room);
   const jac=room.getObjectByName('comp-aftercooler-jac100');
   const cooler = local(s,jac,'survey-aftercooler-intake',[70,71,72,73]);
@@ -435,9 +409,9 @@ function dryerDetails(s, k, room) {
   for(const side of [-1,1]) {
     const broad=local(s,cooler,'jac-perforated-side-'+side,side<0?[73]:[71]);
     if(side<0) broad.rotation.y=Math.PI;
-    k.plate(broad,[.014,.98,1.58],[.218,.514,0],'white');
+    k.plate(broad,[.014,.98,1.58],[.218,.514,0],'k2Beige');
     grille(k,broad,[.23,.48,.02],1.26,.72,'fins',18);
-    for(let i=0;i<21;i++) k.plate(broad,[.014,.017,1.26],[.253,.14+i*.034,.02],'tankLight');
+    for(let i=0;i<21;i++) k.plate(broad,[.014,.017,1.26],[.253,.14+i*.034,.02],'k2Beige');
   }
   // #073: only the front grille has the instrument strip, START/STOP switch and dial.
   const instruments=local(s,cooler,'jac-front-instruments',[73]);
@@ -455,40 +429,21 @@ function dryerDetails(s, k, room) {
     for(const x of [-.077,.077]) for(const dz of [-.085,.085]) {
       k.drum(cooler,.008,.009,[x,1.044,z+dz],'trim');
     }
-    k.tube(cooler,[0,1.02,z],[0,1.69,z],.058,'galv');
-    for(const y of [1.09,1.34]) flange(k,cooler,[0,y,z],.107);
-  }
-  k.plate(cooler,[.27,.34,.008],[0,.75,.817],'tankLight');
-  paintedMark(s,cooler,'jac-safety-heading','압력용기 안전수칙',.24,.04,[0,.89,.824],0,false,'#a03b31');
-  for(let i=0;i<8;i++) {
-    k.plate(cooler,[.199-i%3*.019,.007,.004],[0,.848-i*.027,.823],'trim');
-  }
-  k.plate(cooler,[.245,.017,.005],[0,.59,.824],'bluePipe');
-  // The two silver branches turn away in different directions. Do not close
-  // them into an unsupported bypass between inlet and outlet.
-  k.arc(cooler,[[0,1.65,-.52],[0,1.76,-.52],[-.07,1.82,-.52],[-.46,1.82,-.52]],.058,'galv');
-  k.arc(cooler,[[0,1.65,.52],[0,1.82,.52],[0,1.89,.45],[0,1.89,.22]],.058,'galv');
-  k.tube(cooler,[0,1.32,-.52],[.12,1.32,-.52],.02,'galv');
-  k.ring(cooler,.087,[.13,1.32,-.52],'red',[0,HALF,0]);
-  for(let j=0;j<3;j++) {
-    const angle=j*2*Math.PI/3;
-    k.tube(cooler,[.13,1.32,-.52],[.13,1.32+.08*Math.cos(angle),-.52+.08*Math.sin(angle)],.008,'red');
   }
   hl350Dryer(s,k,room);
   const silver = local(s,room.getObjectByName('comp-dryer-ps600k'),'survey-silver-twin-towers',[82,86,87,88,89]);
   const controls=local(s,silver,'survey-ps600-front-controls',[82]);
   controls.rotation.y=HALF;
-  k.plate(controls,[.50,.59,.013],[0,1.05,.523],'trim');
-  k.plate(controls,[.477,.566,.013],[0,1.05,.534],'tankLight');
+  k.plate(controls,[.50,.59,.013],[0,1.14,.523],'trim');
+  k.plate(controls,[.477,.566,.013],[0,1.14,.534],'tankLight');
   for(const [x,paint] of [[-.085,'red'],[.052,'orange']]) {
-    k.drum(controls,.026,.015,[x,1.19,.55],paint,[HALF,0,0]);
-    k.plate(controls,[.016,.041,.021],[x,1.18,.565],'dark',[0,0,-.18]);
+    k.drum(controls,.022,.015,[x,1.31,.55],paint,[HALF,0,0]);
+    k.plate(controls,[.016,.041,.021],[x,1.305,.565],'dark',[0,0,-.18]);
   }
-  paintedMark(s,controls,'ps600-front-maker','JEMACO',.37,.065,[0,.81,.545],0,false,'#29345f');
+  paintedMark(s,controls,'ps600-front-maker','JEMACO',.24,.048,[.06,.915,.545],0,false,'#29345f');
   for(const x of [-.34,.34]) {
-    dial(k,controls,.052,[x,1.48,.387]);
-    k.plate(controls,[.065,.105,.011],[x,1.22,.351],'tankLight');
-    k.arc(controls,[[x,1.9,.12],[x,2.03,.12],[x,2.12,.11],[x*.78,2.15,.10],[x*.45,2.15,.10]],.038,'galv');
+    dial(k,controls,.044,[x,1.64,.379]);
+    k.plate(controls,[.055,.075,.006],[x,1.40,.349],'tankLight');
     k.plate(controls,[.081,.10,.012],[x,.6,.346],'safetyYellow');
   }
   // Each photographed tower is supported on a small skirt with the head
@@ -500,30 +455,11 @@ function dryerDetails(s, k, room) {
   for (const z of [-.34,.34]) {
     k.cap(silver,.223,.13,[.12,1.78,z],'tankGray');
     k.ring(silver,.222,[.12,1.78,z],'tankGray',[HALF,0,0]);
-    k.tube(silver,[.12,1.88,z],[.12,2.09,z],.038,'galv');
-    k.arc(silver,[[-.55,.42,z],[-.55,.52,z],[-.45,.56,z],[-.15,.56,z]],.042,'galv');
-    k.plate(silver,[.09,.1,.1],[-.36,.64,z],'dark');
   }
   for(const vessel of silver.parent.children.filter(child=>child.name==='ps600-vessel')) {
     vessel.scale.set(.223,1.48,.223);vessel.position.y=1.04;
   }
-  for(const z of [-.34,.34]) {
-    k.arc(silver,[[.12,2.09,z],[.12,2.15,z],[.12,2.17,z*.8],[.12,2.17,z*.35]],.041,'galv');
-    k.tube(silver,[.12,1.84,z],[-.54,1.84,z],.036,'galv');
-    k.tube(silver,[-.54,1.84,z],[-.54,.54,z],.036,'galv');
-    for(const y of [.62,1.49]) flange(k,silver,[-.54,y,z],.059);
-    k.plate(silver,[.028,.08,.015],[-.485,1.56,z],'red');
-  }
-  k.arc(silver,[[-.53,1.48,-.34],[-.60,1.26,-.23],[-.6,.98,.04],[-.57,1.07,.23],[-.54,1.51,.34]],.012,'dark');
-  // Blue filter bowls at different heights, behind the vessels. Both are
-  // visible on the same rack in #089, with a low silver cross-header.
-  for(const [x,y,z] of [[-.16,2.01,0],[-.53,1.02,-.03]]) {
-    k.drum(silver,.071,.45,[x,y-.035,z],'blueFilter');k.drum(silver,.081,.10,[x,y+.21,z],'dark');
-    k.drum(silver,.026,.061,[x,y-.29,z],'galv');
-    k.tube(silver,[x,y+.21,z-.23],[x,y+.21,z+.23],.038,'galv');
-  }
-  k.arc(silver,[[-.53,1.23,.20],[-.53,1.23,.31],[-.51,1.29,.34],[-.51,1.66,.34],[-.54,1.73,.34]],.034,'galv');
-  k.arc(silver,[[-.16,2.22,-.23],[-.16,2.22,-.33],[-.10,2.16,-.34],[.12,2.12,-.34]],.035,'galv');
+  omit(silver.parent,['ps600-top-pipe-a','ps600-top-pipe-b']);
 }
 
 function flange(k,group,center,radius,axis='y') {
@@ -704,7 +640,7 @@ function receiverDetails(s,k,room) {
     const skirt=k.shape('perforated-air-receiver-skirt',()=>receiverSkirt(.427,.345));
     k.part(p,skirt,'skirtMetal',[1,1,1],[0,0,0]);
     k.cap(p,.438,.13,[0,.365,0],skin,[Math.PI,0,0]);
-    for(const y of [.35,top-.30]) k.ring(p,.455,[0,y,0],skin,[HALF,0,0]);
+    for(const y of [.35,top-.30]) k.drum(p,.4635,.016,[0,y,0],skin);
     k.plate(p,[.008,top-.69,.009],[0,top/2,-.46],skin);
     // #046 and #052 show small relief fittings on the heads. The visible
     // process pipes enter the two shells at completely different heights.
@@ -727,13 +663,6 @@ function receiverDetails(s,k,room) {
       right.rotation.y=HALF;
       k.drum(right,.078,.102,[0,.61,.47],'skirtMetal',[HALF,0,0]);
       flange(k,right,[0,.61,.53],.112,'z');
-      k.tube(right,[0,1.64,.445],[0,1.64,.626],.038,'galv');
-      const left=local(s,p,'receiver-1-valved-riser',[44,46]);
-      left.rotation.y=-HALF;
-      k.arc(left,[[0,.41,.43],[0,.41,.55],[0,.46,.58],[0,top+.04,.58],
-        [-.045,top+.14,.58],[-.16,top+.16,.58],[-.55,top+.16,.58]],.043,'galv');
-      for(const y of [.52,.72]) flange(k,left,[0,y,.58],.065);
-      k.plate(left,[.022,.115,.021],[.049,.76,.58],'red');
     } else {
       const service=local(s,p,'receiver-2-cooler-side',[53,54]);
       service.rotation.y=-HALF;
@@ -747,10 +676,6 @@ function receiverDetails(s,k,room) {
         [-.077,1.15,.50],[-.084,.88,.51]],.006,'bluePipe');
       // The prominent silver run in #052 emerges from the upper SIDE of
       // the 2 m³ vessel and turns south, along the top of the cooler row.
-      flange(k,p,[0,1.58,.443],.088,'z');
-      k.arc(p,[[0,1.58,.444],[0,1.58,.54],[0,1.64,.60],[0,1.83,.60],
-        [-.06,1.91,.60],[-.18,1.93,.60],[-1.86,1.93,.60]],.054,'galv');
-      k.tube(p,[-1.47,1.93,.60],[-1.80,1.93,.60],.055,'galv');
       const wall=local(s,p,'receiver-2-wall-side-valve',[50,51]);
       wall.rotation.y=Math.PI;
       k.tube(wall,[0,.42,.435],[0,.42,.55],.046,'galv');
@@ -917,43 +842,15 @@ function fieldFinishes(s) {
 
 function roomServices(s,k,room,environment,spec) {
   const model = spec.rooms.find(entry=>entry.id==='compressor-room');
-  const {minX,maxX,minZ,maxZ}=model.bounds;
-  const envelope=environment.facade.getObjectByName('dryer-compressor-3-facade-extras');
-  const skin=local(s,envelope,'survey-room-inside-panel-and-rafters',[10,33,50,64,82]);
-  skin.userData.personCollision=false;
+  const {minX,maxX}=model.bounds;
   const bevel=Math.atan2(model.height-model.lowEastHeight,maxX-minX);
   const ceilingAt=x=>model.height-(x-minX)*Math.tan(bevel);
-  const midZ=(minZ+maxZ)/2;
-  const midX=(minX+maxX)/2;
-  // The exterior roof is green, but #010 and the return video show a pale
-  // insulated sheet underside between the rafters inside the compressor room.
-  k.plate(skin,[(maxX-minX-.10)/Math.cos(bevel),.022,maxZ-minZ-.09],
-    [midX,ceilingAt(midX)-.028,midZ],'ceilingLiner',[0,0,-bevel]);
-  // On the inside, the off-white sheet panels have restrained horizontal ribs.
-  // Keep all openings clear, including the glazed band in the north wall.
-  for(let y=.22;y<model.lowEastHeight-.08;y+=.145) {
-    for(const x of [minX+.098,maxX-.098])
-      k.plate(skin,[.010,.009,maxZ-minZ-.20],[x,y,midZ],'wallRib');
-    if(y<1.71||y>2.94) k.plate(skin,[maxX-minX-.2,.009,.011],[(maxX+minX)/2,y,minZ+.096],'wallRib');
-  }
-  for(const z of [-11.5,-8.4,-5.3]) for(const dy of [-.072,.072]) {
-    const length=(maxX-minX-.22)/Math.cos(bevel);
-    k.plate(skin,[length,.022,.22],[(minX+maxX)/2,ceilingAt((minX+maxX)/2)-.12+dy,z],'white',[0,0,-bevel]);
-  }
-  for(let x=minX+.62;x<maxX-.38;x+=.72)
-    k.plate(skin,[.024,.034,maxZ-minZ-.24],[x,ceilingAt(x)-.07,midZ],'wallRib');
   const windows=local(s,room.getObjectByName('compressor-north-window-band'),'survey-window-tracks',[11,16,20]);
   for(const x of [-2.535,-.845,.845,2.535]) {
     k.plate(windows,[.024,1.05,.035],[x,2.32,.059],'trim');
     k.plate(windows,[.052,.12,.025],[x+.035,2.13,.079],'trim');
   }
   k.plate(windows,[6.79,.027,.11],[0,1.798,.038],'steel');
-  for(const z of [-10.5,-6.2]) {
-    for(const side of [-1,1]) {
-      k.tube(skin,[16.85,3.69,z+side*.41],[16.85,ceilingAt(16.85)-.14,z+side*.41],.008,'trim');
-      k.plate(skin,[.044,.014,.98],[16.85+side*.085,3.603,z],'ceilingLamp');
-    }
-  }
   for(const name of ['comp-west-wall-fan','comp-east-wall-fan']) {
     const fan=room.getObjectByName(name), p=local(s,fan,'survey-vent-blades',[33,82]);
     for(let i=0;i<5;i++) {
@@ -962,52 +859,6 @@ function roomServices(s,k,room,environment,spec) {
     }
     k.drum(p,.047,.038,[0,0,.089],'dark',[HALF,0,0]);
     for(const r of [.121,.173,.205]) k.ring(p,r,[0,0,.104],'dark');
-  }
-  // Fixed overhead duct faces visible from the entrance at 02:29 and
-  // 04:14. Cabinet hoods join a box across the rear bay, above head level.
-  const ducts=local(s,room,'survey-north-galvanized-ductwork',[10,11,18,32,37]);
-  ducts.userData.sourceTimesSeconds=[149,166,171,193,254];
-  const west=14.86, east=18.65, z=-11.14, y=2.95;
-  k.plate(ducts,[east-west,.56,.64],[(west+east)/2,y,z],'galv');
-  for(let x=west+.22;x<east-.08;x+=.70) {
-    k.plate(ducts,[.027,.594,.672],[x,y,z],'sheetSeam');
-    k.plate(ducts,[.080,.016,.68],[x,y-.30,z],'trim');
-  }
-  for(const x of [15.64,17.75]) for(const side of [-1,1])
-    k.tube(ducts,[x,y-.30,z+side*.348],[x,ceilingAt(x)-.11,z+side*.348],.008,'dark');
-  // Rectangular outlet over the southern end of #1. Across from it the BSD
-  // bend meets the overhead trunk, with seams on the straight visible faces.
-  k.plate(ducts,[.68,.52,.33],[west,y,-11.52],'galv');
-  k.plate(ducts,[.61,.52,.64],[east,y,-10.56],'galv');
-  for(const z0 of [-10.83,-10.40]) k.plate(ducts,[.632,.55,.028],[east,y,z0],'sheetSeam');
-  const services=local(s,room,'survey-fixed-service-pipes',[12,33,46,56,58,86,87]);
-  services.userData.sourceTimesSeconds=[129,139,148,187,193];
-  // Walkover floor raceway seen side-on in 02:29 and 04:14, separate
-  // from the exposed rigid receiver/air lines. It is flush to the floor.
-  const channel=local(s,room,'survey-floor-raceway',[12,41,46]);
-  channel.userData.personCollision=false;
-  k.plate(channel,[4.03,.015,.12],[16.70,.023,-10.08],'skirtMetal');
-  for(const x of [14.75,15.32,15.90,16.48,17.06,17.64,18.22])
-    k.plate(channel,[.012,.005,.105],[x,.032,-10.08],'dark');
-  // Low 90° floor pipe photographed between receiver #1 and the dark end
-  // of compressor #3 (02:28). The central pedestrian aisle remains clear.
-  k.arc(services,[[18.48,.27,-6.12],[18.48,.27,-6.42],[18.43,.27,-6.47],[18.09,.27,-6.47],[18.02,.27,-6.53],[18.02,.27,-6.84]],.040,'galv');
-  for(const z0 of [-6.26,-6.69]) flange(k,services,[z0===-6.26?18.48:18.02,.27,z0],.07,'z');
-  for(const x of [14.5,16.5,18.5,20.5]) {
-    k.ring(services,.089,[x,.92,-13.06],'trim',[0,HALF,0]);
-    k.ring(services,.053,[x,.64,-12.92],'trim',[0,HALF,0]);
-  }
-  // Video 03:13 shows small diameter silver pipe turns, upright clips and
-  // lever handles behind the rear row, below the windows.
-  for(const x of [16.1,19.0]) {
-    k.arc(services,[[x,.67,-12.84],[x,.82,-12.84],[x,1.95,-12.84],[x,2.05,-12.80],[x,2.08,-12.68],[x,2.08,-12.31]],.031,'galv');
-    for(const y0 of [1.10,1.78]) k.ring(services,.035,[x,y0,-12.84],'trim',[HALF,0,0]);
-    k.plate(services,[.018,.12,.024],[x+.045,.77,-12.84],'red');
-  }
-  for(const x of [14.8,18.5]) for(const z0 of [-10.55,-8.18,-5.16]) {
-    const pipeY=x<16?3.18:3.05;
-    k.ring(services,.045,[x,pipeY,z0],'trim');
-    k.tube(services,[x,pipeY+.038,z0],[x,ceilingAt(x)-.12,z0],.007,'trim');
   }
 }
 
@@ -1060,14 +911,14 @@ export function buildDryerCompressorInteriorDetails(s, environment, spec) {
     kaeser(s,kit,room,num,id,w,h,d);
     const rating = num===1 ? '100마력 인버터형' : num===2 ? '50마력 정속형' : '100마력 정속형';
     const side = num===1 ? -1 : 1;
-    operatingCard(s, unit, num, rating, [side*(w/2+.061),h*.71,num===1 ? .23 : -.26],side*HALF);
+    operatingCard(s, unit, num, rating, [side*(w/2+.061),num===2 ? h*.70 : h*.69,num===1 ? -.37 : .27],side*HALF);
     if (num===1) {
       unit.userData.model = 'CSD 130 SFC';
       unit.userData.specText = 'KAESER CSD 130 SFC · 100마력 인버터형 · 2026';
     }
   }
   k50ServiceBay(s,kit,room);
-  operatingCard(s,room.getObjectByName('comp-unit-4-k2power-k50'),4,'50마력 정속형',[.12,1.32,-.838],Math.PI);
+  operatingCard(s,room.getObjectByName('comp-unit-4-k2power-k50'),4,'50마력 정속형',[.02,1.36,.872],0);
   dryerDetails(s,kit,room);
   separatorDetails(s,kit,room);
   receiverDetails(s,kit,room);
@@ -1077,4 +928,5 @@ export function buildDryerCompressorInteriorDetails(s, environment, spec) {
   room.getObjectByName('comp-dryer-ps600k').userData.model = 'PS600K';
   kit.flush();
   room.userData.surveyDetailsBuilt = true;
+  buildDryerCompressorSiteFinish(s,environment,spec);
 }

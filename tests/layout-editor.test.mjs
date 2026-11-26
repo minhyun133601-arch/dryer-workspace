@@ -14,6 +14,19 @@ const equipment = [
 ];
 const original = equipment.map((item) => ({ ...item, position: [...item.position] }));
 
+test('the photographed preparation console moves the old deck default once and preserves manual placements', () => {
+  const consoleItem = BUILDING_EQUIPMENT.find(item => item.id === 'f1-prep-console');
+  const old = { id:consoleItem.id, position:[24.25,.3,14.5], rotation:0 };
+  const restore = (pose, placementRevisions = {}) => validateLayout({
+    version:1, items:[pose], catalogRevision:'preparation-tank-openings-20261112', placementRevisions,
+  }, [consoleItem], {migrateDefaults:true})[0];
+  assert.deepEqual(restore(old).position,consoleItem.position);
+  assert.equal(restore(old).rotation,-Math.PI/2);
+  assert.deepEqual(restore({...old,position:[24,.3,14.5]}).position,[24,.3,14.5]);
+  assert.deepEqual(restore({...old,rotation:Math.PI/2}).position,old.position);
+  assert.deepEqual(restore(old,{[old.id]:consoleItem.placementRevision}).position,old.position);
+});
+
 function entrancePlacementFixture(items, storedPlacementRevisions, customCatalog) {
   const revision='entrance-route-registration-20261112', globalRevision='preparation-tank-openings-20261112';
   const catalog=customCatalog || [
@@ -171,7 +184,7 @@ test('the real third-floor default repair persists once and a manually imported 
   const open = () => { editor?.dispose(); container = new EditorNode('div', doc); editor = createLayoutEditor({ scene, equipment: [item], container }); };
   try {
     open(); assert.deepEqual(state[0].position, item.position); assert.equal(writes, 1);
-    assert.equal(JSON.parse(saved.get(key)).placementRevisions[item.id], 'dryer-route-3f-20261112');
+    assert.equal(JSON.parse(saved.get(key)).placementRevisions[item.id], item.placementRevision);
     open(); assert.deepEqual(state[0].position, item.position); assert.equal(writes, 1);
     const nodes = [], walk = node => { nodes.push(node); node.children.forEach(walk); }; walk(container);
     nodes.find(node => node.textContent === '배치 편집').click();

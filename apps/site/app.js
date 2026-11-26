@@ -3,7 +3,7 @@ import { OUTDOOR_EQUIPMENT, OUTDOOR_ROOM } from './outdoor-data.js';
 import { CAMPUS_EQUIPMENT, CAMPUS_ROOM } from './campus-data.js';
 import { PACKAGING_EQUIPMENT, PACKAGING_ROOM, PACKAGING_ROOMS, PACKAGING_OVERVIEW } from './packaging-data.js';
 import { SURVEY_PHOTOS } from './outdoor-survey.js';
-import { displayEvidenceImage, evidenceImageKind, isRetainedEvidenceImage } from './evidence-assets.js';
+import { displayEvidenceImage, evidenceImageCaption, evidenceImageKind, isRetainedEvidenceImage } from './evidence-assets.js';
 import { createLayoutEditor } from './layout-editor.js';
 import { createFurnaceDetail } from './furnace-detail.js';
 import { BURNER_MAINTENANCE_DOCUMENTS } from './burner-maintenance-data.js';
@@ -159,6 +159,7 @@ function setAreaIndicator(area) {
 }
 function updateDetailActions() {
   $('compressor-open').hidden = $('disc-conveyor-open').hidden = liquidShown || activeFloor !== 3;
+  $('hall-walk-open').hidden = liquidShown || activeFloor !== 3;
   $('boiler-open').hidden = liquidShown || !['campus','all',1].includes(activeFloor);
   $('valve-room-open').hidden = liquidShown || activeFloor !== 'campus';
   $('wastewater-open').hidden = liquidShown || activeFloor !== 'campus';
@@ -166,6 +167,7 @@ function updateDetailActions() {
   $('preparation-open').hidden = liquidShown || !['campus', 'all', 1].includes(activeFloor);
   $('preparation-lower-open').hidden = liquidShown || activeFloor !== 1;
   $('partitions-option').hidden = liquidShown || ['campus','outdoor'].includes(activeFloor);
+  $('columns-option').hidden = $('partitions-option').hidden;
   const item = items.get(selectedId);
   const furnace = !liquidShown && floorArea(activeFloor) === 'dryer';
   const chiller = !liquidShown && activeFloor === 'outdoor' && item?.detailKey === 'chiller-100rt';
@@ -209,7 +211,7 @@ function setFloor(value, { overview = true } = {}) {
   setAreaIndicator(floorArea(next));
   $('floor-selector').hidden = outdoors || campus || packaging;
   $('packaging-floor-selector').hidden = !packaging;
-  $('packaging-cargo-option').hidden = !packaging;
+  $('packaging-cargo-option').hidden = !(packaging || next === 1); // 1층 적재물도 같은 「적재물 표시」를 쓴다
   document.querySelectorAll('[data-packaging-level]').forEach((button) => button.setAttribute('aria-pressed', String(button.dataset.packagingLevel === String(packagingLevel))));
   $('survey-option').hidden = true;
   $('outdoor-navigation').hidden = !(outdoors || campus || (packaging && packagingLevel !== 'all'));
@@ -242,8 +244,8 @@ function setPhoto(index) {
   $('reference-photo').classList.toggle('is-drawing-reference', referenceKind === '도면');
   $('photo-dialog').classList.toggle('is-drawing-reference', referenceKind === '도면');
   $('reference-photo').alt = `${name} ${referenceKind} ${photoIndex + 1}`;
-  const videoCaption = (item?.photoCaptions || room?.photoCaptions)?.[photoSources[photoIndex]];
-  $('reference-caption').textContent = videoCaption || `${name} · ${referenceKind}`;
+  const reference = photoSources[photoIndex];
+  $('reference-caption').textContent = item?.photoCaptions?.[reference] || room?.photoCaptions?.[reference] || evidenceImageCaption(reference) || `${name} · ${referenceKind}`;
   $('photo-info').hidden = true;
   $('photo-location').textContent = '';
   $('photo-inline-position').textContent = `${photoIndex + 1} / ${photoSources.length}`;
@@ -439,6 +441,7 @@ $('furnace-open').addEventListener('click', () => { if (!$('furnace-open').disab
 $('upper-photos-open').addEventListener('click', () => dryerUpperReference.open());
 $('compressor-open').addEventListener('click', () => compressorSurvey.open());
 $('disc-conveyor-open').addEventListener('click', () => compressorSurvey.open('f3-holding',{enter:true}));
+$('hall-walk-open').addEventListener('click', () => compressorSurvey.open('f3-holding',{walk:true}));
 $('elevator-room-open').addEventListener('click', () => { setFloor(8); selectEquipment('dryer-roof-drive'); scene?.focus('dryer-roof-drive'); });
 $('chiller-open').addEventListener('click', () => { if (!$('chiller-open').disabled) chillerDetail.open(); });
 for (const level of ['all', 1, 2, 3]) {
@@ -463,6 +466,7 @@ bindPersonNavigation();
 bindDoorNavigation();
 $('labels-toggle').addEventListener('change', (event) => scene?.setLabels(event.target.checked));
 $('structure-toggle').addEventListener('change', (event) => scene?.setStructure(event.target.checked));
+$('columns-toggle').addEventListener('change', (event) => scene?.setColumns?.(event.target.checked));
 $('partitions-toggle').addEventListener('change', (event) => scene?.setPartitions?.(event.target.checked));
 $('ducts-toggle').addEventListener('change', (event) => scene?.setDucts(event.target.checked));
 $('packaging-cargo-toggle').addEventListener('change', (event) => scene?.setPackagingCargoVisible(event.target.checked));
@@ -588,6 +592,7 @@ try {
   scene.setPersonViewScale(Number($('person-view-scale').value)/100);
   scene.setLabels($('labels-toggle').checked);
   scene.setStructure($('structure-toggle').checked);
+  scene.setColumns?.($('columns-toggle').checked);
   scene.setPartitions?.($('partitions-toggle').checked);
   scene.setDucts($('ducts-toggle').checked);
   scene.setFloor(activeFloor);

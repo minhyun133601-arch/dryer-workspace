@@ -4,7 +4,11 @@ import { legacyAssetTarget } from './legacy-asset-paths.js';
 
 // The catalog is the single allowlist for current drawings, branding and Team 3
 // cards. Retired photo metadata stays in evidence records without UI requests.
-const retained = new Set(SITE_ASSETS.map(asset => asset.path));
+const retained = new Map(SITE_ASSETS.map(asset => [asset.path, asset.label]));
+
+export function evidenceImageCaption(reference) {
+  return retained.get(reference);
+}
 
 export function evidenceImageKind(reference) {
   if (reference.includes('/equipment-cards/')) return '설비이력카드';

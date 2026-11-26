@@ -80,7 +80,7 @@ export function compressorPlanGeometry(station) {
 }
 
 export function createCompressorSurvey({getScene, floorSpec}) {
-  let dialog, photoDialog, selector, plan, info, tabs, stageTitle, figure, caption, pager;
+  let dialog, photoDialog, selector, plan, info, tabs, stageTitle, figure, caption, pager, frameVisitButton;
   let record, mode='layout', face='front', photoIndex=0, bindings=[], previousFocus, returnButton, helpButton, angleButton, viewportObserver;
   const stations=new Map();
   const records=[...COMPRESSOR_RECORDS,conveyor,approach];
@@ -88,6 +88,7 @@ export function createCompressorSurvey({getScene, floorSpec}) {
   const roomDoor=floorSpec.partitions.flatMap(wall=>(wall.openings||[]).map(o=>({wall,o}))).find(entry=>entry.o.id==='compressor-room-south');
 
   function attach(scene) {
+    if(frameVisitButton)frameVisitButton.disabled=false;
     const root=scene.buildingEnvironments?.get(3)?.architectureFixtures?.getObjectByName('dryer-compressor-3-room');
     if (!root || stations.size) return;
     for (const row of COMPRESSOR_RECORDS) {
@@ -127,10 +128,18 @@ export function createCompressorSurvey({getScene, floorSpec}) {
     scene.onCompressorSurvey=id=>open(id);
   }
 
-  function visit(row,lookAlongConveyor=false) {
+  function visit(row,lookAlongConveyor=false,frame) {
     const scene=getScene(); if (!scene || scene.placementMode) return false;
     let origin, target;
-    if (row===conveyor) {
+    if (frame?.view) {
+      const anchor=frame.view.local ? scene.objects.get(frame.equipment) : null;
+      if(frame.view.local && !anchor)return false;
+      const [x,z]=frame.view.origin;
+      const from=new THREE.Vector3(x,0,z), to=new THREE.Vector3(...frame.view.target);
+      if(anchor){anchor.localToWorld(from);anchor.localToWorld(to);}
+      else to.y+=floorSpec.elevation;
+      origin=[from.x,from.z];target=to.toArray();
+    } else if (row===conveyor) {
       const door=scene.buildingEnvironments.get(3).architectureFixtures.getObjectByName('dryer-building-3-elevator-landing-doors');
       if (!door) return false;
       const at=door.getWorldPosition(new THREE.Vector3());
@@ -150,10 +159,12 @@ export function createCompressorSurvey({getScene, floorSpec}) {
       target=[x,y+1.15,z];
     }
     if (!scene.visitDryerInspectionPoint(origin,target)) return false;
+    if(frame?.view.openDoor)scene.proximityDoors?.setPassageOpen(frame.view.openDoor,true,{immediate:true});
+    if(photoDialog.open)photoDialog.close();
     if(dialog.open)dialog.close();
     if(!returnButton) {
       const viewport=scene.canvas.parentElement;
-      returnButton=action('',()=>open(returnButton.dataset.station),'air-reopen');
+      returnButton=action('',()=>open(returnButton.dataset.station,{walk:returnButton.dataset.walk==='true'}),'air-reopen');
       helpButton=action('보행 안내 펼치기',()=>{
         const expanded=viewport.dataset.airInspection==='compact';
         viewport.dataset.airInspection=expanded?'expanded':'compact';
@@ -170,8 +181,9 @@ export function createCompressorSurvey({getScene, floorSpec}) {
     scene.canvas.parentElement.dataset.airInspection='compact';
     helpButton.textContent='보행 안내 펼치기';helpButton.setAttribute('aria-expanded','false');
     returnButton.dataset.station=row.id;
-    returnButton.textContent=row===conveyor?'디스크 컨베이어 · 4면 사진':row.title+' · 자료 보기';
-    angleButton.hidden=row!==conveyor;
+    returnButton.dataset.walk=String(Boolean(frame));
+    returnButton.textContent=frame?'3층 촬영 장면으로 돌아가기':row===conveyor?'디스크 컨베이어 · 4면 사진':row.title+' · 자료 보기';
+    angleButton.hidden=!!frame || row!==conveyor;
     angleButton.dataset.next=lookAlongConveyor?'straight':'hopper';
     angleButton.textContent=lookAlongConveyor?'엘리베이터 정면 보기':'호퍼 방향 보기';
     scene.canvas.focus({preventScroll:true}); return true;
@@ -195,8 +207,9 @@ export function createCompressorSurvey({getScene, floorSpec}) {
     const closePhoto=action('닫기',()=>photoDialog.close(),'air-close');
     figure=element('img');caption=element('p');pager=element('div',null,'air-pager');photoDialog.append(closePhoto,figure,caption,pager);
     document.body.append(photoDialog);
+    photoDialog.addEventListener('close',()=>{frameVisitButton=null;});
     photoDialog.addEventListener('keydown',e=>{
-      if(pager.hidden)return;
+      if(pager.hidden || pager.dataset.numbered!=='true')return;
       if(e.key==='ArrowLeft'||e.key==='ArrowRight'){e.preventDefault();stepPhoto(e.key==='ArrowRight'?1:-1);}
     });
   }
@@ -240,16 +253,25 @@ export function createCompressorSurvey({getScene, floorSpec}) {
     label([-8.6,16.6],'● 설비   ○ 흰 연결문   ━ 옥상 동선   ┄ 잠정 구역 경계','air-floor-sub');
     plan.append(svg);
     const strip=element('div',null,'air-filmstrip');
-    for(const frame of COMPRESSOR_WALK_FRAMES){
+    const frames=[...COMPRESSOR_WALK_FRAMES].sort((a,b)=>b.date.localeCompare(a.date));
+    for(const frame of frames){
       const btn=action('',()=>{
-        figure.src=imagePath(frame.path); figure.alt=frame.caption;pager.hidden=true;
+        figure.src=imagePath(frame.path); figure.alt=frame.caption;pager.replaceChildren();pager.dataset.numbered='false';pager.hidden=!frame.view;
+        if(frame.view){
+          const visitButton=action('이 장면을 3D에서 보기',()=>{
+            if(!visit(conveyor,false,frame))status.textContent='현재 배치에서 이 위치로 이동할 수 없습니다.';
+          },'air-go');
+          frameVisitButton=visitButton;visitButton.disabled=!getScene();
+          const status=element('span');status.setAttribute('role','status');pager.append(visitButton,status);
+        }
         caption.textContent=frame.date+' · '+frame.time+' · '+frame.caption;photoDialog.showModal();
       });
       const img=element('img');img.loading='lazy';img.alt='';img.src=imagePath(frame.path);
+      if(Number.isInteger(frame.seconds))btn.classList.add('air-portrait-frame');
       btn.append(img,element('span',frame.date+' '+frame.time),element('strong',frame.short));strip.append(btn);
     }
     plan.append(strip);
-    stageTitle.textContent='11월 12일 영상에서 디스크 컨베이어 반환부 옆 흰 문을 열면 기존 설비 작업구역의 바닥 펌프가 보입니다. 문 위치는 영상 비례로 잡았으며, 점선은 전체 벽선이 추가 촬영으로 확인될 때까지의 잠정 경계입니다.';
+    stageTitle.textContent='11월 25일 촬영 순서는 승강기 앞 컨베이어, 셔터 옆 보관실, 흰 연결문, 공정실입니다. 장면을 누르면 원본 영상에서 추출한 화면이 열립니다. 점선은 두 작업구역의 대략적인 경계입니다.';
   }
 
   function equipmentElevation() {
@@ -289,6 +311,7 @@ export function createCompressorSurvey({getScene, floorSpec}) {
   }
 
   function drawPlan() {
+    dialog.querySelector('h2').textContent=mode==='floor'?'3층 설비 홀 · 촬영 동선':'에어컴프레셔실';
     for (const btn of tabs.children) {
       btn.setAttribute('aria-pressed',String(btn.dataset.mode===mode));
       if (btn.dataset.mode==='equipment') btn.disabled=!record.elevation;
@@ -348,7 +371,7 @@ export function createCompressorSurvey({getScene, floorSpec}) {
     const label=fields.length ? fields[0].source : (record===conveyor ? ['측면 전체','구동측','엘리베이터 방향','호퍼측'][photoIndex] : '현장 사진');
     figure.alt=record.title+' · '+label+' · 사진 '+num;
     caption.textContent=figure.alt+' · '+media.original;
-    pager.hidden=false;pager.replaceChildren(action('← 이전',()=>stepPhoto(-1)),element('span',(photoIndex+1)+' / '+record.photoNumbers.length),action('다음 →',()=>stepPhoto(1)));
+    pager.hidden=false;pager.dataset.numbered='true';pager.replaceChildren(action('← 이전',()=>stepPhoto(-1)),element('span',(photoIndex+1)+' / '+record.photoNumbers.length),action('다음 →',()=>stepPhoto(1)));
   }
   function openImage(number) {
     if(number==null){
@@ -403,10 +426,12 @@ export function createCompressorSurvey({getScene, floorSpec}) {
     }
     info.parentElement.scrollTop=0;
   }
-  function open(id,{enter=false}={}) {
+  function open(id,{enter=false,walk=false}={}) {
     if(!dialog)build();
     const s=getScene();if(s)attach(s);
     previousFocus=document.activeElement;
+    if(walk)mode='floor';
+    else if(!id)mode='layout';
     if(enter && id===conveyor.id && visit(conveyor))return true;
     if(!dialog.open)dialog.showModal();
     choose(id || records[0]?.id);return true;

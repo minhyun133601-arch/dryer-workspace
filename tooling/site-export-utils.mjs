@@ -1,7 +1,21 @@
 import { readFile } from 'node:fs/promises';
+import { SITE_ASSETS } from '../apps/site/asset-catalog.js';
 
 const projectRoot = new URL('../', import.meta.url);
 export const readProjectText = async name => (await readFile(new URL(name, projectRoot), 'utf8')).replace(/\r\n/g, '\n');
+
+// Model textures also travel with the offline viewer when its gallery is omitted.
+export async function embedPreparationFacePhotos(equipment) {
+  return Promise.all(equipment.map(async item => {
+    const reference = item.preparation?.facePhoto;
+    if (!reference) return item;
+    const asset = SITE_ASSETS.find(entry => entry.path === reference);
+    if (!asset) throw new Error(`Unregistered preparation console photograph: ${reference}`);
+    const bytes = await readFile(new URL('apps/site/' + asset.path.slice(2), projectRoot));
+    if (bytes[0] !== 0xff || bytes[1] !== 0xd8) throw new Error(`Invalid console JPEG: ${reference}`);
+    return { ...item, preparation: { ...item.preparation, facePhoto: 'data:image/jpeg;base64,' + bytes.toString('base64') } };
+  }));
+}
 
 export function replaceRequired(source, before, after) {
   if (!source.includes(before)) throw new Error(`Expected source fragment was not found: ${before}`);

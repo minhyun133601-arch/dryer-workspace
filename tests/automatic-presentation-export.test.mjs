@@ -64,6 +64,7 @@ test('the automatic presentation is a standalone dryer-only file with its contro
   const expected = EQUIPMENT.filter(item => Number.isFinite(item.floor) && item.id !== 'f1-boiler-room' && !item.samePhysicalRoomAs);
   const exported = JSON.parse(code.match(/^const EQUIPMENT = (\[[^\n]+\]);$/m)[1]);
   assert.deepEqual(exported.map(item => item.id), expected.map(item => item.id));
+  assert.match(exported.find(item => item.id === 'f1-prep-console').preparation.facePhoto, /^data:image\/jpeg;base64,\/9j\//);
   const logoBytes = await readFile(new URL('../apps/site/assets/branding/company-logo.jpg', import.meta.url));
   const logo = `data:image/jpeg;base64,${logoBytes.toString('base64')}`;
   assert.equal([...markup.matchAll(/<img\b[^>]*\bsrc="([^"]+)"/g)].filter(match => match[1] === logo).length, 3, 'the header and guide use the supplied original logo bytes');

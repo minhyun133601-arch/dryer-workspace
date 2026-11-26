@@ -1,6 +1,7 @@
 // Yusan: address, north-up imagery, original plans, employee entrance photo.
 // Metric positions are approximate image tracing, not survey coordinates.
 import { REAR_TOWER_SURVEY, REAR_PACKAGING_SURVEY, REAR_STAIR_PHOTOS, REAR_STAIR_CAPTIONS, rearStairPhoto } from './rear-survey-data.js';
+import { OFFICE_ROOF_PHOTOS } from './field-photos-20261125.js';
 const photo = (seconds) => `./photos/company-video/frame-${String(seconds).padStart(3, '0')}s.jpg`;
 const entrancePhoto = './photos/campus-entrance.png';
 const sitePlan = './assets/drawings/campus/yusan-site-plan.png';
@@ -17,6 +18,7 @@ const BOILER_LAYOUT_CAPTIONS = Object.freeze({
   106: '노란 보호망 송풍기', 118: '스테인리스 틀 증기 헤더·트랩', 218: '끝벽 가스 배관·청색 펌프', 238: '소금 포대·연수 설비·관류형 보일러',
 });
 const photoCaptions = Object.freeze({
+  ...Object.fromEntries(OFFICE_ROOF_PHOTOS.map(({ path, label }) => [path, label])),
   ...REAR_STAIR_CAPTIONS,
   ...Object.fromEntries([[1, [16,24,36,48,50,64,76,100,106,110,120,122,128,160,168,176,178,180]], [2, [9,22,32,37,43,45,47,52,74,106,108,118,140,160,162,170,185,202,218,225,238]]].flatMap(([clip, seconds]) => seconds.map(second => [boilerPhoto(clip, second), `11/11 추가 현장영상 ${clip} · ${Math.floor(second / 60)}:${String(second % 60).padStart(2, '0')}${clip === 2 && second === 202 ? ' (원본 3:22.5)' : ''}${clip === 2 && second === 162 ? ' (원본 2:42.5) · 동양 보일러 연관식 DBHI-SS 300형 명판' : ''}${BOILER_LAYOUT_CAPTIONS[second] && clip === 2 ? ` · ${BOILER_LAYOUT_CAPTIONS[second]}` : ''}`]))),
   ...Object.fromEntries([52, 146, 186, 276, 278, 280].map((seconds) => [photo(seconds), `희창유업 홍보영상 · ${Math.floor(seconds / 60)}:${String(seconds % 60).padStart(2, '0')}${seconds === 52 ? ' · 건물 모형' : ''}`])),
@@ -301,8 +303,8 @@ export const CAMPUS_EQUIPMENT = Object.freeze([
   }),
   // User: the workshop is in this LPG-side building across the back road,
   // not in the dryer annex. Keep one building for both department names.
-  building('campus-maintenance-office', '공무작업장 · 공무환경팀실', 'campus-rear-service-building', '공무작업장', [42.5, 0, -82.75], 10, 11.5, 6.5, [], {
-    exteriorView: { azimuth: .7, elevation: .55 },
+  building('campus-maintenance-office', '공무작업장·공무환경팀실 / 옥상 전력실', 'campus-rear-service-building', '공무사무실·한전 전력계', [42.5, 0, -82.75], 10, 11.5, 6.5, [], {
+    exteriorView: { azimuth: -.42, elevation: .43, focusObject: 'campus-exterior-office-roof-electrical-gantry' },
     restorePlacementRevision: 'campus-office-lpg-restoration-20261111',
     previousPlacements: [
       { position: [72.3, 0, -88.5], rotation: 0, catalogRevision: 'liquid-card-detail-spacing-20261110' },
@@ -321,7 +323,8 @@ export const CAMPUS_EQUIPMENT = Object.freeze([
       { position: [76.75, 0, -79.25], rotation: 0, catalogRevision: 'campus-valve-interior-20261111' },
     ],
     wallPaint: 'cream', roofPaint: 'greenRoof', basePaint: 'concrete', panelRibs: false,
-    photo: boilerPhoto(1,122), photos: [boilerPhoto(1,122), boilerPhoto(1,120), boilerPhoto(1,178), boilerPhoto(1,176), rearPhoto(1,264), rearPhoto(1,404)],
+    parapetHeight: .9,
+    photo: OFFICE_ROOF_PHOTOS[1].path, photos: [OFFICE_ROOF_PHOTOS[1].path, OFFICE_ROOF_PHOTOS[0].path, boilerPhoto(1,122), boilerPhoto(1,120), boilerPhoto(1,178), boilerPhoto(1,176), rearPhoto(1,264), rearPhoto(1,404)],
     exteriorDetails: [
       // clip001 1:58-2:02 and 2:58-3:00: grey paired steel door under a deep
       // concrete cantilever canopy; the left leaf carries the 공무작업장 plate.
@@ -329,12 +332,13 @@ export const CAMPUS_EQUIPMENT = Object.freeze([
       // west end of the road face, so it moved from the east end (x=+3).
       { id: 'maintenance-workshop-door', name: '공무작업장', plateText: '공무작업장', kind: 'workshop-door', position: [-3.1,0,5.8], datum: 'base', yaw: 0, width: 2.5, height: 2.9, canopy: { width: 3.4, depth: 1.9, height: .5, paint: 'cream' }, source: 'user-confirmed-opposite-LPG-building;boiler-clip-001-116s;boiler-clip-001-119s;boiler-clip-001-178s;boiler-clip-001-179.5s' },
       { id: 'office-road-pipe-bridge', kind: 'pipe-bridge', position: [-1.7,0,5.2], datum: 'base', yaw: 0, width: 1.1, height: 8.45, roofHeight: 6.5, span: 12.5, pipeCount: 3, source: 'boiler-clip-001-178s;boiler-clip-001-179.5s' },
-      { id: 'office-roof-electrical-gantry', kind: 'electrical-gantry', position: [-3.3,6.5,2.6], datum: 'base', width: 3.5, height: 2.6, depth: 1.6, source: 'boiler-clip-001-178s' },
+      { id: 'office-roof-electrical-gantry', kind: 'electrical-gantry', name: '옥상 전력실 · 한전 전력계 쪽', position: [.65,6.64,2.4], datum: 'base', width: 4.25, height: 4.1, depth: 1.65, rooftopSurvey: true, source: '20261125_085715.jpg, 20261125_085718.jpg, 20261125_085723.jpg, 20261125_085726.jpg' },
       { id: 'office-side-window', kind: 'horizontal-windows', position: [5.05,2.1,2], yaw: Math.PI / 2, width: 2.2, height: 1, panes: 2, source: 'rear-clip-001-404s' },
     ],
-    parts: ['콘크리트 외벽·기초', '초록 평지붕·흰 파라펫', 'LPG 옆 출입구·상부 전기 가대'],
-    summary: '건조실 도로 맞은편, LPG 가스 옆 건물의 공무작업장·공무환경팀실입니다. LPG 용기가 서쪽 벽에 붙어 있고, 모서리를 돌면 두꺼운 콘크리트 차양 아래 회색 양개 철문(왼쪽 닫힘·표찰, 오른쪽 열림)이 있습니다. 옥상 수전 가대와 도로를 건너 건조실로 가는 배관 다리를 표현했습니다.',
-    confidence: '사용자 확인 위치·명칭 + 11/11 영상 2:56~3:00 외관 · 치수는 근사',
+    parts: ['콘크리트 외벽·기초', '옥상 전력실·녹색 바닥·파라펫', 'LPG 옆 출입구·배관 다리'],
+    summary: '건조실에서 도로 건너 공무사무실 옥상을 바라본 배치입니다. 앞쪽 한전 전력계 구역의 높은 철골 가대와 회색 함체 뒤로 낮은 격자 가대와 밝은색 기기가 이어집니다. 아래층 작업장 출입문은 LPG 쪽 모서리에 있습니다.',
+    source: '공무사무실 위 전력실 / 20261125_085715·085718·085723·085726.jpg · 11/11 공무작업장 외관 영상',
+    confidence: '11/25 옥상 사진 4장과 직원이 확인한 한전 전력계 위치 · 높이와 간격은 사진 비례 추정',
     details: ['사용자가 공무작업장은 맞은편 LPG 가스 옆 건물이라고 정정했습니다. 기준 위치 [42.5,0,-82.75]를 유지하고, 공무작업장 문을 도로를 향하는 이 건물의 앞면으로 옮겼습니다. 건조실에 잘못 붙였던 문은 제거했습니다.', '새 영상 1의 1:56~2:02에서 회색 양개 철문의 공무작업장 표찰·무재해 표지와 열린 문 안 녹색 바닥·공구 선반을, 2:56~3:00에서 LPG 뒤 콘크리트 건물과 상부 철골 가대·애자, 옥상에서 도로를 건너는 배관 다리를 확인했습니다. 11/11 재검토로 문을 LPG 쪽 서쪽 끝으로 옮기고 LPG를 도로 쪽으로 튀어나오지 않게 서쪽 벽 앞에 붙였습니다. 공무환경팀실과 같은 건물로 표시하고 별도 작업장을 중복 생성하지 않았습니다.', '전기실은 옆 수변전실 표찰·녹색 철문·콘크리트 구조로 구분했습니다. 건물 높이와 가대 간격은 영상 비례 근사이며, 촬영되지 않은 실내 배치나 사무용 가구는 만들지 않았습니다.'],
   }),
   // User, 11/11: the small prefabs attached to the tanks are neither the

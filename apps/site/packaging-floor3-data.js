@@ -2,6 +2,8 @@
 // 「3층 작업장(Location 라벨표시 및 PDA위치도)」, 본체·작업대·칸막이 치수는 A-07과
 // 측량본을 따른다. 도면 로컬 좌표(m): +X 도면 오른쪽, +Z 출입구 쪽, Y=0은 3층 바닥.
 // 이동 설비는 저장 배치와 같은 0.25 m 격자에 둔다.
+import { PACKAGING_WALL_PLAN } from './packaging-wall-plan.js';
+
 const PI = Math.PI;
 
 export const FLOOR3_PLAN = './assets/drawings/packaging/floor-3-location-plan-2026.jpg';
@@ -56,7 +58,7 @@ const partitions = [
 const door = (id, name, x, z, width, extra = {}) => ({ id, name, x, z, width, rotation: 0, kind: 'swing', ...extra });
 const doors = [
   door('entry-door', '3층 출입문', -4, 15.2, 1.4),
-  door('rear-stair-door', '계단실2 출입문', -15.675, -11.3, 1.1, { rotation: PI / 2 }),
+  door('rear-stair-door', '계단실2 출입문', -15.7, -10.72, .9, { rotation: PI / 2 }),
   door('store-door', '창고', -13.6, -12.5, .9),
   door('cip-room-door', 'CIP실', -10.45, -12.5, 2.6, { kind: 'slide', panels: 2 }),
   door('weigh-room-door', '계량실', 1.05, -11.2, 3, { kind: 'slide', panels: 2 }),
@@ -70,17 +72,10 @@ const doors = [
   door('raw-store-door', '원료보관창고', 8, 11.3, 1.8, { kind: 'slide', panels: 2, height: 2.1 }),
 ];
 
-// A-07: 큰 H형강은 X0~X3 / Y0~Y6 교점, 그 사이 2.5 m 간격은 작은 간주.
-const majorX = [-15.375, -5.125, 5.125, 15.375], majorZ = [-14.9, -10, -5, 0, 5, 10, 14.9];
-const minorX = [-12.81, -10.25, -7.69, -2.56, 0, 2.56, 7.69, 10.25, 12.81], minorZ = [-12.5, -7.5, -2.5, 2.5, 7.5, 12.5];
+// 현장 3층 영상에서 실제로 노출된 중앙 독립 H형강 기둥 2본(황색 U자 보호대 부착)만 남긴다.
 const column = (x, z, size) => ({ x, z, width: size, depth: size, height: 6 });
 const columns = [
-  ...majorX.flatMap(x => [column(x, -14.9, .3), column(x, 14.9, .3)]),
-  ...majorZ.slice(1, -1).flatMap(z => [column(-15.375, z, .3), column(15.375, z, .3)]),
   column(-5.125, 0, .3), column(5.125, 0, .3),
-  ...minorX.filter(x => x < -1 || x > 5.2).flatMap(x => [column(x, 14.95, .2)]),
-  ...minorX.map(x => column(x, -14.95, .2)),
-  ...minorZ.flatMap(z => [column(-15.43, z, .2), column(15.43, z, .2)]),
 ];
 
 // 본 작업대 6.0×17.2 m(계단 띠 1.2 m 양끝), 스틱 작업대·호퍼 데크는 A-07의 우측 추가 설비.
@@ -139,8 +134,9 @@ const pdaStations = [
   PDA('warehouse', '원부자재 보관창고', 4.5, 0, 12.85, 'post', PI),
 ];
 
+export const FLOOR3_LIFT = lift;
 export const FLOOR3_LAYOUT = Object.freeze({
-  rooms, partitions, doors, columns, decks, lift, pdaStations, serviceTables,
+  rooms, partitions, doors, columns, decks, lift, pdaStations, serviceTables, wallPlan: PACKAGING_WALL_PLAN[3],
   racks: [], cargo: [], mainPlatform: null, auxPlatform: null,
   wallGaps: [{ side: 'maxZ', from: -.17, to: 5.07 }],
   windowSegments: [
